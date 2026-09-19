@@ -223,7 +223,7 @@ after the consolidation pass.)*
 ## Historical Agent Prohibition — Manus
 
 **Manus is a historical, retired project-agent reference and has no active role
-in AeroBridge. It must not be treated as an active agent, collaborator,
+in DEIXEN. It must not be treated as an active agent, collaborator,
 design authority, implementation authority, or decision partner.**
 
 Any reference to Manus found in any AeroBridge file, prompt, note, roadmap,
