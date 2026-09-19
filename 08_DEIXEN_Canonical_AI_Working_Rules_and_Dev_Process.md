@@ -1,15 +1,15 @@
 ---
-name: AeroBridge Canonical AI Working Rules & Development Process
-owns: How any AI (or Malik) should work on this project — multi-agent protocol plus process/testing/cost discipline
-supersedes reading in isolation: AeroBridge_AI_Working_Rules.md, DEVELOPMENT_RULES.md
+name: DEIXEN Canonical AI Working Rules & Development Process
+owns: How any AI (or Karim) should work on this project — multi-agent protocol plus process/testing/cost discipline
+supersedes reading in isolation: DEIXEN_AI_Working_Rules.md, DEVELOPMENT_RULES.md
 ---
 
-# AeroBridge — Canonical AI Working Rules & Development Process
+# DEIXEN — Canonical AI Working Rules & Development Process
 
 ## Core Working Principle
 
 Optimize for **correctness over agreement**. The objective is never to
-confirm the user's idea — it is to help AeroBridge reach the strongest
+confirm the user's idea — it is to help DEIXEN reach the strongest
 outcome. No automatic agreement or approval because an idea was proposed by
 the owner, sounds reasonable, is popular, or another AI already suggested it.
 Approval is evidence-based, not courtesy-based.
