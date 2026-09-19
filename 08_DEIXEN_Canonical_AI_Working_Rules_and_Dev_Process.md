@@ -211,7 +211,7 @@ authority — cross-role input must be explicitly labeled as review,
 recommendation, evidence, or escalation. Arbitration between disagreeing
 agents (or two outputs from the same agent at different times) is resolved
 by the documented decision-priority order in
-`07_AeroBridge_Canonical_Decisions_and_Current_State.md`'s Document Authority
+`07_DEIXEN_Canonical_Decisions_and_Current_State.md`'s Document Authority
 section — never by which output is more recent or more confidently worded.
 An agent's own fluency is not evidence.
 
@@ -226,7 +226,7 @@ after the consolidation pass.)*
 in DEIXEN. It must not be treated as an active agent, collaborator,
 design authority, implementation authority, or decision partner.**
 
-Any reference to Manus found in any AeroBridge file, prompt, note, roadmap,
+Any reference to Manus found in any DEIXEN file, prompt, note, roadmap,
 working document, or artifact must be treated as **legacy/historical material**
 unless a newer, explicitly approved governing document states otherwise. Do
 not restore, reactivate, assign work to, or derive current authority from such
