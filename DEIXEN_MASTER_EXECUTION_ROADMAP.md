@@ -1,8 +1,8 @@
-AEROBRIDGE — MASTER EXECUTION ROADMAP
+DEIXEN — MASTER EXECUTION ROADMAP
 
 1. Mission
 
-AeroBridge is being built as a professional learning platform for practical Amadeus/GDS skill development.
+DEIXEN is being built as a professional learning platform for practical Amadeus/GDS skill development.
 
 The goal is not merely to build:
 
@@ -23,13 +23,13 @@ References to IATA or other strong professional training organizations are examp
 
 The ambition is not merely to match existing training products.
 
-The ambition is to build the strongest learning product that can be responsibly justified by available evidence, domain truth, and AeroBridge's own requirements.
+The ambition is to build the strongest learning product that can be responsibly justified by available evidence, domain truth, and DEIXEN'S own requirements.
 
 ---
 
 2. Current Strategic State
 
-AeroBridge is currently in the Knowledge + Learning Foundation Phase.
+DEIXEN is currently in the Knowledge + Learning Foundation Phase.
 
 The purpose of this phase is to establish the project knowledge, Amadeus reference, Learning Design, and pre-design system/experience requirements before visual design and implementation begin.
 
@@ -59,25 +59,25 @@ The current project documentation set consists of exactly 14 files, in two funct
 
 **A. Core project/foundation artifacts — 11 files.** These define or preserve project knowledge, architecture, design system, Amadeus/learning foundations, decisions, and related authoritative project content:
 
-1. "00_AeroBridge_Knowledge_Consolidation_Plan.md"
-2. "03_AeroBridge_Product_and_Architecture.md"
-3. "04_AeroBridge_Design_System.md"
-4. "05_AeroBridge_Amadeus_Engine_Reference.md"
-5. "06_AeroBridge_Curriculum_and_Coach.md"
-6. "07_AeroBridge_Decisions_and_Current_State.md"
-7. "08_AeroBridge_Canonical_AI_Working_Rules_and_Dev_Process.md"
-8. "13_AeroBridge_Decision_Resolution_Register.md"
-9. "14_AeroBridge_Source_vs_Output_Sufficiency_Audit.md"
-10. "AeroBridge_Learning_Experience_Architecture.md"
-11. "AeroBridge_Learning_Design_Specification.md"
+1. "00_DEIXEN_Knowledge_Consolidation_Plan.md"
+2. "03_DEIXEN_Product_and_Architecture.md"
+3. "04_DEIXEN_Design_System.md"
+4. "05_DEIXEN_Amadeus_Engine_Reference.md"
+5. "06_DEIXEN_Curriculum_and_Coach.md"
+6. "07_DEIXEN_Decisions_and_Current_State.md"
+7. "08_DEXIN_Canonical_AI_Working_Rules_and_Dev_Process.md"
+8. "13_DEIXEN_Decision_Resolution_Register.md"
+9. "14_DEIXEN_Source_vs_Output_Sufficiency_Audit.md"
+10. "DEIXEN_Learning_Experience_Architecture.md"
+11. "DEIXEN_Learning_Design_Specification.md"
 
 Files 1–9 above are canonical, current project truth. Files 10–11 — the Learning Foundation artifacts — are completed first-build foundation artifacts, not yet canonical; each remains subject to the Evidence/State Confirmation Gate and the final independent adversarial review described later in this roadmap. Grouping all eleven together as "core" is a documentation-management convenience; it does not equalize their authority status.
 
 **B. Project-operation / session-support artifacts — 3 files.** These support project/session operation, coordination, governance, and execution. They are important project artifacts but are not interchangeable with domain/foundation knowledge:
 
 12. "UNIVERSAL AI SESSION HANDOFF PROTOCOL.md"
-13. "AeroBridge_Prompt_Engineering_and_Governance.md"
-14. "AEROBRIDGE — MASTER EXECUTION ROADMAP" (this document)
+13. "DEIXEN_Prompt_Engineering_and_Governance.md"
+14. "DEIXEN — MASTER EXECUTION ROADMAP" (this document)
 
 These 14 files together constitute the current managed project documentation set — 14 files, not 14 files of the same kind. The three operational files above have a different function from the eleven core files and are not to be read as equivalent to them.
 
