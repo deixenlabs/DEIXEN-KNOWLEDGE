@@ -60,12 +60,12 @@ The current project documentation set consists of exactly 14 files, in two funct
 **A. Core project/foundation artifacts — 11 files.** These define or preserve project knowledge, architecture, design system, Amadeus/learning foundations, decisions, and related authoritative project content:
 
 1. "00_DEIXEN_Knowledge_Consolidation_Plan.md"
-2. "03_DEIXEN_Product_and_Architecture.md"
-3. "04_DEIXEN_Design_System.md"
-4. "05_DEIXEN_Amadeus_Engine_Reference.md"
-5. "06_DEIXEN_Curriculum_and_Coach.md"
-6. "07_DEIXEN_Decisions_and_Current_State.md"
-7. "08_DEXIN_Canonical_AI_Working_Rules_and_Dev_Process.md"
+2. "03_DEIXEN_Canonical_Product_and_Architecture.md"
+3. "04_DEIXEN_Canonical_Design_System.md"
+4. "05_DEIXEN_Canonical_Amadeus_Engine_Reference.md"
+5. "06_DEIXEN_Canonical_Curriculum_and_Coach.md"
+6. "07_DEIXEN_Canonical_Decisions_and_Current_State.md"
+7. "08_DEIXEN_Canonical_AI_Working_Rules_and_Dev_Process_UNIFIED_PROPOSED.md"
 8. "13_DEIXEN_Decision_Resolution_Register.md"
 9. "14_DEIXEN_Source_vs_Output_Sufficiency_Audit.md"
 10. "DEIXEN_Learning_Experience_Architecture.md"
@@ -75,9 +75,9 @@ Files 1–9 above are canonical, current project truth. Files 10–11 — the Le
 
 **B. Project-operation / session-support artifacts — 3 files.** These support project/session operation, coordination, governance, and execution. They are important project artifacts but are not interchangeable with domain/foundation knowledge:
 
-12. "UNIVERSAL AI SESSION HANDOFF PROTOCOL.md"
-13. "DEIXEN_Prompt_Engineering_and_Governance.md"
-14. "DEIXEN — MASTER EXECUTION ROADMAP" (this document)
+12. "UNIVERSAL_AI_SESSION_HANDOFF_PROTOCOL.md"
+13. "DEIXEN_Prompt_Engineering_and_Governance_UNIFIED_PROPOSED.md"
+14. "DEIXEN_MASTER_EXECUTION_ROADMAP.md" (this document)
 
 These 14 files together constitute the current managed project documentation set — 14 files, not 14 files of the same kind. The three operational files above have a different function from the eleven core files and are not to be read as equivalent to them.
 
