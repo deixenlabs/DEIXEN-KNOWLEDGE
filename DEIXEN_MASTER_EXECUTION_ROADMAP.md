@@ -314,8 +314,8 @@ This includes:
 
 - the 9 existing canonical files,
 - all new Amadeus reference files,
-- "AeroBridge_Learning_Design_Specification.md",
-- "AeroBridge_Learning_Experience_Architecture.md",
+- "DEIXEN_Learning_Design_Specification.md",
+- "DEIXEN_Learning_Experience_Architecture.md",
 - and any additional approved pre-design system or engineering documents.
 
 The three project-operation/session-support artifacts must be checked wherever their content can affect foundation authority, workflow, ownership, status, sequencing, or cross-document consistency.
@@ -376,8 +376,8 @@ Opus reviews the complete relevant foundation set together:
 
 - all 9 existing canonical files,
 - all new Amadeus reference files,
-- "AeroBridge_Learning_Design_Specification.md",
-- "AeroBridge_Learning_Experience_Architecture.md",
+- "DEIXEN_Learning_Design_Specification.md",
+- "DEIXEN_Learning_Experience_Architecture.md",
 - and any additional approved pre-design system or engineering documents.
 
 The three project-operation/session-support artifacts are also checked for material governance, authority, status, sequencing, ownership, and cross-document implications rather than being treated as interchangeable with the foundation files.
