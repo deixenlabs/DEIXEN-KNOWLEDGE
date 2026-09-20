@@ -353,8 +353,6 @@ Use explicit state labels.
 
 ✅ COMPLETE
 
-[WHAT IS ACTUALLY COMPLETE]
-
 🟢 APPROVED / CONFIRMED
 
 [WHAT IS SETTLED OR PROTECTED FROM REOPENING]
@@ -549,7 +547,6 @@ Purpose / Role:
 Authority:
 [CANONICAL / PRIMARY / OPERATING SOURCE / REFERENCE / WORKING / OUTPUT / HISTORICAL / ARCHIVE]
 
-Status:
 Artifact Lifecycle Status:
 [APPROVED / PENDING / DRAFT / SUPERSEDED / OBSOLETE]
 
@@ -1738,7 +1735,6 @@ Independent Evaluation Performed By Receiving Role?:
 Independent Review Performed?:
 [YES / NO / NOT REQUIRED]
 
-Decision / Authority Status:
 Decision / Lifecycle Status (if applicable):
 [SHARED 08 STATE, IF APPLICABLE]
 
