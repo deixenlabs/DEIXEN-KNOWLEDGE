@@ -19,7 +19,7 @@ Learn → Retrieve → Practice → Feedback → Correction → Repeat → Indep
 
 The quality target is strong professional training quality: rigorous, practical, evidence-aware, and capable of producing meaningful skill development.
 
-References to IATA or other strong professional training organizations are examples of quality ambition only. AeroBridge is not required to imitate their products, curricula, terminology, certifications, or structure.
+References to IATA or other strong professional training organizations are examples of quality ambition only. DEIXEN is not required to imitate their products, curricula, terminology, certifications, or structure.
 
 The ambition is not merely to match existing training products.
 
@@ -136,7 +136,7 @@ The primary learning-design artifact is:
 
 The document is not considered formally closed yet; final closure depends on the complete foundation review, resolution of valid findings, and closure verification.
 
-This document defines how AeroBridge should actually teach.
+This document defines how DEIXEN should actually teach.
 
 It must provide an explicit and coherent learning system covering:
 
@@ -175,7 +175,7 @@ Sonnet must challenge the design rather than merely preserve previous decisions.
 
 The objective is not to make the document look better.
 
-The objective is to produce the strongest justified learning design for AeroBridge.
+The objective is to produce the strongest justified learning design for DEIXEN.
 
 ---
 
@@ -202,15 +202,15 @@ Relevant areas include:
 
 Research should be used selectively and critically.
 
-The purpose of research is to determine how AeroBridge should teach effectively.
+The purpose of research is to determine how DEIXEN should teach effectively.
 
 Research must never be used to invent what Amadeus does.
 
 External evidence must remain distinguishable from:
 
 - established evidence,
-- AeroBridge-specific design decisions,
-- AeroBridge-specific inferences,
+- DEIXEN-specific design decisions,
+- DEIXEN-specific inferences,
 - hypotheses,
 - and validation requirements.
 
@@ -291,7 +291,7 @@ For every artifact:
 
 The current review corpus is **14 artifacts** and corresponds to the current 14-file managed project documentation set in Section 3:
 
-- 9 core AeroBridge foundation artifacts,
+- 9 core DEIXEN foundation artifacts,
 - `AeroBridge_Learning_Design_Specification.md`,
 - `AeroBridge_Learning_Experience_Architecture.md`,
 - `AEROBRIDGE — MASTER EXECUTION ROADMAP.md`,
@@ -563,13 +563,13 @@ Any deviation must be identified and classified before it is corrected.
 
 17. Self-Testing as a Learner
 
-Once a meaningful working product exists, the user personally uses AeroBridge as a learner.
+Once a meaningful working product exists, the user personally uses DEIXEN as a learner.
 
 This is not merely a software QA pass.
 
 The purpose is to test:
 
-Does AeroBridge actually teach me?
+Does DEIXEN actually teach me?
 
 The user should experience real learning paths from:
 
@@ -592,7 +592,7 @@ Record:
 
 18. Real Learner Testing
 
-After major issues discovered during self-testing have been addressed, test AeroBridge with real learners.
+After major issues discovered during self-testing have been addressed, test DEIXEN with real learners.
 
 Evaluate:
 
@@ -667,7 +667,7 @@ It is not a replacement for the authoritative project files.
 4. Never equate completion with competence.
 5. Never equate assisted success with independent competence.
 6. Never make mastery or readiness claims stronger than their evidence.
-7. Never treat general learning research as proof that AeroBridge itself is effective.
+7. Never treat general learning research as proof that DEIXEN itself is effective.
 8. Never treat design documentation as proof of learning effectiveness.
 9. Never silently override current canonical decisions.
 10. Never turn every learning problem into a feature.
@@ -750,7 +750,7 @@ This phase operates under a one-month project budget. The operating objective is
 
 24. Definition of Success
 
-AeroBridge is not considered successful merely because it:
+DEIXEN is not considered successful merely because it:
 
 - looks professional,
 - contains many Amadeus commands,
@@ -765,6 +765,6 @@ Professional appearance, product quality, technical correctness, domain accuracy
 
 None of them alone proves learning effectiveness.
 
-The ultimate standard is not how convincing AeroBridge looks.
+The ultimate standard is not how convincing DEIXEN looks.
 
-It is whether AeroBridge genuinely helps people become better at the skills it claims to teach.
+It is whether DEIXEN genuinely helps people become better at the skills it claims to teach.
