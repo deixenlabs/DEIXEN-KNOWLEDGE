@@ -190,8 +190,7 @@ No agent may promote its own `PROPOSED` item to `APPROVED` merely by writing it 
 
 A `CONFIRMED` or `APPROVED` label does not by itself mean that the claim is domain-validated, learner-validated, or empirically demonstrated.
 
-These eight states classify a decision's workflow status specifically. They are a separate axis from, and are not a replacement for, the DEIXEN Operating Constitution's own claim-classification system, nor for the claim-level epistemic/claim-status taxonomy defined in Prompt Engineering & Governance §29 defined in Prompt Engineering & Governance §29 — a single item may carry a status from each without the terms being synonyms.
-
+These eight states classify a decision's workflow status specifically. They are a separate axis from, and are not a replacement for, the DEIXEN Operating Constitution's own claim-classification system, nor for the claim-level epistemic/claim-status taxonomy defined in Prompt Engineering & Governance §29 — a single item may carry a status from each without the terms being synonyms.
 ---
 
 ## 7. Output-Type Labels
