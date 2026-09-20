@@ -355,7 +355,15 @@ Use explicit state labels.
 
 [WHAT IS ACTUALLY COMPLETE]
 
-🟢 APPROVED / CONFIRMED / PROTECTED
+🟢 APPROVED / CONFIRMED
+
+[WHAT IS SETTLED OR PROTECTED FROM REOPENING]
+
+Decision State (where applicable):
+[CONFIRMED / APPROVED / OPEN / NEEDS VALIDATION / PROPOSED / PLANNED / DEFERRED / REJECTED]
+
+Protected From Reopening:
+[YES / NO]
 
 [WHAT IS SETTLED OR PROTECTED FROM REOPENING]
 
@@ -542,7 +550,11 @@ Authority:
 [CANONICAL / PRIMARY / OPERATING SOURCE / REFERENCE / WORKING / OUTPUT / HISTORICAL / ARCHIVE]
 
 Status:
-[APPROVED / PENDING / DRAFT / FROZEN / SUPERSEDED / OBSOLETE]
+Artifact Lifecycle Status:
+[APPROVED / PENDING / DRAFT / SUPERSEDED / OBSOLETE]
+
+Execution / Design Latitude (where relevant):
+[FROZEN / DIRECTIONAL / OPEN]
 
 Owner:
 [PERSON / ROLE / TEAM]
@@ -1727,7 +1739,13 @@ Independent Review Performed?:
 [YES / NO / NOT REQUIRED]
 
 Decision / Authority Status:
-[CONSULTATIVE INPUT / APPROVED DECISION / CONFIRMED / EVIDENCE / REVIEW FINDING / EXECUTION RESULT / OTHER]
+Decision / Lifecycle Status (if applicable):
+[SHARED 08 STATE, IF APPLICABLE]
+
+Authority / Owner (if applicable):
+[WHO / ROLE]
+
+If the item is not a decision, omit the Decision / Lifecycle Status field rather than assigning a pseudo-state.
 
 Effect on Project State:
 [WHAT CHANGED]
