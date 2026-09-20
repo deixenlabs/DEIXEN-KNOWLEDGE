@@ -363,8 +363,6 @@ Decision State (where applicable):
 Protected From Reopening:
 [YES / NO]
 
-[WHAT IS SETTLED OR PROTECTED FROM REOPENING]
-
 🟡 IN PROGRESS
 
 [WHAT IS CURRENTLY BEING WORKED ON]
