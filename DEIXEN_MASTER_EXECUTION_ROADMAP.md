@@ -130,7 +130,7 @@ External research may be used to verify domain facts when appropriate, but impor
 
 The primary learning-design artifact is:
 
-"AeroBridge_Learning_Design_Specification.md"
+"DEIXEN_Learning_Design_Specification.md"
 
 **Current status:** COMPLETED and ready to be reviewed as part of the final comprehensive Opus review.
 
@@ -220,7 +220,7 @@ External evidence must remain distinguishable from:
 
 The learner-experience-architecture artifact is:
 
-"AeroBridge_Learning_Experience_Architecture.md"
+"DEIXEN_Learning_Experience_Architecture.md"
 
 **Current status:** COMPLETED as a first-build foundation artifact and ready for the final independent adversarial review stage. It is not canonical yet — it remains subject to the same final review and approval process as every other foundation artifact, and is not to be treated as in-progress or unfinished merely because that approval is still pending.
 
@@ -292,11 +292,11 @@ For every artifact:
 The current review corpus is **14 artifacts** and corresponds to the current 14-file managed project documentation set in Section 3:
 
 - 9 core DEIXEN foundation artifacts,
-- `AeroBridge_Learning_Design_Specification.md`,
-- `AeroBridge_Learning_Experience_Architecture.md`,
+- `DEIXEN_Learning_Design_Specification.md`,
+- `DEIXEN_Learning_Experience_Architecture.md`,
 - `DEIXEN_MASTER_EXECUTION_ROADMAP.md`,
-- `AeroBridge_Prompt_Engineering_and_Governance.md`,
-- `UNIVERSAL AI SESSION HANDOFF PROTOCOL.md`.
+- `DEIXEN_Prompt_Engineering_and_Governance_UNIFIED_PROPOSED.md`,
+- `UNIVERSAL_AI_SESSION_HANDOFF_PROTOCOL.md`.
 
 Additional **Amadeus Reference/Knowledge files** are currently in production and are outside this fixed 14-file current corpus until they are actually produced and formally enter the review process.
 
