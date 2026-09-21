@@ -23,7 +23,7 @@ References to IATA or other strong professional training organizations are examp
 
 The ambition is not merely to match existing training products.
 
-The ambition is to build the strongest learning product that can be responsibly justified by available evidence, domain truth, and DEIXEN'S own requirements.
+The ambition is to build the strongest learning product that can be responsibly justified by available evidence, domain truth, and DEIXEN's own requirements.
 
 ---
 
@@ -125,8 +125,7 @@ The primary learning-design artifact is:
 
 **Current status:** COMPLETED as a first-build foundation artifact and not yet formally closed; its review and closure are governed by the Pre-Opus preparation plan, the Opus adversarial review, and the subsequent closure process.
 
-The document is not considered formally closed yet; final closure depends on the complete foundation review, resolution of valid findings, and closure verification.
-
+Formal closure occurs only after the complete foundation review, resolution of valid findings, and closure verification.
 This document defines how DEIXEN should actually teach.
 
 It must provide an explicit and coherent learning system covering:
