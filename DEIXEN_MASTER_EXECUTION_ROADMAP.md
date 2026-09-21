@@ -172,7 +172,7 @@ The objective is to produce the strongest justified learning design for DEIXEN.
 
 6. Learning Science and External Research
 
-During the Learning Design phase, Sonnet may use external research whenever it can materially improve the design.
+During Learning Design work, external research may be used whenever it can materially improve the design.
 
 Relevant areas include:
 
