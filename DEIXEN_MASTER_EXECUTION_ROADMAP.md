@@ -637,39 +637,39 @@ It is not a replacement for the authoritative project files.
 
 22. Current Execution Sequence
 
-Existing Canonical Knowledge
+The active Pre-Opus execution sequence is governed by `DEIXEN_MASTER_PRE_OPUS_FOUNDATION_PREPARATION_PLAN-1.md` and ends at the Handoff to Opus boundary.
+
+From that boundary onward, the project's lifecycle sequence is:
+
+Handoff of the prepared DEIXEN Corpus to Opus
 ↓
-Amadeus Reference Files — Sonnet [IN PROGRESS]
+Independent Adversarial Review — Opus
 ↓
-Learning Design — Sonnet [COMPLETED / READY FOR FINAL REVIEW]
+Evaluate, disposition, and resolve valid review findings
 ↓
-Learning Experience Architecture — Sonnet [COMPLETED / READY FOR FINAL REVIEW]
+Final Foundation Closure Verification
 ↓
-Any genuinely required pre-design system/engineering documents — Sonnet [ONLY IF REQUIRED]
-↓
-Sonnet Self-Review & Consolidation
-↓
-Evidence/State Confirmation Gate
-↓
-Final Comprehensive Adversarial Review — Opus 5
-↓
-Resolve Findings + Final Closure Verification
-↓
-Close Knowledge + Learning Foundation
+Close the Knowledge + Learning Foundation
 ↓
 Claude Design
 ↓
-User Approval of Final Design
+Final Human Approval of Design Direction
+↓
+Implementation Authorization
 ↓
 Claude Code Implementation
 ↓
-Implementation Verification (including the domain/SME validation check)
+Implementation Verification
 ↓
 Self-Testing as a Learner
 ↓
 Real Learner Testing
 ↓
 Evidence-Based Improvement
+
+Each downstream phase must use the approved and applicable outputs of the preceding phase.
+
+A downstream phase must not treat a recommendation, draft, historical artifact, unresolved dependency, or unverified claim as an approved requirement merely because it appears in the prepared Corpus.
 
 ---
 
