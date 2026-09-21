@@ -328,21 +328,14 @@ This is an architectural confirmation, not a license to invent domain behavior, 
 
 11. Final Independent Adversarial Review — Opus
 
-Only after Sonnet has completed and consolidated the full pre-design foundation, and the Evidence/State Confirmation Gate above has been addressed, should the final independent review occur.
+Only after the active Pre-Opus foundation preparation and required confirmation gates have been completed or explicitly dispositioned according to the governing preparation plan should the final independent review occur.
+The final Opus review covers the complete relevant foundation corpus established and handed off through the active Pre-Opus preparation process.
 
-**Scope clarification:** the current managed project documentation set contains the 14 files defined in Section 3. The substantive pre-design foundation review is centered on the 11 core project/foundation artifacts defined there, together with the Amadeus Reference/Knowledge files once they are produced and formally included. The three project-operation/session-support artifacts are not treated as domain/foundation knowledge, but their governance, authority, status, sequencing, ownership, and dependency implications remain within the corpus-level review scope. They must be considered wherever they can materially affect the foundation or the consistency of the project documentation system.
+The corpus includes the approved foundation artifacts, relevant Amadeus Reference/Knowledge artifacts formally included through the preparation process, the Learning Design and Learning Experience Architecture artifacts, and any additional artifacts explicitly included in the final handoff scope.
 
-Opus reviews the complete relevant foundation set together:
+Project-operation and session-support artifacts are considered where their governance, authority, status, sequencing, ownership, or dependency implications materially affect the foundation or the consistency of the project documentation system. They are not treated as interchangeable with domain or foundation knowledge artifacts.
 
-- all 9 existing canonical files,
-- all new Amadeus reference files,
-- "DEIXEN_Learning_Design_Specification.md",
-- "DEIXEN_Learning_Experience_Architecture.md",
-- and any additional approved pre-design system or engineering documents.
-
-The three project-operation/session-support artifacts are also checked for material governance, authority, status, sequencing, ownership, and cross-document implications rather than being treated as interchangeable with the foundation files.
-
-This is one comprehensive final adversarial review, not a series of isolated reviews, and not a ceremonial approval pass. Its value depends specifically on surfacing what an earlier, less independent pass could not — including defects that survived Sonnet's own self-review precisely because they were invisible to the same reasoning process that produced them.
+This is one comprehensive final adversarial review, not a series of isolated reviews, and not a ceremonial approval pass. Its value depends specifically on surfacing weaknesses that survived earlier preparation, consolidation, and review precisely because they may have remained invisible to the reasoning process that produced or previously examined them.
 
 The review must actively search for:
 
@@ -372,7 +365,7 @@ Where relevant, the review must also examine:
 - implementation clarity,
 - and engineering boundaries.
 
-Opus must actively search for important weaknesses that Sonnet missed, not re-confirm a checklist Sonnet's own self-review already ran. Opus's recommendations are not automatically accepted. Each finding must be evaluated against the source evidence before it becomes a project decision.
+Opus must actively search for important weaknesses that earlier preparation or review did not surface, rather than merely re-confirming a prior checklist. Opus's recommendations are not automatically accepted. Each finding must be evaluated against the source evidence before it becomes a project decision.
 
 ---
 
