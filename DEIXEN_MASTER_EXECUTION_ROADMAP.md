@@ -207,13 +207,13 @@ External evidence must remain distinguishable from:
 
 ---
 
-7. Learning Experience Architecture — Sonnet
+7. Learning Experience Architecture
 
 The learner-experience-architecture artifact is:
 
 "DEIXEN_Learning_Experience_Architecture.md"
 
-**Current status:** COMPLETED as a first-build foundation artifact and ready for the final independent adversarial review stage. It is not canonical yet — it remains subject to the same final review and approval process as every other foundation artifact, and is not to be treated as in-progress or unfinished merely because that approval is still pending.
+**Current status:** COMPLETED as a first-build foundation artifact and not yet canonical. Its review, validation, and closure sequence are governed by the Pre-Opus preparation plan and the subsequent independent review and foundation-closure process. It is not to be treated as in-progress or unfinished merely because final approval is still pending.
 
 This document translates the Learning Design into the logic of the learner's experience inside the product.
 
