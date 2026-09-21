@@ -386,9 +386,9 @@ This closure verification is not a replacement for the Opus adversarial review a
 
 The result should be:
 
-A complete, coherent, evidence-grounded, implementation-ready Knowledge + Learning Foundation.
+A complete, coherent, evidence-grounded Knowledge + Learning Foundation with all remaining implementation, validation, and empirical dependencies explicitly recorded.
 
-This closure is preceded by an explicit **Evidence / State Confirmation Gate** verifying that the dependent foundation artifacts, evidence status, unresolved validation requirements, ownership, and sequencing are current and mutually consistent.
+The closure verification must also confirm that dependent foundation artifacts, evidence status, unresolved validation requirements, ownership, and sequencing are current and mutually consistent.
 
 No downstream phase may treat a dependency as ready solely because a document exists; its recorded status and required evidence must also be confirmed.
 
