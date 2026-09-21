@@ -105,8 +105,7 @@ The Amadeus Reference Layer establishes the evidence base used to represent Amad
 
 The production, intake, evidence classification, authority treatment, and final inclusion of Amadeus Reference/Knowledge artifacts in the prepared Opus Corpus are governed by `DEIXEN_MASTER_PRE_OPUS_FOUNDATION_PREPARATION_PLAN-1.md`.
 
- This roadmap does not independently assign those artifacts an active Pre-Opus execution status or final corpus inclusion.
- 
+This roadmap does not independently assign those artifacts an active Pre-Opus execution status or final corpus inclusion.
 The governing rule is:
 
 Never guess Amadeus behavior.
