@@ -266,7 +266,7 @@ An additional document may be introduced only when all of the following hold:
 - the new artifact has a clearly defined, non-overlapping scope and authority,
 - its relationship to the existing knowledge set is made explicit,
 - its creation is explicitly approved by the project owner,
-- and the project documentation landscape (Section 3) is updated accordingly..
+- and the project documentation landscape (Section 3) is updated accordingly.
 
 This is not an open-ended permission for any model or agent to expand the documentation system on its own judgment. The objective is a complete and maintainable foundation, not a large number of files.
 
