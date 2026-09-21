@@ -83,7 +83,7 @@ Files 2–6 above are the canonical project/foundation artifacts. File 7 is the 
 
 These 14 files constitute the project's baseline managed documentation set — 14 files, not 14 files of the same kind. This baseline must not be confused with the active Pre-Opus Corpus handed to Opus, whose final inventory is established by the Pre-Opus preparation plan.
 
-**Additional Amadeus Reference/Knowledge files are currently being produced by Sonnet, separately from this fixed 14-file set** (see Section 4). Their expected number is approximately five, but the final number is not yet closed. The current project documentation set is not to be described as already fixed at nineteen files, and five is not a final, hard-coded number. These files enter the appropriate review/corpus process once they are actually produced and accepted.
+Additional Amadeus Reference/Knowledge files may form part of the prepared Opus Corpus. Their production, intake, evidence classification, authority treatment, and final corpus inclusion are governed by `DEIXEN_MASTER_PRE_OPUS_FOUNDATION_PREPARATION_PLAN-1.md`, not by this landscape inventory. Their final number is not fixed in this roadmap and must not be inferred from this baseline inventory.
 
 This is one integrated project knowledge corpus, not a replacement of an "old" project by a "new" one. An artifact being older does not, by itself, make its content historical or superseded — only a specific decision, state, or claim that evidence shows has actually been replaced is superseded. "Historical" or "superseded" is not applied as a blanket label to an entire file merely because of when it was produced.
 
