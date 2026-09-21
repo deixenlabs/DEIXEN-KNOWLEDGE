@@ -309,25 +309,20 @@ The roadmap does not independently assign these activities to Sonnet or any othe
 
 ---
 
-10. Evidence/State Confirmation Gate
+10. Evidence / State Confirmation Gate Pattern
 
-Before Claude Code implementation may rely on the learning-system mechanisms the Learning Design Specification defines, the foundation must confirm — not merely assume — that the project's actual evidence and state architecture can support them.
+Before downstream work relies on learning-system mechanisms whose evidence or state prerequisites have not yet been confirmed, the relevant foundation must establish that the evidence/state architecture can support what those approved mechanisms require.
 
-The Learning Design Specification itself identifies this as its single highest-priority open dependency: whether the existing four-field Event Log (event type, command, result, timestamp) can actually support the mechanisms several of its core rules depend on.
+The active confirmation scope, current status, ownership, open dependencies, and resolution sequence are governed by the applicable Pre-Opus preparation, decision, evidence, and architecture artifacts. This roadmap does not independently define those details.
 
-This gate must confirm, at minimum, whether the current evidence/state architecture supports:
+The gate should confirm, where relevant:
 
-- independence determination — whether a given attempt qualifies as genuinely unaided,
-- assistance adjacency — whether a Nudge, Partial Reveal, or Full Reveal was active for the attempt in question,
-- corrective-feedback adjacency — whether ordinary, uncounted error feedback functioned as an unlogged hint,
-- workflow/sequence continuity — whether a multi-step chained attempt can be reconstructed as one continuous, unaided sequence, where the frozen slice's chained-practice requirement applies,
-- and legitimate evidence interpretation more broadly — that what the architecture can actually record matches what the approved rules assume it records.
+- that evidence claimed by an approved mechanism is actually recordable and interpretable,
+- that required state transitions and assistance/independence conditions can be represented,
+- that required workflow or sequence continuity can be reconstructed where the approved rule depends on it,
+- and that any genuine architectural gap is explicitly recorded before the affected mechanism is treated as implementation-ready.
 
-This is an architectural confirmation, not a technical design task. It does not specify a database schema, an API, a storage engine, or an implementation structure. It establishes whether the existing foundation can support the approved behavior — and if it cannot, that gap becomes an explicit, recorded open dependency for resolution before the affected mechanisms are built, rather than an implementation-time surprise.
-
-**Ownership, stated precisely so this does not drift again:** this confirmation is delegated technical work that no existing document has yet performed. The Decision Resolution Register (file 13) correctly records this as delegated-but-undone technical judgment — it is the record of that status, not the pass that resolves it. The gate is performed by Sonnet or the assigned technical/architecture reviewer responsible for that task. Other model input may be consulted only as supporting input if explicitly needed, and must not become the authority for the gate. **Opus is not used to help resolve this gate.** Opus's independence for the final adversarial review depends specifically on reviewing the completed result, not on having helped establish the conclusion it is later expected to challenge.
-
-If this confirmation surfaces a genuine gap, it becomes an explicit finding carried into the Opus review that follows — never a silent assumption carried into implementation.
+This is an architectural confirmation, not a license to invent domain behavior, redefine approved rules, or prescribe an implementation schema. Document existence alone does not satisfy the gate; the required evidence or architectural question must actually be confirmed and its status recorded in the appropriate governing artifact.
 
 ---
 
