@@ -627,8 +627,8 @@ It is not a replacement for the authoritative project files.
 11. Use minimum justified complexity.
 12. Preserve uncertainty where evidence is insufficient.
 13. Keep domain truth, design decisions, implementation dependencies, and hypotheses distinct.
-14. Sonnet must self-review before the final Opus review.
-15. Opus must independently adversarially review the complete pre-design foundation before it is closed.
+14. The foundation must undergo appropriate self-review and consolidation before the final independent Opus review.
+15. Opus must independently adversarially review the complete prepared foundation corpus before the foundation is closed.
 16. Real learner testing is required to evaluate actual learning effectiveness.
 17. Keep this roadmap updated when a phase is genuinely closed.
 18. Model capability does not confer decision authority — Opus, or any model used on this project, remains subordinate to canonical project artifacts, verified domain evidence, approved decisions, and explicit project-owner authority, regardless of how capable that model is.
