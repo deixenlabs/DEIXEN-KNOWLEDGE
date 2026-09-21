@@ -290,43 +290,22 @@ A frozen artifact is a stable baseline, not immutable truth. It may be reopened 
 
 ---
 
-9. Sonnet Self-Review and Consolidation
+9. Pre-Opus Consolidation and Challenge Pattern
 
-Before the final independent review, Sonnet must perform a comprehensive cross-file review of the entire pre-design foundation.
+The active Pre-Opus consolidation, synchronization, adversarial review, unresolved-item handling, readiness checks, and final preparation sequence are governed by `DEIXEN_MASTER_PRE_OPUS_FOUNDATION_PREPARATION_PLAN-1.md`.
 
-**Scope clarification:** the current managed project documentation set is the 14 files defined in Section 3. The substantive pre-design foundation under review is the 11 core project/foundation artifacts defined there, together with the Amadeus Reference/Knowledge files once they are produced and formally included. The three project-operation/session-support artifacts remain part of the managed corpus and are checked for governance, authority, status, sequencing, ownership, and dependency implications that materially affect the foundation, but they are not treated as domain/foundation knowledge artifacts.
+This roadmap retains the following as a lifecycle reference pattern rather than an independent Pre-Opus execution stage:
 
-This includes:
-
-- the 9 existing canonical files,
-- all new Amadeus reference files,
-- "DEIXEN_Learning_Design_Specification.md",
-- "DEIXEN_Learning_Experience_Architecture.md",
-- and any additional approved pre-design system or engineering documents.
-
-The three project-operation/session-support artifacts must be checked wherever their content can affect foundation authority, workflow, ownership, status, sequencing, or cross-document consistency.
-
-Sonnet must check:
-
-- factual consistency,
-- source authority,
-- versioning,
-- duplication,
-- contradictions,
-- Amadeus truth boundaries,
-- learning-design coherence,
-- experience coherence,
-- implementation usefulness,
+- cross-document consistency and dependency review,
+- authority and source-boundary checks,
+- contradiction and stale-reference detection,
+- Amadeus truth-boundary protection,
+- learning and experience coherence,
 - evidence validity,
-- and unnecessary complexity.
+- identification of unresolved questions,
+- and explicit carry-forward of matters that require later validation or judgment.
 
-Sonnet must resolve issues that can be responsibly resolved from available evidence.
-
-Anything that cannot be responsibly resolved must remain explicitly classified as an open question, validation dependency, or other appropriate status.
-
-Sonnet must not silently guess.
-
-The purpose of this stage is to deliver a coherent foundation to Opus for independent review.
+The roadmap does not independently assign these activities to Sonnet or any other model, nor does it define a separate Pre-Opus review sequence outside the active preparation plan.
 
 ---
 
