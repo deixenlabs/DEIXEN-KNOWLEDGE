@@ -55,9 +55,9 @@ Opus's review does not replace Sonnet's own review. Sonnet must continuously che
 
 ---
 
-3. Current Project Documentation Set
+3. Project Documentation Landscape
 
-The current project documentation set consists of exactly 14 files, in two functionally distinct groups. This is a documentation-management distinction, not a new or changed authority hierarchy — each file's own documented authority and status, and the rules in Sections 20–21, are unchanged by this grouping.
+The project documentation landscape includes a 14-file baseline set, divided into two functionally distinct groups. This inventory is a documentation-management view of the project and is not the active Pre-Opus execution corpus or review authority. The active Pre-Opus preparation, corpus inventory, status map, authority map, and handoff scope are governed by `DEIXEN_MASTER_PRE_OPUS_FOUNDATION_PREPARATION_PLAN-1.md`.
 
 **A. Core project/foundation artifacts — 11 files.** These define or preserve project knowledge, architecture, design system, Amadeus/learning foundations, decisions, and related authoritative project content:
 
@@ -73,7 +73,7 @@ The current project documentation set consists of exactly 14 files, in two funct
 10. "DEIXEN_Learning_Experience_Architecture.md"
 11. "DEIXEN_Learning_Design_Specification.md"
 
-Files 2–6 above are the canonical project/foundation artifacts. File 7 is the proposed unified AI Working Rules document and is explicitly NOT YET CANONICAL. Files 1, 8–9 are supporting consolidation, decision-resolution, and audit artifacts; they record project state, evidence, findings, or process status but do not become canonical domain/project truth merely by appearing in this managed set. Files 10–11 — the Learning Foundation artifacts — are completed first-build foundation artifacts, not yet canonical; each remains subject to the Evidence/State Confirmation Gate and the final independent adversarial review described later in this roadmap. Grouping all eleven together as "core" is a documentation-management convenience; it does not equalize their authority status.
+Files 2–6 above are the canonical project/foundation artifacts. File 7 is the proposed unified AI Working Rules document and is explicitly NOT YET CANONICAL. Files 1, 8–9 are supporting consolidation, decision-resolution, and audit artifacts; they record project state, evidence, findings, or process status but do not become canonical domain/project truth merely by appearing in this landscape. Files 10–11 — the Learning Foundation artifacts — are completed first-build foundation artifacts, not yet canonical; their active status, review sequence, and final handoff treatment are governed by the Pre-Opus preparation plan. Grouping all eleven together as "core" is a documentation-management convenience; it does not equalize their authority status.
 
 **B. Project-operation / session-support artifacts — 3 files.** These support project/session operation, coordination, governance, and execution. They are important project artifacts but are not interchangeable with domain/foundation knowledge:
 
@@ -81,7 +81,7 @@ Files 2–6 above are the canonical project/foundation artifacts. File 7 is the 
 13. "DEIXEN_Prompt_Engineering_and_Governance_UNIFIED_PROPOSED.md"
 14. "DEIXEN_MASTER_EXECUTION_ROADMAP.md" (this document)
 
-These 14 files together constitute the current managed project documentation set — 14 files, not 14 files of the same kind. The three operational files above have a different function from the eleven core files and are not to be read as equivalent to them.
+These 14 files constitute the project's baseline managed documentation set — 14 files, not 14 files of the same kind. This baseline must not be confused with the active Pre-Opus Corpus handed to Opus, whose final inventory is established by the Pre-Opus preparation plan.
 
 **Additional Amadeus Reference/Knowledge files are currently being produced by Sonnet, separately from this fixed 14-file set** (see Section 4). Their expected number is approximately five, but the final number is not yet closed. The current project documentation set is not to be described as already fixed at nineteen files, and five is not a final, hard-coded number. These files enter the appropriate review/corpus process once they are actually produced and accepted.
 
