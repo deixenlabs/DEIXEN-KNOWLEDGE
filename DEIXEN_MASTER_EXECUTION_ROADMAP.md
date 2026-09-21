@@ -272,24 +272,19 @@ This is not an open-ended permission for any model or agent to expand the docume
 
 ---
 
-8A. Current Artifact-by-Artifact Review / Freeze Track
+8A. Foundation Artifact Review / Freeze Pattern
 
-The current foundation review does **not** jump directly to the final Opus review. Each artifact is reviewed sequentially and cumulatively.
+Foundation review should not jump directly from artifact existence to the independent Opus review. Artifacts are reviewed sequentially and cumulatively, with the active review sequence and execution status governed by `DEIXEN_MASTER_PRE_OPUS_FOUNDATION_PREPARATION_PLAN-1.md`.
 
 For every artifact:
 
 **AUDIT → IDENTIFY DEFECTS → CORRECT → RE-REVIEW → CROSS-DOCUMENT REGRESSION CHECK → FREEZE**
 
-The current review corpus is **14 artifacts** and corresponds to the current 14-file managed project documentation set in Section 3:
+The active Pre-Opus review corpus, artifact order, inclusion rules, and review status are governed by `DEIXEN_MASTER_PRE_OPUS_FOUNDATION_PREPARATION_PLAN-1.md`.
 
-- 9 core DEIXEN foundation artifacts,
-- `DEIXEN_Learning_Design_Specification.md`,
-- `DEIXEN_Learning_Experience_Architecture.md`,
-- `DEIXEN_MASTER_EXECUTION_ROADMAP.md`,
-- `DEIXEN_Prompt_Engineering_and_Governance_UNIFIED_PROPOSED.md`,
-- `UNIVERSAL_AI_SESSION_HANDOFF_PROTOCOL.md`.
+This roadmap does not independently define a fixed Pre-Opus corpus count or active artifact inventory.
 
-Additional **Amadeus Reference/Knowledge files** are currently in production and are outside this fixed 14-file current corpus until they are actually produced and formally enter the review process.
+Additional Amadeus Reference/Knowledge artifacts enter the review corpus only through the intake, evidence, authority, and corpus rules defined by the Pre-Opus preparation plan.
 
 A frozen artifact is a stable baseline, not immutable truth. It may be reopened only when later evidence reveals a genuine defect, contradiction, dependency, or supersession that materially affects it.
 
