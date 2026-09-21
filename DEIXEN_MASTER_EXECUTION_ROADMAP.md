@@ -37,17 +37,17 @@ The Pre-Opus foundation phase is governed by `DEIXEN_MASTER_PRE_OPUS_FOUNDATION_
 
 The resulting foundation must be complete and independently reviewed before the project crosses the Opus handoff and downstream implementation lifecycle.
 
-**Lifecycle responsibility model at and beyond the Opus boundary:**
+**Lifecycle responsibility model across the Opus boundary:**
 
-- **Claude Sonnet** — finishing the specific foundation work already in flight: the remaining Amadeus Reference/Knowledge work, and any explicitly assigned remaining foundation-review tasks. The Learning Experience Architecture is already completed as a first-build foundation artifact (see Section 7) and is not part of Sonnet's remaining work. Sonnet is not the project's long-term strategic brain. This role concludes once the in-flight work is complete; no standing responsibility is invented merely to keep Sonnet in the workflow past that point.
-- **Claude Opus 5** — the primary high-end reasoning and development model for the post-foundation phase: the final foundation review, difficult architecture and engineering reasoning, implementation guidance, debugging, high-risk analysis, and downstream strategic direction where appropriate. Opus does not become a source of truth. It remains subordinate to canonical project artifacts, verified domain evidence, approved project decisions, the project's working rules, and explicit project-owner authority, in all cases.
+- **Claude Sonnet** — primary preparation executor during the current Pre-Opus phase for the remaining assigned foundation work. This responsibility ends at the Handoff to Opus and does not create a standing downstream execution role.
+- **Claude Opus 5** — the independent final reviewer at the Handoff to Opus boundary and the primary high-end reasoning and development model for subsequent phases where explicitly assigned, including difficult architecture and engineering reasoning, implementation guidance, debugging, high-risk analysis, and downstream strategic direction where appropriate. Opus does not become a source of truth. It remains subordinate to canonical project artifacts, verified domain evidence, approved project decisions, the project's working rules, and explicit project-owner authority, in all cases.
 - **ChatGPT (GPT-5.6 Luna, Free plan)** — a limited, supportive role: independent second opinion, contradiction-spotting, critical review, prompt engineering and refinement, and governance reasoning. It is not the primary execution model, the primary file-authoring model, or the primary engineering model. Its actual Free-tier capabilities are not to be overstated or assumed to include paid-tier features.
 - **Claude Design** — owns design execution once the foundation is closed.
 - **Claude Code** — owns engineering implementation once design is approved.
 - **Project owner** — final authority on scope, naming, visual direction, approval, and canonicalization. This authority does not shift regardless of which model is doing the reasoning.
 - **External / domain validation** — remains necessary wherever project governance requires it (see Decision 7 in the canonical decisions ledger), independent of any AI's own assessment.
 
-Opus's review does not replace Sonnet's own review. Sonnet must continuously check and improve its work before submitting the completed foundation for independent final review.
+The independent Opus review does not replace the substantive preparation and self-review required before Handoff; neither does earlier preparation substitute for Opus's independent review.
 
 **Model-selection note (historical, non-active):** a candidate primary-intelligence model (Fable 5.1) was evaluated for this role in a prior review and was not adopted for the current phase — the decision was driven by the project's budget for this phase, not by a capability finding against it. It carries no active role and no planned dependency in this roadmap. It is recorded here only so the evaluation is not silently lost to history; see the AeroBridge Roadmap & AI Role Architecture Review for the underlying evidence.
 
