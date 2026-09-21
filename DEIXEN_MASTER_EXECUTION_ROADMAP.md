@@ -29,7 +29,9 @@ The ambition is to build the strongest learning product that can be responsibly 
 
 2. Current Strategic State
 
-DEIXEN is currently in the Knowledge + Learning Foundation Phase.
+DEIXEN's overall lifecycle spans Pre-Opus foundation preparation, independent Opus review, foundation closure, design, implementation, verification, learner testing, and evidence-based improvement.
+
+For the current Pre-Opus phase, the primary active execution and planning reference is `DEIXEN_MASTER_PRE_OPUS_FOUNDATION_PREPARATION_PLAN-1.md`. This Master Execution Roadmap remains the project's overall lifecycle roadmap; it is not the active execution authority for Pre-Opus work. Its post-Opus lifecycle becomes operational at the Handoff to Opus boundary.
 
 The purpose of this phase is to establish the project knowledge, Amadeus reference, Learning Design, and pre-design system/experience requirements before visual design and implementation begin.
 
