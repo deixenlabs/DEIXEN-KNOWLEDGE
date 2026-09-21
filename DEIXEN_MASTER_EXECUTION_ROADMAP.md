@@ -99,25 +99,14 @@ Do not silently resolve conflicts.
 
 ---
 
-4. Amadeus Reference Layer — Sonnet
+4. Amadeus Reference Layer
 
-Sonnet is developing additional Amadeus reference files.
+The Amadeus Reference Layer establishes the evidence base used to represent Amadeus commands, behavior, prerequisites, constraints, outputs, workflows, error behavior, and other relevant domain behavior.
 
-Their purpose is to establish the strongest evidence base reasonably available for:
+The production, intake, evidence classification, authority treatment, and final inclusion of Amadeus Reference/Knowledge artifacts in the prepared Opus Corpus are governed by `DEIXEN_MASTER_PRE_OPUS_FOUNDATION_PREPARATION_PLAN-1.md`.
 
-- Amadeus commands,
-- command behavior,
-- prerequisites,
-- constraints,
-- outputs,
-- workflows,
-- error behavior,
-- and other relevant domain behavior.
-
-During the Sonnet phase, these files are working/reference artifacts under development. They do not become authoritative merely because they have been written.
-
-Their authority and final status are established only after the final review and consolidation process.
-
+ This roadmap does not independently assign those artifacts an active Pre-Opus execution status or final corpus inclusion.
+ 
 The governing rule is:
 
 Never guess Amadeus behavior.
