@@ -675,29 +675,19 @@ A downstream phase must not treat a recommendation, draft, historical artifact, 
 
 23. Current State
 
-Active Phase:
+The active Pre-Opus phase remains governed by "DEIXEN_MASTER_PRE_OPUS_FOUNDATION_PREPARATION_PLAN-1.md".
 
-Sonnet is completing the remaining Amadeus Reference Layer work. The Learning Design Specification and the Learning Experience Architecture are both now completed as first-build foundation artifacts, awaiting the Evidence/State Confirmation Gate and the final independent adversarial review — neither is canonical yet.
+This Master Execution Roadmap does not serve as the active execution authority for the remaining Pre-Opus preparation work. It records the project's broader lifecycle and becomes operational for downstream lifecycle execution at the Handoff to Opus boundary.
 
-Current objective:
+Current lifecycle state:
 
-Finish the remaining Amadeus reference work, then consolidate the entire pre-design foundation for review.
+- Pre-Opus preparation is governed by the active Pre-Opus preparation plan.
+- Handoff to Opus occurs only after the applicable Pre-Opus readiness requirements have been satisfied and the prepared Corpus, operating context, and carry-forward registers are ready for transfer.
+- After Handoff, the lifecycle proceeds through Independent Adversarial Review, post-Opus finding resolution, foundation closure, design, implementation, verification, learner testing, and evidence-based improvement as defined in this roadmap.
 
-Next major gate:
+The roadmap must not imply that a downstream phase has started merely because its place in the lifecycle is defined.
 
-The Evidence/State Confirmation Gate, followed by Opus 5's final comprehensive adversarial review of the completed foundation.
-
-After that review:
-
-Resolve the findings that genuinely require action, perform the final closure verification, and formally close the Knowledge + Learning Foundation.
-
-After successful closure:
-
-Claude Design begins, directed within the approved foundation and informed by Opus's strategic reasoning where useful, always subject to the project owner's final approval.
-
-Implementation does not begin before the Knowledge + Learning Foundation and final visual direction are approved.
-
-This phase operates under a one-month project budget. The operating objective is the strongest practical result achievable through disciplined use of Opus 5 — stronger sourcing, tighter task decomposition, precise prompting, and adversarial review — not the maximum theoretical model capability available at any cost.
+Current execution authority therefore remains with the Pre-Opus preparation plan until the Handoff to Opus boundary is actually reached.
 
 ---
 
