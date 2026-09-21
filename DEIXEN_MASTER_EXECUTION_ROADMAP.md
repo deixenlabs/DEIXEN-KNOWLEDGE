@@ -606,7 +606,7 @@ Record:
 - what changed from the previous roadmap,
 - and what the next phase is.
 
-This roadmap is the project's current execution map.
+This roadmap is the project's overall lifecycle roadmap. During Pre-Opus, active execution and planning are governed by `DEIXEN_MASTER_PRE_OPUS_FOUNDATION_PREPARATION_PLAN-1.md`; at the Handoff to Opus boundary, the post-Opus lifecycle defined here becomes operational.
 
 It is not a replacement for the authoritative project files.
 
