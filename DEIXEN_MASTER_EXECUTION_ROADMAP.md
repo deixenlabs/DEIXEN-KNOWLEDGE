@@ -106,6 +106,7 @@ The Amadeus Reference Layer establishes the evidence base used to represent Amad
 The production, intake, evidence classification, authority treatment, and final inclusion of Amadeus Reference/Knowledge artifacts in the prepared Opus Corpus are governed by `DEIXEN_MASTER_PRE_OPUS_FOUNDATION_PREPARATION_PLAN-1.md`.
 
 This roadmap does not independently assign those artifacts an active Pre-Opus execution status or final corpus inclusion.
+
 The governing rule is:
 
 Never guess Amadeus behavior.
@@ -116,13 +117,13 @@ External research may be used to verify domain facts when appropriate, but impor
 
 ---
 
-5. Learning Design Layer — Sonnet
+5. Learning Design Layer
 
 The primary learning-design artifact is:
 
 "DEIXEN_Learning_Design_Specification.md"
 
-**Current status:** COMPLETED and ready to be reviewed as part of the final comprehensive Opus review.
+**Current status:** COMPLETED as a first-build foundation artifact and not yet formally closed; its review and closure are governed by the Pre-Opus preparation plan, the Opus adversarial review, and the subsequent closure process.
 
 The document is not considered formally closed yet; final closure depends on the complete foundation review, resolution of valid findings, and closure verification.
 
@@ -161,7 +162,7 @@ The Learning Design must be evidence-informed, professionally rigorous, practica
 
 It must not become an academic document for its own sake.
 
-Sonnet must challenge the design rather than merely preserve previous decisions.
+The Learning Design must be actively challenged during the applicable review process rather than merely preserved as previously written.
 
 The objective is not to make the document look better.
 
