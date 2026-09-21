@@ -458,7 +458,7 @@ Only approved design decisions become implementation requirements.
 
 15. Implementation — Claude Code
 
-After approval of:
+After final approval and closure of the applicable foundation and design requirements, satisfaction or explicit disposition of required validation dependencies, and explicit authorization to execute:
 
 - the current knowledge foundation,
 - Amadeus reference,
@@ -467,9 +467,9 @@ After approval of:
 - approved pre-design system or engineering requirements,
 - and final visual direction,
 
-Claude Code implements the product.
+Claude Code implements the product within the explicitly authorized scope and against the approved foundation and design requirements.
 
-The implementation must follow the approved foundation.
+The implementation must follow the approved foundation, approved design direction, and authorized implementation scope.
 
 If implementation difficulty appears, first determine whether the issue is:
 
