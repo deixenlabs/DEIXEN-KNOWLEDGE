@@ -33,11 +33,11 @@ DEIXEN's overall lifecycle spans Pre-Opus foundation preparation, independent Op
 
 For the current Pre-Opus phase, the primary active execution and planning reference is `DEIXEN_MASTER_PRE_OPUS_FOUNDATION_PREPARATION_PLAN-1.md`. This Master Execution Roadmap remains the project's overall lifecycle roadmap; it is not the active execution authority for Pre-Opus work. Its post-Opus lifecycle becomes operational at the Handoff to Opus boundary.
 
-The purpose of this phase is to establish the project knowledge, Amadeus reference, Learning Design, and pre-design system/experience requirements before visual design and implementation begin.
+The Pre-Opus foundation phase is governed by `DEIXEN_MASTER_PRE_OPUS_FOUNDATION_PREPARATION_PLAN-1.md`, which defines the active preparation work required before the Handoff to Opus.
 
-The required foundation must be completed and independently reviewed before implementation begins.
+The resulting foundation must be complete and independently reviewed before the project crosses the Opus handoff and downstream implementation lifecycle.
 
-**Active AI responsibility model for this phase and the phase ahead:**
+**Lifecycle responsibility model at and beyond the Opus boundary:**
 
 - **Claude Sonnet** — finishing the specific foundation work already in flight: the remaining Amadeus Reference/Knowledge work, and any explicitly assigned remaining foundation-review tasks. The Learning Experience Architecture is already completed as a first-build foundation artifact (see Section 7) and is not part of Sonnet's remaining work. Sonnet is not the project's long-term strategic brain. This role concludes once the in-flight work is complete; no standing responsibility is invented merely to keep Sonnet in the workflow past that point.
 - **Claude Opus 5** — the primary high-end reasoning and development model for the post-foundation phase: the final foundation review, difficult architecture and engineering reasoning, implementation guidance, debugging, high-risk analysis, and downstream strategic direction where appropriate. Opus does not become a source of truth. It remains subordinate to canonical project artifacts, verified domain evidence, approved project decisions, the project's working rules, and explicit project-owner authority, in all cases.
