@@ -434,7 +434,7 @@ Claude Design investigates:
 
 Claude Design is expected to:
 
-- challenge weak assumptions,
+- challenge weak design assumptions within the approved foundation and identify any material conflict that requires the appropriate decision or review path,
 - identify UX risks,
 - propose alternatives,
 - explore multiple directions where useful,
