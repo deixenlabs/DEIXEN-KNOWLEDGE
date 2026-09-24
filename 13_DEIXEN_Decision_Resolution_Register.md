@@ -24,9 +24,12 @@ dispositioned below. The former "Knowledge Recovery" phase no longer exists —
 its items are reassigned to Phase 3 (verification and readiness) or to later
 curriculum authoring.
 
-What still stands between the project and its first build is concentrated in
-one place: the slice's Amadeus behavior. The first edition of the Verified
-Reference (2026-09-25) covers it except the items listed there as UNVERIFIED.
+Update 2026-09-25 (Phase 3.2): Karim approved the adjusted slice path
+(07 Decision 22) and the Terminal output rule (07 Decision 23). Every command
+in the slice path is now VERIFIED (Verified Reference, second edition). One
+new finding awaits Karim: the IATA passenger-contact SSR (`SRCTCM`, V-13).
+What remains before the first build is the readiness pack (Execution Plan
+3.3–3.6).
 
 ## 2. Phase 1 Findings — Disposition
 
@@ -68,13 +71,15 @@ presented a navy/blue color language as "durable" although colors are open
 | Design Execution (colors, type, logo, identity) | OPEN | Karim, with Claude Design | Execution Plan Phase 4 |
 | Working name DEIXEN | PROVISIONAL | Karim | Reopen only on evidence (Constitution §1) |
 | Personal-first & Saudi/Gulf framing | CLOSED | Karim | Carry forward |
-| Vertical Slice rule; slice boundary (D8A) | CLOSED — Verification-Pending | Karim | Phase 3 verification; D20 |
+| Vertical Slice rule; slice boundary (D8A) | CLOSED — path adjusted by D22; all path commands VERIFIED | Karim | Slice Build Spec (3.3) |
+| Slice path adjustment (D22) | CLOSED — Approved 2026-09-25 | Karim | — |
+| `SRCTCM` step in the slice (Verified Reference V-13) | OPEN — awaiting Karim; Claude recommends adding it after `AP` | Karim | Decide before the Slice Build Spec |
 | Coach contract (D9); CS contract (D6) | CLOSED | Karim | Carry forward |
 | Evidence, Assessment, Scenario contracts | CLOSED (unbuilt) | Karim | Slice Build Spec, Phase 3 |
 | Domain/SME validation (D7) | SUPERSEDED by D12 | — | — |
 | Manus protocol (D10A); arbitration outcome (D10) | SUPERSEDED (historical) | — | — |
 | Verification Standard (D12); Teaching boundary (D13) | CLOSED | Karim | Apply in Phase 3 |
-| Terminal display formats / error texts that cannot be verified | OPEN | Karim | Decide in Phase 3 with evidence |
+| Terminal display formats / error texts that cannot be verified | CLOSED by D23 (official example formats; unsourced messages shown as labeled training messages) | Karim | Apply in 3.3 |
 | Old engine as history; fresh build (D14) | CLOSED | Karim | — |
 | Amadeus Verified Reference (D15) | CLOSED — first edition 2026-09-25 (slice scope) | Claude | Extend as scope grows |
 | Governance set (D16); Roles (D17) | CLOSED | Karim | — |
@@ -84,7 +89,8 @@ presented a navy/blue color language as "durable" although colors are open
 | Evidence/State concrete schema | DELEGATED — not done | Claude | Slice Build Spec, Phase 3 |
 | Coach layout (global vs per-page) | DELEGATED | Claude Design / Code | Resolve at build |
 | Curriculum order (competency vs command order); Lesson 17; 8 Advanced lessons | OPEN | Claude, then Karim | Curriculum authoring after the slice (D18) |
-| Pricing prerequisites of the slice (name before `FXP`?) | OPEN — UNVERIFIED after search (Verified Reference U-01); mandatory PNR elements VERIFIED (V-08) | Karim | Decide slice path (D20), Phase 3.2 |
+| Pricing prerequisites of the slice (name before `FXP`?) | UNVERIFIED (U-01) — no longer blocking: D22 puts `NM` before `FXP` | — | — |
+| Old path `AN → SS → FQD → FXP` still written in LDS (§ tiers, ~l.604, ~l.715), LXA (~l.153), 05 | Superseded by D22; LDS/LXA reading rules point to 07; 05 updated | Claude | Slice Build Spec uses the D22 path |
 | `QE`/`QN`/`QD` real functions | OPEN — not taught | Claude | Verification when queues enter scope |
 | `FXX` real entry | VERIFIED (V-06) | — | — |
 | SSR/seat association; voiding; `FXL`/`TQT`/`TTE`/`FQF`; Offers (`OFS`); post-ticketing status; mandatory-element list | OPEN — backlog | Claude | Verification when each enters scope |

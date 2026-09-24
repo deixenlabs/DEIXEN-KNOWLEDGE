@@ -1,6 +1,6 @@
 ---
 name: DEIXEN Amadeus Verified Reference
-status: CURRENT — first edition, 2026-09-25 (Execution Plan Phase 3.1). Scope so far: the first-build slice and its prerequisites.
+status: CURRENT — second edition, 2026-09-25 (Execution Plan Phase 3.1–3.2). Scope so far: the first-build slice (07 Decision 22) and its prerequisites.
 owns: The single authority for real Amadeus behavior (07 Decision 15). Only entries marked VERIFIED here may be taught or simulated (07 Decision 13).
 does not own: product, curriculum, or learning decisions; what any DEIXEN code does (implementation truth)
 ---
@@ -120,16 +120,42 @@ does not own: product, curriculum, or learning decisions; what any DEIXEN code d
 - After end of transaction the RF field no longer shows in the PNR; it moves
   to the PNR history. In the Amadeus Training Environment the `--- RLR ---`
   tag does not appear.
-- Sources: Amadeus Service Hub, "How to end the transaction in a PNR with ET or ER" —
+- A PNR cannot be filed unless an RF element is present. Entry: `RF` +
+  free text naming who requested the booking — official examples `RFMR SMITH`,
+  `RFMR PAX`.
+- Sources: Amadeus Service Hub, "How to add a Received From (RF) element (Cryptic)" —
+  https://servicehub.amadeus.com/c/portal/view-solution/3999971/how-to-add-a-received-from-rf-element-cryptic- ;
+  "How to split a PNR (Cryptic)" — https://servicehub.amadeus.com/c/portal/view-solution/920239/how-to-split-a-pnr-cryptic- ;
+  "How to split a group PNR (Cryptic)" (2025-01-15, print view of solution 803842);
+  "How to end the transaction in a PNR with ET or ER" —
   https://servicehub.amadeus.com/c/portal/view-solution/942980/how-to-end-the-transaction-in-a-pnr-with-et-or-er ;
   "How to create a group PNR (Cryptic)" (above)
 
-### V-11 Contact element `AP` — PARTLY VERIFIED
-- VERIFIED: contact elements appear in official PNR examples as `AP` (phone)
-  and `APE` (e-mail).
-- UNVERIFIED: the exact entry syntax for adding a phone contact — no
-  exposed source text states it.
-- Source: official PNR examples in V-03 and V-10 sources.
+### V-11 Contact element `AP` — VERIFIED (upgraded 2026-09-25)
+- Entry: `AP` followed by the contact as free text. Official PNR displays
+  show the resulting element as free text, e.g. `AP DREAM TRAVEL`,
+  `AP A SMART TRAVEL +4655778899`, `APA +4688774455 SMART TRAVEL`.
+- Typed variants shown by sources: `APM` mobile (displays e.g.
+  `APM +447894562`), `APE` e-mail (displays e.g. `APE COLIN.ARCHER@EMAIL.COM`).
+  Entry examples: `APBKK-02-2079000-B` (THAI-AMADEUS quick card);
+  `APM-61 2 98766111/P2`, `APE-JCOLLINS@EMAIL.COM/P2` (Amadeus
+  "Reservations Essentials: Common entries reference guide").
+- For the slice, the verified minimum is `AP` + free-text phone. Sub-formats
+  (city prefix, `-B`/`-A` type suffix, `/P` passenger association) are shown
+  only as examples; they are not taught as rules.
+- Evidence note: the official "Reservations Essentials" page is on Service
+  Hub (solution 1029500472) but its entry table is readable only through a
+  re-hosted copy (studylib.net, dated 2025-08-14). That copy is treated as
+  one source; the THAI-AMADEUS card is the second, independent one; the
+  official PNR displays confirm the stored form.
+- Sources: THAI-AMADEUS, "SG quick card" —
+  https://www.thaiamadeus.com/THILA/file/trn/SG%20-%20QUICK%20CARD_EN_V2.pdf ;
+  Amadeus Service Hub, "Reservations Essentials: Common entries reference guide" —
+  https://servicehub.amadeus.com/c/portal/view-solution/1029500472/reservations-essentials-common-entries-reference-guide
+  (content read via https://studylib.net/doc/27673987/reservations-essentials--common-entries-reference-guide--...);
+  official PNR displays: "How to split a PNR", "How to split a group PNR",
+  "How to create a group PNR", "How to retrieve a PNR (Cryptic)" —
+  https://servicehub.amadeus.com/c/portal/view-solution/453392470/how-to-retrieve-a-pnr-cryptic-
 
 ### V-12 Changing a priced PNR — VERIFIED (beyond the slice)
 - Changing a name or itinerary after a TST exists flags the TST; ticketing
@@ -138,14 +164,32 @@ does not own: product, curriculum, or learning decisions; what any DEIXEN code d
 - Source: Amadeus Service Hub, "Error message: ITINERARY/NAME CHANGE-VERIFY TST" —
   https://servicehub.amadeus.com/c/portal/view-solution/950584/error-message-itinerary/name-change-verify-tst
 
+### V-13 IATA passenger contact SSRs (`SRCTCM`/`SRCTCE`/`SRCTCR`) — VERIFIED
+- Under IATA resolution 830d, agents must pass passenger contact details to
+  the airline for irregular operations.
+- Entries (source examples): mobile `SRCTCM-3054996244/US`; e-mail
+  `SRCTCE-…` (some characters must be replaced, e.g. `@` → `//`);
+  refusal `SRCTCR-REFUSED/P3`. The dash after `SRCTCM` is mandatory.
+- If none of the three is present, end of transaction displays the warning
+  **MISSING SSR CTCM MOBILE OR SSR CTCE EMAIL OR SSR CTCR NON-CONSENT**.
+  Entering `ER`/`ET` again bypasses it, and the bypass is recorded in PNR
+  history.
+- `SRCTCM` is the entry the source gives for transferring the passenger's
+  mobile to the airline. Official PNR displays show `AP…` and `SSR CTC…` as
+  separate elements; entering `AP` does not satisfy this warning according to
+  anything found (no source says it does).
+- Source: Amadeus Service Hub, "How to add an email (SRCTCE) or mobile phone number (SRCTCM) in a PNR (Cryptic)" —
+  https://servicehub.amadeus.com/c/portal/view-solution/3929673/how-to-add-an-email-srctce-or-mobile-phone-number-srctcm-in-a-pnr-cryptic-
+
 ## 3. Unverified — slice-relevant
 
 | # | Claim | Reason |
 |---|---|---|
-| U-01 | `FXP` requires passenger names in the PNR | No source states it. One official page says `FXA`, `FXL`, `FXR` work without names; it does not address `FXP`. Every official `FXP` example has names — suggestive only |
-| U-02 | Exact error texts for wrong `AN`, `SS`, `FQD`, `FXP` input | Not found in exposed official text yet |
-| U-03 | `AP` phone entry syntax | See V-11 |
-| U-04 | Full screen layouts beyond what official examples show | Official pages show real example screens for `AN`, `FQD`, `FXP` and PNR displays; anything outside those examples is unverified |
+| U-01 | `FXP` requires passenger names in the PNR | No source states it. **No longer blocks the slice:** the approved path (07 Decision 22) enters `NM` before `FXP`, so the slice never tests this case |
+| U-02 | Exact error texts for wrong `AN`, `SS`, `NM`, `AP`, `FXP` input | Not found in exposed official text. Handled by 07 Decision 23 (clearly labeled training messages) |
+| U-03 | ~~`AP` phone entry syntax~~ | Closed — now VERIFIED (V-11) |
+| U-04 | Full screen layouts beyond what official examples show | Official pages show real example screens for `AN`, `FQD`, `FXP` and PNR displays; anything outside them is handled by 07 Decision 23 |
+| U-05 | Whether a TST created by `FXP` after `ER` needs a further `ER`/`ET` to be kept in the PNR | Not found. The slice ends at a completed `FXP` display, so it does not simulate what happens to the TST afterwards |
 
 ## 4. Research backlog — outside the slice (not yet researched under D12)
 
@@ -158,3 +202,4 @@ UNVERIFIED until researched.
 | Date | Change |
 |---|---|
 | 2026-09-25 | First edition: V-01 to V-12, U-01 to U-04 |
+| 2026-09-25 | Second edition: V-11 upgraded to VERIFIED; V-10 adds RF entry syntax; new V-13 (IATA contact SSRs); U-01 no longer blocking; U-03 closed; new U-05 |

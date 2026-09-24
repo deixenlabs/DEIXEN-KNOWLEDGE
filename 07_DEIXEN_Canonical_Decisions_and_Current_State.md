@@ -2,7 +2,7 @@
 name: DEIXEN Canonical Decisions & Current State
 owns: The single decisions ledger and current project status going forward
 supersedes reading in isolation: AeroBridge_Decisions_and_Current_State.md
-last synchronized: 2026-09-24 (Execution Plan Phase 2)
+last synchronized: 2026-09-25 (Execution Plan Phase 3.2)
 authority note: Where a decision below is owned in more detail elsewhere in this canonical set (product/architecture, design, engine, curriculum/Coach), this file states the decision and its status, and points there rather than duplicating — the same single-ownership discipline the original NEW document already established and this pass is preserving.
 ---
 
@@ -51,11 +51,14 @@ list lives in `00_DEIXEN_Knowledge_Consolidation_Plan.md` (Corpus Map).
 were ended by Karim's decision on 2026-09-24 and are historical.
 
 **Phase:** Phase 2 (Foundation Synchronization) completed on 2026-09-24.
-**Now:** Phase 3. Step 3.1 (verification of the slice's Amadeus behavior)
-produced the first edition of `DEIXEN_Amadeus_Verified_Reference.md` on
-2026-09-25. Next: step 3.2 — Karim's decisions on the slice path
-(Decision 20) and on Terminal display handling (Decision 13 open item) —
-then the rest of the execution-readiness pack.
+**Now:** Phase 3. Step 3.1 produced `DEIXEN_Amadeus_Verified_Reference.md`
+(second edition 2026-09-25). Step 3.2: Karim approved the adjusted slice path
+(Decision 22) and the Terminal output rule (Decision 23) on 2026-09-25. One
+new finding awaits Karim: the IATA passenger-contact SSR (`SRCTCM`) and the
+end-of-transaction warning when it is missing (Verified Reference V-13) —
+see "Open — awaiting Karim" below. Next: steps 3.3–3.5 (Slice Build Spec,
+Design Brief, Claude Code environment pack), each file needing Karim's
+approval before creation (Execution Plan §5).
 
 **Implementation state:** no codebase exists in the project's hands. The first
 build (Decision 20) will be written from scratch against approved
@@ -115,9 +118,10 @@ applies.
 ### Amadeus — domain truth, implementation history, and the frozen slice
 - **Domain truth** is owned by `DEIXEN_Amadeus_Verified_Reference.md`
   (Decision 15, created in Execution Plan Phase 3) under the Verification
-  Standard (Decision 12). First edition created 2026-09-25: it verifies the
-  slice commands (`AN`, `SS`, `FQD`, `FXP`), `FXX`, `NM`, `TK`, `RF`/`ET`/`ER`,
-  and the mandatory PNR elements. Everything not listed there as VERIFIED is
+  Standard (Decision 12). Second edition 2026-09-25: it verifies every
+  command in the adjusted slice path (Decision 22) — `AN`, `SS`, `NM`, `AP`,
+  `TK`, `RF`, `ER`, `FXP` — plus `FQD`, `FXX`, the mandatory PNR elements, and
+  the IATA passenger-contact SSRs. Everything not listed there as VERIFIED is
   UNVERIFIED.
 - **Implementation history:** `05_DEIXEN_Canonical_Amadeus_Engine_Reference.md`
   describes the old engine (37 commands) whose code is not available. It is a
@@ -125,8 +129,10 @@ applies.
   baseline nor evidence of real Amadeus behavior.
 - Vertical Slice Implementation Boundary (Decision 8A) — **Closed — Frozen /
   Verification-Pending.** Path: the full core transformation chain.
-  Workflow family: Pricing & Ticketing. Terminal command boundary: `AN → SS →
-  FQD → FXP` only. Scenario count: 1 behaviorally differentiated scenario.
+  Workflow family: Pricing & Ticketing. Terminal command boundary: as
+  adjusted by Decision 22 — `AN → SS → NM → AP → TK → RF → ER → FXP`, with
+  `FQD` as an optional step (the original `AN → SS → FQD → FXP` is
+  superseded). Scenario count: 1 behaviorally differentiated scenario.
   Evidence: 1 owned assessment record from real learner actions.
   Growth/Readiness: 1 bounded, qualitative output — no numeric Saudi Readiness
   percentage. Coach: required across all touchpoints spanning the slice.
@@ -140,8 +146,8 @@ applies.
   (verification shows the path lacks a required step).
 - **Amadeus research backlog** (leads carried from the historical evidence
   package; each is UNVERIFIED until checked under Decision 12):
-  pricing prerequisites for the slice — for example whether a passenger name
-  must exist before `FXP` (**Phase 3 priority**); `QE`/`QN`/`QD` — research
+  whether `FXP` works without a passenger name (UNVERIFIED; no longer
+  blocks the slice, which enters `NM` first — Decision 22); `QE`/`QN`/`QD` — research
   leads describe functions different from the old engine, so neither version
   is taught (Decision 13); SSR/seat association workflow; voiding; `FXX`
   is now VERIFIED as a real entry (Verified Reference V-06), so the older
@@ -269,9 +275,8 @@ an ordinary technical implementation choice, not decided here.
   assessment criteria, scenarios, or simulated Terminal behavior. UNVERIFIED
   claims stay in internal documents. If the slice needs a behavior that is
   UNVERIFIED, the gap goes to Karim before build; nothing is invented to fill
-  it. **OPEN (Phase 3):** exact screen layouts and error texts may not be
-  publicly verifiable; how the Terminal handles that case needs a Karim
-  decision based on what verification actually finds.
+  it. The former open item (unverifiable layouts and error texts) is closed
+  by Decision 23.
 - **Decision 14 — Old engine is history. Closed — Approved.** File 05 is a
   historical implementation reference; its code is not available. The new
   implementation is written fresh from the Verified Reference and approved
@@ -317,6 +322,33 @@ an ordinary technical implementation choice, not decided here.
   Karim decides the adjustment.
 - **Decision 21 — Owner name. Closed.** The owner is Karim. Earlier records
   used the name "Malik" for the same person.
+
+### Decisions of 2026-09-25 (Karim)
+
+- **Decision 22 — Slice path adjusted (under Decision 20). Closed —
+  Approved.** Evidence: an Amadeus PNR needs five mandatory elements (PRINT —
+  Verified Reference V-08), so `AN → SS → FQD → FXP` alone is not a real job
+  task. The slice command path is `AN → SS → NM → AP → TK → RF → ER → FXP`;
+  `FQD` stays an optional step. Every command in the path is VERIFIED
+  (V-01, V-03, V-05, V-07, V-09, V-10, V-11). Scenario count, evidence type,
+  and every other part of Decision 8A are unchanged.
+- **Decision 23 — Terminal output rule (closes the Decision 13 open item).
+  Closed — Approved.** The Terminal reproduces the display formats shown in
+  the official examples recorded in the Verified Reference. Any message or
+  screen with no verified source (for example the exact text of an error for
+  wrong input) is shown as a plain training message, visibly marked as such
+  — never written to look like authentic Amadeus text. Verified messages
+  (e.g. **NEED TICKETING ARRANGEMENT**, V-09) are reproduced as recorded.
+
+### Open — awaiting Karim
+
+- **Passenger contact SSR in the slice.** Verified Reference V-13: under IATA
+  resolution 830d, end of transaction shows **MISSING SSR CTCM MOBILE OR SSR
+  CTCE EMAIL OR SSR CTCR NON-CONSENT** when no `SRCTCM`/`SRCTCE`/`SRCTCR` is
+  present; re-entering `ER` bypasses it and the bypass is recorded in PNR
+  history. Found after Decision 22 was proposed. Choice: add `SRCTCM` to the
+  path after `AP` (Claude's recommendation — it is what a professional agent
+  does), or keep the path and let `ER` show the verified warning.
 
 ## Definition of Done — for the current frozen vertical slice
 
