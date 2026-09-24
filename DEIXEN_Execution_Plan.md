@@ -34,8 +34,8 @@ independent review (waived by Karim).
 |---|---|---|---|---|
 | 0. Source lock | Read the Project and repository; decide which copies count | Corpus inventory | — | **Done** 2026-09-24 |
 | 1. Review (read-only) | Look for contradictions, gaps, stale statements | 16 findings (file 13 §2) | Karim reviews findings | **Done** 2026-09-24 |
-| 2. Synchronization | Apply decisions 12–21; fix contradictions; migrate names; mark every file's status | Updated corpus; Corpus Map (file 00) | Karim uploads the files | **Done** on upload |
-| 3. Verification & readiness | See §4 | Verified Reference; Slice Build Spec; Design Brief; environment pack | Karim approves the pack | Next |
+| 2. Synchronization | Apply decisions 12–21; fix contradictions; migrate names; mark every file's status | Updated corpus; Corpus Map (file 00) | Karim uploads the files | **Done** 2026-09-25 |
+| 3. Verification & readiness | See §4 | Verified Reference; Slice Build Spec; Design Brief; environment pack | Karim approves the pack | **In progress** (3.1 done) |
 | 4. Design | Claude Design explores directions from the Design Brief; Karim chooses; the chosen direction is refined | Approved design | Karim approves direction | Waiting |
 | 5. Build | Claude Code builds the slice (evening computer sessions); verification loop from 08 §26; Karim tests it as a learner | Working slice meeting 07's Definition of Done | Karim confirms the slice works | Waiting |
 | 6. Expansion | Next lessons, Basic then Advanced — each chunk goes verify → spec → build → test | Growing curriculum | Karim, per chunk | Waiting |
@@ -98,4 +98,4 @@ responsibility).
 
 ## 7. Current Phase
 
-Phase 2 complete (on upload). Next: Phase 3, starting with 3.1.
+Phase 2 complete (uploaded 2026-09-25). Phase 3: step 3.1 done — first edition of the Verified Reference (2026-09-25). Next: step 3.2, Karim's decisions.

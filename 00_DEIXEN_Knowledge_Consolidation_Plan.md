@@ -39,12 +39,12 @@ length, or the word "Canonical" in its title.
 | `04_DEIXEN_Canonical_Design_System.md` | Design principles, accessibility, anti-patterns; Design Execution open | 03, 07 |
 | `06_DEIXEN_Canonical_Curriculum_and_Coach.md` | Curriculum goal and historical baseline; Coach contract; Ghost Mode; Speed Drills | 07 (D12, D13, D18), Verified Reference |
 
-## A3. Planned (Execution Plan Phase 3)
+## A3. Amadeus domain truth, and planned files
 
-| File | Will own |
-|---|---|
-| `DEIXEN_Amadeus_Verified_Reference.md` | The only authority for real Amadeus behavior (07 D15) |
-| Further Phase 3 files | Listed in the Execution Plan; each needs Karim's approval before creation |
+| File | Owns / will own | Status |
+|---|---|---|
+| `DEIXEN_Amadeus_Verified_Reference.md` | The only authority for real Amadeus behavior (07 D15) | Current — first edition 2026-09-25 |
+| Further Phase 3 files | Listed in the Execution Plan | Each needs Karim's approval before creation |
 
 ## A4. Draft authority — learning foundation
 

@@ -41,9 +41,9 @@ command a lesson teaches must first be VERIFIED.
 
 Two historical command notes from the source material: fare quote was
 written as `FQD` rather than "FQ"; and fare pricing was "corrected" to
-`FXP`/`FXB` rather than `FXP`/`FXX`. Research leads since then indicate `FXX`
-is a real Amadeus command, so that "correction" is **withdrawn** — but
-neither form is taught as fact until VERIFIED (Decision 12). The old engine
+`FXP`/`FXB` rather than `FXP`/`FXX`. `FXX` is now VERIFIED as a real Amadeus
+entry that prices without storing (`DEIXEN_Amadeus_Verified_Reference.md`
+V-06), so that "correction" was wrong and is withdrawn. The old engine
 implemented only `FXP`/`FXB`; that is implementation history, not evidence
 about Amadeus.
 

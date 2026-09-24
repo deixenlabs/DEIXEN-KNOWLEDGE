@@ -25,8 +25,8 @@ its items are reassigned to Phase 3 (verification and readiness) or to later
 curriculum authoring.
 
 What still stands between the project and its first build is concentrated in
-one place: **no Amadeus behavior is VERIFIED yet** (Decision 12). Phase 3
-exists to change that for the slice.
+one place: the slice's Amadeus behavior. The first edition of the Verified
+Reference (2026-09-25) covers it except the items listed there as UNVERIFIED.
 
 ## 2. Phase 1 Findings — Disposition
 
@@ -76,7 +76,7 @@ presented a navy/blue color language as "durable" although colors are open
 | Verification Standard (D12); Teaching boundary (D13) | CLOSED | Karim | Apply in Phase 3 |
 | Terminal display formats / error texts that cannot be verified | OPEN | Karim | Decide in Phase 3 with evidence |
 | Old engine as history; fresh build (D14) | CLOSED | Karim | — |
-| Amadeus Verified Reference (D15) | CLOSED — file not yet created | Claude | Create in Phase 3 |
+| Amadeus Verified Reference (D15) | CLOSED — first edition 2026-09-25 (slice scope) | Claude | Extend as scope grows |
 | Governance set (D16); Roles (D17) | CLOSED | Karim | — |
 | Curriculum goal (D18) | CLOSED | Karim | Market evidence sourced during curriculum work |
 | Absent artifacts (D19); First build (D20); Owner name (D21) | CLOSED | Karim | — |
@@ -84,9 +84,10 @@ presented a navy/blue color language as "durable" although colors are open
 | Evidence/State concrete schema | DELEGATED — not done | Claude | Slice Build Spec, Phase 3 |
 | Coach layout (global vs per-page) | DELEGATED | Claude Design / Code | Resolve at build |
 | Curriculum order (competency vs command order); Lesson 17; 8 Advanced lessons | OPEN | Claude, then Karim | Curriculum authoring after the slice (D18) |
-| Pricing prerequisites of the slice (name before `FXP`?) | OPEN — Phase 3 priority | Claude | Web verification |
+| Pricing prerequisites of the slice (name before `FXP`?) | OPEN — UNVERIFIED after search (Verified Reference U-01); mandatory PNR elements VERIFIED (V-08) | Karim | Decide slice path (D20), Phase 3.2 |
 | `QE`/`QN`/`QD` real functions | OPEN — not taught | Claude | Verification when queues enter scope |
-| SSR/seat association; voiding; `FXX`; `FXL`/`TQT`/`TTE`/`FQF`; Offers (`OFS`); post-ticketing status; mandatory-element list | OPEN — backlog | Claude | Verification when each enters scope |
+| `FXX` real entry | VERIFIED (V-06) | — | — |
+| SSR/seat association; voiding; `FXL`/`TQT`/`TTE`/`FQF`; Offers (`OFS`); post-ticketing status; mandatory-element list | OPEN — backlog | Claude | Verification when each enters scope |
 | Work Shift Simulator scope | DEFERRED | Karim | Revisit only if it becomes a real candidate |
 | `cleanRunsNeeded` (old placeholder) | HISTORICAL | — | Mastery rules come from LDS, not old code |
 | `ancillary.js` wiring; live-echo numbering bug (#7) | HISTORICAL (old engine) | — | Lessons only (D14) |

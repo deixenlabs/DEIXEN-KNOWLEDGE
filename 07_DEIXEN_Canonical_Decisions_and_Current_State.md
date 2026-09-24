@@ -51,10 +51,11 @@ list lives in `00_DEIXEN_Knowledge_Consolidation_Plan.md` (Corpus Map).
 were ended by Karim's decision on 2026-09-24 and are historical.
 
 **Phase:** Phase 2 (Foundation Synchronization) completed on 2026-09-24.
-**Next:** Phase 3 — web verification of the Amadeus behavior the first build
-needs (Decision 12), creation of `DEIXEN_Amadeus_Verified_Reference.md`
-(Decision 15), and the execution-readiness pack for Claude Design and Claude
-Code.
+**Now:** Phase 3. Step 3.1 (verification of the slice's Amadeus behavior)
+produced the first edition of `DEIXEN_Amadeus_Verified_Reference.md` on
+2026-09-25. Next: step 3.2 — Karim's decisions on the slice path
+(Decision 20) and on Terminal display handling (Decision 13 open item) —
+then the rest of the execution-readiness pack.
 
 **Implementation state:** no codebase exists in the project's hands. The first
 build (Decision 20) will be written from scratch against approved
@@ -114,8 +115,10 @@ applies.
 ### Amadeus — domain truth, implementation history, and the frozen slice
 - **Domain truth** is owned by `DEIXEN_Amadeus_Verified_Reference.md`
   (Decision 15, created in Execution Plan Phase 3) under the Verification
-  Standard (Decision 12). **As of 2026-09-24 no Amadeus claim in the project
-  is VERIFIED** under that standard.
+  Standard (Decision 12). First edition created 2026-09-25: it verifies the
+  slice commands (`AN`, `SS`, `FQD`, `FXP`), `FXX`, `NM`, `TK`, `RF`/`ET`/`ER`,
+  and the mandatory PNR elements. Everything not listed there as VERIFIED is
+  UNVERIFIED.
 - **Implementation history:** `05_DEIXEN_Canonical_Amadeus_Engine_Reference.md`
   describes the old engine (37 commands) whose code is not available. It is a
   historical implementation reference only (Decision 14) — neither the build
@@ -141,9 +144,8 @@ applies.
   must exist before `FXP` (**Phase 3 priority**); `QE`/`QN`/`QD` — research
   leads describe functions different from the old engine, so neither version
   is taught (Decision 13); SSR/seat association workflow; voiding; `FXX`
-  (research leads say it is a real command; the older curriculum
-  "correction" that excluded it is withdrawn as unverified in either
-  direction); `FXL`/`TQT`/`TTE`/`FQF`; "Amadeus Offers" (`OFS` family);
+  is now VERIFIED as a real entry (Verified Reference V-06), so the older
+  curriculum "correction" that excluded it was wrong; `FXL`/`TQT`/`TTE`/`FQF`; "Amadeus Offers" (`OFS` family);
   post-ticketing segment-status behavior; the exact mandatory-element list.
 ### Curriculum & Coach — owned in detail by `06_DEIXEN_Canonical_Curriculum_and_Coach.md`
 - Coach Core Guided Learning Layer (Decision 9) — **Closed — Approved.**

@@ -11,8 +11,9 @@ owns: How work is performed in DEIXEN — method, authority boundaries, evidence
 | Date | Section | Change | Authority |
 |---|---|---|---|
 | 2026-09-24 | §9 | Roles rewritten: Claude (Opus) is project lead (reviewer, editor, verifier); a separate independent review is waived; Sonnet, ChatGPT and other tools have no project role | Karim (07 Decision 17) |
-| 2026-09-24 | §8 | "Domain Authority" clarified: the approved domain validation path is now the Amadeus Verification Standard (07 Decision 12), since no SME is available | Karim (07 Decision 12) — flagged to Karim for confirmation |
+| 2026-09-24 | §8 | "Domain Authority" clarified: the approved domain validation path is now the Amadeus Verification Standard (07 Decision 12), since no SME is available | Karim (07 Decision 12); confirmed by Karim 2026-09-25 |
 | 2026-09-24 | §10, §17 | Reading note only (text unchanged): references to a separate "Opus review stage" describe the earlier plan; under the current Execution Plan, §10's reassessment principle applies to the project lead's reviews | Karim (07 Decisions 16–17) |
+| 2026-09-25 | §5 | Repository address updated to `https://github.com/deixenlabs/DEIXEN-KNOWLEDGE` (the old address only redirects there) | Factual correction; Karim informed |
 
 This document governs how work is performed inside the DEIXEN project.
 
@@ -252,7 +253,7 @@ When a file is needed:
 
 2. If the file is not available here, or there is reasonable cause to suspect that the local copy is outdated, read the current version from the project repository:
 
-   "https://github.com/malikmalik168200-design/DEIXEN-KNOWLEDGE"
+   "https://github.com/deixenlabs/DEIXEN-KNOWLEDGE"
 
 3. Do not rely on:
 

@@ -104,7 +104,7 @@ exactly 10 codes.
 | Command | Behavior | Status |
 |---|---|---|
 | `FQD` | Fare quote display. | **Code-verified** |
-| `FXP` / `FXB` | Fare pricing implemented by the supplied engine. The engine recognizes `FXP`/`FXB` and has no `FXX` handler. **Research leads indicate `FXX` is a real Amadeus command (UNVERIFIED under 07 Decision 12). The absence of an `FXX` handler here is an implementation-scope fact only — not evidence either way about real Amadeus.** | **Code-verified** |
+| `FXP` / `FXB` | Fare pricing implemented by the supplied engine. The engine recognizes `FXP`/`FXB` and has no `FXX` handler. **`FXX` is a real Amadeus entry (VERIFIED — `DEIXEN_Amadeus_Verified_Reference.md` V-06). The absence of an `FXX` handler here is an implementation-scope fact only.** | **Code-verified** |
 | `FQN` / `FQR` | Fare rules — identical handler for both. **Coded but non-functional**: `Data/fares.json` has zero fare entries with a `rules` field, confirmed by direct inspection. | **Coded, not yet functional — confirmed still true** |
 | `TTP` | Ticketing. Blocked if ticketing arrangement is still `TL` (time-limited, not `OK`). | **Code-verified** |
 
