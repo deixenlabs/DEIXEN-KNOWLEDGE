@@ -53,12 +53,10 @@ were ended by Karim's decision on 2026-09-24 and are historical.
 **Phase:** Phase 2 (Foundation Synchronization) completed on 2026-09-24.
 **Now:** Phase 3. Step 3.1 produced `DEIXEN_Amadeus_Verified_Reference.md`
 (second edition 2026-09-25). Step 3.2: Karim approved the adjusted slice path
-(Decision 22) and the Terminal output rule (Decision 23) on 2026-09-25. One
-new finding awaits Karim: the IATA passenger-contact SSR (`SRCTCM`) and the
-end-of-transaction warning when it is missing (Verified Reference V-13) —
-see "Open — awaiting Karim" below. Next: steps 3.3–3.5 (Slice Build Spec,
-Design Brief, Claude Code environment pack), each file needing Karim's
-approval before creation (Execution Plan §5).
+(Decision 22), the Terminal output rule (Decision 23), and the `SRCTCM`
+step (Decision 24) on 2026-09-25, and approved creating the three Phase 3
+files (Slice Build Spec, Design Brief, Claude Code environment pack). Step
+3.4 (Design Brief) done first; 3.3 and 3.5 next.
 
 **Implementation state:** no codebase exists in the project's hands. The first
 build (Decision 20) will be written from scratch against approved
@@ -130,7 +128,7 @@ applies.
 - Vertical Slice Implementation Boundary (Decision 8A) — **Closed — Frozen /
   Verification-Pending.** Path: the full core transformation chain.
   Workflow family: Pricing & Ticketing. Terminal command boundary: as
-  adjusted by Decision 22 — `AN → SS → NM → AP → TK → RF → ER → FXP`, with
+  adjusted by Decisions 22 and 24 — `AN → SS → NM → AP → SRCTCM → TK → RF → ER → FXP`, with
   `FQD` as an optional step (the original `AN → SS → FQD → FXP` is
   superseded). Scenario count: 1 behaviorally differentiated scenario.
   Evidence: 1 owned assessment record from real learner actions.
@@ -340,15 +338,16 @@ an ordinary technical implementation choice, not decided here.
   — never written to look like authentic Amadeus text. Verified messages
   (e.g. **NEED TICKETING ARRANGEMENT**, V-09) are reproduced as recorded.
 
-### Open — awaiting Karim
-
-- **Passenger contact SSR in the slice.** Verified Reference V-13: under IATA
-  resolution 830d, end of transaction shows **MISSING SSR CTCM MOBILE OR SSR
-  CTCE EMAIL OR SSR CTCR NON-CONSENT** when no `SRCTCM`/`SRCTCE`/`SRCTCR` is
-  present; re-entering `ER` bypasses it and the bypass is recorded in PNR
-  history. Found after Decision 22 was proposed. Choice: add `SRCTCM` to the
-  path after `AP` (Claude's recommendation — it is what a professional agent
-  does), or keep the path and let `ER` show the verified warning.
+- **Decision 24 — Passenger contact SSR in the slice. Closed — Approved.**
+  Evidence: Verified Reference V-13 — under IATA resolution 830d, end of
+  transaction shows **MISSING SSR CTCM MOBILE OR SSR CTCE EMAIL OR SSR CTCR
+  NON-CONSENT** when no `SRCTCM`/`SRCTCE`/`SRCTCR` is present. `SRCTCM` is
+  added after `AP`. Final slice path: `AN → SS → NM → AP → SRCTCM → TK → RF → ER → FXP`; `FQD` optional. If the learner
+  reaches `ER` without it, the Terminal shows that verified warning
+  (Decision 23).
+- **Phase 3 files — creation approved (Execution Plan §5).** Karim approved
+  creating the Slice Build Spec, the Design Brief, and the Claude Code
+  environment files (`CLAUDE.md` and repository scaffolding).
 
 ## Definition of Done — for the current frozen vertical slice
 

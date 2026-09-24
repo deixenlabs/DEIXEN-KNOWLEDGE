@@ -1,6 +1,6 @@
 ---
 name: DEIXEN Amadeus Verified Reference
-status: CURRENT — second edition, 2026-09-25 (Execution Plan Phase 3.1–3.2). Scope so far: the first-build slice (07 Decision 22) and its prerequisites.
+status: CURRENT — second edition, 2026-09-25 (Execution Plan Phase 3.1–3.2). Scope so far: the first-build slice (07 Decisions 22, 24) and its prerequisites.
 owns: The single authority for real Amadeus behavior (07 Decision 15). Only entries marked VERIFIED here may be taught or simulated (07 Decision 13).
 does not own: product, curriculum, or learning decisions; what any DEIXEN code does (implementation truth)
 ---
@@ -185,7 +185,7 @@ does not own: product, curriculum, or learning decisions; what any DEIXEN code d
 
 | # | Claim | Reason |
 |---|---|---|
-| U-01 | `FXP` requires passenger names in the PNR | No source states it. **No longer blocks the slice:** the approved path (07 Decision 22) enters `NM` before `FXP`, so the slice never tests this case |
+| U-01 | `FXP` requires passenger names in the PNR | No source states it. **No longer blocks the slice:** the approved path (07 Decisions 22, 24) enters `NM` before `FXP`, so the slice never tests this case |
 | U-02 | Exact error texts for wrong `AN`, `SS`, `NM`, `AP`, `FXP` input | Not found in exposed official text. Handled by 07 Decision 23 (clearly labeled training messages) |
 | U-03 | ~~`AP` phone entry syntax~~ | Closed — now VERIFIED (V-11) |
 | U-04 | Full screen layouts beyond what official examples show | Official pages show real example screens for `AN`, `FQD`, `FXP` and PNR displays; anything outside them is handled by 07 Decision 23 |

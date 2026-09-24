@@ -25,11 +25,11 @@ its items are reassigned to Phase 3 (verification and readiness) or to later
 curriculum authoring.
 
 Update 2026-09-25 (Phase 3.2): Karim approved the adjusted slice path
-(07 Decision 22) and the Terminal output rule (07 Decision 23). Every command
-in the slice path is now VERIFIED (Verified Reference, second edition). One
-new finding awaits Karim: the IATA passenger-contact SSR (`SRCTCM`, V-13).
-What remains before the first build is the readiness pack (Execution Plan
-3.3–3.6).
+(07 Decision 22), the Terminal output rule (07 Decision 23), and the
+`SRCTCM` step (07 Decision 24). Every command in the slice path is VERIFIED
+(Verified Reference, second edition). Design Brief written (3.4). What
+remains before the first build: Slice Build Spec (3.3), environment pack
+(3.5), readiness check (3.6).
 
 ## 2. Phase 1 Findings — Disposition
 
@@ -73,7 +73,8 @@ presented a navy/blue color language as "durable" although colors are open
 | Personal-first & Saudi/Gulf framing | CLOSED | Karim | Carry forward |
 | Vertical Slice rule; slice boundary (D8A) | CLOSED — path adjusted by D22; all path commands VERIFIED | Karim | Slice Build Spec (3.3) |
 | Slice path adjustment (D22) | CLOSED — Approved 2026-09-25 | Karim | — |
-| `SRCTCM` step in the slice (Verified Reference V-13) | OPEN — awaiting Karim; Claude recommends adding it after `AP` | Karim | Decide before the Slice Build Spec |
+| `SRCTCM` step in the slice (D24) | CLOSED — Approved 2026-09-25 | Karim | — |
+| Design Brief (Execution Plan 3.4) | DONE — awaiting Karim's review | Karim | Approve before Phase 4 |
 | Coach contract (D9); CS contract (D6) | CLOSED | Karim | Carry forward |
 | Evidence, Assessment, Scenario contracts | CLOSED (unbuilt) | Karim | Slice Build Spec, Phase 3 |
 | Domain/SME validation (D7) | SUPERSEDED by D12 | — | — |

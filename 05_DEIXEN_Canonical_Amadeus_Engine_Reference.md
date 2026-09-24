@@ -32,7 +32,7 @@ This is the old engine's full command set (37 commands, verified at the time
 directly against `parser.js`/`pnr.js`/`pricing.js`/`ancillary.js`/`queues.js`/
 `seatmaps.js`/`errors.js` in the repository supplied to the 2026-09-03 pass).
 It documents what that **engine could do**. The first-build slice
-(`AN → SS → NM → AP → TK → RF → ER → FXP`, 07 Decision 22) is owned by
+(`AN → SS → NM → AP → SRCTCM → TK → RF → ER → FXP`, 07 Decisions 22 and 24) is owned by
 `07_DEIXEN_Canonical_Decisions_and_Current_State.md`.
 
 **No item below is asserted from general Amadeus knowledge.** Every command's

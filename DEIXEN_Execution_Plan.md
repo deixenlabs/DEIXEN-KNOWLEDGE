@@ -35,7 +35,7 @@ independent review (waived by Karim).
 | 0. Source lock | Read the Project and repository; decide which copies count | Corpus inventory | — | **Done** 2026-09-24 |
 | 1. Review (read-only) | Look for contradictions, gaps, stale statements | 16 findings (file 13 §2) | Karim reviews findings | **Done** 2026-09-24 |
 | 2. Synchronization | Apply decisions 12–21; fix contradictions; migrate names; mark every file's status | Updated corpus; Corpus Map (file 00) | Karim uploads the files | **Done** 2026-09-25 |
-| 3. Verification & readiness | See §4 | Verified Reference; Slice Build Spec; Design Brief; environment pack | Karim approves the pack | **In progress** (3.1, 3.2 done) |
+| 3. Verification & readiness | See §4 | Verified Reference; Slice Build Spec; Design Brief; environment pack | Karim approves the pack | **In progress** (3.1, 3.2, 3.4 done) |
 | 4. Design | Claude Design explores directions from the Design Brief; Karim chooses; the chosen direction is refined | Approved design | Karim approves direction | Waiting |
 | 5. Build | Claude Code builds the slice (evening computer sessions); verification loop from 08 §26; Karim tests it as a learner | Working slice meeting 07's Definition of Done | Karim confirms the slice works | Waiting |
 | 6. Expansion | Next lessons, Basic then Advanced — each chunk goes verify → spec → build → test | Growing curriculum | Karim, per chunk | Waiting |
@@ -78,10 +78,10 @@ every Amadeus behavior in the slice VERIFIED or explicitly handled per 3.2.
 
 ## 5. New Files
 
-Approved: `DEIXEN_Amadeus_Verified_Reference.md` (Decision 15).
-Proposed for Phase 3, each needing Karim's approval before creation: the
-Slice Build Spec, the Design Brief, and the Claude Code environment files
-(`CLAUDE.md` and repository scaffolding). No other new file without Karim's
+Approved: `DEIXEN_Amadeus_Verified_Reference.md` (Decision 15); the Slice
+Build Spec, the Design Brief (`DEIXEN_Design_Brief.md`), and the Claude Code
+environment files (`CLAUDE.md` and repository scaffolding) — approved by
+Karim 2026-09-25. No other new file without Karim's
 approval (Roadmap rule carried forward: a new file needs a real, unowned
 responsibility).
 
@@ -98,4 +98,4 @@ responsibility).
 
 ## 7. Current Phase
 
-Phase 2 complete (uploaded 2026-09-25). Phase 3: step 3.1 done (Verified Reference, second edition 2026-09-25); step 3.2 done — Karim approved Decisions 22 and 23 (2026-09-25). Open before 3.3: Karim's choice on the `SRCTCM` step (07, "Open — awaiting Karim"). Next: 3.3 Slice Build Spec, 3.4 Design Brief, 3.5 environment pack — each file created only after Karim approves its creation.
+Phase 2 complete (uploaded 2026-09-25). Phase 3: step 3.1 done (Verified Reference, second edition 2026-09-25); step 3.2 done — Karim approved Decisions 22 and 23 (2026-09-25). Decision 24 (`SRCTCM` step) approved, and creation of the three Phase 3 files approved (2026-09-25). 3.4 Design Brief written (`DEIXEN_Design_Brief.md`). Next: 3.3 Slice Build Spec, then 3.5 environment pack, then 3.6 readiness check.
