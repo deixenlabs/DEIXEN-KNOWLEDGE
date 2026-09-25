@@ -2,7 +2,7 @@
 name: DEIXEN Canonical Decisions & Current State
 owns: The single decisions ledger and current project status going forward
 supersedes reading in isolation: AeroBridge_Decisions_and_Current_State.md
-last synchronized: 2026-09-25 (Phase 4 — direction chosen, Decisions 30–31; delegated Decisions 32–36)
+last synchronized: 2026-09-25 (Phase 4 — direction chosen, Decisions 30–31; delegated Decisions 32–40)
 authority note: Where a decision below is owned in more detail elsewhere in this canonical set (product/architecture, design, engine, curriculum/Coach), this file states the decision and its status, and points there rather than duplicating — the same single-ownership discipline the original NEW document already established and this pass is preserving.
 ---
 
@@ -501,6 +501,36 @@ an ordinary technical implementation choice, not decided here.
   line structure. The pan must work by touch and by keyboard (file 04
   keyboard rule); WCAG 2.1 reflow allows two-dimensional content such as
   this to scroll.
+- **Decision 37 — Retry and reset in the Terminal. Closed — by delegation
+  (D29), 2026-09-25.** File 03's "Reset / retry" learner action is one
+  control, **Reset task**, in Terminal practice only: it starts the practice
+  booking again from empty; recorded evidence is kept. There is no separate
+  "Retry step" control — after every response the entry line is already
+  awaiting the retry, so a second control would do nothing new (no false
+  affordance, 07 Definition of Done). Reset task is not offered in the
+  assessment or the scenario, whose attempt rules (Decision 25, K3) do not
+  cover a restart. The full reset (`ui.reset.confirm`) stays the
+  `RESET_RECOVERY` state, reached from Growth. Basis: 03 Behavioral
+  Skeleton; Build Spec §3; Design Brief §3.
+- **Decision 38 — Hint order. Closed — by delegation (D29), 2026-09-25.**
+  Hint levels are offered in order for the current step: Nudge first; for
+  `ER` (Tier 3) Partial Reveal next; Full Reveal last. A level already shown
+  stays visible; a level that does not apply to the step (Partial Reveal
+  outside `ER`) is not shown. Every request still increments the one
+  counter. Basis: LDS §15 (graduated assistance), Build Spec §8.
+- **Decision 39 — Count-neutral carry-over text. Closed — by delegation
+  (D29), 2026-09-25.** `ui.assessment.carryover` read "1 hints" when a count
+  was 1 (same problem in Arabic). Reworded without count-noun agreement:
+  EN "… this session already had — entries: {N}, hints: {H}. …"; AR «…
+  عدد الإدخالات: {N}، عدد التلميحات: {H}. …». Meaning unchanged.
+- **Decision 40 — Status words on the chain (Flight Deck, Growth). Closed —
+  by delegation (D29), 2026-09-25.** Each chain step shows the approved
+  "Correct in DEIXEN" (`ui.correctInDeixen`) once its skill is
+  DEMONSTRATED_INDEPENDENT or higher (Build Spec §7), otherwise a dash; the
+  recommended step is marked "Next"; `FQD` is "Optional". The scenario and
+  assessment rows show "Completed" or a dash. The design's word
+  "Practised" is not used: the skill model does not define it, and it could
+  read as competence after any attempt (07 Evidence contract).
 
 ## Definition of Done — for the current frozen vertical slice
 

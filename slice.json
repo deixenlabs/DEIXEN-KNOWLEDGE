@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "status": "APPROVED by Karim 2026-09-25 (07 Decision 28), with the readiness-check fixes. Self-review only (07 D17). Updated 2026-09-25 by delegation (07 Decisions 33–34): training messages tm.notAccepted and tm.notForTask added; feedback[].terminalLine added.",
+ "status": "APPROVED by Karim 2026-09-25 (07 Decision 28), with the readiness-check fixes. Self-review only (07 D17). Updated 2026-09-25 by delegation (07 Decisions 33–34): training messages tm.notAccepted and tm.notForTask added; feedback[].terminalLine added. 2026-09-25: ui.assessment.carryover reworded count-neutral (07 D39).",
  "rules": [
   "Every Amadeus statement in the text files traces to a VERIFIED entry of DEIXEN_Amadeus_Verified_Reference.md (listed per lesson in 'verifiedBasis').",
   "All flights, fares, taxes, phone numbers, names, office IDs and record locators are fictional practice data. Airline code 6X is used only as a practice code; no real schedule or fare is implied.",

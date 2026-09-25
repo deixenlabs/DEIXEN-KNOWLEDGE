@@ -1,6 +1,6 @@
 ---
 name: DEIXEN Slice Build Spec
-status: CURRENT — APPROVED by Karim 2026-09-25 (07 Decision 26). Updated 2026-09-25: gaps G1–G3 (§5, §12); Decision 27 (K5, K6) applied to §4, §5, §12, §13; K7 (§6 row 5, §12) approved in the Phase 3 gate (07 D28). Phase 4, 2026-09-25: 07 Decisions 30, 32–34, 36 applied to §5 and §13. First edition (Execution Plan 3.3); proposals K1–K4 approved (07 Decision 25). With this approval, the LDS/LXA content extracted here is binding for the slice (LDS and LXA reading rules, point 1).
+status: CURRENT — APPROVED by Karim 2026-09-25 (07 Decision 26). Updated 2026-09-25: gaps G1–G3 (§5, §12); Decision 27 (K5, K6) applied to §4, §5, §12, §13; K7 (§6 row 5, §12) approved in the Phase 3 gate (07 D28). Phase 4, 2026-09-25: 07 Decisions 30, 32–34, 36 applied to §5 and §13; Decisions 37–38 to §4 and §8. First edition (Execution Plan 3.3); proposals K1–K4 approved (07 Decision 25). With this approval, the LDS/LXA content extracted here is binding for the slice (LDS and LXA reading rules, point 1).
 owns: The single build specification Claude Code implements for the first-build slice. It gathers requirements from their owners and designs the evidence/state schema (delegated to Claude — file 13).
 does not own: any decision (07); Amadeus behavior (Verified Reference); product structure (03); design (Design Brief / Phase 4). Where this file and an owner disagree, the owner wins and the conflict is reported.
 ---
@@ -93,6 +93,10 @@ Completion detected → Reset/retry.
   function did not produce (the old Known Issue #7 lesson, 07 D14).
 - **[D] Hint counter (03):** one counter, incremented in exactly one place,
   counting learner-requested hints only (LDS §15).
+- **[D] Reset task (07 D37):** the one Reset/retry learner control (03), in
+  `TERMINAL_PRACTICE` only: starts the practice booking again from empty;
+  events already recorded stay. No separate retry control. Not offered in
+  assessment or scenario. Full reset = `RESET_RECOVERY` (§3).
 
 ## 5. Terminal — output rules
 
@@ -243,7 +247,9 @@ Only VERIFIED content from `DEIXEN_Amadeus_Verified_Reference.md`.
 - **Hint levels, one counter:** Nudge (error category only; diagnostic) →
   Partial Reveal (which checklist item is unmet, Tier 3 only; diagnostic) →
   Full Reveal (the fix; corrective). Each is learner-requested and
-  increments the one counter.
+  increments the one counter. **[D] (07 D38)** Offered in this order for
+  the current step; a shown level stays visible; Partial Reveal is not shown
+  outside `ER`.
 - **Every feedback text is authored as `diagnostic` or `corrective`.** Test:
   if the text plus the checklist item lets the learner type the correct
   command without further trial, it is corrective.

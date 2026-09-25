@@ -111,7 +111,7 @@
  "ui.correctInDeixen": "Correct in DEIXEN",
  "ui.hintLabel": "Hints used in this session: {N}",
  "ui.assessment.intro": "You are starting the assessment: the full booking and pricing path, on your own. Entries and hints from this session stay visible and are counted; earlier sessions are not included.",
- "ui.assessment.carryover": "Before the assessment started, this session already had {N} entries and {H} hints. They stay visible and are included in this result.",
+ "ui.assessment.carryover": "Before the assessment started, this session already had — entries: {N}, hints: {H}. They stay visible and are included in this result.",
  "ui.assessment.result": "The full path works end to end for you on this occasion. This is not a general competence rating.",
  "ui.abandoned": "Your last {WHAT} was interrupted when the browser closed. It is recorded as abandoned — neither passed nor failed.",
  "ui.growth.completed": "Completed",
