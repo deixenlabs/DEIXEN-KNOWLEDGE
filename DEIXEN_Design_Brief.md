@@ -1,6 +1,6 @@
 ---
 name: DEIXEN Design Brief
-status: CURRENT — first edition, 2026-09-25 (Execution Plan 3.4); synchronized 2026-09-25 with 07 Decision 27 and Verified Reference §2A. Creation approved by Karim (07, Decisions of 2026-09-25). Approved by Karim 2026-09-25 (07 Decision 28).
+status: CURRENT — first edition, 2026-09-25 (Execution Plan 3.4); synchronized 2026-09-25 with 07 Decision 27 and Verified Reference §2A. Creation approved by Karim (07, Decisions of 2026-09-25). Approved by Karim 2026-09-25 (07 Decision 28). Synchronized 2026-09-25 with 07 Decisions 30–36 (Phase 4: direction A chosen; Terminal content, script, phone and validation rules).
 owns: What Claude Design receives for Phase 4 — the brief only. Adds no decision; every rule below cites its owner.
 does not own: design principles, accessibility, anti-patterns (file 04); product structure (file 03); learner states (LXA); Coach contract (file 06); decisions (file 07); Amadeus behavior (Verified Reference)
 ---
@@ -71,6 +71,14 @@ screens.
      training message and never styled to pass as real Amadeus text.
   3. **Coach explanation** — plain language, placed *alongside* the output,
      never replacing a real Amadeus message.
+- **What the Terminal may contain (07 Decision 30).** Only Amadeus output
+  (with the marker below where it applies) and, where Amadeus would answer
+  but no verified text exists, one short labeled training line. Feedback,
+  hints and Coach live in a separate DEIXEN panel — beside the Terminal on
+  desktop, on demand on mobile. A wrong entry of a known command shows
+  "Entry not accepted." or "Entry not used: it does not match the task."
+  (07 Decision 33); a long training message shows its first sentence in the
+  Terminal and the rest in the panel (07 Decision 34).
 - **The "Layout detail not fully verified" marker** (07 Decision 27): a
   small, visible label attached to an Amadeus display whose layout official
   examples show only in part (Build Spec §5). It labels the display — it is
@@ -83,9 +91,12 @@ screens.
   (Awaiting input → Submitted → Valid / Invalid → Hint → Completion →
   Reset). "Not recognized" and "not covered in this slice" are different
   messages.
-- Terminal content stays in Latin monospace and left-to-right even when the
-  interface is Arabic/RTL. *(Design question, not a decision — confirm with
-  Karim in Phase 4.)*
+- Terminal entries and Amadeus output stay Latin, monospace and
+  left-to-right even when the interface is Arabic/RTL; chrome, panel and
+  training line follow the interface language (07 Decision 32 — closes the
+  former design question).
+- Phone Terminal: columns never wrap; the sheet pans sideways, by touch and
+  keyboard (07 Decision 36).
 - Mobile: input stays full-width and unobstructed; the on-screen keyboard
   covering history is a real problem to solve (LXA §18). Coach on mobile
   defaults to collapsed / on-demand (LXA §18).
@@ -119,9 +130,9 @@ fill a mockup; if nothing verified fits, use an obviously generic placeholder
 
 | Item | Decided by |
 |---|---|
-| Color palette; light vs. dark (or both) | Karim, after Claude Design's proposals |
-| Typefaces (Latin, Arabic, monospace) | Karim |
-| Logo / wordmark / identity. DEIXEN is a **provisional** name (Constitution §1) — identity work must not assume it is final | Karim |
+| Color palette; light vs. dark (or both) | **Direction decided** — A "Margin", light-led, tokens ready for a later dark theme (07 D31). Exact values: refinement, approved at the Phase 4 gate |
+| Typefaces (Latin, Arabic, monospace) | Karim — at the Phase 4 gate, from the refinement of A |
+| Logo / wordmark / identity. DEIXEN is a **provisional** name (Constitution §1) — identity work must not assume it is final | Karim — at the Phase 4 gate; identity stays provisional (07 D31) |
 | Flight Deck concept — Karim's stated requirement: distinctive, not AI-generic | Karim |
 | Coach layout: one global element vs. per-page component | Delegated to Design/Code within 06's contract (07 Decision 9) |
 | Keyboard-occlusion solution on mobile Terminal | Claude Design |
@@ -139,6 +150,11 @@ it risks.
    (mobile 390 px and desktop 1440 px), in both Arabic and English.
 2. After Karim chooses: the eight states of §3 at the listed breakpoints,
    with tokens (color, type, spacing) defined in **one** place — the future
-   token file is the single source of those values (04).
+   token file is the single source of those values (04). For the design
+   phase the coverage is the Phase 4 validation matrix (07 Decision 35):
+   eight states at 1440 and 390 px in English and Arabic; Flight Deck and
+   Terminal practice at 320 / 360 / 430 / 768 / 1024 / 1280 px in English,
+   and in Arabic at 320 and 1024. The build must still pass every state at
+   every breakpoint (07 Definition of Done).
 3. A short list of anything in this brief that turned out unclear or
    contradictory, instead of silently choosing (Constitution §18).

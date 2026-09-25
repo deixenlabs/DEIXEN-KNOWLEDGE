@@ -88,6 +88,8 @@
  "nudge.DUPLICATE_CONFLICT": "This conflicts with something already in the booking.",
  "nudge.LOGICAL": "The entry is valid, but it doesn't match the task.",
  "tm.notRecognized": "Entry not recognized.",
+ "tm.notAccepted": "Entry not accepted.",
+ "tm.notForTask": "Entry not used: it does not match the task.",
  "tm.notCovered": "This entry is not covered in this slice of DEIXEN. It may be a real Amadeus entry; DEIXEN does not simulate it yet.",
  "tm.noPracticeData": "DEIXEN has practice flights only for the task's route in this slice.",
  "tm.classNotOffered": "In this practice display that class shows 0. The real Amadeus response to selling such a class is not verified, so DEIXEN does not simulate it.",

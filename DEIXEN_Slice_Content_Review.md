@@ -1,6 +1,6 @@
 # DEIXEN — Slice Content: Review Copy (G2 + G3)
 
-> **Reading copy for Karim's review — not a project file.** The source of truth is the three content files for `deixen-app/content/` (`data/slice.json`, `en/text.json`, `ar/text.json`); this page is generated from them. Author: Claude (project lead), 2026-09-25. Self-review only (07 D17). **Updated 2026-09-25 (readiness check 3.6):** Decision 27 applied; seven small fixes marked ✎ below — all approved by Karim 2026-09-25 (07 Decision 28).
+> **Reading copy for Karim's review — not a project file.** The source of truth is the three content files for `deixen-app/content/` (`data/slice.json`, `en/text.json`, `ar/text.json`); this page is generated from them. Author: Claude (project lead), 2026-09-25. Self-review only (07 D17). **Updated 2026-09-25 (readiness check 3.6):** Decision 27 applied; seven small fixes marked ✎ below — all approved by Karim 2026-09-25 (07 Decision 28). **Updated 2026-09-25 (Phase 4):** two training messages added by delegation (07 Decision 33), marked "new" in §5; which Terminal line each feedback item triggers is in `slice.json` (`feedback[].terminalLine`).
 
 Every Amadeus statement traces to a VERIFIED entry in `DEIXEN_Amadeus_Verified_Reference.md` (third edition). All flights, fares, names and numbers are fictional.
 
@@ -379,6 +379,8 @@ Note on the ER Ghost script: The ER script deliberately omits TK first, so the d
 | ID | Kind | EN | AR |
 |---|---|---|---|
 | `tm.notRecognized` |  | Entry not recognized. | <span dir="rtl">الإدخال غير معروف.</span> |
+| `tm.notAccepted` | new — 07 D33 | Entry not accepted. | <span dir="rtl">الإدخال غير مقبول.</span> |
+| `tm.notForTask` | new — 07 D33 | Entry not used: it does not match the task. | <span dir="rtl">لم يُستخدم الإدخال: لا يطابق المهمة.</span> |
 | `tm.notCovered` |  | This entry is not covered in this slice of DEIXEN. It may be a real Amadeus entry; DEIXEN does not simulate it yet. | <span dir="rtl">هذا الإدخال غير مشمول في هذا الجزء من DEIXEN. قد يكون أمرًا حقيقيًا في Amadeus، لكن DEIXEN لا يحاكيه بعد.</span> |
 | `tm.noPracticeData` |  | DEIXEN has practice flights only for the task's route in this slice. | <span dir="rtl">في هذا الجزء لا توجد رحلات تدريب إلا لمسار المهمة.</span> |
 | `tm.classNotOffered` |  | In this practice display that class shows 0. The real Amadeus response to selling such a class is not verified, so DEIXEN does not simulate it. | <span dir="rtl">في شاشة التدريب هذه تظهر تلك الدرجة بالرقم 0. رد Amadeus الحقيقي على بيع درجة كهذه غير موثَّق، لذلك لا يحاكيه DEIXEN.</span> |

@@ -36,7 +36,7 @@ independent review (waived by Karim).
 | 1. Review (read-only) | Look for contradictions, gaps, stale statements | 16 findings (file 13 §2) | Karim reviews findings | **Done** 2026-09-24 |
 | 2. Synchronization | Apply decisions 12–21; fix contradictions; migrate names; mark every file's status | Updated corpus; Corpus Map (file 00) | Karim uploads the files | **Done** 2026-09-25 |
 | 3. Verification & readiness | See §4 | Verified Reference; Slice Build Spec; Design Brief; environment pack | Karim approves the pack | **Done** 2026-09-25 (07 D28) |
-| 4. Design | Claude Design explores directions from the Design Brief; Karim chooses; the chosen direction is refined | Approved design | Karim approves direction | **In progress** |
+| 4. Design | Claude Design explores directions from the Design Brief; Karim chooses; the chosen direction is refined | Approved design | Karim approves direction | **In progress** — direction A chosen (07 D31); refinement under way |
 | 5. Build | Claude Code builds the slice (evening computer sessions); verification loop from 08 §26; Karim tests it as a learner | Working slice meeting 07's Definition of Done | Karim confirms the slice works | Waiting |
 | 6. Expansion | Next lessons, Basic then Advanced — each chunk goes verify → spec → build → test | Growing curriculum | Karim, per chunk | Waiting |
 
@@ -112,6 +112,15 @@ and recommends one; (4) **Karim chooses** (reserved, D29); (5) the chosen
 direction is refined across the eight states and breakpoints, with one token
 file; (6) Claude checks it against the Brief and Build Spec; (7) gate — Karim
 approves the direction → Phase 5.
+
+Progress (2026-09-25): steps 1–4 done. Claude Design proposed three
+directions (A "Margin", B "Instrument", C "Airside"); the project lead
+recommended C; **Karim chose A** (07 D31) and ruled that the Terminal shows
+Amadeus only (07 D30). Delegated rules recorded (07 D32–D36), including the
+design-phase validation matrix (D35). Now: step 5 — refinement of A in two
+parts (Part 1: AI-look audit, identity, one `tokens.css`, eight states at
+1440/390 EN; Part 2: Arabic and the other breakpoints); then step 6
+(Claude's check) and step 7 (gate).
 
 History: Phase 2 complete 2026-09-25. Phase 3: 3.1 Verified Reference
 (editions 1–3); 3.2 Decisions 22–24; 3.3 Build Spec (D25, D26); 3.4 Design

@@ -38,6 +38,14 @@ endings) and seven small content fixes. The repository `DEIXEN-KNOWLEDGE`
 appears to be behind the Project (its main folder, read 2026-09-25, does not show the Phase 2–3 files); it must be brought up
 to date before Phase 5, because `CLAUDE.md` makes Claude Code read from it.
 
+Update 2026-09-25 (Phase 4, steps 1–4): Claude Design proposed three
+directions; Karim chose A "Margin" (07 D31) and ruled that the Terminal
+shows Amadeus only (07 D30). Five delegated decisions recorded (07 D32–D36).
+Impact check done: Build Spec §5/§13, Design Brief §4/§6/§8, `CLAUDE.md` §3,
+file 04, `slice.json`, both string files, the content reading copy,
+Execution Plan §3/§7, file 00. Refinement of A under way; three items stay
+open (below).
+
 ## 2. Phase 1 Findings — Disposition
 
 Review type: self-review by the project lead (Decision 17 — independent
@@ -75,7 +83,7 @@ presented a navy/blue color language as "durable" although colors are open
 | Platform Direction (not PWA/backend-first; not a rejection) | CLOSED | Karim | Carry forward |
 | Localization — Arabic + English, RTL + LTR (D11) | CLOSED | Karim | Build approach decided in Phase 3/5 |
 | Design Positioning | CLOSED | Karim | Carry forward |
-| Design Execution (colors, type, logo, identity) | OPEN | Karim, with Claude Design | Execution Plan Phase 4 |
+| Design Execution (colors, type, logo, identity) | DIRECTION CHOSEN — A "Margin", light-led (07 D31); values, typefaces, wordmark OPEN until the Phase 4 gate | Karim, with Claude Design | Refinement of A; Phase 4 gate |
 | Working name DEIXEN | PROVISIONAL | Karim | Reopen only on evidence (Constitution §1) |
 | Personal-first & Saudi/Gulf framing | CLOSED | Karim | Carry forward |
 | Vertical Slice rule; slice boundary (D8A) | CLOSED — path adjusted by D22; all path commands VERIFIED | Karim | Slice Build Spec (3.3) |
@@ -95,7 +103,13 @@ presented a navy/blue color language as "durable" although colors are open
 | Readiness check (3.6) | PASSED 2026-09-25 (self-review, 07 D17); K7 and the 7 content fixes approved (07 D28) | — | — |
 | Phase 3 gate (Execution Plan §3) | CLOSED — Approved 2026-09-25 (07 D28) | Karim | — |
 | Standing delegation to the project lead (07 D29) | CLOSED — Approved 2026-09-25; reserved list in 07 D29 | Karim | Claude records delegated decisions in 07 as "by delegation (D29)" |
-| Phase 4 — Design direction | OPEN — reserved to Karim (07 D29) | Karim, with Claude Design | Choose among 2–3 directions |
+| Phase 4 — Design direction | CLOSED — A "Margin" chosen 2026-09-25 (07 D31); B and C not taken | Karim | Refinement (Plan §7 step 5) |
+| Terminal shows Amadeus only; feedback/hints/Coach in a DEIXEN panel (07 D30) | CLOSED — Approved 2026-09-25 | Karim | Applied: Build Spec §5/§13, Brief §4, `CLAUDE.md` §3 |
+| Terminal script/direction (D32); wrong-entry training lines `tm.notAccepted` / `tm.notForTask`, PNR unchanged (D33); long training messages (D34); Phase 4 validation matrix (D35); phone Terminal pans, no wrap (D36) | CLOSED — by delegation (D29), 2026-09-25 | Claude | Karim may reverse any. `tm.notForTask` was added during the impact check (see 07 D33) |
+| Arabic chrome drafts from Claude Design (hint level names, "Retry step", "Reset task", area names, Customer Service track, other chrome) | OPEN | Claude reviews; Karim approves learner-facing wording | Review with the refinement, then add to the string files |
+| Retry / Reset scope in the Terminal ("Retry step" vs "Reset task" vs full reset `ui.reset.confirm`) | OPEN | Claude (D29 unless it touches scope) | Check 03 Behavioral Skeleton ("Reset / retry") and Build Spec §3/§11 before deciding; current approved text has only the full reset |
+| Hint order — must levels 2–3 wait for level 1? | OPEN | Claude (D29) | Check Build Spec §8 / LDS §15 before deciding; Build Spec lists the order but does not state gating |
+| Real Cryptic host response to each wrong entry in the slice | OPEN — research backlog (07) | Claude | Needs official Cryptic sources (D12); an API host-message list cannot verify it. A verified message replaces the training line in place |
 | Repository `DEIXEN-KNOWLEDGE` out of date (main folder, read 2026-09-25, does not show the Execution Plan, Constitution, Verified Reference, Build Spec, Design Brief, `CLAUDE.md`; still has 08 under its old name) | CLOSED 2026-09-25 — Karim reports the files are updated in both places | — | Keep both in step after each change |
 | Coach contract (D9); CS contract (D6) | CLOSED | Karim | Carry forward |
 | Evidence, Assessment, Scenario contracts | CLOSED (unbuilt) | Karim | Slice Build Spec, Phase 3 |
@@ -110,7 +124,7 @@ presented a navy/blue color language as "durable" although colors are open
 | Absent artifacts (D19); First build (D20); Owner name (D21) | CLOSED | Karim | — |
 | Engine strategy "conformance oracle" (former delegated decision) | WITHDRAWN | — | Replaced by D14 |
 | Evidence/State concrete schema | DONE (delegated) — Slice Build Spec §11; answers the Event Log granularity and chain-continuity questions by design | Claude | — |
-| Coach layout (global vs per-page) | DELEGATED | Claude Design / Code | Resolve at build |
+| Coach layout (global vs per-page) | DELEGATED — on the Terminal, Coach is in the DEIXEN panel (07 D30) | Claude Design / Code | Resolve the rest at build |
 | Curriculum order (competency vs command order); Lesson 17; 8 Advanced lessons | OPEN | Claude, then Karim | Curriculum authoring after the slice (D18) |
 | Pricing prerequisites of the slice (name before `FXP`?) | UNVERIFIED (U-01) — no longer blocking: D22 puts `NM` before `FXP` | — | — |
 | Old path `AN → SS → FQD → FXP` still written in LDS (§ tiers, ~l.604, ~l.715), LXA (~l.153), 05 | Superseded by D22; LDS/LXA reading rules point to 07; 05 updated | Claude | Slice Build Spec uses the D22 path |

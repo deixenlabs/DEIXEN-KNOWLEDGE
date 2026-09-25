@@ -2,7 +2,7 @@
 name: DEIXEN Canonical Decisions & Current State
 owns: The single decisions ledger and current project status going forward
 supersedes reading in isolation: AeroBridge_Decisions_and_Current_State.md
-last synchronized: 2026-09-25 (Phase 3 closed — Decisions 28–29; Phase 4 begins)
+last synchronized: 2026-09-25 (Phase 4 — direction chosen, Decisions 30–31; delegated Decisions 32–36)
 authority note: Where a decision below is owned in more detail elsewhere in this canonical set (product/architecture, design, engine, curriculum/Coach), this file states the decision and its status, and points there rather than duplicating — the same single-ownership discipline the original NEW document already established and this pass is preserving.
 ---
 
@@ -53,6 +53,10 @@ were ended by Karim's decision on 2026-09-24 and are historical.
 **Phase:** Phase 3 (Verification & readiness) closed on 2026-09-25 —
 Karim approved the gate pack (Decision 28). **Now: Phase 4 (Design)** from
 `DEIXEN_Design_Brief.md`. Standing delegation to Claude: Decision 29.
+Phase 4 progress (2026-09-25): Claude Design proposed three directions
+(A "Margin", B "Instrument", C "Airside"); Karim chose **A** (Decision 31)
+and fixed what the Terminal may contain (Decision 30). A is now being refined
+(Execution Plan §7 step 5) against the validation matrix of Decision 35.
 
 **Phase 3 record:** Phase 2 (Foundation Synchronization) completed on
 2026-09-24. Phase 3: Step 3.1 produced `DEIXEN_Amadeus_Verified_Reference.md`
@@ -80,8 +84,9 @@ build (Decision 20) will be written from scratch against approved
 specifications (Decision 14). No implementation or design execution is
 authorized by this status alone; each follows its Execution Plan gate.
 
-**Design:** Design Positioning closed; Design Execution open (Design phase =
-Execution Plan Phase 4).
+**Design:** Design Positioning closed; direction A "Margin" chosen
+(Decision 31); refinement open until the Phase 4 gate (Execution Plan
+Phase 4).
 
 ## Decisions Ledger
 
@@ -123,12 +128,14 @@ applies.
   operational, serious aviation-operations software — never a consumer app,
   classroom product, generic LMS, or entertainment dashboard. Not reopened by
   this consolidation; not affected by the item below.
-- Design Execution — **OPEN.** Exact colors/tokens, typography, logo/wordmark,
-  visual identity, composition, imagery, effects, and overall visual
-  expression are genuinely unsettled, pending the next dedicated design
-  phase. The earlier dark-navy/blue execution and the color language written
-  around it in file 04 are historical design input only — neither approved
-  nor rejected. Light vs. dark direction is open.
+- Design Execution — **Direction chosen; refinement OPEN.** Karim chose
+  direction A "Margin" (Decision 31): light-led, with tokens structured so a
+  dark theme can be added later — this closes the light-vs-dark question.
+  Exact token values, typefaces, wordmark and the refined screens are being
+  settled in the Phase 4 refinement and become approved only at the Phase 4
+  gate (Execution Plan §3). Identity stays provisional: DEIXEN is a working
+  name (Constitution §1). The earlier dark-navy/blue execution in file 04
+  remains historical input only.
 
 ### Amadeus — domain truth, implementation history, and the frozen slice
 - **Domain truth** is owned by `DEIXEN_Amadeus_Verified_Reference.md`
@@ -171,7 +178,13 @@ applies.
   post-ticketing segment-status behavior; which entry creates the PRINT
   "Phone" element (`AP` assumed, not stated by a source — Verified
   Reference U-14; the five PRINT elements themselves are VERIFIED, V-08);
-  the endings of contact SSRs (U-12); accepted name titles (U-13).
+  the endings of contact SSRs (U-12); accepted name titles (U-13); the
+  real Cryptic host response to each wrong entry in the slice (added
+  2026-09-25 — an Amadeus Web Services list of predefined host messages
+  exists, but it is an API source, so under Decision 12 it cannot verify
+  Cryptic behavior, and it does not say which message follows which entry;
+  a message verified later replaces the training line in the same place
+  (Decisions 30, 33) with no design change).
 ### Curriculum & Coach — owned in detail by `06_DEIXEN_Canonical_Curriculum_and_Coach.md`
 - Coach Core Guided Learning Layer (Decision 9) — **Closed — Approved.**
   Mandatory, five required touchpoints, state-bound, never static. Layout
@@ -359,6 +372,7 @@ an ordinary technical implementation choice, not decided here.
   wrong input) is shown as a plain training message, visibly marked as such
   — never written to look like authentic Amadeus text. Verified messages
   (e.g. **NEED TICKETING ARRANGEMENT**, V-09) are reproduced as recorded.
+  *Where each kind is placed is refined by Decision 30 (2026-09-25).*
 
 - **Decision 24 — Passenger contact SSR in the slice. Closed — Approved.**
   Evidence: Verified Reference V-13 — under IATA resolution 830d, end of
@@ -418,6 +432,75 @@ an ordinary technical implementation choice, not decided here.
 - **Phase 3 files — creation approved (Execution Plan §5).** Karim approved
   creating the Slice Build Spec, the Design Brief, and the Claude Code
   environment files (`CLAUDE.md` and repository scaffolding).
+
+### Decisions of 2026-09-25 — Phase 4 (Karim, and by delegation D29)
+
+- **Decision 30 — The Terminal shows Amadeus only. Closed — Approved
+  (Karim, 2026-09-25).** Inside the Terminal appear only: Amadeus output
+  (Decision 23, kind 1), with the "Layout detail not fully verified" marker
+  where Decision 27 requires it; and — only where Amadeus would answer but
+  no verified text exists — **one short training line**, labeled "Training
+  message" (Decision 23, kind 2). Feedback texts, hints, Coach explanations
+  and every other DEIXEN explanation live in a separate **DEIXEN panel**:
+  beside the Terminal on desktop, on demand on mobile (LXA §18). This refines
+  where Decision 23's three kinds are placed; it does not change what each
+  kind may say. File 06's error-message discipline (official message shown
+  verbatim, explanation alongside) is unchanged — the panel is "alongside".
+- **Decision 31 — Visual direction A "Margin". Closed — Approved (Karim,
+  2026-09-25).** Of the three directions Claude Design proposed (A "Margin":
+  light, two inks, DEIXEN in the margin; B "Instrument": dark cockpit;
+  C "Airside": light room, black screen, yellow — artifact
+  https://claude.ai/artifact/PaSoos61b5By1yqdmUK1JM), Karim chose **A**,
+  judging B and C closer to an AI-generated look, and asked for A to be
+  refined to remove every AI trace. The project lead had recommended C; the
+  choice is Karim's (D29 reserved item 2). This closes the Design Brief's
+  reserved "visual direction" item and the light-vs-dark item:
+  **light-led, with tokens structured so a dark theme can be added later**.
+  Identity remains provisional (the name is not final — Constitution §1).
+  Refined values are approved at the Phase 4 gate.
+- **Decision 32 — Script and direction inside the Terminal. Closed — by
+  delegation (D29), 2026-09-25.** Terminal entries and Amadeus output are
+  Latin, monospace and left-to-right in both interface languages. The
+  interface chrome, the DEIXEN panel and the training line follow the
+  interface language (Arabic → right-to-left; commands inside Arabic text
+  stay Latin and left-to-right, Build Spec §5). Closes the Design Brief §4
+  open question.
+- **Decision 33 — Training lines for a wrong entry of a known command.
+  Closed — by delegation (D29), 2026-09-25.** When an entry of a slice
+  command fails its checklist (Build Spec §6) and no verified message or more
+  specific training message applies, the Terminal shows one training line:
+  (a) **`tm.notAccepted`** — EN "Entry not accepted." / AR «الإدخال غير
+  مقبول.» — when the entry does not follow the verified pattern or refers to
+  something that does not exist (format, date range, missing display or
+  line); (b) **`tm.notForTask`** — EN "Entry not used: it does not match the
+  task." / AR «لم يُستخدم الإدخال: لا يطابق المهمة.» — when the entry is well
+  formed but its data is not the task's (wrong name, phone, seats, class,
+  route, date, `TK` variant). (b) was added while checking where (a) is used:
+  for a well-formed entry, "not accepted" would suggest that Amadeus rejects
+  it, which is not verified (Decision 13). In both cases the practice PNR is
+  **left unchanged** — a DEIXEN rule (the slice has no `XE` to remove a wrong
+  element), not an Amadeus claim. The specific feedback text appears in the
+  DEIXEN panel. The mapping of every feedback item to its Terminal line is in
+  `slice.json` (`feedback[].terminalLine`); Build Spec §5 states the rule.
+- **Decision 34 — Long training messages. Closed — by delegation (D29),
+  2026-09-25.** When a training message has more than one sentence, the
+  Terminal shows its first sentence, labeled; the rest of the same string
+  appears in the DEIXEN panel. The split is made on the authored text before
+  tokens such as `{RF_TEXT}` are filled. No text is rewritten.
+- **Decision 35 — Phase 4 validation matrix. Closed — by delegation (D29),
+  2026-09-25.** The refinement of direction A is checked on: the eight
+  learner states at 1440 and 390 px, in English and Arabic; Flight Deck and
+  Terminal practice at 320 / 360 / 430 / 768 / 1024 / 1280 px in English,
+  and in Arabic at 320 and 1024 px. This narrows the Design Brief §8 item 2
+  deliverable for the design phase only. It does **not** narrow the build:
+  the Definition of Done below still requires every state to pass at every
+  breakpoint of file 04, in both languages.
+- **Decision 36 — Terminal on a phone. Closed — by delegation (D29),
+  2026-09-25.** Terminal columns never wrap; the Terminal sheet pans
+  sideways (direction A's approach), so Amadeus layouts keep their verified
+  line structure. The pan must work by touch and by keyboard (file 04
+  keyboard rule); WCAG 2.1 reflow allows two-dimensional content such as
+  this to scroll.
 
 ## Definition of Done — for the current frozen vertical slice
 

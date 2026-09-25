@@ -1,6 +1,6 @@
 ---
 name: DEIXEN Slice Build Spec
-status: CURRENT — APPROVED by Karim 2026-09-25 (07 Decision 26). Updated 2026-09-25: gaps G1–G3 (§5, §12); Decision 27 (K5, K6) applied to §4, §5, §12, §13; K7 (§6 row 5, §12) approved in the Phase 3 gate (07 D28). First edition (Execution Plan 3.3); proposals K1–K4 approved (07 Decision 25). With this approval, the LDS/LXA content extracted here is binding for the slice (LDS and LXA reading rules, point 1).
+status: CURRENT — APPROVED by Karim 2026-09-25 (07 Decision 26). Updated 2026-09-25: gaps G1–G3 (§5, §12); Decision 27 (K5, K6) applied to §4, §5, §12, §13; K7 (§6 row 5, §12) approved in the Phase 3 gate (07 D28). Phase 4, 2026-09-25: 07 Decisions 30, 32–34, 36 applied to §5 and §13. First edition (Execution Plan 3.3); proposals K1–K4 approved (07 Decision 25). With this approval, the LDS/LXA content extracted here is binding for the slice (LDS and LXA reading rules, point 1).
 owns: The single build specification Claude Code implements for the first-build slice. It gathers requirements from their owners and designs the evidence/state schema (delegated to Claude — file 13).
 does not own: any decision (07); Amadeus behavior (Verified Reference); product structure (03); design (Design Brief / Phase 4). Where this file and an owner disagree, the owner wins and the conflict is reported.
 ---
@@ -108,6 +108,40 @@ one of three kinds, each visibly distinct:
    never styled or worded to pass as real Amadeus text.
 3. **Coach explanation** — plain language beside the output; never replaces
    a real Amadeus message.
+
+**[D] Placement (07 Decision 30).** The Terminal contains only kind 1
+(with the marker below where it applies) and, where Amadeus would answer but
+no verified text exists, **one short training line** labeled with
+`ui.trainingLabel`. Kind 3, every feedback text (§8), every hint, and every
+other DEIXEN explanation appear in the **DEIXEN panel** — beside the
+Terminal on desktop, on demand on mobile (LXA §18).
+
+**[D] Wrong entry of a known command (07 Decision 33).** An entry of a §6
+command that fails its checklist leaves the practice PNR unchanged (a DEIXEN
+rule — the slice has no `XE`). The Terminal shows the training line named in
+`slice.json` `feedback[].terminalLine`: `tm.notAccepted` when the entry does
+not follow the verified pattern or points to something that does not exist
+(format, date range, no display, missing line); `tm.notForTask` when the
+entry is well formed but its data is not the task's. A more specific message
+wins where its condition holds: verified messages and `tm.rfMissing` /
+`tm.otherMissing` for `ER` (§6 row 8), `tm.noPracticeData`,
+`tm.classNotOffered`, `tm.secondName`, `tm.fxpBeforeName`. The feedback text
+itself goes to the panel. An unknown command stays `tm.notRecognized`; an
+entry outside the slice stays `tm.notCovered` (03).
+
+**[D] Long training messages (07 Decision 34).** A training message with
+more than one sentence shows its first sentence in the Terminal, labeled;
+the rest of the same string appears in the panel. Split the authored text
+at the end of its first sentence *before* filling tokens (`{RF_TEXT}`,
+`{CTCR_TEXT}`), so learner-typed text can never move the split. Never
+rewrite or shorten a string.
+
+**[D] Script and direction (07 Decision 32).** Terminal entries and Amadeus
+output are Latin, monospace, left-to-right in both languages. Chrome, panel
+and training lines follow the interface language (Arabic: right-to-left).
+
+**[D] Phone Terminal (07 Decision 36).** Terminal columns never wrap; the
+Terminal sheet pans sideways, by touch and by keyboard.
 
 **Screen layouts (G1 — closed 2026-09-25):** build the `AN` display, the
 `SS` sell response, the `FQD` display, the `FXP` response and every PNR
@@ -357,7 +391,10 @@ track, `XE`/Known Issue #7 mitigation (no `XE` in the slice).
 - [ ] Every command in §6 works with valid and invalid handling, hints, and
       completion detection; nothing outside §6 is simulated.
 - [ ] Every output line is one of the three kinds in §5, visibly distinct;
-      no invented Amadeus text anywhere.
+      no invented Amadeus text anywhere. The Terminal holds only Amadeus
+      output and labeled training lines; feedback, hints and Coach are in the
+      DEIXEN panel (07 D30); wrong entries show the `terminalLine` of their
+      feedback item and leave the PNR unchanged (07 D33).
 - [ ] Every element number shown equals the element's number in the PNR at
       that moment, from the one numbering function the final display uses
       (§4; e.g. `SS` segment 1 → 2 after `NM`; `SSR CTCM` 4 → 5 after `TK`).

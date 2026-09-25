@@ -1,7 +1,7 @@
 # CLAUDE.md — DEIXEN app (first-build slice)
 
 > Status: APPROVED by Karim 2026-09-25 (07 Decision 26). First edition
-> (Execution Plan 3.5); Decision 27 applied 2026-09-25 (§3 rule 2, §8). This file is the master copy of the
+> (Execution Plan 3.5); Decision 27 applied 2026-09-25 (§3 rule 2, §8); Decisions 30, 33, 34 applied 2026-09-25 (§3 rule 2). This file is the master copy of the
 > Claude Code instructions; at build start it becomes the first file of the
 > code repository.
 
@@ -47,7 +47,11 @@ stop and report (§6).
    needs something the Reference does not have, stop and report.
 2. **Three kinds of Terminal output** (spec §5): Amadeus output (verified
    only), training message (visibly marked), Coach explanation (beside, never
-   instead). A detail the spec lists as partly verified (spec §5, Decision
+   instead). The Terminal holds only Amadeus output and one short labeled
+   training line; feedback, hints and Coach go in the DEIXEN panel (spec §5,
+   Decision 30). A wrong entry of a known command shows its feedback item's
+   `terminalLine` and leaves the PNR unchanged (Decision 33); a long
+   training message shows its first sentence only (Decision 34). A detail the spec lists as partly verified (spec §5, Decision
    27) is drawn in the verified pattern with the "Layout detail not fully
    verified" marker and never taught; anything with no verified pattern is a
    training message — never a guessed Amadeus look.
