@@ -75,6 +75,9 @@ presented a navy/blue color language as "durable" although colors are open
 | Slice path adjustment (D22) | CLOSED — Approved 2026-09-25 | Karim | — |
 | `SRCTCM` step in the slice (D24) | CLOSED — Approved 2026-09-25 | Karim | — |
 | Design Brief (Execution Plan 3.4) | DONE — awaiting Karim's review | Karim | Approve before Phase 4 |
+| Slice Build Spec (3.3) | DRAFT — awaiting Karim's approval; carries K1–K4 | Karim | Approve; then 3.5 |
+| Build Spec K1–K4 (slice limits; scenario `SRCTCR`; interrupted attempts; Growth status rule) | OPEN — Claude recommends agree on all four | Karim | Decide with the spec |
+| Build Spec G1–G3 (example screens; slice content; scope disclosure) | OPEN | Claude | Before build (3.6) |
 | Coach contract (D9); CS contract (D6) | CLOSED | Karim | Carry forward |
 | Evidence, Assessment, Scenario contracts | CLOSED (unbuilt) | Karim | Slice Build Spec, Phase 3 |
 | Domain/SME validation (D7) | SUPERSEDED by D12 | — | — |
@@ -87,7 +90,7 @@ presented a navy/blue color language as "durable" although colors are open
 | Curriculum goal (D18) | CLOSED | Karim | Market evidence sourced during curriculum work |
 | Absent artifacts (D19); First build (D20); Owner name (D21) | CLOSED | Karim | — |
 | Engine strategy "conformance oracle" (former delegated decision) | WITHDRAWN | — | Replaced by D14 |
-| Evidence/State concrete schema | DELEGATED — not done | Claude | Slice Build Spec, Phase 3 |
+| Evidence/State concrete schema | DONE (delegated) — Slice Build Spec §11; answers the Event Log granularity and chain-continuity questions by design | Claude | — |
 | Coach layout (global vs per-page) | DELEGATED | Claude Design / Code | Resolve at build |
 | Curriculum order (competency vs command order); Lesson 17; 8 Advanced lessons | OPEN | Claude, then Karim | Curriculum authoring after the slice (D18) |
 | Pricing prerequisites of the slice (name before `FXP`?) | UNVERIFIED (U-01) — no longer blocking: D22 puts `NM` before `FXP` | — | — |

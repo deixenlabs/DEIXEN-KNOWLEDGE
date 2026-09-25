@@ -56,7 +56,11 @@ were ended by Karim's decision on 2026-09-24 and are historical.
 (Decision 22), the Terminal output rule (Decision 23), and the `SRCTCM`
 step (Decision 24) on 2026-09-25, and approved creating the three Phase 3
 files (Slice Build Spec, Design Brief, Claude Code environment pack). Step
-3.4 (Design Brief) done first; 3.3 and 3.5 next.
+3.4 (Design Brief) and step 3.3 (`DEIXEN_Slice_Build_Spec.md`, draft) are
+written. The Build Spec carries four proposals awaiting Karim (K1–K4:
+slice limits, the scenario, interrupted attempts, the Growth status rule)
+and three gaps Claude closes before the build (G1 example screens, G2 slice
+content, G3 scope disclosure). Next: Karim's review, then 3.5.
 
 **Implementation state:** no codebase exists in the project's hands. The first
 build (Decision 20) will be written from scratch against approved

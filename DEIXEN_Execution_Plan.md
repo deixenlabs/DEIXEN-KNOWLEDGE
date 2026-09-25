@@ -35,7 +35,7 @@ independent review (waived by Karim).
 | 0. Source lock | Read the Project and repository; decide which copies count | Corpus inventory | — | **Done** 2026-09-24 |
 | 1. Review (read-only) | Look for contradictions, gaps, stale statements | 16 findings (file 13 §2) | Karim reviews findings | **Done** 2026-09-24 |
 | 2. Synchronization | Apply decisions 12–21; fix contradictions; migrate names; mark every file's status | Updated corpus; Corpus Map (file 00) | Karim uploads the files | **Done** 2026-09-25 |
-| 3. Verification & readiness | See §4 | Verified Reference; Slice Build Spec; Design Brief; environment pack | Karim approves the pack | **In progress** (3.1, 3.2, 3.4 done) |
+| 3. Verification & readiness | See §4 | Verified Reference; Slice Build Spec; Design Brief; environment pack | Karim approves the pack | **In progress** (3.1, 3.2, 3.4 done; 3.3 draft) |
 | 4. Design | Claude Design explores directions from the Design Brief; Karim chooses; the chosen direction is refined | Approved design | Karim approves direction | Waiting |
 | 5. Build | Claude Code builds the slice (evening computer sessions); verification loop from 08 §26; Karim tests it as a learner | Working slice meeting 07's Definition of Done | Karim confirms the slice works | Waiting |
 | 6. Expansion | Next lessons, Basic then Advanced — each chunk goes verify → spec → build → test | Growing curriculum | Karim, per chunk | Waiting |
@@ -98,4 +98,4 @@ responsibility).
 
 ## 7. Current Phase
 
-Phase 2 complete (uploaded 2026-09-25). Phase 3: step 3.1 done (Verified Reference, second edition 2026-09-25); step 3.2 done — Karim approved Decisions 22 and 23 (2026-09-25). Decision 24 (`SRCTCM` step) approved, and creation of the three Phase 3 files approved (2026-09-25). 3.4 Design Brief written (`DEIXEN_Design_Brief.md`). Next: 3.3 Slice Build Spec, then 3.5 environment pack, then 3.6 readiness check.
+Phase 2 complete (uploaded 2026-09-25). Phase 3: step 3.1 done (Verified Reference, second edition 2026-09-25); step 3.2 done — Karim approved Decisions 22 and 23 (2026-09-25). Decision 24 (`SRCTCM` step) approved, and creation of the three Phase 3 files approved (2026-09-25). 3.4 Design Brief written (`DEIXEN_Design_Brief.md`). 3.3 Slice Build Spec drafted (`DEIXEN_Slice_Build_Spec.md`), awaiting Karim's approval and decisions K1–K4. Next: 3.5 environment pack; before 3.6, Claude closes gaps G1–G3 (example screens, slice content, scope disclosure).
