@@ -2,7 +2,7 @@
 name: DEIXEN Canonical Decisions & Current State
 owns: The single decisions ledger and current project status going forward
 supersedes reading in isolation: AeroBridge_Decisions_and_Current_State.md
-last synchronized: 2026-09-25 (Execution Plan Phase 3, after gaps G1–G3)
+last synchronized: 2026-09-25 (Execution Plan Phase 3 — Decision 27 applied; readiness check 3.6 run; Phase 3 gate prepared)
 authority note: Where a decision below is owned in more detail elsewhere in this canonical set (product/architecture, design, engine, curriculum/Coach), this file states the decision and its status, and points there rather than duplicating — the same single-ownership discipline the original NEW document already established and this pass is preserving.
 ---
 
@@ -62,9 +62,15 @@ Build Spec and `CLAUDE.md` as a whole (Decision 26). Gaps G1–G3 closed by
 Claude on 2026-09-25: screen layouts added to the Verified Reference
 (third edition, V-14–V-18); slice content and the Simulator Scope
 Disclosure written as the content files for `deixen-app/content/`
-(awaiting Karim's review). G1 raised K5 and K6; Karim approved both (Decision 27). Next: apply
-Decision 27 to Build Spec §4/§13 and `CLAUDE.md` §8, Karim's review of the
-content files, then readiness check (3.6) and the Phase 3 gate.
+(awaiting Karim's review). G1 raised K5 and K6; Karim approved both (Decision 27),
+and Claude applied them on 2026-09-25 (Build Spec §4/§5/§12/§13, `CLAUDE.md`
+§3/§8, Decision 14's wording below, LDS/LXA reading rules, Verified
+Reference §3, Design Brief, Scope Disclosure). Readiness check (3.6) run the
+same day: passed, subject to Karim's approval of one new item (Build Spec
+K7 — contact-SSR endings, Verified Reference U-12) and of seven small
+content fixes (listed in `DEIXEN_Slice_Content_Review.md`). **Next: the
+Phase 3 gate** — Karim approves the pack (Verified Reference, Build Spec,
+Design Brief, `CLAUDE.md`, content files) → Phase 4 Design.
 
 **Implementation state:** no codebase exists in the project's hands. The first
 build (Decision 20) will be written from scratch against approved
@@ -124,11 +130,12 @@ applies.
 ### Amadeus — domain truth, implementation history, and the frozen slice
 - **Domain truth** is owned by `DEIXEN_Amadeus_Verified_Reference.md`
   (Decision 15, created in Execution Plan Phase 3) under the Verification
-  Standard (Decision 12). Second edition 2026-09-25: it verifies every
+  Standard (Decision 12). Third edition 2026-09-25 (amended at the
+  readiness check, U-12–U-14): it verifies every
   command in the adjusted slice path (Decision 22) — `AN`, `SS`, `NM`, `AP`,
   `TK`, `RF`, `ER`, `FXP` — plus `FQD`, `FXX`, the mandatory PNR elements, and
-  the IATA passenger-contact SSRs. Everything not listed there as VERIFIED is
-  UNVERIFIED.
+  the IATA passenger-contact SSRs, and the screen layouts of the slice
+  (V-14–V-18). Everything not listed there as VERIFIED is UNVERIFIED.
 - **Implementation history:** `05_DEIXEN_Canonical_Amadeus_Engine_Reference.md`
   describes the old engine (37 commands) whose code is not available. It is a
   historical implementation reference only (Decision 14) — neither the build
@@ -158,7 +165,10 @@ applies.
   is taught (Decision 13); SSR/seat association workflow; voiding; `FXX`
   is now VERIFIED as a real entry (Verified Reference V-06), so the older
   curriculum "correction" that excluded it was wrong; `FXL`/`TQT`/`TTE`/`FQF`; "Amadeus Offers" (`OFS` family);
-  post-ticketing segment-status behavior; the exact mandatory-element list.
+  post-ticketing segment-status behavior; which entry creates the PRINT
+  "Phone" element (`AP` assumed, not stated by a source — Verified
+  Reference U-14; the five PRINT elements themselves are VERIFIED, V-08);
+  the endings of contact SSRs (U-12); accepted name titles (U-13).
 ### Curriculum & Coach — owned in detail by `06_DEIXEN_Canonical_Curriculum_and_Coach.md`
 - Coach Core Guided Learning Layer (Decision 9) — **Closed — Approved.**
   Mandatory, five required touchpoints, state-bound, never static. Layout
@@ -291,8 +301,9 @@ an ordinary technical implementation choice, not decided here.
   itself be wrong (e.g. `QE`/`QN`/`QD`). The old engine's limitations (one
   seat per PNR, two-segment limit, adults-only fares, Egypt-only Timatic,
   non-functional `FQN`/`FQR`, unreachable ancillaries) and its Known Issues
-  are not requirements; they are lessons (e.g. element numbers shown during
-  entry must match the final PNR numbering). Any limitation in the new build
+  are not requirements; they are lessons (e.g. every element number shown is
+  the element's number in the PNR as it stands at that moment, computed by
+  the same function as the final display — wording of Decision 27). Any limitation in the new build
   must be an explicit, disclosed scope decision.
 - **Decision 15 — Amadeus Verified Reference. Closed — Approved.**
   `DEIXEN_Amadeus_Verified_Reference.md`, created in Execution Plan Phase 3,
@@ -370,7 +381,7 @@ an ordinary technical implementation choice, not decided here.
   final display (Verified Reference V-18). This replaces the wording
   "numbers shown during entry must match the final PNR numbering" in
   Decision 14's lesson example, Build Spec §4/§13 and `CLAUDE.md` §8
-  (edits still to be applied). K6: screen details that official examples
+  (edits applied by Claude 2026-09-25). K6: screen details that official examples
   show only partly (Verified Reference U-07, U-09, U-10, U-11) are shown
   in the verified pattern with a visible "Layout detail not fully
   verified" marker, never taught, and listed in the Scope Disclosure;

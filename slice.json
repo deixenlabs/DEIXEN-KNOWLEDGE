@@ -1,9 +1,9 @@
 {
  "schemaVersion": 1,
- "status": "DRAFT for Karim's review (Build Spec G2/G3). Self-review only (07 D17).",
+ "status": "DRAFT for Karim's review at the Phase 3 gate (Build Spec G2/G3; readiness-check fixes of 2026-09-25 applied — Build Spec §12 K7). Self-review only (07 D17).",
  "rules": [
   "Every Amadeus statement in the text files traces to a VERIFIED entry of DEIXEN_Amadeus_Verified_Reference.md (listed per lesson in 'verifiedBasis').",
-  "All flights, fares, taxes, phone numbers, names, office IDs and record locators are fictional practice data. Airline code 6X is used because official Amadeus examples use it; no real schedule or fare is implied.",
+  "All flights, fares, taxes, phone numbers, names, office IDs and record locators are fictional practice data. Airline code 6X is used only as a practice code; no real schedule or fare is implied.",
   "Tokens in braces are filled at runtime: {TASK_DATE}/{SCN_DATE}/{DEMO_DATE} = today + dateOffsetDays as DDMMM (English month, uppercase); {EXPECTED_ENTRY} = the task's expected entry for that step; {N} = a count."
  ],
  "office": {
@@ -228,21 +228,21 @@
    "fare": "RUHDXB-Y",
    "passenger": {
     "surname": "ALHARBI",
-    "firstName": "SARA",
-    "title": "MS"
+    "firstName": "SAAD",
+    "title": "MR"
    },
    "agencyPhone": "966110000000",
    "passengerMobile": "966500000001",
    "ticketing": "TKOK",
-   "requestedBy": "MS ALHARBI",
+   "requestedBy": "MR ALHARBI",
    "expectedEntries": {
     "AN": "AN{TASK_DATE}RUHDXB",
     "SS": "SS1Y2",
-    "NM": "NM1ALHARBI/SARA MS",
+    "NM": "NM1ALHARBI/SAAD MR",
     "AP": "AP966110000000",
     "CTC": "SRCTCM-966500000001",
     "TK": "TKOK",
-    "RF": "RFMS ALHARBI",
+    "RF": "RFMR ALHARBI",
     "ER": "ER",
     "FXP": "FXP",
     "FQD": "FQDRUHDXB"
@@ -250,7 +250,8 @@
    "acceptance": {
     "AN": "time suffix allowed; airline code after AN allowed",
     "RF": "any non-empty free text",
-    "AP": "free text must contain 966110000000"
+    "AP": "free text must contain 966110000000",
+    "CTC": "SRCTCM- followed by 966500000001; an ending that starts with '/' after the number is accepted and not checked (Build Spec §6 row 5; Verified Reference U-12)"
    }
   },
   "scenario": {
@@ -324,7 +325,7 @@
   "briefKey": "scn.brief",
   "expectedBehavior": [
    "Availability for JED-DXB on {SCN_DATE}; one seat in class B on flight 6X 515 (line 3).",
-   "Name, contact element (agency phone), SRCTCR with free text recording the refusal, TKOK, RF, then ER without triggering or bypassing the V-13 warning; then FXP.",
+   "Name, contact element (agency phone), SRCTCR with free text recording the refusal, TKOK, RF, then ER without bypassing the V-13 warning (a learner who meets the warning and then adds SRCTCR has recovered correctly); then FXP.",
    "No SRCTCM or SRCTCE element with a made-up value."
   ],
   "acceptance": "Scenario completed = the full scenario path with every checklist item met; the CTC step satisfied by SRCTCR (not by bypassing the warning with a second ER).",
@@ -712,7 +713,7 @@
    "skillId": "CTC",
    "checklistItem": "a",
    "errorCategory": "MANDATORY_MISSING",
-   "kind": "diagnostic",
+   "kind": "corrective",
    "context": "scenario"
   },
   {

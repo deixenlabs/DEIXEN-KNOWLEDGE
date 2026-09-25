@@ -1,6 +1,6 @@
 ---
 name: DEIXEN Slice Build Spec
-status: CURRENT — APPROVED by Karim 2026-09-25 (07 Decision 26). Updated 2026-09-25 after gaps G1–G3 (§5, §12); proposals K5–K6 await Karim. First edition (Execution Plan 3.3); proposals K1–K4 approved (07 Decision 25). With this approval, the LDS/LXA content extracted here is binding for the slice (LDS and LXA reading rules, point 1).
+status: CURRENT — APPROVED by Karim 2026-09-25 (07 Decision 26). Updated 2026-09-25: gaps G1–G3 (§5, §12); Decision 27 (K5, K6) applied to §4, §5, §12, §13; readiness-check finding K7 (§6 row 5, §12) awaiting Karim at the Phase 3 gate. First edition (Execution Plan 3.3); proposals K1–K4 approved (07 Decision 25). With this approval, the LDS/LXA content extracted here is binding for the slice (LDS and LXA reading rules, point 1).
 owns: The single build specification Claude Code implements for the first-build slice. It gathers requirements from their owners and designs the evidence/state schema (delegated to Claude — file 13).
 does not own: any decision (07); Amadeus behavior (Verified Reference); product structure (03); design (Design Brief / Phase 4). Where this file and an owner disagree, the owner wins and the conflict is reported.
 ---
@@ -11,7 +11,8 @@ Reading guide for Claude Code: §1–§3 say **what** to build, §4–§6 **how 
 Terminal behaves**, §7–§10 **how learning and evidence work**, §11 **data**,
 §12 **what is still open**, §13 **Definition of Done**. Tags: **[D]** =
 decided (source cited); **[DELEGATED]** = technical design by Claude within
-its delegation; **[PROPOSED]** = needs Karim's approval (all listed in §12).
+its delegation; **[PROPOSED]** = needs Karim's approval (all listed in §12;
+at present only K7).
 
 ---
 
@@ -32,11 +33,11 @@ Service track; Speed Drills; spaced-retrieval prompt (LDS §24); any Amadeus
 behavior not VERIFIED; numeric readiness; backend, accounts, login, sync, PWA
 (03 Platform Direction); new top-level areas.
 
-**[PROPOSED] Scope limits inside the slice** (D14 requires every limit to be
-explicit and disclosed): one adult passenger; one flight segment; a single
+**[D] Scope limits inside the slice** (07 D25, K1; D14 requires every limit
+to be explicit and disclosed): one adult passenger; one flight segment; a single
 applicable fare, so `FXP` never needs the `FXT` selection step (V-05). Any
 entry outside these limits gets the "not covered in this slice" message
-(§5). Karim item K1.
+(§5).
 
 ## 2. Product frame
 
@@ -80,19 +81,16 @@ Completion detected → Reset/retry.
   turned into a different valid command.
 - **[D]** "Not recognized" and "not covered in this slice" are different
   messages (03).
-- **[D] Element numbering (07 D14):** any element number shown while the
-  learner builds the PNR must equal its number in the final PNR display.
-  Numbering follows the order shown in the official PNR examples
-  (Verified Reference V-03, V-10, V-11 sources: names, then segments, then
-  contact and other elements).
-  **Conflict found in G1 — proposal K5 (§12), awaiting Karim:** official
-  examples show that Amadeus numbers each element by its place in the PNR
-  *as it stands* (V-18): the segment sold by `SS` is element 1 until `NM`
-  adds a name, then becomes 2; `TK` is displayed before an SSR entered
-  earlier. With the approved path order, "equal to the final number"
-  cannot hold for `SS` and `SRCTCM` without showing numbers real Amadeus
-  would not show. Until Karim decides, build the numbering as one function
-  that computes numbers from the current PNR (both options below need it).
+- **[D] Element numbering (07 D27, K5; replaces the D14 wording):** every
+  element number shown in the Terminal is the element's number in the PNR
+  *as it stands at that moment*, computed by **one** function that the final
+  PNR display also uses (Verified Reference V-18). Order: names, then air
+  segments, then contact (`AP`), then `TK`, then SSR and other elements —
+  `TK` is displayed before an SSR entered earlier. So numbers change as the
+  PNR grows, exactly as in the official examples: the segment sold by `SS`
+  is element 1 until `NM` adds a name, then 2; after `TKOK`, an `SSR CTCM`
+  entered before it moves from 4 to 5. No screen may show a number that
+  function did not produce (the old Known Issue #7 lesson, 07 D14).
 - **[D] Hint counter (03):** one counter, incremented in exactly one place,
   counting learner-requested hints only (LDS §15).
 
@@ -116,9 +114,24 @@ one of three kinds, each visibly distinct:
 redisplay from Verified Reference §2A (V-14–V-18): field order, line
 order, header and element order as recorded there; fictional values from
 `content/data/slice.json`. Column spacing is not verified (U-06): align
-columns in a fixed-width font. Details listed as U-07–U-11 are handled per
-proposal K6 (§12); until Karim decides, render them as training messages
-(07 D23 as written). No screen remains `UNVERIFIED-LAYOUT`.
+columns in a fixed-width font. No screen remains `UNVERIFIED-LAYOUT`.
+
+**[D] Partly verified details (07 D27, K6).** Details that official
+examples show only in part are drawn in the verified pattern with a visible
+marker (`ui.unverifiedMarker`: "Layout detail not fully verified"), never
+taught, and listed in the Scope Disclosure (`disc.6`, `disc.7`). The marker
+is a fourth visual element beside the three kinds of output: it labels a
+display, it is not a message. Details with no official pattern at all stay
+plain training messages (07 D23).
+
+| Detail | Reference | How the Terminal shows it |
+|---|---|---|
+| `AN` header number before the weekday; figure after each class letter; the `E0` code group | U-09 | V-14 pattern with the values in `slice.json`; one marker on the display; meanings never taught |
+| `AN` header time when the entry includes a time | U-10 | The time the learner entered, in the V-14 time field, with the marker. Entry without a time → `0000`, as in both official examples (no marker needed) |
+| Stored `SSR CTCM` line with the airline code filled in | U-07 (first part) | V-18 pattern `SSR CTCM` + airline + `HK1` + number, with the marker |
+| PNR redisplay after `AP`, `SRCTCM`/`SRCTCR`, `TK`, `RF` | U-11 | V-18 redisplay under the `RP/` header, with the marker |
+| Stored `SRCTCR` line | U-07 (second part) | No official pattern → training message `tm.ctcrLine` in place of the line. SSRs come after `TK` (V-18) and nothing follows them in the slice, so this changes no other element's number |
+| `RF` before end of transaction | U-08 | No official pattern → training message `tm.rfLine`; RF gets no line number |
 
 **Content (G2, G3):** all lesson, Ghost Mode, task, scenario, feedback,
 hint, training-message, Coach, contract-text and Scope Disclosure wording
@@ -140,10 +153,10 @@ Only VERIFIED content from `DEIXEN_Amadeus_Verified_Reference.md`.
 | 2 | `SS` (short sell) | V-03, V-15 | (a) `SS` + seats + class + line number; (b) line number exists in the last availability display; (c) seats = task passengers; (d) class matches the task | Adds segment with status `HK` + count (e.g. `HK1`) |
 | 3 | `NM` | V-07 | (a) `NM` + count + `SURNAME/FIRST TITLE`; (b) count = passengers; (c) name matches the task | Adds name element |
 | 4 | `AP` | V-11 | (a) `AP` + free-text contact; (b) contains the task's phone | Adds `AP` element as free text |
-| 5 | Passenger contact SSR: `SRCTCM` (main task) / `SRCTCR` (scenario) | V-13 | Main task: (a) `SRCTCM-` + number (dash mandatory); (b) number = the passenger's mobile from the task. Scenario: (a) `SRCTCR-` + free text (source example `SRCTCR-REFUSED/P3`; passenger association not taught as a rule) | Adds the SSR CTC element |
+| 5 | Passenger contact SSR: `SRCTCM` (main task) / `SRCTCR` (scenario) | V-13; U-12 | Main task: (a) `SRCTCM-` + number (dash mandatory); (b) number = the passenger's mobile from the task. An ending after the number that starts with `/` (official example `SRCTCM-3054996244/US`) is accepted and not checked. Scenario: (a) `SRCTCR-` + free text (source example `SRCTCR-REFUSED/P3`; passenger association not taught as a rule). **[PROPOSED — K7]** the endings are not taught (U-12) | Adds the SSR CTC element |
 | 6 | `TK` | V-09 | (a) `TKOK`, or `TKTL` + date — whichever the task asks | Adds TK element |
 | 7 | `RF` | V-10 | (a) `RF` + free text naming who requested the booking | Adds RF (shown until end of transaction, then moves to history) |
-| 8 | `ER` | V-08, V-09, V-10, V-13 | (a) entered when name, itinerary, contact, TK, RF and a passenger-contact SSR are all present | Ends transaction and redisplays the PNR with a record locator. Missing TK → `NEED TICKETING ARRANGEMENT`; missing CTC SSR → the V-13 warning (a second `ER` bypasses it, per V-13); missing RF → PNR not filed (V-10; message text unverified → training message); other missing elements → training message |
+| 8 | `ER` | V-08, V-09, V-10, V-13 | (a) entered when name, itinerary, contact, TK, RF and a passenger-contact SSR are all present | Ends transaction and redisplays the PNR with a record locator. Missing TK → `NEED TICKETING ARRANGEMENT`; missing CTC SSR → the V-13 warning (a second `ER` bypasses it, per V-13); missing RF → PNR not filed (V-10; message text unverified → training message); other missing elements → training message `tm.otherMissing`, worded as DEIXEN's task rule (that `AP` is the PRINT Phone element is not stated by a source — U-14) |
 | 9 | `FXP` | V-05, V-17 | (a) `FXP` entered on a PNR that has name and segment (the path guarantees this — U-01 is not exercised) | Prices with booked class; creates a TST |
 | opt | `FQD` | V-04, V-16 | (a) `FQD` + city pair; options after `/` | Fare display for the task route |
 
@@ -220,7 +233,7 @@ operational condition, observable in evidence; with Objective, Constraints,
 Expected behavior, scenario-aware Feedback, Assessment linkage, Evidence
 linkage, and no hidden global state change. Only VERIFIED behavior.
 
-**[PROPOSED] The scenario — Karim item K2.** "The passenger refuses to share
+**[D] The scenario (07 D25, K2).** "The passenger refuses to share
 a mobile number." Differentiating condition: the learner must record the
 refusal with `SRCTCR` (V-13: `SRCTCR-REFUSED/P3`) instead of `SRCTCM`.
 Load-bearing skills: passenger contact SSR (row 5), `ER`. Why this one: it is
@@ -235,7 +248,7 @@ present; hint label shows the real count. Reported only as "the pipeline
 works end to end for this learner on this occasion" — never a general
 competence claim.
 
-**[PROPOSED] Interrupted assessment or scenario — Karim item K3.** If the
+**[D] Interrupted assessment or scenario (07 D25, K3).** If the
 browser closes mid-attempt, the attempt is recorded as abandoned (not
 passed, not failed) and the learner is told so on return. Resolves LXA
 open items 1–2.
@@ -245,7 +258,7 @@ open items 1–2.
 **[D]** One qualitative status, computed from evidence at display time,
 never stored as a separate number (LDS §29 item 3; 07 Evidence contract).
 
-**[PROPOSED] Status rule — Karim item K4:**
+**[D] Status rule (07 D25, K4):**
 
 | Status | Rule |
 |---|---|
@@ -301,7 +314,7 @@ event.
 
 ## 12. Open items before and during the build
 
-**Karim decisions — all four approved 2026-09-25 (07 Decision 25); the [PROPOSED] tags above now read [D]:**
+**Karim decisions — all four approved 2026-09-25 (07 Decision 25); their tags above now read [D]:**
 
 | # | Item | Claude's recommendation |
 |---|---|---|
@@ -315,15 +328,21 @@ event.
 | # | Gap | Result |
 |---|---|---|
 | G1 | Example screens for `AN`, `SS` response, `FQD`, `FXP` response | **Closed.** Layouts recorded as V-14–V-18 (plus the PNR header, element order and numbering). Residual unverified details U-06–U-11 → K6. Conflict with §4 numbering → K5 |
-| G2 | Slice content | **Done — Karim reviews.** `deixen-app/content/` (3 files; reading copy `DEIXEN_Slice_Content_Review.md`): 10 lessons EN+AR, 10 Ghost scripts on a separate demo booking, main task + scenario data, 44 feedback texts (33 diagnostic, 11 corrective), 8 nudges, training messages, Coach explanations, contract texts |
-| G3 | Simulator Scope Disclosure | **Done — Karim reviews.** 9 items EN+AR (`disc.*` in the text files) |
+| G2 | Slice content | **Done — Karim approves at the Phase 3 gate** (readiness-check fixes applied 2026-09-25). `deixen-app/content/` (3 files; reading copy `DEIXEN_Slice_Content_Review.md`): 10 lessons EN+AR, 10 Ghost scripts on a separate demo booking, main task + scenario data, 44 feedback texts (32 diagnostic, 12 corrective — `scn.fb.warningShown` re-tagged at the readiness check), 8 nudges, training messages, Coach explanations, contract texts |
+| G3 | Simulator Scope Disclosure | **Done — Karim approves at the Phase 3 gate.** 9 items EN+AR (`disc.*`); `disc.6`/`disc.7` updated for Decision 27 and K7 |
 
-**New Karim decisions raised by G1:**
+**Karim decisions raised by G1 — both approved 2026-09-25 (07 Decision 27), applied in §4, §5 and §13:**
 
 | # | Item | Claude's recommendation |
 |---|---|---|
 | K5 | Element numbering: replace "number shown during entry = number in the final PNR" (§4) with "every number shown = the element's number in the PNR as it stands at that moment, computed by the same function as the final display" — what official examples show (V-18) and what the old Known Issue #7 lesson actually asked for (LDS §14). Alternative: keep the literal rule by changing the approved path order (`NM` before `SS`, `TK` before `SRCTCM`) — reopens D22/D24 | Agree with the replacement |
 | K6 | Screen details official examples show only partly (U-07, U-09, U-10, U-11: airline code in the stored `SSR CTCM` line; the `AN` header number; the `AN` header time when a time is entered; redisplay after `AP`/`SRCTCM`/`TK`/`RF`): show the verified pattern with a small "Layout detail not fully verified" marker, never teach the detail, list it in the Disclosure. Details with no official pattern at all (stored `SRCTCR`, `RF` before end of transaction — U-07, U-08) stay plain training messages under D23. Alternative: D23 strictly — every such line becomes a training message | Agree with the marker approach |
+
+**Raised by the readiness check (3.6), 2026-09-25 — awaiting Karim at the Phase 3 gate:**
+
+| # | Item | Claude's recommendation |
+|---|---|---|
+| K7 | Contact-SSR endings (Verified Reference U-12). Every official example ends with something after the number or text (`SRCTCM-3054996244/US`, `SRCTCMAFHK1-0034563214/P1`, `SRCTCR-REFUSED/P3`); two training references describe `/US` as the phone's country, while an airline notice gives the bare format `SRCTCM-Phone number`. Proposal: keep the approved entries (`SRCTCM-` + number; `SRCTCR-` + free text); the lesson shows the official example with its ending and says the ending is outside the slice; an ending typed by the learner is accepted and not checked; listed in the Disclosure (`disc.7`). Alternative: require an ending — this would teach a rule not yet VERIFIED (07 D13) | Agree with the proposal; research the endings before the Basic track expands |
 
 **Deferred — not in this slice:** Terminal Screen Literacy candidate (LXA
 §22, new candidate) — outside the frozen boundary (07 D8A); revisit after
@@ -339,7 +358,11 @@ track, `XE`/Known Issue #7 mitigation (no `XE` in the slice).
       completion detection; nothing outside §6 is simulated.
 - [ ] Every output line is one of the three kinds in §5, visibly distinct;
       no invented Amadeus text anywhere.
-- [ ] Element numbers during entry equal the final PNR numbers.
+- [ ] Every element number shown equals the element's number in the PNR at
+      that moment, from the one numbering function the final display uses
+      (§4; e.g. `SS` segment 1 → 2 after `NM`; `SSR CTCM` 4 → 5 after `TK`).
+- [ ] Every partly verified detail in §5 carries the marker; nothing marked
+      is taught; every item is in the Scope Disclosure.
 - [ ] The scenario is behaviorally distinct per the contract and produces
       TRANSFERRED only for load-bearing, independent skills.
 - [ ] Assessment follows its contract: announced entry, honest hint label,
@@ -357,10 +380,10 @@ track, `XE`/Known Issue #7 mitigation (no `XE` in the slice).
 
 ## 14. Sources
 
-07 (D8A, D9, D11, D12–D14, D20, D22–D24; Evidence, Assessment, Scenario
+07 (D8A, D9, D11, D12–D14, D20, D22–D27; Evidence, Assessment, Scenario
 contracts; Definition of Done) · 03 (IA, Terminal skeleton, schemas,
 persistence) · 04 (accessibility, breakpoints) · 06 (Coach contract, error
 discipline, Ghost Mode schema) · LDS §5–§8, §10, §13–§16, §18, §20–§23,
 §29, §32, §36 · LXA §8, §9, §11, §12, §17, §18, §22 ·
-`DEIXEN_Amadeus_Verified_Reference.md` V-01–V-18, U-01–U-11 · `deixen-app/content/` ·
+`DEIXEN_Amadeus_Verified_Reference.md` V-01–V-18, U-01–U-14 · `deixen-app/content/` ·
 `DEIXEN_Design_Brief.md`.

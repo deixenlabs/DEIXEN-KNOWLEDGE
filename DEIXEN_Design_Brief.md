@@ -1,6 +1,6 @@
 ---
 name: DEIXEN Design Brief
-status: CURRENT — first edition, 2026-09-25 (Execution Plan 3.4). Creation approved by Karim (07, Decisions of 2026-09-25). Content awaits Karim's review before Phase 4 starts.
+status: CURRENT — first edition, 2026-09-25 (Execution Plan 3.4); synchronized 2026-09-25 with 07 Decision 27 and Verified Reference §2A. Creation approved by Karim (07, Decisions of 2026-09-25). Content awaits Karim's approval at the Phase 3 gate.
 owns: What Claude Design receives for Phase 4 — the brief only. Adds no decision; every rule below cites its owner.
 does not own: design principles, accessibility, anti-patterns (file 04); product structure (file 03); learner states (LXA); Coach contract (file 06); decisions (file 07); Amadeus behavior (Verified Reference)
 ---
@@ -71,6 +71,14 @@ screens.
      training message and never styled to pass as real Amadeus text.
   3. **Coach explanation** — plain language, placed *alongside* the output,
      never replacing a real Amadeus message.
+- **The "Layout detail not fully verified" marker** (07 Decision 27): a
+  small, visible label attached to an Amadeus display whose layout official
+  examples show only in part (Build Spec §5). It labels the display — it is
+  not a fourth kind of message — and must stay noticeable without making the
+  Terminal look broken or alarming. Arabic: «تفصيل في الشكل غير موثَّق بالكامل».
+- **Element numbers change as the booking grows** (07 Decision 27): e.g.
+  the sold flight is line 1, then line 2 once a name exists. The design must
+  let the learner follow a number changing between screens.
 - Behavior states come from file 03's Terminal Behavioral Skeleton
   (Awaiting input → Submitted → Valid / Invalid → Hint → Completion →
   Reset). "Not recognized" and "not covered in this slice" are different
@@ -85,8 +93,9 @@ screens.
   not required — LXA §18).
 
 **Content rule for mockups.** Any Amadeus screen shown in a mockup must be
-copied from an example in `DEIXEN_Amadeus_Verified_Reference.md` (e.g. the
-official PNR displays). Do not invent Amadeus screens, codes, or messages to
+taken from a "DEIXEN rendering" in `DEIXEN_Amadeus_Verified_Reference.md`
+§2A (V-14–V-18) — the verified layouts filled with DEIXEN's fictional data;
+official screens themselves are not copied. Do not invent Amadeus screens, codes, or messages to
 fill a mockup; if nothing verified fits, use an obviously generic placeholder
 (Constitution §7; 07 Decision 13).
 

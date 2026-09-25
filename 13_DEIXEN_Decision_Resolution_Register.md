@@ -31,6 +31,13 @@ Update 2026-09-25 (Phase 3.2): Karim approved the adjusted slice path
 remains before the first build: Slice Build Spec (3.3), environment pack
 (3.5), readiness check (3.6).
 
+Update 2026-09-25 (Phase 3.6): 3.3 and 3.5 done (D25, D26); gaps G1–G3
+closed; K5–K6 approved (D27) and applied. Readiness check run: passed,
+subject to Karim's approval at the Phase 3 gate of K7 (contact-SSR
+endings) and seven small content fixes. The repository `DEIXEN-KNOWLEDGE`
+appears to be behind the Project (its main folder, read 2026-09-25, does not show the Phase 2–3 files); it must be brought up
+to date before Phase 5, because `CLAUDE.md` makes Claude Code read from it.
+
 ## 2. Phase 1 Findings — Disposition
 
 Review type: self-review by the project lead (Decision 17 — independent
@@ -74,16 +81,20 @@ presented a navy/blue color language as "durable" although colors are open
 | Vertical Slice rule; slice boundary (D8A) | CLOSED — path adjusted by D22; all path commands VERIFIED | Karim | Slice Build Spec (3.3) |
 | Slice path adjustment (D22) | CLOSED — Approved 2026-09-25 | Karim | — |
 | `SRCTCM` step in the slice (D24) | CLOSED — Approved 2026-09-25 | Karim | — |
-| Design Brief (Execution Plan 3.4) | DONE — awaiting Karim's review | Karim | Approve before Phase 4 |
+| Design Brief (Execution Plan 3.4) | DONE — synchronized with D27 2026-09-25; awaiting Karim at the Phase 3 gate | Karim | Approve at the gate |
 | Slice Build Spec (3.3) | CLOSED — Approved 2026-09-25 (D26) | Karim | — |
 | Build Spec K1–K4 (D25) | CLOSED — Approved 2026-09-25 | Karim | — |
 | `CLAUDE.md` (3.5) | CLOSED — Approved 2026-09-25 (D26) | Karim | — |
 | Build Spec G1 (example screens) | DONE 2026-09-25 — Verified Reference V-14–V-18; residual details U-06–U-11 | Claude | K6 |
-| Build Spec G2–G3 (slice content; Scope Disclosure) | DONE 2026-09-25 — `deixen-app/content/` (3 files) | Karim | Review and approve the content |
-| Build Spec K5 — element numbering (V-18 live renumbering vs. literal Build Spec §4 / D14 wording) | CLOSED — Approved 2026-09-25 (07 D27) | Claude | Apply to Build Spec §4/§13, `CLAUDE.md` §8 |
-| Build Spec K6 — screen details only partly shown in official examples (U-07–U-11) | CLOSED — Approved 2026-09-25 (07 D27) | Claude | Apply to Build Spec §5/§12 |
-| `AP` as the PRINT 'Phone' element | UNVERIFIED as a stated source fact (07 D22 assumed it); lessons avoid claiming it | Claude | Verify when the next Reference edition is made; not blocking (Build Spec requires `AP` anyway) |
-| Readiness check (3.6) | NOT PASSED — waits on applying D27 and Karim's content review | Karim | Approve → Phase 3 gate |
+| Build Spec G2–G3 (slice content; Scope Disclosure) | DONE 2026-09-25 — `deixen-app/content/` (3 files); readiness-check fixes applied (7 items, ✎ in the review copy) | Karim | Approve at the Phase 3 gate |
+| Build Spec K5 — element numbering (V-18 live renumbering vs. literal Build Spec §4 / D14 wording) | CLOSED — Approved 2026-09-25 (07 D27); APPLIED 2026-09-25 (Build Spec §4/§13, `CLAUDE.md` §8, 07 D14, LDS/LXA reading rules) | Claude | — |
+| Build Spec K6 — screen details only partly shown in official examples (U-07–U-11) | CLOSED — Approved 2026-09-25 (07 D27); APPLIED 2026-09-25 (Build Spec §5/§12/§13, `CLAUDE.md` §3/§8, Design Brief §4, `disc.6`, Verified Reference §3) | Claude | — |
+| Build Spec K7 — contact-SSR endings (Verified Reference U-12), found at the readiness check | OPEN — proposal in Build Spec §12; applied provisionally in the content | Karim | Decide at the Phase 3 gate |
+| Name titles other than `MR` (U-13) | UNVERIFIED — slice main passenger changed to `MR` (content fix, awaiting gate) | Claude | Research with the Basic track |
+| `AP` as the PRINT 'Phone' element | UNVERIFIED (Verified Reference U-14); lessons avoid claiming it; `tm.otherMissing` reworded as a DEIXEN task rule | Claude | Verify when the next Reference edition is made; not blocking |
+| Readiness check (3.6) | RUN 2026-09-25 — PASSED subject to Karim's approval of K7 and the 7 content fixes (self-review, 07 D17) | Karim | Phase 3 gate |
+| Phase 3 gate (Execution Plan §3) | PREPARED 2026-09-25 — awaiting Karim | Karim | Approve the pack → Phase 4 |
+| Repository `DEIXEN-KNOWLEDGE` out of date (main folder, read 2026-09-25, does not show the Execution Plan, Constitution, Verified Reference, Build Spec, Design Brief, `CLAUDE.md`; still has 08 under its old name) | OPEN — found 2026-09-25 | Karim | Upload the current Project files before Phase 5 |
 | Coach contract (D9); CS contract (D6) | CLOSED | Karim | Carry forward |
 | Evidence, Assessment, Scenario contracts | CLOSED (unbuilt) | Karim | Slice Build Spec, Phase 3 |
 | Domain/SME validation (D7) | SUPERSEDED by D12 | — | — |
@@ -91,7 +102,7 @@ presented a navy/blue color language as "durable" although colors are open
 | Verification Standard (D12); Teaching boundary (D13) | CLOSED | Karim | Apply in Phase 3 |
 | Terminal display formats / error texts that cannot be verified | CLOSED by D23 (official example formats; unsourced messages shown as labeled training messages) | Karim | Apply in 3.3 |
 | Old engine as history; fresh build (D14) | CLOSED | Karim | — |
-| Amadeus Verified Reference (D15) | CLOSED — first edition 2026-09-25 (slice scope) | Claude | Extend as scope grows |
+| Amadeus Verified Reference (D15) | CLOSED — third edition 2026-09-25, amended at the readiness check (U-12–U-14) | Claude | Extend as scope grows |
 | Governance set (D16); Roles (D17) | CLOSED | Karim | — |
 | Curriculum goal (D18) | CLOSED | Karim | Market evidence sourced during curriculum work |
 | Absent artifacts (D19); First build (D20); Owner name (D21) | CLOSED | Karim | — |
@@ -103,7 +114,7 @@ presented a navy/blue color language as "durable" although colors are open
 | Old path `AN → SS → FQD → FXP` still written in LDS (§ tiers, ~l.604, ~l.715), LXA (~l.153), 05 | Superseded by D22; LDS/LXA reading rules point to 07; 05 updated | Claude | Slice Build Spec uses the D22 path |
 | `QE`/`QN`/`QD` real functions | OPEN — not taught | Claude | Verification when queues enter scope |
 | `FXX` real entry | VERIFIED (V-06) | — | — |
-| SSR/seat association; voiding; `FXL`/`TQT`/`TTE`/`FQF`; Offers (`OFS`); post-ticketing status; mandatory-element list | OPEN — backlog | Claude | Verification when each enters scope |
+| SSR/seat association; voiding; `FXL`/`TQT`/`TTE`/`FQF`; Offers (`OFS`); post-ticketing status; contact-SSR endings (U-12); name titles (U-13); `AP` as PRINT Phone (U-14) | OPEN — backlog (the five PRINT elements themselves are VERIFIED, V-08) | Claude | Verification when each enters scope |
 | Work Shift Simulator scope | DEFERRED | Karim | Revisit only if it becomes a real candidate |
 | `cleanRunsNeeded` (old placeholder) | HISTORICAL | — | Mastery rules come from LDS, not old code |
 | `ancillary.js` wiring; live-echo numbering bug (#7) | HISTORICAL (old engine) | — | Lessons only (D14) |

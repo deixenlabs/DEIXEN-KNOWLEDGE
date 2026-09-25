@@ -1,6 +1,6 @@
 # DEIXEN — Slice Content: Review Copy (G2 + G3)
 
-> **Reading copy for Karim's review — not a project file.** The source of truth is the three content files for `deixen-app/content/` (`data/slice.json`, `en/text.json`, `ar/text.json`); this page is generated from them. Author: Claude (project lead), 2026-09-25. Self-review only (07 D17).
+> **Reading copy for Karim's review — not a project file.** The source of truth is the three content files for `deixen-app/content/` (`data/slice.json`, `en/text.json`, `ar/text.json`); this page is generated from them. Author: Claude (project lead), 2026-09-25. Self-review only (07 D17). **Updated 2026-09-25 (readiness check 3.6):** Decision 27 applied; seven small fixes marked ✎ below, all awaiting Karim's approval at the Phase 3 gate.
 
 Every Amadeus statement traces to a VERIFIED entry in `DEIXEN_Amadeus_Verified_Reference.md` (third edition). All flights, fares, names and numbers are fictional.
 
@@ -8,8 +8,8 @@ Every Amadeus statement traces to a VERIFIED entry in `DEIXEN_Amadeus_Verified_R
 
 **Book and price a one-way flight** / حجز رحلة ذهاب فقط وتسعيرها
 
-- EN: Ms Sara Alharbi wants one seat from Riyadh (RUH) to Dubai (DXB) on {TASK_DATE}, on flight 6X 403 in class Y. Your agency's phone: 966110000000. Her mobile for the airline: 966500000001. Ticketing arrangement: TKOK. She requested the booking herself. Build the booking, end the transaction, then price it.
-- AR: السيدة سارة الحربي تريد مقعدًا واحدًا من الرياض (RUH) إلى دبي (DXB) بتاريخ {TASK_DATE}، على الرحلة 6X 403 بالدرجة Y. هاتف وكالتك: 966110000000. جوالها لإرساله لشركة الطيران: 966500000001. ترتيب إصدار التذكرة: TKOK. وهي من طلبت الحجز بنفسها. أنشئ الحجز، وأنهِ المعاملة، ثم سعّره.
+- ✎ EN: Mr Saad Alharbi wants one seat from Riyadh (RUH) to Dubai (DXB) on {TASK_DATE}, on flight 6X 403 in class Y. Your agency's phone: 966110000000. His mobile for the airline: 966500000001. Ticketing arrangement: TKOK. He requested the booking himself. Build the booking, end the transaction, then price it.
+- ✎ AR: السيد سعد الحربي يريد مقعدًا واحدًا من الرياض (RUH) إلى دبي (DXB) بتاريخ {TASK_DATE}، على الرحلة 6X 403 بالدرجة Y. هاتف وكالتك: 966110000000. جواله لإرساله لشركة الطيران: 966500000001. ترتيب إصدار التذكرة: TKOK. وهو من طلب الحجز بنفسه. أنشئ الحجز، وأنهِ المعاملة، ثم سعّره.
 
 **Scenario: the passenger refuses to give a mobile number** / سيناريو: الراكب يرفض إعطاء رقم جواله
 
@@ -20,11 +20,11 @@ Every Amadeus statement traces to a VERIFIED entry in `DEIXEN_Amadeus_Verified_R
 |---|---|---|
 | AN | `AN{TASK_DATE}RUHDXB` | `AN{SCN_DATE}JEDDXB` |
 | SS | `SS1Y2` | `SS1B3` |
-| NM | `NM1ALHARBI/SARA MS` | `NM1ALQAHTANI/FAHAD MR` |
+| NM | ✎ `NM1ALHARBI/SAAD MR` | `NM1ALQAHTANI/FAHAD MR` |
 | AP | `AP966110000000` | `AP966110000000` |
-| CTC | `SRCTCM-966500000001` | `SRCTCR-REFUSED` |
+| CTC | `SRCTCM-966500000001` (an ending such as `/US` is accepted, not checked — ✎ K7) | `SRCTCR-REFUSED` |
 | TK | `TKOK` | `TKOK` |
-| RF | `RFMS ALHARBI` | `RFMR ALQAHTANI` |
+| RF | ✎ `RFMR ALHARBI` | `RFMR ALQAHTANI` |
 | ER | `ER` | `ER` |
 | FXP | `FXP` | `FXP` |
 
@@ -158,7 +158,7 @@ Verified basis: V-13, V-18 · Example: `SRCTCM-966500000009` (DEIXEN example (fi
 
 Under IATA resolution 830d, agents must pass the passenger's contact details to the airline, for use during irregular operations (for example, flight disruptions).
 
-To pass a mobile number, write SRCTCM, a dash, then the number. Example with a fictional number: SRCTCM-966500000009. The dash after SRCTCM is mandatory.
+To pass a mobile number, write SRCTCM, a dash, then the number. Example with a fictional number: SRCTCM-966500000009. The dash after SRCTCM is mandatory. ✎ Official example: SRCTCM-3054996244/US (the ending /US is outside this slice).
 
 If the passenger refuses to share contact details, record the refusal: SRCTCR, a dash, then a short free text such as REFUSED. Official example: SRCTCR-REFUSED/P3 (the ending /P3 is outside this slice).
 
@@ -170,7 +170,7 @@ The AP element and this contact SSR are separate elements in the booking. If non
 
 بموجب قرار IATA رقم 830d يجب على الوكلاء تمرير بيانات اتصال الراكب إلى شركة الطيران، لاستخدامها عند اضطراب التشغيل (مثل تعطّل الرحلات).
 
-لتمرير رقم الجوال اكتب SRCTCM ثم شرطة ثم الرقم. مثال برقم وهمي: SRCTCM-966500000009. الشرطة بعد SRCTCM إلزامية.
+لتمرير رقم الجوال اكتب SRCTCM ثم شرطة ثم الرقم. مثال برقم وهمي: SRCTCM-966500000009. الشرطة بعد SRCTCM إلزامية. ✎ مثال رسمي: SRCTCM-3054996244/US (الجزء الأخير /US خارج نطاق هذا الجزء من التدريب).
 
 إذا رفض الراكب مشاركة بيانات الاتصال، سجّل الرفض: SRCTCR ثم شرطة ثم نص حر قصير مثل REFUSED. مثال رسمي: SRCTCR-REFUSED/P3 (الجزء الأخير /P3 خارج نطاق هذا الجزء من التدريب).
 
@@ -329,10 +329,10 @@ Note on the ER Ghost script: The ER script deliberately omits TK first, so the d
 | `nm.fb.name` | diagnostic · DATA_REFERENCE · NM/c · all | The name doesn't match the passenger in the task. Check the spelling. | <span dir="rtl">الاسم لا يطابق الراكب في المهمة. راجع التهجئة.</span> |
 | `ap.fb.format` | diagnostic · FORMAT · AP/a · all | The contact element has no text after AP. | <span dir="rtl">عنصر الاتصال لا يحتوي نصًا بعد AP.</span> |
 | `ap.fb.phone` | diagnostic · DATA_REFERENCE · AP/b · all | The contact element doesn't contain the phone number the task gives. | <span dir="rtl">عنصر الاتصال لا يحتوي رقم الهاتف الذي تعطيه المهمة.</span> |
-| `ctc.fb.format` | diagnostic · FORMAT · CTC/a · all | This contact SSR doesn't follow the pattern. One required character is missing or misplaced. | <span dir="rtl">عنصر SSR للاتصال لا يتبع النمط. هناك حرف مطلوب ناقص أو في غير مكانه.</span> |
+| `ctc.fb.format` | diagnostic · FORMAT · CTC/a · all | ✎ This contact SSR doesn't follow the pattern. Compare it, part by part, with the pattern in the lesson. | <span dir="rtl">عنصر SSR للاتصال لا يتبع النمط. قارنه، جزءًا جزءًا، مع النمط في الدرس.</span> |
 | `ctc.fb.number` | diagnostic · DATA_REFERENCE · CTC/b · practice | The number in the contact SSR isn't the passenger's mobile from the task. | <span dir="rtl">الرقم في عنصر SSR للاتصال ليس جوال الراكب المذكور في المهمة.</span> |
 | `scn.fb.ctcmInvented` | diagnostic · LOGICAL · CTC/a · scenario | This passenger did not give a mobile number. A contact SSR with a number would not match what the passenger told you. | <span dir="rtl">هذا الراكب لم يعطِ رقم جوال. عنصر اتصال فيه رقم لن يطابق ما قاله لك الراكب.</span> |
-| `scn.fb.warningShown` | diagnostic · MANDATORY_MISSING · CTC/a · scenario | The warning lists three ways to satisfy it. Which one matches this passenger's answer? | <span dir="rtl">التحذير يذكر ثلاث طرق لاستيفائه. أيّها يطابق إجابة هذا الراكب؟</span> |
+| `scn.fb.warningShown` | ✎ corrective · MANDATORY_MISSING · CTC/a · scenario | The warning lists three ways to satisfy it. Which one matches this passenger's answer? | <span dir="rtl">التحذير يذكر ثلاث طرق لاستيفائه. أيّها يطابق إجابة هذا الراكب؟</span> |
 | `scn.fb.bypassed` | diagnostic · MANDATORY_MISSING · ER/a · scenario | The booking was filed without recording the passenger's refusal. The bypass is recorded in the booking's history, and this step does not count as correct. | <span dir="rtl">حُفظ الحجز دون تسجيل رفض الراكب. التجاوز مسجَّل في سجل الحجز، ولا تُحتسب هذه الخطوة صحيحة.</span> |
 | `tk.fb.format` | diagnostic · FORMAT · TK/a · all | This isn't one of the two ticketing arrangement entries. | <span dir="rtl">هذا ليس أحد أمرَي ترتيب إصدار التذكرة.</span> |
 | `tk.fb.variant` | diagnostic · LOGICAL · TK/a · all | The ticketing arrangement is valid, but it isn't the one the task asks for. | <span dir="rtl">ترتيب إصدار التذكرة صحيح، لكنه ليس المطلوب في المهمة.</span> |
@@ -384,7 +384,7 @@ Note on the ER Ghost script: The ER script deliberately omits TK first, so the d
 | `tm.classNotOffered` |  | In this practice display that class shows 0. The real Amadeus response to selling such a class is not verified, so DEIXEN does not simulate it. | <span dir="rtl">في شاشة التدريب هذه تظهر تلك الدرجة بالرقم 0. رد Amadeus الحقيقي على بيع درجة كهذه غير موثَّق، لذلك لا يحاكيه DEIXEN.</span> |
 | `tm.fxpBeforeName` |  | In this slice, pricing is practiced on a booking that already has a name and a flight. | <span dir="rtl">في هذا الجزء يُتدرَّب على التسعير لحجز فيه اسم ورحلة بالفعل.</span> |
 | `tm.rfMissing` |  | The booking was not filed: the Received From element is missing. (The exact Amadeus wording of this message is not verified.) | <span dir="rtl">لم يُحفظ الحجز: عنصر Received From ناقص. (الصياغة الدقيقة لهذه الرسالة في Amadeus غير موثَّقة.)</span> |
-| `tm.otherMissing` |  | The booking was not filed: a required element is missing. (The exact Amadeus wording is not verified.) | <span dir="rtl">لم يُحفظ الحجز: عنصر مطلوب ناقص. (الصياغة الدقيقة في Amadeus غير موثَّقة.)</span> |
+| `tm.otherMissing` |  | ✎ DEIXEN did not file the booking: an element this task requires is missing. (How Amadeus responds here is not verified.) | <span dir="rtl">لم يحفظ DEIXEN الحجز: عنصر تتطلبه هذه المهمة ناقص. (رد Amadeus في هذه الحالة غير موثَّق.)</span> |
 | `tm.secondName` |  | This slice practices one adult passenger only. | <span dir="rtl">هذا الجزء يتدرب على راكب بالغ واحد فقط.</span> |
 | `tm.rfLine` |  | Received From recorded: {RF_TEXT}. (How Amadeus displays RF before the end of the transaction is not verified.) | <span dir="rtl">سُجّل Received From: {RF_TEXT}. (طريقة عرض Amadeus لعنصر RF قبل إنهاء المعاملة غير موثَّقة.)</span> |
 | `tm.ctcrLine` |  | Contact refusal recorded (SRCTCR): {CTCR_TEXT}. (How Amadeus displays it is not verified.) | <span dir="rtl">سُجّل رفض الاتصال (SRCTCR): {CTCR_TEXT}. (طريقة عرض Amadeus له غير موثَّقة.)</span> |
@@ -426,8 +426,8 @@ Note on the ER Ghost script: The ER script deliberately omits TK first, so the d
 
 - **EN:** What this simulator does and does not do
 - <span dir="rtl">**AR:** ما الذي يفعله هذا المحاكي وما لا يفعله</span>
-- **EN:** DEIXEN is a practice simulator, not Amadeus. All flights, seats, fares, taxes, names, phone numbers, office codes and record locators are invented for practice. The airline code 6X is used because official Amadeus examples use it; no real schedule or fare is shown.
-- <span dir="rtl">**AR:** DEIXEN محاكي للتدريب، وليس Amadeus. كل الرحلات والمقاعد والأسعار والضرائب والأسماء وأرقام الهواتف ورموز المكاتب ورموز الحجز مختلَقة للتدريب. يُستخدم رمز الطيران 6X لأن أمثلة Amadeus الرسمية تستخدمه؛ ولا يُعرض أي جدول أو سعر حقيقي.</span>
+- ✎ **EN:** DEIXEN is a practice simulator, not Amadeus. All flights, seats, fares, taxes, names, phone numbers, office codes and record locators are invented for practice. The airline code 6X is used only as a practice code; no real schedule or fare is shown.
+- ✎ <span dir="rtl">**AR:** DEIXEN محاكي للتدريب، وليس Amadeus. كل الرحلات والمقاعد والأسعار والضرائب والأسماء وأرقام الهواتف ورموز المكاتب ورموز الحجز مختلَقة للتدريب. ويُستخدم رمز الطيران 6X رمزًا للتدريب فقط؛ ولا يُعرض أي جدول أو سعر حقيقي.</span>
 - **EN:** Only these entries are simulated: AN, SS, NM, AP, SRCTCM, SRCTCR, TK, RF, ER, FXP, and FQD (optional). Any other entry gets the message 'not covered in this slice' — a DEIXEN limit, not an Amadeus one.
 - <span dir="rtl">**AR:** الأوامر المُحاكاة فقط هي: AN و SS و NM و AP و SRCTCM و SRCTCR و TK و RF و ER و FXP و FQD (اختياري). أي إدخال آخر تظهر له رسالة «غير مشمول في هذا الجزء» — وهذا حد في DEIXEN، لا في Amadeus.</span>
 - **EN:** This slice practices one adult passenger, one flight, and one applicable fare. Real Amadeus also handles children and infants, several passengers and flights, groups, and fare lists where you choose a fare with FXT.
@@ -436,10 +436,10 @@ Note on the ER Ghost script: The ER script deliberately omits TK first, so the d
 - <span dir="rtl">**AR:** مكتب التدريب في DEIXEN يشترط وجود ترتيب إصدار التذكرة (TK) قبل إنهاء المعاملة. وفي Amadeus الحقيقي يعتمد ذلك على إعدادات المكتب.</span>
 - **EN:** Lines marked 'Training message' are DEIXEN's own words. The real Amadeus wording of many error messages is not publicly documented, so DEIXEN does not imitate it.
 - <span dir="rtl">**AR:** الأسطر المعلَّمة بـ«رسالة تدريبية» هي كلمات DEIXEN نفسه. فالصياغة الحقيقية لكثير من رسائل الخطأ في Amadeus غير منشورة، لذلك لا يقلدها DEIXEN.</span>
-- **EN:** Screens follow the layout of official Amadeus examples. Column spacing may differ, and details that official examples do not show are marked 'Layout detail not fully verified'. DEIXEN does not show the RLR tag or airline messages under a sold flight.
-- <span dir="rtl">**AR:** تتبع الشاشات شكل أمثلة Amadeus الرسمية. قد تختلف المسافات بين الأعمدة، والتفاصيل التي لا تظهر في الأمثلة الرسمية مُعلَّمة بـ«تفصيل في الشكل غير موثَّق بالكامل». ولا يعرض DEIXEN علامة RLR ولا رسائل شركة الطيران تحت الرحلة المبيعة.</span>
-- **EN:** Practice flights exist only for the task routes. The meaning of some codes on the screens (for example the figures after class letters) is not taught, because DEIXEN could not verify it from official sources.
-- <span dir="rtl">**AR:** رحلات التدريب موجودة فقط لمسارات المهام. ولا يُشرح معنى بعض الرموز على الشاشات (مثل الأرقام بعد أحرف الدرجات) لأن DEIXEN لم يستطع توثيقها من مصادر رسمية.</span>
+- ✎ **EN:** Screens follow the layout of official Amadeus examples. Column spacing may differ. Some details appear in official examples only in part: the codes in the availability display (the number before the weekday, the figure after each class letter, the E0 code), the header time when you enter a time, the airline code in a stored mobile-contact line, and the booking display after AP, SRCTCM, SRCTCR, TK and RF entries. DEIXEN marks these 'Layout detail not fully verified' and does not teach them. Where no official example exists at all (a stored SRCTCR line; RF before the transaction ends), DEIXEN shows a training message instead. DEIXEN does not show the RLR tag or airline messages under a sold flight.
+- ✎ <span dir="rtl">**AR:** تتبع الشاشات شكل أمثلة Amadeus الرسمية. قد تختلف المسافات بين الأعمدة. بعض التفاصيل لا تظهر في الأمثلة الرسمية إلا جزئيًا: رموز شاشة التوافر (الرقم قبل اليوم في سطر العنوان، والرقم بعد كل حرف درجة، والرمز E0)، ووقت سطر العنوان عندما تُدخل وقتًا، ورمز شركة الطيران في سطر جوال الراكب المحفوظ، وعرض الحجز بعد الأوامر AP و SRCTCM و SRCTCR و TK و RF. يعلّم DEIXEN هذه التفاصيل بعبارة «تفصيل في الشكل غير موثَّق بالكامل» ولا يشرحها. وحيث لا يوجد مثال رسمي أصلًا (سطر SRCTCR المحفوظ، وعنصر RF قبل إنهاء المعاملة) يعرض DEIXEN رسالة تدريبية بدلًا منه. ولا يعرض DEIXEN علامة RLR ولا رسائل شركة الطيران تحت الرحلة المبيعة.</span>
+- ✎ **EN:** Practice flights exist only for the task routes. The meaning of some codes on the screens (for example the figures after class letters) is not taught, because DEIXEN could not verify it from official sources. Official examples of SRCTCM and SRCTCR end with an extra part (for example /US or /P3); what that part must contain is not covered in this slice, and DEIXEN accepts the entry with or without it.
+- ✎ <span dir="rtl">**AR:** رحلات التدريب موجودة فقط لمسارات المهام. ولا يُشرح معنى بعض الرموز على الشاشات (مثل الأرقام بعد أحرف الدرجات) لأن DEIXEN لم يستطع توثيقها من مصادر رسمية. وتنتهي أمثلة SRCTCM و SRCTCR الرسمية بجزء إضافي (مثل /US أو /P3)؛ وما يجب أن يحتويه هذا الجزء غير مشمول في هذا الجزء من التدريب، ويقبل DEIXEN الإدخال به أو بدونه.</span>
 - **EN:** The slice ends at the pricing display. It does not simulate what happens to the stored pricing record afterwards, or ticket issuance.
 - <span dir="rtl">**AR:** ينتهي هذا الجزء عند شاشة التسعير. لا يحاكي ما يحدث لسجل التسعير المحفوظ بعد ذلك، ولا إصدار التذكرة.</span>
 - **EN:** 'Correct in DEIXEN' means your entry met this simulator's checklist. It is not a certificate of workplace readiness.
@@ -447,7 +447,9 @@ Note on the ER Ghost script: The ER script deliberately omits TK first, so the d
 
 ## 9. Borderline items flagged by the self-review
 
-- `scn.fb.warningShown` — diagnostic, but close to the line: the real warning text itself names the three options. It asks the learner to choose; it does not give the entry. Tagged diagnostic.
+- ✎ `scn.fb.warningShown` — re-tagged **corrective** at the readiness check (2026-09-25): together with the real warning, which names the three options, it leaves only one answer, so a success right after it should not count as independent. This protects the meaning of TRANSFERRED on the scenario's load-bearing CTC skill.
+- ✎ `ctc.fb.format` — reworded: "one required character is missing" pointed straight at the dash. Now diagnostic without narrowing.
+- ✎ Scenario expected behaviour — "without triggering or bypassing the warning" became "without bypassing": meeting the real warning and then adding SRCTCR is a correct recovery (the constraint and acceptance text already said this).
 - `er.partial.*` — tagged diagnostic as the Build Spec §8 defines Partial Reveal; they name the missing element, not the entry.
 - `ss.fb.class` — names the checklist item, not the value. Diagnostic.
 - Error-category assignment per feedback item is the author's judgment (file 05 lists the 8 categories without definitions).

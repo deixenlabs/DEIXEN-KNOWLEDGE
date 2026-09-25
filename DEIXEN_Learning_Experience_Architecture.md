@@ -73,8 +73,9 @@ source basis: The nine canonical files, the Operating Constitution, the
 >    Issue #7, `XE` scope) are not carried into the new build. The
 >    Simulator Scope Disclosure principle stands; its list will be rebuilt
 >    from the new build's real scope. The Known Issue #7 mitigation question
->    becomes a requirement: element numbers shown during entry must match
->    the final PNR numbering.
+>    becomes a requirement (wording of 07 Decision 27, 2026-09-25): every
+>    element number shown is the element's number in the PNR as it stands
+>    at that moment, computed by the same function as the final display.
 > 5. **Skill-state rename.** The skill state formerly named VERIFIED is now
 >    **CONSOLIDATED** (same definition), so it cannot be confused with the
 >    source label VERIFIED. This closes the naming-collision open question;

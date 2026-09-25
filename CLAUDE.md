@@ -1,7 +1,7 @@
 # CLAUDE.md — DEIXEN app (first-build slice)
 
 > Status: APPROVED by Karim 2026-09-25 (07 Decision 26). First edition
-> (Execution Plan 3.5). This file is the master copy of the
+> (Execution Plan 3.5); Decision 27 applied 2026-09-25 (§3 rule 2, §8). This file is the master copy of the
 > Claude Code instructions; at build start it becomes the first file of the
 > code repository.
 
@@ -47,8 +47,10 @@ stop and report (§6).
    needs something the Reference does not have, stop and report.
 2. **Three kinds of Terminal output** (spec §5): Amadeus output (verified
    only), training message (visibly marked), Coach explanation (beside, never
-   instead). A screen marked `UNVERIFIED-LAYOUT` gets a clearly generic
-   layout — never a guessed Amadeus look.
+   instead). A detail the spec lists as partly verified (spec §5, Decision
+   27) is drawn in the verified pattern with the "Layout detail not fully
+   verified" marker and never taught; anything with no verified pattern is a
+   training message — never a guessed Amadeus look.
 3. **No Amadeus content authoring.** Lessons, feedback texts, Ghost Mode
    scripts, task and scenario data come as content files written by the
    project lead and approved by Karim. You wire them in; you do not write or
@@ -146,7 +148,11 @@ step.
 - [ ] Every Amadeus string in the UI traced to a Verified Reference entry
       (grep for strings; list any without a source).
 - [ ] Training messages are visibly different from Amadeus output.
-- [ ] Element numbers during entry equal the final PNR numbers.
+- [ ] Every element number shown is the element's number in the PNR at that
+      moment, produced by the one numbering function the final display uses
+      (spec §4); tests cover `SS` 1 → 2 after `NM` and `SSR CTCM` 4 → 5
+      after `TK`.
+- [ ] Every partly verified detail in spec §5 shows the marker.
 - [ ] Hint-adjacent and corrective-feedback-adjacent successes are not
       counted as independent.
 - [ ] Events persist across reload; schema mismatch triggers reset; reset

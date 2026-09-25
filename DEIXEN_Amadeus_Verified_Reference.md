@@ -1,6 +1,6 @@
 ---
 name: DEIXEN Amadeus Verified Reference
-status: CURRENT — third edition, 2026-09-25 (Execution Plan Phase 3.1–3.2; screen layouts added for Build Spec gap G1). Scope so far: the first-build slice (07 Decisions 22, 24) and its prerequisites.
+status: CURRENT — third edition, 2026-09-25 (Execution Plan Phase 3.1–3.2; screen layouts added for Build Spec gap G1); amended 2026-09-25 at the readiness check (3.6): U-12–U-14, handling note updated to 07 Decision 27. Scope so far: the first-build slice (07 Decisions 22, 24) and its prerequisites.
 owns: The single authority for real Amadeus behavior (07 Decision 15). Only entries marked VERIFIED here may be taught or simulated (07 Decision 13).
 does not own: product, curriculum, or learning decisions; what any DEIXEN code does (implementation truth)
 ---
@@ -300,7 +300,7 @@ entry says so; such meanings are never taught.
 - DEIXEN rendering (fictional data):
   ```
   FXP
-  01 ALHARBI/SARA MS
+  01 ALHARBI/SAAD MR
   LAST TKT DTE 25OCT26 - DATE OF ORIGIN
   ------------------------------------------------------------
        AL FLGT  BK T DATE  TIME  FARE BASIS      NVB  NVA   BG
@@ -371,9 +371,16 @@ entry says so; such meanings are never taught.
 | U-09 | Meaning of the header number before the weekday, of the figure after each class letter, and of `E0` in `AN` | One non-official source only (V-14) |
 | U-10 | The `AN` header time when the entry includes a departure time | Both official examples had no time and show `0000` |
 | U-11 | That `AP`, `SRCTCM`/`SRCTCR`, `TK` and `RF` entries are answered with a PNR redisplay | Official redisplay examples exist for `SS` and `NM` only (V-15, V-18) |
+| U-12 | What must follow the number or text in a contact SSR: whether an ending is required, and what it contains | Conflicting / non-official sources. Every official example has an ending: `SRCTCM-3054996244/US`, `SRCTCMAFHK1-0034563214/P1`, `SRCTCR-REFUSED/P3`, `SRCTCRSNHK1-REFUSED/P4` (Service Hub page of V-13). Two re-hosted training references describe the ending as a slash and the country of the phone number (`SRCTCM-4164915050/CA`; `SRCTCM-9837486432/XX`) — provenance not established. An airline notice gives the bare format `SRCTCM-Phone number`. Sources: https://www.scribd.com/document/873058229/Amadeus-Quick-Reference-PNR-Formats-Part-Two ; https://www.scribd.com/document/791436192/Amadeus-Quick-Reference ; Turkish Airlines notice, https://airc.ir/Circular/2020/TK/Passenger-Information.pdf (all accessed 2026-09-25). Handled by Build Spec §12 K7 |
+| U-13 | Which name titles are accepted besides `MR` (e.g. `MS`, `MRS`) | Official examples found show `MR` or no title (V-07, V-10, V-18); one non-official source lists `MR`/`MS` only. The slice uses `MR` |
+| U-14 | That the PRINT "Phone" element (V-08) is the `AP` element | No source states it directly. An official course outline lists "How to add the AP, RF and TK elements" under PNR mandatory elements (https://www.learn.amadeus.com/OnlineCourse-1513851695-module-24.en.htm) — suggestive, not a statement. The slice requires `AP` as a DEIXEN task rule; its message does not claim Amadeus behavior |
 
-Handling of U-06–U-11 in the slice: 07 Decision 23, as refined by the
-Build Spec §12 proposal K6 (awaiting Karim).
+Handling of U-06–U-11 in the slice: 07 Decision 27 (K6) — partly shown
+details (U-07 first part, U-09, U-10, U-11) are drawn in the verified
+pattern with a "Layout detail not fully verified" marker, never taught, and
+disclosed; details with no official pattern (U-07 second part, U-08) are
+training messages under 07 Decision 23. Details: Build Spec §5. U-12–U-14:
+Build Spec §6 and §12.
 
 ## 4. Research backlog — outside the slice (not yet researched under D12)
 
@@ -388,3 +395,4 @@ UNVERIFIED until researched.
 | 2026-09-25 | First edition: V-01 to V-12, U-01 to U-04 |
 | 2026-09-25 | Second edition: V-11 upgraded to VERIFIED; V-10 adds RF entry syntax; new V-13 (IATA contact SSRs); U-01 no longer blocking; U-03 closed; new U-05 |
 | 2026-09-25 | Third edition (Build Spec G1): new §2A with screen layouts V-14 (`AN`), V-15 (`SS`), V-16 (`FQD`), V-17 (`FXP`), V-18 (PNR header, order, numbering); U-04 narrowed; new U-06–U-11 |
+| 2026-09-25 | Amendment (readiness check 3.6): new U-12 (contact-SSR endings), U-13 (name titles), U-14 (`AP` as PRINT Phone); §3 handling note now cites 07 Decision 27; V-17 rendering uses the task passenger `ALHARBI/SAAD MR` (fictional data only). No V- entry changed |
