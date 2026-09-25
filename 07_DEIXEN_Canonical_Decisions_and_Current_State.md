@@ -57,9 +57,9 @@ were ended by Karim's decision on 2026-09-24 and are historical.
 step (Decision 24) on 2026-09-25, and approved creating the three Phase 3
 files (Slice Build Spec, Design Brief, Claude Code environment pack). Step
 3.4 (Design Brief) and step 3.3 (`DEIXEN_Slice_Build_Spec.md`, draft) are
-written; Karim approved its four proposals (Decision 25). Step 3.5
-(`CLAUDE.md`) written. Awaiting Karim: approval of the Build Spec as a whole.
-Next: Claude closes gaps G1–G3 (example screens, slice content, scope
+written; Karim approved its four proposals (Decision 25) and then the
+Build Spec and `CLAUDE.md` as a whole (Decision 26). Next: Claude closes
+the Build Spec gaps G1–G3 (example screens, slice content, scope
 disclosure), then the readiness check (3.6).
 
 **Implementation state:** no codebase exists in the project's hands. The first
@@ -357,6 +357,9 @@ an ordinary technical implementation choice, not decided here.
   assessment or scenario attempt interrupted by closing the browser is
   recorded as abandoned (neither passed nor failed) and the learner is told
   on return. K4: the Growth/Readiness status rule in the Build Spec §10.
+- **Decision 26 — Slice Build Spec and `CLAUDE.md`. Closed — Approved.**
+  `DEIXEN_Slice_Build_Spec.md` is the build specification for the slice;
+  `CLAUDE.md` is the Claude Code instruction file.
 - **Phase 3 files — creation approved (Execution Plan §5).** Karim approved
   creating the Slice Build Spec, the Design Brief, and the Claude Code
   environment files (`CLAUDE.md` and repository scaffolding).

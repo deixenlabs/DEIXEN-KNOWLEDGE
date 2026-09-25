@@ -1,7 +1,7 @@
 # CLAUDE.md — DEIXEN app (first-build slice)
 
-> Status: first edition, 2026-09-25 (Execution Plan 3.5). Creation approved by
-> Karim (07, Decisions of 2026-09-25). This file is the master copy of the
+> Status: APPROVED by Karim 2026-09-25 (07 Decision 26). First edition
+> (Execution Plan 3.5). This file is the master copy of the
 > Claude Code instructions; at build start it becomes the first file of the
 > code repository.
 
