@@ -1,0 +1,999 @@
+{
+ "schemaVersion": 1,
+ "status": "DRAFT for Karim's review (Build Spec G2/G3). Self-review only (07 D17).",
+ "rules": [
+  "Every Amadeus statement in the text files traces to a VERIFIED entry of DEIXEN_Amadeus_Verified_Reference.md (listed per lesson in 'verifiedBasis').",
+  "All flights, fares, taxes, phone numbers, names, office IDs and record locators are fictional practice data. Airline code 6X is used because official Amadeus examples use it; no real schedule or fare is implied.",
+  "Tokens in braces are filled at runtime: {TASK_DATE}/{SCN_DATE}/{DEMO_DATE} = today + dateOffsetDays as DDMMM (English month, uppercase); {EXPECTED_ENTRY} = the task's expected entry for that step; {N} = a count."
+ ],
+ "office": {
+  "officeId": "XXXXXXXXX",
+  "agentSign": "XX/XX",
+  "recordLocator": "generated per completed ER: 6 characters A-Z/0-9",
+  "tkMandatory": true
+ },
+ "airline": "6X",
+ "routes": {
+  "RUHDXB": {
+   "destName": "DUBAI.AE",
+   "flights": [
+    {
+     "line": 1,
+     "flight": "6X 401",
+     "classes": "J9 C9 Y9 B9 M9",
+     "dep": "0730",
+     "arr": "1030",
+     "equip": "320",
+     "elapsed": "2:00",
+     "dayShiftArr": 0
+    },
+    {
+     "line": 2,
+     "flight": "6X 403",
+     "classes": "J4 C2 Y9 B9 M0",
+     "dep": "1245",
+     "arr": "1545",
+     "equip": "320",
+     "elapsed": "2:00",
+     "dayShiftArr": 0
+    },
+    {
+     "line": 3,
+     "flight": "6X 405",
+     "classes": "J9 C9 Y4 B0 M0",
+     "dep": "1900",
+     "arr": "2200",
+     "equip": "321",
+     "elapsed": "2:00",
+     "dayShiftArr": 0
+    }
+   ]
+  },
+  "JEDDXB": {
+   "destName": "DUBAI.AE",
+   "flights": [
+    {
+     "line": 1,
+     "flight": "6X 511",
+     "classes": "J9 C9 Y9 B0 M0",
+     "dep": "0600",
+     "arr": "0945",
+     "equip": "320",
+     "elapsed": "2:45",
+     "dayShiftArr": 0
+    },
+    {
+     "line": 2,
+     "flight": "6X 513",
+     "classes": "J2 C0 Y9 B0 M9",
+     "dep": "1100",
+     "arr": "1445",
+     "equip": "320",
+     "elapsed": "2:45",
+     "dayShiftArr": 0
+    },
+    {
+     "line": 3,
+     "flight": "6X 515",
+     "classes": "J9 C9 Y9 B9 M9",
+     "dep": "1830",
+     "arr": "2215",
+     "equip": "321",
+     "elapsed": "2:45",
+     "dayShiftArr": 0
+    }
+   ]
+  },
+  "RUHJED": {
+   "destName": "JEDDAH.SA",
+   "flights": [
+    {
+     "line": 1,
+     "flight": "6X 101",
+     "classes": "J9 C9 Y9 B9 M9",
+     "dep": "0700",
+     "arr": "0840",
+     "equip": "320",
+     "elapsed": "1:40",
+     "dayShiftArr": 0
+    },
+    {
+     "line": 2,
+     "flight": "6X 103",
+     "classes": "J9 C4 Y9 B9 M9",
+     "dep": "1500",
+     "arr": "1640",
+     "equip": "320",
+     "elapsed": "1:40",
+     "dayShiftArr": 0
+    }
+   ]
+  }
+ },
+ "fares": {
+  "RUHDXB-Y": {
+   "currency": "SAR",
+   "fareBasis": "Y1OW",
+   "base": "900.00",
+   "nuc": "240.00",
+   "roe": "3.750000",
+   "taxes": [
+    [
+     "150.00",
+     "YR"
+    ]
+   ],
+   "total": "1050.00",
+   "baggage": "1P"
+  },
+  "JEDDXB-B": {
+   "currency": "SAR",
+   "fareBasis": "B1OW",
+   "base": "750.00",
+   "nuc": "200.00",
+   "roe": "3.750000",
+   "taxes": [
+    [
+     "150.00",
+     "YR"
+    ]
+   ],
+   "total": "900.00",
+   "baggage": "1P"
+  },
+  "RUHJED-M": {
+   "currency": "SAR",
+   "fareBasis": "M1OW",
+   "base": "450.00",
+   "nuc": "120.00",
+   "roe": "3.750000",
+   "taxes": [
+    [
+     "80.00",
+     "YR"
+    ]
+   ],
+   "total": "530.00",
+   "baggage": "1P"
+  }
+ },
+ "fqd": {
+  "note": "Layout V-16. One-way fares only; other columns shown as '-'. Page counter always 1/1.",
+  "RUHDXB": [
+   [
+    "01",
+    "M1OW",
+    "500.00",
+    "M"
+   ],
+   [
+    "02",
+    "B1OW",
+    "700.00",
+    "B"
+   ],
+   [
+    "03",
+    "Y1OW",
+    "900.00",
+    "Y"
+   ]
+  ],
+  "JEDDXB": [
+   [
+    "01",
+    "M1OW",
+    "450.00",
+    "M"
+   ],
+   [
+    "02",
+    "B1OW",
+    "750.00",
+    "B"
+   ],
+   [
+    "03",
+    "Y1OW",
+    "950.00",
+    "Y"
+   ]
+  ],
+  "RUHJED": [
+   [
+    "01",
+    "M1OW",
+    "450.00",
+    "M"
+   ],
+   [
+    "02",
+    "Y1OW",
+    "650.00",
+    "Y"
+   ]
+  ]
+ },
+ "tasks": {
+  "main": {
+   "id": "task-main",
+   "dateOffsetDays": 30,
+   "dateToken": "{TASK_DATE}",
+   "origin": "RUH",
+   "destination": "DXB",
+   "flight": "6X 403",
+   "bookingClass": "Y",
+   "availabilityLine": 2,
+   "passengers": 1,
+   "fare": "RUHDXB-Y",
+   "passenger": {
+    "surname": "ALHARBI",
+    "firstName": "SARA",
+    "title": "MS"
+   },
+   "agencyPhone": "966110000000",
+   "passengerMobile": "966500000001",
+   "ticketing": "TKOK",
+   "requestedBy": "MS ALHARBI",
+   "expectedEntries": {
+    "AN": "AN{TASK_DATE}RUHDXB",
+    "SS": "SS1Y2",
+    "NM": "NM1ALHARBI/SARA MS",
+    "AP": "AP966110000000",
+    "CTC": "SRCTCM-966500000001",
+    "TK": "TKOK",
+    "RF": "RFMS ALHARBI",
+    "ER": "ER",
+    "FXP": "FXP",
+    "FQD": "FQDRUHDXB"
+   },
+   "acceptance": {
+    "AN": "time suffix allowed; airline code after AN allowed",
+    "RF": "any non-empty free text",
+    "AP": "free text must contain 966110000000"
+   }
+  },
+  "scenario": {
+   "id": "scn-refuses-mobile",
+   "dateOffsetDays": 45,
+   "dateToken": "{SCN_DATE}",
+   "origin": "JED",
+   "destination": "DXB",
+   "flight": "6X 515",
+   "bookingClass": "B",
+   "availabilityLine": 3,
+   "passengers": 1,
+   "fare": "JEDDXB-B",
+   "passenger": {
+    "surname": "ALQAHTANI",
+    "firstName": "FAHAD",
+    "title": "MR"
+   },
+   "agencyPhone": "966110000000",
+   "passengerMobile": null,
+   "ticketing": "TKOK",
+   "requestedBy": "MR ALQAHTANI",
+   "expectedEntries": {
+    "AN": "AN{SCN_DATE}JEDDXB",
+    "SS": "SS1B3",
+    "NM": "NM1ALQAHTANI/FAHAD MR",
+    "AP": "AP966110000000",
+    "CTC": "SRCTCR-REFUSED",
+    "TK": "TKOK",
+    "RF": "RFMR ALQAHTANI",
+    "ER": "ER",
+    "FXP": "FXP"
+   },
+   "acceptance": {
+    "CTC": "SRCTCR- followed by any non-empty free text (Build Spec §6 row 5)"
+   }
+  },
+  "demo": {
+   "id": "demo-ghost",
+   "dateOffsetDays": 20,
+   "dateToken": "{DEMO_DATE}",
+   "origin": "RUH",
+   "destination": "JED",
+   "flight": "6X 101",
+   "bookingClass": "M",
+   "availabilityLine": 1,
+   "passengers": 1,
+   "fare": "RUHJED-M",
+   "passenger": {
+    "surname": "SALEM",
+    "firstName": "OMAR",
+    "title": "MR"
+   },
+   "agencyPhone": "966120000000",
+   "passengerMobile": "966500000009",
+   "ticketing": "TKOK",
+   "requestedBy": "MR SALEM",
+   "note": "Used only by Ghost Mode, in its own sandbox; never the learner's task (a Ghost reveal must not hand over the task answer)."
+  }
+ },
+ "scenario": {
+  "id": "scn-refuses-mobile",
+  "taskId": "scenario",
+  "differentiatingCondition": "The passenger refuses to give a mobile number or e-mail. The learner must record the refusal with SRCTCR instead of transferring a mobile with SRCTCM (V-13).",
+  "loadBearingSkills": [
+   "CTC",
+   "ER"
+  ],
+  "objectiveKey": "scn.objective",
+  "constraintsKey": "scn.constraints",
+  "briefKey": "scn.brief",
+  "expectedBehavior": [
+   "Availability for JED-DXB on {SCN_DATE}; one seat in class B on flight 6X 515 (line 3).",
+   "Name, contact element (agency phone), SRCTCR with free text recording the refusal, TKOK, RF, then ER without triggering or bypassing the V-13 warning; then FXP.",
+   "No SRCTCM or SRCTCE element with a made-up value."
+  ],
+  "acceptance": "Scenario completed = the full scenario path with every checklist item met; the CTC step satisfied by SRCTCR (not by bypassing the warning with a second ER).",
+  "scenarioFeedbackIds": [
+   "scn.fb.ctcmInvented",
+   "scn.fb.warningShown",
+   "scn.fb.bypassed",
+   "scn.reveal.ctc"
+  ],
+  "assessmentLinkage": "Not the formal assessment (Build Spec §9). Completing the scenario is one of the three conditions of 'Completed' (Build Spec §10, K4).",
+  "evidenceLinkage": "Events carry context='scenario' and scenarioId='scn-refuses-mobile' (Build Spec §11). TRANSFERRED is possible only for CTC and ER (load-bearing), and only on independent full-checklist success (Build Spec §7).",
+  "stateIntegrity": "Starts a fresh practice PNR; does not change the main task, other skills' data, or any global setting."
+ },
+ "module": {
+  "id": "M1-slice",
+  "lessons": [
+   "L01-AN",
+   "L02-SS",
+   "L03-NM",
+   "L04-AP",
+   "L05-CTC",
+   "L06-TK",
+   "L07-RF",
+   "L08-ER",
+   "L09-FXP",
+   "L10-FQD"
+  ]
+ },
+ "lessons": [
+  {
+   "id": "L01-AN",
+   "skillId": "AN",
+   "moduleId": "M1-slice",
+   "example": "AN14FEBSTOFRA1700",
+   "exampleSource": "official (V-01)",
+   "prerequisiteLessonIds": [],
+   "verifiedBasis": [
+    "V-01",
+    "V-02",
+    "V-03",
+    "V-14"
+   ]
+  },
+  {
+   "id": "L02-SS",
+   "skillId": "SS",
+   "moduleId": "M1-slice",
+   "example": "SS1M3",
+   "exampleSource": "DEIXEN example built from the V-03 pattern",
+   "prerequisiteLessonIds": [
+    "L01-AN"
+   ],
+   "verifiedBasis": [
+    "V-03",
+    "V-15"
+   ]
+  },
+  {
+   "id": "L03-NM",
+   "skillId": "NM",
+   "moduleId": "M1-slice",
+   "example": "NM1JONES/TOM MR",
+   "exampleSource": "DEIXEN example built from the V-07 pattern (official NM2JONES/TOM MR/…)",
+   "prerequisiteLessonIds": [
+    "L02-SS"
+   ],
+   "verifiedBasis": [
+    "V-07",
+    "V-08",
+    "V-18"
+   ]
+  },
+  {
+   "id": "L04-AP",
+   "skillId": "AP",
+   "moduleId": "M1-slice",
+   "example": "AP966120000000",
+   "exampleSource": "DEIXEN example (fictional number) built from V-11",
+   "prerequisiteLessonIds": [
+    "L03-NM"
+   ],
+   "verifiedBasis": [
+    "V-08",
+    "V-11",
+    "V-18"
+   ]
+  },
+  {
+   "id": "L05-CTC",
+   "skillId": "CTC",
+   "moduleId": "M1-slice",
+   "example": "SRCTCM-966500000009",
+   "exampleSource": "DEIXEN example (fictional number) built from V-13",
+   "prerequisiteLessonIds": [
+    "L04-AP"
+   ],
+   "verifiedBasis": [
+    "V-13",
+    "V-18"
+   ]
+  },
+  {
+   "id": "L06-TK",
+   "skillId": "TK",
+   "moduleId": "M1-slice",
+   "example": "TKOK",
+   "exampleSource": "official (V-09)",
+   "prerequisiteLessonIds": [
+    "L05-CTC"
+   ],
+   "verifiedBasis": [
+    "V-08",
+    "V-09",
+    "V-18"
+   ]
+  },
+  {
+   "id": "L07-RF",
+   "skillId": "RF",
+   "moduleId": "M1-slice",
+   "example": "RFMR SMITH",
+   "exampleSource": "official (V-10)",
+   "prerequisiteLessonIds": [
+    "L06-TK"
+   ],
+   "verifiedBasis": [
+    "V-08",
+    "V-10"
+   ]
+  },
+  {
+   "id": "L08-ER",
+   "skillId": "ER",
+   "moduleId": "M1-slice",
+   "example": "ER",
+   "exampleSource": "official (V-10)",
+   "prerequisiteLessonIds": [
+    "L07-RF"
+   ],
+   "verifiedBasis": [
+    "V-08",
+    "V-09",
+    "V-10",
+    "V-13",
+    "V-18"
+   ]
+  },
+  {
+   "id": "L09-FXP",
+   "skillId": "FXP",
+   "moduleId": "M1-slice",
+   "example": "FXP",
+   "exampleSource": "official (V-05)",
+   "prerequisiteLessonIds": [
+    "L08-ER"
+   ],
+   "verifiedBasis": [
+    "V-05",
+    "V-06",
+    "V-17"
+   ]
+  },
+  {
+   "id": "L10-FQD",
+   "skillId": "FQD",
+   "moduleId": "M1-slice",
+   "optional": true,
+   "example": "FQDAMSNYC",
+   "exampleSource": "official (V-04)",
+   "prerequisiteLessonIds": [
+    "L01-AN"
+   ],
+   "verifiedBasis": [
+    "V-04",
+    "V-16"
+   ]
+  }
+ ],
+ "lessonCommon": {
+  "practiceBridge": "Terminal, task 'task-main', step = the lesson's skill (L10-FQD: optional step)",
+  "completionRule": "The learner reaches the end of the lesson body and presses the practice button. Records lesson_completed only; never skill evidence (Build Spec §3)."
+ },
+ "ghostScripts": {
+  "note": "Schema of file 06 (type/pause/reveal). Runs in its own sandbox on the demo booking. Setup steps are typed fast (charDelayMs 15); the lesson's own entry at 60. 'reveal' shows the live simulator's output for the entry just typed.",
+  "L01-AN": [
+   "AN{DEMO_DATE}RUHJED"
+  ],
+  "L02-SS": [
+   "AN{DEMO_DATE}RUHJED",
+   "SS1M1"
+  ],
+  "L03-NM": [
+   "AN{DEMO_DATE}RUHJED",
+   "SS1M1",
+   "NM1SALEM/OMAR MR"
+  ],
+  "L04-AP": [
+   "AN{DEMO_DATE}RUHJED",
+   "SS1M1",
+   "NM1SALEM/OMAR MR",
+   "AP966120000000"
+  ],
+  "L05-CTC": [
+   "AN{DEMO_DATE}RUHJED",
+   "SS1M1",
+   "NM1SALEM/OMAR MR",
+   "AP966120000000",
+   "SRCTCM-966500000009"
+  ],
+  "L06-TK": [
+   "AN{DEMO_DATE}RUHJED",
+   "SS1M1",
+   "NM1SALEM/OMAR MR",
+   "AP966120000000",
+   "SRCTCM-966500000009",
+   "TKOK"
+  ],
+  "L07-RF": [
+   "AN{DEMO_DATE}RUHJED",
+   "SS1M1",
+   "NM1SALEM/OMAR MR",
+   "AP966120000000",
+   "SRCTCM-966500000009",
+   "TKOK",
+   "RFMR SALEM"
+  ],
+  "L08-ER": [
+   "AN{DEMO_DATE}RUHJED",
+   "SS1M1",
+   "NM1SALEM/OMAR MR",
+   "AP966120000000",
+   "SRCTCM-966500000009",
+   "RFMR SALEM",
+   "ER",
+   "TKOK",
+   "ER"
+  ],
+  "L09-FXP": [
+   "AN{DEMO_DATE}RUHJED",
+   "SS1M1",
+   "NM1SALEM/OMAR MR",
+   "AP966120000000",
+   "SRCTCM-966500000009",
+   "TKOK",
+   "RFMR SALEM",
+   "ER",
+   "FXP"
+  ],
+  "L10-FQD": [
+   "FQDRUHJED"
+  ],
+  "L08-ER-note": "The ER script deliberately omits TK first, so the demo shows the verified NEED TICKETING ARRANGEMENT message and the recovery (Error-Recovery Practice model, Build Spec §7)."
+ },
+ "feedback": [
+  {
+   "id": "an.fb.format",
+   "skillId": "AN",
+   "checklistItem": "a",
+   "errorCategory": "FORMAT",
+   "kind": "diagnostic",
+   "context": "all"
+  },
+  {
+   "id": "an.fb.dateRange",
+   "skillId": "AN",
+   "checklistItem": "b",
+   "errorCategory": "DATA_REFERENCE",
+   "kind": "diagnostic",
+   "context": "all"
+  },
+  {
+   "id": "an.fb.taskMismatch",
+   "skillId": "AN",
+   "checklistItem": "c",
+   "errorCategory": "LOGICAL",
+   "kind": "diagnostic",
+   "context": "all"
+  },
+  {
+   "id": "ss.fb.noDisplay",
+   "skillId": "SS",
+   "checklistItem": "b",
+   "errorCategory": "SEQUENCE",
+   "kind": "diagnostic",
+   "context": "all"
+  },
+  {
+   "id": "ss.fb.format",
+   "skillId": "SS",
+   "checklistItem": "a",
+   "errorCategory": "FORMAT",
+   "kind": "diagnostic",
+   "context": "all"
+  },
+  {
+   "id": "ss.fb.lineMissing",
+   "skillId": "SS",
+   "checklistItem": "b",
+   "errorCategory": "DATA_REFERENCE",
+   "kind": "diagnostic",
+   "context": "all"
+  },
+  {
+   "id": "ss.fb.seats",
+   "skillId": "SS",
+   "checklistItem": "c",
+   "errorCategory": "LOGICAL",
+   "kind": "diagnostic",
+   "context": "all"
+  },
+  {
+   "id": "ss.fb.class",
+   "skillId": "SS",
+   "checklistItem": "d",
+   "errorCategory": "LOGICAL",
+   "kind": "diagnostic",
+   "context": "all"
+  },
+  {
+   "id": "nm.fb.format",
+   "skillId": "NM",
+   "checklistItem": "a",
+   "errorCategory": "FORMAT",
+   "kind": "diagnostic",
+   "context": "all"
+  },
+  {
+   "id": "nm.fb.count",
+   "skillId": "NM",
+   "checklistItem": "b",
+   "errorCategory": "LOGICAL",
+   "kind": "diagnostic",
+   "context": "all"
+  },
+  {
+   "id": "nm.fb.name",
+   "skillId": "NM",
+   "checklistItem": "c",
+   "errorCategory": "DATA_REFERENCE",
+   "kind": "diagnostic",
+   "context": "all"
+  },
+  {
+   "id": "ap.fb.format",
+   "skillId": "AP",
+   "checklistItem": "a",
+   "errorCategory": "FORMAT",
+   "kind": "diagnostic",
+   "context": "all"
+  },
+  {
+   "id": "ap.fb.phone",
+   "skillId": "AP",
+   "checklistItem": "b",
+   "errorCategory": "DATA_REFERENCE",
+   "kind": "diagnostic",
+   "context": "all"
+  },
+  {
+   "id": "ctc.fb.format",
+   "skillId": "CTC",
+   "checklistItem": "a",
+   "errorCategory": "FORMAT",
+   "kind": "diagnostic",
+   "context": "all"
+  },
+  {
+   "id": "ctc.fb.number",
+   "skillId": "CTC",
+   "checklistItem": "b",
+   "errorCategory": "DATA_REFERENCE",
+   "kind": "diagnostic",
+   "context": "practice"
+  },
+  {
+   "id": "scn.fb.ctcmInvented",
+   "skillId": "CTC",
+   "checklistItem": "a",
+   "errorCategory": "LOGICAL",
+   "kind": "diagnostic",
+   "context": "scenario"
+  },
+  {
+   "id": "scn.fb.warningShown",
+   "skillId": "CTC",
+   "checklistItem": "a",
+   "errorCategory": "MANDATORY_MISSING",
+   "kind": "diagnostic",
+   "context": "scenario"
+  },
+  {
+   "id": "scn.fb.bypassed",
+   "skillId": "ER",
+   "checklistItem": "a",
+   "errorCategory": "MANDATORY_MISSING",
+   "kind": "diagnostic",
+   "context": "scenario"
+  },
+  {
+   "id": "tk.fb.format",
+   "skillId": "TK",
+   "checklistItem": "a",
+   "errorCategory": "FORMAT",
+   "kind": "diagnostic",
+   "context": "all"
+  },
+  {
+   "id": "tk.fb.variant",
+   "skillId": "TK",
+   "checklistItem": "a",
+   "errorCategory": "LOGICAL",
+   "kind": "diagnostic",
+   "context": "all"
+  },
+  {
+   "id": "rf.fb.format",
+   "skillId": "RF",
+   "checklistItem": "a",
+   "errorCategory": "FORMAT",
+   "kind": "diagnostic",
+   "context": "all"
+  },
+  {
+   "id": "er.fb.missing",
+   "skillId": "ER",
+   "checklistItem": "a",
+   "errorCategory": "MANDATORY_MISSING",
+   "kind": "diagnostic",
+   "context": "all"
+  },
+  {
+   "id": "er.fb.bypassed",
+   "skillId": "ER",
+   "checklistItem": "a",
+   "errorCategory": "MANDATORY_MISSING",
+   "kind": "diagnostic",
+   "context": "practice"
+  },
+  {
+   "id": "fxp.fb.format",
+   "skillId": "FXP",
+   "checklistItem": "a",
+   "errorCategory": "FORMAT",
+   "kind": "diagnostic",
+   "context": "all"
+  },
+  {
+   "id": "fxp.fb.noPnr",
+   "skillId": "FXP",
+   "checklistItem": "a",
+   "errorCategory": "SEQUENCE",
+   "kind": "diagnostic",
+   "context": "all"
+  },
+  {
+   "id": "fqd.fb.format",
+   "skillId": "FQD",
+   "checklistItem": "a",
+   "errorCategory": "FORMAT",
+   "kind": "diagnostic",
+   "context": "all"
+  },
+  {
+   "id": "fqd.fb.route",
+   "skillId": "FQD",
+   "checklistItem": "a",
+   "errorCategory": "LOGICAL",
+   "kind": "diagnostic",
+   "context": "all"
+  },
+  {
+   "id": "er.partial.name",
+   "skillId": "ER",
+   "checklistItem": "a",
+   "errorCategory": "MANDATORY_MISSING",
+   "kind": "diagnostic",
+   "context": "all"
+  },
+  {
+   "id": "er.partial.itinerary",
+   "skillId": "ER",
+   "checklistItem": "a",
+   "errorCategory": "MANDATORY_MISSING",
+   "kind": "diagnostic",
+   "context": "all"
+  },
+  {
+   "id": "er.partial.phone",
+   "skillId": "ER",
+   "checklistItem": "a",
+   "errorCategory": "MANDATORY_MISSING",
+   "kind": "diagnostic",
+   "context": "all"
+  },
+  {
+   "id": "er.partial.ticketing",
+   "skillId": "ER",
+   "checklistItem": "a",
+   "errorCategory": "MANDATORY_MISSING",
+   "kind": "diagnostic",
+   "context": "all"
+  },
+  {
+   "id": "er.partial.received",
+   "skillId": "ER",
+   "checklistItem": "a",
+   "errorCategory": "MANDATORY_MISSING",
+   "kind": "diagnostic",
+   "context": "all"
+  },
+  {
+   "id": "er.partial.contactSsr",
+   "skillId": "ER",
+   "checklistItem": "a",
+   "errorCategory": "MANDATORY_MISSING",
+   "kind": "diagnostic",
+   "context": "all"
+  },
+  {
+   "id": "reveal.AN",
+   "skillId": "AN",
+   "checklistItem": "*",
+   "errorCategory": null,
+   "kind": "corrective",
+   "context": "all"
+  },
+  {
+   "id": "reveal.SS",
+   "skillId": "SS",
+   "checklistItem": "*",
+   "errorCategory": null,
+   "kind": "corrective",
+   "context": "all"
+  },
+  {
+   "id": "reveal.NM",
+   "skillId": "NM",
+   "checklistItem": "*",
+   "errorCategory": null,
+   "kind": "corrective",
+   "context": "all"
+  },
+  {
+   "id": "reveal.AP",
+   "skillId": "AP",
+   "checklistItem": "*",
+   "errorCategory": null,
+   "kind": "corrective",
+   "context": "all"
+  },
+  {
+   "id": "reveal.CTC",
+   "skillId": "CTC",
+   "checklistItem": "*",
+   "errorCategory": null,
+   "kind": "corrective",
+   "context": "practice"
+  },
+  {
+   "id": "scn.reveal.ctc",
+   "skillId": "CTC",
+   "checklistItem": "*",
+   "errorCategory": null,
+   "kind": "corrective",
+   "context": "scenario"
+  },
+  {
+   "id": "reveal.TK",
+   "skillId": "TK",
+   "checklistItem": "*",
+   "errorCategory": null,
+   "kind": "corrective",
+   "context": "all"
+  },
+  {
+   "id": "reveal.RF",
+   "skillId": "RF",
+   "checklistItem": "*",
+   "errorCategory": null,
+   "kind": "corrective",
+   "context": "all"
+  },
+  {
+   "id": "reveal.ER",
+   "skillId": "ER",
+   "checklistItem": "*",
+   "errorCategory": null,
+   "kind": "corrective",
+   "context": "all"
+  },
+  {
+   "id": "reveal.FXP",
+   "skillId": "FXP",
+   "checklistItem": "*",
+   "errorCategory": null,
+   "kind": "corrective",
+   "context": "all"
+  },
+  {
+   "id": "reveal.FQD",
+   "skillId": "FQD",
+   "checklistItem": "*",
+   "errorCategory": null,
+   "kind": "corrective",
+   "context": "all"
+  }
+ ],
+ "hintLevels": {
+  "nudge": "nudge.<CATEGORY> — diagnostic",
+  "partial": "er.partial.* — ER only (Tier 3) — diagnostic",
+  "full": "reveal.<SKILL> — corrective"
+ },
+ "nudges": [
+  "FORMAT",
+  "DATA_REFERENCE",
+  "AVAILABILITY",
+  "GENERAL",
+  "SEQUENCE",
+  "MANDATORY_MISSING",
+  "DUPLICATE_CONFLICT",
+  "LOGICAL"
+ ],
+ "trainingMessages": [
+  "tm.notRecognized",
+  "tm.notCovered",
+  "tm.noPracticeData",
+  "tm.classNotOffered",
+  "tm.fxpBeforeName",
+  "tm.rfMissing",
+  "tm.otherMissing",
+  "tm.secondName",
+  "tm.rfLine",
+  "tm.ctcrLine",
+  "tm.sliceEnd"
+ ],
+ "coachExplanations": [
+  "coach.needTk",
+  "coach.missingCtc",
+  "coach.bypassRecorded",
+  "coach.erDone",
+  "coach.fxpDone",
+  "coach.escalate"
+ ],
+ "ui": [
+  "ui.trainingLabel",
+  "ui.unverifiedMarker",
+  "ui.correctInDeixen",
+  "ui.hintLabel",
+  "ui.assessment.intro",
+  "ui.assessment.carryover",
+  "ui.assessment.result",
+  "ui.abandoned",
+  "ui.growth.completed",
+  "ui.growth.inProgress",
+  "ui.growth.needsPractice",
+  "ui.growth.empty",
+  "ui.growth.basis",
+  "ui.reset.confirm"
+ ],
+ "disclosure": [
+  "disc.title",
+  "disc.1",
+  "disc.2",
+  "disc.3",
+  "disc.4",
+  "disc.5",
+  "disc.6",
+  "disc.7",
+  "disc.8",
+  "disc.9"
+ ]
+}

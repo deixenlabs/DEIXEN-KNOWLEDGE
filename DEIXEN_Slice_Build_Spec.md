@@ -1,6 +1,6 @@
 ---
 name: DEIXEN Slice Build Spec
-status: CURRENT — APPROVED by Karim 2026-09-25 (07 Decision 26). First edition (Execution Plan 3.3); proposals K1–K4 approved (07 Decision 25). With this approval, the LDS/LXA content extracted here is binding for the slice (LDS and LXA reading rules, point 1).
+status: CURRENT — APPROVED by Karim 2026-09-25 (07 Decision 26). Updated 2026-09-25 after gaps G1–G3 (§5, §12); proposals K5–K6 await Karim. First edition (Execution Plan 3.3); proposals K1–K4 approved (07 Decision 25). With this approval, the LDS/LXA content extracted here is binding for the slice (LDS and LXA reading rules, point 1).
 owns: The single build specification Claude Code implements for the first-build slice. It gathers requirements from their owners and designs the evidence/state schema (delegated to Claude — file 13).
 does not own: any decision (07); Amadeus behavior (Verified Reference); product structure (03); design (Design Brief / Phase 4). Where this file and an owner disagree, the owner wins and the conflict is reported.
 ---
@@ -85,6 +85,14 @@ Completion detected → Reset/retry.
   Numbering follows the order shown in the official PNR examples
   (Verified Reference V-03, V-10, V-11 sources: names, then segments, then
   contact and other elements).
+  **Conflict found in G1 — proposal K5 (§12), awaiting Karim:** official
+  examples show that Amadeus numbers each element by its place in the PNR
+  *as it stands* (V-18): the segment sold by `SS` is element 1 until `NM`
+  adds a name, then becomes 2; `TK` is displayed before an SSR entered
+  earlier. With the approved path order, "equal to the final number"
+  cannot hold for `SS` and `SRCTCM` without showing numbers real Amadeus
+  would not show. Until Karim decides, build the numbering as one function
+  that computes numbers from the current PNR (both options below need it).
 - **[D] Hint counter (03):** one counter, incremented in exactly one place,
   counting learner-requested hints only (LDS §15).
 
@@ -103,12 +111,20 @@ one of three kinds, each visibly distinct:
 3. **Coach explanation** — plain language beside the output; never replaces
    a real Amadeus message.
 
-**Blocking gap (see §12, G1):** the Verified Reference records the verified
-*messages* and the PNR display examples, but not yet the exact example
-screens for the `AN` display, the `SS` sell response, the `FQD` display and
-the `FXP` response. These must be captured into the Verified Reference
-before those screens are built. Until then Claude Code builds them against a
-placeholder marked `UNVERIFIED-LAYOUT` and must not guess a layout.
+**Screen layouts (G1 — closed 2026-09-25):** build the `AN` display, the
+`SS` sell response, the `FQD` display, the `FXP` response and every PNR
+redisplay from Verified Reference §2A (V-14–V-18): field order, line
+order, header and element order as recorded there; fictional values from
+`content/data/slice.json`. Column spacing is not verified (U-06): align
+columns in a fixed-width font. Details listed as U-07–U-11 are handled per
+proposal K6 (§12); until Karim decides, render them as training messages
+(07 D23 as written). No screen remains `UNVERIFIED-LAYOUT`.
+
+**Content (G2, G3):** all lesson, Ghost Mode, task, scenario, feedback,
+hint, training-message, Coach, contract-text and Scope Disclosure wording
+lives in `deixen-app/content/` (`data/slice.json`, `en/text.json`,
+`ar/text.json`) — wire it in, never rewrite it (CLAUDE.md §3.3). Commands
+inside Arabic text are Latin strings: render them left-to-right.
 
 **Simulated data** (flights, fares, record locators) is fictional practice
 data, kept in content files, never presented as real schedules or fares.
@@ -120,16 +136,16 @@ Only VERIFIED content from `DEIXEN_Amadeus_Verified_Reference.md`.
 
 | # | Command | Verified basis | Correctness checklist (all items must pass) | Simulator behavior |
 |---|---|---|---|---|
-| 1 | `AN` | V-01, V-02 | (a) `AN` + date (DDMMM) + city pair, optional time — pattern `AN14FEBSTOFRA1700`; airline code optional after `AN` (`ANMH06NOVKULSIN`); (b) date within 361 days ahead / 3 days back; (c) city pair and date match the task | Shows availability for the task's route: flights with ≥1 seat; order non-stop → direct → connecting |
-| 2 | `SS` (short sell) | V-03 | (a) `SS` + seats + class + line number; (b) line number exists in the last availability display; (c) seats = task passengers; (d) class matches the task | Adds segment with status `HK` + count (e.g. `HK1`) |
+| 1 | `AN` | V-01, V-02, V-14 | (a) `AN` + date (DDMMM) + city pair, optional time — pattern `AN14FEBSTOFRA1700`; airline code optional after `AN` (`ANMH06NOVKULSIN`); (b) date within 361 days ahead / 3 days back; (c) city pair and date match the task | Shows availability for the task's route: flights with ≥1 seat; order non-stop → direct → connecting |
+| 2 | `SS` (short sell) | V-03, V-15 | (a) `SS` + seats + class + line number; (b) line number exists in the last availability display; (c) seats = task passengers; (d) class matches the task | Adds segment with status `HK` + count (e.g. `HK1`) |
 | 3 | `NM` | V-07 | (a) `NM` + count + `SURNAME/FIRST TITLE`; (b) count = passengers; (c) name matches the task | Adds name element |
 | 4 | `AP` | V-11 | (a) `AP` + free-text contact; (b) contains the task's phone | Adds `AP` element as free text |
 | 5 | Passenger contact SSR: `SRCTCM` (main task) / `SRCTCR` (scenario) | V-13 | Main task: (a) `SRCTCM-` + number (dash mandatory); (b) number = the passenger's mobile from the task. Scenario: (a) `SRCTCR-` + free text (source example `SRCTCR-REFUSED/P3`; passenger association not taught as a rule) | Adds the SSR CTC element |
 | 6 | `TK` | V-09 | (a) `TKOK`, or `TKTL` + date — whichever the task asks | Adds TK element |
 | 7 | `RF` | V-10 | (a) `RF` + free text naming who requested the booking | Adds RF (shown until end of transaction, then moves to history) |
 | 8 | `ER` | V-08, V-09, V-10, V-13 | (a) entered when name, itinerary, contact, TK, RF and a passenger-contact SSR are all present | Ends transaction and redisplays the PNR with a record locator. Missing TK → `NEED TICKETING ARRANGEMENT`; missing CTC SSR → the V-13 warning (a second `ER` bypasses it, per V-13); missing RF → PNR not filed (V-10; message text unverified → training message); other missing elements → training message |
-| 9 | `FXP` | V-05 | (a) `FXP` entered on a PNR that has name and segment (the path guarantees this — U-01 is not exercised) | Prices with booked class; creates a TST |
-| opt | `FQD` | V-04 | (a) `FQD` + city pair; options after `/` | Fare display for the task route |
+| 9 | `FXP` | V-05, V-17 | (a) `FXP` entered on a PNR that has name and segment (the path guarantees this — U-01 is not exercised) | Prices with booked class; creates a TST |
+| opt | `FQD` | V-04, V-16 | (a) `FQD` + city pair; options after `/` | Fare display for the task route |
 
 - **[DELEGATED] Simulated office profile:** TK is mandatory (V-09 says this
   is an office-profile setting). Disclosed in the Simulator Scope Disclosure.
@@ -294,13 +310,20 @@ event.
 | K3 | Interrupted assessment/scenario → recorded as abandoned | Agree |
 | K4 | Growth status rule (§10) | Agree |
 
-**Gaps Claude closes before the build (Readiness check 3.6):**
+**Gaps Claude closes before the build (Readiness check 3.6) — all three closed 2026-09-25, content awaiting Karim's review:**
 
-| # | Gap | Plan |
+| # | Gap | Result |
 |---|---|---|
-| G1 | Exact example screens for `AN`, `SS` response, `FQD`, `FXP` response | Capture from official examples into the Verified Reference; any screen not found stays `UNVERIFIED-LAYOUT` and is built as a clearly generic layout under Decision 23 |
-| G2 | Slice content: lessons, Ghost Mode scripts, feedback texts (each tagged diagnostic/corrective), task data, scenario text | Author from the Verified Reference only, as content files; Karim reviews. Claude Code does not write Amadeus content |
-| G3 | Simulator Scope Disclosure text (LDS Principle 6.1) — rebuilt from this build's real limits (§1, §6) | Content file, authored with G2 |
+| G1 | Example screens for `AN`, `SS` response, `FQD`, `FXP` response | **Closed.** Layouts recorded as V-14–V-18 (plus the PNR header, element order and numbering). Residual unverified details U-06–U-11 → K6. Conflict with §4 numbering → K5 |
+| G2 | Slice content | **Done — Karim reviews.** `deixen-app/content/` (3 files; reading copy `DEIXEN_Slice_Content_Review.md`): 10 lessons EN+AR, 10 Ghost scripts on a separate demo booking, main task + scenario data, 44 feedback texts (33 diagnostic, 11 corrective), 8 nudges, training messages, Coach explanations, contract texts |
+| G3 | Simulator Scope Disclosure | **Done — Karim reviews.** 9 items EN+AR (`disc.*` in the text files) |
+
+**New Karim decisions raised by G1:**
+
+| # | Item | Claude's recommendation |
+|---|---|---|
+| K5 | Element numbering: replace "number shown during entry = number in the final PNR" (§4) with "every number shown = the element's number in the PNR as it stands at that moment, computed by the same function as the final display" — what official examples show (V-18) and what the old Known Issue #7 lesson actually asked for (LDS §14). Alternative: keep the literal rule by changing the approved path order (`NM` before `SS`, `TK` before `SRCTCM`) — reopens D22/D24 | Agree with the replacement |
+| K6 | Screen details official examples show only partly (U-07, U-09, U-10, U-11: airline code in the stored `SSR CTCM` line; the `AN` header number; the `AN` header time when a time is entered; redisplay after `AP`/`SRCTCM`/`TK`/`RF`): show the verified pattern with a small "Layout detail not fully verified" marker, never teach the detail, list it in the Disclosure. Details with no official pattern at all (stored `SRCTCR`, `RF` before end of transaction — U-07, U-08) stay plain training messages under D23. Alternative: D23 strictly — every such line becomes a training message | Agree with the marker approach |
 
 **Deferred — not in this slice:** Terminal Screen Literacy candidate (LXA
 §22, new candidate) — outside the frozen boundary (07 D8A); revisit after
@@ -339,5 +362,5 @@ contracts; Definition of Done) · 03 (IA, Terminal skeleton, schemas,
 persistence) · 04 (accessibility, breakpoints) · 06 (Coach contract, error
 discipline, Ghost Mode schema) · LDS §5–§8, §10, §13–§16, §18, §20–§23,
 §29, §32, §36 · LXA §8, §9, §11, §12, §17, §18, §22 ·
-`DEIXEN_Amadeus_Verified_Reference.md` V-01–V-13, U-01–U-05 ·
+`DEIXEN_Amadeus_Verified_Reference.md` V-01–V-18, U-01–U-11 · `deixen-app/content/` ·
 `DEIXEN_Design_Brief.md`.

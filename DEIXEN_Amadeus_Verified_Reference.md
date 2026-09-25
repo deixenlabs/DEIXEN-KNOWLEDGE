@@ -1,6 +1,6 @@
 ---
 name: DEIXEN Amadeus Verified Reference
-status: CURRENT — second edition, 2026-09-25 (Execution Plan Phase 3.1–3.2). Scope so far: the first-build slice (07 Decisions 22, 24) and its prerequisites.
+status: CURRENT — third edition, 2026-09-25 (Execution Plan Phase 3.1–3.2; screen layouts added for Build Spec gap G1). Scope so far: the first-build slice (07 Decisions 22, 24) and its prerequisites.
 owns: The single authority for real Amadeus behavior (07 Decision 15). Only entries marked VERIFIED here may be taught or simulated (07 Decision 13).
 does not own: product, curriculum, or learning decisions; what any DEIXEN code does (implementation truth)
 ---
@@ -181,6 +181,181 @@ does not own: product, curriculum, or learning decisions; what any DEIXEN code d
 - Source: Amadeus Service Hub, "How to add an email (SRCTCE) or mobile phone number (SRCTCM) in a PNR (Cryptic)" —
   https://servicehub.amadeus.com/c/portal/view-solution/3929673/how-to-add-an-email-srctce-or-mobile-phone-number-srctcm-in-a-pnr-cryptic-
 
+
+## 2A. Verified screen layouts — first-build slice (Build Spec gap G1)
+
+**How to read this section.** Each entry records the *layout* of an official
+example screen: which fields appear, in which order, on which line. The
+official screens are not copied here; they are described field by field,
+and a **DEIXEN rendering** shows the same layout filled with DEIXEN's own
+fictional practice data (07 D23; Build Spec §5). Search results flatten
+the official screens into one line of text, so the *order* of fields and
+lines is verified, but the exact number of spaces between columns is not
+(see U-06). Where one field's *meaning* is not stated by any source, the
+entry says so; such meanings are never taught.
+
+### V-14 `AN` availability display — layout VERIFIED
+- **Header line:** a banner between double asterisks naming the display
+  (neutral display: `AMADEUS AVAILABILITY - AN`; carrier-preferred display:
+  the airline's name, then `- AN`); then the destination code; the
+  destination name, a dot and the country code; a number joined to a
+  two-letter weekday; the date (DDMMM); a time (`0000` in both official
+  examples, whose entries had no time).
+- **Flight lines:** line number; airline code and flight number; the
+  booking classes, each a letter followed by one figure (e.g. letter + `9`,
+  letter + `0`); a slash and the origin; the destination; departure time;
+  arrival time; a code group ending in the equipment code (e.g. `E0/73H`);
+  total elapsed flying time (e.g. `1:15`). When a flight has more classes
+  than fit, the class list continues on the next line under the first.
+- Stated by the source: a display can show up to 26 classes; a flight is
+  listed only if at least one class is available for sale or waitlist; a
+  flight irregularity code, when present, sits after the equipment code
+  and before the elapsed flying time.
+- **Not stated by any source found (not taught):** the meaning of the
+  number before the weekday in the header; the meaning of the figure after
+  each class letter; the meaning of the `E0` code group. A non-official
+  training deck describes the header number as days until departure and
+  the class list with seat figures — one non-official source, so UNVERIFIED
+  (U-09).
+- DEIXEN rendering (fictional data):
+  ```
+  ** AMADEUS AVAILABILITY - AN ** DXB DUBAI.AE        30 SU 25OCT 0000
+   1   6X 401  J9 C9 Y9 B9 M9 /RUH    DXB    0730    1030  E0/320  2:00
+   2   6X 403  J4 C2 Y9 B9 M0 /RUH    DXB    1245    1545  E0/320  2:00
+  ```
+- Sources: Amadeus Service Hub, "How to request a carrier-preferred
+  availability display (Cryptic)" (updated 2024-12-13; example display
+  for `ANMH06NOVKULSIN`) —
+  https://servicehub.amadeus.com/c/portal/view-solution/864341/how-to-request-a-carrier-preferred-availability-display ;
+  "How to understand air availability display (AN) (Cryptic)" (print view
+  dated 2025-04-29; annotated neutral display) —
+  https://servicehub.amadeus.com/c/portal/view-solution/897281/how-to-understand-an-air-availability-display-an- ;
+  non-official, for U-09 only: "Chapter 4 – Air Amadeus – Availability"
+  (slideshare) — https://www.slideshare.net/slideshow/chapter-4-air-amadeus-availabilitypptx/260162654
+
+### V-15 `SS` sell response — layout VERIFIED
+- The response to a sell entry is the booking as it now stands, under a
+  header line `RP/` + office ID + `/` (a new PNR's header: "RP followed by
+  your Office ID" — V-18 source).
+- **Segment line while the PNR is being built:** segment number; airline;
+  flight number; booking class; date (DDMMM); one digit for the day of the
+  week (Service Hub's ghost-segment page calls this field the day of the
+  week; in the official retrieve-PNR example, 05JAN and 07JAN 2025 — a
+  Sunday and a Tuesday — show `7` and `2`, i.e. Monday = 1 … Sunday = 7); city pair written together (e.g. `LHRFCO`); status and seat count
+  (`HK1`); an optional terminal; departure time; arrival time; equipment;
+  further one-letter codes (meanings not stated — not taught).
+- Airline text may follow directly below the segment (official example:
+  a pointer to `RTSVC`); the source says this text appears only when the
+  seat is booked, not on a retrieved PNR, and its content varies by
+  airline. DEIXEN shows no airline text.
+- In the official example the PNR has no name yet and the segment is
+  element **1** (see V-18 on numbering).
+- DEIXEN rendering (fictional data):
+  ```
+  RP/XXXXXXXXX/
+    1  6X 403 Y 25OCT 7 RUHDXB HK1       1245 1545  320 E 0
+  ```
+- Sources: Amadeus Service Hub, "How to sell a flight (Cryptic)"
+  (2024-12-19) — https://servicehub.amadeus.com/c/portal/view-solution/784197/how-to-sell-a-flight-cryptic- ;
+  "How to enter a ghost segment (Cryptic)" (day-of-week field) —
+  https://live-travel.community.amadeus.com/c/portal/view-solution/893186/how-to-enter-a-ghost-segment-cryptic-
+
+### V-16 `FQD` fare display — layout VERIFIED
+- **Header lines:** the entry echoed; notice lines (e.g. that more fares
+  are available in other currencies; that surcharges may apply — check the
+  rule); a rate-of-exchange line (`ROE` …); a line joining date, city pair,
+  a global indicator and mileage figures (`TPM`/`MPM`).
+- **Column header:** `LN FARE BASIS OW <currency> RT …` followed by
+  penalty, dates/days, advance purchase, minimum and maximum stay columns,
+  then airline and fare-type columns.
+- **Fare lines:** two-digit line number; `+` or `@` where applicable (V-04:
+  use `FQN` for the rules); fare basis; the fare in the one-way or
+  round-trip column; the remaining columns; closing with a page counter
+  (`> PAGE 1/12`).
+- DEIXEN renders only this layout; the meaning of the penalty, date,
+  stay and fare-type columns is not taught (not needed for the slice).
+- Sources: Amadeus Service Hub, "How to interpret Fare Display (FQD)
+  symbols (Cryptic)" (listed as updated 2026-06-23) —
+  https://servicehub.amadeus.com/c/portal/view-solution/832707/how-to-interpret-fare-display-fqd-symbols-cryptic- ;
+  "How to request a Fare Display (FQD) for a past date ticket (Cryptic)"
+  (single-airline example) —
+  https://servicehub.amadeus.com/c/portal/view-solution/824651/how-to-request-a-fare-display-fqd-for-a-past-date-ticket-cryptic-
+
+### V-17 `FXP` pricing response (single applicable fare) — layout VERIFIED
+- Line order: the entry echoed; passenger number and name (`01` +
+  SURNAME/FIRST, with or without title); `LAST TKT DTE` + date (one source
+  adds `- DATE OF ORIGIN`); a dashed rule; the column header
+  `AL FLGT BK T DATE TIME FARE BASIS NVB NVA BG`; the origin city on its
+  own line; one line per segment (destination, airline, flight, booking
+  class, a second class column, date, time, fare basis, validity dates,
+  baggage); the fare line (currency and amount, then the fare calculation
+  ending `END ROE…`); tax lines (currency, amount, tax code); the grand
+  total; message lines (e.g. ticket stock or validating-carrier notices).
+- Plain `FXP` shows this layout (THAI-AMADEUS card); official Service Hub
+  pages show the same layout for `FXP/R,UP`, `FXP/FF-…`, `FXB` and `FXT`.
+  When several fares apply, a numbered fare list appears instead (V-05) —
+  not reached in the slice (Decision 25, K1).
+- Not taught: the meaning of `NVB`, `NVA`, `BG`, the fare calculation
+  line, or the tax codes.
+- DEIXEN rendering (fictional data):
+  ```
+  FXP
+  01 ALHARBI/SARA MS
+  LAST TKT DTE 25OCT26 - DATE OF ORIGIN
+  ------------------------------------------------------------
+       AL FLGT  BK T DATE  TIME  FARE BASIS      NVB  NVA   BG
+   RUH
+   DXB 6X   403 Y  Y 25OCT 1245  Y1OW                      1P
+  SAR   900.00      25OCT26RUH 6X DXB240.00NUC240.00END ROE3.750000
+  SAR   150.00-YR
+  SAR  1050.00
+  ```
+- Sources: Amadeus Service Hub, "How to price a PNR and keep the booked
+  classes (Cryptic)" (2024-09-10) —
+  https://servicehub.amadeus.com/c/portal/view-solution/965173/how-to-price-a-pnr-and-keep-the-booked-classes-cryptic- ;
+  THAI-AMADEUS fares quick card (plain `FXP` example) —
+  https://www.thaiamadeus.com/THILA/file/QuickCardFare2016.pdf ;
+  "How to price a PNR with Fare Family option (Cryptic)" —
+  https://servicehub.amadeus.com/c/portal/view-solution/879731/how-to-price-a-pnr-with-fare-family-option-cryptic-
+
+### V-18 PNR display — header, element order, numbering — VERIFIED
+- **Header:** generated after the first entry of a new PNR as `RP/` +
+  office ID; when the transaction is ended and the PNR redisplayed, more
+  information is added to the header line — in the official examples:
+  office IDs, agent sign/duty code, date/time (Z), and a six-character
+  record locator. Tags such as `RLR` or `TST` may appear above the header
+  (V-10: `RLR` does not appear in the Amadeus Training Environment). The
+  official examples mask office IDs as `XXXXXXXXX`; DEIXEN does the same.
+- **Element order** in every official display found: names (`1.SURNAME/
+  FIRST TITLE`), then air segments, then contact (`AP…`), then `TK`, then
+  SSR and other elements.
+- **Numbering:** every displayed element carries its number in the PNR
+  *as it stands*: in the sell response (V-15) the segment is element 1
+  because no name exists yet; in every PNR that has a name, the name is 1
+  and the first segment is 2. The same holds for `TK` and SSR elements:
+  `TK` is always displayed before SSRs, whatever order they were entered in.
+- **Displayed forms:** a stored ticketing arrangement shows as
+  `TK OK` + date + `/` + office (in the official examples the date equals
+  the PNR's creation date); a stored mobile contact SSR shows as
+  `SSR CTCM` + airline + `HK1` + number; after end of transaction, segment
+  lines end with `*1A/E*`.
+- The response to an individual name entry is the PNR redisplayed under
+  the `RP/` header (official group-name example). Official redisplay
+  examples were found for `SS` and `NM`; none was found for `AP`,
+  `SRCTCM`/`SRCTCR`, `TK`, or `RF` entries (U-11).
+- Sources: Amadeus Service Hub, "How to interpret a PNR header line
+  (Cryptic)" — https://servicehub.amadeus.com/c/portal/view-solution/3868887/how-to-interpret-a-pnr-header-line-cryptic- ;
+  "How to retrieve/display a PNR (Cryptic)" —
+  https://servicehub.amadeus.com/c/portal/view-solution/453392470/how-to-retrieve/display-a-pnr-cryptic- ;
+  "How to display Minimum Connecting Time (MCT) from a PNR (Cryptic)" —
+  https://servicehub.amadeus.com/c/portal/view-solution/769622/how-to-display-minimum-connecting-time-mct-from-a-pnr-cryptic- ;
+  "How to add a form of identification (FOID) to a PNR (Cryptic)"
+  (`SSR CTCM` display) —
+  https://servicehub.amadeus.com/c/portal/view-solution/890757/how-to-add-a-form-of-identification-foid-to-a-pnr-cryptic- ;
+  "How to create a group name (Cryptic)" (redisplay after a name entry) —
+  https://servicehub.amadeus.com/c/portal/view-solution/933799/how-to-create-a-group-name-cryptic- ;
+  "How to sell a flight (Cryptic)" (V-15).
+
 ## 3. Unverified — slice-relevant
 
 | # | Claim | Reason |
@@ -188,8 +363,17 @@ does not own: product, curriculum, or learning decisions; what any DEIXEN code d
 | U-01 | `FXP` requires passenger names in the PNR | No source states it. **No longer blocks the slice:** the approved path (07 Decisions 22, 24) enters `NM` before `FXP`, so the slice never tests this case |
 | U-02 | Exact error texts for wrong `AN`, `SS`, `NM`, `AP`, `FXP` input | Not found in exposed official text. Handled by 07 Decision 23 (clearly labeled training messages) |
 | U-03 | ~~`AP` phone entry syntax~~ | Closed — now VERIFIED (V-11) |
-| U-04 | Full screen layouts beyond what official examples show | Official pages show real example screens for `AN`, `FQD`, `FXP` and PNR displays; anything outside them is handled by 07 Decision 23 |
+| U-04 | Full screen layouts beyond what official examples show | Layouts now recorded for `AN`, `SS`, `FQD`, `FXP` and the PNR (V-14–V-18). Anything outside them is handled by 07 Decision 23 |
 | U-05 | Whether a TST created by `FXP` after `ER` needs a further `ER`/`ET` to be kept in the PNR | Not found. The slice ends at a completed `FXP` display, so it does not simulate what happens to the TST afterwards |
+| U-06 | Exact column spacing of every screen | Search results flatten the official screens; field order is verified (V-14–V-18), spacing is not. DEIXEN aligns columns in a fixed-width font — a presentation choice, disclosed |
+| U-07 | How a contact SSR entered without an airline code is displayed (whether the airline code is filled in); any official display of a stored `SSR CTCR` | Only a display of `SSR CTCM` with an airline code was found (V-18); no Amadeus `CTCR` display found (airline pages show other GDSs only) |
+| U-08 | How the `RF` element looks in the PNR before end of transaction | No official display found (V-10 only says it disappears after end of transaction) |
+| U-09 | Meaning of the header number before the weekday, of the figure after each class letter, and of `E0` in `AN` | One non-official source only (V-14) |
+| U-10 | The `AN` header time when the entry includes a departure time | Both official examples had no time and show `0000` |
+| U-11 | That `AP`, `SRCTCM`/`SRCTCR`, `TK` and `RF` entries are answered with a PNR redisplay | Official redisplay examples exist for `SS` and `NM` only (V-15, V-18) |
+
+Handling of U-06–U-11 in the slice: 07 Decision 23, as refined by the
+Build Spec §12 proposal K6 (awaiting Karim).
 
 ## 4. Research backlog — outside the slice (not yet researched under D12)
 
@@ -203,3 +387,4 @@ UNVERIFIED until researched.
 |---|---|
 | 2026-09-25 | First edition: V-01 to V-12, U-01 to U-04 |
 | 2026-09-25 | Second edition: V-11 upgraded to VERIFIED; V-10 adds RF entry syntax; new V-13 (IATA contact SSRs); U-01 no longer blocking; U-03 closed; new U-05 |
+| 2026-09-25 | Third edition (Build Spec G1): new §2A with screen layouts V-14 (`AN`), V-15 (`SS`), V-16 (`FQD`), V-17 (`FXP`), V-18 (PNR header, order, numbering); U-04 narrowed; new U-06–U-11 |

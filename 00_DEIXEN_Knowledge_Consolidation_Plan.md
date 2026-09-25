@@ -43,8 +43,9 @@ length, or the word "Canonical" in its title.
 
 | File | Owns / will own | Status |
 |---|---|---|
-| `DEIXEN_Amadeus_Verified_Reference.md` | The only authority for real Amadeus behavior (07 D15) | Current — second edition 2026-09-25 |
-| `DEIXEN_Slice_Build_Spec.md` | The build specification for the first-build slice; the evidence/state schema | Approved 2026-09-25 (07 D25, D26) |
+| `DEIXEN_Amadeus_Verified_Reference.md` | The only authority for real Amadeus behavior (07 D15) | Current — third edition 2026-09-25 (screen layouts V-14–V-18) |
+| `DEIXEN_Slice_Build_Spec.md` | The build specification for the first-build slice; the evidence/state schema | Approved 2026-09-25 (07 D25, D26); G1–G3 closed; K5–K6 await Karim |
+| `deixen-app/content/` — `data/slice.json`, `en/text.json`, `ar/text.json` | All slice wording and fictional data: lessons, Ghost Mode scripts, task, scenario, feedback/hints, training messages, Coach explanations, contract texts, Scope Disclosure (Build Spec G2–G3) | Draft 2026-09-25 — awaiting Karim's review. Lives in the code repository's approved `content/` folder (CLAUDE.md §5), not in this repository; depends on the Verified Reference and the Build Spec |
 | `DEIXEN_Design_Brief.md` | What Claude Design receives for Phase 4 | Current 2026-09-25 — awaiting Karim's review |
 | `CLAUDE.md` | Claude Code instructions, repository layout, verification checklist (Execution Plan 3.5) | Approved 2026-09-25 (07 D26) — master copy; moves into the code repository `deixen-app` at build start |
 
@@ -109,7 +110,7 @@ and others named in Part B); and every codebase (the vanilla-JS
 
 - Constitution → Execution Plan → every phase.
 - 07 (decisions) → 03, 04, 06, 13, LDS, LXA.
-- Verified Reference (Phase 3) → 06 lessons, Coach, Terminal behavior, scenarios, assessment criteria.
+- Verified Reference (Phase 3) → 06 lessons, Coach, Terminal behavior, scenarios, assessment criteria; → `deixen-app/content/` (a change to any V- or U- entry re-checks the content files).
 - 07, 03, 04, 06, LDS, LXA, Verified Reference → Slice Build Spec → Claude Code; 03, 04, 07, LXA → Design Brief → Claude Design. A change upstream re-checks these two files.
 - LDS → LXA (LXA translates LDS; it never redefines it).
 - A change to any upstream file triggers an impact check on everything below it (Constitution §15).

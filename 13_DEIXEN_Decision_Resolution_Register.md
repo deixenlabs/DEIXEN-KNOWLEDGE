@@ -78,7 +78,12 @@ presented a navy/blue color language as "durable" although colors are open
 | Slice Build Spec (3.3) | CLOSED — Approved 2026-09-25 (D26) | Karim | — |
 | Build Spec K1–K4 (D25) | CLOSED — Approved 2026-09-25 | Karim | — |
 | `CLAUDE.md` (3.5) | CLOSED — Approved 2026-09-25 (D26) | Karim | — |
-| Build Spec G1–G3 (example screens; slice content; scope disclosure) | OPEN | Claude | Before build (3.6) |
+| Build Spec G1 (example screens) | DONE 2026-09-25 — Verified Reference V-14–V-18; residual details U-06–U-11 | Claude | K6 |
+| Build Spec G2–G3 (slice content; Scope Disclosure) | DONE 2026-09-25 — `deixen-app/content/` (3 files) | Karim | Review and approve the content |
+| Build Spec K5 — element numbering (V-18 live renumbering vs. literal Build Spec §4 / D14 wording) | OPEN — conflict surfaced (Constitution §18) | Karim | Decide; Claude recommends 'number = current PNR position' |
+| Build Spec K6 — screen details only partly shown in official examples (U-07–U-11) | OPEN | Karim | Decide; Claude recommends verified pattern + visible marker |
+| `AP` as the PRINT 'Phone' element | UNVERIFIED as a stated source fact (07 D22 assumed it); lessons avoid claiming it | Claude | Verify when the next Reference edition is made; not blocking (Build Spec requires `AP` anyway) |
+| Readiness check (3.6) | NOT PASSED — waits on K5, K6 and Karim's content review | Karim | Approve → Phase 3 gate |
 | Coach contract (D9); CS contract (D6) | CLOSED | Karim | Carry forward |
 | Evidence, Assessment, Scenario contracts | CLOSED (unbuilt) | Karim | Slice Build Spec, Phase 3 |
 | Domain/SME validation (D7) | SUPERSEDED by D12 | — | — |

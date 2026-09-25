@@ -2,7 +2,7 @@
 name: DEIXEN Canonical Decisions & Current State
 owns: The single decisions ledger and current project status going forward
 supersedes reading in isolation: AeroBridge_Decisions_and_Current_State.md
-last synchronized: 2026-09-25 (Execution Plan Phase 3.2)
+last synchronized: 2026-09-25 (Execution Plan Phase 3, after gaps G1–G3)
 authority note: Where a decision below is owned in more detail elsewhere in this canonical set (product/architecture, design, engine, curriculum/Coach), this file states the decision and its status, and points there rather than duplicating — the same single-ownership discipline the original NEW document already established and this pass is preserving.
 ---
 
@@ -58,9 +58,15 @@ step (Decision 24) on 2026-09-25, and approved creating the three Phase 3
 files (Slice Build Spec, Design Brief, Claude Code environment pack). Step
 3.4 (Design Brief) and step 3.3 (`DEIXEN_Slice_Build_Spec.md`, draft) are
 written; Karim approved its four proposals (Decision 25) and then the
-Build Spec and `CLAUDE.md` as a whole (Decision 26). Next: Claude closes
-the Build Spec gaps G1–G3 (example screens, slice content, scope
-disclosure), then the readiness check (3.6).
+Build Spec and `CLAUDE.md` as a whole (Decision 26). Gaps G1–G3 closed by
+Claude on 2026-09-25: screen layouts added to the Verified Reference
+(third edition, V-14–V-18); slice content and the Simulator Scope
+Disclosure written as the content files for `deixen-app/content/`
+(awaiting Karim's review). G1 raised two items for Karim — Build Spec K5
+(element numbering: official examples show live renumbering, which
+conflicts with the literal wording of Decision 14's lesson and Build Spec
+§4) and K6 (how to show screen details official examples show only
+partly). Readiness check (3.6): not yet passed — see file 13.
 
 **Implementation state:** no codebase exists in the project's hands. The first
 build (Decision 20) will be written from scratch against approved
