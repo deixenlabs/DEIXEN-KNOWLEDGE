@@ -75,8 +75,9 @@ presented a navy/blue color language as "durable" although colors are open
 | Slice path adjustment (D22) | CLOSED — Approved 2026-09-25 | Karim | — |
 | `SRCTCM` step in the slice (D24) | CLOSED — Approved 2026-09-25 | Karim | — |
 | Design Brief (Execution Plan 3.4) | DONE — awaiting Karim's review | Karim | Approve before Phase 4 |
-| Slice Build Spec (3.3) | DRAFT — awaiting Karim's approval; carries K1–K4 | Karim | Approve; then 3.5 |
-| Build Spec K1–K4 (slice limits; scenario `SRCTCR`; interrupted attempts; Growth status rule) | OPEN — Claude recommends agree on all four | Karim | Decide with the spec |
+| Slice Build Spec (3.3) | DRAFT — K1–K4 approved; whole-spec approval pending | Karim | Approve |
+| Build Spec K1–K4 (D25) | CLOSED — Approved 2026-09-25 | Karim | — |
+| `CLAUDE.md` (3.5) | DONE — awaiting Karim's review | Karim | Approve with the spec |
 | Build Spec G1–G3 (example screens; slice content; scope disclosure) | OPEN | Claude | Before build (3.6) |
 | Coach contract (D9); CS contract (D6) | CLOSED | Karim | Carry forward |
 | Evidence, Assessment, Scenario contracts | CLOSED (unbuilt) | Karim | Slice Build Spec, Phase 3 |

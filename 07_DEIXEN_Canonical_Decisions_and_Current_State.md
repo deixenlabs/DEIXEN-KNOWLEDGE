@@ -57,10 +57,10 @@ were ended by Karim's decision on 2026-09-24 and are historical.
 step (Decision 24) on 2026-09-25, and approved creating the three Phase 3
 files (Slice Build Spec, Design Brief, Claude Code environment pack). Step
 3.4 (Design Brief) and step 3.3 (`DEIXEN_Slice_Build_Spec.md`, draft) are
-written. The Build Spec carries four proposals awaiting Karim (K1–K4:
-slice limits, the scenario, interrupted attempts, the Growth status rule)
-and three gaps Claude closes before the build (G1 example screens, G2 slice
-content, G3 scope disclosure). Next: Karim's review, then 3.5.
+written; Karim approved its four proposals (Decision 25). Step 3.5
+(`CLAUDE.md`) written. Awaiting Karim: approval of the Build Spec as a whole.
+Next: Claude closes gaps G1–G3 (example screens, slice content, scope
+disclosure), then the readiness check (3.6).
 
 **Implementation state:** no codebase exists in the project's hands. The first
 build (Decision 20) will be written from scratch against approved
@@ -349,6 +349,14 @@ an ordinary technical implementation choice, not decided here.
   added after `AP`. Final slice path: `AN → SS → NM → AP → SRCTCM → TK → RF → ER → FXP`; `FQD` optional. If the learner
   reaches `ER` without it, the Terminal shows that verified warning
   (Decision 23).
+- **Decision 25 — Slice Build Spec proposals. Closed — Approved.** K1: slice
+  limits — one adult passenger, one segment, a single applicable fare (no
+  `FXT` step); anything else gets the "not covered in this slice" message.
+  K2: the one scenario — the passenger refuses to give a mobile number; the
+  learner records it with `SRCTCR` (Verified Reference V-13). K3: an
+  assessment or scenario attempt interrupted by closing the browser is
+  recorded as abandoned (neither passed nor failed) and the learner is told
+  on return. K4: the Growth/Readiness status rule in the Build Spec §10.
 - **Phase 3 files — creation approved (Execution Plan §5).** Karim approved
   creating the Slice Build Spec, the Design Brief, and the Claude Code
   environment files (`CLAUDE.md` and repository scaffolding).

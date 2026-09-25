@@ -44,9 +44,9 @@ length, or the word "Canonical" in its title.
 | File | Owns / will own | Status |
 |---|---|---|
 | `DEIXEN_Amadeus_Verified_Reference.md` | The only authority for real Amadeus behavior (07 D15) | Current — second edition 2026-09-25 |
-| `DEIXEN_Slice_Build_Spec.md` | The build specification for the first-build slice; the evidence/state schema | Draft 2026-09-25 — binding on Karim's approval |
+| `DEIXEN_Slice_Build_Spec.md` | The build specification for the first-build slice; the evidence/state schema | Draft 2026-09-25 — K1–K4 approved (07 D25); binding on Karim's approval of the whole spec |
 | `DEIXEN_Design_Brief.md` | What Claude Design receives for Phase 4 | Current 2026-09-25 — awaiting Karim's review |
-| Claude Code environment files (`CLAUDE.md`, repository scaffolding) | Execution Plan 3.5 | Creation approved 2026-09-25; not yet written |
+| `CLAUDE.md` | Claude Code instructions, repository layout, verification checklist (Execution Plan 3.5) | Current 2026-09-25 — master copy; moves into the code repository `deixen-app` at build start |
 
 ## A4. Draft authority — learning foundation
 

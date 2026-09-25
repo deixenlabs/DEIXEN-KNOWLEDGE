@@ -1,6 +1,6 @@
 ---
 name: DEIXEN Slice Build Spec
-status: DRAFT — first edition, 2026-09-25 (Execution Plan 3.3). Creation approved by Karim (07, Decisions of 2026-09-25). Becomes binding for the build only when Karim approves it; on approval, the LDS/LXA content extracted here becomes binding for the slice (LDS and LXA reading rules, point 1).
+status: DRAFT — first edition, 2026-09-25 (Execution Plan 3.3). Creation approved by Karim (07, Decisions of 2026-09-25). Proposals K1–K4 approved by Karim 2026-09-25 (07 Decision 25). Becomes binding for the build only when Karim approves it; on approval, the LDS/LXA content extracted here becomes binding for the slice (LDS and LXA reading rules, point 1).
 owns: The single build specification Claude Code implements for the first-build slice. It gathers requirements from their owners and designs the evidence/state schema (delegated to Claude — file 13).
 does not own: any decision (07); Amadeus behavior (Verified Reference); product structure (03); design (Design Brief / Phase 4). Where this file and an owner disagree, the owner wins and the conflict is reported.
 ---
@@ -285,7 +285,7 @@ event.
 
 ## 12. Open items before and during the build
 
-**Karim decisions (all [PROPOSED] above):**
+**Karim decisions — all four approved 2026-09-25 (07 Decision 25); the [PROPOSED] tags above now read [D]:**
 
 | # | Item | Claude's recommendation |
 |---|---|---|
