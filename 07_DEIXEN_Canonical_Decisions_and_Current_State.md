@@ -62,11 +62,9 @@ Build Spec and `CLAUDE.md` as a whole (Decision 26). Gaps G1–G3 closed by
 Claude on 2026-09-25: screen layouts added to the Verified Reference
 (third edition, V-14–V-18); slice content and the Simulator Scope
 Disclosure written as the content files for `deixen-app/content/`
-(awaiting Karim's review). G1 raised two items for Karim — Build Spec K5
-(element numbering: official examples show live renumbering, which
-conflicts with the literal wording of Decision 14's lesson and Build Spec
-§4) and K6 (how to show screen details official examples show only
-partly). Readiness check (3.6): not yet passed — see file 13.
+(awaiting Karim's review). G1 raised K5 and K6; Karim approved both (Decision 27). Next: apply
+Decision 27 to Build Spec §4/§13 and `CLAUDE.md` §8, Karim's review of the
+content files, then readiness check (3.6) and the Phase 3 gate.
 
 **Implementation state:** no codebase exists in the project's hands. The first
 build (Decision 20) will be written from scratch against approved
@@ -366,6 +364,18 @@ an ordinary technical implementation choice, not decided here.
 - **Decision 26 — Slice Build Spec and `CLAUDE.md`. Closed — Approved.**
   `DEIXEN_Slice_Build_Spec.md` is the build specification for the slice;
   `CLAUDE.md` is the Claude Code instruction file.
+- **Decision 27 — Build Spec K5 and K6. Closed — Approved (2026-09-25).**
+  K5: every element number shown in the Terminal is the element's number in
+  the PNR as it stands at that moment, computed by the same function as the
+  final display (Verified Reference V-18). This replaces the wording
+  "numbers shown during entry must match the final PNR numbering" in
+  Decision 14's lesson example, Build Spec §4/§13 and `CLAUDE.md` §8
+  (edits still to be applied). K6: screen details that official examples
+  show only partly (Verified Reference U-07, U-09, U-10, U-11) are shown
+  in the verified pattern with a visible "Layout detail not fully
+  verified" marker, never taught, and listed in the Scope Disclosure;
+  details with no official pattern (stored `SRCTCR`, `RF` before end of
+  transaction) stay plain training messages under Decision 23.
 - **Phase 3 files — creation approved (Execution Plan §5).** Karim approved
   creating the Slice Build Spec, the Design Brief, and the Claude Code
   environment files (`CLAUDE.md` and repository scaffolding).
