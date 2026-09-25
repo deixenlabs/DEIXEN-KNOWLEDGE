@@ -1,6 +1,6 @@
 # DEIXEN — Slice Content: Review Copy (G2 + G3)
 
-> **Reading copy for Karim's review — not a project file.** The source of truth is the three content files for `deixen-app/content/` (`data/slice.json`, `en/text.json`, `ar/text.json`); this page is generated from them. Author: Claude (project lead), 2026-09-25. Self-review only (07 D17). **Updated 2026-09-25 (readiness check 3.6):** Decision 27 applied; seven small fixes marked ✎ below, all awaiting Karim's approval at the Phase 3 gate.
+> **Reading copy for Karim's review — not a project file.** The source of truth is the three content files for `deixen-app/content/` (`data/slice.json`, `en/text.json`, `ar/text.json`); this page is generated from them. Author: Claude (project lead), 2026-09-25. Self-review only (07 D17). **Updated 2026-09-25 (readiness check 3.6):** Decision 27 applied; seven small fixes marked ✎ below — all approved by Karim 2026-09-25 (07 Decision 28).
 
 Every Amadeus statement traces to a VERIFIED entry in `DEIXEN_Amadeus_Verified_Reference.md` (third edition). All flights, fares, names and numbers are fictional.
 

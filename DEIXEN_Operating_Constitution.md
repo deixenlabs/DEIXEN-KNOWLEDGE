@@ -387,6 +387,8 @@ Karim holds final human authority over:
 
 Do not make these decisions on Karim's behalf simply because a solution appears obvious.
 
+Standing delegation *(07 Decision 29, 2026-09-25)*: Karim has delegated to the project lead the acceptance of its own recommendations on matters not reserved to him. The reserved list, and what can never be delegated, are stated in 07 Decision 29. Delegated decisions are recorded in 07 and reported to Karim; he may reverse any of them.
+
 Delegated Technical Authority
 
 Technical agents with explicit delegation may make:

@@ -43,10 +43,10 @@ length, or the word "Canonical" in its title.
 
 | File | Owns / will own | Status |
 |---|---|---|
-| `DEIXEN_Amadeus_Verified_Reference.md` | The only authority for real Amadeus behavior (07 D15) | Current — third edition 2026-09-25 (screen layouts V-14–V-18), amended at the readiness check (U-12–U-14); in the Phase 3 gate pack |
-| `DEIXEN_Slice_Build_Spec.md` | The build specification for the first-build slice; the evidence/state schema | Approved 2026-09-25 (07 D25, D26); G1–G3 closed; D27 (K5–K6) applied; K7 awaits Karim at the Phase 3 gate |
-| `deixen-app/content/` — `data/slice.json`, `en/text.json`, `ar/text.json` | All slice wording and fictional data: lessons, Ghost Mode scripts, task, scenario, feedback/hints, training messages, Coach explanations, contract texts, Scope Disclosure (Build Spec G2–G3) | Draft 2026-09-25, readiness-check fixes applied — awaiting Karim's approval at the Phase 3 gate. Reading copy: `DEIXEN_Slice_Content_Review.md` (not a project file). Lives in the code repository's approved `content/` folder (CLAUDE.md §5), not in this repository; depends on the Verified Reference and the Build Spec |
-| `DEIXEN_Design_Brief.md` | What Claude Design receives for Phase 4 | Current 2026-09-25, synchronized with D27 — awaiting Karim at the Phase 3 gate |
+| `DEIXEN_Amadeus_Verified_Reference.md` | The only authority for real Amadeus behavior (07 D15) | Current — third edition 2026-09-25 (screen layouts V-14–V-18), amended at the readiness check (U-12–U-14); approved in the Phase 3 gate (07 D28) |
+| `DEIXEN_Slice_Build_Spec.md` | The build specification for the first-build slice; the evidence/state schema | Approved 2026-09-25 (07 D25, D26); G1–G3 closed; D27 (K5–K6) applied; K7 approved (07 D28) |
+| `deixen-app/content/` — `data/slice.json`, `en/text.json`, `ar/text.json` | All slice wording and fictional data: lessons, Ghost Mode scripts, task, scenario, feedback/hints, training messages, Coach explanations, contract texts, Scope Disclosure (Build Spec G2–G3) | Approved 2026-09-25 with the readiness-check fixes (07 D28). Reading copy: `DEIXEN_Slice_Content_Review.md` (not a project file). Lives in the code repository's approved `content/` folder (CLAUDE.md §5), not in this repository; depends on the Verified Reference and the Build Spec |
+| `DEIXEN_Design_Brief.md` | What Claude Design receives for Phase 4 | Approved 2026-09-25 (07 D28) — input to Phase 4 |
 | `CLAUDE.md` | Claude Code instructions, repository layout, verification checklist (Execution Plan 3.5) | Approved 2026-09-25 (07 D26), D27 applied — master copy; moves into the code repository `deixen-app` at build start |
 
 ## A4. Draft authority — learning foundation
@@ -116,10 +116,10 @@ and others named in Part B); and every codebase (the vanilla-JS
 - A change to any upstream file triggers an impact check on everything below it (Constitution §15).
 - 07 D27 (element numbering; partly verified details) → Build Spec §4/§5/§13, `CLAUDE.md` §3/§8, LDS/LXA reading rules, Design Brief §4, Scope Disclosure — impact check done 2026-09-25.
 
-**Repository note (2026-09-25).** The Project holds the current copies. The
-repository's main folder does not yet show the Phase 2–3 files; Karim
-uploads them before Phase 5 (Claude Code reads the knowledge from the
-repository — `CLAUDE.md` §2).
+**Repository note (2026-09-25).** Karim reports that the Project and the
+repository now hold the same current files. In the Project, `text.json` is
+`en/text.json` and `text-1.json` is `ar/text.json`; `text_PATCH.json` is
+obsolete (merged 2026-09-25).
 
 ---
 

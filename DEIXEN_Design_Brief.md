@@ -1,6 +1,6 @@
 ---
 name: DEIXEN Design Brief
-status: CURRENT — first edition, 2026-09-25 (Execution Plan 3.4); synchronized 2026-09-25 with 07 Decision 27 and Verified Reference §2A. Creation approved by Karim (07, Decisions of 2026-09-25). Content awaits Karim's approval at the Phase 3 gate.
+status: CURRENT — first edition, 2026-09-25 (Execution Plan 3.4); synchronized 2026-09-25 with 07 Decision 27 and Verified Reference §2A. Creation approved by Karim (07, Decisions of 2026-09-25). Approved by Karim 2026-09-25 (07 Decision 28).
 owns: What Claude Design receives for Phase 4 — the brief only. Adds no decision; every rule below cites its owner.
 does not own: design principles, accessibility, anti-patterns (file 04); product structure (file 03); learner states (LXA); Coach contract (file 06); decisions (file 07); Amadeus behavior (Verified Reference)
 ---

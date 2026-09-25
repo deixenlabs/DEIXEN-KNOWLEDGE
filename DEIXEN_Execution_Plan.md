@@ -20,8 +20,8 @@ learner.
 
 | Who | Does | Does not |
 |---|---|---|
-| Karim | Approves every phase gate, every new file, every decision reserved to the owner | — |
-| Claude (Opus), project lead | Reviews, edits, synchronizes, verifies Amadeus behavior on the web, prepares briefs for Design and Code | Treat its own work as approved; present self-review as independent review |
+| Karim | Decides what is reserved to him (07 D29): identity, scope, name/brand/visual direction, money/legal/publishing, governance changes, and confirming the slice works as a learner | — |
+| Claude (Opus), project lead | Reviews, edits, synchronizes, verifies Amadeus behavior on the web, prepares briefs for Design and Code; decides everything not reserved to Karim, records it in 07 "by delegation (D29)" and reports briefly | Decide a reserved matter; present self-review as independent review; lower the Verification Standard |
 | Claude Design | Explores and executes design within the Design Brief | Decide final visual direction |
 | Claude Code | Implements the approved specifications | Add scope, invent Amadeus behavior, reinterpret decisions |
 
@@ -35,8 +35,8 @@ independent review (waived by Karim).
 | 0. Source lock | Read the Project and repository; decide which copies count | Corpus inventory | — | **Done** 2026-09-24 |
 | 1. Review (read-only) | Look for contradictions, gaps, stale statements | 16 findings (file 13 §2) | Karim reviews findings | **Done** 2026-09-24 |
 | 2. Synchronization | Apply decisions 12–21; fix contradictions; migrate names; mark every file's status | Updated corpus; Corpus Map (file 00) | Karim uploads the files | **Done** 2026-09-25 |
-| 3. Verification & readiness | See §4 | Verified Reference; Slice Build Spec; Design Brief; environment pack | Karim approves the pack | **Gate prepared** (3.1–3.6 done 2026-09-25; gate waits on Karim: the pack, K7, the content fixes) |
-| 4. Design | Claude Design explores directions from the Design Brief; Karim chooses; the chosen direction is refined | Approved design | Karim approves direction | Waiting |
+| 3. Verification & readiness | See §4 | Verified Reference; Slice Build Spec; Design Brief; environment pack | Karim approves the pack | **Done** 2026-09-25 (07 D28) |
+| 4. Design | Claude Design explores directions from the Design Brief; Karim chooses; the chosen direction is refined | Approved design | Karim approves direction | **In progress** |
 | 5. Build | Claude Code builds the slice (evening computer sessions); verification loop from 08 §26; Karim tests it as a learner | Working slice meeting 07's Definition of Done | Karim confirms the slice works | Waiting |
 | 6. Expansion | Next lessons, Basic then Advanced — each chunk goes verify → spec → build → test | Growing curriculum | Karim, per chunk | Waiting |
 
@@ -88,7 +88,9 @@ responsibility).
 ## 6. Working Rules for Every Phase
 
 - A phase is closed only when its output is checked against its purpose
-  (Constitution §20) and Karim approves the gate.
+  (Constitution §20) and the gate is approved — by Karim when the gate
+  contains a matter reserved to him (07 D29: e.g. the design direction, the
+  learner test of Phase 5), otherwise by Claude under D29 with a short report.
 - Any material change to a file triggers an impact check on every file that
   depends on it (Constitution §15; dependency lines in file 00 §A10).
 - Save tokens by narrowing context — focused specs, targeted edits, only the
@@ -98,4 +100,20 @@ responsibility).
 
 ## 7. Current Phase
 
-Phase 2 complete (uploaded 2026-09-25). Phase 3: step 3.1 done (Verified Reference, second edition 2026-09-25); step 3.2 done — Karim approved Decisions 22 and 23 (2026-09-25). Decision 24 (`SRCTCM` step) approved, and creation of the three Phase 3 files approved (2026-09-25). 3.4 Design Brief written (`DEIXEN_Design_Brief.md`). 3.3 Slice Build Spec drafted (`DEIXEN_Slice_Build_Spec.md`); its proposals K1–K4 approved (Decision 25); the spec and `CLAUDE.md` approved (Decision 26). 3.5 done (`CLAUDE.md`; code will live in a new repository `deixen-app` beside `DEIXEN-KNOWLEDGE`). Gaps G1–G3 done (2026-09-25): Verified Reference third edition (screen layouts V-14–V-18); slice content and Scope Disclosure as `deixen-app/content/` files. Karim approved K5 and K6 (Decision 27); Claude applied them on 2026-09-25. 3.6 readiness check re-run 2026-09-25 (self-review): passed, subject to Karim's approval of K7 (contact-SSR endings, Build Spec §12) and seven small content fixes. **Now: Phase 3 gate** — Karim approves the pack (Verified Reference, Build Spec, Design Brief, `CLAUDE.md`, content files) → Phase 4 Design. Before Phase 5 (not before Phase 4): the repository `DEIXEN-KNOWLEDGE` must be updated with the current Project files, because Claude Code reads from it (`CLAUDE.md` §2).
+**Phase 4 — Design (started 2026-09-25).** Phase 3 closed: Karim approved the
+pack (07 Decision 28) — Verified Reference (third edition, amended),
+Slice Build Spec, Design Brief, `CLAUDE.md`, content files. Standing
+delegation: 07 Decision 29.
+
+Phase 4 steps: (1) Claude (project lead) prepares the Claude Design session
+from `DEIXEN_Design_Brief.md`; (2) Claude Design proposes 2–3 directions
+(Brief §8); (3) Claude reviews them against file 04's evaluation framework
+and recommends one; (4) **Karim chooses** (reserved, D29); (5) the chosen
+direction is refined across the eight states and breakpoints, with one token
+file; (6) Claude checks it against the Brief and Build Spec; (7) gate — Karim
+approves the direction → Phase 5.
+
+History: Phase 2 complete 2026-09-25. Phase 3: 3.1 Verified Reference
+(editions 1–3); 3.2 Decisions 22–24; 3.3 Build Spec (D25, D26); 3.4 Design
+Brief; 3.5 `CLAUDE.md` (code in `deixen-app` beside `DEIXEN-KNOWLEDGE`);
+G1–G3; Decision 27 applied; 3.6 passed; gate approved (D28), all 2026-09-25.

@@ -2,7 +2,7 @@
 name: DEIXEN Canonical Decisions & Current State
 owns: The single decisions ledger and current project status going forward
 supersedes reading in isolation: AeroBridge_Decisions_and_Current_State.md
-last synchronized: 2026-09-25 (Execution Plan Phase 3 — Decision 27 applied; readiness check 3.6 run; Phase 3 gate prepared)
+last synchronized: 2026-09-25 (Phase 3 closed — Decisions 28–29; Phase 4 begins)
 authority note: Where a decision below is owned in more detail elsewhere in this canonical set (product/architecture, design, engine, curriculum/Coach), this file states the decision and its status, and points there rather than duplicating — the same single-ownership discipline the original NEW document already established and this pass is preserving.
 ---
 
@@ -50,8 +50,12 @@ list lives in `00_DEIXEN_Knowledge_Consolidation_Plan.md` (Corpus Map).
 2026-09-24). The earlier "Pre-Opus Foundation Preparation" phase and its plan
 were ended by Karim's decision on 2026-09-24 and are historical.
 
-**Phase:** Phase 2 (Foundation Synchronization) completed on 2026-09-24.
-**Now:** Phase 3. Step 3.1 produced `DEIXEN_Amadeus_Verified_Reference.md`
+**Phase:** Phase 3 (Verification & readiness) closed on 2026-09-25 —
+Karim approved the gate pack (Decision 28). **Now: Phase 4 (Design)** from
+`DEIXEN_Design_Brief.md`. Standing delegation to Claude: Decision 29.
+
+**Phase 3 record:** Phase 2 (Foundation Synchronization) completed on
+2026-09-24. Phase 3: Step 3.1 produced `DEIXEN_Amadeus_Verified_Reference.md`
 (second edition 2026-09-25). Step 3.2: Karim approved the adjusted slice path
 (Decision 22), the Terminal output rule (Decision 23), and the `SRCTCM`
 step (Decision 24) on 2026-09-25, and approved creating the three Phase 3
@@ -68,9 +72,8 @@ and Claude applied them on 2026-09-25 (Build Spec §4/§5/§12/§13, `CLAUDE.md`
 Reference §3, Design Brief, Scope Disclosure). Readiness check (3.6) run the
 same day: passed, subject to Karim's approval of one new item (Build Spec
 K7 — contact-SSR endings, Verified Reference U-12) and of seven small
-content fixes (listed in `DEIXEN_Slice_Content_Review.md`). **Next: the
-Phase 3 gate** — Karim approves the pack (Verified Reference, Build Spec,
-Design Brief, `CLAUDE.md`, content files) → Phase 4 Design.
+content fixes (listed in `DEIXEN_Slice_Content_Review.md`). Karim approved
+the gate the same day (Decision 28).
 
 **Implementation state:** no codebase exists in the project's hands. The first
 build (Decision 20) will be written from scratch against approved
@@ -387,6 +390,31 @@ an ordinary technical implementation choice, not decided here.
   verified" marker, never taught, and listed in the Scope Disclosure;
   details with no official pattern (stored `SRCTCR`, `RF` before end of
   transaction) stay plain training messages under Decision 23.
+- **Decision 28 — Phase 3 gate. Closed — Approved (2026-09-25).** Karim
+  approved the Phase 3 pack: `DEIXEN_Amadeus_Verified_Reference.md` (third
+  edition, amended U-12–U-14), `DEIXEN_Slice_Build_Spec.md` (with Decision
+  27 applied), `DEIXEN_Design_Brief.md`, `CLAUDE.md`, and the content files
+  (`data/slice.json`, `en/text.json`, `ar/text.json`) including the seven
+  readiness-check fixes; and K7 — contact-SSR endings (Verified Reference
+  U-12) are not taught, a learner-typed ending is accepted and not checked,
+  and the gap is disclosed (`disc.7`). Phase 3 is closed; Phase 4 (Design)
+  begins.
+- **Decision 29 — Standing delegation to the project lead. Closed —
+  Approved (2026-09-25).** Karim delegates to Claude (project lead) the
+  decisions he would otherwise approve on Claude's recommendation. Claude
+  decides, applies, records each such decision here as "by delegation
+  (D29)", and reports it to Karim briefly afterwards; Karim may reverse any
+  of them. **Reserved to Karim — Claude asks first:** (1) product identity,
+  scope, product boundaries, the frozen slice boundary (D8A), new areas or
+  major features, and the curriculum goal (D18); (2) the working name,
+  brand, visual identity and the final design direction (Phase 4 choice);
+  (3) anything involving money, accounts, legal matters, publishing outside
+  the project, or real learners' data; (4) changes to the governance set
+  (Constitution, Execution Plan phases or roles); (5) confirming as a learner
+  that the slice works (Phase 5 gate). **Never delegable, even by
+  request:** lowering the Verification Standard or the teaching boundary
+  (D12, D13) — an honest UNVERIFIED stays the outcome. Claude's reviews
+  remain self-reviews (D17).
 - **Phase 3 files — creation approved (Execution Plan §5).** Karim approved
   creating the Slice Build Spec, the Design Brief, and the Claude Code
   environment files (`CLAUDE.md` and repository scaffolding).

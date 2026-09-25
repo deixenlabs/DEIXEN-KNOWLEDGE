@@ -81,20 +81,22 @@ presented a navy/blue color language as "durable" although colors are open
 | Vertical Slice rule; slice boundary (D8A) | CLOSED — path adjusted by D22; all path commands VERIFIED | Karim | Slice Build Spec (3.3) |
 | Slice path adjustment (D22) | CLOSED — Approved 2026-09-25 | Karim | — |
 | `SRCTCM` step in the slice (D24) | CLOSED — Approved 2026-09-25 | Karim | — |
-| Design Brief (Execution Plan 3.4) | DONE — synchronized with D27 2026-09-25; awaiting Karim at the Phase 3 gate | Karim | Approve at the gate |
+| Design Brief (Execution Plan 3.4) | CLOSED — Approved 2026-09-25 (07 D28) | — | Input to Phase 4 |
 | Slice Build Spec (3.3) | CLOSED — Approved 2026-09-25 (D26) | Karim | — |
 | Build Spec K1–K4 (D25) | CLOSED — Approved 2026-09-25 | Karim | — |
 | `CLAUDE.md` (3.5) | CLOSED — Approved 2026-09-25 (D26) | Karim | — |
 | Build Spec G1 (example screens) | DONE 2026-09-25 — Verified Reference V-14–V-18; residual details U-06–U-11 | Claude | K6 |
-| Build Spec G2–G3 (slice content; Scope Disclosure) | DONE 2026-09-25 — `deixen-app/content/` (3 files); readiness-check fixes applied (7 items, ✎ in the review copy) | Karim | Approve at the Phase 3 gate |
+| Build Spec G2–G3 (slice content; Scope Disclosure) | CLOSED — Approved 2026-09-25 with the 7 readiness-check fixes (07 D28) | — | — |
 | Build Spec K5 — element numbering (V-18 live renumbering vs. literal Build Spec §4 / D14 wording) | CLOSED — Approved 2026-09-25 (07 D27); APPLIED 2026-09-25 (Build Spec §4/§13, `CLAUDE.md` §8, 07 D14, LDS/LXA reading rules) | Claude | — |
 | Build Spec K6 — screen details only partly shown in official examples (U-07–U-11) | CLOSED — Approved 2026-09-25 (07 D27); APPLIED 2026-09-25 (Build Spec §5/§12/§13, `CLAUDE.md` §3/§8, Design Brief §4, `disc.6`, Verified Reference §3) | Claude | — |
-| Build Spec K7 — contact-SSR endings (Verified Reference U-12), found at the readiness check | OPEN — proposal in Build Spec §12; applied provisionally in the content | Karim | Decide at the Phase 3 gate |
-| Name titles other than `MR` (U-13) | UNVERIFIED — slice main passenger changed to `MR` (content fix, awaiting gate) | Claude | Research with the Basic track |
+| Build Spec K7 — contact-SSR endings (Verified Reference U-12), found at the readiness check | CLOSED — Approved 2026-09-25 (07 D28) | — | Research the endings before the Basic track expands |
+| Name titles other than `MR` (U-13) | UNVERIFIED — slice main passenger is `MR` (07 D28) | Claude | Research with the Basic track |
 | `AP` as the PRINT 'Phone' element | UNVERIFIED (Verified Reference U-14); lessons avoid claiming it; `tm.otherMissing` reworded as a DEIXEN task rule | Claude | Verify when the next Reference edition is made; not blocking |
-| Readiness check (3.6) | RUN 2026-09-25 — PASSED subject to Karim's approval of K7 and the 7 content fixes (self-review, 07 D17) | Karim | Phase 3 gate |
-| Phase 3 gate (Execution Plan §3) | PREPARED 2026-09-25 — awaiting Karim | Karim | Approve the pack → Phase 4 |
-| Repository `DEIXEN-KNOWLEDGE` out of date (main folder, read 2026-09-25, does not show the Execution Plan, Constitution, Verified Reference, Build Spec, Design Brief, `CLAUDE.md`; still has 08 under its old name) | OPEN — found 2026-09-25 | Karim | Upload the current Project files before Phase 5 |
+| Readiness check (3.6) | PASSED 2026-09-25 (self-review, 07 D17); K7 and the 7 content fixes approved (07 D28) | — | — |
+| Phase 3 gate (Execution Plan §3) | CLOSED — Approved 2026-09-25 (07 D28) | Karim | — |
+| Standing delegation to the project lead (07 D29) | CLOSED — Approved 2026-09-25; reserved list in 07 D29 | Karim | Claude records delegated decisions in 07 as "by delegation (D29)" |
+| Phase 4 — Design direction | OPEN — reserved to Karim (07 D29) | Karim, with Claude Design | Choose among 2–3 directions |
+| Repository `DEIXEN-KNOWLEDGE` out of date (main folder, read 2026-09-25, does not show the Execution Plan, Constitution, Verified Reference, Build Spec, Design Brief, `CLAUDE.md`; still has 08 under its old name) | CLOSED 2026-09-25 — Karim reports the files are updated in both places | — | Keep both in step after each change |
 | Coach contract (D9); CS contract (D6) | CLOSED | Karim | Carry forward |
 | Evidence, Assessment, Scenario contracts | CLOSED (unbuilt) | Karim | Slice Build Spec, Phase 3 |
 | Domain/SME validation (D7) | SUPERSEDED by D12 | — | — |
