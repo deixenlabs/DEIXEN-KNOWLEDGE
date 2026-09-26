@@ -52,6 +52,16 @@ Verified Reference renderings; Part 1 fixes applied. Answers recorded as 07
 D41. What remains: a short fix pass in a new Claude Design session, then the
 Phase 4 gate (Karim).
 
+Update 2026-09-26 (Phase 4 gate): the session-3 fixes checked (self-review,
+07 D17) — all six applied, every Amadeus display line still matches the
+Verified Reference renderings, `tokens.css` unchanged. **Karim approved the gate
+(07 D42): refined direction A, typefaces, header lockup B, `tokens.css`.
+Phase 4 is closed; Phase 5 (Build) is next.** Preparing Phase 5 (by
+delegation): interface words added as `ui.*` keys (07 D43); the `AN` header
+number gap closed (07 D44); Build Spec §2 and `CLAUDE.md` now point to the
+approved design. One question for Karim (below): how Claude Code will read
+the approved boards.
+
 ## 2. Phase 1 Findings — Disposition
 
 Review type: self-review by the project lead (Decision 17 — independent
@@ -89,7 +99,7 @@ presented a navy/blue color language as "durable" although colors are open
 | Platform Direction (not PWA/backend-first; not a rejection) | CLOSED | Karim | Carry forward |
 | Localization — Arabic + English, RTL + LTR (D11) | CLOSED | Karim | Build approach decided in Phase 3/5 |
 | Design Positioning | CLOSED | Karim | Carry forward |
-| Design Execution (colors, type, logo, identity) | DIRECTION CHOSEN — A "Margin", light-led (07 D31); values, typefaces, wordmark OPEN until the Phase 4 gate | Karim, with Claude Design | Refinement of A; Phase 4 gate |
+| Design Execution (colors, type, logo, identity) | CLOSED for the slice — approved design, typefaces, lockup B, `tokens.css` (07 D42, 2026-09-26); identity provisional | Karim | Carry into Phase 5 (Build Spec §2) |
 | Working name DEIXEN | PROVISIONAL | Karim | Reopen only on evidence (Constitution §1) |
 | Personal-first & Saudi/Gulf framing | CLOSED | Karim | Carry forward |
 | Vertical Slice rule; slice boundary (D8A) | CLOSED — path adjusted by D22; all path commands VERIFIED | Karim | Slice Build Spec (3.3) |
@@ -112,14 +122,15 @@ presented a navy/blue color language as "durable" although colors are open
 | Phase 4 — Design direction | CLOSED — A "Margin" chosen 2026-09-25 (07 D31); B and C not taken | Karim | Refinement (Plan §7 step 5) |
 | Terminal shows Amadeus only; feedback/hints/Coach in a DEIXEN panel (07 D30) | CLOSED — Approved 2026-09-25 | Karim | Applied: Build Spec §5/§13, Brief §4, `CLAUDE.md` §3 |
 | Terminal script/direction (D32); wrong-entry training lines `tm.notAccepted` / `tm.notForTask`, PNR unchanged (D33); long training messages (D34); Phase 4 validation matrix (D35); phone Terminal pans, no wrap (D36) | CLOSED — by delegation (D29), 2026-09-25 | Claude | Karim may reverse any. `tm.notForTask` was added during the impact check (see 07 D33) |
-| Arabic chrome drafts from Claude Design (area names, hint levels, controls, other chrome — list on the canvas board P2-Issues) | REVIEWED 2026-09-26 — two changes (07 D41: "Booking as it stands"; AR Reset task «ابدأ المهمة من جديد»); the rest accepted | Claude; Karim may change any word at the gate | Add as `ui.*` keys to both string files at the Phase 4 gate |
-| Phase 4 gate items reserved to Karim (07 D29 item 2) | OPEN | Karim | (1) approve refined direction A; (2) typefaces — proposal: Public Sans, IBM Plex Mono, Literata; IBM Plex Sans Arabic, Noto Naskh Arabic (all free, open licence); (3) header lockup A or B (Claude recommends B); (4) approve adding `tokens.css` to the code repository as the single token file (Execution Plan §5) |
-| Karim checks the canvas with real fonts (Claude Design could not load web fonts; line breaks in both scripts) | OPEN | Karim | Before the gate |
-| Retry / Reset scope in the Terminal | CLOSED — by delegation 2026-09-25 (07 D37): one "Reset task" in practice only; no "Retry step"; full reset in Growth | Claude | String keys with the Part 2 chrome drafts |
+| Arabic chrome drafts from Claude Design (area names, hint levels, controls, other chrome — list on the canvas board P2-Issues) | DONE 2026-09-26 — 71 `ui.*` keys in both string files, listed in `slice.json` (07 D43; D41 fixes included; one AR wording made count-neutral) | Claude; Karim may change any word | — |
+| Phase 4 gate items reserved to Karim (07 D29 item 2) | CLOSED — Approved 2026-09-26 (07 D42): refined direction A; the five typefaces; lockup B; `tokens.css` in the code repository | Karim | — |
+| Karim checks the canvas with real fonts (line breaks in both scripts) | CLOSED with the gate — Karim was asked to look before approving; no separate report | — | The build checks line breaks at every breakpoint in both languages (Definition of Done) |
+| Retry / Reset scope in the Terminal | CLOSED — by delegation 2026-09-25 (07 D37): one "Reset task" in practice only; no "Retry step"; full reset in Growth | Claude | Done — `ui.term.resetTask`, `ui.reset.everything` (07 D43) |
 | Hint order | CLOSED — by delegation 2026-09-25 (07 D38): in order; inapplicable levels not shown | Claude | — |
 | `ui.assessment.carryover` read "1 hints" (Claude Design Part 1, issue 01) | CLOSED — reworded count-neutral (07 D39) | Claude | — |
 | Chain status words ("Practised" in the Part 1 design) | CLOSED — "Correct in DEIXEN" / dash / Next / Optional (07 D40) | Claude | — |
-| `AN` header number before the weekday: Build Spec §5 says "values in `slice.json`", but `slice.json` holds no such value (found in the Part 1 review) | OPEN — spec gap, not a design matter | Claude | Add a fixed rule to `slice.json` / Build Spec before Phase 5; meaning stays untaught (U-09) |
+| `AN` header number before the weekday: Build Spec §5 says "values in `slice.json`", but `slice.json` held no such value (found in the Part 1 review) | CLOSED 2026-09-26 (07 D44) — fixed value `30` in every `AN` display, never computed from the date; marker; not taught | Claude | — |
+| How Claude Code reads the approved boards: they live on the Claude Design canvas; whether a Claude Code session on Karim's computer can open it is not confirmed | OPEN | Karim | Recommendation: a read-only export of the approved boards into this repository (`design/phase4/`, new files — Execution Plan §5). Until then `CLAUDE.md` §4 says: if the canvas cannot be opened, stop and ask |
 | Real Cryptic host response to each wrong entry in the slice | OPEN — research backlog (07) | Claude | Needs official Cryptic sources (D12); an API host-message list cannot verify it. A verified message replaces the training line in place |
 | Repository `DEIXEN-KNOWLEDGE` out of date (main folder, read 2026-09-25, does not show the Execution Plan, Constitution, Verified Reference, Build Spec, Design Brief, `CLAUDE.md`; still has 08 under its old name) | CLOSED 2026-09-25 — Karim reports the files are updated in both places | — | Keep both in step after each change |
 | Coach contract (D9); CS contract (D6) | CLOSED | Karim | Carry forward |
@@ -135,7 +146,7 @@ presented a navy/blue color language as "durable" although colors are open
 | Absent artifacts (D19); First build (D20); Owner name (D21) | CLOSED | Karim | — |
 | Engine strategy "conformance oracle" (former delegated decision) | WITHDRAWN | — | Replaced by D14 |
 | Evidence/State concrete schema | DONE (delegated) — Slice Build Spec §11; answers the Event Log granularity and chain-continuity questions by design | Claude | — |
-| Coach layout (global vs per-page) | DELEGATED — on the Terminal, Coach is in the DEIXEN panel (07 D30) | Claude Design / Code | Resolve the rest at build |
+| Coach layout (global vs per-page) | DRAWN in the approved design (07 D42): DEIXEN's margin on desktop, the DEIXEN drawer on phones, only when a coach string applies; code structure DELEGATED | Claude Code | At build |
 | Curriculum order (competency vs command order); Lesson 17; 8 Advanced lessons | OPEN | Claude, then Karim | Curriculum authoring after the slice (D18) |
 | Pricing prerequisites of the slice (name before `FXP`?) | UNVERIFIED (U-01) — no longer blocking: D22 puts `NM` before `FXP` | — | — |
 | Old path `AN → SS → FQD → FXP` still written in LDS (§ tiers, ~l.604, ~l.715), LXA (~l.153), 05 | Superseded by D22; LDS/LXA reading rules point to 07; 05 updated | Claude | Slice Build Spec uses the D22 path |
@@ -148,5 +159,4 @@ presented a navy/blue color language as "durable" although colors are open
 
 ## 4. What Is Not Blocking
 
-Absent artifacts (D19), the EgyptAir curriculum (D18), Design Execution (its
-own phase), and the Advanced backlog do not block Phase 3.
+Absent artifacts (D19), the EgyptAir curriculum (D18), Design Execution (closed for the slice, 07 D42), and the Advanced backlog do not block Phase 5.

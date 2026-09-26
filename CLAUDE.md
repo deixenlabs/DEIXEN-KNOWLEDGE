@@ -1,7 +1,7 @@
 # CLAUDE.md — DEIXEN app (first-build slice)
 
 > Status: APPROVED by Karim 2026-09-25 (07 Decision 26). First edition
-> (Execution Plan 3.5); Decision 27 applied 2026-09-25 (§3 rule 2, §8); Decisions 30, 33, 34 applied 2026-09-25 (§3 rule 2). This file is the master copy of the
+> (Execution Plan 3.5); Decision 27 applied 2026-09-25 (§3 rule 2, §8); Decisions 30, 33, 34 applied 2026-09-25 (§3 rule 2); Phase 4 gate (07 Decision 42) applied 2026-09-26 (§2, §4, §5, §8). This file is the master copy of the
 > Claude Code instructions; at build start it becomes the first file of the
 > code repository.
 
@@ -31,7 +31,7 @@ one owner per truth):
 |---|---|
 | `DEIXEN_Slice_Build_Spec.md` | What to build — always |
 | `DEIXEN_Amadeus_Verified_Reference.md` | Any Amadeus syntax, message, or display — the only source |
-| `DEIXEN_Design_Brief.md` + the approved Phase 4 design | Anything visual |
+| The approved Phase 4 design — the Claude Design canvas and the boards listed in spec §2 | Anything visual: layout, identity, states, controls (spec §2 says which boards and how to read them) |
 | `07_DEIXEN_Canonical_Decisions_and_Current_State.md` | Only when the spec cites a decision you need to read |
 
 Do not read the Learning Design Specification or the Learning Experience
@@ -88,7 +88,13 @@ stop and report (§6).
   event (spec §11).
 - Provisional numbers (`CONSOLIDATED_COUNT`, `REINFORCEMENT_FAIL_COUNT`,
   `ESCALATION_ERROR_COUNT`) live in one config file.
-- Until the Phase 4 design is approved: neutral placeholder styling only.
+- Visual values come only from `src/styles/tokens.css` — the approved
+  token file (07 Decision 42), used unchanged; check its sha256 against 07
+  D42 when you add it. Components use its role tokens, never raw colours or
+  sizes. A value the design needs that the file lacks: stop and ask (§6).
+- The design lives on the Claude Design canvas (spec §2). If your session
+  cannot open it, stop and ask Karim — never rebuild a screen from memory
+  or from this file's description.
 
 ## 5. Repository layout
 
@@ -105,6 +111,8 @@ deixen-app/
 │   ├── ui/               ← screens for the eight states (spec §3)
 │   ├── coach/
 │   ├── i18n/
+│   ├── styles/
+│   │   └── tokens.css    ← approved token file (07 D42), unchanged
 │   └── config.ts         ← provisional numbers
 ├── tests/
 │   ├── engine/           ← every checklist item, valid and invalid
@@ -165,6 +173,8 @@ step.
 - [ ] Arabic/RTL and English/LTR both render; layout mirrors correctly.
 - [ ] Breakpoints 320 / 360 / 390 / 430 / 768 / 1024 / 1280–1440 px.
 - [ ] Keyboard-only use works, including the Terminal input.
+- [ ] No raw colour or size outside `tokens.css`; screens match the
+      approved boards (spec §2); header wordmark is lockup B.
 - [ ] Spec §13 Definition of Done items affected by the step still hold.
 
 Report to Karim in short, plain language: what was built, what was tested

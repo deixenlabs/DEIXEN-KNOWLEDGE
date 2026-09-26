@@ -36,8 +36,8 @@ independent review (waived by Karim).
 | 1. Review (read-only) | Look for contradictions, gaps, stale statements | 16 findings (file 13 §2) | Karim reviews findings | **Done** 2026-09-24 |
 | 2. Synchronization | Apply decisions 12–21; fix contradictions; migrate names; mark every file's status | Updated corpus; Corpus Map (file 00) | Karim uploads the files | **Done** 2026-09-25 |
 | 3. Verification & readiness | See §4 | Verified Reference; Slice Build Spec; Design Brief; environment pack | Karim approves the pack | **Done** 2026-09-25 (07 D28) |
-| 4. Design | Claude Design explores directions from the Design Brief; Karim chooses; the chosen direction is refined | Approved design | Karim approves direction | **In progress** — direction A chosen (07 D31); refinement under way |
-| 5. Build | Claude Code builds the slice (evening computer sessions); verification loop from 08 §26; Karim tests it as a learner | Working slice meeting 07's Definition of Done | Karim confirms the slice works | Waiting |
+| 4. Design | Claude Design explores directions from the Design Brief; Karim chooses; the chosen direction is refined | Approved design | Karim approves direction | **Done** 2026-09-26 (07 D42) |
+| 5. Build | Claude Code builds the slice (evening computer sessions); verification loop from 08 §26; Karim tests it as a learner | Working slice meeting 07's Definition of Done | Karim confirms the slice works | **Next** |
 | 6. Expansion | Next lessons, Basic then Advanced — each chunk goes verify → spec → build → test | Growing curriculum | Karim, per chunk | Waiting |
 
 ## 4. Phase 3 in Detail
@@ -81,7 +81,8 @@ every Amadeus behavior in the slice VERIFIED or explicitly handled per 3.2.
 Approved: `DEIXEN_Amadeus_Verified_Reference.md` (Decision 15); the Slice
 Build Spec, the Design Brief (`DEIXEN_Design_Brief.md`), and the Claude Code
 environment files (`CLAUDE.md` and repository scaffolding) — approved by
-Karim 2026-09-25. No other new file without Karim's
+Karim 2026-09-25; `tokens.css`, the one token file in the code repository —
+approved by Karim 2026-09-26 (07 D42). No other new file without Karim's
 approval (Roadmap rule carried forward: a new file needs a real, unowned
 responsibility).
 
@@ -100,35 +101,27 @@ responsibility).
 
 ## 7. Current Phase
 
-**Phase 4 — Design (started 2026-09-25).** Phase 3 closed: Karim approved the
-pack (07 Decision 28) — Verified Reference (third edition, amended),
-Slice Build Spec, Design Brief, `CLAUDE.md`, content files. Standing
-delegation: 07 Decision 29.
+**Phase 5 — Build (next, from 2026-09-26).** Phase 4 closed: Karim approved
+the gate (07 Decision 42) — the refined direction A "Margin", the
+typefaces, header lockup B, and `tokens.css`. Standing delegation: 07
+Decision 29.
 
-Phase 4 steps: (1) Claude (project lead) prepares the Claude Design session
-from `DEIXEN_Design_Brief.md`; (2) Claude Design proposes 2–3 directions
-(Brief §8); (3) Claude reviews them against file 04's evaluation framework
-and recommends one; (4) **Karim chooses** (reserved, D29); (5) the chosen
-direction is refined across the eight states and breakpoints, with one token
-file; (6) Claude checks it against the Brief and Build Spec; (7) gate — Karim
-approves the direction → Phase 5.
+Ready for the first Claude Code session: `DEIXEN_Slice_Build_Spec.md`
+(§2 now names the approved design and the boards to read), `CLAUDE.md`, the
+content files (interface words added as `ui.*` keys, 07 D43; `AN` header
+number rule, 07 D44), `tokens.css`, and the Verified Reference. Phase 5 runs
+as its row in §3 says: Claude Code builds in evening computer sessions,
+following `CLAUDE.md` §7 (build order) and 08 §26 (verification loop);
+Claude (project lead) prepares each session and checks its result; the
+gate is Karim's own test as a learner (07 D29 item 5).
 
-Progress (2026-09-25): steps 1–4 done. Claude Design proposed three
-directions (A "Margin", B "Instrument", C "Airside"); the project lead
-recommended C; **Karim chose A** (07 D31) and ruled that the Terminal shows
-Amadeus only (07 D30). Delegated rules recorded (07 D32–D36), including the
-design-phase validation matrix (D35). Now: step 5 — refinement of A in two
-parts (Part 1: AI-look audit, identity, one `tokens.css`, eight states at
-1440/390 EN; Part 2: Arabic and the other breakpoints); then step 6
-(Claude's check) and step 7 (gate).
-
-Progress (2026-09-26): step 5 delivered (Part 1 with fixes, Part 2: Arabic,
-all breakpoints, phone menu). Step 6 done — Claude's check (self-review):
-passes the Brief and Build Spec; answers and two wording fixes recorded (07
-D41). Remaining: a short fix pass in a new Claude Design session
-(`DEIXEN_Phase4_Claude_Design_Session3_Prompt.md`), then step 7 — Karim's
-gate: approve the refined direction, typefaces, header lockup, and the
-`tokens.css` file.
+Phase 4 record (2026-09-25/26): steps 1–4 — three directions, Karim chose
+A (07 D31) and ruled that the Terminal shows Amadeus only (07 D30);
+delegated rules D32–D36. Step 5 — refinement of A (Part 1: AI-look audit,
+identity, one `tokens.css`, eight states EN; Part 2: Arabic, all
+breakpoints, phone menu; session 3: last fixes). Step 6 — Claude's check
+(self-review): passes the Brief and Build Spec (07 D41; session 3 checked
+2026-09-26). Step 7 — gate approved (07 D42).
 
 History: Phase 2 complete 2026-09-25. Phase 3: 3.1 Verified Reference
 (editions 1–3); 3.2 Decisions 22–24; 3.3 Build Spec (D25, D26); 3.4 Design

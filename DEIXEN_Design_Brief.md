@@ -1,6 +1,6 @@
 ---
 name: DEIXEN Design Brief
-status: CURRENT — first edition, 2026-09-25 (Execution Plan 3.4); synchronized 2026-09-25 with 07 Decision 27 and Verified Reference §2A. Creation approved by Karim (07, Decisions of 2026-09-25). Approved by Karim 2026-09-25 (07 Decision 28). Synchronized 2026-09-25 with 07 Decisions 30–36 (Phase 4: direction A chosen; Terminal content, script, phone and validation rules).
+status: CURRENT — first edition, 2026-09-25 (Execution Plan 3.4); synchronized 2026-09-25 with 07 Decision 27 and Verified Reference §2A. Creation approved by Karim (07, Decisions of 2026-09-25). Approved by Karim 2026-09-25 (07 Decision 28). Synchronized 2026-09-25 with 07 Decisions 30–36 (Phase 4: direction A chosen; Terminal content, script, phone and validation rules). **Phase 4 complete 2026-09-26 (07 Decision 42):** the brief has done its job; the approved design (canvas + `tokens.css`, Build Spec §2) now answers every item of §6. Kept as the record of what Claude Design was asked.
 owns: What Claude Design receives for Phase 4 — the brief only. Adds no decision; every rule below cites its owner.
 does not own: design principles, accessibility, anti-patterns (file 04); product structure (file 03); learner states (LXA); Coach contract (file 06); decisions (file 07); Amadeus behavior (Verified Reference)
 ---
@@ -130,12 +130,12 @@ fill a mockup; if nothing verified fits, use an obviously generic placeholder
 
 | Item | Decided by |
 |---|---|
-| Color palette; light vs. dark (or both) | **Direction decided** — A "Margin", light-led, tokens ready for a later dark theme (07 D31). Exact values: refinement, approved at the Phase 4 gate |
-| Typefaces (Latin, Arabic, monospace) | Karim — at the Phase 4 gate, from the refinement of A |
-| Logo / wordmark / identity. DEIXEN is a **provisional** name (Constitution §1) — identity work must not assume it is final | Karim — at the Phase 4 gate; identity stays provisional (07 D31) |
-| Flight Deck concept — Karim's stated requirement: distinctive, not AI-generic | Karim |
-| Coach layout: one global element vs. per-page component | Delegated to Design/Code within 06's contract (07 Decision 9) |
-| Keyboard-occlusion solution on mobile Terminal | Claude Design |
+| Color palette; light vs. dark (or both) | **Decided** — A "Margin", light-led, tokens ready for a later dark theme (07 D31); values in the approved `tokens.css` (07 D42) |
+| Typefaces (Latin, Arabic, monospace) | **Decided** (07 D42) — IBM Plex Mono; Public Sans + IBM Plex Sans Arabic; Literata + Noto Naskh Arabic |
+| Logo / wordmark / identity. DEIXEN is a **provisional** name (Constitution §1) — identity work must not assume it is final | **Decided for the slice** (07 D42) — drawn wordmark, header lockup B; identity stays provisional |
+| Flight Deck concept — Karim's stated requirement: distinctive, not AI-generic | **Decided** (07 D42) — the booking chain is the Flight Deck; its Next row holds the one action |
+| Coach layout: one global element vs. per-page component | Drawn in the approved design: Coach in DEIXEN's margin on desktop, in the DEIXEN drawer on phones, only when a coach string applies; code structure delegated to Claude Code within 06's contract (07 Decision 9) |
+| Keyboard-occlusion solution on mobile Terminal | **Decided** (07 D42) — frame `P1-04c`: the entry line and a key row (`/` and `-` only) sit above the phone keyboard; the task brief can stay pinned above them (Unpin) |
 
 ## 7. How each direction is judged
 

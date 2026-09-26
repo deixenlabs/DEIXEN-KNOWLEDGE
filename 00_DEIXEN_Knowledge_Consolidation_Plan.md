@@ -36,7 +36,7 @@ length, or the word "Canonical" in its title.
 | `07_DEIXEN_Canonical_Decisions_and_Current_State.md` | Every decision; current state; Verification Standard (D12) | Constitution, Plan |
 | `13_DEIXEN_Decision_Resolution_Register.md` | Status of every decision/open item; Phase 1 findings | 07 |
 | `03_DEIXEN_Canonical_Product_and_Architecture.md` | Product identity, 5 areas, platform, persistence, vertical-slice rule | 07 |
-| `04_DEIXEN_Canonical_Design_System.md` | Design principles, accessibility, anti-patterns; Design Execution: direction A chosen (07 D31), values open until the Phase 4 gate | 03, 07 |
+| `04_DEIXEN_Canonical_Design_System.md` | Design principles, accessibility, anti-patterns; Design Execution closed for the slice: approved design and `tokens.css` (07 D42) | 03, 07 |
 | `06_DEIXEN_Canonical_Curriculum_and_Coach.md` | Curriculum goal and historical baseline; Coach contract; Ghost Mode; Speed Drills | 07 (D12, D13, D18), Verified Reference |
 
 ## A3. Amadeus domain truth, and planned files
@@ -44,10 +44,10 @@ length, or the word "Canonical" in its title.
 | File | Owns / will own | Status |
 |---|---|---|
 | `DEIXEN_Amadeus_Verified_Reference.md` | The only authority for real Amadeus behavior (07 D15) | Current — third edition 2026-09-25 (screen layouts V-14–V-18), amended at the readiness check (U-12–U-14); approved in the Phase 3 gate (07 D28) |
-| `DEIXEN_Slice_Build_Spec.md` | The build specification for the first-build slice; the evidence/state schema | Approved 2026-09-25 (07 D25, D26); G1–G3 closed; D27 (K5–K6) applied; K7 approved (07 D28); 07 D30, D32–D34, D36 applied to §5/§13 (2026-09-25) |
-| `deixen-app/content/` — `data/slice.json`, `en/text.json`, `ar/text.json` | All slice wording and fictional data: lessons, Ghost Mode scripts, task, scenario, feedback/hints, training messages, Coach explanations, contract texts, Scope Disclosure (Build Spec G2–G3) | Approved 2026-09-25 with the readiness-check fixes (07 D28); `tm.notAccepted`, `tm.notForTask` and `feedback[].terminalLine` added by delegation (07 D33, 2026-09-25). Reading copy: `DEIXEN_Slice_Content_Review.md` (not a project file). Lives in the code repository's approved `content/` folder (CLAUDE.md §5), not in this repository; depends on the Verified Reference and the Build Spec |
-| `DEIXEN_Design_Brief.md` | What Claude Design receives for Phase 4 | Approved 2026-09-25 (07 D28) — input to Phase 4; synchronized with 07 D30–D36 (2026-09-25) |
-| `CLAUDE.md` | Claude Code instructions, repository layout, verification checklist (Execution Plan 3.5) | Approved 2026-09-25 (07 D26), D27 applied; D30/D33/D34 applied to §3 — master copy; moves into the code repository `deixen-app` at build start |
+| `DEIXEN_Slice_Build_Spec.md` | The build specification for the first-build slice; the evidence/state schema | Approved 2026-09-25 (07 D25, D26); G1–G3 closed; D27 (K5–K6) applied; K7 approved (07 D28); 07 D30, D32–D34, D36 applied to §5/§13 (2026-09-25); 07 D42 (approved design) to §2 and D44 (`AN` header number) to §5/§12 (2026-09-26) |
+| `deixen-app/content/` — `data/slice.json`, `en/text.json`, `ar/text.json` | All slice wording and fictional data: lessons, Ghost Mode scripts, task, scenario, feedback/hints, training messages, Coach explanations, contract texts, Scope Disclosure (Build Spec G2–G3) | Approved 2026-09-25 with the readiness-check fixes (07 D28); `tm.notAccepted`, `tm.notForTask` and `feedback[].terminalLine` added by delegation (07 D33, 2026-09-25); 71 interface words as `ui.*` keys (07 D43) and `displays.AN.headerNumber` (07 D44) added 2026-09-26. Reading copy: `DEIXEN_Slice_Content_Review.md` (not a project file). Lives in the code repository's approved `content/` folder (CLAUDE.md §5), not in this repository; depends on the Verified Reference and the Build Spec |
+| `DEIXEN_Design_Brief.md` | What Claude Design receives for Phase 4 | Approved 2026-09-25 (07 D28) — input to Phase 4; synchronized with 07 D30–D36 (2026-09-25); its job done at the Phase 4 gate (07 D42) — kept as the record of what Claude Design was asked |
+| `CLAUDE.md` | Claude Code instructions, repository layout, verification checklist (Execution Plan 3.5) | Approved 2026-09-25 (07 D26), D27 applied; D30/D33/D34 applied to §3; 07 D42 applied to §2/§4/§5/§8 (2026-09-26) — master copy; moves into the code repository `deixen-app` at build start |
 
 ## A4. Draft authority — learning foundation
 
@@ -116,6 +116,7 @@ and others named in Part B); and every codebase (the vanilla-JS
 - A change to any upstream file triggers an impact check on everything below it (Constitution §15).
 - 07 D27 (element numbering; partly verified details) → Build Spec §4/§5/§13, `CLAUDE.md` §3/§8, LDS/LXA reading rules, Design Brief §4, Scope Disclosure — impact check done 2026-09-25.
 - 07 D30–D36 (Phase 4: Terminal content and placement, direction A, script/direction, wrong-entry lines, long messages, validation matrix, phone Terminal) → Build Spec §5/§13, Design Brief §4/§6/§8, `CLAUDE.md` §3, file 04, `slice.json`, `en/text.json`, `ar/text.json`, content reading copy, 13, Execution Plan — impact check done 2026-09-25. Not affected: 03 (Behavioral Skeleton unchanged), 06 (panel is "alongside"), LDS/LXA (LXA §18 already has Coach on demand on mobile), Verified Reference, Scope Disclosure (`disc.5` already covers training messages).
+- 07 D42–D44 (Phase 4 gate; interface words as keys; `AN` header number) → Build Spec §2/§5/§12, `CLAUDE.md` §2/§4/§5/§8, file 04, Design Brief (status, §6), `slice.json`, `en/text.json`, `ar/text.json`, content reading copy, 13, Execution Plan §3/§5/§7 — impact check done 2026-09-26. Not affected: 03, 06, LDS/LXA, the Verified Reference (U-09 stays UNVERIFIED; D44 only fixes a displayed value), Scope Disclosure (`disc.6` already lists the header number).
 
 **Repository note (2026-09-25).** Karim reports that the Project and the
 repository now hold the same current files. In the Project, `text.json` is
@@ -126,8 +127,11 @@ obsolete (merged 2026-09-25).
 Design session prompts (session 1; `DEIXEN_Phase4_Claude_Design_Prompt_Refinement_A.md`;
 `DEIXEN_Phase4_Claude_Design_Part1_Fixes.md`; `DEIXEN_Phase4_Claude_Design_Session3_Prompt.md`)
 and the directions artifact (https://claude.ai/artifact/PaSoos61b5By1yqdmUK1JM)
-are session inputs and outputs. What the gate approves — the refined design
-and its one token file — is recorded in 07 when Phase 4 closes.
+are session inputs and outputs. **At the Phase 4 gate (07 D42, 2026-09-26)**
+the canvas at version `1790413092-0523` — the boards listed in Build Spec §2
+— became the approved design, and its `tokens.css` the one token file of
+the code repository (`deixen-app/src/styles/tokens.css`, CLAUDE.md §5). The
+session prompts stay working material.
 
 ---
 

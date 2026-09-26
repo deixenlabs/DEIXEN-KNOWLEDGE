@@ -1,6 +1,6 @@
 ---
 name: DEIXEN Slice Build Spec
-status: CURRENT — APPROVED by Karim 2026-09-25 (07 Decision 26). Updated 2026-09-25: gaps G1–G3 (§5, §12); Decision 27 (K5, K6) applied to §4, §5, §12, §13; K7 (§6 row 5, §12) approved in the Phase 3 gate (07 D28). Phase 4, 2026-09-25: 07 Decisions 30, 32–34, 36 applied to §5 and §13; Decisions 37–38 to §4 and §8. First edition (Execution Plan 3.3); proposals K1–K4 approved (07 Decision 25). With this approval, the LDS/LXA content extracted here is binding for the slice (LDS and LXA reading rules, point 1).
+status: CURRENT — APPROVED by Karim 2026-09-25 (07 Decision 26). Updated 2026-09-25: gaps G1–G3 (§5, §12); Decision 27 (K5, K6) applied to §4, §5, §12, §13; K7 (§6 row 5, §12) approved in the Phase 3 gate (07 D28). Phase 4, 2026-09-25: 07 Decisions 30, 32–34, 36 applied to §5 and §13; Decisions 37–38 to §4 and §8. Phase 4 gate, 2026-09-26: 07 Decision 42 (approved design, `tokens.css`) applied to §2; Decision 44 (`AN` header number) to §5 and §12. First edition (Execution Plan 3.3); proposals K1–K4 approved (07 Decision 25). With this approval, the LDS/LXA content extracted here is binding for the slice (LDS and LXA reading rules, point 1).
 owns: The single build specification Claude Code implements for the first-build slice. It gathers requirements from their owners and designs the evidence/state schema (delegated to Claude — file 13).
 does not own: any decision (07); Amadeus behavior (Verified Reference); product structure (03); design (Design Brief / Phase 4). Where this file and an owner disagree, the owner wins and the conflict is reported.
 ---
@@ -50,9 +50,38 @@ entry outside these limits gets the "not covered in this slice" message
 - **[D] Platform:** frontend-only web app; state in `localStorage`; no
   login; a session is the browser plus its storage (03 Persistence). Stack
   choice is Claude Code's (delegated), recorded in `CLAUDE.md` (3.5).
-- **[D] Visual design** comes from the approved Phase 4 design. Until it
-  exists, build with neutral placeholder styling only; do not invent a
-  visual identity (07 Design Execution OPEN).
+- **[D] Visual design** is the approved Phase 4 design (07 D42): direction
+  A "Margin", on the Claude Design canvas
+  https://claude.ai/artifact/PaSoos61b5By1yqdmUK1JM at version
+  `1790413092-0523`, and its one token file `tokens.css`.
+  - **Values:** every colour, type step (both scripts), space, radius, rule,
+    layout width, motion and layer comes from `tokens.css`, through its role
+    tokens (sections 2–9 of the file), never a raw value — the frames follow
+    the same rule. `tokens.css` is used unchanged (sha256 in 07 D42).
+  - **Typefaces** (07 D42): IBM Plex Mono for the record (Terminal); Public
+    Sans with IBM Plex Sans Arabic for the interface; Literata with Noto
+    Naskh Arabic for DEIXEN's voice; fallbacks as in `tokens.css`. All are
+    open-licence; how they are delivered is a technical choice (CLAUDE.md §4).
+  - **Header wordmark: lockup B** (07 D42). Below 24 px cap height (desktop
+    header 18 px, phone header 15 px) the wordmark keeps its field line and
+    drops the ticks. The frames draw lockup A; B governs.
+  - **Boards to read** (files `project/<name>.dc.html` on the canvas):
+    `P1-B-Identity` (wordmark, mark and icons, header lockups, the three
+    voices), `P1-C-Rules` (what the identity is and must never become),
+    `P1-D-Tokens` (the token file shown), `P1-E-Behaviour` (every Terminal
+    state once), `P1-F-Controls` (default, hover, focus, active, disabled for
+    every control), the eight states in English `P1-01` … `P1-08` at 1440 and
+    390 (including `P1-04c` keyboard open and `P1-04d` DEIXEN drawer open),
+    the same in Arabic `P2-AR-*`, the other widths `P2-BP-*`, the phone menu
+    `P2-Menu-390-EN/AR`, and `P2-Issues` (the record of every design answer).
+    Not part of the design: the session-1 boards (`A*`, `B*`, `C*`,
+    `Issues`), the audit board `P1-A-Audit`, the map board `Main`.
+  - **What a frame is:** one moment of one state. Behaviour comes from this
+    spec (§3–§10); Terminal lines come from the engine and `slice.json`
+    (the lines in frames are samples of the verified renderings); words come
+    from the string files (interface words: `ui.*` keys, 07 D43). Where a
+    frame and this spec disagree, this spec wins and the difference is
+    reported (CLAUDE.md §6).
 - **[D] Accessibility and breakpoints:** file 04 (WCAG 2.1 AA; keyboard;
   320–1440 px). Terminal workspace is never sacrificed on mobile.
 
@@ -164,7 +193,7 @@ plain training messages (07 D23).
 
 | Detail | Reference | How the Terminal shows it |
 |---|---|---|
-| `AN` header number before the weekday; figure after each class letter; the `E0` code group | U-09 | V-14 pattern with the values in `slice.json`; one marker on the display; meanings never taught |
+| `AN` header number before the weekday; figure after each class letter; the `E0` code group | U-09 | V-14 pattern with the values in `slice.json` — the header number is the fixed `displays.AN.headerNumber` (`30`) in every `AN` display, never computed from the date (07 D44); one marker on the display; meanings never taught |
 | `AN` header time when the entry includes a time | U-10 | The time the learner entered, in the V-14 time field, with the marker. Entry without a time → `0000`, as in both official examples (no marker needed) |
 | Stored `SSR CTCM` line with the airline code filled in | U-07 (first part) | V-18 pattern `SSR CTCM` + airline + `HK1` + number, with the marker |
 | PNR redisplay after `AP`, `SRCTCM`/`SRCTCR`, `TK`, `RF` | U-11 | V-18 redisplay under the `RP/` header, with the marker |
@@ -383,6 +412,11 @@ event.
 | # | Item | Claude's recommendation |
 |---|---|---|
 | K7 | Contact-SSR endings (Verified Reference U-12). Every official example ends with something after the number or text (`SRCTCM-3054996244/US`, `SRCTCMAFHK1-0034563214/P1`, `SRCTCR-REFUSED/P3`); two training references describe `/US` as the phone's country, while an airline notice gives the bare format `SRCTCM-Phone number`. Proposal: keep the approved entries (`SRCTCM-` + number; `SRCTCR-` + free text); the lesson shows the official example with its ending and says the ending is outside the slice; an ending typed by the learner is accepted and not checked; listed in the Disclosure (`disc.7`). Alternative: require an ending — this would teach a rule not yet VERIFIED (07 D13) | Agree with the proposal; research the endings before the Basic track expands |
+
+**Closed at the Phase 4 gate, 2026-09-26:** the `AN` header number before
+the weekday had no value in `slice.json` although §5 pointed there — closed
+by 07 Decision 44 (fixed value `30`, never computed, never taught). The
+visual design is approved (07 D42; §2).
 
 **Deferred — not in this slice:** Terminal Screen Literacy candidate (LXA
 §22, new candidate) — outside the frozen boundary (07 D8A); revisit after

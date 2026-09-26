@@ -2,7 +2,7 @@
 name: DEIXEN Canonical Decisions & Current State
 owns: The single decisions ledger and current project status going forward
 supersedes reading in isolation: AeroBridge_Decisions_and_Current_State.md
-last synchronized: 2026-09-26 (Phase 4 — direction chosen, Decisions 30–31; delegated Decisions 32–41; refinement reviewed, gate pending)
+last synchronized: 2026-09-26 (Phase 4 closed — gate approved, Decision 42; delegated Decisions 43–44; Phase 5 next)
 authority note: Where a decision below is owned in more detail elsewhere in this canonical set (product/architecture, design, engine, curriculum/Coach), this file states the decision and its status, and points there rather than duplicating — the same single-ownership discipline the original NEW document already established and this pass is preserving.
 ---
 
@@ -50,17 +50,19 @@ list lives in `00_DEIXEN_Knowledge_Consolidation_Plan.md` (Corpus Map).
 2026-09-24). The earlier "Pre-Opus Foundation Preparation" phase and its plan
 were ended by Karim's decision on 2026-09-24 and are historical.
 
-**Phase:** Phase 3 (Verification & readiness) closed on 2026-09-25 —
-Karim approved the gate pack (Decision 28). **Now: Phase 4 (Design)** from
-`DEIXEN_Design_Brief.md`. Standing delegation to Claude: Decision 29.
-Phase 4 progress (2026-09-25): Claude Design proposed three directions
-(A "Margin", B "Instrument", C "Airside"); Karim chose **A** (Decision 31)
-and fixed what the Terminal may contain (Decision 30). A was refined
-(Execution Plan §7 step 5) against the validation matrix of Decision 35;
-Part 1 and Part 2 were reviewed by the project lead on 2026-09-25/26
-(self-review, D17) and the answers recorded (Decision 41). Remaining before
-the gate: a short fix pass in a new Claude Design session, then Karim's gate
-choices (approve the refined direction; typefaces; header lockup A or B).
+**Phase:** Phase 4 (Design) closed on 2026-09-26 — Karim approved the gate
+(Decision 42). **Next: Phase 5 (Build)** — Claude Code builds the slice from
+`DEIXEN_Slice_Build_Spec.md`, `CLAUDE.md`, the content files, the approved
+design and `tokens.css`. Standing delegation to Claude: Decision 29.
+Phase 4 record: Claude Design proposed three directions (A "Margin",
+B "Instrument", C "Airside"); Karim chose **A** (Decision 31) and fixed what
+the Terminal may contain (Decision 30). A was refined against the validation
+matrix of Decision 35; Part 1 and Part 2 were reviewed by the project lead
+on 2026-09-25/26 (self-review, D17; answers in Decision 41); a third Claude
+Design session applied the last fixes, checked by the project lead on
+2026-09-26; Karim approved the gate the same day (Decision 42). Preparing
+Phase 5, the interface words became string keys (Decision 43) and the `AN`
+header-number gap was closed (Decision 44).
 
 **Phase 3 record:** Phase 2 (Foundation Synchronization) completed on
 2026-09-24. Phase 3: Step 3.1 produced `DEIXEN_Amadeus_Verified_Reference.md`
@@ -88,9 +90,10 @@ build (Decision 20) will be written from scratch against approved
 specifications (Decision 14). No implementation or design execution is
 authorized by this status alone; each follows its Execution Plan gate.
 
-**Design:** Design Positioning closed; direction A "Margin" chosen
-(Decision 31); refinement open until the Phase 4 gate (Execution Plan
-Phase 4).
+**Design:** Design Positioning closed; Design Execution closed for the
+slice — the approved design of Decision 42 (direction A "Margin", refined)
+and its one token file `tokens.css`. Identity stays provisional
+(Constitution §1).
 
 ## Decisions Ledger
 
@@ -132,14 +135,14 @@ applies.
   operational, serious aviation-operations software — never a consumer app,
   classroom product, generic LMS, or entertainment dashboard. Not reopened by
   this consolidation; not affected by the item below.
-- Design Execution — **Direction chosen; refinement OPEN.** Karim chose
-  direction A "Margin" (Decision 31): light-led, with tokens structured so a
-  dark theme can be added later — this closes the light-vs-dark question.
-  Exact token values, typefaces, wordmark and the refined screens are being
-  settled in the Phase 4 refinement and become approved only at the Phase 4
-  gate (Execution Plan §3). Identity stays provisional: DEIXEN is a working
-  name (Constitution §1). The earlier dark-navy/blue execution in file 04
-  remains historical input only.
+- Design Execution — **Closed for the slice (Decision 42, 2026-09-26).**
+  Karim chose direction A "Margin" (Decision 31): light-led, with tokens
+  structured so a dark theme can be added later — this closes the
+  light-vs-dark question. At the Phase 4 gate he approved the refined
+  design, the typefaces, header lockup B and `tokens.css` as the one token
+  file (Decision 42). Identity stays provisional: DEIXEN is a working name
+  (Constitution §1); a dark theme is not designed. The earlier dark-navy/blue
+  execution in file 04 remains historical input only.
 
 ### Amadeus — domain truth, implementation history, and the frozen slice
 - **Domain truth** is owned by `DEIXEN_Amadeus_Verified_Reference.md`
@@ -563,6 +566,62 @@ an ordinary technical implementation choice, not decided here.
   "Booking now" → EN "Booking as it stands" / AR «الحجز كما هو الآن» (the
   old words read as a call to book); AR for "Reset task" → «ابدأ المهمة من
   جديد». Chrome words become string keys at the Phase 4 gate.
+
+### Decisions of 2026-09-26 — Phase 4 gate (Karim) and Phase 5 preparation (by delegation D29)
+
+- **Decision 42 — Phase 4 gate. Closed — Approved (Karim, 2026-09-26).**
+  Karim approved the four gate items (D29 reserved item 2; Execution Plan
+  §5): (a) **the refined direction A "Margin"** — the Claude Design canvas
+  https://claude.ai/artifact/PaSoos61b5By1yqdmUK1JM at version
+  `1790413092-0523`: identity, rules, tokens, behaviour and controls boards
+  (`P1-B` to `P1-F`), the eight states in English (`P1-01` to `P1-08`) and
+  Arabic (`P2-AR-*`), the other widths (`P2-BP-*`), the phone menu
+  (`P2-Menu-*`) and the final issues board (`P2-Issues`). The session-1
+  boards (directions A, B, C), the audit board and the map board are
+  history, not part of the approved design. (b) **Typefaces:** IBM Plex Mono
+  for the record (Terminal); Public Sans with IBM Plex Sans Arabic for the
+  interface; Literata with Noto Naskh Arabic for DEIXEN's voice — all free,
+  open licences. (c) **Header lockup B:** below 24 px cap height (the 18 px
+  desktop header, the 15 px phone header) the wordmark keeps its field line
+  and drops the ticks; from 24 px up A and B are the same drawing. The
+  frames draw A; B governs the build. (d) **`tokens.css`** — the canvas file
+  `project/tokens.css` (sha256
+  `fd09cb17c72ce208eb10baef724111b9db76fb279871bb8a6748bd641645f80e`),
+  unchanged — becomes the one token file in the code repository (new file
+  approved, Execution Plan §5). Basis: the project lead's check of the
+  session-3 result (self-review, D17): the six fixes of Decision 41 applied;
+  every Amadeus display line in every frame matches the Verified Reference
+  renderings (V-14, V-15, V-17, with V-18 numbering) and the demonstration
+  lines keep the verified columns and correct weekdays; `tokens.css` unchanged since Part 2. Karim was
+  asked to check line breaks in both scripts with the real fonts before
+  approving; the build still checks every breakpoint in both languages
+  (Definition of Done). Design Execution is closed for the slice; the name
+  and identity stay provisional (Constitution §1). Phase 4 is closed;
+  Phase 5 (Build) is next.
+- **Decision 43 — Interface words become string keys. Closed — by
+  delegation (D29), 2026-09-26.** The 71 interface words of the approved
+  design (both lists on `P2-Issues`, with the Decision 41 fixes) are added
+  as `ui.*` keys to `en/text.json` and `ar/text.json` and listed in
+  `slice.json` `ui` (with `ui.what.*`, which were in the string files but
+  missing from that list). Words that carry a value are written once with a
+  token: "Start lesson {N}", "Practise {CMD} in the Terminal",
+  "Watch {COMMANDS}", "Entry {N} of {T}" (tokens defined in `slice.json`
+  `rules`). One Arabic wording change: "Watch {COMMANDS}" is «شاهد:
+  {COMMANDS}», not «شاهد الأوامر …», because the plural «الأوامر» is wrong
+  for a script with one command (L01, L10) — count-neutral, as in Decision
+  39. Language names (`ui.lang.en`, `ui.lang.ar`) are the same in both files.
+  Karim may change any word.
+- **Decision 44 — `AN` header number. Closed — by delegation (D29),
+  2026-09-26.** Build Spec §5 said the number before the weekday in the `AN`
+  header takes its value from `slice.json`, which held none (found in the
+  Part 1 review). Rule: every `AN` display in the slice — main task,
+  scenario, Ghost Mode demo — shows the fixed value **30** (the value of the
+  V-14 DEIXEN rendering and the approved design), whatever the date or
+  route (`slice.json` `displays.AN.headerNumber`). It is not computed from
+  the date: that would simulate the one non-official reading ("days until
+  departure", Verified Reference U-09), which Decision 13 forbids. The
+  display carries the "Layout detail not fully verified" marker; the number
+  is never taught; `disc.6` already lists it.
 
 ## Definition of Done — for the current frozen vertical slice
 

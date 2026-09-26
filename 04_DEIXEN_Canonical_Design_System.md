@@ -30,11 +30,20 @@ as Non-Negotiable Product Rule #2 in
 
 > **Update 2026-09-25 (07 Decision 31).** Karim chose direction A "Margin"
 > in Phase 4: light-led, with tokens structured so a dark theme can be added
-> later. Light vs. dark is therefore decided; exact values, typefaces and
-> wordmark stay open until the Phase 4 gate. The rest of this section is the
-> pre-choice framing, kept for context.
+> later.
+>
+> **Update 2026-09-26 (07 Decision 42) — Design Execution CLOSED for the
+> slice.** Karim approved the refined direction A at the Phase 4 gate: the
+> Claude Design canvas (version and boards in 07 D42 and Build Spec §2), the
+> typefaces (IBM Plex Mono; Public Sans + IBM Plex Sans Arabic; Literata +
+> Noto Naskh Arabic), header lockup B, and `tokens.css` as the one token file
+> in the code repository. Exact values now live only in that file — this
+> document keeps principles, accessibility, breakpoints and anti-patterns,
+> which the approved design must still meet. The name and identity stay
+> provisional (Constitution §1); a dark theme is not designed. The rest of
+> this section is the pre-choice framing, kept for context.
 
-**Design Execution — OPEN.** Exact colors and token values, typography/font
+**Design Execution — OPEN (pre-choice framing; closed for the slice by 07 D42).** Exact colors and token values, typography/font
 choices, logo/wordmark, visual identity, composition and layout language,
 imagery, visual effects, detailed visual hierarchy, and overall visual
 expression are all genuinely reopened for the next dedicated design phase.
@@ -69,8 +78,8 @@ responsibility."*
 
 **Color language — historical input, not binding.** The paragraph below is
 the earlier generation's color language, written around the dark-navy/blue
-execution. Exact palette is **OPEN** (Design Execution); light-led direction
-chosen (07 D31); what stays durable is the principle that color carries meaning
+execution. Exact palette: the approved `tokens.css` (07 D42); light-led direction
+(07 D31); what stays durable is the principle that color carries meaning
 (focus, primary action, relationships, success, warning) rather than
 decoration. Earlier wording: deep navy/dark backgrounds for
 focus and reduced visual noise; a confident accent color (electric

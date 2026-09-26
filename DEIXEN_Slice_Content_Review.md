@@ -1,6 +1,6 @@
 # DEIXEN — Slice Content: Review Copy (G2 + G3)
 
-> **Reading copy for Karim's review — not a project file.** The source of truth is the three content files for `deixen-app/content/` (`data/slice.json`, `en/text.json`, `ar/text.json`); this page is generated from them. Author: Claude (project lead), 2026-09-25. Self-review only (07 D17). **Updated 2026-09-25 (readiness check 3.6):** Decision 27 applied; seven small fixes marked ✎ below — all approved by Karim 2026-09-25 (07 Decision 28). **Updated 2026-09-25 (Phase 4):** two training messages added by delegation (07 Decision 33), marked "new" in §5; `ui.assessment.carryover` reworded count-neutral (07 D39); which Terminal line each feedback item triggers is in `slice.json` (`feedback[].terminalLine`).
+> **Reading copy for Karim's review — not a project file.** The source of truth is the three content files for `deixen-app/content/` (`data/slice.json`, `en/text.json`, `ar/text.json`); this page is generated from them. Author: Claude (project lead), 2026-09-25. Self-review only (07 D17). **Updated 2026-09-25 (readiness check 3.6):** Decision 27 applied; seven small fixes marked ✎ below — all approved by Karim 2026-09-25 (07 Decision 28). **Updated 2026-09-25 (Phase 4):** two training messages added by delegation (07 Decision 33), marked "new" in §5; `ui.assessment.carryover` reworded count-neutral (07 D39); which Terminal line each feedback item triggers is in `slice.json` (`feedback[].terminalLine`). **Updated 2026-09-26 (Phase 4 gate):** the 71 interface words of the approved design added as `ui.*` keys (07 Decision 43), listed in the new §7A; the `AN` header number rule (07 Decision 44) is in `slice.json` `displays`.
 
 Every Amadeus statement traces to a VERIFIED entry in `DEIXEN_Amadeus_Verified_Reference.md` (third edition). All flights, fares, names and numbers are fictional.
 
@@ -423,6 +423,84 @@ Note on the ER Ghost script: The ER script deliberately omits TK first, so the d
 | `ui.reset.confirm` |  | Reset everything? All your recorded practice in this browser will be deleted. This cannot be undone. | <span dir="rtl">إعادة ضبط كل شيء؟ سيُحذف كل تدريبك المسجَّل في هذا المتصفح. لا يمكن التراجع عن ذلك.</span> |
 | `ui.what.assessment` |  | assessment | <span dir="rtl">تقييم</span> |
 | `ui.what.scenario` |  | scenario | <span dir="rtl">سيناريو</span> |
+
+## 7A. Interface words (07 Decision 43 — new 2026-09-26)
+
+From the approved design (07 D42), board `P2-Issues`. Tokens: `{N}` a number, `{T}` total entries, `{CMD}` one command, `{COMMANDS}` a Ghost script's commands in the language's list format, `{K}` one key-row character (`slice.json` `rules`).
+
+| Key | Note | English | Arabic |
+|---|---|---|---|
+| `ui.area.flightDeck` |  | Flight Deck | <span dir="rtl">قمرة القيادة</span> |
+| `ui.area.learning` |  | Learning | <span dir="rtl">التعلّم</span> |
+| `ui.area.terminal` |  | Terminal | <span dir="rtl">الطرفية</span> |
+| `ui.area.scenarioBank` |  | Scenario Bank | <span dir="rtl">بنك السيناريوهات</span> |
+| `ui.area.growth` |  | Growth | <span dir="rtl">التطوّر</span> |
+| `ui.nav.areas` |  | Areas | <span dir="rtl">الأقسام</span> |
+| `ui.nav.homeLink` |  | DEIXEN, Flight Deck | <span dir="rtl">DEIXEN، قمرة القيادة</span> |
+| `ui.nav.language` |  | Language | <span dir="rtl">اللغة</span> |
+| `ui.nav.menu` |  | Menu | <span dir="rtl">القائمة</span> |
+| `ui.nav.close` |  | Close | <span dir="rtl">إغلاق</span> |
+| `ui.lang.en` |  | English | <span dir="rtl">English</span> |
+| `ui.lang.ar` |  | العربية | <span dir="rtl">العربية</span> |
+| `ui.planned` |  | Planned · not available yet | <span dir="rtl">مخطَّط · غير متاح بعد</span> |
+| `ui.chain.label` |  | Booking chain | <span dir="rtl">سلسلة الحجز</span> |
+| `ui.task` |  | Task | <span dir="rtl">المهمة</span> |
+| `ui.status` |  | Status | <span dir="rtl">الحالة</span> |
+| `ui.chain.next` |  | Next | <span dir="rtl">التالي</span> |
+| `ui.chain.optional` |  | Optional | <span dir="rtl">اختياري</span> |
+| `ui.lesson.start` |  | Start lesson {N} | <span dir="rtl">ابدأ الدرس {N}</span> |
+| `ui.fd.openGrowth` |  | Open Growth | <span dir="rtl">افتح التطوّر</span> |
+| `ui.fd.openScenario` |  | Open scenario | <span dir="rtl">افتح السيناريو</span> |
+| `ui.fd.moreScenarios` |  | More scenarios | <span dir="rtl">سيناريوهات أخرى</span> |
+| `ui.fd.csTrack` |  | Customer Service track | <span dir="rtl">مسار خدمة العملاء</span> |
+| `ui.objective` |  | Objective | <span dir="rtl">الهدف</span> |
+| `ui.lesson.practise` |  | Practise {CMD} in the Terminal | <span dir="rtl">تدرّب على {CMD} في الطرفية</span> |
+| `ui.lesson.back` |  | Back to Flight Deck | <span dir="rtl">العودة إلى قمرة القيادة</span> |
+| `ui.lesson.inYourTask` |  | In your task | <span dir="rtl">في مهمتك</span> |
+| `ui.ghost.title` | AR count-neutral (07 D43) | Watch {COMMANDS} | <span dir="rtl">شاهد: {COMMANDS}</span> |
+| `ui.ghost.demoBooking` |  | Demonstration booking, not your task | <span dir="rtl">حجز توضيحي، وليس مهمتك</span> |
+| `ui.ghost.explain` |  | DEIXEN types each entry in blue, on a demonstration booking. Amadeus answers in black, as it will when you practise. | <span dir="rtl">يكتب DEIXEN كل إدخال باللون الأزرق على حجز توضيحي. ويردّ Amadeus باللون الأسود، كما سيفعل حين تتدرّب.</span> |
+| `ui.ghost.watching` |  | Watching, not practising | <span dir="rtl">مشاهدة، لا تدريب</span> |
+| `ui.ghost.progress` |  | Entry {N} of {T} | <span dir="rtl">الإدخال {N} من {T}</span> |
+| `ui.ghost.pause` |  | Pause | <span dir="rtl">إيقاف مؤقت</span> |
+| `ui.ghost.replay` |  | Replay | <span dir="rtl">إعادة التشغيل</span> |
+| `ui.ghost.practise` |  | Practise this yourself | <span dir="rtl">تدرّب على هذا بنفسك</span> |
+| `ui.mode.practice` |  | Practice | <span dir="rtl">تدريب</span> |
+| `ui.mode.demonstration` |  | Demonstration | <span dir="rtl">عرض توضيحي</span> |
+| `ui.mode.assessment` |  | Assessment | <span dir="rtl">تقييم</span> |
+| `ui.mode.scenario` |  | Scenario | <span dir="rtl">سيناريو</span> |
+| `ui.term.history` |  | Terminal history | <span dir="rtl">سجل الطرفية</span> |
+| `ui.term.entryLabel` |  | Amadeus entry | <span dir="rtl">إدخال Amadeus</span> |
+| `ui.term.send` |  | Send | <span dir="rtl">إرسال</span> |
+| `ui.term.enterHint` |  | Press Enter to send | <span dir="rtl">اضغط Enter للإرسال</span> |
+| `ui.term.sending` |  | Sending | <span dir="rtl">جارٍ الإرسال</span> |
+| `ui.term.resetTask` | AR 07 D41 | Reset task | <span dir="rtl">ابدأ المهمة من جديد</span> |
+| `ui.term.startAssessment` |  | Start assessment | <span dir="rtl">ابدأ التقييم</span> |
+| `ui.keys.label` |  | Amadeus characters | <span dir="rtl">رموز Amadeus</span> |
+| `ui.keys.type` |  | Type {K} | <span dir="rtl">اكتب {K}</span> |
+| `ui.brief.show` |  | Show brief | <span dir="rtl">عرض الوصف</span> |
+| `ui.brief.hide` |  | Hide brief | <span dir="rtl">إخفاء الوصف</span> |
+| `ui.brief.pinned` |  | Pinned · Task brief | <span dir="rtl">مثبَّت · وصف المهمة</span> |
+| `ui.brief.unpin` |  | Unpin | <span dir="rtl">إلغاء التثبيت</span> |
+| `ui.brief.constraints` |  | Constraints | <span dir="rtl">القيود</span> |
+| `ui.panel.feedback` |  | Feedback | <span dir="rtl">ملاحظة</span> |
+| `ui.panel.coach` |  | Coach | <span dir="rtl">المدرّب</span> |
+| `ui.pnr.asItStands` | 07 D41 | Booking as it stands | <span dir="rtl">الحجز كما هو الآن</span> |
+| `ui.pnr.new` |  | new | <span dir="rtl">جديد</span> |
+| `ui.pnr.was` |  | was {N} | <span dir="rtl">كان {N}</span> |
+| `ui.hints.title` |  | Hints | <span dir="rtl">التلميحات</span> |
+| `ui.hints.levels` |  | Hint levels | <span dir="rtl">مستويات التلميح</span> |
+| `ui.hints.nudge` |  | Nudge | <span dir="rtl">تلميح خفيف</span> |
+| `ui.hints.partial` |  | Partial Reveal | <span dir="rtl">كشف جزئي</span> |
+| `ui.hints.full` |  | Full Reveal | <span dir="rtl">كشف كامل</span> |
+| `ui.assessment.starts` |  | Assessment starts | <span dir="rtl">يبدأ التقييم</span> |
+| `ui.assessment.continue` |  | Continue | <span dir="rtl">متابعة</span> |
+| `ui.growth.recorded` |  | Recorded practice | <span dir="rtl">التدريب المسجَّل</span> |
+| `ui.growth.recordedHere` |  | Recorded practice in this browser | <span dir="rtl">التدريب المسجَّل في هذا المتصفح</span> |
+| `ui.growth.statuses` |  | The three statuses | <span dir="rtl">الحالات الثلاث</span> |
+| `ui.growth.assessmentRow` |  | Assessment | <span dir="rtl">التقييم</span> |
+| `ui.reset.everything` |  | Reset everything | <span dir="rtl">إعادة ضبط كل شيء</span> |
+| `ui.reset.cancel` |  | Cancel | <span dir="rtl">إلغاء</span> |
 
 ## 8. Simulator Scope Disclosure (G3)
 
