@@ -1,6 +1,6 @@
 ---
 name: DEIXEN Slice Build Spec
-status: CURRENT — APPROVED by Karim 2026-09-25 (07 Decision 26). Updated 2026-09-25: gaps G1–G3 (§5, §12); Decision 27 (K5, K6) applied to §4, §5, §12, §13; K7 (§6 row 5, §12) approved in the Phase 3 gate (07 D28). Phase 4, 2026-09-25: 07 Decisions 30, 32–34, 36 applied to §5 and §13; Decisions 37–38 to §4 and §8. Phase 4 gate, 2026-09-26: 07 Decision 42 (approved design, `tokens.css`) applied to §2; Decision 44 (`AN` header number) to §5 and §12; Decision 45 (boards exported to `design/phase4/`) to §2. First edition (Execution Plan 3.3); proposals K1–K4 approved (07 Decision 25). With this approval, the LDS/LXA content extracted here is binding for the slice (LDS and LXA reading rules, point 1).
+status: CURRENT — APPROVED by Karim 2026-09-25 (07 Decision 26). Updated 2026-09-25: gaps G1–G3 (§5, §12); Decision 27 (K5, K6) applied to §4, §5, §12, §13; K7 (§6 row 5, §12) approved in the Phase 3 gate (07 D28). Phase 4, 2026-09-25: 07 Decisions 30, 32–34, 36 applied to §5 and §13; Decisions 37–38 to §4 and §8. Phase 4 gate, 2026-09-26: 07 Decision 42 (approved design, `tokens.css`) applied to §2; Decision 44 (`AN` header number) to §5 and §12; Decision 45 (boards exported to `design/phase4/`) to §2. Phase 5, 2026-09-26: 07 Decisions 46 (`result` on ending events) and 47 (one tab at a time) applied to §11. 2026-09-26: 07 Decision 49 applied to §6 ("not recognized" vs "not covered") and new §6A (rules for build step 2 part B). First edition (Execution Plan 3.3); proposals K1–K4 approved (07 Decision 25). With this approval, the LDS/LXA content extracted here is binding for the slice (LDS and LXA reading rules, point 1).
 owns: The single build specification Claude Code implements for the first-build slice. It gathers requirements from their owners and designs the evidence/state schema (delegated to Claude — file 13).
 does not own: any decision (07); Amadeus behavior (Verified Reference); product structure (03); design (Design Brief / Phase 4). Where this file and an owner disagree, the owner wins and the conflict is reported.
 ---
@@ -237,13 +237,65 @@ Only VERIFIED content from `DEIXEN_Amadeus_Verified_Reference.md`.
 
 - **[DELEGATED] Simulated office profile:** TK is mandatory (V-09 says this
   is an office-profile setting). Disclosed in the Simulator Scope Disclosure.
-- **[D] Nothing else** is simulated as Amadeus behavior. Any other entry →
-  "not covered in this slice". `FXP` after `ER`: the slice ends at the `FXP`
+- **[D] Nothing else** is simulated as Amadeus behavior. **(07 D49,
+  answering app issue I-6)** An entry whose code the Verified Reference
+  names but the slice does not simulate (e.g. `FXX`, `FQN`, `ET`, `SRCTCE`)
+  → `tm.notCovered`; any other entry → `tm.notRecognized` (03: two
+  different messages). `FXP` after `ER`: the slice ends at the `FXP`
   display (Verified Reference U-05).
 - **[D] Error categories** for Coach and evidence use the internal
   8-category taxonomy (LDS §14): FORMAT, DATA_REFERENCE, AVAILABILITY,
   GENERAL, SEQUENCE, MANDATORY_MISSING, DUPLICATE_CONFLICT, LOGICAL. These are
   DEIXEN's own labels, never shown as Amadeus text.
+
+## 6A. Rules for build step 2 part B (07 D49)
+
+**[D] by delegation (07 D29)** — gaps found while preparing build step 2
+part B, closed so the build does not have to guess. None of them claims
+Amadeus behavior beyond the Verified Reference.
+
+1. **`ER` with more than one thing missing.** Row 8 names one response per
+   missing item. When exactly one of these is missing — `TK`; the
+   passenger-contact SSR; `RF`; or any of name / itinerary / `AP` — the
+   Terminal shows that item's response (`NEED TICKETING ARRANGEMENT`; the
+   V-13 warning; `tm.rfMissing`; `tm.otherMissing`). When more than one of
+   these four is missing, it shows `tm.otherMissing`: which message real
+   Amadeus shows first is not verified, so DEIXEN does not pick one. The
+   panel shows `er.fb.missing`; Partial Reveal lists every missing item
+   (`er.partial.*`). The PNR is not filed.
+2. **The V-13 bypass.** After the V-13 warning, if the very next entry is
+   `ER` and nothing else is missing, the PNR is filed without a contact
+   SSR, and the bypass is recorded: checklist item (a) of `ER` fails; the
+   panel shows `er.fb.bypassed` (practice, assessment) or
+   `scn.fb.bypassed` (scenario) and `coach.bypassRecorded`. Any other entry
+   in between (valid or not) cancels the pending bypass; the next `ER`
+   shows the warning again. (V-13 says only that entering `ER` again
+   bypasses it; the "very next entry" window is a DEIXEN rule.)
+3. **The filed PNR (successful `ER`).** V-18: header `RP/` + office ID +
+   `/` + office ID, agent sign (`slice.json` `office.agentSign`), date and
+   time (Z), record locator; then name, segment (the V-18 segment line
+   after end of transaction, ending `*1A/E*`), `AP`, `TK OK` + date + `/`
+   + office ID (the date, as in the official examples, is the PNR's
+   creation date), then the contact SSR.
+   `RF` is not shown (V-10). No tag line above the header (`disc.6`). The
+   record locator (six characters A–Z/0–9), the date and the time are
+   inputs to the engine, which stays pure (no clock, no randomness).
+4. **The stored contact SSR.** `SSR CTCM` line: the V-18 pattern — `SSR
+   CTCM`, `6X`, `HK1`, the number, then the learner's ending exactly as
+   typed if there was one (the official line shows an ending after the
+   number) — with the marker (U-07). Stored `SRCTCR`: `tm.ctcrLine` in
+   place of the line, carrying no element number (it is a training message,
+   not an Amadeus line); nothing follows it, so no number changes.
+5. **`SRCTCR` in the main task** (well formed, but the passenger gave a
+   mobile): `tm.notForTask`, panel `ctc.fb.refusalNotTask`, PNR unchanged.
+   (`SRCTCM` in the scenario already has `scn.fb.ctcmInvented`.)
+6. **`FXP` and completion.** Row 9's checklist holds before or after `ER`
+   (a PNR with a name and a segment). The task is **complete** when `FXP`
+   is accepted after the PNR has been filed by `ER` — also after a bypass
+   filing, which is already recorded as not correct. `FXP` before `ER`
+   prices and counts for the `FXP` skill, but does not complete the task.
+7. **After completion** every further entry gets `tm.sliceEnd` and changes
+   nothing (U-05). In practice the learner starts again with Reset task.
 
 ## 7. Skill model
 
@@ -365,7 +417,7 @@ read (03; LDS §29 item 3). Version mismatch or unreadable data → full reset
 | `id` | Unique reference |
 | `type` | Historical field (03) — see event types below |
 | `command` | Historical field — the literal learner entry |
-| `result` | Historical field — `valid` / `invalid` / `out_of_scope` |
+| `result` | Historical field — `valid` / `invalid` / `out_of_scope`; on `assessment_ended` and `scenario_ended`: `completed` / `abandoned` (07 D46) |
 | `timestamp` | Historical field — ISO 8601 **with milliseconds**; with `seq` answers the granularity question (LDS §21) |
 | `seq` | Strict order within a session, so "immediately preceding" is exact even if two events share a timestamp |
 | `sessionId` | Assessment contract (no cross-session merging); session = one app load until unload **[DELEGATED; resolves LXA open item 3]** |
@@ -384,6 +436,11 @@ read (03; LDS §29 item 3). Version mismatch or unreadable data → full reset
 `assessment_ended` (completed/abandoned), `scenario_started`,
 `scenario_ended` (completed/abandoned). A confirmed reset clears storage
 entirely and records nothing (LXA §8.8).
+
+**One tab at a time (07 D47):** the first open DEIXEN tab keeps the
+record. A tab opened while another is open records nothing, runs no
+interrupted-attempt check, and shows only the `ui.oneTab.*` notice; after
+the other tab closes, a reload makes it the recording tab.
 
 **Engine boundary (03 historical precedent):** the command simulator is pure
 logic with no knowledge of storage; one thin bridge calls it and writes the
