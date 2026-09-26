@@ -1,0 +1,266 @@
+/* ==========================================================================
+   DEIXEN tokens: Direction A "Margin", session 2. Light theme.
+   The single source of every colour, type, spacing, radius, rule, layout,
+   motion and z-layer value. Frames use the ROLE tokens (section 2 onwards)
+   and never a raw value.
+
+   Two tiers:
+   1. Primitives (--p-*) name materials: chart tint, sheet, ink, margin blue.
+      Only this file and the tokens board read them.
+   2. Roles name jobs: surface, text, rule, action, focus. A later dark theme
+      redefines the roles under :root[data-theme="dark"]. No role is renamed.
+
+   One job per colour:
+     black is the record (Amadeus output, the learner's entries) and the
+     interface's own words; blue is DEIXEN (its marks, notes, actions, focus);
+     green is "valid"; red is "irreversible".
+
+   Session 2, Part 2 changes (listed on the issues board): Arabic type steps
+   for meta, lead, section titles and phones; layout tokens by width
+   (1280, 1024, 768); a wider status column; the edge fade removed.
+   ========================================================================== */
+
+:root {
+
+  /* ---------- 1. Primitives: colour (materials, not jobs) ---------- */
+
+  --p-chart-tint: #E6E9E4;        /* pale grey-green of a chart's land tint and of form stock: the desk */
+  --p-sheet: #FFFFFF;             /* white of the sheet of record */
+  --p-ink: #131614;               /* record ink: Amadeus output, learner entries, interface text */
+  --p-ink-2: #3E4541;             /* secondary interface text */
+  --p-ink-3: #58605B;             /* meta text, the prompt mark, DEIXEN's structural numbers */
+  --p-ink-4: #7F8682;             /* disabled text only */
+  --p-rule-field: #727974;        /* edge of anything you can type in or press (3:1 on desk and sheet) */
+  --p-rule-hair: #C4CAC5;         /* hairline divisions between fields and rows (decorative) */
+  --p-margin-blue: #1C4D8C;       /* DEIXEN's ink: an editor's blue pencil deepened to chart blue */
+  --p-margin-blue-deep: #133A6B;  /* DEIXEN's ink when pressed or hovered */
+  --p-blue-black: #16294A;        /* DEIXEN's running text: notes, lesson prose */
+  --p-wash: #E2EAF5;              /* DEIXEN's ground on the sheet: training strip, current step */
+  --p-valid: #19663F;             /* green: "Correct in DEIXEN" */
+  --p-danger: #A12A1E;            /* red: the one irreversible action, reset everything */
+  --p-danger-deep: #7F1F16;       /* red when pressed or hovered */
+  --p-scrim: rgba(19, 22, 20, 0.56); /* dims the page behind a dialog */
+  --p-spec-hatch: rgba(19, 22, 20, 0.10); /* mockup-only hatch for the phone's own keyboard */
+
+  /* ---------- 2. Roles: surfaces ---------- */
+
+  --surface-desk: var(--p-chart-tint);       /* app ground: the desk everything sits on */
+  --surface-sheet: var(--p-sheet);           /* the Terminal sheet, fields you type in, dialogs */
+  --surface-wash: var(--p-wash);             /* DEIXEN's ground: training strip, current step, pressed state */
+  --surface-scrim: var(--p-scrim);           /* behind a dialog */
+  --surface-spec: var(--p-spec-hatch);       /* mockup-only: stands for hardware we do not draw */
+
+  /* ---------- 2. Roles: text ---------- */
+
+  --text-record: var(--p-ink);               /* Amadeus output and what the learner types */
+  --text-primary: var(--p-ink);              /* interface text: titles, labels of controls */
+  --text-secondary: var(--p-ink-2);          /* supporting interface text */
+  --text-meta: var(--p-ink-3);               /* meta, prompt mark, DEIXEN's structural numbers */
+  --text-disabled: var(--p-ink-4);           /* a control that cannot be used yet */
+  --text-deixen: var(--p-margin-blue);       /* DEIXEN's labels, marks, links, demonstration entries */
+  --text-deixen-body: var(--p-blue-black);   /* DEIXEN's running text */
+  --text-valid: var(--p-valid);              /* "Correct in DEIXEN" and nothing else */
+  --text-danger: var(--p-danger);            /* wording of the irreversible action */
+  --text-on-action: var(--p-sheet);          /* words on a filled action */
+
+  /* ---------- 2. Roles: rules (colours) ---------- */
+
+  --rule-hairline-color: var(--p-rule-hair); /* rows, fields, divisions */
+  --rule-field-color: var(--p-rule-field);   /* boundary of inputs and secondary controls */
+  --rule-strong-color: var(--p-ink);         /* the Terminal sheet's border, a section's head rule */
+  --rule-margin-color: var(--p-margin-blue); /* the margin rule: where DEIXEN's side begins */
+  --rule-mark-color: var(--p-margin-blue);   /* proof mark, marker bracket, leaders, margin tick */
+
+  /* ---------- 2. Roles: actions and focus ---------- */
+
+  --action-primary: var(--p-margin-blue);            /* the one recommended action on a screen */
+  --action-primary-hover: var(--p-margin-blue-deep); /* primary, pointer over */
+  --action-primary-active: var(--p-blue-black);      /* primary, pressed */
+  --action-secondary-ground: var(--p-sheet);         /* secondary controls sit on sheet white */
+  --action-pressed-ground: var(--p-wash);            /* secondary, pressed or selected */
+  --action-danger: var(--p-danger);                  /* reset everything */
+  --action-danger-hover: var(--p-danger-deep);       /* reset everything, pointer over or pressed */
+  --action-disabled-rule: var(--p-rule-hair);        /* outline of a disabled control */
+  --focus-color: var(--p-margin-blue);               /* keyboard focus ring, everywhere */
+  --focus-width: 2px;                                /* focus ring thickness */
+  --focus-offset: 2px;                               /* gap between a control and its focus ring */
+
+  /* ---------- 3. Type: families ---------- */
+
+  --font-record: 'IBM Plex Mono', 'Liberation Mono', ui-monospace, monospace;
+      /* the record: Amadeus output, entries, commands, codes. Dotted zero, 0.6 em pitch */
+  --font-interface: 'Public Sans', 'IBM Plex Sans Arabic', 'Liberation Sans', sans-serif;
+      /* the interface: labels, navigation, controls, training messages. Arabic falls to Plex Sans Arabic */
+  --font-voice: 'Literata', 'Noto Naskh Arabic', 'Liberation Serif', serif;
+      /* DEIXEN's reading voice: margin notes, lesson prose, objectives. Arabic falls to Noto Naskh */
+  --font-arabic-interface: 'IBM Plex Sans Arabic', 'Public Sans', sans-serif;
+      /* Arabic interface face, named for the identity page */
+  --font-arabic-voice: 'Noto Naskh Arabic', 'Literata', serif;
+      /* Arabic reading voice, named for the identity page */
+
+  /* ---------- 3. Type: weights ---------- */
+
+  --weight-regular: 400;   /* running text, record */
+  --weight-medium: 500;    /* entries the learner typed, nav */
+  --weight-semibold: 600;  /* titles, fielded labels, controls */
+  --weight-bold: 700;      /* nothing on screens yet; reserved for print */
+
+  /* ---------- 3. Type: the record (sets the page's rhythm) ---------- */
+
+  --record-size: 14px;          /* Terminal text, desktop */
+  --record-line: 21px;          /* one record line; margin notes sit on this grid */
+  --record-size-compact: 13px;  /* Terminal text, phones */
+  --record-line-compact: 20px;  /* one record line, phones */
+  --record-col: 1ch;            /* one Terminal column: marks are placed in columns */
+  --record-inline: 0.92em;      /* a command set inside prose: mono optically matched to the prose */
+  --record-cols: 72;            /* sheet width in columns; the widest line in this slice is 69. Lines never wrap */
+
+  /* ---------- 3. Type: interface and voice scale (desktop) ---------- */
+
+  --type-label-size: 12px;     --type-label-line: 16px;     /* fielded labels, status words */
+  --type-meta-size: 13px;      --type-meta-line: 18px;      /* meta, hints, captions */
+  --type-ui-size: 14px;        --type-ui-line: 20px;        /* navigation, controls */
+  --type-body-size: 15px;      --type-body-line: 24px;      /* interface prose: task briefs, statements */
+  --type-note-size: 14px;      --type-note-line: 21px;      /* margin notes: on the record line */
+  --type-reading-size: 18px;   --type-reading-line: 30px;   /* lesson prose */
+  --type-lead-size: 18px;      --type-lead-line: 28px;      /* an objective under a title */
+  --type-title-3-size: 20px;   --type-title-3-line: 28px;   /* section titles: the Flight Deck heading and its Next step */
+  --type-title-2-size: 28px;   --type-title-2-line: 35px;   /* page titles (a lesson), the Growth status */
+  --type-title-1-size: 40px;   --type-title-1-line: 46px;   /* board titles only: no learner screen uses display size */
+
+  /* ---------- 3. Type: compact scale (phones) ---------- */
+
+  --type-body-size-compact: 15px;     --type-body-line-compact: 23px;
+  --type-reading-size-compact: 17px;  --type-reading-line-compact: 28px;
+  --type-lead-size-compact: 17px;     --type-lead-line-compact: 26px;
+  --type-title-2-size-compact: 22px;  --type-title-2-line-compact: 28px;
+  --type-title-1-size-compact: 28px;  --type-title-1-line-compact: 33px;
+
+  /* ---------- 3. Type: Arabic scale (Naskh and Arabic sans need more height) ---------- */
+
+  --type-ar-label-size: 13px;     --type-ar-label-line: 20px;     /* fielded labels, status words */
+  --type-ar-meta-size: 14px;      --type-ar-meta-line: 22px;      /* meta, hints, the marker's words (Part 2) */
+  --type-ar-ui-size: 15px;        --type-ar-ui-line: 24px;        /* navigation, controls */
+  --type-ar-body-size: 16px;      --type-ar-body-line: 27px;      /* interface prose */
+  --type-ar-note-size: 16px;      --type-ar-note-line: 28px;      /* margin notes, Naskh */
+  --type-ar-reading-size: 20px;   --type-ar-reading-line: 34px;   /* lesson prose, Naskh */
+  --type-ar-lead-size: 19px;      --type-ar-lead-line: 32px;      /* an objective (Part 2) */
+  --type-ar-title-3-size: 22px;   --type-ar-title-3-line: 34px;   /* section titles (Part 2) */
+  --type-ar-title-2-size: 28px;   --type-ar-title-2-line: 42px;   /* page titles, the Growth status */
+  --type-ar-title-1-size: 36px;   --type-ar-title-1-line: 52px;   /* board titles only */
+
+  /* Arabic on phones (Part 2) */
+  --type-ar-body-size-compact: 16px;     --type-ar-body-line-compact: 26px;
+  --type-ar-reading-size-compact: 18px;  --type-ar-reading-line-compact: 31px;
+  --type-ar-lead-size-compact: 18px;     --type-ar-lead-line-compact: 29px;
+  --type-ar-title-2-size-compact: 24px;  --type-ar-title-2-line-compact: 36px;
+  --type-ar-title-1-size-compact: 28px;  --type-ar-title-1-line-compact: 42px;
+
+  /* ---------- 4. Spacing (4 px base) ---------- */
+
+  --space-1: 4px;    /* inside a field: label to value */
+  --space-2: 8px;    /* between a mark and its words */
+  --space-3: 12px;   /* between lines of a note */
+  --space-4: 16px;   /* inside a control; phone page margin */
+  --space-5: 20px;   /* between rows of a form */
+  --space-6: 24px;   /* between fields */
+  --space-7: 32px;   /* between groups */
+  --space-8: 40px;   /* desktop page margin; column gap */
+  --space-9: 48px;   /* between sections */
+  --space-10: 64px;  /* above the one next action */
+
+  /* ---------- 5. Radius: square by default ---------- */
+
+  --radius-none: 0;       /* sheets, fields, rows, notes: paper has square corners */
+  --radius-control: 2px;  /* buttons and inputs only: a 2 px ease on the corner, not a pill */
+
+  /* ---------- 6. Rules (widths) ---------- */
+
+  --rule-hairline: 1px;   /* rows, fields */
+  --rule-strong: 2px;     /* head of a section; the sheet uses hairline in strong colour */
+  --rule-margin: 1px;     /* the margin rule */
+  --rule-tick: 2px;       /* margin tick: "you are here", DEIXEN's mark at the start of its strip */
+  --rule-mark: 1.5px;     /* proof mark and leaders */
+  --tick-length: 14px;    /* height of the margin tick */
+  --leader-end: 6px;      /* the small stop at the end of a leader */
+  --arrowhead: 7px;       /* the proof mark's arrowhead: the only arrow in the product */
+
+  /* ---------- 7. Layout ---------- */
+
+  --layout-header: 56px;           /* desktop header */
+  --layout-page-margin: 40px;      /* desktop page margin */
+  --layout-number-col: 56px;       /* DEIXEN's number column */
+  --layout-note-col: 450px;        /* DEIXEN's margin, from the margin rule to the page edge */
+  --layout-column-gap: 40px;       /* between the record or content and the margin rule */
+  --layout-sheet-gutter: 40px;     /* inside the Terminal sheet, left of column 0: proof marks live here */
+  --layout-sheet-head: 40px;       /* the Terminal sheet's head strip */
+  --layout-input: 56px;            /* the entry line */
+  --layout-reading-measure: 680px; /* lesson prose line length */
+  --layout-target: 44px;           /* minimum touch target */
+  --layout-target-dense: 28px;     /* dense secondary controls (24 px minimum) */
+  --layout-marker-label: 170px;    /* width of the unverified-marker label beside a display */
+  --layout-header-compact: 52px;       /* phone header */
+  --layout-page-margin-compact: 16px;  /* phone page margin */
+  --layout-sheet-gutter-compact: 20px; /* phone sheet gutter */
+  --layout-sheet-head-compact: 48px;   /* phone sheet head: holds the 44 px DEIXEN button */
+  --layout-number-col-compact: 40px;   /* phone number column */
+  --layout-keyboard-spec: 336px;       /* mockup-only: the phone's own keyboard and suggestion bar */
+  --layout-key-row: 48px;              /* row of Amadeus characters above the keyboard: / and - only */
+  --layout-pan-bar: 3px;               /* position bar under a panning sheet; the edge is a hard cut, nothing fades over characters */
+  --layout-dialog: 520px;              /* dialog width */
+
+  --layout-command-col: 96px;          /* the command column of a booking-chain row */
+  --layout-status-col: 144px;          /* the status column of a booking-chain row: holds "Correct in DEIXEN" */
+
+  /* ---------- 7. Layout by width (Part 2). The wide values above serve 1440. ---------- */
+
+  --layout-note-col-l: 320px;          /* 1280: the margin, so 72 columns and the marker's words fit beside it */
+  --layout-marker-label-l: 150px;      /* 1280 and phones: the marker's words beside the display */
+  --layout-note-col-m: 300px;          /* 1024: the margin; the record drops to the compact size */
+  --layout-column-gap-m: 32px;         /* 1024: between the Terminal and the margin rule */
+  --layout-page-margin-m: 32px;        /* 1024: page margin */
+  --layout-page-margin-t: 24px;        /* 768: page margin; the Terminal runs full width, the margin docks below it */
+  --layout-marker-label-t: 100px;      /* 768: the marker's words beside the display, in three short lines */
+
+  /* ---------- 7. Identity sizes ---------- */
+
+  --wordmark-cap: 18px;          /* wordmark cap height in the desktop header */
+  --wordmark-cap-compact: 15px;  /* wordmark cap height on phones and tablets */
+  /* Lockup B, for Karim's choice: below 24 px cap height the wordmark drops its ticks and keeps the field line. */
+  --wordmark-cap-display: 72px;  /* wordmark on the identity page */
+  --icon-app: 180px;             /* app icon */
+  --icon-tab-large: 32px;        /* browser icon, large */
+  --icon-tab: 16px;              /* browser icon */
+
+  /* ---------- 8. Motion: explains a change, never decorates ---------- */
+
+  --motion-state: 120ms;        /* hover, press */
+  --motion-reveal: 200ms;       /* a note or drawer appearing */
+  --motion-mark: 420ms;         /* the proof mark drawing from old number to new */
+  --motion-demo-key: 70ms;      /* ghost mode: one keystroke */
+  --motion-demo-hold: 1200ms;   /* ghost mode: pause on each display */
+  --motion-ease: cubic-bezier(0.2, 0, 0, 1); /* one easing for everything */
+
+  /* ---------- 9. Z-layers ---------- */
+
+  --z-record: 0;    /* the record */
+  --z-mark: 1;      /* proof marks, marker bracket (never over characters) */
+  --z-leader: 2;    /* leaders crossing into the margin */
+  --z-header: 10;   /* sticky header */
+  --z-drawer: 20;   /* phone: DEIXEN notes drawer */
+  --z-scrim: 30;    /* dialog scrim */
+  --z-dialog: 31;   /* dialog */
+}
+
+/* Reduced motion: every change is shown in its final state at once. */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-state: 0ms;
+    --motion-reveal: 0ms;
+    --motion-mark: 0ms;
+    --motion-demo-key: 0ms;
+  }
+}
+
+/* A dark theme redefines the ROLE tokens here, and only here. Not designed in this session. */
+/* :root[data-theme="dark"] { --surface-desk: ...; --surface-sheet: ...; --text-record: ...; } */
