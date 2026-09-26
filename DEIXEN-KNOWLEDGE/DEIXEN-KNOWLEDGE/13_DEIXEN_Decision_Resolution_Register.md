@@ -155,7 +155,13 @@ presented a navy/blue color language as "durable" although colors are open
 | Curriculum goal (D18) | CLOSED | Karim | Market evidence sourced during curriculum work |
 | Absent artifacts (D19); First build (D20); Owner name (D21) | CLOSED | Karim | — |
 | Engine strategy "conformance oracle" (former delegated decision) | WITHDRAWN | — | Replaced by D14 |
-| Evidence/State concrete schema | DONE (delegated) — Slice Build Spec §11; answers the Event Log granularity and chain-continuity questions by design | Claude | — |
+| Evidence/State concrete schema | DONE (delegated) — Slice Build Spec §11; answers the Event Log granularity and chain-continuity questions by design. Built and locked as build step 1 (07 D46); `result` on ending events clarified; one tab at a time (07 D47) | Claude | — |
+| Two browser tabs at once (Claude Code `ISSUES.md` I-2, 2026-09-26) | CLOSED — 07 D47 (one tab records; the other shows a notice) | Claude (D29) | Implemented at build step 3 |
+| File 03 said Calculated evidence is persisted (Claude Code `ISSUES.md` I-3) | CORRECTED in 03 (07 D46) | Claude (D29) | — |
+| `AN6X…` header needs a fictional airline name (app `ISSUES.md` I-4) | OPEN — content gap in `slice.json` (07 D48) | Claude (D29) — clearly fictional name, not a real airline | Blocks only the carrier-preferred `AN` case |
+| `AN` weekday codes other than `SU` (app I-5) | NEEDS VALIDATION — shown only inside the marked `AN` display, never taught (07 D48) | Claude — verify (D12) or list as unverified + `disc.6` | Before Karim's learner test |
+| `disc.2` wording vs "not recognized" rule (app I-6) | OPEN — align wording (07 D48) | Claude (D29) | Not blocking |
+| `AN` checklist (b) rarely fails (app I-7) | NOTED — learning-evidence observation (07 D48) | — | Revisit at curriculum expansion |
 | Coach layout (global vs per-page) | DRAWN in the approved design (07 D42): DEIXEN's margin on desktop, the DEIXEN drawer on phones, only when a coach string applies; code structure DELEGATED | Claude Code | At build |
 | Curriculum order (competency vs command order); Lesson 17; 8 Advanced lessons | OPEN | Claude, then Karim | Curriculum authoring after the slice (D18) |
 | Pricing prerequisites of the slice (name before `FXP`?) | UNVERIFIED (U-01) — no longer blocking: D22 puts `NM` before `FXP` | — | — |

@@ -118,6 +118,10 @@ following `CLAUDE.md` §7 (build order) and 08 §26 (verification loop);
 Claude (project lead) prepares each session and checks its result; the
 gate is Karim's own test as a learner (07 D29 item 5).
 
+Build progress: step 1 (evidence store) locked 2026-09-26 (07 D46); step 2
+part A (engine core, `AN`, `SS`, `NM`, `AP`) locked 2026-09-26 (07 D48);
+next, step 2 part B (`SRCTCM`/`SRCTCR`, `TK`, `RF`, `ER`, `FXP`, `FQD`).
+
 Phase 4 record (2026-09-25/26): steps 1–4 — three directions, Karim chose
 A (07 D31) and ruled that the Terminal shows Amadeus only (07 D30);
 delegated rules D32–D36. Step 5 — refinement of A (Part 1: AI-look audit,

@@ -2,7 +2,7 @@
 name: DEIXEN Canonical Decisions & Current State
 owns: The single decisions ledger and current project status going forward
 supersedes reading in isolation: AeroBridge_Decisions_and_Current_State.md
-last synchronized: 2026-09-26 (Phase 4 closed — gate approved, Decision 42; delegated Decisions 43–44; approved boards exported, Decision 45; Phase 5 next)
+last synchronized: 2026-09-26 (Phase 4 closed — gate approved, Decision 42; delegated Decisions 43–44; approved boards exported, Decision 45; Phase 5 started — build step 1 locked, Decisions 46–47; step 2 part A locked, Decision 48)
 authority note: Where a decision below is owned in more detail elsewhere in this canonical set (product/architecture, design, engine, curriculum/Coach), this file states the decision and its status, and points there rather than duplicating — the same single-ownership discipline the original NEW document already established and this pass is preserving.
 ---
 
@@ -51,7 +51,9 @@ list lives in `00_DEIXEN_Knowledge_Consolidation_Plan.md` (Corpus Map).
 were ended by Karim's decision on 2026-09-24 and are historical.
 
 **Phase:** Phase 4 (Design) closed on 2026-09-26 — Karim approved the gate
-(Decision 42). **Next: Phase 5 (Build)** — Claude Code builds the slice from
+(Decision 42). **Current: Phase 5 (Build)** — build step 1 (evidence store)
+locked 2026-09-26 (Decision 46); step 2 part A (engine core, `AN`, `SS`,
+`NM`, `AP`) locked the same day (Decision 48); next, step 2 part B. Claude Code builds the slice from
 `DEIXEN_Slice_Build_Spec.md`, `CLAUDE.md`, the content files, the approved
 design and `tokens.css`. Standing delegation to Claude: Decision 29.
 Phase 4 record: Claude Design proposed three directions (A "Margin",
@@ -641,6 +643,90 @@ an ordinary technical implementation choice, not decided here.
   Plan §5). Closes the file 13 open item "how Claude Code reads the approved
   boards"; `CLAUDE.md` §4's "stop and ask" now applies when a board it needs
   is missing from the folder or fails its manifest check.
+
+### Decisions of 2026-09-26 — Phase 5, build step 1 (by delegation D29)
+
+- **Decision 46 — Build step 1 (evidence store) checked and locked. Closed
+  — by delegation (D29), 2026-09-26.** Claude Code's first session built
+  only `CLAUDE.md` §7 step 1: the store in `deixen-app/src/evidence/` under
+  the one key `deixen.state` = `{ schemaVersion: 1, events }`, with only the
+  Build Spec §11 fields and event types (any other field refused on save
+  and on load), millisecond timestamps, `seq` per session, one `sessionId`
+  per app load, full reset on a version mismatch or unreadable data, a
+  confirmed reset that clears storage and records nothing, and the
+  interrupted-attempt rule (§9, K3). Reported: 96 tests passed, 0 failed;
+  typecheck and build pass; 8 deliberately planted faults each caught, then
+  removed; merged to `main`, tag `step-1-evidence-store`. The project lead
+  checked the report against Build Spec §11 and `CLAUDE.md` §8
+  (self-review, D17: the report was read, the code was not). One
+  clarification, confirmed by Karim during the session and now written into
+  Build Spec §11: on `assessment_ended` and `scenario_ended`, `result` holds
+  `completed` or `abandoned` (no new field). One wording fix: file 03
+  "Persistence Architecture" said Recorded **and Calculated** evidence is
+  persisted; corrected to match §11 (only Recorded events are stored;
+  Calculated values are derived on read) — raised by Claude Code as
+  `ISSUES.md` I-3. Open for the next session: Claude Code reported 70 files
+  passing the design manifest check; the manifest lists 69 (68 boards and
+  `tokens.css`) — a count to confirm, not a failed check.
+- **Decision 47 — DEIXEN runs in one browser tab at a time. Closed — by
+  delegation (D29), 2026-09-26.** Raised by Claude Code (`ISSUES.md` I-2):
+  with two tabs open, one tab's save can overwrite the other's events, and
+  a second tab opened during a running assessment would wrongly record it
+  as abandoned. Rule: the first open tab keeps the record. A tab that
+  opens while another DEIXEN tab is open records nothing, runs no
+  interrupted-attempt check, and shows only a notice (`ui.oneTab.title`,
+  `ui.oneTab.body`) asking the learner to use one tab; when the other tab
+  is closed, reloading makes this tab the one that records. Wording,
+  added to the string files at build step 3:
+  EN — "DEIXEN is already open in another tab" / "To keep your record
+  accurate, DEIXEN works in one tab at a time. Close this tab and continue
+  in the other one, or close the other one and reload this page." AR —
+  «DEIXEN مفتوح بالفعل في علامة تبويب أخرى» / «للحفاظ على دقة سجلك، يعمل
+  DEIXEN في علامة تبويب واحدة فقط. أغلق هذه العلامة وتابع في الأخرى، أو
+  أغلق الأخرى ثم أعِد تحميل هذه الصفحة.» The notice uses the approved
+  design's existing tokens and patterns; it adds no control that does not
+  work. How the second tab is detected is Claude Code's technical choice
+  (`docs/DECISIONS.md`). Why not "accept and disclose": a record that can
+  silently lose events breaks the evidence contract (Build Spec §11,
+  `CLAUDE.md` §3 rule 5). Implemented at build step 3 (bridge). Karim may
+  change the wording.
+
+- **Decision 48 — Build step 2 part A (engine core, `AN`, `SS`, `NM`,
+  `AP`) checked and locked, with open follow-ups. Closed — by delegation
+  (D29), 2026-09-26.** Claude Code's second session built the pure engine
+  (no clock, storage, randomness, UI or content wording), the one numbering
+  function for every element kind (tests: `SS` 1 → 2 after `NM`,
+  `SSR CTCM` 4 → 5 after `TK`), and the four commands. Reported: 263 tests
+  passed, 0 failed (96 from step 1, 167 new); every checklist item tested
+  passing and failing; every Amadeus line traced to its V-number (test and
+  `docs/DECISIONS.md` T3); 15 planted faults each caught; merged to `main`,
+  tag `step-2a-engine`. The design manifest has 69 lines, all OK — the
+  earlier "70" was a miscount (closes the D46 follow-up). The project lead
+  checked the report (self-review, D17: report read, code not read).
+  **Correction:** the session brief said an `AN` entry without a time
+  needs no marker; Build Spec §5 puts the marker on every `AN` display
+  (U-09), and Claude Code rightly followed the spec — the brief was wrong.
+  **Answered by Karim inside the session** (recorded in the app's
+  `docs/ISSUES.md`; exact wording to be copied here when available):
+  I-5 — the two-letter weekday in the `AN` header uses `MO`…`SU`; only
+  `SU` appears in an official example, so the other six codes are shown
+  only inside the already-marked `AN` display and never taught —
+  **follow-up:** verify them (Decision 12) or add them to the unverified
+  list (Verified Reference U-09 row) and to `disc.6`; I-6 — "not
+  recognized" vs "not covered": an entry whose code is named in the
+  Verified Reference but not simulated gets `tm.notCovered`, anything else
+  `tm.notRecognized` — **follow-up:** `disc.2` says "any other entry" gets
+  "not covered"; align its wording; case — the Terminal field shows typing
+  in uppercase (step 4); the engine never rewrites an entry. **Open:**
+  I-4 — a carrier-preferred `AN6X…` display needs the airline's name in
+  its header (V-14); `slice.json` has the code `6X` but no fictional name,
+  so that one case stops with "not built" until a clearly fictional name
+  is added. **Noted, not blocking:** I-7 — `AN` dates have no year and the
+  V-01 window spans 365 days, so checklist item (b) almost never fails
+  (only `29FEB` and one edge date); it yields little practice evidence —
+  revisit when the curriculum expands. Step 3 must open the store in a
+  non-recording mode for a second tab (D47) and handle Part B commands and
+  the `6X` case, which currently stop with "not built".
 
 ## Definition of Done — for the current frozen vertical slice
 
