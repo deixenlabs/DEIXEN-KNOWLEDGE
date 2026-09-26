@@ -2,7 +2,7 @@
 name: DEIXEN Canonical Decisions & Current State
 owns: The single decisions ledger and current project status going forward
 supersedes reading in isolation: AeroBridge_Decisions_and_Current_State.md
-last synchronized: 2026-09-25 (Phase 4 — direction chosen, Decisions 30–31; delegated Decisions 32–40)
+last synchronized: 2026-09-26 (Phase 4 — direction chosen, Decisions 30–31; delegated Decisions 32–41; refinement reviewed, gate pending)
 authority note: Where a decision below is owned in more detail elsewhere in this canonical set (product/architecture, design, engine, curriculum/Coach), this file states the decision and its status, and points there rather than duplicating — the same single-ownership discipline the original NEW document already established and this pass is preserving.
 ---
 
@@ -55,8 +55,12 @@ Karim approved the gate pack (Decision 28). **Now: Phase 4 (Design)** from
 `DEIXEN_Design_Brief.md`. Standing delegation to Claude: Decision 29.
 Phase 4 progress (2026-09-25): Claude Design proposed three directions
 (A "Margin", B "Instrument", C "Airside"); Karim chose **A** (Decision 31)
-and fixed what the Terminal may contain (Decision 30). A is now being refined
-(Execution Plan §7 step 5) against the validation matrix of Decision 35.
+and fixed what the Terminal may contain (Decision 30). A was refined
+(Execution Plan §7 step 5) against the validation matrix of Decision 35;
+Part 1 and Part 2 were reviewed by the project lead on 2026-09-25/26
+(self-review, D17) and the answers recorded (Decision 41). Remaining before
+the gate: a short fix pass in a new Claude Design session, then Karim's gate
+choices (approve the refined direction; typefaces; header lockup A or B).
 
 **Phase 3 record:** Phase 2 (Foundation Synchronization) completed on
 2026-09-24. Phase 3: Step 3.1 produced `DEIXEN_Amadeus_Verified_Reference.md`
@@ -531,6 +535,34 @@ an ordinary technical implementation choice, not decided here.
   assessment rows show "Completed" or a dash. The design's word
   "Practised" is not used: the skill model does not define it, and it could
   read as competence after any attempt (07 Evidence contract).
+
+### Decisions of 2026-09-26 — Phase 4 (by delegation D29)
+
+- **Decision 41 — Answers to the Part 2 design review. Closed — by
+  delegation (D29), 2026-09-26.** Review of the refinement of direction A
+  (self-review, D17; every Terminal line in every frame compared with the
+  Verified Reference renderings and the demo lines built from V-14/V-15/V-18:
+  no mismatch; no demonstration frame holds the task's answer). Design
+  answers: (a) Arabic notes sit on a grid of record lines that grows; leaders
+  in RTL as drawn; the whole entry line stays left-to-right; the Arabic
+  training strip is anchored at column 0 with its words right-to-left inside
+  it (consistent with D32). (b) Phones: the "Layout detail not fully
+  verified" bracket stays in the gutter, always in view; its words stand
+  beside the display (reached by panning) **and** are repeated in the DEIXEN
+  drawer; the bracket carries the words as its accessible name — so the
+  marker stays visible on phones (D27). (c) 768 uses the phone header with
+  Menu; the Terminal runs full width; DEIXEN's margin docks under it.
+  (d) Phones: the language switch lives in the menu sheet. (e) Completion:
+  the learner's `FXP` entry line, then the V-17 display exactly as recorded,
+  including its own first line `FXP` — nothing merged or dropped (D23).
+  (f) Phones: Reset task and Start assessment at the foot of the DEIXEN
+  drawer, in practice only (D37). (g) "Next" appears on the Flight Deck
+  only; Growth lists evidence. (h) No display-size type on learner screens.
+  (i) Growth with no recorded practice does not show "Reset everything"
+  (nothing to reset — no false affordance). Wording fixes for chrome drafts:
+  "Booking now" → EN "Booking as it stands" / AR «الحجز كما هو الآن» (the
+  old words read as a call to book); AR for "Reset task" → «ابدأ المهمة من
+  جديد». Chrome words become string keys at the Phase 4 gate.
 
 ## Definition of Done — for the current frozen vertical slice
 

@@ -122,8 +122,9 @@ repository now hold the same current files. In the Project, `text.json` is
 `en/text.json` and `text-1.json` is `ar/text.json`; `text_PATCH.json` is
 obsolete (merged 2026-09-25).
 
-**Phase 4 working material (2026-09-25) — not project files.** The Claude
-Design session prompts (session 1; `DEIXEN_Phase4_Claude_Design_Prompt_Refinement_A.md`)
+**Phase 4 working material (2026-09-25/26) — not project files.** The Claude
+Design session prompts (session 1; `DEIXEN_Phase4_Claude_Design_Prompt_Refinement_A.md`;
+`DEIXEN_Phase4_Claude_Design_Part1_Fixes.md`; `DEIXEN_Phase4_Claude_Design_Session3_Prompt.md`)
 and the directions artifact (https://claude.ai/artifact/PaSoos61b5By1yqdmUK1JM)
 are session inputs and outputs. What the gate approves — the refined design
 and its one token file — is recorded in 07 when Phase 4 closes.

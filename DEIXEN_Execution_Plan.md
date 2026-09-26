@@ -122,6 +122,14 @@ parts (Part 1: AI-look audit, identity, one `tokens.css`, eight states at
 1440/390 EN; Part 2: Arabic and the other breakpoints); then step 6
 (Claude's check) and step 7 (gate).
 
+Progress (2026-09-26): step 5 delivered (Part 1 with fixes, Part 2: Arabic,
+all breakpoints, phone menu). Step 6 done — Claude's check (self-review):
+passes the Brief and Build Spec; answers and two wording fixes recorded (07
+D41). Remaining: a short fix pass in a new Claude Design session
+(`DEIXEN_Phase4_Claude_Design_Session3_Prompt.md`), then step 7 — Karim's
+gate: approve the refined direction, typefaces, header lockup, and the
+`tokens.css` file.
+
 History: Phase 2 complete 2026-09-25. Phase 3: 3.1 Verified Reference
 (editions 1–3); 3.2 Decisions 22–24; 3.3 Build Spec (D25, D26); 3.4 Design
 Brief; 3.5 `CLAUDE.md` (code in `deixen-app` beside `DEIXEN-KNOWLEDGE`);

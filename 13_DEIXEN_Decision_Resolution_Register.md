@@ -46,6 +46,12 @@ file 04, `slice.json`, both string files, the content reading copy,
 Execution Plan §3/§7, file 00. Refinement of A under way; three items stay
 open (below).
 
+Update 2026-09-26 (Phase 4, steps 5–6): Part 1 and Part 2 of the refinement
+reviewed (self-review, 07 D17). Every Terminal line in every frame matches the
+Verified Reference renderings; Part 1 fixes applied. Answers recorded as 07
+D41. What remains: a short fix pass in a new Claude Design session, then the
+Phase 4 gate (Karim).
+
 ## 2. Phase 1 Findings — Disposition
 
 Review type: self-review by the project lead (Decision 17 — independent
@@ -106,7 +112,9 @@ presented a navy/blue color language as "durable" although colors are open
 | Phase 4 — Design direction | CLOSED — A "Margin" chosen 2026-09-25 (07 D31); B and C not taken | Karim | Refinement (Plan §7 step 5) |
 | Terminal shows Amadeus only; feedback/hints/Coach in a DEIXEN panel (07 D30) | CLOSED — Approved 2026-09-25 | Karim | Applied: Build Spec §5/§13, Brief §4, `CLAUDE.md` §3 |
 | Terminal script/direction (D32); wrong-entry training lines `tm.notAccepted` / `tm.notForTask`, PNR unchanged (D33); long training messages (D34); Phase 4 validation matrix (D35); phone Terminal pans, no wrap (D36) | CLOSED — by delegation (D29), 2026-09-25 | Claude | Karim may reverse any. `tm.notForTask` was added during the impact check (see 07 D33) |
-| Arabic chrome drafts from Claude Design (hint level names, "Retry step", "Reset task", area names, Customer Service track, other chrome) | OPEN | Claude reviews; Karim approves learner-facing wording | Review with the refinement, then add to the string files |
+| Arabic chrome drafts from Claude Design (area names, hint levels, controls, other chrome — list on the canvas board P2-Issues) | REVIEWED 2026-09-26 — two changes (07 D41: "Booking as it stands"; AR Reset task «ابدأ المهمة من جديد»); the rest accepted | Claude; Karim may change any word at the gate | Add as `ui.*` keys to both string files at the Phase 4 gate |
+| Phase 4 gate items reserved to Karim (07 D29 item 2) | OPEN | Karim | (1) approve refined direction A; (2) typefaces — proposal: Public Sans, IBM Plex Mono, Literata; IBM Plex Sans Arabic, Noto Naskh Arabic (all free, open licence); (3) header lockup A or B (Claude recommends B); (4) approve adding `tokens.css` to the code repository as the single token file (Execution Plan §5) |
+| Karim checks the canvas with real fonts (Claude Design could not load web fonts; line breaks in both scripts) | OPEN | Karim | Before the gate |
 | Retry / Reset scope in the Terminal | CLOSED — by delegation 2026-09-25 (07 D37): one "Reset task" in practice only; no "Retry step"; full reset in Growth | Claude | String keys with the Part 2 chrome drafts |
 | Hint order | CLOSED — by delegation 2026-09-25 (07 D38): in order; inapplicable levels not shown | Claude | — |
 | `ui.assessment.carryover` read "1 hints" (Claude Design Part 1, issue 01) | CLOSED — reworded count-neutral (07 D39) | Claude | — |
