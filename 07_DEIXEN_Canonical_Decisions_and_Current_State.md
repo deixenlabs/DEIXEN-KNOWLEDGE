@@ -2,7 +2,7 @@
 name: DEIXEN Canonical Decisions & Current State
 owns: The single decisions ledger and current project status going forward
 supersedes reading in isolation: AeroBridge_Decisions_and_Current_State.md
-last synchronized: 2026-09-26 (Phase 4 closed — gate approved, Decision 42; delegated Decisions 43–44; approved boards exported, Decision 45; Phase 5 started — build step 1 locked, Decisions 46–47; step 2 part A locked, Decision 48; step 2 part B prepared, Decision 49; part B checked, Decision 50; step 2 locked, Decision 51)
+last synchronized: 2026-09-26 (Phase 4 closed — gate approved, Decision 42; delegated Decisions 43–44; approved boards exported, Decision 45; Phase 5 started — build step 1 locked, Decisions 46–47; step 2 part A locked, Decision 48; step 2 part B prepared, Decision 49; part B checked, Decision 50; step 2 locked, Decision 51; step 3 prepared, Decision 52)
 authority note: Where a decision below is owned in more detail elsewhere in this canonical set (product/architecture, design, engine, curriculum/Coach), this file states the decision and its status, and points there rather than duplicating — the same single-ownership discipline the original NEW document already established and this pass is preserving.
 ---
 
@@ -53,7 +53,7 @@ were ended by Karim's decision on 2026-09-24 and are historical.
 **Phase:** Phase 4 (Design) closed on 2026-09-26 — Karim approved the gate
 (Decision 42). **Current: Phase 5 (Build)** — build step 1 (evidence store)
 locked 2026-09-26 (Decision 46); step 2 part A (engine core, `AN`, `SS`,
-`NM`, `AP`) locked the same day (Decision 48); step 2 part B prepared (Decision 49: the D48 follow-ups I-4, I-5, I-6 closed, and the part B rules written into Build Spec §6A); Claude Code built part B in its third session (not merged: two layouts were missing); the project lead supplied them (Decision 50); session 3B finished, merged and tagged part B (Decision 51). Next: build step 3 (bridge, independence flag, skill states, Growth status, one-tab rule D47). Claude Code builds the slice from
+`NM`, `AP`) locked the same day (Decision 48); step 2 part B prepared (Decision 49: the D48 follow-ups I-4, I-5, I-6 closed, and the part B rules written into Build Spec §6A); Claude Code built part B in its third session (not merged: two layouts were missing); the project lead supplied them (Decision 50); session 3B finished, merged and tagged part B (Decision 51). Build step 3 (bridge, independence flag, skill states, Growth status, one-tab rule D47) prepared (Decision 52: Build Spec §7A); next: Claude Code session 4 builds it. Claude Code builds the slice from
 `DEIXEN_Slice_Build_Spec.md`, `CLAUDE.md`, the content files, the approved
 design and `tokens.css`. Standing delegation to Claude: Decision 29.
 Phase 4 record: Claude Design proposed three directions (A "Margin",
@@ -831,6 +831,73 @@ an ordinary technical implementation choice, not decided here.
   knowledge files (`Downloads\Documents\DEIXEN-KNOWLEDGE`) that differs from
   the one Claude Code reads (`Documents\DEIXEN\DEIXEN-KNOWLEDGE`); only the
   latter is used. Next: build step 3.
+
+### Decisions of 2026-09-28 — Phase 5, preparing build step 3 (by delegation D29)
+
+- **Decision 52 — Rules for build step 3; one-tab and hint strings added.
+  Closed — by delegation (D29), 2026-09-28.** Self-review (D17). While
+  preparing build step 3 (bridge, independence flag, skill states, Growth
+  status) the project lead found places where Build Spec §7–§11 would make
+  the build guess. They are closed in a new Build Spec **§7A** (16 items);
+  no event field or event type is added (§11) and nothing about Amadeus is
+  claimed. The main points: (a) a **run** is the Terminal work on one
+  booking; the booking is not stored, so a reload starts the practice
+  booking empty. (b) **`attemptId` = one step attempt** — the events of one
+  skill in one run until an entry of that skill is valid; so a hint that
+  stays visible (D38) counts against every later entry on that step.
+  (c) `result`: `valid` = every checklist item passed; `invalid` = a slice
+  command with a failed item (every refused `ER` and the V-13 bypass);
+  `out_of_scope` = no checklist (`tm.notRecognized`, `tm.notCovered`,
+  `tm.sliceEnd`). (d) `feedback_shown` carries the feedback item's own skill
+  and kind — so the scenario's `scn.fb.warningShown` (skill `CTC`,
+  corrective) makes the next `CTC` entry non-independent. (e) A Ghost Mode
+  script reveals every skill that has an entry in it. (f) Corrective
+  feedback and a Ghost reveal affect only the first entry on that skill
+  after them ("immediately preceded", §8); without this, one corrective
+  text would block independence for the rest of the session. (g) Skill
+  states come from one pass over the events; `TRANSFERRED` also needs the
+  `CONSOLIDATED` count (so demotion to `CONSOLIDATED` keeps its meaning,
+  LDS §7 Fix 3–4); scenario successes count toward either state only for
+  the load-bearing skills (`CTC`, `ER`); `NEEDS_REINFORCEMENT` is cleared by
+  one valid entry, as §7 says. (h) **Error-Recovery Practice on `ER`** = a
+  refused `ER` (`MANDATORY_MISSING` — every such refusal comes from an
+  element the Verified Reference makes mandatory) followed by a valid `ER`
+  in the same step attempt; a bypass is not a recovery. (i) **Hint
+  levels:** Nudge applies once the step has a wrong entry (it names that
+  entry's error category); Partial Reveal only for `ER` after a refused
+  `ER`; Full Reveal always. Found while checking this: `reveal.ER` reads
+  "Add the missing element first … Missing now: {MISSING_LIST}", which is
+  wrong when nothing is missing — new feedback item **`reveal.ER.ready`**
+  (EN "Type {EXPECTED_ENTRY}" / AR «اكتب {EXPECTED_ENTRY}», corrective; now
+  46 feedback items, 33 diagnostic, 13 corrective); and the token
+  `{MISSING_LIST}` had no definition — now the command codes of the
+  missing elements in path order (`slice.json` `rules`, with `{RF_TEXT}`,
+  `{CTCR_TEXT}`, `{WHAT}`, `{H}`). (j) An assessment or scenario is
+  **completed with every checklist item met** when its run holds a valid
+  `ER` followed by a valid `FXP`. (k) **Growth order:** empty state, then
+  Needs More Practice, then Completed, then In Progress — a current
+  weakness is shown rather than hidden; the last assessment that ended
+  `completed` decides the assessment part (abandoned ones are skipped, K3).
+  Ghost Mode alone leaves the empty state (it is not evidence, §3);
+  `ui.growth.empty` reworded to match: EN "Nothing recorded yet. Your
+  status appears after you finish a lesson or make your first practice
+  entry." / AR «لا يوجد شيء مسجَّل بعد. ستظهر حالتك بعد أن تُنهي درسًا أو
+  تكتب أول إدخال تدريب.» (l) The one-tab strings of Decision 47 added as
+  `ui.oneTab.title` and `ui.oneTab.body` (both string files; listed in
+  `slice.json` `ui`; now 208 keys in each file). (m) Engine inputs: local
+  calendar date (task dates, `AN` window), UTC date and time (filed
+  header), a fresh random record locator for each `ER`; none stored.
+  **Left open, on purpose:** leaving a running assessment or scenario
+  inside the app without closing the browser (K3 covers only closing) —
+  decided before build step 6; whether a Coach explanation shown beside a
+  verified message (e.g. `coach.needTk`) counts as corrective feedback —
+  decided before build step 5 (Coach). Files changed: Build Spec (status,
+  §7A, pointers in §8, §10, §11), `slice.json`, `en/text.json`,
+  `ar/text.json`, 13, Execution Plan §7. Karim may reverse any of these.
+  Also checked 2026-09-28: the GitHub repository's main folder now holds
+  the current files (07 with D51, Build Spec with §6A items 8–10, the
+  content files with 205 keys each) — the layout problem recorded in 13 is
+  closed.
 
 ## Definition of Done — for the current frozen vertical slice
 

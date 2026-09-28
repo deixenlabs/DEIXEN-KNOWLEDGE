@@ -1,6 +1,6 @@
 ---
 name: DEIXEN Slice Build Spec
-status: CURRENT — APPROVED by Karim 2026-09-25 (07 Decision 26). Updated 2026-09-25: gaps G1–G3 (§5, §12); Decision 27 (K5, K6) applied to §4, §5, §12, §13; K7 (§6 row 5, §12) approved in the Phase 3 gate (07 D28). Phase 4, 2026-09-25: 07 Decisions 30, 32–34, 36 applied to §5 and §13; Decisions 37–38 to §4 and §8. Phase 4 gate, 2026-09-26: 07 Decision 42 (approved design, `tokens.css`) applied to §2; Decision 44 (`AN` header number) to §5 and §12; Decision 45 (boards exported to `design/phase4/`) to §2. Phase 5, 2026-09-26: 07 Decisions 46 (`result` on ending events) and 47 (one tab at a time) applied to §11. 2026-09-26: 07 Decision 49 applied to §6 ("not recognized" vs "not covered") and new §6A (rules for build step 2 part B). 2026-09-28: 07 Decision 50 — §6A items 8–10. First edition (Execution Plan 3.3); proposals K1–K4 approved (07 Decision 25). With this approval, the LDS/LXA content extracted here is binding for the slice (LDS and LXA reading rules, point 1).
+status: CURRENT — APPROVED by Karim 2026-09-25 (07 Decision 26). Updated 2026-09-25: gaps G1–G3 (§5, §12); Decision 27 (K5, K6) applied to §4, §5, §12, §13; K7 (§6 row 5, §12) approved in the Phase 3 gate (07 D28). Phase 4, 2026-09-25: 07 Decisions 30, 32–34, 36 applied to §5 and §13; Decisions 37–38 to §4 and §8. Phase 4 gate, 2026-09-26: 07 Decision 42 (approved design, `tokens.css`) applied to §2; Decision 44 (`AN` header number) to §5 and §12; Decision 45 (boards exported to `design/phase4/`) to §2. Phase 5, 2026-09-26: 07 Decisions 46 (`result` on ending events) and 47 (one tab at a time) applied to §11. 2026-09-26: 07 Decision 49 applied to §6 ("not recognized" vs "not covered") and new §6A (rules for build step 2 part B). 2026-09-28: 07 Decision 50 — §6A items 8–10. 2026-09-28: 07 Decision 52 — new §7A (rules for build step 3), pointers in §8, §10, §11. First edition (Execution Plan 3.3); proposals K1–K4 approved (07 Decision 25). With this approval, the LDS/LXA content extracted here is binding for the slice (LDS and LXA reading rules, point 1).
 owns: The single build specification Claude Code implements for the first-build slice. It gathers requirements from their owners and designs the evidence/state schema (delegated to Claude — file 13).
 does not own: any decision (07); Amadeus behavior (Verified Reference); product structure (03); design (Design Brief / Phase 4). Where this file and an owner disagree, the owner wins and the conflict is reported.
 ---
@@ -342,6 +342,166 @@ Amadeus behavior beyond the Verified Reference.
 `CONSOLIDATED_COUNT = 2`, `REINFORCEMENT_FAIL_COUNT = 2`,
 `ESCALATION_ERROR_COUNT = 3`.
 
+## 7A. Rules for build step 3 (07 D52)
+
+**[D] by delegation (07 D29)** — gaps found while preparing build step 3
+(bridge, independence flag, skill states, Growth status), closed so the
+build does not have to guess. They make §7–§11 exact; none adds an event
+field or event type (§11), and none claims Amadeus behavior.
+
+1. **Run.** A run is the Terminal work on one booking. It starts with the
+   first entry after the app loads, after Reset task, or when an assessment
+   or the scenario starts; it ends at Reset task, when another run starts,
+   or when the page unloads. Task completion (§6A item 6) does not end the
+   run (later entries get `tm.sliceEnd`). The booking is not stored (§11
+   stores events only), so after a reload the practice booking starts
+   empty.
+2. **Step attempt — the meaning of `attemptId`.** `attemptId` names one
+   step attempt: the events of one skill in one run, from the first event
+   on that skill until an entry of that skill is `valid` or the run ends.
+   The next event on that skill opens a new step attempt.
+   `command_submitted`, `hint_requested` and `feedback_shown` carry the
+   `attemptId` of their skill's open step attempt. So a hint shown for a
+   step counts against every later entry on that step while it stays
+   visible (07 D38), until the step is passed or the run ends.
+3. **`result` of `command_submitted`**, taken from the engine's result:
+   `valid` — every checklist item passed; `invalid` — a slice command with
+   at least one failed checklist item (this includes every refused `ER`
+   and the V-13 bypass filing, §6A item 2); `out_of_scope` — the engine
+   returns no checklist (`tm.notRecognized`, `tm.notCovered`,
+   `tm.sliceEnd`). `skillId` is the command's skill (`SRCTCM`/`SRCTCR` →
+   `CTC`), empty for `tm.notRecognized`. `errorCategory` is the category of
+   the feedback item the engine returns. Only `invalid` entries are errors.
+4. **`feedback_shown`.** One event for each feedback item the engine
+   returns for an entry (the panel text, §5), carrying that item's own
+   `skillId` and `kind` from `slice.json` — not the skill of the command
+   typed. Example: in the scenario, the V-13 warning after `ER` returns
+   `scn.fb.warningShown` (skill `CTC`, corrective). In `slice.json`
+   feedback items, `context` `practice` means the main task, in practice
+   and in the assessment (§6A item 2). Hints are recorded only as
+   `hint_requested`, never also as `feedback_shown`. Coach explanations
+   (`coach.*`) are not events.
+5. **`ghost_played`.** Recorded when a Ghost Mode script starts, with the
+   lesson's `skillId`. A script reveals every skill that has an entry in it
+   (`slice.json` `ghostScripts`; e.g. `L05-CTC` reveals `AN`, `SS`, `NM`,
+   `AP` and `CTC`). Ghost Mode is not evidence (§3) and never raises a
+   skill above `INTRODUCED`. `lesson_completed` likewise carries its
+   lesson's `skillId`.
+6. **Independence flag (§8)** of a `command_submitted` on skill X — true
+   only if all three hold: (a) no `hint_requested` carries its
+   `attemptId`; (b) no `ghost_played` that reveals X lies between the
+   previous `command_submitted` on X in the same session (or the session
+   start) and this entry; (c) no `feedback_shown` on X with `kind`
+   `corrective` lies in that same window. So (b) and (c) touch only the
+   first entry on X after them — "immediately preceded" in §8. The hint
+   counter is never read.
+7. **Qualifying success** (for `CONSOLIDATED` and `TRANSFERRED`): a
+   `valid`, independent entry in `practice` or `assessment`, or in
+   `scenario` for a load-bearing skill only (`CTC`, `ER` — `slice.json`
+   `scenario.loadBearingSkills`; LDS §7 Fix 4).
+8. **Skill states**, computed on read by one pass over the skill's events
+   in stored order (append-only, one recording tab, 07 D47), with the
+   provisional numbers from the config file:
+   - `INTRODUCED`: a `lesson_completed` or a `ghost_played` that reveals
+     the skill. A skill may reach a higher state without it; the state
+     shown is the highest reached.
+   - `DEMONSTRATED_INDEPENDENT`: one `valid`, independent entry, in any
+     context. Once reached it is kept — demotion stops here.
+   - `CONSOLIDATED`: the qualifying successes counted since the last
+     demotion to `DEMONSTRATED_INDEPENDENT` reach `CONSOLIDATED_COUNT`; for
+     `ER`, Error-Recovery Practice (item 9) must also be on record.
+   - `TRANSFERRED`: `CONSOLIDATED`, and at least one qualifying success
+     since the last demotion from `TRANSFERRED` was in `scenario`. (A
+     transferred skill therefore always meets the CONSOLIDATED count, so
+     demotion to CONSOLIDATED keeps its meaning — LDS §7 Fix 3–4.)
+   - `NEEDS_REINFORCEMENT`: set by an `invalid` entry on a skill at
+     `CONSOLIDATED` or `TRANSFERRED` (any context) when it is not already
+     active; cleared by the next `valid` entry on that skill (§7: "one
+     correct full-checklist attempt" — independence is not required to
+     clear it). While it is active, every `invalid` entry on the skill is
+     a failed reinforcement attempt; `REINFORCEMENT_FAIL_COUNT` consecutive
+     ones demote the skill one level and restart that count:
+     `TRANSFERRED` → `CONSOLIDATED` (the scenario evidence must be earned
+     again; the modifier stays active), `CONSOLIDATED` →
+     `DEMONSTRATED_INDEPENDENT` (the qualifying count restarts at 0; the
+     modifier ends).
+9. **Error-Recovery Practice on `ER`** (§7, Tier 3): a step attempt on `ER`
+   that holds at least one `invalid` `ER` entry with `errorCategory`
+   `MANDATORY_MISSING` and ends with a `valid` `ER`. Every refusal at `ER`
+   in the slice comes from a missing element that the Verified Reference
+   makes mandatory (V-08, V-09, V-10, V-13), so each one counts as meeting
+   a verified failure. Any context; the recovering `ER` need not be
+   independent; a bypass filing is not a recovery. The scenario path
+   "warning, then `SRCTCR`, then `ER`" is one (`slice.json`
+   `scenario.expectedBehavior`).
+10. **Which hint levels apply** (§8, 07 D38), for the current step:
+    *Nudge* applies once the step attempt holds an `invalid` entry, and
+    shows `nudge.` + the `errorCategory` of its last `invalid` entry.
+    *Partial Reveal* applies only to `ER`, once the step attempt holds a
+    refused `ER`; it lists `er.partial.*` for every element missing now.
+    *Full Reveal* always applies: `reveal.<SKILL>`; for `CTC` in the
+    scenario `scn.reveal.ctc`; for `ER`, `reveal.ER` when an element is
+    missing, `reveal.ER.ready` when none is. Levels are given in order
+    among those that apply; the bridge refuses a level that does not apply
+    and a request that skips one that does. Each accepted request records
+    one `hint_requested` — the only place the hint counter grows (§4).
+    `ui.hintLabel` shows the number of `hint_requested` events in the
+    current session.
+11. **Assessment and scenario runs.** Starting one records
+    `assessment_started` or `scenario_started` (with `scenarioId`
+    `scn-refuses-mobile`) and starts a new run on an empty booking with
+    that task's data (`tasks.main` for the assessment, `tasks.scenario` for
+    the scenario) and a new `chainId`. Task completion (§6A item 6) records
+    `assessment_ended` / `scenario_ended` with `result` `completed`. A run
+    **completed with every checklist item met** holds a `valid` `ER`
+    followed by a `valid` `FXP` (a failed entry leaves the booking
+    unchanged, so a booking filed by a valid `ER` means every earlier step
+    was met; a bypass filing is not a valid `ER`). Carry-over
+    (`ui.assessment.carryover`): `{N}` = `command_submitted` events and
+    `{H}` = `hint_requested` events in the current session before
+    `assessment_started`, shown only when either is above 0. No event from
+    another session enters an assessment result. Leaving a running
+    assessment or scenario inside the app (without closing the browser) is
+    not covered by K3; it is decided before build step 6, and step 3
+    offers no such exit.
+12. **Chain practice** (§7). A practice run gets a `chainId` when it starts
+    if all nine required skills are `DEMONSTRATED_INDEPENDENT` or higher at
+    that moment. A chain run is **completed unaided** when it holds a
+    `valid` `ER` followed by a `valid` `FXP`, and from its first event to
+    that `FXP` the session holds no `hint_requested`, no corrective
+    `feedback_shown` and no `ghost_played`. `invalid` entries do not void
+    it (self-corrected errors, LDS §11). One query lists chain runs with
+    this result (§13 "queryable through `chainId`").
+13. **Growth / Readiness order** (§10). Checked in this order; the first
+    that holds is shown: (1) the empty state — no event other than
+    `ghost_played` (Ghost Mode is not evidence, §3); (2) Needs More
+    Practice — a skill has `NEEDS_REINFORCEMENT` active, or the last
+    assessment that ended `completed` was not completed with every
+    checklist item met (abandoned attempts are neither passed nor failed,
+    K3, and are skipped); (3) Completed — the §10 conditions, where "the
+    assessment completed with every checklist item met" and "the scenario
+    completed" both mean item 11; (4) In Progress. Needs More Practice
+    comes before Completed: a current weakness is shown, not hidden.
+    `ui.growth.empty` is worded to match (1). "Reset everything" is offered
+    whenever the status is not the empty state (07 D41 i).
+14. **Interrupted attempts** (§9, K3). The check built in step 1 runs once
+    per load, in the recording tab only (07 D47). The bridge reports the
+    attempts it marked abandoned during this load, so the screen can show
+    `ui.abandoned` once (`{WHAT}` = `ui.what.assessment` or
+    `ui.what.scenario`).
+15. **One tab at a time** (§11, 07 D47). In a second tab the bridge opens
+    the store in a non-recording mode: it writes nothing, runs no
+    interrupted-attempt check, and the screen shows only `ui.oneTab.title`
+    and `ui.oneTab.body`. After the other tab closes, a reload makes this
+    tab the recording tab. How the second tab is detected is Claude Code's
+    choice.
+16. **Engine inputs** (§6A item 3). The bridge gives the engine: the
+    learner's local calendar date (for `{TASK_DATE}`, `{SCN_DATE}`,
+    `{DEMO_DATE}` and the `AN` date window, V-01); the current UTC date and
+    time (the filed header, `Z`); and, for each `ER`, a fresh record
+    locator — six characters A–Z/0–9 from a random source. None of them is
+    stored.
+
 ## 8. Independence, hints and feedback
 
 **[D on approval — LDS §7 Fix 2, §13, §15; LXA §11]**
@@ -355,7 +515,7 @@ Amadeus behavior beyond the Verified Reference.
 - **Every feedback text is authored as `diagnostic` or `corrective`.** Test:
   if the text plus the checklist item lets the learner type the correct
   command without further trial, it is corrective.
-- **Independence flag** (Calculated, per attempt) is true only if: no hint
+- **Independence flag** (Calculated, per attempt; exact rule §7A item 6) is true only if: no hint
   was used on this attempt; no same-command Ghost Mode reveal immediately
   preceded it; and the immediately preceding feedback on this skill was not
   corrective. It is **not** the hint counter and never changes it.
@@ -397,7 +557,7 @@ open items 1–2.
 
 ## 10. Growth / Readiness
 
-**[D]** One qualitative status, computed from evidence at display time,
+**[D]** One qualitative status (order of the rules: §7A item 13), computed from evidence at display time,
 never stored as a separate number (LDS §29 item 3; 07 Evidence contract).
 
 **[D] Status rule (07 D25, K4):**
@@ -434,7 +594,7 @@ read (03; LDS §29 item 3). Version mismatch or unreadable data → full reset
 | `timestamp` | Historical field — ISO 8601 **with milliseconds**; with `seq` answers the granularity question (LDS §21) |
 | `seq` | Strict order within a session, so "immediately preceding" is exact even if two events share a timestamp |
 | `sessionId` | Assessment contract (no cross-session merging); session = one app load until unload **[DELEGATED; resolves LXA open item 3]** |
-| `attemptId` | Groups hint/feedback events with the attempt they belong to — needed for the independence flag |
+| `attemptId` | Groups hint/feedback events with the attempt they belong to — needed for the independence flag. One step attempt (§7A item 2) |
 | `skillId` | Which skill the attempt belongs to |
 | `context` | `practice` / `assessment` / `scenario` — assessment and transfer rules |
 | `chainId` | Set during chain practice, assessment and scenario runs; answers chain-continuity (LDS §29 item 5; LXA open item 5) |

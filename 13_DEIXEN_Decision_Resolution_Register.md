@@ -82,6 +82,13 @@ Execution Plan sit two folders deep (`DEIXEN-KNOWLEDGE/DEIXEN-KNOWLEDGE/`);
 the Build Spec with D46–D47 is not on GitHub at all. Karim is asked to put
 the current files in the main folder (row below).
 
+Update 2026-09-28 (Phase 5, build step 2 locked; step 3 prepared): step 2
+locked (07 D50–D51, tag `step-2b-engine`). Preparing step 3, the gaps in
+Build Spec §7–§11 were closed in a new §7A (07 D52); two strings
+(`ui.oneTab.*`) and one feedback item (`reveal.ER.ready`) added. The GitHub
+main folder, read 2026-09-28, holds the current files: the layout row is
+closed.
+
 ## 2. Phase 1 Findings — Disposition
 
 Review type: self-review by the project lead (Decision 17 — independent
@@ -154,7 +161,7 @@ presented a navy/blue color language as "durable" although colors are open
 | Corpus Map vs repository (found 2026-09-26): 00 A9 listed as absent some files that are in the repository's `Historical/` folders (`PROJECT-20.md`, `SDD.md`, `AMADEUS_CURRICULUM.md`, `COMMAND_REFERENCE.md`, `DESIGN_SYSTEM_UI_BLUEPRINT.md`, `DEVELOPMENT_RULES.md`, `PRODUCT_STRATEGY_UX_ARCHITECTURE-1.md`, the Approved Corpus Review & Opus Readiness Brief, and others); 00 A8 said two historical plans are in the repository, which they are not | CORRECTED in 00 (by delegation, D29) | Claude | Historical only — no current file depends on them (07 D16, D19); not blocking. The repository has two folders, `Historical` and `Historical ` (trailing space) — Karim may merge them when convenient |
 | Real Cryptic host response to each wrong entry in the slice | OPEN — research backlog (07) | Claude | Needs official Cryptic sources (D12); an API host-message list cannot verify it. A verified message replaces the training line in place |
 | Repository `DEIXEN-KNOWLEDGE` out of date (main folder, read 2026-09-25, does not show the Execution Plan, Constitution, Verified Reference, Build Spec, Design Brief, `CLAUDE.md`; still has 08 under its old name) | CLOSED 2026-09-25 — Karim reports the files are updated in both places | — | Keep both in step after each change |
-| Repository layout on GitHub (read 2026-09-26): current files are nested two folders deep; the main folder has older copies; Build Spec D46–D47 missing | OPEN — sync problem (Constitution §5.4, §18) | Karim uploads | Put the current files in the main folder; Claude Code reads the local copy, so Karim's local `DEIXEN-KNOWLEDGE` must hold the current files before session 3 |
+| Repository layout on GitHub (read 2026-09-26): current files are nested two folders deep; the main folder has older copies; Build Spec D46–D47 missing | CLOSED 2026-09-28 — main folder read again: current files (07 with D51, Build Spec §6A items 8–10, content files) (07 D52) | Karim uploads | Keep uploading each update to the main folder |
 | Coach contract (D9); CS contract (D6) | CLOSED | Karim | Carry forward |
 | Evidence, Assessment, Scenario contracts | CLOSED (unbuilt) | Karim | Slice Build Spec, Phase 3 |
 | Domain/SME validation (D7) | SUPERSEDED by D12 | — | — |
@@ -179,6 +186,9 @@ presented a navy/blue color language as "durable" although colors are open
 | Two local copies of `DEIXEN-KNOWLEDGE` on Karim's computer (`Documents\DEIXEN\…` used by Claude Code; `Downloads\Documents\…` git copy) | OPEN — sync hygiene, not blocking (07 D51) | Karim | Keep updates in `Documents\DEIXEN\DEIXEN-KNOWLEDGE`; the Downloads copy can be deleted or kept for GitHub uploads |
 | App I-8 header after end of transaction; I-9 `FQD` layout | CLOSED — DEIXEN renderings in Verified Reference V-18, V-16; `disc.6` (07 D50) | Claude (D29) | Build in the finish session |
 | App I-10 `TK OK` date `DDMMM`; I-11 changes after filing not covered | CLOSED — Karim in session 3 (07 D50; Build Spec §6A item 9) | Karim | — |
+| Gaps for build step 3 (run and step-attempt boundaries; `result` mapping; which skill a feedback event belongs to; Ghost reveals; "immediately preceded"; skill-state pass and demotion; Error-Recovery Practice on `ER`; which hint levels apply; `reveal.ER` when nothing is missing; `{MISSING_LIST}` undefined; assessment/scenario completion; Growth order; `ui.growth.empty` vs the rule; engine inputs) | CLOSED — Build Spec §7A; `reveal.ER.ready`, `ui.oneTab.*`, token rule, `ui.growth.empty` (07 D52) | Claude (D29) | Claude Code session 4 |
+| Leaving a running assessment or scenario inside the app (K3 covers only closing the browser) | OPEN — decide before build step 6 (07 D52) | Claude (D29) | — |
+| Whether a Coach explanation beside a verified message (e.g. `coach.needTk`) counts as corrective feedback for independence | OPEN — decide before build step 5 (07 D52) | Claude (D29) | — |
 | `AN` checklist (b) rarely fails (app I-7) | NOTED — learning-evidence observation (07 D48) | — | Revisit at curriculum expansion |
 | Coach layout (global vs per-page) | DRAWN in the approved design (07 D42): DEIXEN's margin on desktop, the DEIXEN drawer on phones, only when a coach string applies; code structure DELEGATED | Claude Code | At build |
 | Curriculum order (competency vs command order); Lesson 17; 8 Advanced lessons | OPEN | Claude, then Karim | Curriculum authoring after the slice (D18) |
