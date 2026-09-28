@@ -174,7 +174,10 @@ presented a navy/blue color language as "durable" although colors are open
 | `AN` weekday codes other than `SU` (app I-5) | VERIFIED — all seven codes in official `AN` headers (Verified Reference V-14, amended 2026-09-26; 07 D49) | — | — |
 | `disc.2` wording vs "not recognized" rule (app I-6) | CLOSED — `disc.2` EN/AR and Build Spec §6 reworded (07 D49) | Claude (D29) | — |
 | Gaps for build step 2 part B (multiple missing items at `ER`; bypass window; filed-PNR layout; stored `SSR CTCM` ending; `SRCTCR` in the main task; `FXP` before `ER`; entries after completion) | CLOSED — Build Spec §6A (07 D49); V-18 segment line after end of transaction recorded | Claude (D29) | Claude Code session 3 |
-| Exact wording of app `docs/ISSUES.md` I-4…I-7 and `docs/DECISIONS.md` T3 into 07 | OPEN — requested in the session-3 prompt | Claude | After session 3 |
+| Exact wording of app `docs/ISSUES.md` I-4…I-7 and `docs/DECISIONS.md` T3 into 07 | CLOSED — received in the session-3 report; matches D48/D49 in substance (07 D50) | — | — |
+| Build step 2 part B (session 3): built, 552 tests, not merged | OPEN — finish session: I-8 header, I-9 `FQD`, repeat rule for `TK`/`RF` (07 D50) | Claude Code | Merge, tag `step-2b-engine` |
+| App I-8 header after end of transaction; I-9 `FQD` layout | CLOSED — DEIXEN renderings in Verified Reference V-18, V-16; `disc.6` (07 D50) | Claude (D29) | Build in the finish session |
+| App I-10 `TK OK` date `DDMMM`; I-11 changes after filing not covered | CLOSED — Karim in session 3 (07 D50; Build Spec §6A item 9) | Karim | — |
 | `AN` checklist (b) rarely fails (app I-7) | NOTED — learning-evidence observation (07 D48) | — | Revisit at curriculum expansion |
 | Coach layout (global vs per-page) | DRAWN in the approved design (07 D42): DEIXEN's margin on desktop, the DEIXEN drawer on phones, only when a coach string applies; code structure DELEGATED | Claude Code | At build |
 | Curriculum order (competency vs command order); Lesson 17; 8 Advanced lessons | OPEN | Claude, then Karim | Curriculum authoring after the slice (D18) |

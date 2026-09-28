@@ -1,6 +1,6 @@
 ---
 name: DEIXEN Amadeus Verified Reference
-status: CURRENT — third edition, 2026-09-25 (Execution Plan Phase 3.1–3.2; screen layouts added for Build Spec gap G1); amended 2026-09-25 at the readiness check (3.6): U-12–U-14, handling note updated to 07 Decision 27; amended 2026-09-26 (07 Decision 49): V-14 weekday codes, V-18 segment line after end of transaction. Scope so far: the first-build slice (07 Decisions 22, 24) and its prerequisites.
+status: CURRENT — third edition, 2026-09-25 (Execution Plan Phase 3.1–3.2; screen layouts added for Build Spec gap G1); amended 2026-09-25 at the readiness check (3.6): U-12–U-14, handling note updated to 07 Decision 27; amended 2026-09-26 (07 Decision 49): V-14 weekday codes, V-18 segment line after end of transaction; amended 2026-09-28 (07 Decision 50): DEIXEN renderings of the `FQD` display (V-16) and of the header after end of transaction (V-18). Scope so far: the first-build slice (07 Decisions 22, 24) and its prerequisites.
 owns: The single authority for real Amadeus behavior (07 Decision 15). Only entries marked VERIFIED here may be taught or simulated (07 Decision 13).
 does not own: product, curriculum, or learning decisions; what any DEIXEN code does (implementation truth)
 ---
@@ -296,6 +296,30 @@ entry says so; such meanings are never taught.
   (`> PAGE 1/12`).
 - DEIXEN renders only this layout; the meaning of the penalty, date,
   stay and fare-type columns is not taught (not needed for the slice).
+- **DEIXEN rendering (added 2026-09-28, 07 D50; fictional data).** What
+  DEIXEN keeps and leaves out, so no value is invented:
+  - kept: the entry echoed; the `ROE` line (`ROE` + the practice fare's
+    rate + `UP TO 1.00` + currency, as in the official `ROE 0.915261 UP TO
+    1.00 EUR`); the date line reduced to date `**` date `/` city pair (the
+    date is the day of the entry, `DDMMMYY`, as in the official
+    `13SEP24**13SEP24/FRAMIA/…`); the column header; one line per practice
+    fare; the page counter `> PAGE 1/1`;
+  - left out, and disclosed (`disc.6`): the notice lines (they state
+    conditions — other currencies, surcharges — that the practice data
+    does not have); the global indicator and mileage part of the date line
+    (`NSP;AT/TPM …/MPM …` in the official example); the `+`/`@` sign (the
+    practice fares have no rules to read, and `FQN` is outside the slice);
+  - columns after the fare: `-`, except the airline column (`6X`).
+  ```
+  FQDRUHDXB
+  ROE 3.750000 UP TO 1.00 SAR
+  25SEP26**25SEP26/RUHDXB
+  LN FARE BASIS    OW SAR    RT  PEN  DATES/DAYS   AP  MIN MAX  AL FR
+  01 M1OW          500.00    -   -    -     -      -   -   -    6X -
+  02 B1OW          700.00    -   -    -     -      -   -   -    6X -
+  03 Y1OW          900.00    -   -    -     -      -   -   -    6X -
+  > PAGE 1/1
+  ```
 - Sources: Amadeus Service Hub, "How to interpret Fare Display (FQD)
   symbols (Cryptic)" (listed as updated 2026-06-23) —
   https://servicehub.amadeus.com/c/portal/view-solution/832707/how-to-interpret-fare-display-fqd-symbols-cryptic- ;
@@ -341,6 +365,27 @@ entry says so; such meanings are never taught.
   https://servicehub.amadeus.com/c/portal/view-solution/879731/how-to-price-a-pnr-with-fare-family-option-cryptic-
 
 ### V-18 PNR display — header, element order, numbering — VERIFIED
+- **Header after end of transaction — DEIXEN rendering (added 2026-09-28,
+  07 D50).** Official examples: `RP/XXXXXXXXX/XXXXXXXXX TN/SU 1NOV24/0929Z
+  XXXXXX` ("How to retrieve/display a PNR"), `RP/XXXXXXXXX/XXXXXXXXX
+  TN/SU 11DEC24/1310Z XXXXXX` ("How to copy a PNR"), `RP/BRUXXXXXX/AMSXXXXXX
+  AB/SU 13DEC24/0632Z 4OBWYW` ("How to interpret a PNR header line").
+  Fields in order: `RP/` + office ID + `/` + office ID; agent sign and duty
+  code; date as day **without a leading zero** + month + two-digit year
+  (`1NOV24`, `8NOV24`, `11DEC24`), then `/`, time `HHMM` and `Z`; record
+  locator (six characters). DEIXEN fills: office IDs `XXXXXXXXX` (masked,
+  as in the official examples); agent sign `XX/XX` (`slice.json`
+  `office.agentSign`); the filing date and UTC time; the generated record
+  locator. (Contrast: the `TK OK` date keeps its leading zero, e.g.
+  `TK OK01NOV` — same official retrieve example.)
+  ```
+  RP/XXXXXXXXX/XXXXXXXXX            XX/XX   5OCT26/0712Z   K7Q2ZP
+    1.ALHARBI/SAAD MR
+    2  6X 403 Y 25OCT 7 RUHDXB HK1  1245 1545  *1A/E*
+    3 AP 966110000000
+    4 TK OK05OCT/XXXXXXXXX
+    5 SSR CTCM 6X HK1 966500000001
+  ```
 - **Header:** generated after the first entry of a new PNR as `RP/` +
   office ID; when the transaction is ended and the PNR redisplayed, more
   information is added to the header line — in the official examples:
@@ -436,3 +481,4 @@ UNVERIFIED until researched.
 | 2026-09-25 | Third edition (Build Spec G1): new §2A with screen layouts V-14 (`AN`), V-15 (`SS`), V-16 (`FQD`), V-17 (`FXP`), V-18 (PNR header, order, numbering); U-04 narrowed; new U-06–U-11 |
 | 2026-09-25 | Amendment (readiness check 3.6): new U-12 (contact-SSR endings), U-13 (name titles), U-14 (`AP` as PRINT Phone); §3 handling note now cites 07 Decision 27; V-17 rendering uses the task passenger `ALHARBI/SAAD MR` (fictional data only). No V- entry changed |
 | 2026-09-26 | Amendment (07 Decision 49): V-14 — the seven weekday codes of the `AN` header verified from official examples (Karim's in-session answer to app issue I-5 confirmed); V-18 — segment line after end of transaction recorded. U-09 unchanged (the header number's meaning stays unverified) |
+| 2026-09-28 | Amendment (07 Decision 50): V-16 — DEIXEN rendering of the `FQD` display, with what is left out and why; V-18 — DEIXEN rendering of the header after end of transaction (day without leading zero, `HHMMZ`). No claim changed |
