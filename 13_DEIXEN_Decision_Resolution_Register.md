@@ -62,6 +62,26 @@ number gap closed (07 D44); Build Spec §2 and `CLAUDE.md` now point to the
 approved design. One question for Karim (below): how Claude Code will read
 the approved boards.
 
+Update 2026-09-26 (Phase 5 preparation): repository checked against the
+Project (Constitution §5) — the 12 files of the Phase 4 gate are the current
+versions (Execution Plan identical line for line; the other 11 carry every
+Phase 4 gate change; both string files have the same 204 keys, and every key
+`slice.json` lists exists). Karim approved exporting the approved boards
+into the repository (07 D45): the open question below is closed. The
+repository check also found that the Corpus Map (file 00 A8/A9) was wrong
+about some historical files; corrected in file 00 (row below).
+
+Update 2026-09-26 (Phase 5, build steps 1–2A): steps 1 and 2 part A locked
+(07 D46, D48); one tab at a time (07 D47). Preparing step 2 part B (07 D49):
+the weekday codes of the `AN` header are VERIFIED (V-14); `6X` has the
+invented name `PRACTICE AIRLINE`; `disc.2` matches the "not recognized" /
+"not covered" rule; the part B gaps are closed in Build Spec §6A. The
+repository `DEIXEN-KNOWLEDGE` on GitHub was read the same day: its main
+folder holds pre-Phase-5 copies, and the newest copies of 07, 13 and the
+Execution Plan sit two folders deep (`DEIXEN-KNOWLEDGE/DEIXEN-KNOWLEDGE/`);
+the Build Spec with D46–D47 is not on GitHub at all. Karim is asked to put
+the current files in the main folder (row below).
+
 ## 2. Phase 1 Findings — Disposition
 
 Review type: self-review by the project lead (Decision 17 — independent
@@ -130,9 +150,11 @@ presented a navy/blue color language as "durable" although colors are open
 | `ui.assessment.carryover` read "1 hints" (Claude Design Part 1, issue 01) | CLOSED — reworded count-neutral (07 D39) | Claude | — |
 | Chain status words ("Practised" in the Part 1 design) | CLOSED — "Correct in DEIXEN" / dash / Next / Optional (07 D40) | Claude | — |
 | `AN` header number before the weekday: Build Spec §5 says "values in `slice.json`", but `slice.json` held no such value (found in the Part 1 review) | CLOSED 2026-09-26 (07 D44) — fixed value `30` in every `AN` display, never computed from the date; marker; not taught | Claude | — |
-| How Claude Code reads the approved boards: they live on the Claude Design canvas; whether a Claude Code session on Karim's computer can open it is not confirmed | OPEN | Karim | Recommendation: a read-only export of the approved boards into this repository (`design/phase4/`, new files — Execution Plan §5). Until then `CLAUDE.md` §4 says: if the canvas cannot be opened, stop and ask |
+| How Claude Code reads the approved boards: they live on the Claude Design canvas, a claude.ai page behind sign-in that a Claude Code session on Karim's computer cannot open | CLOSED — Approved 2026-09-26 (07 D45): 68 boards + `tokens.css` copied unchanged into `design/phase4/` with a sha256 manifest; Build Spec §2, `CLAUDE.md` §2/§4, 00, Execution Plan §5 updated | Karim | Karim uploads the folder; Claude Code checks the manifest before reading |
+| Corpus Map vs repository (found 2026-09-26): 00 A9 listed as absent some files that are in the repository's `Historical/` folders (`PROJECT-20.md`, `SDD.md`, `AMADEUS_CURRICULUM.md`, `COMMAND_REFERENCE.md`, `DESIGN_SYSTEM_UI_BLUEPRINT.md`, `DEVELOPMENT_RULES.md`, `PRODUCT_STRATEGY_UX_ARCHITECTURE-1.md`, the Approved Corpus Review & Opus Readiness Brief, and others); 00 A8 said two historical plans are in the repository, which they are not | CORRECTED in 00 (by delegation, D29) | Claude | Historical only — no current file depends on them (07 D16, D19); not blocking. The repository has two folders, `Historical` and `Historical ` (trailing space) — Karim may merge them when convenient |
 | Real Cryptic host response to each wrong entry in the slice | OPEN — research backlog (07) | Claude | Needs official Cryptic sources (D12); an API host-message list cannot verify it. A verified message replaces the training line in place |
 | Repository `DEIXEN-KNOWLEDGE` out of date (main folder, read 2026-09-25, does not show the Execution Plan, Constitution, Verified Reference, Build Spec, Design Brief, `CLAUDE.md`; still has 08 under its old name) | CLOSED 2026-09-25 — Karim reports the files are updated in both places | — | Keep both in step after each change |
+| Repository layout on GitHub (read 2026-09-26): current files are nested two folders deep; the main folder has older copies; Build Spec D46–D47 missing | OPEN — sync problem (Constitution §5.4, §18) | Karim uploads | Put the current files in the main folder; Claude Code reads the local copy, so Karim's local `DEIXEN-KNOWLEDGE` must hold the current files before session 3 |
 | Coach contract (D9); CS contract (D6) | CLOSED | Karim | Carry forward |
 | Evidence, Assessment, Scenario contracts | CLOSED (unbuilt) | Karim | Slice Build Spec, Phase 3 |
 | Domain/SME validation (D7) | SUPERSEDED by D12 | — | — |
@@ -145,7 +167,15 @@ presented a navy/blue color language as "durable" although colors are open
 | Curriculum goal (D18) | CLOSED | Karim | Market evidence sourced during curriculum work |
 | Absent artifacts (D19); First build (D20); Owner name (D21) | CLOSED | Karim | — |
 | Engine strategy "conformance oracle" (former delegated decision) | WITHDRAWN | — | Replaced by D14 |
-| Evidence/State concrete schema | DONE (delegated) — Slice Build Spec §11; answers the Event Log granularity and chain-continuity questions by design | Claude | — |
+| Evidence/State concrete schema | DONE (delegated) — Slice Build Spec §11; answers the Event Log granularity and chain-continuity questions by design. Built and locked as build step 1 (07 D46); `result` on ending events clarified; one tab at a time (07 D47) | Claude | — |
+| Two browser tabs at once (Claude Code `ISSUES.md` I-2, 2026-09-26) | CLOSED — 07 D47 (one tab records; the other shows a notice) | Claude (D29) | Implemented at build step 3 |
+| File 03 said Calculated evidence is persisted (Claude Code `ISSUES.md` I-3) | CORRECTED in 03 (07 D46) | Claude (D29) | — |
+| `AN6X…` header needs a fictional airline name (app `ISSUES.md` I-4) | CLOSED — `airlineName` `PRACTICE AIRLINE` in `slice.json` (07 D49) | Claude (D29); Karim may change the name | Claude Code wires it in (session 3) |
+| `AN` weekday codes other than `SU` (app I-5) | VERIFIED — all seven codes in official `AN` headers (Verified Reference V-14, amended 2026-09-26; 07 D49) | — | — |
+| `disc.2` wording vs "not recognized" rule (app I-6) | CLOSED — `disc.2` EN/AR and Build Spec §6 reworded (07 D49) | Claude (D29) | — |
+| Gaps for build step 2 part B (multiple missing items at `ER`; bypass window; filed-PNR layout; stored `SSR CTCM` ending; `SRCTCR` in the main task; `FXP` before `ER`; entries after completion) | CLOSED — Build Spec §6A (07 D49); V-18 segment line after end of transaction recorded | Claude (D29) | Claude Code session 3 |
+| Exact wording of app `docs/ISSUES.md` I-4…I-7 and `docs/DECISIONS.md` T3 into 07 | OPEN — requested in the session-3 prompt | Claude | After session 3 |
+| `AN` checklist (b) rarely fails (app I-7) | NOTED — learning-evidence observation (07 D48) | — | Revisit at curriculum expansion |
 | Coach layout (global vs per-page) | DRAWN in the approved design (07 D42): DEIXEN's margin on desktop, the DEIXEN drawer on phones, only when a coach string applies; code structure DELEGATED | Claude Code | At build |
 | Curriculum order (competency vs command order); Lesson 17; 8 Advanced lessons | OPEN | Claude, then Karim | Curriculum authoring after the slice (D18) |
 | Pricing prerequisites of the slice (name before `FXP`?) | UNVERIFIED (U-01) — no longer blocking: D22 puts `NM` before `FXP` | — | — |

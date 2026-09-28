@@ -198,10 +198,13 @@ Vertical Slice rule below), not a full content system:
 
 ## Persistence Architecture (implementation convention)
 
-Frontend-first with `localStorage`. Only **Recorded** and **Calculated**
-evidence is persisted (see `07_DEIXEN_Canonical_Decisions_and_Current_State.md`
-for the evidence classes) — illustrative/static content is never written to
-storage, to protect the line between real evidence and decoration. The
+Frontend-first with `localStorage`. Only **Recorded** evidence is
+persisted; **Calculated** values (skill states, independence, Growth status)
+are derived from it when read, never stored (see
+`07_DEIXEN_Canonical_Decisions_and_Current_State.md` for the evidence
+classes; `DEIXEN_Slice_Build_Spec.md` §11; wording corrected 2026-09-26,
+07 D46) — illustrative/static content is never written to storage, to
+protect the line between real evidence and decoration. The
 persisted record carries a schema-version field; on a mismatch, the safe
 default is a full reset rather than a silent migration (deliberate simplicity
 choice — revisit only if real evidence shows learners losing meaningful
