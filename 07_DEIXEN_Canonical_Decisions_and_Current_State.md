@@ -2,7 +2,7 @@
 name: DEIXEN Canonical Decisions & Current State
 owns: The single decisions ledger and current project status going forward
 supersedes reading in isolation: AeroBridge_Decisions_and_Current_State.md
-last synchronized: 2026-09-26 (Phase 4 closed — gate approved, Decision 42; delegated Decisions 43–44; approved boards exported, Decision 45; Phase 5 started — build step 1 locked, Decisions 46–47; step 2 part A locked, Decision 48; step 2 part B prepared, Decision 49; part B checked, Decision 50)
+last synchronized: 2026-09-26 (Phase 4 closed — gate approved, Decision 42; delegated Decisions 43–44; approved boards exported, Decision 45; Phase 5 started — build step 1 locked, Decisions 46–47; step 2 part A locked, Decision 48; step 2 part B prepared, Decision 49; part B checked, Decision 50; step 2 locked, Decision 51)
 authority note: Where a decision below is owned in more detail elsewhere in this canonical set (product/architecture, design, engine, curriculum/Coach), this file states the decision and its status, and points there rather than duplicating — the same single-ownership discipline the original NEW document already established and this pass is preserving.
 ---
 
@@ -53,7 +53,7 @@ were ended by Karim's decision on 2026-09-24 and are historical.
 **Phase:** Phase 4 (Design) closed on 2026-09-26 — Karim approved the gate
 (Decision 42). **Current: Phase 5 (Build)** — build step 1 (evidence store)
 locked 2026-09-26 (Decision 46); step 2 part A (engine core, `AN`, `SS`,
-`NM`, `AP`) locked the same day (Decision 48); step 2 part B prepared (Decision 49: the D48 follow-ups I-4, I-5, I-6 closed, and the part B rules written into Build Spec §6A); Claude Code built part B in its third session (not merged: two layouts were missing); the project lead supplied them (Decision 50); next, a short session finishes part B, merges and tags it. Claude Code builds the slice from
+`NM`, `AP`) locked the same day (Decision 48); step 2 part B prepared (Decision 49: the D48 follow-ups I-4, I-5, I-6 closed, and the part B rules written into Build Spec §6A); Claude Code built part B in its third session (not merged: two layouts were missing); the project lead supplied them (Decision 50); session 3B finished, merged and tagged part B (Decision 51). Next: build step 3 (bridge, independence flag, skill states, Growth status, one-tab rule D47). Claude Code builds the slice from
 `DEIXEN_Slice_Build_Spec.md`, `CLAUDE.md`, the content files, the approved
 design and `tokens.css`. Standing delegation to Claude: Decision 29.
 Phase 4 record: Claude Design proposed three directions (A "Margin",
@@ -810,6 +810,27 @@ an ordinary technical implementation choice, not decided here.
   8–10), `slice.json`, both string files (`disc.6`), 13. Next: a short
   Claude Code session builds (a), (b), (e), merges and tags
   `step-2b-engine`; then build step 3.
+
+- **Decision 51 — Build step 2 (engine) complete and locked. Closed — by
+  delegation (D29), 2026-09-28.** Session 3B built the filed header (V-18
+  rendering), `FQD` (V-16 rendering) and the repeat rule of Build Spec §6A
+  item 10; merged to `main`, tag `step-2b-engine`. Reported: 600 tests
+  passed, 0 failed; typecheck and build pass; `tokens.css` unchanged;
+  manifest 69/69; content copy byte-identical to the knowledge copies; 13
+  planted faults, all caught; app I-8…I-11 closed (`docs/DECISIONS.md` T5).
+  Self-review (D17: report read, code not read). Two points accepted:
+  (a) Claude Code followed the spec over the brief — `FQD` for a route with
+  no practice fares gets the more specific `tm.noPracticeData` (spec §5); a
+  practice route that is not the task's gets `tm.notForTask`. The brief was
+  incomplete, not the spec. (b) `FQD` with options after `/` →
+  `tm.notCovered` (V-16 records no display for options; `disc.2` already
+  covers entries the slice does not simulate); `FQD` + city pair + a bare
+  `/` → `fqd.fb.format`. Noted: `SS` keeps an engine stop for flights that
+  arrive the next day (no verified layout); no practice flight does, so it is
+  never reached. Sync note: Karim's computer holds a second, git copy of the
+  knowledge files (`Downloads\Documents\DEIXEN-KNOWLEDGE`) that differs from
+  the one Claude Code reads (`Documents\DEIXEN\DEIXEN-KNOWLEDGE`); only the
+  latter is used. Next: build step 3.
 
 ## Definition of Done — for the current frozen vertical slice
 

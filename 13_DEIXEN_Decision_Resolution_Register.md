@@ -175,7 +175,8 @@ presented a navy/blue color language as "durable" although colors are open
 | `disc.2` wording vs "not recognized" rule (app I-6) | CLOSED — `disc.2` EN/AR and Build Spec §6 reworded (07 D49) | Claude (D29) | — |
 | Gaps for build step 2 part B (multiple missing items at `ER`; bypass window; filed-PNR layout; stored `SSR CTCM` ending; `SRCTCR` in the main task; `FXP` before `ER`; entries after completion) | CLOSED — Build Spec §6A (07 D49); V-18 segment line after end of transaction recorded | Claude (D29) | Claude Code session 3 |
 | Exact wording of app `docs/ISSUES.md` I-4…I-7 and `docs/DECISIONS.md` T3 into 07 | CLOSED — received in the session-3 report; matches D48/D49 in substance (07 D50) | — | — |
-| Build step 2 part B (session 3): built, 552 tests, not merged | OPEN — finish session: I-8 header, I-9 `FQD`, repeat rule for `TK`/`RF` (07 D50) | Claude Code | Merge, tag `step-2b-engine` |
+| Build step 2 part B (sessions 3, 3B) | CLOSED — merged, tag `step-2b-engine`, 600 tests (07 D51) | — | Build step 3 |
+| Two local copies of `DEIXEN-KNOWLEDGE` on Karim's computer (`Documents\DEIXEN\…` used by Claude Code; `Downloads\Documents\…` git copy) | OPEN — sync hygiene, not blocking (07 D51) | Karim | Keep updates in `Documents\DEIXEN\DEIXEN-KNOWLEDGE`; the Downloads copy can be deleted or kept for GitHub uploads |
 | App I-8 header after end of transaction; I-9 `FQD` layout | CLOSED — DEIXEN renderings in Verified Reference V-18, V-16; `disc.6` (07 D50) | Claude (D29) | Build in the finish session |
 | App I-10 `TK OK` date `DDMMM`; I-11 changes after filing not covered | CLOSED — Karim in session 3 (07 D50; Build Spec §6A item 9) | Karim | — |
 | `AN` checklist (b) rarely fails (app I-7) | NOTED — learning-evidence observation (07 D48) | — | Revisit at curriculum expansion |
