@@ -1,6 +1,6 @@
 ---
 name: DEIXEN Amadeus Verified Reference
-status: CURRENT — third edition, 2026-09-25 (Execution Plan Phase 3.1–3.2; screen layouts added for Build Spec gap G1); amended 2026-09-25 at the readiness check (3.6): U-12–U-14, handling note updated to 07 Decision 27. Scope so far: the first-build slice (07 Decisions 22, 24) and its prerequisites.
+status: CURRENT — third edition, 2026-09-25 (Execution Plan Phase 3.1–3.2; screen layouts added for Build Spec gap G1); amended 2026-09-25 at the readiness check (3.6): U-12–U-14, handling note updated to 07 Decision 27; amended 2026-09-26 (07 Decision 49): V-14 weekday codes, V-18 segment line after end of transaction. Scope so far: the first-build slice (07 Decisions 22, 24) and its prerequisites.
 owns: The single authority for real Amadeus behavior (07 Decision 15). Only entries marked VERIFIED here may be taught or simulated (07 Decision 13).
 does not own: product, curriculum, or learning decisions; what any DEIXEN code does (implementation truth)
 ---
@@ -211,6 +211,28 @@ entry says so; such meanings are never taught.
   listed only if at least one class is available for sale or waitlist; a
   flight irregularity code, when present, sits after the equipment code
   and before the elapsed flying time.
+- **Weekday codes (added 2026-09-26, 07 D49):** all seven two-letter codes
+  appear in official example headers, each matching the calendar weekday of
+  the date beside it: `MO` (02DEC 2024; 10MAR 2025), `TU` (10DEC 2024),
+  `WE` (06NOV 2024; 19FEB 2025), `TH` (05DEC 2024; 13MAR 2025), `FR`
+  (29NOV 2024; 14FEB 2025), `SA` (16NOV 2024), `SU` (the one official `AN`-header
+  example reported in build session 2, 07 D48). An official
+  flight-information display labels the same codes as its day column
+  (`DY`: `SA` for 16NOV 2024 and `SU` for the arrival on the next day). So the weekday in the `AN` header
+  is the weekday of the requested date, written `MO TU WE TH FR SA SU`.
+  Sources (accessed 2026-09-26): Amadeus Service Hub, "How to request a
+  single air display (Cryptic)" (`FR 14FEB`) —
+  https://servicehub.amadeus.com/c/portal/view-solution/911144/how-to-request-a-single-air-display-cryptic- ;
+  "How to request a carrier-preferred availability display (Cryptic)"
+  (`WE 06NOV`) — URL below; "How to use 7-day search (Cryptic)"
+  (`TH 05DEC`, `MO 02DEC`) —
+  https://servicehub.amadeus.com/c/portal/view-solution/894176/how-to-use-7-day-search-cryptic- ;
+  "How to display flight information (FLIFO) (Cryptic)" (`SA 16NOV`,
+  `TU 10DEC`; `DY` column) —
+  https://servicehub.amadeus.com/c/portal/view-solution/872846/how-to-display-flight-information-flifo-cryptic- ;
+  "How to sell a flight (Cryptic)" (`WE 19FEB`, `MO 10MAR`, `TH 13MAR`) —
+  V-15 URL; "How to waitlist a flight (Cryptic)" (`FR 29NOV`) —
+  https://servicehub.amadeus.com/c/portal/view-solution/783251/how-to-waitlist-a-flight-cryptic-
 - **Not stated by any source found (not taught):** the meaning of the
   number before the weekday in the header; the meaning of the figure after
   each class letter; the meaning of the `E0` code group. A non-official
@@ -339,6 +361,23 @@ entry says so; such meanings are never taught.
   the PNR's creation date); a stored mobile contact SSR shows as
   `SSR CTCM` + airline + `HK1` + number; after end of transaction, segment
   lines end with `*1A/E*`.
+- **Segment line after end of transaction (added 2026-09-26, 07 D49):** in
+  every official redisplay after end of transaction found, the segment line
+  is: element number; airline and flight number; booking class; date; the
+  one-digit day of the week; city pair; status and seat count; an optional
+  terminal; departure time; arrival time; `*1A/E*`. The equipment and the
+  one-letter codes of the sell response (V-15) are not shown. Examples:
+  `2 KL1196 T 05JAN 7 OSLAMS HK1 0630 0830 *1A/E*`;
+  `2 SQ 351 Z 04MAY 7 CPHSIN HK1 3 1155 0625+1 *1A/E*`. Sources (accessed
+  2026-09-26): "How to retrieve/display a PNR (Cryptic)" (URL below);
+  "How to copy a PNR (Cryptic)" —
+  https://servicehub.amadeus.com/c/portal/view-solution/917534/copy-a-displayed-pnr-with-a-link-to-the-original-booking ;
+  "How to add Special Service Requests (SSRs) to a PNR (Cryptic)" —
+  https://servicehub.amadeus.com/c/portal/view-solution/968144/how-to-add-ssr-elements-to-a-pnr-cryptic-
+  DEIXEN rendering (fictional data):
+  ```
+    2  6X 403 Y 25OCT 7 RUHDXB HK1  1245 1545  *1A/E*
+  ```
 - The response to an individual name entry is the PNR redisplayed under
   the `RP/` header (official group-name example). Official redisplay
   examples were found for `SS` and `NM`; none was found for `AP`,
@@ -396,3 +435,4 @@ UNVERIFIED until researched.
 | 2026-09-25 | Second edition: V-11 upgraded to VERIFIED; V-10 adds RF entry syntax; new V-13 (IATA contact SSRs); U-01 no longer blocking; U-03 closed; new U-05 |
 | 2026-09-25 | Third edition (Build Spec G1): new §2A with screen layouts V-14 (`AN`), V-15 (`SS`), V-16 (`FQD`), V-17 (`FXP`), V-18 (PNR header, order, numbering); U-04 narrowed; new U-06–U-11 |
 | 2026-09-25 | Amendment (readiness check 3.6): new U-12 (contact-SSR endings), U-13 (name titles), U-14 (`AP` as PRINT Phone); §3 handling note now cites 07 Decision 27; V-17 rendering uses the task passenger `ALHARBI/SAAD MR` (fictional data only). No V- entry changed |
+| 2026-09-26 | Amendment (07 Decision 49): V-14 — the seven weekday codes of the `AN` header verified from official examples (Karim's in-session answer to app issue I-5 confirmed); V-18 — segment line after end of transaction recorded. U-09 unchanged (the header number's meaning stays unverified) |

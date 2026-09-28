@@ -1,7 +1,7 @@
 # CLAUDE.md — DEIXEN app (first-build slice)
 
 > Status: APPROVED by Karim 2026-09-25 (07 Decision 26). First edition
-> (Execution Plan 3.5); Decision 27 applied 2026-09-25 (§3 rule 2, §8); Decisions 30, 33, 34 applied 2026-09-25 (§3 rule 2); Phase 4 gate (07 Decision 42) applied 2026-09-26 (§2, §4, §5, §8). This file is the master copy of the
+> (Execution Plan 3.5); Decision 27 applied 2026-09-25 (§3 rule 2, §8); Decisions 30, 33, 34 applied 2026-09-25 (§3 rule 2); Phase 4 gate (07 Decision 42) applied 2026-09-26 (§2, §4, §5, §8); Decision 45 (boards in `design/phase4/`) applied 2026-09-26 (§2, §4). This file is the master copy of the
 > Claude Code instructions; at build start it becomes the first file of the
 > code repository.
 
@@ -31,7 +31,7 @@ one owner per truth):
 |---|---|
 | `DEIXEN_Slice_Build_Spec.md` | What to build — always |
 | `DEIXEN_Amadeus_Verified_Reference.md` | Any Amadeus syntax, message, or display — the only source |
-| The approved Phase 4 design — the Claude Design canvas and the boards listed in spec §2 | Anything visual: layout, identity, states, controls (spec §2 says which boards and how to read them) |
+| `design/phase4/` — the approved Phase 4 boards listed in spec §2, `tokens.css`, and `MANIFEST.md` (read-only copy of the Claude Design canvas, 07 D45) | Anything visual: layout, identity, states, controls (spec §2 says which boards and how to read them) |
 | `07_DEIXEN_Canonical_Decisions_and_Current_State.md` | Only when the spec cites a decision you need to read |
 
 Do not read the Learning Design Specification or the Learning Experience
@@ -92,8 +92,10 @@ stop and report (§6).
   token file (07 Decision 42), used unchanged; check its sha256 against 07
   D42 when you add it. Components use its role tokens, never raw colours or
   sizes. A value the design needs that the file lacks: stop and ask (§6).
-- The design lives on the Claude Design canvas (spec §2). If your session
-  cannot open it, stop and ask Karim — never rebuild a screen from memory
+- Read the design from `design/phase4/` (spec §2;
+  07 D45), not from the canvas. Check a board's sha256 against
+  `MANIFEST.md` before relying on it. If a board you need is missing or
+  fails the check, stop and ask Karim — never rebuild a screen from memory
   or from this file's description.
 
 ## 5. Repository layout

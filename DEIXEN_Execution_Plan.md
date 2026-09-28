@@ -82,7 +82,9 @@ Approved: `DEIXEN_Amadeus_Verified_Reference.md` (Decision 15); the Slice
 Build Spec, the Design Brief (`DEIXEN_Design_Brief.md`), and the Claude Code
 environment files (`CLAUDE.md` and repository scaffolding) — approved by
 Karim 2026-09-25; `tokens.css`, the one token file in the code repository —
-approved by Karim 2026-09-26 (07 D42). No other new file without Karim's
+approved by Karim 2026-09-26 (07 D42); `design/phase4/` in this
+repository — a read-only copy of the approved boards, `tokens.css` and a
+sha256 manifest — approved by Karim 2026-09-26 (07 D45). No other new file without Karim's
 approval (Roadmap rule carried forward: a new file needs a real, unowned
 responsibility).
 
@@ -109,11 +111,17 @@ Decision 29.
 Ready for the first Claude Code session: `DEIXEN_Slice_Build_Spec.md`
 (§2 now names the approved design and the boards to read), `CLAUDE.md`, the
 content files (interface words added as `ui.*` keys, 07 D43; `AN` header
-number rule, 07 D44), `tokens.css`, and the Verified Reference. Phase 5 runs
+number rule, 07 D44), `tokens.css`, the approved boards in `design/phase4/`
+(07 D45), and the Verified Reference. Phase 5 runs
 as its row in §3 says: Claude Code builds in evening computer sessions,
 following `CLAUDE.md` §7 (build order) and 08 §26 (verification loop);
 Claude (project lead) prepares each session and checks its result; the
 gate is Karim's own test as a learner (07 D29 item 5).
+
+Build progress: step 1 (evidence store) locked 2026-09-26 (07 D46); step 2
+part A (engine core, `AN`, `SS`, `NM`, `AP`) locked 2026-09-26 (07 D48);
+next, step 2 part B (`SRCTCM`/`SRCTCR`, `TK`, `RF`, `ER`, `FXP`, `FQD`),
+prepared 2026-09-26 (07 D49; Build Spec §6A).
 
 Phase 4 record (2026-09-25/26): steps 1–4 — three directions, Karim chose
 A (07 D31) and ruled that the Terminal shows Amadeus only (07 D30);
