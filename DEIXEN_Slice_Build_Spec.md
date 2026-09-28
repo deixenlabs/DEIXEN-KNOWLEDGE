@@ -1,6 +1,6 @@
 ---
 name: DEIXEN Slice Build Spec
-status: CURRENT — APPROVED by Karim 2026-09-25 (07 Decision 26). Updated 2026-09-25: gaps G1–G3 (§5, §12); Decision 27 (K5, K6) applied to §4, §5, §12, §13; K7 (§6 row 5, §12) approved in the Phase 3 gate (07 D28). Phase 4, 2026-09-25: 07 Decisions 30, 32–34, 36 applied to §5 and §13; Decisions 37–38 to §4 and §8. Phase 4 gate, 2026-09-26: 07 Decision 42 (approved design, `tokens.css`) applied to §2; Decision 44 (`AN` header number) to §5 and §12; Decision 45 (boards exported to `design/phase4/`) to §2. Phase 5, 2026-09-26: 07 Decisions 46 (`result` on ending events) and 47 (one tab at a time) applied to §11. 2026-09-26: 07 Decision 49 applied to §6 ("not recognized" vs "not covered") and new §6A (rules for build step 2 part B). First edition (Execution Plan 3.3); proposals K1–K4 approved (07 Decision 25). With this approval, the LDS/LXA content extracted here is binding for the slice (LDS and LXA reading rules, point 1).
+status: CURRENT — APPROVED by Karim 2026-09-25 (07 Decision 26). Updated 2026-09-25: gaps G1–G3 (§5, §12); Decision 27 (K5, K6) applied to §4, §5, §12, §13; K7 (§6 row 5, §12) approved in the Phase 3 gate (07 D28). Phase 4, 2026-09-25: 07 Decisions 30, 32–34, 36 applied to §5 and §13; Decisions 37–38 to §4 and §8. Phase 4 gate, 2026-09-26: 07 Decision 42 (approved design, `tokens.css`) applied to §2; Decision 44 (`AN` header number) to §5 and §12; Decision 45 (boards exported to `design/phase4/`) to §2. Phase 5, 2026-09-26: 07 Decisions 46 (`result` on ending events) and 47 (one tab at a time) applied to §11. 2026-09-26: 07 Decision 49 applied to §6 ("not recognized" vs "not covered") and new §6A (rules for build step 2 part B). 2026-09-28: 07 Decision 50 — §6A items 8–10. First edition (Execution Plan 3.3); proposals K1–K4 approved (07 Decision 25). With this approval, the LDS/LXA content extracted here is binding for the slice (LDS and LXA reading rules, point 1).
 owns: The single build specification Claude Code implements for the first-build slice. It gathers requirements from their owners and designs the evidence/state schema (delegated to Claude — file 13).
 does not own: any decision (07); Amadeus behavior (Verified Reference); product structure (03); design (Design Brief / Phase 4). Where this file and an owner disagree, the owner wins and the conflict is reported.
 ---
@@ -66,7 +66,7 @@ entry outside these limits gets the "not covered in this slice" message
     header 18 px, phone header 15 px) the wordmark keeps its field line and
     drops the ticks. The frames draw lockup A; B governs.
   - **Where the boards are (07 D45):** a read-only copy of every board
-    below, and `tokens.css`, is in `design/phase4/`
+    below, and `tokens.css`, is in `DEIXEN-KNOWLEDGE/design/phase4/`
     (files `<name>.dc.html`), with `MANIFEST.md` giving each file's sha256.
     Read the boards there. Before relying on a board, check its sha256
     against the manifest; a mismatch or a missing board means stop and ask
@@ -296,6 +296,19 @@ Amadeus behavior beyond the Verified Reference.
    prices and counts for the `FXP` skill, but does not complete the task.
 7. **After completion** every further entry gets `tm.sliceEnd` and changes
    nothing (U-05). In practice the learner starts again with Reset task.
+8. **(07 D50) Layouts for the filed header and `FQD`.** Build them from the
+   DEIXEN renderings in Verified Reference V-18 (header after end of
+   transaction: day without a leading zero, `HHMM` + `Z`) and V-16 (`FQD`,
+   with what is left out and disclosed in `disc.6`).
+9. **(07 D50) After filing** (Karim, build session 3, app issue I-11): an
+   entry that would change the filed booking — `AP`, a contact SSR, `TK`,
+   `RF`, `ER` — gets `tm.notCovered` and changes nothing (the slice does not
+   simulate changing a filed booking). `FXP` still prices.
+10. **(07 D50) Repeated elements before filing.** A second `AP` or a second
+    contact SSR adds another element (official PNRs show several `AP…` and
+    `SSR` elements). A second `TK` or a second `RF` gets `tm.notCovered` and
+    changes nothing: no official example shows two, and what Amadeus does
+    with a second one is not verified.
 
 ## 7. Skill model
 

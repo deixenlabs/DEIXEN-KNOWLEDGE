@@ -2,7 +2,7 @@
 name: DEIXEN Canonical Decisions & Current State
 owns: The single decisions ledger and current project status going forward
 supersedes reading in isolation: AeroBridge_Decisions_and_Current_State.md
-last synchronized: 2026-09-26 (Phase 4 closed — gate approved, Decision 42; delegated Decisions 43–44; approved boards exported, Decision 45; Phase 5 started — build step 1 locked, Decisions 46–47; step 2 part A locked, Decision 48; step 2 part B prepared, Decision 49)
+last synchronized: 2026-09-26 (Phase 4 closed — gate approved, Decision 42; delegated Decisions 43–44; approved boards exported, Decision 45; Phase 5 started — build step 1 locked, Decisions 46–47; step 2 part A locked, Decision 48; step 2 part B prepared, Decision 49; part B checked, Decision 50)
 authority note: Where a decision below is owned in more detail elsewhere in this canonical set (product/architecture, design, engine, curriculum/Coach), this file states the decision and its status, and points there rather than duplicating — the same single-ownership discipline the original NEW document already established and this pass is preserving.
 ---
 
@@ -53,7 +53,7 @@ were ended by Karim's decision on 2026-09-24 and are historical.
 **Phase:** Phase 4 (Design) closed on 2026-09-26 — Karim approved the gate
 (Decision 42). **Current: Phase 5 (Build)** — build step 1 (evidence store)
 locked 2026-09-26 (Decision 46); step 2 part A (engine core, `AN`, `SS`,
-`NM`, `AP`) locked the same day (Decision 48); step 2 part B prepared (Decision 49: the D48 follow-ups I-4, I-5, I-6 closed, and the part B rules written into Build Spec §6A); next, Claude Code builds step 2 part B. Claude Code builds the slice from
+`NM`, `AP`) locked the same day (Decision 48); step 2 part B prepared (Decision 49: the D48 follow-ups I-4, I-5, I-6 closed, and the part B rules written into Build Spec §6A); Claude Code built part B in its third session (not merged: two layouts were missing); the project lead supplied them (Decision 50); next, a short session finishes part B, merges and tags it. Claude Code builds the slice from
 `DEIXEN_Slice_Build_Spec.md`, `CLAUDE.md`, the content files, the approved
 design and `tokens.css`. Standing delegation to Claude: Decision 29.
 Phase 4 record: Claude Design proposed three directions (A "Margin",
@@ -631,7 +631,7 @@ an ordinary technical implementation choice, not decided here.
   Approved (Karim, 2026-09-26).** A Claude Code session on Karim's computer
   cannot open the Claude Design canvas (a claude.ai page behind sign-in).
   So the approved design is copied, read-only, into
-  `design/phase4/`: the 68 boards listed in Build Spec §2
+  `DEIXEN-KNOWLEDGE/design/phase4/`: the 68 boards listed in Build Spec §2
   and `tokens.css`, taken unchanged from canvas version `1790413092-0523`
   (`tokens.css` sha256 as in D42), with `MANIFEST.md` giving each file's
   sha256 (and the same list as `MANIFEST.sha256`, for `sha256sum -c`). The canvas stays the approved original and the folder is its copy:
@@ -771,6 +771,45 @@ an ordinary technical implementation choice, not decided here.
   `docs/ISSUES.md` (I-4…I-7) and `docs/DECISIONS.md` T3 into this file when
   Claude Code pastes them (asked for in the session-3 prompt). I-7 stays
   noted only.
+
+### Decisions of 2026-09-28 — Phase 5, build step 2 part B (Karim in session, and by delegation D29)
+
+- **Decision 50 — Build step 2 part B checked; its open items closed.
+  Closed — by delegation (D29), 2026-09-28**, except where marked Karim.
+  Claude Code's third session built `CTC`, `TK`, `RF`, `ER`, `FXP` and the
+  `AN6X` banner on branch `feature/engine-b`, not merged. Reported: 552
+  tests passed, 0 failed (289 new); every checklist item tested passing and
+  failing; the trace test covers every new Amadeus line; 18 planted faults,
+  all caught; the knowledge files and the content copy checked current; the
+  design manifest 69/69. The project lead checked the report against Build
+  Spec §6, §6A and `CLAUDE.md` §8 (self-review, D17: report read, code not
+  read). The verbatim app `ISSUES.md` I-4…I-7 and `DECISIONS.md` T3 are
+  now in the project lead's hands (D48 follow-up closed); they match D48
+  and D49 in substance.
+  (a) **I-8 — header after end of transaction** (blocked the merge):
+  Verified Reference V-18 now carries a DEIXEN rendering from three
+  official examples — the day has no leading zero (`1NOV24`), then `/`,
+  `HHMM`, `Z`.
+  (b) **I-9 — `FQD` layout:** V-16 now carries a DEIXEN rendering. Nothing
+  is invented: the notice lines, the global indicator and mileage part of
+  the date line, and the `+`/`@` sign are left out, and `disc.6` (EN + AR)
+  says so; the other columns show `-`, the airline column `6X`.
+  `slice.json` `fqd.note` updated.
+  (c) **I-10 — `TK OK` date as `DDMMM` — Karim, in session.** Matches the
+  official `TK OK01NOV` (V-18).
+  (d) **I-11 — changes after filing are not covered — Karim, in session.**
+  Written into Build Spec §6A item 9.
+  (e) **Repeated elements** (reported rule: every repeat adds an element).
+  Kept for `AP` and the contact SSR (official PNRs show several). Changed
+  for `TK` and `RF`: a second one gets `tm.notCovered` and changes nothing
+  — no source shows two, and inventing a display for it would teach
+  something unverified (D13). Build Spec §6A item 10.
+  (f) Noted: in the scenario, the V-13 warning also shows
+  `scn.fb.warningShown` in the panel — as `slice.json` intends.
+  Files changed: Verified Reference (V-16, V-18), Build Spec (§6A items
+  8–10), `slice.json`, both string files (`disc.6`), 13. Next: a short
+  Claude Code session builds (a), (b), (e), merges and tags
+  `step-2b-engine`; then build step 3.
 
 ## Definition of Done — for the current frozen vertical slice
 
