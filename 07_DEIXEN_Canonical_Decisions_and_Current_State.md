@@ -2,7 +2,7 @@
 name: DEIXEN Canonical Decisions & Current State
 owns: The single decisions ledger and current project status going forward
 supersedes reading in isolation: AeroBridge_Decisions_and_Current_State.md
-last synchronized: 2026-09-26 (Phase 4 closed — gate approved, Decision 42; delegated Decisions 43–44; approved boards exported, Decision 45; Phase 5 started — build step 1 locked, Decisions 46–47; step 2 part A locked, Decision 48; step 2 part B prepared, Decision 49; part B checked, Decision 50; step 2 locked, Decision 51; step 3 prepared, Decision 52; step 3 locked, Decision 53)
+last synchronized: 2026-09-26 (Phase 4 closed — gate approved, Decision 42; delegated Decisions 43–44; approved boards exported, Decision 45; Phase 5 started — build step 1 locked, Decisions 46–47; step 2 part A locked, Decision 48; step 2 part B prepared, Decision 49; part B checked, Decision 50; step 2 locked, Decision 51; step 3 prepared, Decision 52; step 3 locked, Decision 53; step 4 prepared, Decision 54)
 authority note: Where a decision below is owned in more detail elsewhere in this canonical set (product/architecture, design, engine, curriculum/Coach), this file states the decision and its status, and points there rather than duplicating — the same single-ownership discipline the original NEW document already established and this pass is preserving.
 ---
 
@@ -53,7 +53,7 @@ were ended by Karim's decision on 2026-09-24 and are historical.
 **Phase:** Phase 4 (Design) closed on 2026-09-26 — Karim approved the gate
 (Decision 42). **Current: Phase 5 (Build)** — build step 1 (evidence store)
 locked 2026-09-26 (Decision 46); step 2 part A (engine core, `AN`, `SS`,
-`NM`, `AP`) locked the same day (Decision 48); step 2 part B prepared (Decision 49: the D48 follow-ups I-4, I-5, I-6 closed, and the part B rules written into Build Spec §6A); Claude Code built part B in its third session (not merged: two layouts were missing); the project lead supplied them (Decision 50); session 3B finished, merged and tagged part B (Decision 51). Build step 3 (bridge, independence flag, skill states, Growth status, one-tab rule D47) prepared (Decision 52: Build Spec §7A), built in session 4 and locked (Decision 53, tag `step-3-bridge`, 723 tests). Next: build step 4 (Terminal screen, then the other seven states). Claude Code builds the slice from
+`NM`, `AP`) locked the same day (Decision 48); step 2 part B prepared (Decision 49: the D48 follow-ups I-4, I-5, I-6 closed, and the part B rules written into Build Spec §6A); Claude Code built part B in its third session (not merged: two layouts were missing); the project lead supplied them (Decision 50); session 3B finished, merged and tagged part B (Decision 51). Build step 3 (bridge, independence flag, skill states, Growth status, one-tab rule D47) prepared (Decision 52: Build Spec §7A), built in session 4 and locked (Decision 53, tag `step-3-bridge`, 723 tests). Build step 4 prepared (Decision 54: Build Spec §7B) and split into 4A (app shell and Terminal practice) and 4B (the other seven states). Next: Claude Code session 5 builds 4A. Claude Code builds the slice from
 `DEIXEN_Slice_Build_Spec.md`, `CLAUDE.md`, the content files, the approved
 design and `tokens.css`. Standing delegation to Claude: Decision 29.
 Phase 4 record: Claude Design proposed three directions (A "Margin",
@@ -944,6 +944,55 @@ an ordinary technical implementation choice, not decided here.
   (status, §7A items 1 and 14), `slice.json`, both string files, 13,
   Execution Plan §7. Next: build step 4 (Terminal screen, then the other
   seven states).
+
+### Decisions of 2026-09-28 — Phase 5, preparing build step 4 (by delegation D29)
+
+- **Decision 54 — Rules for build step 4; the "current step" for hints.
+  Closed — by delegation (D29), 2026-09-28.** Self-review (D17). While
+  preparing build step 4 (screens) the project lead closed the item left
+  open by D53 and the places where the screens would otherwise guess; they
+  are in a new Build Spec **§7B** (5 items). No event field, event type or
+  string is added, and nothing about Amadeus is claimed. (a) **The current
+  step** (the skill whose hint levels the panel offers; an accepted hint is
+  recorded on that step's open step attempt, §7A item 2) — the first that
+  holds: task complete → none; booking filed (valid `ER` or bypass) →
+  `FXP`; Terminal just opened from a lesson or Ghost Mode's
+  `ui.ghost.practise` with no scored entry since → the lesson's skill
+  (`slice.json` `lessonCommon.practiceBridge`); the run's last `valid` or
+  `invalid` entry was `invalid` on skill X → X; otherwise the first of `AN`,
+  `SS`, `NM`, `AP`, `CTC`, `TK`, `RF`, `ER` with no valid entry in the run.
+  `out_of_scope` entries never move it; `FQD` only through a lesson or its
+  own wrong entry. The starting point written in the previous handoff
+  ("the first required step in path order without a valid entry") was
+  checked against the approved design and rejected: after a refused `ER`
+  with `TK` missing it names `TK`, so Partial Reveal — `ER` only, §7A item
+  10 — could never be offered where `P1-04b` and `P1-E` draw it and where
+  `reveal.ER` / `er.partial.*` are meant to be used; and a learner who had
+  just typed a wrong `TK` would get hints for another step. (b) **Hint
+  levels on the screen:** Partial Reveal is drawn only when the current
+  step is `ER` (D38); each level is shown / available / not available, as
+  the bridge says; a shown level's text is kept in screen memory for its
+  step attempt (not an event). Where a frame's enabled levels differ (the
+  `P1-04a` moment was drawn before §7A item 10; `P1-05` lacks Partial
+  Reveal after a refused `ER`), the spec wins (Build Spec §2). (c) **Entry
+  field:** Karim's answer in session 2 ("the field shows typing in
+  uppercase; the engine never rewrites an entry", D48) is built as
+  capitals in the field's own value while typing, so what is shown is what
+  is sent and stored — never a lowercase entry displayed as capitals.
+  (d) **Two parts:** 4A — app shell, load notices, `TERMINAL_PRACTICE` with
+  the DEIXEN panel, all breakpoints, both languages; 4B — the other seven
+  states. Until 4B, controls leading to states not yet built are drawn
+  disabled and listed; "no false affordance" is checked at 4B. Coach texts
+  come at step 5. (e) **Load notices** (no board draws them): the second
+  tab shows only `ui.oneTab.*`; `ui.abandoned` and `ui.dataReset` once per
+  load on the first screen, DEIXEN voice, existing tokens only, never over
+  the entry line. **Moved:** leaving a running assessment or scenario
+  inside the app is now decided **before 4B** (not step 6), because 4B
+  draws the assessment and scenario screens with the navigation in their
+  header. Still open: Coach explanations and independence, and the
+  per-session same-category error count (both before step 5). Files
+  changed: Build Spec (status, §7B, pointer in §8), 13, Execution Plan §7;
+  content files unchanged (209 keys each). Karim may reverse any of these.
 
 ## Definition of Done — for the current frozen vertical slice
 

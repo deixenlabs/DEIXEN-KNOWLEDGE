@@ -121,7 +121,7 @@ gate is Karim's own test as a learner (07 D29 item 5).
 Build progress: step 1 (evidence store) locked 2026-09-26 (07 D46); step 2
 part A (engine core, `AN`, `SS`, `NM`, `AP`) locked 2026-09-26 (07 D48);
 next, step 2 part B (`SRCTCM`/`SRCTCR`, `TK`, `RF`, `ER`, `FXP`, `FQD`),
-prepared 2026-09-26 (07 D49; Build Spec §6A); step 2 locked 2026-09-28 (07 D50–D51, tag `step-2b-engine`); step 3 (bridge) prepared 2026-09-28 (07 D52; Build Spec §7A) and locked the same day (07 D53, tag `step-3-bridge`); next, step 4 (Terminal screen, then the other seven states).
+prepared 2026-09-26 (07 D49; Build Spec §6A); step 2 locked 2026-09-28 (07 D50–D51, tag `step-2b-engine`); step 3 (bridge) prepared 2026-09-28 (07 D52; Build Spec §7A) and locked the same day (07 D53, tag `step-3-bridge`); step 4 prepared 2026-09-28 (07 D54; Build Spec §7B) and split into 4A (app shell and Terminal practice) and 4B (the other seven states); next, step 4A in Claude Code session 5.
 
 Phase 4 record (2026-09-25/26): steps 1–4 — three directions, Karim chose
 A (07 D31) and ruled that the Terminal shows Amadeus only (07 D30);

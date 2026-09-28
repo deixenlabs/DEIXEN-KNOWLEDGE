@@ -1,6 +1,6 @@
 ---
 name: DEIXEN Slice Build Spec
-status: CURRENT — APPROVED by Karim 2026-09-25 (07 Decision 26). Updated 2026-09-25: gaps G1–G3 (§5, §12); Decision 27 (K5, K6) applied to §4, §5, §12, §13; K7 (§6 row 5, §12) approved in the Phase 3 gate (07 D28). Phase 4, 2026-09-25: 07 Decisions 30, 32–34, 36 applied to §5 and §13; Decisions 37–38 to §4 and §8. Phase 4 gate, 2026-09-26: 07 Decision 42 (approved design, `tokens.css`) applied to §2; Decision 44 (`AN` header number) to §5 and §12; Decision 45 (boards exported to `design/phase4/`) to §2. Phase 5, 2026-09-26: 07 Decisions 46 (`result` on ending events) and 47 (one tab at a time) applied to §11. 2026-09-26: 07 Decision 49 applied to §6 ("not recognized" vs "not covered") and new §6A (rules for build step 2 part B). 2026-09-28: 07 Decision 50 — §6A items 8–10. 2026-09-28: 07 Decision 52 — new §7A (rules for build step 3), pointers in §8, §10, §11. 2026-09-28: 07 Decision 53 — §7A items 1 (return to practice, app I-12) and 14 (data-reset notice). First edition (Execution Plan 3.3); proposals K1–K4 approved (07 Decision 25). With this approval, the LDS/LXA content extracted here is binding for the slice (LDS and LXA reading rules, point 1).
+status: CURRENT — APPROVED by Karim 2026-09-25 (07 Decision 26). Updated 2026-09-25: gaps G1–G3 (§5, §12); Decision 27 (K5, K6) applied to §4, §5, §12, §13; K7 (§6 row 5, §12) approved in the Phase 3 gate (07 D28). Phase 4, 2026-09-25: 07 Decisions 30, 32–34, 36 applied to §5 and §13; Decisions 37–38 to §4 and §8. Phase 4 gate, 2026-09-26: 07 Decision 42 (approved design, `tokens.css`) applied to §2; Decision 44 (`AN` header number) to §5 and §12; Decision 45 (boards exported to `design/phase4/`) to §2. Phase 5, 2026-09-26: 07 Decisions 46 (`result` on ending events) and 47 (one tab at a time) applied to §11. 2026-09-26: 07 Decision 49 applied to §6 ("not recognized" vs "not covered") and new §6A (rules for build step 2 part B). 2026-09-28: 07 Decision 50 — §6A items 8–10. 2026-09-28: 07 Decision 52 — new §7A (rules for build step 3), pointers in §8, §10, §11. 2026-09-28: 07 Decision 53 — §7A items 1 (return to practice, app I-12) and 14 (data-reset notice). 2026-09-28: 07 Decision 54 — new §7B (rules for build step 4: the current step for hints, hint levels on the screen, the entry field, parts 4A/4B, load notices), pointer in §8. First edition (Execution Plan 3.3); proposals K1–K4 approved (07 Decision 25). With this approval, the LDS/LXA content extracted here is binding for the slice (LDS and LXA reading rules, point 1).
 owns: The single build specification Claude Code implements for the first-build slice. It gathers requirements from their owners and designs the evidence/state schema (delegated to Claude — file 13).
 does not own: any decision (07); Amadeus behavior (Verified Reference); product structure (03); design (Design Brief / Phase 4). Where this file and an owner disagree, the owner wins and the conflict is reported.
 ---
@@ -507,6 +507,85 @@ field or event type (§11), and none claims Amadeus behavior.
     locator — six characters A–Z/0–9 from a random source. None of them is
     stored.
 
+## 7B. Rules for build step 4 (07 D54)
+
+**[D] by delegation (07 D29)** — closed while preparing build step 4
+(screens), so the build does not have to guess. None adds an event field or
+event type (§11), and none claims Amadeus behavior.
+
+1. **The current step** — the skill whose hint levels the DEIXEN panel
+   offers (§7A item 10; 07 D38). One function computes it from the current
+   run; the screen asks it and never works it out itself. Checked in this
+   order; the first that holds decides:
+   (a) the task is complete (§6A item 6) → **no current step**: no hint
+   level applies and no level is shown; `ui.hintLabel` stays;
+   (b) the booking has been filed — by a `valid` `ER` or by a bypass filing
+   (§6A item 2) → **`FXP`**: nothing else can change a filed booking (§6A
+   item 9);
+   (c) the Terminal was opened from a lesson's practice button or from
+   Ghost Mode's `ui.ghost.practise`, and no `valid` or `invalid` entry has
+   been made since → **that lesson's skill** (`slice.json`
+   `lessonCommon.practiceBridge`: "step = the lesson's skill"; `L10-FQD`:
+   `FQD`);
+   (d) the run's last entry whose `result` is `valid` or `invalid` was
+   `invalid`, on skill X → **X**. So after a refused `ER` the current step
+   is `ER` even while `TK` is missing — where the approved design offers
+   Partial Reveal (`P1-04b`; `P1-E` "Hint shown") and what `reveal.ER`
+   ("… Missing now: {MISSING_LIST}") and `er.partial.*` are written for;
+   (e) otherwise → **the first skill in path order** `AN`, `SS`, `NM`,
+   `AP`, `CTC`, `TK`, `RF`, `ER` with no `valid` entry in the run (before
+   filing this always finds one, since a `valid` `ER` files the booking).
+   `out_of_scope` entries (§7A item 3) never move the current step. `FQD`
+   is the current step only through (c) or (d): it is optional (§7). An
+   accepted hint request is recorded on the current step's open step
+   attempt (§7A item 2), so this rule also decides which later entry the
+   hint counts against.
+   *Why not path order alone:* after a refused `ER` with `TK` missing it
+   would name `TK`, so Partial Reveal (`ER` only) could never be offered
+   where the design and `er.partial.*` need it; and a learner who has just
+   typed a wrong `TK` would get hints for a different step.
+2. **Hint levels on the screen.** For the current step the panel shows
+   Nudge, Partial Reveal — only when the current step is `ER`; outside `ER`
+   it is not shown at all (07 D38) — and Full Reveal. Each shown level is
+   in one of three states, taken from the bridge: **shown** (requested in
+   the current step's open step attempt: pressed, its text stays visible,
+   07 D38); **available** (the next level, in order, that applies and has
+   not been shown, §7A item 10: enabled); **not available** (every other:
+   disabled, the `P1-F-Controls` disabled style). So a step with no wrong
+   entry yet shows Nudge disabled and Full Reveal available. The text of a
+   shown level is kept by the screen, in memory, for that step attempt — it
+   is not an event (§7A item 4) — so it comes back when the learner returns
+   to that step while its attempt is open, and goes when the attempt
+   closes. Each approved frame shows one moment: where a frame's enabled
+   and disabled levels differ from this rule (`P1-04a` shows Nudge enabled
+   just after a valid `NM` — drawn before §7A item 10; `P1-05` shows no
+   Partial Reveal after a refused `ER`), this rule wins (§2 "What a frame
+   is").
+3. **The entry field** (07 D48, Karim in build session 2: the field shows
+   typing in uppercase; the engine never rewrites an entry). Letters are
+   turned into capitals **as they are typed**, in the field's own value, so
+   what the learner sees is exactly what is sent to the engine and stored
+   as `command` — never a lowercase entry shown as capitals. Nothing else
+   is changed (no spaces removed or added).
+4. **Build step 4 is built in two parts.** **4A:** the app shell (header
+   with lockup B, the five-area navigation, the phone header and menu
+   sheet, the language switch; English/LTR and Arabic/RTL), the load
+   notices (`ui.oneTab.*`, `ui.abandoned`, `ui.dataReset`, §7A items
+   14–15), and the `TERMINAL_PRACTICE` screen with the DEIXEN panel, wired
+   to the bridge, at every breakpoint in both languages. **4B:** the other
+   seven states (§3). Until 4B, a control that leads to a state not yet
+   built (the other areas in the navigation, Start assessment) is drawn as
+   in the boards but disabled, and the report lists each one; "no false
+   affordance" (§13) is checked when 4B is done. Coach texts (`coach.*`)
+   come at build step 5 (Coach): in 4A the panel shows no Coach block.
+5. **Where the load notices appear** (no board draws them; 07 D47 says to
+   use the design's existing tokens and patterns). A second tab shows only
+   `ui.oneTab.title` and `ui.oneTab.body` (§7A item 15). `ui.abandoned` and
+   `ui.dataReset` are shown once per load, on the first screen shown, in
+   the DEIXEN voice, with existing role tokens and patterns only, never
+   covering the Terminal entry line. No control is required; any control
+   added must work.
+
 ## 8. Independence, hints and feedback
 
 **[D on approval — LDS §7 Fix 2, §13, §15; LXA §11]**
@@ -515,7 +594,7 @@ field or event type (§11), and none claims Amadeus behavior.
   Partial Reveal (which checklist item is unmet, Tier 3 only; diagnostic) →
   Full Reveal (the fix; corrective). Each is learner-requested and
   increments the one counter. **[D] (07 D38)** Offered in this order for
-  the current step; a shown level stays visible; Partial Reveal is not shown
+  the current step (§7B item 1); a shown level stays visible; Partial Reveal is not shown
   outside `ER`.
 - **Every feedback text is authored as `diagnostic` or `corrective`.** Test:
   if the text plus the checklist item lets the learner type the correct
