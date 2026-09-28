@@ -87,7 +87,9 @@ locked (07 D50–D51, tag `step-2b-engine`). Preparing step 3, the gaps in
 Build Spec §7–§11 were closed in a new §7A (07 D52); two strings
 (`ui.oneTab.*`) and one feedback item (`reveal.ER.ready`) added. The GitHub
 main folder, read 2026-09-28, holds the current files: the layout row is
-closed.
+closed. Same day: step 3 built and locked (07 D53, tag `step-3-bridge`, 723
+tests); `ui.dataReset` added; return to practice after a finished
+assessment or scenario (Karim, app I-12).
 
 ## 2. Phase 1 Findings — Disposition
 
@@ -187,6 +189,11 @@ presented a navy/blue color language as "durable" although colors are open
 | App I-8 header after end of transaction; I-9 `FQD` layout | CLOSED — DEIXEN renderings in Verified Reference V-18, V-16; `disc.6` (07 D50) | Claude (D29) | Build in the finish session |
 | App I-10 `TK OK` date `DDMMM`; I-11 changes after filing not covered | CLOSED — Karim in session 3 (07 D50; Build Spec §6A item 9) | Karim | — |
 | Gaps for build step 3 (run and step-attempt boundaries; `result` mapping; which skill a feedback event belongs to; Ghost reveals; "immediately preceded"; skill-state pass and demotion; Error-Recovery Practice on `ER`; which hint levels apply; `reveal.ER` when nothing is missing; `{MISSING_LIST}` undefined; assessment/scenario completion; Growth order; `ui.growth.empty` vs the rule; engine inputs) | CLOSED — Build Spec §7A; `reveal.ER.ready`, `ui.oneTab.*`, token rule, `ui.growth.empty` (07 D52) | Claude (D29) | Claude Code session 4 |
+| Build step 3 (session 4) | CLOSED — merged, tag `step-3-bridge`, 723 tests (07 D53) | — | Build step 4 |
+| Return to practice after a finished assessment or scenario (app I-12) | CLOSED — Karim in session 4; Build Spec §7A item 1 (07 D53) | Karim | Confirm the exact I-12 wording in the session-5 checks |
+| Notice when an unreadable or other-version record is reset (Build Spec §11) had no wording | CLOSED — `ui.dataReset` EN/AR (07 D53) | Claude (D29) | Screen shows it once (step 4) |
+| Which skill is "the current step" for hints | OPEN — define before the step-4 session (07 D53) | Claude (D29) | — |
+| Escalation offer needs a per-session count of same-category errors | OPEN — build step 5 (07 D53) | — | — |
 | Leaving a running assessment or scenario inside the app (K3 covers only closing the browser) | OPEN — decide before build step 6 (07 D52) | Claude (D29) | — |
 | Whether a Coach explanation beside a verified message (e.g. `coach.needTk`) counts as corrective feedback for independence | OPEN — decide before build step 5 (07 D52) | Claude (D29) | — |
 | `AN` checklist (b) rarely fails (app I-7) | NOTED — learning-evidence observation (07 D48) | — | Revisit at curriculum expansion |

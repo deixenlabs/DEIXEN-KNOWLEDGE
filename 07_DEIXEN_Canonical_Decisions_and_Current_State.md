@@ -2,7 +2,7 @@
 name: DEIXEN Canonical Decisions & Current State
 owns: The single decisions ledger and current project status going forward
 supersedes reading in isolation: AeroBridge_Decisions_and_Current_State.md
-last synchronized: 2026-09-26 (Phase 4 closed — gate approved, Decision 42; delegated Decisions 43–44; approved boards exported, Decision 45; Phase 5 started — build step 1 locked, Decisions 46–47; step 2 part A locked, Decision 48; step 2 part B prepared, Decision 49; part B checked, Decision 50; step 2 locked, Decision 51; step 3 prepared, Decision 52)
+last synchronized: 2026-09-26 (Phase 4 closed — gate approved, Decision 42; delegated Decisions 43–44; approved boards exported, Decision 45; Phase 5 started — build step 1 locked, Decisions 46–47; step 2 part A locked, Decision 48; step 2 part B prepared, Decision 49; part B checked, Decision 50; step 2 locked, Decision 51; step 3 prepared, Decision 52; step 3 locked, Decision 53)
 authority note: Where a decision below is owned in more detail elsewhere in this canonical set (product/architecture, design, engine, curriculum/Coach), this file states the decision and its status, and points there rather than duplicating — the same single-ownership discipline the original NEW document already established and this pass is preserving.
 ---
 
@@ -53,7 +53,7 @@ were ended by Karim's decision on 2026-09-24 and are historical.
 **Phase:** Phase 4 (Design) closed on 2026-09-26 — Karim approved the gate
 (Decision 42). **Current: Phase 5 (Build)** — build step 1 (evidence store)
 locked 2026-09-26 (Decision 46); step 2 part A (engine core, `AN`, `SS`,
-`NM`, `AP`) locked the same day (Decision 48); step 2 part B prepared (Decision 49: the D48 follow-ups I-4, I-5, I-6 closed, and the part B rules written into Build Spec §6A); Claude Code built part B in its third session (not merged: two layouts were missing); the project lead supplied them (Decision 50); session 3B finished, merged and tagged part B (Decision 51). Build step 3 (bridge, independence flag, skill states, Growth status, one-tab rule D47) prepared (Decision 52: Build Spec §7A); next: Claude Code session 4 builds it. Claude Code builds the slice from
+`NM`, `AP`) locked the same day (Decision 48); step 2 part B prepared (Decision 49: the D48 follow-ups I-4, I-5, I-6 closed, and the part B rules written into Build Spec §6A); Claude Code built part B in its third session (not merged: two layouts were missing); the project lead supplied them (Decision 50); session 3B finished, merged and tagged part B (Decision 51). Build step 3 (bridge, independence flag, skill states, Growth status, one-tab rule D47) prepared (Decision 52: Build Spec §7A), built in session 4 and locked (Decision 53, tag `step-3-bridge`, 723 tests). Next: build step 4 (Terminal screen, then the other seven states). Claude Code builds the slice from
 `DEIXEN_Slice_Build_Spec.md`, `CLAUDE.md`, the content files, the approved
 design and `tokens.css`. Standing delegation to Claude: Decision 29.
 Phase 4 record: Claude Design proposed three directions (A "Margin",
@@ -898,6 +898,52 @@ an ordinary technical implementation choice, not decided here.
   the current files (07 with D51, Build Spec with §6A items 8–10, the
   content files with 205 keys each) — the layout problem recorded in 13 is
   closed.
+
+- **Decision 53 — Build step 3 (bridge and evidence rules) checked and
+  locked. Closed — by delegation (D29), 2026-09-28**, except where marked
+  Karim. Claude Code's fourth session built Build Spec §7A on branch
+  `feature/bridge`, merged to `main`, tag `step-3-bridge`. Reported: 723
+  tests passed, 0 failed (123 new); typecheck and build pass; knowledge
+  markers and the content copy checked (208 keys each, byte-identical);
+  manifest 69/69; `tokens.css` unchanged; 20 planted faults, all caught; the
+  engine-result → event table is in the app's `docs/DECISIONS.md` T6. The
+  project lead checked the report against Build Spec §7A, §13 and
+  `CLAUDE.md` §8 (self-review, D17: report read, code not read). Accepted:
+  (a) an unrecognized entry has no skill, so it carries no `attemptId`
+  (the step-1 store had required one; no field added) — matches §7A items
+  2–3. (b) One engine change: after task completion the engine reports
+  which command was typed, so the `out_of_scope` event carries its skill
+  (§7A item 3). (c) Demotion: the error that sets `NEEDS_REINFORCEMENT` is
+  not a failed reinforcement attempt; only errors while it is active count
+  — this is §7A item 8 as written; the session brief's test line ("two
+  failures → TRANSFERRED → CONSOLIDATED") was loose. The spec was right,
+  the brief was not (same lesson as sessions 2, 3, 3B). (d) One-tab
+  detection uses a browser lock that only one tab can hold and that the
+  browser releases when the tab closes; a browser without that feature
+  would record in every tab — accepted, as all current major browsers have
+  it (Claude Code's statement, not checked by the project lead); revisit if
+  an older browser has to be supported. **Karim, in session (app I-12):**
+  after an assessment or the scenario has ended, the learner can return to
+  practice; this starts a new practice run — written into Build Spec §7A
+  item 1 (the exact wording of app I-12 to be confirmed in the next
+  session's checks). **By delegation:** Claude Code noted there was no
+  approved wording for telling the learner that an unreadable or
+  other-version record was reset (Build Spec §11) — a silent loss of the
+  record would break the evidence contract's honesty, so a notice is
+  added: `ui.dataReset` — EN "Your saved practice record could not be
+  read, so DEIXEN started a new, empty record in this browser." / AR
+  «تعذّرت قراءة سجل تدريبك المحفوظ، لذلك بدأ DEIXEN سجلًا جديدًا فارغًا في
+  هذا المتصفح.» (both string files, 209 keys each; listed in `slice.json`;
+  Build Spec §7A item 14). **Noted for build step 4:** which skill is "the
+  current step" for hints (the screen gives it to the bridge) must be
+  defined before the step-4 session; the D34 two-sentence split is a
+  screen helper. **Noted for build step 5:** the escalation offer needs a
+  per-session count of same-category errors (not built). Still open from
+  D52: leaving a running assessment or scenario (before step 6); Coach
+  explanations and independence (before step 5). Files changed: Build Spec
+  (status, §7A items 1 and 14), `slice.json`, both string files, 13,
+  Execution Plan §7. Next: build step 4 (Terminal screen, then the other
+  seven states).
 
 ## Definition of Done — for the current frozen vertical slice
 

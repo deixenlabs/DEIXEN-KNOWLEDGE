@@ -197,6 +197,7 @@
  "ui.reset.cancel": "Cancel",
  "ui.oneTab.title": "DEIXEN is already open in another tab",
  "ui.oneTab.body": "To keep your record accurate, DEIXEN works in one tab at a time. Close this tab and continue in the other one, or close the other one and reload this page.",
+ "ui.dataReset": "Your saved practice record could not be read, so DEIXEN started a new, empty record in this browser.",
  "disc.title": "What this simulator does and does not do",
  "disc.1": "DEIXEN is a practice simulator, not Amadeus. All flights, seats, fares, taxes, names, phone numbers, office codes and record locators are invented for practice. The airline code 6X is used only as a practice code; no real schedule or fare is shown.",
  "disc.2": "Only these entries are simulated: AN, SS, NM, AP, SRCTCM, SRCTCR, TK, RF, ER, FXP, and FQD (optional). Another entry that DEIXEN's Amadeus reference names as a real Amadeus entry (for example FXX or FQN) gets the message 'not covered in this slice' — a DEIXEN limit, not an Amadeus one. Any other entry gets the training message 'Entry not recognized.': DEIXEN does not recognize it, which does not mean that Amadeus would reject it.",

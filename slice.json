@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "status": "APPROVED by Karim 2026-09-25 (07 Decision 28), with the readiness-check fixes. Self-review only (07 D17). Updated 2026-09-25 by delegation (07 Decisions 33–34): training messages tm.notAccepted and tm.notForTask added; feedback[].terminalLine added. 2026-09-25: ui.assessment.carryover reworded count-neutral (07 D39). 2026-09-26 (Phase 4 gate, 07 D42–D44): interface words added as ui.* keys and listed in 'ui' (D43); ui.what.* listed (they were in the string files but missing here); displays.AN.headerNumber added (D44). 2026-09-26 (07 D49, by delegation): 'airlineName' added for 6X (app issue I-4); feedback item ctc.fb.refusalNotTask added (SRCTCR entered in the main task). 2026-09-28 (07 D50): fqd.note updated to the V-16 DEIXEN rendering. 2026-09-28 (07 D52, by delegation): feedback item reveal.ER.ready added (Full Reveal for ER when nothing is missing); ui.oneTab.title and ui.oneTab.body listed (07 D47 wording); token rule extended ({MISSING_LIST} and the other runtime tokens); ui.growth.empty reworded in both string files.",
+ "status": "APPROVED by Karim 2026-09-25 (07 Decision 28), with the readiness-check fixes. Self-review only (07 D17). Updated 2026-09-25 by delegation (07 Decisions 33–34): training messages tm.notAccepted and tm.notForTask added; feedback[].terminalLine added. 2026-09-25: ui.assessment.carryover reworded count-neutral (07 D39). 2026-09-26 (Phase 4 gate, 07 D42–D44): interface words added as ui.* keys and listed in 'ui' (D43); ui.what.* listed (they were in the string files but missing here); displays.AN.headerNumber added (D44). 2026-09-26 (07 D49, by delegation): 'airlineName' added for 6X (app issue I-4); feedback item ctc.fb.refusalNotTask added (SRCTCR entered in the main task). 2026-09-28 (07 D50): fqd.note updated to the V-16 DEIXEN rendering. 2026-09-28 (07 D52, by delegation): feedback item reveal.ER.ready added (Full Reveal for ER when nothing is missing); ui.oneTab.title and ui.oneTab.body listed (07 D47 wording); token rule extended ({MISSING_LIST} and the other runtime tokens); ui.growth.empty reworded in both string files. 2026-09-28 (07 D53, by delegation): ui.dataReset added (notice after an unreadable or other-version record was reset, Build Spec §11).",
  "rules": [
   "Every Amadeus statement in the text files traces to a VERIFIED entry of DEIXEN_Amadeus_Verified_Reference.md (listed per lesson in 'verifiedBasis').",
   "All flights, fares, taxes, phone numbers, names, office IDs and record locators are fictional practice data. Airline code 6X is used only as a practice code; no real schedule or fare is implied. Its display name PRACTICE AIRLINE (the banner of a carrier-preferred AN display, V-14; 07 D49) is invented and is not a real airline.",
@@ -1131,7 +1131,8 @@
   "ui.reset.everything",
   "ui.reset.cancel",
   "ui.oneTab.title",
-  "ui.oneTab.body"
+  "ui.oneTab.body",
+  "ui.dataReset"
  ],
  "disclosure": [
   "disc.title",

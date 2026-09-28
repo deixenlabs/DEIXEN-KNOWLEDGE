@@ -1,6 +1,6 @@
 ---
 name: DEIXEN Slice Build Spec
-status: CURRENT — APPROVED by Karim 2026-09-25 (07 Decision 26). Updated 2026-09-25: gaps G1–G3 (§5, §12); Decision 27 (K5, K6) applied to §4, §5, §12, §13; K7 (§6 row 5, §12) approved in the Phase 3 gate (07 D28). Phase 4, 2026-09-25: 07 Decisions 30, 32–34, 36 applied to §5 and §13; Decisions 37–38 to §4 and §8. Phase 4 gate, 2026-09-26: 07 Decision 42 (approved design, `tokens.css`) applied to §2; Decision 44 (`AN` header number) to §5 and §12; Decision 45 (boards exported to `design/phase4/`) to §2. Phase 5, 2026-09-26: 07 Decisions 46 (`result` on ending events) and 47 (one tab at a time) applied to §11. 2026-09-26: 07 Decision 49 applied to §6 ("not recognized" vs "not covered") and new §6A (rules for build step 2 part B). 2026-09-28: 07 Decision 50 — §6A items 8–10. 2026-09-28: 07 Decision 52 — new §7A (rules for build step 3), pointers in §8, §10, §11. First edition (Execution Plan 3.3); proposals K1–K4 approved (07 Decision 25). With this approval, the LDS/LXA content extracted here is binding for the slice (LDS and LXA reading rules, point 1).
+status: CURRENT — APPROVED by Karim 2026-09-25 (07 Decision 26). Updated 2026-09-25: gaps G1–G3 (§5, §12); Decision 27 (K5, K6) applied to §4, §5, §12, §13; K7 (§6 row 5, §12) approved in the Phase 3 gate (07 D28). Phase 4, 2026-09-25: 07 Decisions 30, 32–34, 36 applied to §5 and §13; Decisions 37–38 to §4 and §8. Phase 4 gate, 2026-09-26: 07 Decision 42 (approved design, `tokens.css`) applied to §2; Decision 44 (`AN` header number) to §5 and §12; Decision 45 (boards exported to `design/phase4/`) to §2. Phase 5, 2026-09-26: 07 Decisions 46 (`result` on ending events) and 47 (one tab at a time) applied to §11. 2026-09-26: 07 Decision 49 applied to §6 ("not recognized" vs "not covered") and new §6A (rules for build step 2 part B). 2026-09-28: 07 Decision 50 — §6A items 8–10. 2026-09-28: 07 Decision 52 — new §7A (rules for build step 3), pointers in §8, §10, §11. 2026-09-28: 07 Decision 53 — §7A items 1 (return to practice, app I-12) and 14 (data-reset notice). First edition (Execution Plan 3.3); proposals K1–K4 approved (07 Decision 25). With this approval, the LDS/LXA content extracted here is binding for the slice (LDS and LXA reading rules, point 1).
 owns: The single build specification Claude Code implements for the first-build slice. It gathers requirements from their owners and designs the evidence/state schema (delegated to Claude — file 13).
 does not own: any decision (07); Amadeus behavior (Verified Reference); product structure (03); design (Design Brief / Phase 4). Where this file and an owner disagree, the owner wins and the conflict is reported.
 ---
@@ -352,7 +352,10 @@ field or event type (§11), and none claims Amadeus behavior.
 1. **Run.** A run is the Terminal work on one booking. It starts with the
    first entry after the app loads, after Reset task, or when an assessment
    or the scenario starts; it ends at Reset task, when another run starts,
-   or when the page unloads. Task completion (§6A item 6) does not end the
+   or when the page unloads. After an assessment or the scenario has ended,
+   the learner can return to practice, which starts a new practice run on
+   an empty booking (Karim, build session 4, app I-12; 07 D53). There is
+   still no exit from a running one (item 11). Task completion (§6A item 6) does not end the
    run (later entries get `tm.sliceEnd`). The booking is not stored (§11
    stores events only), so after a reload the practice booking starts
    empty.
@@ -488,7 +491,9 @@ field or event type (§11), and none claims Amadeus behavior.
     per load, in the recording tab only (07 D47). The bridge reports the
     attempts it marked abandoned during this load, so the screen can show
     `ui.abandoned` once (`{WHAT}` = `ui.what.assessment` or
-    `ui.what.scenario`).
+    `ui.what.scenario`). When the load found an unreadable or other-version
+    record and reset it (§11), the bridge reports that too, and the screen
+    shows `ui.dataReset` once (07 D53).
 15. **One tab at a time** (§11, 07 D47). In a second tab the bridge opens
     the store in a non-recording mode: it writes nothing, runs no
     interrupted-attempt check, and the screen shows only `ui.oneTab.title`
