@@ -1,6 +1,6 @@
 ---
 name: DEIXEN Slice Build Spec
-status: CURRENT — APPROVED by Karim 2026-09-25 (07 Decision 26). Updated 2026-09-25: gaps G1–G3 (§5, §12); Decision 27 (K5, K6) applied to §4, §5, §12, §13; K7 (§6 row 5, §12) approved in the Phase 3 gate (07 D28). Phase 4, 2026-09-25: 07 Decisions 30, 32–34, 36 applied to §5 and §13; Decisions 37–38 to §4 and §8. Phase 4 gate, 2026-09-26: 07 Decision 42 (approved design, `tokens.css`) applied to §2; Decision 44 (`AN` header number) to §5 and §12; Decision 45 (boards exported to `design/phase4/`) to §2. Phase 5, 2026-09-26: 07 Decisions 46 (`result` on ending events) and 47 (one tab at a time) applied to §11. 2026-09-26: 07 Decision 49 applied to §6 ("not recognized" vs "not covered") and new §6A (rules for build step 2 part B). 2026-09-28: 07 Decision 50 — §6A items 8–10. 2026-09-28: 07 Decision 52 — new §7A (rules for build step 3), pointers in §8, §10, §11. 2026-09-28: 07 Decision 53 — §7A items 1 (return to practice, app I-12) and 14 (data-reset notice). 2026-09-28: 07 Decision 54 — new §7B (rules for build step 4: the current step for hints, hint levels on the screen, the entry field, parts 4A/4B, load notices), pointer in §8. First edition (Execution Plan 3.3); proposals K1–K4 approved (07 Decision 25). With this approval, the LDS/LXA content extracted here is binding for the slice (LDS and LXA reading rules, point 1).
+status: CURRENT — APPROVED by Karim 2026-09-25 (07 Decision 26). Updated 2026-09-25: gaps G1–G3 (§5, §12); Decision 27 (K5, K6) applied to §4, §5, §12, §13; K7 (§6 row 5, §12) approved in the Phase 3 gate (07 D28). Phase 4, 2026-09-25: 07 Decisions 30, 32–34, 36 applied to §5 and §13; Decisions 37–38 to §4 and §8. Phase 4 gate, 2026-09-26: 07 Decision 42 (approved design, `tokens.css`) applied to §2; Decision 44 (`AN` header number) to §5 and §12; Decision 45 (boards exported to `design/phase4/`) to §2. Phase 5, 2026-09-26: 07 Decisions 46 (`result` on ending events) and 47 (one tab at a time) applied to §11. 2026-09-26: 07 Decision 49 applied to §6 ("not recognized" vs "not covered") and new §6A (rules for build step 2 part B). 2026-09-28: 07 Decision 50 — §6A items 8–10. 2026-09-28: 07 Decision 52 — new §7A (rules for build step 3), pointers in §8, §10, §11. 2026-09-28: 07 Decision 53 — §7A items 1 (return to practice, app I-12) and 14 (data-reset notice). 2026-09-28: 07 Decision 54 — new §7B (rules for build step 4: the current step for hints, hint levels on the screen, the entry field, parts 4A/4B, load notices), pointer in §8. 2026-09-29: 07 Decisions 55–56 — §7A item 1 (a run also starts at an accepted hint request, app I-12), items 1 and 11 and §9 (pointers to the in-app exit), §7B heading and new items 6–10 ("Booking as it stands", leaving a running assessment or scenario, storage refused, the name as a string key, behaviours over time); 07 Decision 57 — §7B items 11–15 (the Flight Deck's recommended action, the practice run when moving between screens, Learning, Ghost Mode replays, when the scenario and the assessment start). First edition (Execution Plan 3.3); proposals K1–K4 approved (07 Decision 25). With this approval, the LDS/LXA content extracted here is binding for the slice (LDS and LXA reading rules, point 1).
 owns: The single build specification Claude Code implements for the first-build slice. It gathers requirements from their owners and designs the evidence/state schema (delegated to Claude — file 13).
 does not own: any decision (07); Amadeus behavior (Verified Reference); product structure (03); design (Design Brief / Phase 4). Where this file and an owner disagree, the owner wins and the conflict is reported.
 ---
@@ -350,12 +350,15 @@ build does not have to guess. They make §7–§11 exact; none adds an event
 field or event type (§11), and none claims Amadeus behavior.
 
 1. **Run.** A run is the Terminal work on one booking. It starts with the
-   first entry after the app loads, after Reset task, or when an assessment
-   or the scenario starts; it ends at Reset task, when another run starts,
-   or when the page unloads. After an assessment or the scenario has ended,
-   the learner can return to practice, which starts a new practice run on
-   an empty booking (Karim, build session 4, app I-12; 07 D53). There is
-   still no exit from a running one (item 11). Task completion (§6A item 6) does not end the
+   first entry — or the first accepted hint request (§7A item 10), if that
+   comes first — after the app loads or after Reset task, or when an
+   assessment or the scenario starts; it ends at Reset task, when another
+   run starts, or when the page unloads. (A hint is recorded on a step
+   attempt, item 2, and a step attempt needs a run: Karim, build session 4,
+   app I-12, second half; 07 D55.) After an assessment or the scenario has
+   ended, the learner can return to practice, which starts a new practice
+   run on an empty booking (Karim, build session 4, app I-12; 07 D53).
+   Leaving one while it runs: §7B item 7 (07 D56). Task completion (§6A item 6) does not end the
    run (later entries get `tm.sliceEnd`). The booking is not stored (§11
    stores events only), so after a reload the practice booking starts
    empty.
@@ -465,8 +468,8 @@ field or event type (§11), and none claims Amadeus behavior.
     `assessment_started`, shown only when either is above 0. No event from
     another session enters an assessment result. Leaving a running
     assessment or scenario inside the app (without closing the browser) is
-    not covered by K3; it is decided before build step 6, and step 3
-    offers no such exit.
+    §7B item 7 (07 D56): after a confirmation it records
+    `assessment_ended` / `scenario_ended` with `result` `abandoned`.
 12. **Chain practice** (§7). A practice run gets a `chainId` when it starts
     if all nine required skills are `DEMONSTRATED_INDEPENDENT` or higher at
     that moment. A chain run is **completed unaided** when it holds a
@@ -507,7 +510,7 @@ field or event type (§11), and none claims Amadeus behavior.
     locator — six characters A–Z/0–9 from a random source. None of them is
     stored.
 
-## 7B. Rules for build step 4 (07 D54)
+## 7B. Rules for build step 4 (07 D54–D57)
 
 **[D] by delegation (07 D29)** — closed while preparing build step 4
 (screens), so the build does not have to guess. None adds an event field or
@@ -585,6 +588,115 @@ event type (§11), and none claims Amadeus behavior.
    the DEIXEN voice, with existing role tokens and patterns only, never
    covering the Terminal entry line. No control is required; any control
    added must work.
+6. **"Booking as it stands" in the DEIXEN panel** (07 D55, app I-15; the
+   boards draw only the name and the segment). The list holds the elements
+   the Terminal would display at that moment, in the same order, each with
+   its number from the one numbering function (§4) and `ui.pnr.new` /
+   `ui.pnr.was` as it changes. It never shows a second form of an element:
+   - name → the name as displayed (`ALHARBI/SAAD MR`); segment → airline
+     and flight number (`6X 403`), as drawn in `P1-04a` and `P1-E`;
+   - `AP` → the element text as displayed (`AP 966110000000`);
+   - `TK` → the verified form `TK OK` + date + `/` + office (V-18);
+   - stored `SSR CTCM` → `SSR CTCM` only: the next field, the airline code,
+     is the partly verified detail U-07, so the panel stops before it and
+     carries no marker;
+   - stored `SRCTCR` (U-07) and `RF` before end of transaction (U-08), which
+     the Terminal shows as training messages → **no number**; the first
+     sentence of that training message (the same text the Terminal shows,
+     §5 D34 split), labeled `ui.trainingLabel`; `ui.pnr.new` may apply,
+     `ui.pnr.was` never;
+   - after filing, `RF` is not listed (V-10), as in the filed display.
+7. **Leaving a running assessment or scenario inside the app** (07 D56).
+   Every way the app itself offers to leave the running screen — an area
+   link, the wordmark, the phone menu's Scope Disclosure link, and the
+   browser's Back button if the app keeps browser history — first shows a
+   confirmation: `ui.leave.assessment` or `ui.leave.scenario`, with
+   `ui.leave.stay` (focus starts here) and `ui.leave.confirm`. Leave
+   records `assessment_ended` / `scenario_ended` with `result` `abandoned`
+   (no new field), ends the run, then goes where the learner chose; Stay
+   changes nothing. Not leaving: the language switch; opening or closing
+   the phone menu, the DEIXEN drawer or the brief; the link to the area the
+   learner is already in. After task completion the attempt has ended
+   (§7A item 11) and nothing is asked. Layout: the reset confirmation's
+   pattern (`P1-08`) with existing tokens and control styles; the
+   reset-action style stays reserved for Reset everything (`P1-F`). Area
+   links stay enabled (`P1-F`: "never disabled").
+8. **Storage refused** (07 D55, app I-13). When the browser does not let
+   the app read or write `localStorage`, the screen shows only
+   `ui.noStorage.title` and `ui.noStorage.body`, like the second-tab
+   notice (§7A item 15), and nothing is recorded. If a save fails later in
+   the load, the same notice replaces the screen: nothing is ever shown as
+   recorded that was not written.
+9. **The name as a word** (07 D55, app I-14). Every place the name DEIXEN
+   stands alone as a word, and the wordmark's accessible name, use
+   `ui.brand.name`. Strings that contain the name inside a sentence keep
+   it there. The drawn wordmark (lockup B) is a drawing, not text. The name
+   is provisional (Constitution §1), so it lives in one place.
+10. **Behaviours over time** that no single frame shows (07 D55; app
+    `docs/DECISIONS.md` T7) — where a new entry lands, when the brief
+    folds, which notes stay in the panel, the scroll position — are the
+    builder's choices (§2 "What a frame is"), with two guards: the app
+    never scrolls the entry line, or the first line of the newest response,
+    out of view; and the panel keeps the newest entry's feedback notes plus
+    those of the wrong entries just before it on the same step. A shown
+    hint level follows item 2.
+11. **The Flight Deck's one recommended action** (07 D57; §3; LDS §23;
+    07 D40; `P1-01`). Computed from the evidence when the Flight Deck is
+    shown, never stored (§10). The first that holds decides; the nine
+    required skills are `AN`, `SS`, `NM`, `AP`, `CTC`, `TK`, `RF`, `ER`,
+    `FXP` in that order (`FQD` is never recommended):
+    (a) a required skill has `NEEDS_REINFORCEMENT` active → the first such
+    skill: its chain row carries `ui.chain.next`, and the action is
+    `ui.lesson.practise` (`{CMD}` = the command shown in that row), which
+    opens the Terminal from that skill's lesson (item 12; item 1 (c));
+    (b) a required skill is below `DEMONSTRATED_INDEPENDENT` → the first
+    such skill: its row carries `ui.chain.next`, the action is
+    `ui.lesson.start` (`{N}` = its lesson number), which opens that lesson
+    (a fresh learner gets lesson 1, §3);
+    (c) the last assessment that ended `completed` was not completed with
+    every checklist item met, or none has → `ui.term.startAssessment`
+    (item 15);
+    (d) the scenario has not been completed (§7A item 11) →
+    `ui.fd.openScenario`;
+    (e) otherwise → `ui.fd.openGrowth`.
+    Exactly one action on the screen has the primary-button style (`P1-F`).
+    In (a) and (b) it sits in the Next row as drawn; in (c)–(e) no row
+    carries Next, and the action takes that place under the chain, with
+    existing patterns only. The chain's status words stay as 07 D40 says.
+12. **The practice run when the learner moves between screens** (07 D57;
+    §7A item 1). A practice run lives for the load: leaving the Terminal
+    and coming back in the same load shows the same run, booking, record
+    and panel (hint texts: item 2). A lesson's practice button
+    (`ui.lesson.practise`) or Ghost Mode's `ui.ghost.practise` opens the
+    Terminal with item 1 (c) set, and first starts a **new** practice run
+    on an empty booking (`startPractice()`, app I-12) when the current
+    run's task is complete (§6A item 6) or the lesson's skill already has a
+    `valid` entry in the current run; otherwise it continues the current
+    run. After an assessment or the scenario has ended, the Terminal area
+    link and these buttons lead back to practice through `startPractice()`
+    (§7A item 1).
+13. **Learning** (07 D57; LDS §23 "Revisit"). No lesson is locked:
+    `prerequisiteLessonIds` gives the order, not a lock; all ten lessons
+    are reachable from the lesson strip (`P1-02`). The Learning area opens
+    the lesson item 11 recommends in (a) or (b), otherwise lesson 1.
+    `lesson_completed` follows `slice.json` `lessonCommon.completionRule`.
+14. **Ghost Mode** (07 D57; §7A item 5). Each start of a script, including
+    each Replay, records one `ghost_played`; Pause and resume record
+    nothing. Scripts run on the demo booking in their own sandbox and never
+    touch the practice run.
+15. **When the scenario and the assessment start** (07 D57). The Scenario
+    Bank area opens the scenario screen (`P1-06`: Scenario Bank is the
+    current area) not yet started: brief, objective, constraints, an empty
+    Terminal. `scenario_started` (§7A item 11) is recorded at the learner's
+    first entry or first accepted hint on that screen, which then belong to
+    the scenario run; until then nothing is recorded, and leaving asks
+    nothing (item 7 applies only to a running scenario). The assessment
+    starts when `ui.term.startAssessment` is pressed: `assessment_started`
+    is recorded and the announcement shows (`ui.assessment.starts`,
+    `ui.assessment.intro`, `ui.assessment.carryover` when it applies; on
+    phones closed with `ui.assessment.continue`, `P1-05`). After either has
+    ended, returning to the Scenario Bank shows a new, not-yet-started
+    scenario screen, and Start assessment starts a new assessment.
 
 ## 8. Independence, hints and feedback
 
@@ -637,7 +749,8 @@ competence claim.
 **[D] Interrupted assessment or scenario (07 D25, K3).** If the
 browser closes mid-attempt, the attempt is recorded as abandoned (not
 passed, not failed) and the learner is told so on return. Resolves LXA
-open items 1–2.
+open items 1–2. Leaving one inside the app: §7B item 7 (07 D56) — the
+learner is told first and may stay; leaving records it as abandoned.
 
 ## 10. Growth / Readiness
 

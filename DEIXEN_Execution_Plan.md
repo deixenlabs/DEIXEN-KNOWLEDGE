@@ -121,7 +121,7 @@ gate is Karim's own test as a learner (07 D29 item 5).
 Build progress: step 1 (evidence store) locked 2026-09-26 (07 D46); step 2
 part A (engine core, `AN`, `SS`, `NM`, `AP`) locked 2026-09-26 (07 D48);
 next, step 2 part B (`SRCTCM`/`SRCTCR`, `TK`, `RF`, `ER`, `FXP`, `FQD`),
-prepared 2026-09-26 (07 D49; Build Spec §6A); step 2 locked 2026-09-28 (07 D50–D51, tag `step-2b-engine`); step 3 (bridge) prepared 2026-09-28 (07 D52; Build Spec §7A) and locked the same day (07 D53, tag `step-3-bridge`); step 4 prepared 2026-09-28 (07 D54; Build Spec §7B) and split into 4A (app shell and Terminal practice) and 4B (the other seven states); next, step 4A in Claude Code session 5.
+prepared 2026-09-26 (07 D49; Build Spec §6A); step 2 locked 2026-09-28 (07 D50–D51, tag `step-2b-engine`); step 3 (bridge) prepared 2026-09-28 (07 D52; Build Spec §7A) and locked the same day (07 D53, tag `step-3-bridge`); step 4 prepared 2026-09-28 (07 D54; Build Spec §7B) and split into 4A (app shell and Terminal practice) and 4B (the other seven states); step 4A built in session 5 and locked 2026-09-29 (07 D55, tag `step-4a-terminal`); leaving a running assessment or scenario inside the app decided (07 D56); the rules for 4B written (07 D57; Build Spec §7B items 11–15); next, step 4B in two Claude Code sessions (4B-1 Flight Deck, Learning, Ghost Mode, Growth, Reset, Scope Disclosure; 4B-2 assessment and scenario).
 
 Phase 4 record (2026-09-25/26): steps 1–4 — three directions, Karim chose
 A (07 D31) and ruled that the Terminal shows Amadeus only (07 D30);

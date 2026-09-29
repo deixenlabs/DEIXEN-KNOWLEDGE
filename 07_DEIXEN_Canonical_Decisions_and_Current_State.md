@@ -2,7 +2,7 @@
 name: DEIXEN Canonical Decisions & Current State
 owns: The single decisions ledger and current project status going forward
 supersedes reading in isolation: AeroBridge_Decisions_and_Current_State.md
-last synchronized: 2026-09-26 (Phase 4 closed — gate approved, Decision 42; delegated Decisions 43–44; approved boards exported, Decision 45; Phase 5 started — build step 1 locked, Decisions 46–47; step 2 part A locked, Decision 48; step 2 part B prepared, Decision 49; part B checked, Decision 50; step 2 locked, Decision 51; step 3 prepared, Decision 52; step 3 locked, Decision 53; step 4 prepared, Decision 54)
+last synchronized: 2026-09-26 (Phase 4 closed — gate approved, Decision 42; delegated Decisions 43–44; approved boards exported, Decision 45; Phase 5 started — build step 1 locked, Decisions 46–47; step 2 part A locked, Decision 48; step 2 part B prepared, Decision 49; part B checked, Decision 50; step 2 locked, Decision 51; step 3 prepared, Decision 52; step 3 locked, Decision 53; step 4 prepared, Decision 54; step 4A checked and locked, Decision 55 (2026-09-29); leaving a running assessment or scenario inside the app, Decision 56; rules for build step 4B, Decision 57 (all 2026-09-29))
 authority note: Where a decision below is owned in more detail elsewhere in this canonical set (product/architecture, design, engine, curriculum/Coach), this file states the decision and its status, and points there rather than duplicating — the same single-ownership discipline the original NEW document already established and this pass is preserving.
 ---
 
@@ -53,7 +53,7 @@ were ended by Karim's decision on 2026-09-24 and are historical.
 **Phase:** Phase 4 (Design) closed on 2026-09-26 — Karim approved the gate
 (Decision 42). **Current: Phase 5 (Build)** — build step 1 (evidence store)
 locked 2026-09-26 (Decision 46); step 2 part A (engine core, `AN`, `SS`,
-`NM`, `AP`) locked the same day (Decision 48); step 2 part B prepared (Decision 49: the D48 follow-ups I-4, I-5, I-6 closed, and the part B rules written into Build Spec §6A); Claude Code built part B in its third session (not merged: two layouts were missing); the project lead supplied them (Decision 50); session 3B finished, merged and tagged part B (Decision 51). Build step 3 (bridge, independence flag, skill states, Growth status, one-tab rule D47) prepared (Decision 52: Build Spec §7A), built in session 4 and locked (Decision 53, tag `step-3-bridge`, 723 tests). Build step 4 prepared (Decision 54: Build Spec §7B) and split into 4A (app shell and Terminal practice) and 4B (the other seven states). Next: Claude Code session 5 builds 4A. Claude Code builds the slice from
+`NM`, `AP`) locked the same day (Decision 48); step 2 part B prepared (Decision 49: the D48 follow-ups I-4, I-5, I-6 closed, and the part B rules written into Build Spec §6A); Claude Code built part B in its third session (not merged: two layouts were missing); the project lead supplied them (Decision 50); session 3B finished, merged and tagged part B (Decision 51). Build step 3 (bridge, independence flag, skill states, Growth status, one-tab rule D47) prepared (Decision 52: Build Spec §7A), built in session 4 and locked (Decision 53, tag `step-3-bridge`, 723 tests). Build step 4 prepared (Decision 54: Build Spec §7B) and split into 4A (app shell and Terminal practice) and 4B (the other seven states). 4A built in session 5 and locked (Decision 55, tag `step-4a-terminal`, 818 unit/component and 69 browser tests); leaving a running assessment or scenario inside the app decided (Decision 56); the rules 4B would otherwise guess closed (Decision 57: Build Spec §7B items 11–15). Next: 4B, in two Claude Code sessions (4B-1 Flight Deck, Learning, Ghost Mode, Growth, Reset, Scope Disclosure; 4B-2 assessment and scenario). Claude Code builds the slice from
 `DEIXEN_Slice_Build_Spec.md`, `CLAUDE.md`, the content files, the approved
 design and `tokens.css`. Standing delegation to Claude: Decision 29.
 Phase 4 record: Claude Design proposed three directions (A "Margin",
@@ -993,6 +993,176 @@ an ordinary technical implementation choice, not decided here.
   per-session same-category error count (both before step 5). Files
   changed: Build Spec (status, §7B, pointer in §8), 13, Execution Plan §7;
   content files unchanged (209 keys each). Karim may reverse any of these.
+
+### Decisions of 2026-09-29 — Phase 5, build step 4A checked (Karim in session, and by delegation D29)
+
+- **Decision 55 — Build step 4A (app shell, load notices, Terminal
+  practice) checked and locked; app I-12 to I-15 closed. Closed — by
+  delegation (D29), 2026-09-29**, except where marked Karim. Claude Code's
+  fifth session built Build Spec §7B items 1–5, merged to `main`, tag
+  `step-4a-terminal`. Reported: 818 unit/component tests (94 new) and 69
+  browser tests passed, 0 failed; typecheck and build pass; knowledge
+  markers present; manifest 69/69; `tokens.css` sha256 as approved; the
+  three content files byte-identical (209 keys each); automatic checks for
+  WCAG 2.1 AA in both languages at four widths, keyboard-only use, no raw
+  design value, no word outside the string files, screens using only the
+  bridge; 18 planted faults, all caught; two real bugs found by the tests
+  and fixed (the `/` and `-` keys unreachable by keyboard on phones; a tap
+  on DEIXEN missed with the phone keyboard open); 38 screenshots (8 widths
+  × 2 languages × 2 moments, plus keyboard, drawer, menu) compared with the
+  boards by eye. The project lead checked the report against Build Spec
+  §7B, §13 and `CLAUDE.md` §8 (self-review, D17: report read, code and
+  screenshots not read). Accepted: (a) the four differences from the boards
+  (`P1-04a` Nudge disabled; `P1-05` Partial Reveal drawn at `ER`; area
+  links disabled until 4B; the feedback text where `P1-04b` / `P1-E` draw
+  Coach notes) — each is what §7B items 2 and 4 say. (b) The engine
+  addition: each line of a booking display carries its element number from
+  the one numbering function, so the screen never reads a number off the
+  Amadeus text (§4); no behaviour changed. (c) The case rule, app
+  `docs/DECISIONS.md` T3 verbatim: "The engine reads entries exactly as
+  given (uppercase). The Terminal field (step 4) shows letters in uppercase
+  as they are typed (Karim, session 2), so the learner sees what is
+  submitted; the engine never silently rewrites an entry. Leading and
+  trailing spaces are trimmed." — the engine ignores outer spaces when it
+  reads; the field removes nothing and `command` is stored as typed;
+  matches §7B item 3. (d) The four behaviours over time that no single
+  frame shows (app `docs/DECISIONS.md` T7) — accepted as the builder's
+  choices where a frame shows one moment (§2), with two guards now written
+  as Build Spec §7B item 10: the app never scrolls the entry line or the
+  first line of the newest response out of view, and feedback notes follow
+  the rule reported (the newest entry's notes plus those of the wrong
+  entries just before it on the same step). (e) Noted: the session started
+  from 724 tests where D53 recorded 723 (the content-only commit `3a47361`
+  came between) — a count to confirm, not a failure. **Gap in the report:**
+  `CLAUDE.md` §8 asks that every Amadeus string in the UI be traced to a
+  Verified Reference entry; the report does not say this was re-run for
+  the screens — the 4B-1 session re-runs it and reports it.
+  **Karim, in session 4 (app I-12), verbatim:** "keep both —
+  startPractice() after a finished attempt, and a practice run starting at
+  an accepted hint request. To be written into Build Spec §7A item 1; step 4
+  wires startPractice() to the screen that leads back to practice." D53
+  wrote only the first half. The second half is now in §7A item 1: an
+  accepted hint request made before any entry starts the run (a hint is
+  recorded on a step attempt, §7A item 2, and a step attempt needs a run).
+  **By delegation:** (f) **I-13 — browser storage refused** (the app showed
+  an empty page). The app cannot keep the record, so it does not pretend
+  to: like the second-tab notice, it shows only a notice and records
+  nothing — `ui.noStorage.title` EN "DEIXEN cannot save your practice in
+  this browser" / AR «لا يستطيع DEIXEN حفظ تدريبك في هذا المتصفح»;
+  `ui.noStorage.body` EN "This browser is not letting DEIXEN store data,
+  so no practice can be recorded. Allow this site to store data in your
+  browser's settings, then reload this page." / AR «هذا المتصفح لا يسمح
+  لـ DEIXEN بتخزين البيانات، لذلك لا يمكن تسجيل أي تدريب. اسمح لهذا
+  الموقع بتخزين البيانات من إعدادات المتصفح، ثم أعِد تحميل الصفحة.» If a
+  save fails later in a load, the same notice replaces the screen: nothing
+  is ever shown as recorded that was not written (Restricted Areas,
+  "never show success when nothing happened"). Build Spec §7B item 8.
+  (g) **I-14 — the name as a word.** One key, `ui.brand.name` = "DEIXEN"
+  (same in both files), for every place the name stands alone as a word
+  and for the wordmark's accessible name; strings that contain the name
+  inside a sentence keep it there; the drawn wordmark is a drawing, not
+  text. Reason: the name is provisional (Constitution §1), so it should
+  live in one place. Build Spec §7B item 9. (h) **I-15 — how elements read
+  in "Booking as it stands"** (the panel list; the boards draw only the
+  name and the segment). Rule: the panel lists the elements the Terminal
+  would display at that moment, in the same order, with the number from
+  the one numbering function (§4), and never a second form of an element:
+  name → the name as displayed (`ALHARBI/SAAD MR`); segment → airline and
+  flight number (`6X 403`, as drawn); `AP` → the element text as displayed
+  (`AP 966110000000`); `TK` → the verified form `TK OK` + date + `/` +
+  office (V-18); stored `SSR CTCM` → `SSR CTCM` only — the next field, the
+  airline code, is the partly verified detail U-07, so the panel stops
+  before it and needs no marker. Elements the Terminal shows as a training
+  message (stored `SRCTCR`, U-07; `RF` before end of transaction, U-08)
+  appear **without a number**, as the first sentence of that training
+  message (the same text the Terminal shows, D34), labeled
+  `ui.trainingLabel`; they may carry `ui.pnr.new`, never `ui.pnr.was`.
+  After filing, `RF` is no longer listed (V-10). Nothing about Amadeus is
+  claimed. Build Spec §7B item 6. Sync note: Claude Code saw an older
+  `DEIXEN-KNOWLEDGE\DEIXEN-KNOWLEDGE\` sub-folder inside the main folder on
+  Karim's computer and did not use it; Karim is asked to delete it. New
+  strings (with D56): 7 keys in both string files, listed in `slice.json`
+  `ui` — 216 keys in each file. Files changed: Build Spec (status, §7A
+  items 1 and 11, §7B heading and items 6–10, §9), `slice.json`, both
+  string files, 13, Execution Plan §7. Karim may reverse any of these.
+
+- **Decision 56 — Leaving a running assessment or scenario inside the app.
+  Closed — by delegation (D29), 2026-09-29.** Self-review (D17). Open since
+  D52, moved before 4B by D54. K3 covers only closing the browser. Three
+  options were weighed: (a) leaving ends the attempt as abandoned;
+  (b) the attempt stays running and the learner can come back in the same
+  load; (c) navigation disabled while it runs. (c) is rejected: the
+  approved controls board says area links are "never disabled"
+  (`P1-F-Controls`), and the assessment and scenario boards draw the
+  navigation live (`P1-05`, `P1-06`); it would also leave no way out of a
+  stuck attempt except closing the browser. (b) is rejected: the
+  assessment is announced as "on your own" (`ui.assessment.intro`) and its
+  result says the path works "on this occasion"; a learner could open a
+  lesson or Ghost Mode mid-attempt and return, and "completed with every
+  checklist item met" (§7A item 11) would not show it — this would change
+  what the assessment means, which delegation may not do (Constitution §8).
+  **Rule — (a), with a confirmation:** every way the app itself offers to
+  leave a running assessment or scenario (an area link, the wordmark, the
+  phone menu's Scope Disclosure link, and the browser's Back button if the
+  app keeps browser history) first asks: `ui.leave.assessment` EN "If you
+  leave now, this assessment ends and is recorded as abandoned — neither
+  passed nor failed." / AR «إذا غادرت الآن، ينتهي هذا التقييم ويُسجَّل
+  كـ«متروك» — لا ناجح ولا راسب.»; `ui.leave.scenario` EN "If you leave now,
+  this scenario ends and is recorded as abandoned — neither passed nor
+  failed." / AR «إذا غادرت الآن، ينتهي هذا السيناريو ويُسجَّل كـ«متروك» — لا
+  ناجح ولا راسب.»; buttons `ui.leave.stay` EN "Stay" / AR «البقاء» (focus
+  starts here) and `ui.leave.confirm` EN "Leave" / AR «مغادرة». Leave
+  records `assessment_ended` / `scenario_ended` with `result` `abandoned`
+  (existing event, no new field), ends the run, then goes where the
+  learner chose; Stay changes nothing. Not leaving: switching language,
+  opening or closing the phone menu, the DEIXEN drawer or the brief, the
+  link to the area the learner is already in. After task completion the
+  attempt has ended and nothing is asked. Abandoned attempts are neither
+  passed nor failed and are skipped by Growth (§7A item 13), as with K3.
+  Layout: the reset confirmation's pattern (`P1-08`) with existing tokens
+  and control styles; the reset-action style stays reserved for Reset
+  everything (`P1-F`). Build Spec §7B item 7, pointers in §7A items 1 and
+  11 and §9. What a learner experiences: they can always leave, they are
+  told first what leaving costs, and they can stay. Karim may reverse it.
+
+- **Decision 57 — Rules for build step 4B. Closed — by delegation (D29),
+  2026-09-29.** Self-review (D17). While preparing 4B the project lead
+  found five places where the screens would have to guess; they are closed
+  in Build Spec §7B items 11–15. No event field, event type or string is
+  added, and nothing about Amadeus is claimed. (a) **The Flight Deck's one
+  recommended action** (Build Spec §3 said only "from evidence; fresh
+  learner → first Lesson"), computed at display time, first that holds:
+  a required skill with `NEEDS_REINFORCEMENT` active → re-practise it
+  (`ui.lesson.practise`, into the Terminal from its lesson); the first
+  required skill in path order below `DEMONSTRATED_INDEPENDENT` → its
+  lesson (`ui.lesson.start`); the assessment not yet completed with every
+  checklist item met → Start assessment; the scenario not yet completed →
+  Open scenario; otherwise Open Growth. Basis: LDS §23 (Advance, Reassess),
+  §3, 07 D40 and the approved `P1-01` ("Next" on lesson 4 after `AN`,
+  `SS`, `NM`). A current weakness comes first, as in Growth (§7A item 13).
+  (b) **The practice run when the learner moves around:** it lives for the
+  load (§7A item 1) — leaving the Terminal and coming back shows the same
+  run. A lesson's or Ghost Mode's practice button starts a new practice run
+  (`startPractice()`, app I-12) when the run's task is complete or the
+  lesson's skill already has a `valid` entry in it — otherwise every entry
+  would get `tm.sliceEnd` or repeat a step already done — and otherwise
+  continues it; either way §7B item 1 (c) applies. (c) **Learning:** no
+  lesson is locked (LDS §23 "Revisit"; the ten lessons are links in
+  `P1-02`); the Learning area opens the recommended lesson, else lesson 1.
+  (d) **Ghost Mode:** each start, including each Replay, records one
+  `ghost_played` (a replay is a new start, §7A item 5); Pause records
+  nothing. (e) **When the scenario and the assessment start.** The
+  approved `P1-06` marks the Scenario Bank as the current area and shows
+  the scenario screen before any entry, so opening it must not start
+  anything: `scenario_started` is recorded at the learner's first entry or
+  first accepted hint there (the same trigger as a practice run, §7A item
+  1); until then nothing is recorded and leaving asks nothing (D56 applies
+  only to a running one). The assessment starts when Start assessment is
+  pressed, and the announcement shows then (07 Assessment contract). After
+  either has ended, a new attempt can start the same way. Also: 4B-1 now
+  includes the Scope Disclosure page, because the Flight Deck links to it
+  (`P1-01`). Files changed: Build Spec (status, §7B items 11–15), 13,
+  Execution Plan §7. Karim may reverse any of these.
 
 ## Definition of Done — for the current frozen vertical slice
 

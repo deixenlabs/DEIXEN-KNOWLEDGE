@@ -96,6 +96,15 @@ with the hint-level display, the entry-field case rule, the 4A/4B split and
 the load notices — Build Spec §7B (07 D54). The in-app exit from a running
 assessment or scenario now has to be decided before 4B.
 
+Update 2026-09-29 (step 4A locked): session 5 built 4A — tag
+`step-4a-terminal`, 818 unit/component and 69 browser tests (07 D55).
+App I-12 (second half: a run starts at an accepted hint request), I-13
+(storage refused), I-14 (the name as one key) and I-15 ("Booking as it
+stands") closed; the over-time behaviours (app T7) accepted with two
+guards. Leaving a running assessment or scenario inside the app decided:
+after a confirmation, it is recorded as abandoned (07 D56). 7 strings
+added (216 keys in each string file). The places 4B would guess closed in Build Spec §7B items 11–15 (07 D57). Next: 4B in two sessions.
+
 ## 2. Phase 1 Findings — Disposition
 
 Review type: self-review by the project lead (Decision 17 — independent
@@ -195,13 +204,21 @@ presented a navy/blue color language as "durable" although colors are open
 | App I-10 `TK OK` date `DDMMM`; I-11 changes after filing not covered | CLOSED — Karim in session 3 (07 D50; Build Spec §6A item 9) | Karim | — |
 | Gaps for build step 3 (run and step-attempt boundaries; `result` mapping; which skill a feedback event belongs to; Ghost reveals; "immediately preceded"; skill-state pass and demotion; Error-Recovery Practice on `ER`; which hint levels apply; `reveal.ER` when nothing is missing; `{MISSING_LIST}` undefined; assessment/scenario completion; Growth order; `ui.growth.empty` vs the rule; engine inputs) | CLOSED — Build Spec §7A; `reveal.ER.ready`, `ui.oneTab.*`, token rule, `ui.growth.empty` (07 D52) | Claude (D29) | Claude Code session 4 |
 | Build step 3 (session 4) | CLOSED — merged, tag `step-3-bridge`, 723 tests (07 D53) | — | Build step 4 |
-| Return to practice after a finished assessment or scenario (app I-12) | CLOSED — Karim in session 4; Build Spec §7A item 1 (07 D53) | Karim | Confirm the exact I-12 wording in the session-5 checks |
+| Return to practice after a finished assessment or scenario (app I-12) | CLOSED — Karim in session 4; Build Spec §7A item 1 (07 D53). Verbatim wording received in the session-5 report: its second half (a practice run starts at an accepted hint request) was missing from §7A item 1 — added (07 D55) | Karim | Build 4B-1 wires `startPractice()` |
 | Notice when an unreadable or other-version record is reset (Build Spec §11) had no wording | CLOSED — `ui.dataReset` EN/AR (07 D53) | Claude (D29) | Screen shows it once (step 4) |
 | Which skill is "the current step" for hints | CLOSED — Build Spec §7B item 1 (07 D54); the handoff's path-order starting point rejected (it conflicts with `P1-04b` / `er.partial.*`) | Claude (D29) | Claude Code session 5 (4A) |
 | Gaps for build step 4 (hint levels on the screen; entry-field case; controls to states not yet built; where the load notices appear) | CLOSED — Build Spec §7B items 2–5 (07 D54) | Claude (D29) | Claude Code session 5 (4A) |
-| Build step 4, part 4A (app shell, load notices, Terminal practice) | OPEN — session 5 | Claude Code | Then the step-4A report check |
+| Build step 4, part 4A (app shell, load notices, Terminal practice) | CLOSED — merged, tag `step-4a-terminal`, 818 unit/component + 69 browser tests (07 D55) | — | Build step 4B |
+| App T7 — behaviours over time no frame shows (where a new entry lands, brief folding, which notes stay, scroll position) | CLOSED — accepted with two guards, Build Spec §7B item 10 (07 D55) | Claude (D29) | — |
+| Browser refuses storage: empty page, no approved notice (app I-13) | CLOSED — `ui.noStorage.*` EN/AR, Build Spec §7B item 8 (07 D55) | Claude (D29) | Build 4B-1 |
+| "DEIXEN" as a word in three places (app I-14) | CLOSED — `ui.brand.name`, Build Spec §7B item 9 (07 D55) | Claude (D29) | Build 4B-1 |
+| How `TK`, the contact SSR and `RF` read in "Booking as it stands" (app I-15) | CLOSED — Build Spec §7B item 6 (07 D55): verified forms only; `SSR CTCM` stops before the U-07 field; `SRCTCR` and pre-filing `RF` unnumbered, as their training line | Claude (D29) | Build 4B-1 |
+| `CLAUDE.md` §8 Amadeus-string trace not reported for the 4A screens | OPEN — re-run and report in 4B-1 (07 D55) | Claude Code | Session 4B-1 |
+| Older `DEIXEN-KNOWLEDGE\DEIXEN-KNOWLEDGE\` sub-folder inside the main folder on Karim's computer (seen in session 5, not used) | OPEN — sync hygiene, not blocking | Karim | Delete the sub-folder |
+| Gaps for build step 4B (the Flight Deck's recommended action; the practice run between screens; lesson locking and the Learning link; Ghost replays; when the scenario and the assessment start) | CLOSED — Build Spec §7B items 11–15 (07 D57) | Claude (D29) | Sessions 4B-1, 4B-2 |
+| Build step 4, part 4B (the other seven states) | OPEN — two sessions: 4B-1 Flight Deck, Learning, Ghost Mode, Growth, Reset, Scope Disclosure; 4B-2 assessment and scenario | Claude Code | Then the 4B report checks |
 | Escalation offer needs a per-session count of same-category errors | OPEN — build step 5 (07 D53) | — | — |
-| Leaving a running assessment or scenario inside the app (K3 covers only closing the browser) | OPEN — decide before build step 4B (moved by 07 D54: 4B draws these screens with the navigation) | Claude (D29) | — |
+| Leaving a running assessment or scenario inside the app (K3 covers only closing the browser) | CLOSED — after a confirmation (`ui.leave.*`), leaving records it as abandoned; navigation stays enabled (07 D56; Build Spec §7B item 7) | Claude (D29); Karim may reverse | Build 4B-2 |
 | Whether a Coach explanation beside a verified message (e.g. `coach.needTk`) counts as corrective feedback for independence | OPEN — decide before build step 5 (07 D52) | Claude (D29) | — |
 | `AN` checklist (b) rarely fails (app I-7) | NOTED — learning-evidence observation (07 D48) | — | Revisit at curriculum expansion |
 | Coach layout (global vs per-page) | DRAWN in the approved design (07 D42): DEIXEN's margin on desktop, the DEIXEN drawer on phones, only when a coach string applies; code structure DELEGATED | Claude Code | At build |
