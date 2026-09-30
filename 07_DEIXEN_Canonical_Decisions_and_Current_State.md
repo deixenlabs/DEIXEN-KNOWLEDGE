@@ -2,7 +2,7 @@
 name: DEIXEN Canonical Decisions & Current State
 owns: The single decisions ledger and current project status going forward
 supersedes reading in isolation: AeroBridge_Decisions_and_Current_State.md
-last synchronized: 2026-09-26 (Phase 4 closed — gate approved, Decision 42; delegated Decisions 43–44; approved boards exported, Decision 45; Phase 5 started — build step 1 locked, Decisions 46–47; step 2 part A locked, Decision 48; step 2 part B prepared, Decision 49; part B checked, Decision 50; step 2 locked, Decision 51; step 3 prepared, Decision 52; step 3 locked, Decision 53; step 4 prepared, Decision 54; step 4A checked and locked, Decision 55 (2026-09-29); leaving a running assessment or scenario inside the app, Decision 56; rules for build step 4B, Decision 57 (all 2026-09-29); step 4B-1 checked, Decision 58; rules for build step 4B-2, Decision 59; step 4B-2 checked and build step 4 complete, Decision 60 (all 2026-09-30))
+last synchronized: 2026-09-26 (Phase 4 closed — gate approved, Decision 42; delegated Decisions 43–44; approved boards exported, Decision 45; Phase 5 started — build step 1 locked, Decisions 46–47; step 2 part A locked, Decision 48; step 2 part B prepared, Decision 49; part B checked, Decision 50; step 2 locked, Decision 51; step 3 prepared, Decision 52; step 3 locked, Decision 53; step 4 prepared, Decision 54; step 4A checked and locked, Decision 55 (2026-09-29); leaving a running assessment or scenario inside the app, Decision 56; rules for build step 4B, Decision 57 (all 2026-09-29); step 4B-1 checked, Decision 58; rules for build step 4B-2, Decision 59; step 4B-2 checked and build step 4 complete, Decision 60; rules for build step 5 (Coach), Decision 61 (all 2026-09-30))
 authority note: Where a decision below is owned in more detail elsewhere in this canonical set (product/architecture, design, engine, curriculum/Coach), this file states the decision and its status, and points there rather than duplicating — the same single-ownership discipline the original NEW document already established and this pass is preserving.
 ---
 
@@ -53,7 +53,7 @@ were ended by Karim's decision on 2026-09-24 and are historical.
 **Phase:** Phase 4 (Design) closed on 2026-09-26 — Karim approved the gate
 (Decision 42). **Current: Phase 5 (Build)** — build step 1 (evidence store)
 locked 2026-09-26 (Decision 46); step 2 part A (engine core, `AN`, `SS`,
-`NM`, `AP`) locked the same day (Decision 48); step 2 part B prepared (Decision 49: the D48 follow-ups I-4, I-5, I-6 closed, and the part B rules written into Build Spec §6A); Claude Code built part B in its third session (not merged: two layouts were missing); the project lead supplied them (Decision 50); session 3B finished, merged and tagged part B (Decision 51). Build step 3 (bridge, independence flag, skill states, Growth status, one-tab rule D47) prepared (Decision 52: Build Spec §7A), built in session 4 and locked (Decision 53, tag `step-3-bridge`, 723 tests). Build step 4 prepared (Decision 54: Build Spec §7B) and split into 4A (app shell and Terminal practice) and 4B (the other seven states). 4A built in session 5 and locked (Decision 55, tag `step-4a-terminal`, 818 unit/component and 69 browser tests); leaving a running assessment or scenario inside the app decided (Decision 56); the rules 4B would otherwise guess closed (Decision 57: Build Spec §7B items 11–15). 4B-1 (Flight Deck, Learning, Ghost Mode, Growth, Reset, Scope Disclosure) built in session 6 and checked (Decision 58: 943 unit/component and 104 browser tests; merged and tagged `step-4b1-screens` at the start of session 7); the rules for 4B-2 written (Decision 59: Build Spec §7B items 19–20, the meaning of "the scenario completed"). Session 7 merged 4B-1 (tag `step-4b1-screens`) and built 4B-2 (Decision 60: tag `step-4b2-screens`, 994 unit/component and 158 browser tests); build step 4 is complete — all eight states. Next: close the rules for build step 5 (Coach; app I-21), then its Claude Code session. Claude Code builds the slice from
+`NM`, `AP`) locked the same day (Decision 48); step 2 part B prepared (Decision 49: the D48 follow-ups I-4, I-5, I-6 closed, and the part B rules written into Build Spec §6A); Claude Code built part B in its third session (not merged: two layouts were missing); the project lead supplied them (Decision 50); session 3B finished, merged and tagged part B (Decision 51). Build step 3 (bridge, independence flag, skill states, Growth status, one-tab rule D47) prepared (Decision 52: Build Spec §7A), built in session 4 and locked (Decision 53, tag `step-3-bridge`, 723 tests). Build step 4 prepared (Decision 54: Build Spec §7B) and split into 4A (app shell and Terminal practice) and 4B (the other seven states). 4A built in session 5 and locked (Decision 55, tag `step-4a-terminal`, 818 unit/component and 69 browser tests); leaving a running assessment or scenario inside the app decided (Decision 56); the rules 4B would otherwise guess closed (Decision 57: Build Spec §7B items 11–15). 4B-1 (Flight Deck, Learning, Ghost Mode, Growth, Reset, Scope Disclosure) built in session 6 and checked (Decision 58: 943 unit/component and 104 browser tests; merged and tagged `step-4b1-screens` at the start of session 7); the rules for 4B-2 written (Decision 59: Build Spec §7B items 19–20, the meaning of "the scenario completed"). Session 7 merged 4B-1 (tag `step-4b1-screens`) and built 4B-2 (Decision 60: tag `step-4b2-screens`, 994 unit/component and 158 browser tests); build step 4 is complete — all eight states. The rules for build step 5 (Coach; app I-21) are closed (Decision 61: Build Spec §7C). Next: its Claude Code session (session 8). Claude Code builds the slice from
 `DEIXEN_Slice_Build_Spec.md`, `CLAUDE.md`, the content files, the approved
 design and `tokens.css`. Standing delegation to Claude: Decision 29.
 Phase 4 record: Claude Design proposed three directions (A "Margin",
@@ -201,7 +201,9 @@ applies.
 - Coach Core Guided Learning Layer (Decision 9) — **Closed — Approved.**
   Mandatory, five required touchpoints, state-bound, never static. Layout
   ownership (global element vs. per-page component) is explicitly **Open**
-  for whoever implements it to resolve within that approved boundary.
+  for whoever implements it to resolve within that approved boundary. For
+  the slice: drawn in the approved design (Decision 42); the rules for
+  building it are Decision 61 (Build Spec §7C).
 - Customer Service Curriculum Contract (Decision 6) — **Closed — Approved
   Scope Boundary.** Separate global competency; not part of the initial
   slice; no CS proficiency/readiness metric shown as measured evidence until
@@ -1398,6 +1400,104 @@ an ordinary technical implementation choice, not decided here.
   app I-21. Some of these touch what the assessment and the evidence
   mean, so each is checked against Constitution §8 before it is decided
   by delegation. Files changed: 13, Execution Plan §7.
+
+### Decisions of 2026-09-30 — Phase 5, preparing build step 5 (by delegation D29)
+
+- **Decision 61 — Rules for build step 5 (Coach); app I-21 closed.
+  Closed — by delegation (D29), 2026-09-30.** Self-review (D17), with a
+  read-only read of the app (`docs/ISSUES.md` I-21, `src/config.ts`, the
+  panel and drawer code) and of the boards `P1-04b`, `P1-E`, `P1-07a`,
+  `P2-Issues`. Knowledge sync checked first: the GitHub main folder holds
+  the D60 files (07 "Decision 60", 13 "build step 4 complete", the
+  Execution Plan "07 D60", 217 keys in each string file). The rules are in
+  a new Build Spec **§7C** (10 items). No event field or event type is
+  added; nothing about Amadeus is claimed beyond the Verified Reference.
+  Each point was checked against Constitution §8 (what the assessment and
+  the evidence mean): none changes how the assessment result, the hint
+  label, independence or any skill state is computed.
+  (a) **Coach explanations and independence** (open since D52). The Build
+  Spec §8 test was applied to each of the six `coach.*` texts: none lets
+  the learner type the correct entry without further trial. `coach.needTk`
+  and `coach.missingCtc` name the missing element and restate what the
+  verified message shows (V-09, V-13), at the level of the diagnostic
+  `er.partial.*`; `coach.missingCtc` does not say which of the three forms
+  fits the passenger — that is what made `scn.fb.warningShown` corrective
+  at the readiness check, and it is shown at the same moment in the
+  scenario and recorded as usual. The other four explain an output that
+  has already happened or offer the lesson. So all are **diagnostic**:
+  Build Spec §7A item 4 ("Coach explanations are not events") stands, and
+  no recording mechanism is needed. Guard for later content: a Coach text
+  that would pass the corrective test must be authored as a feedback item
+  with `kind` `corrective`, never as a `coach.*` string (LDS §13: corrective
+  content from any channel excludes the next success). §7C item 3.
+  (b) **Coach in the assessment** (app I-21 item 1). File 06 names the
+  Assessment as one of the five required touchpoints (Karim's Decision 9),
+  so a silent Coach there would drop a required touchpoint; the option is
+  not open to delegation either way. The explanations show as in practice:
+  they are diagnostic, like the feedback texts already shown there, and
+  "on your own" (`ui.assessment.intro`) already says in the same sentence
+  that hints stay available and are counted. The escalation offer is not
+  shown while an assessment or the scenario runs, because its lesson link
+  would leave the attempt (D56); errors made there still count toward it.
+  §7C items 5, 7.
+  (c) **The bypass** (app I-21 item 2). Kept as Build Spec §6A item 2
+  says: the feedback note (the judgment: the step does not count), then
+  `coach.bypassRecorded` (the explanation: what a second `ER` does, V-13);
+  one repeated clause accepted. `ui.assessment.resultUnmet` belongs to the
+  completing `FXP` entry, a different step, so under §7B item 10 it never
+  stands beside the bypass notes. §7C item 6.
+  (d) **Placement** (app I-21 item 3). Coach texts are shown with the
+  output they explain, in the entry's notes after its feedback note, under
+  `ui.panel.coach` — as file 06 ("alongside"), the approved `P1-04b` and
+  `P1-E`, and `P2-Issues` answer 07 ("Coach appears only with a coach
+  string") have it; §8's "learner-initiated by default" governs help
+  beyond that (hints; the escalation offer is the one unrequested help).
+  They follow the notes rule of §7B item 10. On phones Coach never opens
+  the drawer by itself: the drawer's existing "new" mark on the DEIXEN
+  button signals it; the drawer opens by itself only for the assessment
+  announcement and the end note, as now. §7C item 4.
+  (e) **The escalation offer** (open since D53). Count = `invalid`
+  `command_submitted` events with the same `skillId` and `errorCategory`
+  in the current session (one app load), in any context; `out_of_scope`
+  never counts; computed, never stored. Shown in Terminal practice only,
+  with the entry that brings the count to `ESCALATION_ERROR_COUNT` (3,
+  provisional, `src/config.ts`) and with every later such entry; suppressed
+  when the skill, just before the entry, is `CONSOLIDATED` or
+  `TRANSFERRED` without `NEEDS_REINFORCEMENT` active (Build Spec §8; LDS
+  §15) — read before, because that error itself sets the modifier, so a
+  state read after it would never suppress. It holds
+  `coach.escalate` and a link to the skill's lesson, new
+  `ui.coach.openLesson` — EN "Open lesson {N}" / AR «افتح الدرس {N}»;
+  opening it records nothing and keeps the practice run. `coach.escalate`
+  reworded without count-noun agreement, as in D39, because `{N}` can now
+  pass ten and «{N} مرات» is wrong from eleven: EN "Errors of this kind on
+  this step in this session: {N}. Do you want to open the lesson again?" /
+  AR «عدد الأخطاء من هذا النوع في هذه الخطوة خلال هذه الجلسة: {N}. هل تريد
+  فتح الدرس مرة أخرى؟» — meaning unchanged. §7C item 7.
+  (f) **The five touchpoints**, each mapped to a screen and a moment
+  (§7C item 9). Found while mapping them: on Growth, Needs More Practice
+  caused by `NEEDS_REINFORCEMENT` could stand beside chain rows that all
+  read "Correct in DEIXEN" (D40: the row follows the skill's state, which
+  the modifier does not lower), so nothing said why — against file 06's
+  Growth touchpoint ("explain meaningful outcomes and connect them to
+  evidence"). Rule: when Growth shows Needs More Practice, a Coach note
+  under the status says why, one sentence per reason that holds —
+  `coach.growth.reinforce` EN "Needs practice again: {COMMANDS}. A new
+  error came after earlier correct entries." / AR «يحتاج إلى تدريب من
+  جديد: {COMMANDS}. ظهر خطأ جديد بعد إدخالات صحيحة سابقة.» and
+  `coach.growth.assessmentUnmet` EN "The last assessment did not count
+  every step as correct. A new assessment can show the full path working."
+  / AR «آخر تقييم لم تُحتسب فيه كل الخطوات صحيحة. يمكن لتقييم جديد أن
+  يُظهر المسار الكامل يعمل.» Existing patterns and tokens, no control, not
+  an event. §7C item 8. **Stated openly:** the Learning touchpoint has no
+  Coach note on the lesson page, because no approved Coach text is written
+  for it; it is served by the recommended lesson, the lesson's explanation,
+  "In your task", its next steps, and the escalation offer that leads back
+  to the lesson. Learner-test watch point.
+  Files changed: Build Spec (status, new §7C, pointers in §6A item 2 and
+  §8), `slice.json` (`coachExplanations`, `ui`, `rules`, `status`), both
+  string files (220 keys each), 13, Execution Plan §7. Karim may reverse
+  any of these, and may change any word.
 
 ## Definition of Done — for the current frozen vertical slice
 

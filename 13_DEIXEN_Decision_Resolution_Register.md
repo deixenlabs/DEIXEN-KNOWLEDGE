@@ -129,6 +129,19 @@ completed with every checklist item met (as `slice.json`
 same test; the end of an assessment shows `ui.assessment.result` or the
 new `ui.assessment.resultUnmet` (217 keys in each string file).
 
+Update 2026-09-30 (rules for build step 5 closed): 07 D61, Build Spec
+§7C. Every Coach text in the slice is diagnostic, so Coach texts stay
+out of the event record and independence is unchanged; Coach speaks in
+the assessment and the scenario as in practice (file 06 requires both
+touchpoints), without the escalation offer; the bypass keeps its
+feedback note and `coach.bypassRecorded`; Coach never opens the phone
+drawer by itself; the escalation count is per session, per skill and
+category, across contexts; a new Coach note on Growth says why the status
+is Needs More Practice; the five touchpoints are mapped to screens.
+Strings: `coach.escalate` reworded count-neutral; `ui.coach.openLesson`,
+`coach.growth.reinforce`, `coach.growth.assessmentUnmet` added (220 keys
+in each string file). Next: session 8 (build step 5).
+
 ## 2. Phase 1 Findings — Disposition
 
 Review type: self-review by the project lead (Decision 17 — independent
@@ -249,13 +262,15 @@ presented a navy/blue color language as "durable" although colors are open
 | "The scenario completed" read two ways (ended `completed` vs every checklist item met) | CLOSED — every checklist item met, as `slice.json` `scenario.acceptance` says; rows follow the same test (07 D59; Build Spec §7A item 13, §7B items 11 (d), 19, §10) | Claude (D29); Karim may reverse | 4B-1 aligned before merge |
 | Where the assessment result shows; what shows when an assessment ends without every item met | CLOSED — `ui.assessment.result` / new `ui.assessment.resultUnmet`, in the DEIXEN panel (07 D59; Build Spec §7B item 20) | Claude (D29) | Session 7 |
 | Build step 4, part 4B-2 (assessment and scenario screens, the leave question) | CLOSED — merged, tag `step-4b2-screens`, 994 unit/component + 158 browser tests (07 D60); build step 4 complete | — | Build step 5 |
-| Rules for build step 5 (app I-21): Coach in the assessment ("on your own"); `coach.bypassRecorded` beside `ui.assessment.resultUnmet`; Coach never opening the phone drawer by itself | OPEN — decide before the step-5 session; check each against Constitution §8 (assessment and evidence meaning) | Claude (D29), or Karim where §8 reserves it | Before build step 5 |
+| Rules for build step 5 (app I-21): Coach in the assessment ("on your own"); `coach.bypassRecorded` beside `ui.assessment.resultUnmet`; Coach never opening the phone drawer by itself | CLOSED — Build Spec §7C items 4–6 (07 D61); none changes what the assessment or the evidence means | Claude (D29); Karim may reverse | Session 8 |
 | `session-export-1790735258194.zip` left in Karim's Downloads by session 7 (it read session 6's transcript to rebuild the fault list) | OPEN — not blocking | Karim | Delete it |
 | Third copy of the knowledge folder at `Documents\DEIXEN-KNOWLEDGE` (Windows line endings; fails the manifest check; seen in session 6, not used) | OPEN — sync hygiene, not blocking | Karim | Keep only `Documents\DEIXEN\DEIXEN-KNOWLEDGE` |
-| Escalation offer needs a per-session count of same-category errors | OPEN — build step 5 (07 D53) | — | — |
+| Escalation offer needs a per-session count of same-category errors | CLOSED — Build Spec §7C item 7 (07 D61): invalid entries, same skill and category, one app load, all contexts; offered in practice only; new link `ui.coach.openLesson` | Claude (D29) | Session 8 |
 | Leaving a running assessment or scenario inside the app (K3 covers only closing the browser) | CLOSED — after a confirmation (`ui.leave.*`), leaving records it as abandoned; navigation stays enabled (07 D56; Build Spec §7B item 7) | Claude (D29); Karim may reverse | Build 4B-2 |
-| Whether a Coach explanation beside a verified message (e.g. `coach.needTk`) counts as corrective feedback for independence | OPEN — decide before build step 5 (07 D52) | Claude (D29) | — |
+| Whether a Coach explanation beside a verified message (e.g. `coach.needTk`) counts as corrective feedback for independence | CLOSED — no: all six `coach.*` texts are diagnostic under the §8 test; Coach texts stay out of the event record; later corrective content must be a feedback item (07 D61; Build Spec §7C item 3) | Claude (D29) | — |
 | `AN` checklist (b) rarely fails (app I-7) | NOTED — learning-evidence observation (07 D48) | — | Revisit at curriculum expansion |
+| Growth could show Needs More Practice beside chain rows that all read "Correct in DEIXEN" (a skill with `NEEDS_REINFORCEMENT` keeps its state) | CLOSED — a Coach note on Growth says why (`coach.growth.*`; Build Spec §7C item 8; 07 D61) | Claude (D29); Karim may change the words | Session 8 |
+| Learning touchpoint has no Coach note on the lesson page (no approved Coach text for it; served by the recommended lesson, the lesson, its next steps and the escalation offer — Build Spec §7C item 9) | NOTED — learner-test watch point (07 D61) | Karim | Phase 5 learner test |
 | Coach layout (global vs per-page) | DRAWN in the approved design (07 D42): DEIXEN's margin on desktop, the DEIXEN drawer on phones, only when a coach string applies; code structure DELEGATED | Claude Code | At build |
 | Curriculum order (competency vs command order); Lesson 17; 8 Advanced lessons | OPEN | Claude, then Karim | Curriculum authoring after the slice (D18) |
 | Pricing prerequisites of the slice (name before `FXP`?) | UNVERIFIED (U-01) — no longer blocking: D22 puts `NM` before `FXP` | — | — |

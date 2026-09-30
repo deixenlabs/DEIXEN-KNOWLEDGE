@@ -1,6 +1,6 @@
 ---
 name: DEIXEN Slice Build Spec
-status: CURRENT — APPROVED by Karim 2026-09-25 (07 Decision 26). Updated 2026-09-25: gaps G1–G3 (§5, §12); Decision 27 (K5, K6) applied to §4, §5, §12, §13; K7 (§6 row 5, §12) approved in the Phase 3 gate (07 D28). Phase 4, 2026-09-25: 07 Decisions 30, 32–34, 36 applied to §5 and §13; Decisions 37–38 to §4 and §8. Phase 4 gate, 2026-09-26: 07 Decision 42 (approved design, `tokens.css`) applied to §2; Decision 44 (`AN` header number) to §5 and §12; Decision 45 (boards exported to `design/phase4/`) to §2. Phase 5, 2026-09-26: 07 Decisions 46 (`result` on ending events) and 47 (one tab at a time) applied to §11. 2026-09-26: 07 Decision 49 applied to §6 ("not recognized" vs "not covered") and new §6A (rules for build step 2 part B). 2026-09-28: 07 Decision 50 — §6A items 8–10. 2026-09-28: 07 Decision 52 — new §7A (rules for build step 3), pointers in §8, §10, §11. 2026-09-28: 07 Decision 53 — §7A items 1 (return to practice, app I-12) and 14 (data-reset notice). 2026-09-28: 07 Decision 54 — new §7B (rules for build step 4: the current step for hints, hint levels on the screen, the entry field, parts 4A/4B, load notices), pointer in §8. 2026-09-29: 07 Decisions 55–56 — §7A item 1 (a run also starts at an accepted hint request, app I-12), items 1 and 11 and §9 (pointers to the in-app exit), §7B heading and new items 6–10 ("Booking as it stands", leaving a running assessment or scenario, storage refused, the name as a string key, behaviours over time); 07 Decision 57 — §7B items 11–15 (the Flight Deck's recommended action, the practice run when moving between screens, Learning, Ghost Mode replays, when the scenario and the assessment start). 2026-09-30: 07 Decision 58 — §7B items 16–18 (the way into Ghost Mode, Ghost typing speed, "In your task"); 07 Decision 59 — §7A item 13, §7B item 11 (d) and §10 ("the scenario completed" means completed with every checklist item met), §7B items 19–20 (the scenario and assessment rows; the assessment and scenario screens). First edition (Execution Plan 3.3); proposals K1–K4 approved (07 Decision 25). With this approval, the LDS/LXA content extracted here is binding for the slice (LDS and LXA reading rules, point 1).
+status: CURRENT — APPROVED by Karim 2026-09-25 (07 Decision 26). Updated 2026-09-25: gaps G1–G3 (§5, §12); Decision 27 (K5, K6) applied to §4, §5, §12, §13; K7 (§6 row 5, §12) approved in the Phase 3 gate (07 D28). Phase 4, 2026-09-25: 07 Decisions 30, 32–34, 36 applied to §5 and §13; Decisions 37–38 to §4 and §8. Phase 4 gate, 2026-09-26: 07 Decision 42 (approved design, `tokens.css`) applied to §2; Decision 44 (`AN` header number) to §5 and §12; Decision 45 (boards exported to `design/phase4/`) to §2. Phase 5, 2026-09-26: 07 Decisions 46 (`result` on ending events) and 47 (one tab at a time) applied to §11. 2026-09-26: 07 Decision 49 applied to §6 ("not recognized" vs "not covered") and new §6A (rules for build step 2 part B). 2026-09-28: 07 Decision 50 — §6A items 8–10. 2026-09-28: 07 Decision 52 — new §7A (rules for build step 3), pointers in §8, §10, §11. 2026-09-28: 07 Decision 53 — §7A items 1 (return to practice, app I-12) and 14 (data-reset notice). 2026-09-28: 07 Decision 54 — new §7B (rules for build step 4: the current step for hints, hint levels on the screen, the entry field, parts 4A/4B, load notices), pointer in §8. 2026-09-29: 07 Decisions 55–56 — §7A item 1 (a run also starts at an accepted hint request, app I-12), items 1 and 11 and §9 (pointers to the in-app exit), §7B heading and new items 6–10 ("Booking as it stands", leaving a running assessment or scenario, storage refused, the name as a string key, behaviours over time); 07 Decision 57 — §7B items 11–15 (the Flight Deck's recommended action, the practice run when moving between screens, Learning, Ghost Mode replays, when the scenario and the assessment start). 2026-09-30: 07 Decision 58 — §7B items 16–18 (the way into Ghost Mode, Ghost typing speed, "In your task"); 07 Decision 59 — §7A item 13, §7B item 11 (d) and §10 ("the scenario completed" means completed with every checklist item met), §7B items 19–20 (the scenario and assessment rows; the assessment and scenario screens). 2026-09-30: 07 Decision 61 — new §7C (rules for build step 5, Coach: when each Coach text shows, Coach and independence, the assessment and the scenario, the bypass, the escalation count, the Growth note, the five touchpoints), pointers in §6A item 2 and §8. First edition (Execution Plan 3.3); proposals K1–K4 approved (07 Decision 25). With this approval, the LDS/LXA content extracted here is binding for the slice (LDS and LXA reading rules, point 1).
 owns: The single build specification Claude Code implements for the first-build slice. It gathers requirements from their owners and designs the evidence/state schema (delegated to Claude — file 13).
 does not own: any decision (07); Amadeus behavior (Verified Reference); product structure (03); design (Design Brief / Phase 4). Where this file and an owner disagree, the owner wins and the conflict is reported.
 ---
@@ -267,7 +267,8 @@ Amadeus behavior beyond the Verified Reference.
    `ER` and nothing else is missing, the PNR is filed without a contact
    SSR, and the bypass is recorded: checklist item (a) of `ER` fails; the
    panel shows `er.fb.bypassed` (practice, assessment) or
-   `scn.fb.bypassed` (scenario) and `coach.bypassRecorded`. Any other entry
+   `scn.fb.bypassed` (scenario) and `coach.bypassRecorded` (§7C item 6).
+   Any other entry
    in between (valid or not) cancels the pending bypass; the next `ER`
    shows the warning again. (V-13 says only that entering `ER` again
    bypasses it; the "very next entry" window is a DEIXEN rule.)
@@ -737,6 +738,161 @@ event type (§11), and none claims Amadeus behavior.
       leaving (item 7), so the attempt has already ended; the bridge's
       refusal of them while an attempt runs stays as a guard.
 
+## 7C. Rules for build step 5 — Coach (07 D61)
+
+**[D] by delegation (07 D29)** — closed while preparing build step 5
+(Coach; app I-21), so the build does not have to guess. No event field or
+event type is added (§11); Coach texts are not events (§7A item 4); nothing
+about Amadeus is claimed beyond the Verified Reference. What stays as it
+is: feedback texts, hints and "Booking as it stands" keep their own labels
+and rules (§5, §7B items 2, 6, 10); Coach adds to them, it replaces none.
+
+1. **What Coach is in the slice.** Three things, all bound to the learner's
+   recorded state (06 "state binding"), all in the DEIXEN panel or on the
+   Growth screen, never in the Terminal (07 D30):
+   (a) **explanations beside Amadeus output** — the plain-language
+   explanation file 06 places "alongside" a verified message (§5 kind 3):
+   `coach.needTk`, `coach.missingCtc`, `coach.bypassRecorded`,
+   `coach.erDone`, `coach.fxpDone`;
+   (b) **the escalation offer** — `coach.escalate` with the link
+   `ui.coach.openLesson` (item 7);
+   (c) **the Growth note** — `coach.growth.reinforce`,
+   `coach.growth.assessmentUnmet` (item 8).
+   Every Coach text sits under the label `ui.panel.coach`.
+2. **When each explanation shows** — with the entry that produced the
+   output, in every mode (practice, assessment, scenario):
+
+   | Engine result for the entry | Coach text |
+   |---|---|
+   | `ER` refused, the Terminal shows `NEED TICKETING ARRANGEMENT` (V-09) | `coach.needTk` |
+   | `ER` refused, the Terminal shows the V-13 warning | `coach.missingCtc` |
+   | `ER` files the booking through the V-13 bypass (§6A item 2) | `coach.bypassRecorded` |
+   | `ER` valid: the booking is filed and redisplayed with its record locator (V-18) | `coach.erDone` |
+   | `FXP` valid: the pricing display (V-05, V-17), before or after `ER` | `coach.fxpDone` |
+
+   No other entry has a Coach explanation. `ER` refused for any other
+   reason (`tm.rfMissing`, `tm.otherMissing`) has none: those are training
+   messages, not verified output. Each text is VERIFIED: V-09, V-13, V-13,
+   V-18, V-05.
+3. **Coach and independence** (open since 07 D52). The §8 test was applied
+   to every Coach text: none of them, with the checklist item, lets the
+   learner type the correct entry without further trial. `coach.needTk`
+   and `coach.missingCtc` name the missing element and restate what the
+   verified message itself shows, like the diagnostic `er.partial.*`; they
+   do not name the entry, and `coach.missingCtc` does not say which of the
+   three forms fits the passenger (that is what makes the scenario's
+   `scn.fb.warningShown` corrective — it is shown at the same moment and
+   recorded as usual). `coach.bypassRecorded`, `coach.erDone` and
+   `coach.fxpDone` explain an output that has already happened and say
+   nothing about what to type next (after the first two, no entry on `ER`
+   can change the filed booking, §6A item 9).
+   `coach.escalate` and the Growth note say nothing about the entry. So
+   every Coach text is **diagnostic**: it does not affect independence, and
+   §7A item 4 holds unchanged ("Coach explanations are not events"). **Rule
+   for later content:** a Coach text that would pass the corrective test
+   must be authored as a feedback item with `kind` `corrective` (recorded
+   as `feedback_shown`), never as a `coach.*` string (LDS §13: corrective
+   content from any channel excludes the next success).
+4. **Where it shows.**
+   - Desktop and 768: in the DEIXEN panel, in the entry's notes, after its
+     feedback note (if any): the label `ui.panel.coach`, the entry echo,
+     the text — as `P1-04b` and `P1-E` draw it. Existing tokens and
+     patterns only.
+   - Phones: in the DEIXEN drawer, in the same place. **Coach never opens
+     the drawer by itself.** The drawer's existing "new" mark on the
+     DEIXEN button (`ui.pnr.new`) tells the learner a note is waiting. The
+     drawer opens by itself only for the two moments that already do: the
+     assessment announcement and the end-of-assessment note (§7B items 15,
+     20). When the end note opens it, the end note comes first, then the
+     completing entry's notes (including `coach.fxpDone`).
+   - A Coach text belongs to its entry and follows the notes rule of §7B
+     item 10: it stays while that entry's notes stay, and goes with them.
+   - Shown with the output, not on request. File 06 places the explanation
+     alongside the verified message, and the approved design draws it so
+     (`P1-04b`, `P1-E`; `P2-Issues` answer 07: Coach appears only with a
+     coach string). §8's "learner-initiated by default" governs help beyond
+     that: hints stay learner-requested, and the escalation offer is the
+     one help that comes without a request.
+5. **In the assessment and the scenario** (app I-21 item 1). The
+   explanations of item 2 show exactly as in practice. File 06 names the
+   Assessment and the Scenario as Coach touchpoints; each explanation is
+   diagnostic (item 3) and says what the real message means, as the
+   diagnostic feedback texts already shown there do. The announcement's
+   "on your own" (`ui.assessment.intro`) does not mean without help: the
+   same text says hints stay available and are counted (07 Assessment
+   contract; `P2-Issues` answer 06). Nothing in this item changes how the
+   assessment result, the hint label, independence or the evidence are
+   computed. **Not shown while an assessment or the scenario runs:** the
+   escalation offer (item 7) — its link would leave the attempt (§7B item
+   7); errors made there still count toward it (item 7).
+6. **The bypass** (app I-21 item 2). At a bypass filing the entry's notes
+   hold its feedback note (`er.fb.bypassed` in practice and the
+   assessment, `scn.fb.bypassed` in the scenario — the judgment: the step
+   does not count) and then `coach.bypassRecorded` (the explanation: what
+   the second `ER` did in Amadeus, V-13), as §6A item 2 says. The one
+   repeated clause is accepted: the two notes have different jobs. In the
+   assessment, `ui.assessment.resultUnmet` belongs to the completing `FXP`
+   entry, a different entry on a different step, so by §7B item 10 it
+   never stands beside the bypass notes.
+7. **The escalation offer** (§8; LDS §13, §15; open since 07 D53).
+   - **The count:** `command_submitted` events with `result` `invalid`,
+     the same `skillId` and the same `errorCategory`, in the current
+     session (`sessionId`, one app load), in any context — practice,
+     assessment and scenario errors all count. `out_of_scope` entries are
+     not errors (§7A item 3) and never count. Computed from the events when
+     needed, never stored (§11).
+   - **When it shows:** with an `invalid` entry in `TERMINAL_PRACTICE`
+     whose (skill, category) count, this entry included, has reached
+     `ESCALATION_ERROR_COUNT` (config file, provisional), and with every
+     later `invalid` entry of the same skill and category in the session.
+     `{N}` = that count.
+   - **Suppressed** when the skill's state just **before** this entry is
+     `CONSOLIDATED` or `TRANSFERRED` and `NEEDS_REINFORCEMENT` is not active
+     (§8; LDS §15). Read before the entry, because an error on such a skill
+     itself sets `NEEDS_REINFORCEMENT` (§7A item 8), so a state read after
+     it would never suppress. From the next `invalid` entry on, the modifier
+     is active and the offer can show. Never shown while an assessment or
+     the scenario runs (item 5).
+   - **What it holds:** `coach.escalate`, then the link
+     `ui.coach.openLesson` (`{N}` = the lesson number of that skill,
+     `L01`…`L10`), in the existing link pattern. It opens that lesson; the
+     practice run continues (§7B item 12). There is no "No" control:
+     declining is simply typing on. Opening the lesson records nothing
+     (`lesson_completed` follows its own rule, `slice.json`
+     `lessonCommon.completionRule`).
+8. **The Growth note** (06: Growth "explain meaningful outcomes and connect
+   them to evidence"). Found while preparing step 5: when the status is
+   Needs More Practice because a skill has `NEEDS_REINFORCEMENT` active,
+   every chain row can still read "Correct in DEIXEN" (07 D40: the row
+   follows the skill's state, which the modifier does not lower), so
+   nothing on Growth said why. Rule: when Growth shows Needs More Practice
+   (§7A item 13 (2)), a Coach note under the status and `ui.growth.basis`
+   says why, one sentence for each reason that holds, in this order:
+   `coach.growth.reinforce` (`{COMMANDS}` = the commands of the skills
+   with `NEEDS_REINFORCEMENT` active — each as its chain row shows it, as
+   in §7B item 11 (a) — in path order, `FQD` last, joined as in
+   `slice.json` `rules`); `coach.growth.assessmentUnmet` (the last
+   assessment that ended `completed` was not completed with every
+   checklist item met). Label `ui.panel.coach`, DEIXEN's voice, existing
+   patterns and tokens, no control (the Flight Deck carries the next
+   action, §7B item 11). Not shown for the other statuses. Computed at
+   display time; not an event.
+9. **The five touchpoints** (06; 07 D9) — where each one is in the slice:
+
+   | Touchpoint | Screen and moment | What serves it |
+   |---|---|---|
+   | Learning | `LEARNING`: when a lesson is opened | The Learning area opens the recommended lesson (§7B item 13); the lesson's explanation and "In your task" (§7B item 18); its practice button and Ghost Mode link as next steps; and the escalation offer, which brings a learner back to the lesson of the step they are struggling with (item 7). No Coach note on the lesson page itself: no approved Coach text is written for it |
+   | Terminal / Practice | `TERMINAL_PRACTICE`: with each entry | Item 2 explanations; item 7 offer; with the feedback texts and hints (§5, §7B item 2) |
+   | Scenario | `SCENARIO_SESSION`: with each entry | Item 2 explanations (the V-13 warning with `scn.fb.warningShown`; the bypass with `scn.fb.bypassed`); no escalation offer (item 5) |
+   | Assessment | `TERMINAL_ASSESSMENT`: with each entry, and at its end | Item 2 explanations; the announcement and the end note stay as §7B items 15 and 20 say; hints counted and labelled honestly; no escalation offer (item 5) |
+   | Growth / Readiness | `GROWTH_READINESS`: when shown | The status and `ui.growth.basis`; the chain rows; the item 8 note when the status is Needs More Practice |
+
+10. **Strings** (07 D61): new `ui.coach.openLesson`,
+    `coach.growth.reinforce`, `coach.growth.assessmentUnmet`;
+    `coach.escalate` reworded without count-noun agreement (as 07 D39),
+    because `{N}` can now pass ten, where the Arabic «{N} مرات» is wrong;
+    meaning unchanged. 220 keys in each string file.
+
 ## 8. Independence, hints and feedback
 
 **[D on approval — LDS §7 Fix 2, §13, §15; LXA §11]**
@@ -756,12 +912,17 @@ event type (§11), and none claims Amadeus behavior.
   corrective. It is **not** the hint counter and never changes it.
 - **Escalation:** after `ESCALATION_ERROR_COUNT` same-category errors on a
   skill in one session, Coach *offers* the lesson link; suppressed once the
-  skill is CONSOLIDATED unless NEEDS_REINFORCEMENT is active.
+  skill is CONSOLIDATED unless NEEDS_REINFORCEMENT is active. Exact rule: §7C
+  item 7 (07 D61).
 - **Coach (06, LXA §11):** learner-initiated by default; bound to real
   state; present at the five touchpoints; tone describes the unmet
   condition, never blames (LDS Principle 7); presents Amadeus behavior as
   fact only if VERIFIED. Mobile: collapsed/on-demand (LXA §18). Layout
   (global vs per-page) is the builder's choice within these rules.
+  **[D] (07 D61)** Exact rules: §7C — explanations beside verified output
+  are shown with it (06 "alongside"; §7C item 4); every Coach text in the
+  slice is diagnostic and not an event (§7C item 3); on phones Coach never
+  opens the drawer by itself.
 
 ## 9. Scenario and assessment
 
