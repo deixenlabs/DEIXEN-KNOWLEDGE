@@ -2,7 +2,7 @@
 name: DEIXEN Canonical Decisions & Current State
 owns: The single decisions ledger and current project status going forward
 supersedes reading in isolation: AeroBridge_Decisions_and_Current_State.md
-last synchronized: 2026-09-26 (Phase 4 closed — gate approved, Decision 42; delegated Decisions 43–44; approved boards exported, Decision 45; Phase 5 started — build step 1 locked, Decisions 46–47; step 2 part A locked, Decision 48; step 2 part B prepared, Decision 49; part B checked, Decision 50; step 2 locked, Decision 51; step 3 prepared, Decision 52; step 3 locked, Decision 53; step 4 prepared, Decision 54; step 4A checked and locked, Decision 55 (2026-09-29); leaving a running assessment or scenario inside the app, Decision 56; rules for build step 4B, Decision 57 (all 2026-09-29); step 4B-1 checked, Decision 58; rules for build step 4B-2, Decision 59 (both 2026-09-30))
+last synchronized: 2026-09-26 (Phase 4 closed — gate approved, Decision 42; delegated Decisions 43–44; approved boards exported, Decision 45; Phase 5 started — build step 1 locked, Decisions 46–47; step 2 part A locked, Decision 48; step 2 part B prepared, Decision 49; part B checked, Decision 50; step 2 locked, Decision 51; step 3 prepared, Decision 52; step 3 locked, Decision 53; step 4 prepared, Decision 54; step 4A checked and locked, Decision 55 (2026-09-29); leaving a running assessment or scenario inside the app, Decision 56; rules for build step 4B, Decision 57 (all 2026-09-29); step 4B-1 checked, Decision 58; rules for build step 4B-2, Decision 59; step 4B-2 checked and build step 4 complete, Decision 60 (all 2026-09-30))
 authority note: Where a decision below is owned in more detail elsewhere in this canonical set (product/architecture, design, engine, curriculum/Coach), this file states the decision and its status, and points there rather than duplicating — the same single-ownership discipline the original NEW document already established and this pass is preserving.
 ---
 
@@ -53,7 +53,7 @@ were ended by Karim's decision on 2026-09-24 and are historical.
 **Phase:** Phase 4 (Design) closed on 2026-09-26 — Karim approved the gate
 (Decision 42). **Current: Phase 5 (Build)** — build step 1 (evidence store)
 locked 2026-09-26 (Decision 46); step 2 part A (engine core, `AN`, `SS`,
-`NM`, `AP`) locked the same day (Decision 48); step 2 part B prepared (Decision 49: the D48 follow-ups I-4, I-5, I-6 closed, and the part B rules written into Build Spec §6A); Claude Code built part B in its third session (not merged: two layouts were missing); the project lead supplied them (Decision 50); session 3B finished, merged and tagged part B (Decision 51). Build step 3 (bridge, independence flag, skill states, Growth status, one-tab rule D47) prepared (Decision 52: Build Spec §7A), built in session 4 and locked (Decision 53, tag `step-3-bridge`, 723 tests). Build step 4 prepared (Decision 54: Build Spec §7B) and split into 4A (app shell and Terminal practice) and 4B (the other seven states). 4A built in session 5 and locked (Decision 55, tag `step-4a-terminal`, 818 unit/component and 69 browser tests); leaving a running assessment or scenario inside the app decided (Decision 56); the rules 4B would otherwise guess closed (Decision 57: Build Spec §7B items 11–15). 4B-1 (Flight Deck, Learning, Ghost Mode, Growth, Reset, Scope Disclosure) built in session 6 and checked (Decision 58: 943 unit/component and 104 browser tests; merged and tagged `step-4b1-screens` at the start of session 7); the rules for 4B-2 written (Decision 59: Build Spec §7B items 19–20, the meaning of "the scenario completed"). Next: session 7 — merge 4B-1, then build 4B-2 (assessment and scenario). Claude Code builds the slice from
+`NM`, `AP`) locked the same day (Decision 48); step 2 part B prepared (Decision 49: the D48 follow-ups I-4, I-5, I-6 closed, and the part B rules written into Build Spec §6A); Claude Code built part B in its third session (not merged: two layouts were missing); the project lead supplied them (Decision 50); session 3B finished, merged and tagged part B (Decision 51). Build step 3 (bridge, independence flag, skill states, Growth status, one-tab rule D47) prepared (Decision 52: Build Spec §7A), built in session 4 and locked (Decision 53, tag `step-3-bridge`, 723 tests). Build step 4 prepared (Decision 54: Build Spec §7B) and split into 4A (app shell and Terminal practice) and 4B (the other seven states). 4A built in session 5 and locked (Decision 55, tag `step-4a-terminal`, 818 unit/component and 69 browser tests); leaving a running assessment or scenario inside the app decided (Decision 56); the rules 4B would otherwise guess closed (Decision 57: Build Spec §7B items 11–15). 4B-1 (Flight Deck, Learning, Ghost Mode, Growth, Reset, Scope Disclosure) built in session 6 and checked (Decision 58: 943 unit/component and 104 browser tests; merged and tagged `step-4b1-screens` at the start of session 7); the rules for 4B-2 written (Decision 59: Build Spec §7B items 19–20, the meaning of "the scenario completed"). Session 7 merged 4B-1 (tag `step-4b1-screens`) and built 4B-2 (Decision 60: tag `step-4b2-screens`, 994 unit/component and 158 browser tests); build step 4 is complete — all eight states. Next: close the rules for build step 5 (Coach; app I-21), then its Claude Code session. Claude Code builds the slice from
 `DEIXEN_Slice_Build_Spec.md`, `CLAUDE.md`, the content files, the approved
 design and `tokens.css`. Standing delegation to Claude: Decision 29.
 Phase 4 record: Claude Design proposed three directions (A "Margin",
@@ -1321,6 +1321,83 @@ an ordinary technical implementation choice, not decided here.
   11 (d) and 19–20, §10), `slice.json` (`ui` list, status), both string
   files (217 keys each), 13, Execution Plan §7. Karim may reverse any of
   these.
+
+### Decisions of 2026-09-30 — Phase 5, build step 4B-2 checked and step 4 closed (by delegation D29)
+
+- **Decision 60 — Build step 4B-2 (assessment and scenario screens, the
+  leave question) checked against the repository and locked; 4B-1 merged;
+  build step 4 (screens) complete. Closed — by delegation (D29),
+  2026-09-30.** Self-review (D17), read-only from the repository as in D58
+  (git history, `docs/DECISIONS.md` T8–T9, `docs/ISSUES.md`, the new test
+  files); tests not run by the project lead. **Verified:** `main` =
+  `8c7551f` = tag `step-4b2-screens` (merge of `feature/screens-4b2`:
+  `fceb065` build, `dec5fb0` finish); tag `step-4b1-screens` = `4d544c4`
+  (merge of 4B-1 with the close commit `d467f3a`); the content commit
+  `ac787c0` ("content: ui.assessment.resultUnmet, Ghost note (07
+  D58–D59)") alone on `main`; the three content copies byte-identical with
+  the files of 2026-09-30 (217 keys; the content test now pins 217);
+  `tokens.css` sha256 as approved. T9 records the bridge changes
+  (`openScenario()` records nothing until the first entry or accepted
+  hint; `attempt()`; `leaveAttempt()`; the refusals kept as a guard), the
+  screens, the board differences, the "no false affordance" table for
+  every screen and the 21 planted faults of 4B-2 with the test that caught
+  each (all 15 the prompt named among them). A browser test exercises the
+  four Definition of Done items on the built app: one hint-adjacent and
+  one corrective-feedback-adjacent success excluded from independence
+  (`scn.fb.warningShown` before `SRCTCR`), Error-Recovery Practice on `ER`
+  on record, `TRANSFERRED` only for `CTC` and `ER` from independent
+  scenario success (`AN` stays `CONSOLIDATED`), chain runs read through
+  `chainId`. A browser test shows no history entry and no URL change: the
+  app keeps no browser history, so D56's Back-button clause does not
+  arise. T8 now lists session 6's 17 planted faults (the 13 the
+  session-6 prompt named are among them; its "18th" was a real phone bug
+  found by a test, not a planted fault). I-21 is recorded for step 5.
+  **Only asserted:** the test totals — 944 unit/component and 104 browser
+  at `step-4b1-screens`; 994 and 158 now (50 and 54 added, 0 failed) — and
+  the typecheck, build and manifest results. **Correction to D58:** D58
+  said no test showed a stored `SRCTCR` in "Booking as it stands". That
+  was wrong: `tests/bridge/currentStep.test.ts` already had one at the
+  bridge level (the row is `tm.ctcrLine`, no number, `new` then never
+  `was`). The project lead's read searched only the test files it had
+  copied, not the whole test tree. Session 7 added the panel-side test,
+  which was the part really missing. Lesson: before saying a test is
+  missing, search every test file. **Accepted:** (a) the board
+  differences — `P1-05`, `P1-06` and their Arabic boards draw Nudge
+  enabled before any wrong entry; built per §7B item 2, as for `P1-04a`
+  (D55 a); the leave question uses `P1-08`'s layout without its danger
+  rule and button (§7B item 7); the boundary line starts at the record
+  column, not in the gutter (a drawing detail). (b) The assessment shows
+  every answered entry of the load above its boundary, including entries
+  made before a Reset task, so `ui.assessment.carryover`'s "They stay
+  visible" is true of every entry `{N}` counts; a full reset empties it.
+  (c) On a short phone the scenario's brief, objective and constraints
+  give way and scroll before the Terminal does (spec §2: the Terminal
+  workspace is never sacrificed) — found as a real bug at 320 × 568 and
+  fixed; the phone key row left after the end note, fixed. (d) The phone
+  assessment drawer keeps both Close and Continue (as `P1-05-390` draws);
+  the 768 scenario starts with the brief folded. **Noted:** to rebuild
+  session 6's fault list, Claude Code used the desktop app's session
+  export, which left `session-export-1790735258194.zip` in Karim's
+  Downloads folder; Karim may delete it. From now on each session
+  records its planted faults in `docs/DECISIONS.md` as it goes. A
+  knowledge marker with bold marks in it is hard to search; markers will
+  be plain phrases. **State:** build step 4 is complete — all eight
+  states of Build Spec §3 are built, wired and tested in both languages at
+  every width. Definition of Done items still open: Coach at the five
+  touchpoints (build step 5); the localization, accessibility and
+  breakpoint pass (step 7); a learner completing the full path with real
+  content (Karim's learner test, the Phase 5 gate). Build step 6
+  (scenario and assessment) is built in 4B-2; what remains of it is
+  checked with Coach in place. **Next:** the rules for build step 5 must
+  be closed before its session: whether Coach speaks in the assessment
+  ("on your own"); whether a Coach explanation beside a message counts as
+  corrective feedback for independence (open since D52); where
+  `coach.bypassRecorded` stands beside `ui.assessment.resultUnmet`; that
+  Coach never opens the phone drawer by itself; the per-session
+  same-category error count for the escalation offer (open since D53) —
+  app I-21. Some of these touch what the assessment and the evidence
+  mean, so each is checked against Constitution §8 before it is decided
+  by delegation. Files changed: 13, Execution Plan §7.
 
 ## Definition of Done — for the current frozen vertical slice
 
