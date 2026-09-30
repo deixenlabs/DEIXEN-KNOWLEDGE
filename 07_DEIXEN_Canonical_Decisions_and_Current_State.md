@@ -2,7 +2,7 @@
 name: DEIXEN Canonical Decisions & Current State
 owns: The single decisions ledger and current project status going forward
 supersedes reading in isolation: AeroBridge_Decisions_and_Current_State.md
-last synchronized: 2026-09-26 (Phase 4 closed — gate approved, Decision 42; delegated Decisions 43–44; approved boards exported, Decision 45; Phase 5 started — build step 1 locked, Decisions 46–47; step 2 part A locked, Decision 48; step 2 part B prepared, Decision 49; part B checked, Decision 50; step 2 locked, Decision 51; step 3 prepared, Decision 52; step 3 locked, Decision 53; step 4 prepared, Decision 54; step 4A checked and locked, Decision 55 (2026-09-29); leaving a running assessment or scenario inside the app, Decision 56; rules for build step 4B, Decision 57 (all 2026-09-29))
+last synchronized: 2026-09-26 (Phase 4 closed — gate approved, Decision 42; delegated Decisions 43–44; approved boards exported, Decision 45; Phase 5 started — build step 1 locked, Decisions 46–47; step 2 part A locked, Decision 48; step 2 part B prepared, Decision 49; part B checked, Decision 50; step 2 locked, Decision 51; step 3 prepared, Decision 52; step 3 locked, Decision 53; step 4 prepared, Decision 54; step 4A checked and locked, Decision 55 (2026-09-29); leaving a running assessment or scenario inside the app, Decision 56; rules for build step 4B, Decision 57 (all 2026-09-29); step 4B-1 checked, Decision 58; rules for build step 4B-2, Decision 59 (both 2026-09-30))
 authority note: Where a decision below is owned in more detail elsewhere in this canonical set (product/architecture, design, engine, curriculum/Coach), this file states the decision and its status, and points there rather than duplicating — the same single-ownership discipline the original NEW document already established and this pass is preserving.
 ---
 
@@ -53,7 +53,7 @@ were ended by Karim's decision on 2026-09-24 and are historical.
 **Phase:** Phase 4 (Design) closed on 2026-09-26 — Karim approved the gate
 (Decision 42). **Current: Phase 5 (Build)** — build step 1 (evidence store)
 locked 2026-09-26 (Decision 46); step 2 part A (engine core, `AN`, `SS`,
-`NM`, `AP`) locked the same day (Decision 48); step 2 part B prepared (Decision 49: the D48 follow-ups I-4, I-5, I-6 closed, and the part B rules written into Build Spec §6A); Claude Code built part B in its third session (not merged: two layouts were missing); the project lead supplied them (Decision 50); session 3B finished, merged and tagged part B (Decision 51). Build step 3 (bridge, independence flag, skill states, Growth status, one-tab rule D47) prepared (Decision 52: Build Spec §7A), built in session 4 and locked (Decision 53, tag `step-3-bridge`, 723 tests). Build step 4 prepared (Decision 54: Build Spec §7B) and split into 4A (app shell and Terminal practice) and 4B (the other seven states). 4A built in session 5 and locked (Decision 55, tag `step-4a-terminal`, 818 unit/component and 69 browser tests); leaving a running assessment or scenario inside the app decided (Decision 56); the rules 4B would otherwise guess closed (Decision 57: Build Spec §7B items 11–15). Next: 4B, in two Claude Code sessions (4B-1 Flight Deck, Learning, Ghost Mode, Growth, Reset, Scope Disclosure; 4B-2 assessment and scenario). Claude Code builds the slice from
+`NM`, `AP`) locked the same day (Decision 48); step 2 part B prepared (Decision 49: the D48 follow-ups I-4, I-5, I-6 closed, and the part B rules written into Build Spec §6A); Claude Code built part B in its third session (not merged: two layouts were missing); the project lead supplied them (Decision 50); session 3B finished, merged and tagged part B (Decision 51). Build step 3 (bridge, independence flag, skill states, Growth status, one-tab rule D47) prepared (Decision 52: Build Spec §7A), built in session 4 and locked (Decision 53, tag `step-3-bridge`, 723 tests). Build step 4 prepared (Decision 54: Build Spec §7B) and split into 4A (app shell and Terminal practice) and 4B (the other seven states). 4A built in session 5 and locked (Decision 55, tag `step-4a-terminal`, 818 unit/component and 69 browser tests); leaving a running assessment or scenario inside the app decided (Decision 56); the rules 4B would otherwise guess closed (Decision 57: Build Spec §7B items 11–15). 4B-1 (Flight Deck, Learning, Ghost Mode, Growth, Reset, Scope Disclosure) built in session 6 and checked (Decision 58: 943 unit/component and 104 browser tests; merged and tagged `step-4b1-screens` at the start of session 7); the rules for 4B-2 written (Decision 59: Build Spec §7B items 19–20, the meaning of "the scenario completed"). Next: session 7 — merge 4B-1, then build 4B-2 (assessment and scenario). Claude Code builds the slice from
 `DEIXEN_Slice_Build_Spec.md`, `CLAUDE.md`, the content files, the approved
 design and `tokens.css`. Standing delegation to Claude: Decision 29.
 Phase 4 record: Claude Design proposed three directions (A "Margin",
@@ -1163,6 +1163,164 @@ an ordinary technical implementation choice, not decided here.
   includes the Scope Disclosure page, because the Flight Deck links to it
   (`P1-01`). Files changed: Build Spec (status, §7B items 11–15), 13,
   Execution Plan §7. Karim may reverse any of these.
+
+### Decisions of 2026-09-30 — Phase 5, build step 4B-1 checked (by delegation D29)
+
+- **Decision 58 — Build step 4B-1 (Flight Deck, Learning, Ghost Mode,
+  Growth, Reset, Scope Disclosure) checked against the repository; app
+  I-16 to I-20 answered; merge and tag at the start of session 7. Closed
+  — by delegation (D29), 2026-09-30.** Self-review (D17), but not from the
+  report alone: Karim connected `deixen-app` to the project chat, and the
+  project lead read the repository **read-only** (nothing changed) — git
+  history, `docs/ISSUES.md`, `docs/DECISIONS.md`, the test files and the
+  code that decides the Flight Deck, Growth and the rows. Tests were not
+  run by the project lead. Knowledge sync checked first: the GitHub main
+  folder holds the files of 2026-09-29 (all five session-6 markers; 216
+  keys in each string file). **Verified from the repository:** the app is
+  in `C:\Users\DELL\Downloads\Documents\DEIXEN\deixen-app`, beside
+  `DEIXEN-KNOWLEDGE` (so the "main folder" of earlier handoffs is
+  `…\Downloads\Documents\DEIXEN\DEIXEN-KNOWLEDGE`); tag
+  `step-4a-terminal` = `71427c5`; the content commit `58475d1` ("content:
+  7 ui keys (07 D55–D56)") alone on `main`; `feature/screens-4b1` = one
+  build commit `19fe327` and the docs commit `bb8b902`; not merged, not
+  tagged; the three content copies byte-identical with the GitHub files;
+  `tokens.css` sha256 as approved (D42); 112 screenshots in
+  `docs/screens/4b1/` (7 screens × 8 widths × 2 languages — two viewed,
+  `flight-deck-1440-en` matches `P1-01`). The code: the Flight Deck
+  action is one pure function (`src/evidence/recommend.ts`) in the order
+  of §7B item 11, with `FQD` excluded; Growth (`growth.ts`) follows §7A
+  item 13; "the scenario completed" and the rows already mean completed
+  with every checklist item met (`runs.ts` `scenarioCompletedMet`,
+  `lastCompletedAssessmentMet`) — what D59 (a)–(b) now writes into the
+  spec; the lesson strip, the practice buttons, Ghost Mode (one
+  `ghost_played` per start and per Replay, reveals from the live engine),
+  the storage guard and the booking-panel forms as §7B items 6, 8, 12–14
+  say. Named tests exist for: every Flight Deck branch (hand-built events
+  and on screen); the practice run between screens (the four cases of the
+  session-6 prompt); Ghost Mode (per-start events, the next `CTC` not
+  independent and the one after independent, the practice booking
+  untouched, demo lines from the engine); Growth's outcomes in order,
+  Ghost-only → empty, Reset confirm and Cancel; `lesson_completed` never
+  skill evidence; storage refused on read, on write and later in a load;
+  `RF` before and after filing; the notes rule; the Amadeus-string trace
+  over the screens (`tests/ui/trace.test.ts`: the screens write no
+  Amadeus text; each booking-panel form traced to V-07, V-11 or V-18 —
+  the D55 gap is closed); the name key; the two scroll guards at five
+  widths; the 8 widths × 2 languages for the new states; axe WCAG 2.1 AA
+  on every new state in both languages at 1440, 1024, 768 and 390; a
+  keyboard-only walk through all six; "no false affordance" (only the
+  three controls of §7B item 4 disabled). `docs/DECISIONS.md` T7 now
+  carries the notes-rule correction (the app had followed its own looser
+  T7 wording; D55 (d) had recorded the rule as reported) and T8 quotes
+  §7B item 11. **Only asserted by the report:** the test totals (943
+  unit/component, 104 browser; the arithmetic 818 + 125 and 69 + 35 is
+  right) and the final gate results (typecheck, build, manifest 69/69);
+  the 17 planted faults — the repository holds no record of them, so
+  which faults were planted cannot be checked. **Found missing:** no test
+  shows a stored `SRCTCR` in "Booking as it stands" (the session-6 prompt
+  asked for it; it shares its code with the tested `RF` row, but is not
+  exercised); the "no false affordance" test does not visit Ghost Mode.
+  Both are added in session 7 before the merge. **Also found:** the app
+  keeps no browser history (T8), so the Back-button clause of D56 does not
+  arise; screens change inside the app. **Open items, answered by
+  delegation:** (a) **I-17 — no board draws a way into Ghost Mode**
+  (`P1-03` draws Ghost Mode inside Learning; `P1-02` has no control for
+  it; LXA §8.3 makes it learner-initiated from Learning). A gap, not a
+  disagreement, so not a stop. Accepted as built: a link in the lesson's
+  action row, between the practice button and Back to Flight Deck,
+  worded `ui.ghost.title` ("Watch …" with the script's commands), in the
+  existing link style. Build Spec §7B item 16. (b) **I-18 — Ghost typing
+  speed.** `slice.json`'s note said setup entries at 15 ms per character
+  and the lesson's own at 60; the approved `tokens.css` (D42), "the single
+  source of every … motion … value", has `--motion-demo-key` (70 ms) and
+  `--motion-demo-hold` (1200 ms), both 0 under reduced motion. The
+  approved design is later than the note and owns motion (`CLAUDE.md`
+  §4), so the tokens govern; the note is corrected to point to them; no
+  token is added (a new token changes the approved design, which is
+  Karim's). The longest script (`L09-FXP`) takes about 18 seconds.
+  Learner-test watch point. Build Spec §7B item 17. (c) **I-16 — "In
+  your task".** No per-lesson fact exists in the content, and for some
+  lessons no sentence of the brief fits (`RF`); choosing one would be
+  writing content (`CLAUDE.md` §3 rule 3). Accepted as built: the whole
+  `task.brief`, words unchanged. Build Spec §7B item 18. (d) **I-19 —
+  Ghost Mode has Pause and Replay but no "Play" word.** Accepted as
+  built, as `P1-03` draws it: the script starts when the learner opens
+  Ghost Mode, Pause is a toggle (`aria-pressed`) that resumes when
+  pressed again, Replay starts again (one more `ghost_played`); no string
+  added. (e) **I-20 — the Flight Deck on an empty record** shows
+  Growth's empty state (`ui.growth.empty`, no basis sentence, Open
+  Growth), as `P1-07b` draws it. Accepted. Also accepted: the lesson
+  strip's items are links (§7B item 13); the Growth empty text is the
+  approved string, not the board's older draft (D43); the Scope
+  Disclosure page in the lesson's reading pattern with no current area
+  (no board draws it). **Merge:** 4B-1 is accepted. Session 7 first adds
+  the two missing tests and records the planted-fault list it can
+  reconstruct, then merges `feature/screens-4b1` into `main` and tags
+  `step-4b1-screens`. Files changed: Build Spec (status, §7B items
+  16–18), `slice.json` (the `ghostScripts` note), 13, Execution Plan §7.
+  Karim may reverse any of these.
+
+- **Decision 59 — Rules for build step 4B-2 (assessment and scenario
+  screens). Closed — by delegation (D29), 2026-09-30.** Self-review
+  (D17). Preparing session 7, the project lead found three places the
+  screens would guess, and one reading the spec left open. (a) **What "the scenario completed" means.** Build
+  Spec §10 (K4) says Completed needs "the scenario completed"; §7A item
+  13 and §7B item 11 (d) point to §7A item 11, which defines both "ended
+  `completed`" (any task completion, including a bypass filing) and
+  "completed with every checklist item met". The approved content file
+  settles it: `slice.json` `scenario.acceptance` (approved by Karim, D28)
+  says "Scenario completed = the full scenario path with every checklist
+  item met; the CTC step satisfied by SRCTCR (not by bypassing the
+  warning with a second ER)". So, everywhere a rule asks whether the
+  scenario is completed — Growth's Completed status, the Flight Deck
+  action (d), the scenario row — it means a scenario run **completed
+  with every checklist item met** (§7A item 11). A scenario that ended
+  with a bypass filing is recorded as `completed` (the event does not
+  change) but does not count as the scenario completed. This follows
+  approved content and the scenario's own constraint ("do not bypass the
+  end-of-transaction warning"); it does not lower any standard. The 4B-1 code already reads it this
+  way (D58). (b)
+  **The scenario and assessment rows** on the Flight Deck and in Growth
+  (D40 said "Completed" or a dash) show `ui.growth.completed` only when
+  there is a run of that kind completed with every checklist item met;
+  otherwise a dash. Reason: a row reading "Completed" beside an
+  assessment that Growth counts as Needs More Practice would show a
+  success the evidence does not support (`CLAUDE.md` §3 rule 5). (c)
+  **The end of an assessment.** Nothing said where `ui.assessment.result`
+  goes, or what shows when an assessment ends `completed` without every
+  checklist item met (only a bypass filing can do that). Rule: at task
+  completion in `TERMINAL_ASSESSMENT` the DEIXEN panel shows one note,
+  once — `ui.assessment.result` if the run is completed with every
+  checklist item met, otherwise the new `ui.assessment.resultUnmet` EN
+  "The assessment has ended. Not every step counted as correct, so this
+  result does not show the full path working. You can start a new
+  assessment when you are ready." / AR «انتهى التقييم. لم تُحتسب كل
+  الخطوات صحيحة، لذلك لا تُظهر هذه النتيجة أن المسار الكامل يعمل. يمكنك
+  بدء تقييم جديد عندما تكون مستعدًا.» Never in the Terminal (D30). On
+  phones the DEIXEN drawer opens itself for it, as for the announcement
+  (`P1-05`), and closes with `ui.assessment.continue`. The note is not
+  an event. Without (c) a learner who bypassed the warning would see the
+  pricing display and no word that the attempt did not count. (d)
+  **Leaving and areas.** The approved boards mark the current area:
+  `TERMINAL_ASSESSMENT` is in the Terminal area (`P1-05`),
+  `SCENARIO_SESSION` in the Scenario Bank (`P1-06`). So during a running
+  assessment the Terminal link, and during a running scenario the
+  Scenario Bank link, are "the link to the area the learner is already
+  in" (§7B item 7): not leaving, nothing asked, nothing changes. Every
+  other area link, the wordmark, the phone menu's Scope Disclosure link,
+  ask first (D56); the app keeps no browser history (app T8), so
+  the Back-button clause does not arise unless history is added. A lesson's or Ghost Mode's practice button can be pressed only
+  on a screen reached by leaving, which has already ended the attempt;
+  the bridge's refusal of those buttons while an attempt runs stays as a
+  guard, and a test shows no such button can be on screen while an
+  attempt runs. (e) **What the two screens hold** (from the approved
+  boards, `P1-05` and `P1-06`, and §7B items 2, 15; D37): the same
+  Terminal and DEIXEN panel as practice; the hint label and the hint
+  levels (Partial Reveal only at `ER`); no Reset task and no Start
+  assessment. Files changed: Build Spec (status, §7A item 13, §7B items
+  11 (d) and 19–20, §10), `slice.json` (`ui` list, status), both string
+  files (217 keys each), 13, Execution Plan §7. Karim may reverse any of
+  these.
 
 ## Definition of Done — for the current frozen vertical slice
 

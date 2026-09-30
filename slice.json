@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "status": "APPROVED by Karim 2026-09-25 (07 Decision 28), with the readiness-check fixes. Self-review only (07 D17). Updated 2026-09-25 by delegation (07 Decisions 33–34): training messages tm.notAccepted and tm.notForTask added; feedback[].terminalLine added. 2026-09-25: ui.assessment.carryover reworded count-neutral (07 D39). 2026-09-26 (Phase 4 gate, 07 D42–D44): interface words added as ui.* keys and listed in 'ui' (D43); ui.what.* listed (they were in the string files but missing here); displays.AN.headerNumber added (D44). 2026-09-26 (07 D49, by delegation): 'airlineName' added for 6X (app issue I-4); feedback item ctc.fb.refusalNotTask added (SRCTCR entered in the main task). 2026-09-28 (07 D50): fqd.note updated to the V-16 DEIXEN rendering. 2026-09-28 (07 D52, by delegation): feedback item reveal.ER.ready added (Full Reveal for ER when nothing is missing); ui.oneTab.title and ui.oneTab.body listed (07 D47 wording); token rule extended ({MISSING_LIST} and the other runtime tokens); ui.growth.empty reworded in both string files. 2026-09-28 (07 D53, by delegation): ui.dataReset added (notice after an unreadable or other-version record was reset, Build Spec §11). 2026-09-29 (07 D55–D56, by delegation): ui.noStorage.title and ui.noStorage.body (browser storage refused, app I-13), ui.brand.name (the name as one key, app I-14), ui.leave.assessment, ui.leave.scenario, ui.leave.stay, ui.leave.confirm (leaving a running assessment or scenario inside the app) added and listed.",
+ "status": "APPROVED by Karim 2026-09-25 (07 Decision 28), with the readiness-check fixes. Self-review only (07 D17). Updated 2026-09-25 by delegation (07 Decisions 33–34): training messages tm.notAccepted and tm.notForTask added; feedback[].terminalLine added. 2026-09-25: ui.assessment.carryover reworded count-neutral (07 D39). 2026-09-26 (Phase 4 gate, 07 D42–D44): interface words added as ui.* keys and listed in 'ui' (D43); ui.what.* listed (they were in the string files but missing here); displays.AN.headerNumber added (D44). 2026-09-26 (07 D49, by delegation): 'airlineName' added for 6X (app issue I-4); feedback item ctc.fb.refusalNotTask added (SRCTCR entered in the main task). 2026-09-28 (07 D50): fqd.note updated to the V-16 DEIXEN rendering. 2026-09-28 (07 D52, by delegation): feedback item reveal.ER.ready added (Full Reveal for ER when nothing is missing); ui.oneTab.title and ui.oneTab.body listed (07 D47 wording); token rule extended ({MISSING_LIST} and the other runtime tokens); ui.growth.empty reworded in both string files. 2026-09-28 (07 D53, by delegation): ui.dataReset added (notice after an unreadable or other-version record was reset, Build Spec §11). 2026-09-29 (07 D55–D56, by delegation): ui.noStorage.title and ui.noStorage.body (browser storage refused, app I-13), ui.brand.name (the name as one key, app I-14), ui.leave.assessment, ui.leave.scenario, ui.leave.stay, ui.leave.confirm (leaving a running assessment or scenario inside the app) added and listed. 2026-09-30 (07 D58–D59, by delegation): the ghostScripts note now points to the tokens.css typing speed (app I-18); ui.assessment.resultUnmet added and listed (the end of an assessment completed without every checklist item met).",
  "rules": [
   "Every Amadeus statement in the text files traces to a VERIFIED entry of DEIXEN_Amadeus_Verified_Reference.md (listed per lesson in 'verifiedBasis').",
   "All flights, fares, taxes, phone numbers, names, office IDs and record locators are fictional practice data. Airline code 6X is used only as a practice code; no real schedule or fare is implied. Its display name PRACTICE AIRLINE (the banner of a carrier-preferred AN display, V-14; 07 D49) is invented and is not a real airline.",
@@ -518,7 +518,7 @@
   "completionRule": "The learner reaches the end of the lesson body and presses the practice button. Records lesson_completed only; never skill evidence (Build Spec §3)."
  },
  "ghostScripts": {
-  "note": "Schema of file 06 (type/pause/reveal). Runs in its own sandbox on the demo booking. Setup steps are typed fast (charDelayMs 15); the lesson's own entry at 60. 'reveal' shows the live simulator's output for the entry just typed.",
+  "note": "Schema of file 06 (type/pause/reveal). Runs in its own sandbox on the demo booking. Typing speed and the hold on each display come from tokens.css (--motion-demo-key, --motion-demo-hold; 07 D42, D58; Build Spec §7B item 17). 'reveal' shows the live simulator's output for the entry just typed.",
   "L01-AN": [
    "AN{DEMO_DATE}RUHJED"
   ],
@@ -1050,6 +1050,7 @@
   "ui.assessment.intro",
   "ui.assessment.carryover",
   "ui.assessment.result",
+  "ui.assessment.resultUnmet",
   "ui.abandoned",
   "ui.growth.completed",
   "ui.growth.inProgress",

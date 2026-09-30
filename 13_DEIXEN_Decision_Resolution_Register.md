@@ -105,6 +105,22 @@ guards. Leaving a running assessment or scenario inside the app decided:
 after a confirmation, it is recorded as abandoned (07 D56). 7 strings
 added (216 keys in each string file). The places 4B would guess closed in Build Spec §7B items 11–15 (07 D57). Next: 4B in two sessions.
 
+Update 2026-09-30 (step 4B-1 checked): session 6 built the Flight Deck,
+Learning, Ghost Mode, Growth, Reset and the Scope Disclosure page on
+`feature/screens-4b1` (reported: 943 unit/component and 104 browser
+tests). Checked against the repository itself, read-only (07 D58): the
+code and the named tests match the rules; the Amadeus-string trace gap of
+D55 is closed; two tests are missing (a stored `SRCTCR` in "Booking as it
+stands"; Ghost Mode in the "no false affordance" test) and the planted
+faults are not recorded. App I-16 to I-20 answered (Build Spec §7B items
+16–18). Merge and tag `step-4b1-screens` at the start of session 7, after
+the two tests are added. Rules for 4B-2 written
+(07 D59, Build Spec §7B items 19–20): "the scenario completed" means
+completed with every checklist item met (as `slice.json`
+`scenario.acceptance` says); the scenario and assessment rows follow the
+same test; the end of an assessment shows `ui.assessment.result` or the
+new `ui.assessment.resultUnmet` (217 keys in each string file).
+
 ## 2. Phase 1 Findings — Disposition
 
 Review type: self-review by the project lead (Decision 17 — independent
@@ -213,10 +229,19 @@ presented a navy/blue color language as "durable" although colors are open
 | Browser refuses storage: empty page, no approved notice (app I-13) | CLOSED — `ui.noStorage.*` EN/AR, Build Spec §7B item 8 (07 D55) | Claude (D29) | Build 4B-1 |
 | "DEIXEN" as a word in three places (app I-14) | CLOSED — `ui.brand.name`, Build Spec §7B item 9 (07 D55) | Claude (D29) | Build 4B-1 |
 | How `TK`, the contact SSR and `RF` read in "Booking as it stands" (app I-15) | CLOSED — Build Spec §7B item 6 (07 D55): verified forms only; `SSR CTCM` stops before the U-07 field; `SRCTCR` and pre-filing `RF` unnumbered, as their training line | Claude (D29) | Build 4B-1 |
-| `CLAUDE.md` §8 Amadeus-string trace not reported for the 4A screens | OPEN — re-run and report in 4B-1 (07 D55) | Claude Code | Session 4B-1 |
+| `CLAUDE.md` §8 Amadeus-string trace not reported for the 4A screens | CLOSED — re-run in session 6: the screens write no Amadeus text; every booking-panel form traces to V-07, V-11 or V-18 (07 D58) | Claude Code | — |
 | Older `DEIXEN-KNOWLEDGE\DEIXEN-KNOWLEDGE\` sub-folder inside the main folder on Karim's computer (seen in session 5, not used) | OPEN — sync hygiene, not blocking | Karim | Delete the sub-folder |
 | Gaps for build step 4B (the Flight Deck's recommended action; the practice run between screens; lesson locking and the Learning link; Ghost replays; when the scenario and the assessment start) | CLOSED — Build Spec §7B items 11–15 (07 D57) | Claude (D29) | Sessions 4B-1, 4B-2 |
-| Build step 4, part 4B (the other seven states) | OPEN — two sessions: 4B-1 Flight Deck, Learning, Ghost Mode, Growth, Reset, Scope Disclosure; 4B-2 assessment and scenario | Claude Code | Then the 4B report checks |
+| Build step 4, part 4B-1 (Flight Deck, Learning, Ghost Mode, Growth, Reset, Scope Disclosure) | CHECKED — 943 unit/component + 104 browser tests (reported); code and named tests verified from the repository, read-only (07 D58); merge and tag `step-4b1-screens` after the two missing tests | Claude Code | Session 7 §2 |
+| 4B-1 gaps found in the repository: no test for a stored `SRCTCR` in "Booking as it stands"; the "no false affordance" test does not visit Ghost Mode; the 17 planted faults are not recorded | OPEN — tests added and the fault list recorded before the 4B-1 merge (07 D58) | Claude Code | Session 7 §2 |
+| App I-16 ("In your task"), I-17 (no way into Ghost Mode drawn), I-18 (Ghost typing speed vs `tokens.css`), I-20 (empty Flight Deck status) | CLOSED — Build Spec §7B items 16–18; I-20 accepted (07 D58) | Claude (D29) | — |
+| Where the knowledge folder is on Karim's computer | CLOSED — read from the device: `C:\Users\DELL\Downloads\Documents\DEIXEN\DEIXEN-KNOWLEDGE`, beside `deixen-app` (07 D58); earlier handoffs wrote it as `Documents\DEIXEN\DEIXEN-KNOWLEDGE` | — | Uploads go there |
+| App I-19 (Ghost Mode: Pause and Replay, no "Play" word) | CLOSED — accepted as `P1-03` draws it (07 D58) | Claude (D29) | — |
+| Ghost setup typing may feel slow at 70 ms per key | NOTED — learner-test watch point; a second token would be Karim's (07 D58) | Karim | Phase 5 learner test |
+| "The scenario completed" read two ways (ended `completed` vs every checklist item met) | CLOSED — every checklist item met, as `slice.json` `scenario.acceptance` says; rows follow the same test (07 D59; Build Spec §7A item 13, §7B items 11 (d), 19, §10) | Claude (D29); Karim may reverse | 4B-1 aligned before merge |
+| Where the assessment result shows; what shows when an assessment ends without every item met | CLOSED — `ui.assessment.result` / new `ui.assessment.resultUnmet`, in the DEIXEN panel (07 D59; Build Spec §7B item 20) | Claude (D29) | Session 7 |
+| Build step 4, part 4B-2 (assessment and scenario) | OPEN — session 7 | Claude Code | Then the 4B-2 report check |
+| Third copy of the knowledge folder at `Documents\DEIXEN-KNOWLEDGE` (Windows line endings; fails the manifest check; seen in session 6, not used) | OPEN — sync hygiene, not blocking | Karim | Keep only `Documents\DEIXEN\DEIXEN-KNOWLEDGE` |
 | Escalation offer needs a per-session count of same-category errors | OPEN — build step 5 (07 D53) | — | — |
 | Leaving a running assessment or scenario inside the app (K3 covers only closing the browser) | CLOSED — after a confirmation (`ui.leave.*`), leaving records it as abandoned; navigation stays enabled (07 D56; Build Spec §7B item 7) | Claude (D29); Karim may reverse | Build 4B-2 |
 | Whether a Coach explanation beside a verified message (e.g. `coach.needTk`) counts as corrective feedback for independence | OPEN — decide before build step 5 (07 D52) | Claude (D29) | — |

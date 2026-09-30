@@ -1,6 +1,6 @@
 ---
 name: DEIXEN Slice Build Spec
-status: CURRENT — APPROVED by Karim 2026-09-25 (07 Decision 26). Updated 2026-09-25: gaps G1–G3 (§5, §12); Decision 27 (K5, K6) applied to §4, §5, §12, §13; K7 (§6 row 5, §12) approved in the Phase 3 gate (07 D28). Phase 4, 2026-09-25: 07 Decisions 30, 32–34, 36 applied to §5 and §13; Decisions 37–38 to §4 and §8. Phase 4 gate, 2026-09-26: 07 Decision 42 (approved design, `tokens.css`) applied to §2; Decision 44 (`AN` header number) to §5 and §12; Decision 45 (boards exported to `design/phase4/`) to §2. Phase 5, 2026-09-26: 07 Decisions 46 (`result` on ending events) and 47 (one tab at a time) applied to §11. 2026-09-26: 07 Decision 49 applied to §6 ("not recognized" vs "not covered") and new §6A (rules for build step 2 part B). 2026-09-28: 07 Decision 50 — §6A items 8–10. 2026-09-28: 07 Decision 52 — new §7A (rules for build step 3), pointers in §8, §10, §11. 2026-09-28: 07 Decision 53 — §7A items 1 (return to practice, app I-12) and 14 (data-reset notice). 2026-09-28: 07 Decision 54 — new §7B (rules for build step 4: the current step for hints, hint levels on the screen, the entry field, parts 4A/4B, load notices), pointer in §8. 2026-09-29: 07 Decisions 55–56 — §7A item 1 (a run also starts at an accepted hint request, app I-12), items 1 and 11 and §9 (pointers to the in-app exit), §7B heading and new items 6–10 ("Booking as it stands", leaving a running assessment or scenario, storage refused, the name as a string key, behaviours over time); 07 Decision 57 — §7B items 11–15 (the Flight Deck's recommended action, the practice run when moving between screens, Learning, Ghost Mode replays, when the scenario and the assessment start). First edition (Execution Plan 3.3); proposals K1–K4 approved (07 Decision 25). With this approval, the LDS/LXA content extracted here is binding for the slice (LDS and LXA reading rules, point 1).
+status: CURRENT — APPROVED by Karim 2026-09-25 (07 Decision 26). Updated 2026-09-25: gaps G1–G3 (§5, §12); Decision 27 (K5, K6) applied to §4, §5, §12, §13; K7 (§6 row 5, §12) approved in the Phase 3 gate (07 D28). Phase 4, 2026-09-25: 07 Decisions 30, 32–34, 36 applied to §5 and §13; Decisions 37–38 to §4 and §8. Phase 4 gate, 2026-09-26: 07 Decision 42 (approved design, `tokens.css`) applied to §2; Decision 44 (`AN` header number) to §5 and §12; Decision 45 (boards exported to `design/phase4/`) to §2. Phase 5, 2026-09-26: 07 Decisions 46 (`result` on ending events) and 47 (one tab at a time) applied to §11. 2026-09-26: 07 Decision 49 applied to §6 ("not recognized" vs "not covered") and new §6A (rules for build step 2 part B). 2026-09-28: 07 Decision 50 — §6A items 8–10. 2026-09-28: 07 Decision 52 — new §7A (rules for build step 3), pointers in §8, §10, §11. 2026-09-28: 07 Decision 53 — §7A items 1 (return to practice, app I-12) and 14 (data-reset notice). 2026-09-28: 07 Decision 54 — new §7B (rules for build step 4: the current step for hints, hint levels on the screen, the entry field, parts 4A/4B, load notices), pointer in §8. 2026-09-29: 07 Decisions 55–56 — §7A item 1 (a run also starts at an accepted hint request, app I-12), items 1 and 11 and §9 (pointers to the in-app exit), §7B heading and new items 6–10 ("Booking as it stands", leaving a running assessment or scenario, storage refused, the name as a string key, behaviours over time); 07 Decision 57 — §7B items 11–15 (the Flight Deck's recommended action, the practice run when moving between screens, Learning, Ghost Mode replays, when the scenario and the assessment start). 2026-09-30: 07 Decision 58 — §7B items 16–18 (the way into Ghost Mode, Ghost typing speed, "In your task"); 07 Decision 59 — §7A item 13, §7B item 11 (d) and §10 ("the scenario completed" means completed with every checklist item met), §7B items 19–20 (the scenario and assessment rows; the assessment and scenario screens). First edition (Execution Plan 3.3); proposals K1–K4 approved (07 Decision 25). With this approval, the LDS/LXA content extracted here is binding for the slice (LDS and LXA reading rules, point 1).
 owns: The single build specification Claude Code implements for the first-build slice. It gathers requirements from their owners and designs the evidence/state schema (delegated to Claude — file 13).
 does not own: any decision (07); Amadeus behavior (Verified Reference); product structure (03); design (Design Brief / Phase 4). Where this file and an owner disagree, the owner wins and the conflict is reported.
 ---
@@ -485,8 +485,9 @@ field or event type (§11), and none claims Amadeus behavior.
     assessment that ended `completed` was not completed with every
     checklist item met (abandoned attempts are neither passed nor failed,
     K3, and are skipped); (3) Completed — the §10 conditions, where "the
-    assessment completed with every checklist item met" and "the scenario
-    completed" both mean item 11; (4) In Progress. Needs More Practice
+    assessment completed with every checklist item met" and "the scenario completed" both mean a run
+    completed with every checklist item met (item 11; for the scenario,
+    `slice.json` `scenario.acceptance`; 07 D59); (4) In Progress. Needs More Practice
     comes before Completed: a current weakness is shown, not hidden.
     `ui.growth.empty` is worded to match (1). "Reset everything" is offered
     whenever the status is not the empty state (07 D41 i).
@@ -510,7 +511,7 @@ field or event type (§11), and none claims Amadeus behavior.
     locator — six characters A–Z/0–9 from a random source. None of them is
     stored.
 
-## 7B. Rules for build step 4 (07 D54–D57)
+## 7B. Rules for build step 4 (07 D54–D59)
 
 **[D] by delegation (07 D29)** — closed while preparing build step 4
 (screens), so the build does not have to guess. None adds an event field or
@@ -656,13 +657,14 @@ event type (§11), and none claims Amadeus behavior.
     (c) the last assessment that ended `completed` was not completed with
     every checklist item met, or none has → `ui.term.startAssessment`
     (item 15);
-    (d) the scenario has not been completed (§7A item 11) →
+    (d) no scenario run has been completed with every checklist item met
+    (§7A item 11; 07 D59) →
     `ui.fd.openScenario`;
     (e) otherwise → `ui.fd.openGrowth`.
     Exactly one action on the screen has the primary-button style (`P1-F`).
     In (a) and (b) it sits in the Next row as drawn; in (c)–(e) no row
     carries Next, and the action takes that place under the chain, with
-    existing patterns only. The chain's status words stay as 07 D40 says.
+    existing patterns only. The chain's status words stay as 07 D40 says (the scenario and assessment rows: item 19).
 12. **The practice run when the learner moves between screens** (07 D57;
     §7A item 1). A practice run lives for the load: leaving the Terminal
     and coming back in the same load shows the same run, booking, record
@@ -697,6 +699,43 @@ event type (§11), and none claims Amadeus behavior.
     phones closed with `ui.assessment.continue`, `P1-05`). After either has
     ended, returning to the Scenario Bank shows a new, not-yet-started
     scenario screen, and Start assessment starts a new assessment.
+16. **The way into Ghost Mode** (07 D58, app I-17; no board draws one).
+    Each lesson page carries a link to that lesson's Ghost Mode script,
+    worded `ui.ghost.title` with the script's commands, in the existing
+    link pattern. No new words or patterns.
+17. **Ghost typing speed** (07 D58, app I-18). Every keystroke of a script
+    takes `--motion-demo-key` and each display is held for
+    `--motion-demo-hold` (`tokens.css`, 07 D42; both 0 under reduced
+    motion). The `charDelayMs` / `durationMs` fields of the file 06 schema,
+    and the speeds once written in the `slice.json` note, are not used in
+    this slice.
+18. **"In your task" on a lesson** (07 D58, app I-16). Shows the whole
+    `task.brief`, words unchanged; the board's one-fact line is one moment
+    of it. A per-lesson fact would need new content keys.
+19. **The scenario and assessment rows** on the Flight Deck and in Growth
+    (07 D59; refines 07 D40). Each shows `ui.growth.completed` only when a
+    run of that kind has been completed with every checklist item met
+    (§7A item 11); otherwise a dash. A run that ended `completed` with a
+    bypass filing stays recorded as `completed` and is not shown as
+    Completed.
+20. **The assessment and scenario screens** (07 D59; `P1-05`, `P1-06`).
+    - Both hold the same Terminal and DEIXEN panel as practice, with the
+      hint label and the hint levels (item 2); neither has Reset task
+      (07 D37) or Start assessment.
+    - **Areas.** `TERMINAL_ASSESSMENT` is in the Terminal area (`P1-05`);
+      `SCENARIO_SESSION` is in the Scenario Bank (`P1-06`). While one is
+      running, the link to its own area is "the area the learner is
+      already in" (item 7): nothing is asked and nothing changes.
+    - **The end of an assessment.** At task completion the DEIXEN panel
+      shows one note, once: `ui.assessment.result` when the run is
+      completed with every checklist item met, otherwise
+      `ui.assessment.resultUnmet`. Never in the Terminal (07 D30). On
+      phones the DEIXEN drawer opens itself for it, as for the
+      announcement, and closes with `ui.assessment.continue`. The note is
+      not an event.
+    - **Practice buttons** can be pressed only on a screen reached by
+      leaving (item 7), so the attempt has already ended; the bridge's
+      refusal of them while an attempt runs stays as a guard.
 
 ## 8. Independence, hints and feedback
 
@@ -761,7 +800,7 @@ never stored as a separate number (LDS §29 item 3; 07 Evidence contract).
 
 | Status | Rule |
 |---|---|
-| Completed | All nine required skills DEMONSTRATED_INDEPENDENT or higher, **and** the assessment completed with every checklist item met, **and** the scenario completed |
+| Completed | All nine required skills DEMONSTRATED_INDEPENDENT or higher, **and** the assessment completed with every checklist item met, **and** the scenario completed with every checklist item met (§7A item 11; 07 D59) |
 | Needs More Practice | Any skill has NEEDS_REINFORCEMENT active, **or** the last assessment attempt ended with unmet checklist items |
 | In Progress | Any other state with at least one Recorded event |
 | (empty state) | No evidence yet — shown honestly, no placeholder score |
