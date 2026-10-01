@@ -1,6 +1,6 @@
 ---
 name: DEIXEN Slice Build Spec
-status: CURRENT — APPROVED by Karim 2026-09-25 (07 Decision 26). Updated 2026-09-25: gaps G1–G3 (§5, §12); Decision 27 (K5, K6) applied to §4, §5, §12, §13; K7 (§6 row 5, §12) approved in the Phase 3 gate (07 D28). Phase 4, 2026-09-25: 07 Decisions 30, 32–34, 36 applied to §5 and §13; Decisions 37–38 to §4 and §8. Phase 4 gate, 2026-09-26: 07 Decision 42 (approved design, `tokens.css`) applied to §2; Decision 44 (`AN` header number) to §5 and §12; Decision 45 (boards exported to `design/phase4/`) to §2. Phase 5, 2026-09-26: 07 Decisions 46 (`result` on ending events) and 47 (one tab at a time) applied to §11. 2026-09-26: 07 Decision 49 applied to §6 ("not recognized" vs "not covered") and new §6A (rules for build step 2 part B). 2026-09-28: 07 Decision 50 — §6A items 8–10. 2026-09-28: 07 Decision 52 — new §7A (rules for build step 3), pointers in §8, §10, §11. 2026-09-28: 07 Decision 53 — §7A items 1 (return to practice, app I-12) and 14 (data-reset notice). 2026-09-28: 07 Decision 54 — new §7B (rules for build step 4: the current step for hints, hint levels on the screen, the entry field, parts 4A/4B, load notices), pointer in §8. 2026-09-29: 07 Decisions 55–56 — §7A item 1 (a run also starts at an accepted hint request, app I-12), items 1 and 11 and §9 (pointers to the in-app exit), §7B heading and new items 6–10 ("Booking as it stands", leaving a running assessment or scenario, storage refused, the name as a string key, behaviours over time); 07 Decision 57 — §7B items 11–15 (the Flight Deck's recommended action, the practice run when moving between screens, Learning, Ghost Mode replays, when the scenario and the assessment start). 2026-09-30: 07 Decision 58 — §7B items 16–18 (the way into Ghost Mode, Ghost typing speed, "In your task"); 07 Decision 59 — §7A item 13, §7B item 11 (d) and §10 ("the scenario completed" means completed with every checklist item met), §7B items 19–20 (the scenario and assessment rows; the assessment and scenario screens). 2026-09-30: 07 Decision 61 — new §7C (rules for build step 5, Coach: when each Coach text shows, Coach and independence, the assessment and the scenario, the bypass, the escalation count, the Growth note, the five touchpoints), pointers in §6A item 2 and §8. 2026-10-01: 07 Decision 62 — §7C item 6 (the escalation offer may follow the bypass notes in practice, app I-22). First edition (Execution Plan 3.3); proposals K1–K4 approved (07 Decision 25). With this approval, the LDS/LXA content extracted here is binding for the slice (LDS and LXA reading rules, point 1).
+status: CURRENT — APPROVED by Karim 2026-09-25 (07 Decision 26). Updated 2026-09-25: gaps G1–G3 (§5, §12); Decision 27 (K5, K6) applied to §4, §5, §12, §13; K7 (§6 row 5, §12) approved in the Phase 3 gate (07 D28). Phase 4, 2026-09-25: 07 Decisions 30, 32–34, 36 applied to §5 and §13; Decisions 37–38 to §4 and §8. Phase 4 gate, 2026-09-26: 07 Decision 42 (approved design, `tokens.css`) applied to §2; Decision 44 (`AN` header number) to §5 and §12; Decision 45 (boards exported to `design/phase4/`) to §2. Phase 5, 2026-09-26: 07 Decisions 46 (`result` on ending events) and 47 (one tab at a time) applied to §11. 2026-09-26: 07 Decision 49 applied to §6 ("not recognized" vs "not covered") and new §6A (rules for build step 2 part B). 2026-09-28: 07 Decision 50 — §6A items 8–10. 2026-09-28: 07 Decision 52 — new §7A (rules for build step 3), pointers in §8, §10, §11. 2026-09-28: 07 Decision 53 — §7A items 1 (return to practice, app I-12) and 14 (data-reset notice). 2026-09-28: 07 Decision 54 — new §7B (rules for build step 4: the current step for hints, hint levels on the screen, the entry field, parts 4A/4B, load notices), pointer in §8. 2026-09-29: 07 Decisions 55–56 — §7A item 1 (a run also starts at an accepted hint request, app I-12), items 1 and 11 and §9 (pointers to the in-app exit), §7B heading and new items 6–10 ("Booking as it stands", leaving a running assessment or scenario, storage refused, the name as a string key, behaviours over time); 07 Decision 57 — §7B items 11–15 (the Flight Deck's recommended action, the practice run when moving between screens, Learning, Ghost Mode replays, when the scenario and the assessment start). 2026-09-30: 07 Decision 58 — §7B items 16–18 (the way into Ghost Mode, Ghost typing speed, "In your task"); 07 Decision 59 — §7A item 13, §7B item 11 (d) and §10 ("the scenario completed" means completed with every checklist item met), §7B items 19–20 (the scenario and assessment rows; the assessment and scenario screens). 2026-09-30: 07 Decision 61 — new §7C (rules for build step 5, Coach: when each Coach text shows, Coach and independence, the assessment and the scenario, the bypass, the escalation count, the Growth note, the five touchpoints), pointers in §6A item 2 and §8. 2026-10-01: 07 Decision 62 — §7C item 6 (the escalation offer may follow the bypass notes in practice, app I-22). 2026-10-01: 07 Decision 63 — new §7D (rules for build steps 6 and 7: step 6 as a check with a Definition of Done trace, the end note in view, the scrolling notes block, the phone drawer, what the accessibility baseline means here, the localization and breakpoint passes, lockup B, what automated checks cannot prove), pointers in §2 and §13. First edition (Execution Plan 3.3); proposals K1–K4 approved (07 Decision 25). With this approval, the LDS/LXA content extracted here is binding for the slice (LDS and LXA reading rules, point 1).
 owns: The single build specification Claude Code implements for the first-build slice. It gathers requirements from their owners and designs the evidence/state schema (delegated to Claude — file 13).
 does not own: any decision (07); Amadeus behavior (Verified Reference); product structure (03); design (Design Brief / Phase 4). Where this file and an owner disagree, the owner wins and the conflict is reported.
 ---
@@ -91,7 +91,8 @@ entry outside these limits gets the "not covered in this slice" message
     frame and this spec disagree, this spec wins and the difference is
     reported (CLAUDE.md §6).
 - **[D] Accessibility and breakpoints:** file 04 (WCAG 2.1 AA; keyboard;
-  320–1440 px). Terminal workspace is never sacrificed on mobile.
+  320–1440 px). Terminal workspace is never sacrificed on mobile. How the
+  build proves it: §7D items 5–7 (07 D63).
 
 ## 3. Learner states and screens
 
@@ -896,6 +897,111 @@ and rules (§5, §7B items 2, 6, 10); Coach adds to them, it replaces none.
     because `{N}` can now pass ten, where the Arabic «{N} مرات» is wrong;
     meaning unchanged. 220 keys in each string file.
 
+## 7D. Rules for build steps 6 and 7 — the check and the pass (07 D63)
+
+**[D] by delegation (07 D29)** — closed while preparing build steps 6
+(scenario and assessment, checked with Coach in place) and 7 (localization,
+accessibility and breakpoint pass), so neither has to guess. No event field,
+event type, string or token is added; nothing about Amadeus is claimed; no
+rule changes what the assessment, a scenario run or any evidence means
+(Constitution §8). Both steps add **checks and fixes**, not behaviour: a
+defect found is fixed with a test that would have caught it; a fix that
+would need a new string, token, event field or a changed rule is a stop
+(`CLAUDE.md` §6).
+
+1. **Build step 6 is a check, not new work.** The assessment and the
+   scenario were built in 4B-2 (07 D60) and Coach in step 5 (07 D62). Step 6
+   walks both end to end with Coach in place and proves each §13 line that
+   concerns them on the built app: the announced entry and carry-over; the
+   honest hint label; no cross-session merging; the end note (`result` /
+   `resultUnmet`); the scenario's differentiating condition and
+   scenario-aware feedback; `TRANSFERRED` only for `CTC` and `ER`, from
+   independent scenario successes; one hint-adjacent and one
+   corrective-feedback-adjacent success excluded from independence; one
+   Error-Recovery Practice on `ER`; chain runs read through `chainId`; and
+   that Coach changed none of these (same events, same results). The result
+   is a **Definition of Done trace**: every §13 line, the tests that prove
+   it (by file and name), and what was seen in the built app.
+2. **The end of an assessment in view.** At every width, when an assessment
+   ends, its end note (§7B item 20) is in view without the learner
+   scrolling, and it is announced (`role="status"`). Phones: as built — the
+   drawer opens itself, the end note first (§7C item 4). 768 and desktop:
+   the end note may stay after the completing entry's notes (the order
+   built), but the newest-into-view rule of the scrolling notes (07 D62 (b))
+   includes it.
+3. **The scrolling notes block (1024–1440; 07 D62).** While it scrolls and
+   is a keyboard stop, it is a named region: `role="region"`, named by the
+   visible head of the newest entry's notes (`aria-labelledby`; for example
+   "Feedback ER" or "Coach ER") — existing words only. It shows the same
+   visible focus as every other stop; arrow keys and Page Up/Down scroll
+   it; Tab reaches the link inside it (the escalation offer); it is not a
+   stop when it does not scroll. New notes are announced once: the polite
+   live region keeps earlier notes' elements in place when a new entry
+   arrives, so a screen reader is told only what was added.
+4. **The phone drawer (07 D62: the offer below the fold at 320 px).** Coach
+   still never opens the drawer (§7C item 4). When the learner opens it,
+   the drawer starts scrolled so the head of the newest entry's notes is at
+   its top (all of them when they fit), so the escalation offer is either in
+   view or directly below, reached by scrolling and by Tab inside the drawer.
+   Nothing in the drawer changes order (§7C item 4 still decides the end of
+   an assessment).
+5. **What "the accessibility baseline passes" means here** (file 04; WCAG
+   2.1 AA). All of these, on every state of §3, in both languages:
+   (a) the automated WCAG 2.0/2.1 A and AA check, at all eight widths, with
+   every overlay open once (phone menu, DEIXEN drawer, leave question,
+   reset confirmation, load notices, the second-tab and storage notices);
+   (b) keyboard only: every control reached and used; a visible focus on
+   each; no trap except the modal question, where Tab stays inside and
+   Escape is Stay; focus order follows the visual reading order;
+   (c) touch targets at phone widths and 768: every control at least
+   `--layout-target` high and wide, except the dense secondary controls,
+   which are at least `--layout-target-dense` (listed by name in the app's
+   `docs/DECISIONS.md`); links inside running text are exempt and named;
+   (d) reduced motion: under `prefers-reduced-motion: reduce` every motion
+   token resolves to 0 and nothing animates (the proof mark, the drawer,
+   Ghost Mode);
+   (e) text spacing (WCAG 1.4.12): with line height 1.5, paragraph spacing
+   2 × size, letter spacing 0.12 em and word spacing 0.16 em applied, no
+   text is cut off and no control is covered, at 1440 and 390 — Terminal
+   lines still never wrap (07 D36) and may pan, but nothing is lost;
+   (f) zoom and reflow (WCAG 1.4.4, 1.4.10): the widths between the eight —
+   480, 640 and 900 — also show no page-level horizontal scroll and keep
+   the entry line in view (1280 at 200 % is 640; 1280 at 400 % is 320);
+   (g) non-text contrast: the focus indicators and the marker bracket at
+   least 3:1 against what is beside them, computed from the rendered
+   colours;
+   (h) names and roles: every control's accessible name comes from the
+   string files; the language switch keeps its radio roles.
+6. **The localization pass.** On every state, both languages: no missing
+   key; no English word on an Arabic screen except the allowed ones —
+   commands and codes, Amadeus output, `ui.brand.name`, "Amadeus" inside a
+   string, and the language name `ui.lang.en`; interface right-to-left,
+   Terminal and commands left-to-right (07 D32); arrows and other
+   directional signs mirror, non-directional ones do not; digits written as
+   the approved Arabic boards write them, the same way everywhere (if the
+   boards themselves disagree, stop and ask); no clipped or broken word with
+   the real fonts at any width (screenshot review).
+7. **The breakpoint pass.** Every state × 320 / 360 / 390 / 430 / 768 /
+   1024 / 1280 / 1440 × both languages, at the boards' heights (and 320 ×
+   568): no page-level horizontal scroll; the entry line in view; the
+   Terminal workspace never given up (spec §2); screenshots kept and
+   compared by eye with the board for that state and width where one exists.
+8. **Identity and values.** A test shows the header wordmark is lockup B at
+   every width (the field line, no ticks; size from the `--wordmark-cap*`
+   tokens; name `ui.brand.name`); the no-raw-value and string-file tests
+   run again over all of `src/ui/`.
+9. **The Amadeus-string trace** (`CLAUDE.md` §8) runs again over the engine,
+   the screens and the Coach texts, and its result is reported.
+10. **What automated checks cannot prove** is written down, not implied.
+    The pass saves the accessibility tree of each state in both languages
+    (text files in `docs/a11y/`) so the reading order can be read without a
+    screen reader. Still not proven by any test: how a screen reader
+    actually speaks the app; whether reading order is meaningful beyond the
+    tree; whether the Arabic reads naturally; touch on a real phone; the
+    fonts on the learner's own computer. Karim's learner test covers what a
+    sighted learner meets (07 D29 item 5); screen-reader use stays an open,
+    disclosed item.
+
 ## 8. Independence, hints and feedback
 
 **[D on approval — LDS §7 Fix 2, §13, §15; LXA §11]**
@@ -1064,6 +1170,8 @@ track, `XE`/Known Issue #7 mitigation (no `XE` in the slice).
 ## 13. Definition of Done
 
 **[D] 07 Definition of Done**, plus **[D on approval] LDS §32**:
+
+(How build steps 6 and 7 prove each line: §7D, 07 D63.)
 
 - [ ] A learner completes the full path end to end with real content.
 - [ ] Every command in §6 works with valid and invalid handling, hints, and

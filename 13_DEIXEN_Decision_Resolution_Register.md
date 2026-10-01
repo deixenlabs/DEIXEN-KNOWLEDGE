@@ -149,6 +149,16 @@ code follows Build Spec §7C; 22 planted faults recorded as planted. App
 I-22 (the escalation offer at a bypass) kept as the spec says and written
 into §7C item 6. Next: build steps 6 and 7, then Karim's learner test.
 
+Update 2026-10-01 (rules for build steps 6 and 7 closed): 07 D63, Build
+Spec §7D. Step 6 is a check proved as a Definition of Done trace; step 7
+is the pass, with what "the accessibility baseline passes" means written
+out (WCAG check at all eight widths, keyboard, touch targets, reduced
+motion, text spacing, in-between widths, non-text contrast, names). Gaps
+found in the repository closed as rules: the scrolling notes block gets a
+role and name; the phone drawer opens on the newest notes; the end note
+stays in view; lockup B gets a test. No string, token or event added.
+Next: session 9 (steps 6 and 7), then Karim's learner test.
+
 ## 2. Phase 1 Findings — Disposition
 
 Review type: self-review by the project lead (Decision 17 — independent
@@ -281,7 +291,9 @@ presented a navy/blue color language as "durable" although colors are open
 | Build step 5 (Coach: explanations beside verified output, the escalation offer, the Growth note) | CLOSED — merged, tag `step-5-coach`, 1070 unit/component + 187 browser tests (07 D62) | — | Build steps 6–7 |
 | The escalation offer at a bypass filing (app I-22) | CLOSED — kept as built per §7C item 7; written into §7C item 6 (07 D62) | Claude (D29); Karim may reverse | — |
 | A learner returning to practice after an assessment can meet the offer at once with a high count (assessment errors count, §7C item 7) | NOTED — learner-test watch point (07 D62) | Karim | Phase 5 learner test |
-| Scrolling notes block (1024–1440): keyboard and screen-reader behaviour; the offer below the fold in the 320 px phone drawer | OPEN — build step 7 pass (07 D62) | Claude Code | Build step 7 |
+| Scrolling notes block (1024–1440): keyboard and screen-reader behaviour; the offer below the fold in the 320 px phone drawer | CLOSED as rules — Build Spec §7D items 3–4 (07 D63): a named region while it scrolls; the drawer opens on the newest notes | Claude (D29) | Session 9 builds and tests it |
+| Rules for build steps 6 and 7 (what the check proves; what "the accessibility baseline passes" means; localization and breakpoint passes; lockup B test; the end note in view) | CLOSED — Build Spec §7D (07 D63) | Claude (D29); Karim may reverse | Session 9 |
+| Screen-reader use of the slice (how it is spoken; meaningful reading order) | OPEN — not provable by automated checks; accessibility trees saved for reading (07 D63; Build Spec §7D item 10) | Karim | Disclose; revisit before real learners other than Karim |
 | Coach layout (global vs per-page) | DRAWN in the approved design (07 D42): DEIXEN's margin on desktop, the DEIXEN drawer on phones, only when a coach string applies; code structure DELEGATED | Claude Code | At build |
 | Curriculum order (competency vs command order); Lesson 17; 8 Advanced lessons | OPEN | Claude, then Karim | Curriculum authoring after the slice (D18) |
 | Pricing prerequisites of the slice (name before `FXP`?) | UNVERIFIED (U-01) — no longer blocking: D22 puts `NM` before `FXP` | — | — |
