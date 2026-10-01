@@ -142,6 +142,13 @@ Strings: `coach.escalate` reworded count-neutral; `ui.coach.openLesson`,
 `coach.growth.reinforce`, `coach.growth.assessmentUnmet` added (220 keys
 in each string file). Next: session 8 (build step 5).
 
+Update 2026-10-01 (build step 5 complete): session 8 built Coach (tag
+`step-5-coach`; reported 1070 unit/component and 187 browser tests) and
+answered I-21. Checked against the repository, read-only (07 D62): the
+code follows Build Spec §7C; 22 planted faults recorded as planted. App
+I-22 (the escalation offer at a bypass) kept as the spec says and written
+into §7C item 6. Next: build steps 6 and 7, then Karim's learner test.
+
 ## 2. Phase 1 Findings — Disposition
 
 Review type: self-review by the project lead (Decision 17 — independent
@@ -271,6 +278,10 @@ presented a navy/blue color language as "durable" although colors are open
 | `AN` checklist (b) rarely fails (app I-7) | NOTED — learning-evidence observation (07 D48) | — | Revisit at curriculum expansion |
 | Growth could show Needs More Practice beside chain rows that all read "Correct in DEIXEN" (a skill with `NEEDS_REINFORCEMENT` keeps its state) | CLOSED — a Coach note on Growth says why (`coach.growth.*`; Build Spec §7C item 8; 07 D61) | Claude (D29); Karim may change the words | Session 8 |
 | Learning touchpoint has no Coach note on the lesson page (no approved Coach text for it; served by the recommended lesson, the lesson, its next steps and the escalation offer — Build Spec §7C item 9) | NOTED — learner-test watch point (07 D61) | Karim | Phase 5 learner test |
+| Build step 5 (Coach: explanations beside verified output, the escalation offer, the Growth note) | CLOSED — merged, tag `step-5-coach`, 1070 unit/component + 187 browser tests (07 D62) | — | Build steps 6–7 |
+| The escalation offer at a bypass filing (app I-22) | CLOSED — kept as built per §7C item 7; written into §7C item 6 (07 D62) | Claude (D29); Karim may reverse | — |
+| A learner returning to practice after an assessment can meet the offer at once with a high count (assessment errors count, §7C item 7) | NOTED — learner-test watch point (07 D62) | Karim | Phase 5 learner test |
+| Scrolling notes block (1024–1440): keyboard and screen-reader behaviour; the offer below the fold in the 320 px phone drawer | OPEN — build step 7 pass (07 D62) | Claude Code | Build step 7 |
 | Coach layout (global vs per-page) | DRAWN in the approved design (07 D42): DEIXEN's margin on desktop, the DEIXEN drawer on phones, only when a coach string applies; code structure DELEGATED | Claude Code | At build |
 | Curriculum order (competency vs command order); Lesson 17; 8 Advanced lessons | OPEN | Claude, then Karim | Curriculum authoring after the slice (D18) |
 | Pricing prerequisites of the slice (name before `FXP`?) | UNVERIFIED (U-01) — no longer blocking: D22 puts `NM` before `FXP` | — | — |
