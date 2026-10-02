@@ -168,6 +168,24 @@ is a still reading pause). App I-24 answered: English terms written in the
 approved Arabic content are allowed. Next: session 9B merges and tags
 `step-7-pass`; then Karim's learner test.
 
+Update 2026-10-02 (build complete; learner test prepared): 07 D65 —
+session 9B checked against the repository: one commit (`a697bce`: the
+reduced-motion test renamed, checks unchanged; I-23 and I-24 marked
+closed), merged into `main` (`3fdb342`), tag `step-7-pass`; `src/`,
+`content/` and `tokens.css` untouched. Every build step is done. 07 D66 —
+Karim's learner test prepared: a guide in Egyptian Arabic with a report
+form (a Claude doc), 14 steps in two sittings, every watch point folded
+in, and what it cannot cover stated. Next: Karim runs the test; his
+verdict is the Phase 5 gate.
+
+Update 2026-10-02 (Phase 5 closed): 07 D67 — Karim ran the learner test
+and closed Phase 5: the slice works end to end; his findings (lessons
+assume prior knowledge, Ghost Mode screens unexplained, the practice
+booking reported lost, training lines that look alike whether right or
+wrong) go into the detour he plans before Phase 6, as input to its
+learning review. Before the snapshot tag, a read-only check of the
+practice-run finding (detour package v1.8, Prompt 0).
+
 ## 2. Phase 1 Findings — Disposition
 
 Review type: self-review by the project lead (Decision 17 — independent
@@ -302,6 +320,11 @@ presented a navy/blue color language as "durable" although colors are open
 | A learner returning to practice after an assessment can meet the offer at once with a high count (assessment errors count, §7C item 7) | NOTED — learner-test watch point (07 D62) | Karim | Phase 5 learner test |
 | Scrolling notes block (1024–1440): keyboard and screen-reader behaviour; the offer below the fold in the 320 px phone drawer | CLOSED as rules — Build Spec §7D items 3–4 (07 D63): a named region while it scrolls; the drawer opens on the newest notes | Claude (D29) | Session 9 builds and tests it |
 | Build steps 6 and 7 (session 9) | CLOSED — step 6 tag `step-6-check`; step 7 complete on its branch, merged and tagged `step-7-pass` in session 9B (07 D64) | — | Karim's learner test |
+| Session 9B: merge and tag build step 7 | CLOSED — `main` = tag `step-7-pass` = `3fdb342`; only the test name, a comment, a message and the app docs changed; every build step done (07 D65) | — | — |
+| 9B's own final runs (1070 / 268, slow test 2.1 s) are in its report, not in T12 (T12 keeps session 9's runs) | NOTED — not blocking: 9B changed no code or check (07 D65) | Claude Code | Next session records its runs in T12 |
+| Karim's learner test — the Phase 5 gate (07 D29 item 5) | CLOSED — Phase 5 closed by Karim (07 D67); findings carried into the detour | Karim | — |
+| Learner-test findings: lessons and Ghost Mode too hard for a beginner; training lines look alike right or wrong (`RF`) | OPEN — input to the detour's learning review (Step 2) (07 D67) | Karim | Detour |
+| Practice booking reported lost while moving between commands (exact steps unknown) | OPEN — read-only check before the Phase 5 tag (detour package v1.8, Prompt 0) (07 D67) | Claude Code | Prompt 0 |
 | Reduced motion keeps Ghost Mode's 1.2 s hold between displays (app I-23) | CLOSED — `tokens.css` unchanged; Build Spec §7B item 17 and §7D item 5 (d) corrected (07 D64) | Claude (D29); a change to `tokens.css` would be Karim's | — |
 | English terms inside the approved Arabic content (app I-24) | CLOSED — allowed; Build Spec §7D item 6 (07 D64) | Claude (D29); Karim may change the content | Learner-test watch point |
 | Learner-test watch points from step 7: the scenario's folded title wrapping to four lines at 1024; taller lesson links on phones; the drawer opening at the newest note; notes added inside an open phone drawer not announced to a screen reader | NOTED (07 D64) | Karim | Phase 5 learner test |
