@@ -159,6 +159,15 @@ role and name; the phone drawer opens on the newest notes; the end note
 stays in view; lockup B gets a test. No string, token or event added.
 Next: session 9 (steps 6 and 7), then Karim's learner test.
 
+Update 2026-10-02 (build steps 6 and 7 checked): 07 D64. Session 9 ran
+step 6 (tag `step-6-check`: the Definition of Done trace, every §13 line
+proved except the learner's own run) and step 7 on `feature/step7-pass`
+(nine defects fixed, 15 planted faults caught, 268 browser tests). App
+I-23 answered: `tokens.css` kept; the spec's "both 0" corrected (the hold
+is a still reading pause). App I-24 answered: English terms written in the
+approved Arabic content are allowed. Next: session 9B merges and tags
+`step-7-pass`; then Karim's learner test.
+
 ## 2. Phase 1 Findings — Disposition
 
 Review type: self-review by the project lead (Decision 17 — independent
@@ -292,6 +301,11 @@ presented a navy/blue color language as "durable" although colors are open
 | The escalation offer at a bypass filing (app I-22) | CLOSED — kept as built per §7C item 7; written into §7C item 6 (07 D62) | Claude (D29); Karim may reverse | — |
 | A learner returning to practice after an assessment can meet the offer at once with a high count (assessment errors count, §7C item 7) | NOTED — learner-test watch point (07 D62) | Karim | Phase 5 learner test |
 | Scrolling notes block (1024–1440): keyboard and screen-reader behaviour; the offer below the fold in the 320 px phone drawer | CLOSED as rules — Build Spec §7D items 3–4 (07 D63): a named region while it scrolls; the drawer opens on the newest notes | Claude (D29) | Session 9 builds and tests it |
+| Build steps 6 and 7 (session 9) | CLOSED — step 6 tag `step-6-check`; step 7 complete on its branch, merged and tagged `step-7-pass` in session 9B (07 D64) | — | Karim's learner test |
+| Reduced motion keeps Ghost Mode's 1.2 s hold between displays (app I-23) | CLOSED — `tokens.css` unchanged; Build Spec §7B item 17 and §7D item 5 (d) corrected (07 D64) | Claude (D29); a change to `tokens.css` would be Karim's | — |
+| English terms inside the approved Arabic content (app I-24) | CLOSED — allowed; Build Spec §7D item 6 (07 D64) | Claude (D29); Karim may change the content | Learner-test watch point |
+| Learner-test watch points from step 7: the scenario's folded title wrapping to four lines at 1024; taller lesson links on phones; the drawer opening at the newest note; notes added inside an open phone drawer not announced to a screen reader | NOTED (07 D64) | Karim | Phase 5 learner test |
+| The unit suite's per-test time limit raised to 30 s (machine load) | NOTED — accepted; a real hang shows later (07 D64) | Claude Code | Watch for slow tests |
 | Rules for build steps 6 and 7 (what the check proves; what "the accessibility baseline passes" means; localization and breakpoint passes; lockup B test; the end note in view) | CLOSED — Build Spec §7D (07 D63) | Claude (D29); Karim may reverse | Session 9 |
 | Screen-reader use of the slice (how it is spoken; meaningful reading order) | OPEN — not provable by automated checks; accessibility trees saved for reading (07 D63; Build Spec §7D item 10) | Karim | Disclose; revisit before real learners other than Karim |
 | Coach layout (global vs per-page) | DRAWN in the approved design (07 D42): DEIXEN's margin on desktop, the DEIXEN drawer on phones, only when a coach string applies; code structure DELEGATED | Claude Code | At build |
