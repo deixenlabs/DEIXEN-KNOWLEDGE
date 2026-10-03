@@ -25,7 +25,7 @@ length, or the word "Canonical" in its title.
 
 | File | Role | Status |
 |---|---|---|
-| `DEIXEN_Operating_Constitution.md` | Working method, authority, evidence discipline, roles | Approved by Karim; §9 and a §8 clarification amended 2026-09-24 |
+| `DEIXEN_Operating_Constitution.md` | Working method, authority, evidence discipline, roles | Approved by Karim; §9 and a §8 clarification amended 2026-09-24; §5 repository address 2026-09-25, decided by Karim 2026-10-03 (07 D71) |
 | `DEIXEN_Execution_Plan.md` | Phases, gates, current phase | Approved by Karim, 2026-09-24 |
 | `08_DEIXEN_Canonical_AI_Working_Rules_and_Dev_Process.md` | AI working rules, verification loop, dev process | Canonical (07 D16); renamed from `…_UNIFIED_PROPOSED.md` |
 
@@ -128,6 +128,7 @@ changes no decision and no current file.
 - 07 D42–D44 (Phase 4 gate; interface words as keys; `AN` header number) → Build Spec §2/§5/§12, `CLAUDE.md` §2/§4/§5/§8, file 04, Design Brief (status, §6), `slice.json`, `en/text.json`, `ar/text.json`, content reading copy, 13, Execution Plan §3/§5/§7 — impact check done 2026-09-26. Not affected: 03, 06, LDS/LXA, the Verified Reference (U-09 stays UNVERIFIED; D44 only fixes a displayed value), Scope Disclosure (`disc.6` already lists the header number).
 - 07 D45 (approved boards copied to `design/phase4/`) → Build Spec §2, `CLAUDE.md` §2/§4, 13, Execution Plan §5/§7, this file (A3) — impact check done 2026-09-26. Not affected: 03, 04 (principles unchanged; values stay in `tokens.css`), 06, LDS/LXA, Verified Reference, content files, Design Brief (a record of what Claude Design was asked). A later change to the canvas does not change the approved design unless Karim approves it; the folder is then re-copied and its manifest re-made.
 - 07 D68 (the four-step detour between Phase 5 and Phase 6) → Execution Plan §3/§5/§7 and status line, 13, this file (A3, A10), 07 current state — impact check done 2026-10-02. Not affected: Constitution, 03, 04, 06, 08, LDS/LXA, Verified Reference, Build Spec, Design Brief, `CLAUDE.md`, content files, `design/phase4/`. Later changes reach them only through accepted detour results: the Freeze recorded in 07, and the Detour Closing Report Karim accepts.
+- 07 D69–D71 (the accepted Freeze, step 4's design scope and landing times; Prompt 7 authorized; the Constitution's repository address) → Execution Plan §3/§7 and status line, 13, this file (A1, A10), the Constitution's Amendment Record, 07 current state — impact check done 2026-10-03. Reached later, each by its own Karim-started task at the landing time 07 D69 (c) sets, not now: 03 (F-08 starting point), 06 (F-08 lesson standard, F-09 annotation step), Build Spec (F-05, F-06 (d), F-08, F-09), LDS (F-07 note), LXA §22 (F-09), the content files in both copies (F-04, F-06, F-08, F-10, F-21), the `deixen-app` engine, bridge and tests (F-02–F-05, F-12–F-17, F-19). `CLAUDE.md`: the master copy is made identical to the app copy (S3-03). Not affected: 04, 08, Verified Reference, Design Brief, `design/phase4/`, `tokens.css` (07 D69 (b): not edited). The claude.ai Project's own copy of the Constitution is updated by Karim (07 D71).
 
 **Repository note (2026-09-26).** Checked by Claude against the Project: the
 12 files of the Phase 4 gate are current in the repository (see 13). The
