@@ -2,7 +2,7 @@
 name: DEIXEN Canonical Decisions & Current State
 owns: The single decisions ledger and current project status going forward
 supersedes reading in isolation: AeroBridge_Decisions_and_Current_State.md
-last synchronized: 2026-09-26 (Phase 4 closed — gate approved, Decision 42; delegated Decisions 43–44; approved boards exported, Decision 45; Phase 5 started — build step 1 locked, Decisions 46–47; step 2 part A locked, Decision 48; step 2 part B prepared, Decision 49; part B checked, Decision 50; step 2 locked, Decision 51; step 3 prepared, Decision 52; step 3 locked, Decision 53; step 4 prepared, Decision 54; step 4A checked and locked, Decision 55 (2026-09-29); leaving a running assessment or scenario inside the app, Decision 56; rules for build step 4B, Decision 57 (all 2026-09-29); step 4B-1 checked, Decision 58; rules for build step 4B-2, Decision 59; step 4B-2 checked and build step 4 complete, Decision 60; rules for build step 5 (Coach), Decision 61 (all 2026-09-30); step 5 checked and locked, Decision 62; rules for build steps 6 and 7, Decision 63 (both 2026-10-01); steps 6 and 7 checked, Decision 64; step 7 merged and the build complete, Decision 65; the learner test prepared, Decision 66; Phase 5 closed by Karim after his learner test, Decision 67; the four-step detour before Phase 6, Decision 68 (all 2026-10-02))
+last synchronized: 2026-09-26 (Phase 4 closed — gate approved, Decision 42; delegated Decisions 43–44; approved boards exported, Decision 45; Phase 5 started — build step 1 locked, Decisions 46–47; step 2 part A locked, Decision 48; step 2 part B prepared, Decision 49; part B checked, Decision 50; step 2 locked, Decision 51; step 3 prepared, Decision 52; step 3 locked, Decision 53; step 4 prepared, Decision 54; step 4A checked and locked, Decision 55 (2026-09-29); leaving a running assessment or scenario inside the app, Decision 56; rules for build step 4B, Decision 57 (all 2026-09-29); step 4B-1 checked, Decision 58; rules for build step 4B-2, Decision 59; step 4B-2 checked and build step 4 complete, Decision 60; rules for build step 5 (Coach), Decision 61 (all 2026-09-30); step 5 checked and locked, Decision 62; rules for build steps 6 and 7, Decision 63 (both 2026-10-01); steps 6 and 7 checked, Decision 64; step 7 merged and the build complete, Decision 65; the learner test prepared, Decision 66; Phase 5 closed by Karim after his learner test, Decision 67 (all 2026-10-02))
 authority note: Where a decision below is owned in more detail elsewhere in this canonical set (product/architecture, design, engine, curriculum/Coach), this file states the decision and its status, and points there rather than duplicating — the same single-ownership discipline the original NEW document already established and this pass is preserving.
 ---
 
@@ -51,9 +51,9 @@ list lives in `00_DEIXEN_Knowledge_Consolidation_Plan.md` (Corpus Map).
 were ended by Karim's decision on 2026-09-24 and are historical.
 
 **Phase:** Phase 4 (Design) closed on 2026-09-26 — Karim approved the gate
-(Decision 42). **Phase 5 (Build), closed 2026-10-02 (Decision 67); current: the detour before Phase 6 (Decision 68)** — build step 1 (evidence store)
+(Decision 42). **Current: Phase 5 (Build)** — build step 1 (evidence store)
 locked 2026-09-26 (Decision 46); step 2 part A (engine core, `AN`, `SS`,
-`NM`, `AP`) locked the same day (Decision 48); step 2 part B prepared (Decision 49: the D48 follow-ups I-4, I-5, I-6 closed, and the part B rules written into Build Spec §6A); Claude Code built part B in its third session (not merged: two layouts were missing); the project lead supplied them (Decision 50); session 3B finished, merged and tagged part B (Decision 51). Build step 3 (bridge, independence flag, skill states, Growth status, one-tab rule D47) prepared (Decision 52: Build Spec §7A), built in session 4 and locked (Decision 53, tag `step-3-bridge`, 723 tests). Build step 4 prepared (Decision 54: Build Spec §7B) and split into 4A (app shell and Terminal practice) and 4B (the other seven states). 4A built in session 5 and locked (Decision 55, tag `step-4a-terminal`, 818 unit/component and 69 browser tests); leaving a running assessment or scenario inside the app decided (Decision 56); the rules 4B would otherwise guess closed (Decision 57: Build Spec §7B items 11–15). 4B-1 (Flight Deck, Learning, Ghost Mode, Growth, Reset, Scope Disclosure) built in session 6 and checked (Decision 58: 943 unit/component and 104 browser tests; merged and tagged `step-4b1-screens` at the start of session 7); the rules for 4B-2 written (Decision 59: Build Spec §7B items 19–20, the meaning of "the scenario completed"). Session 7 merged 4B-1 (tag `step-4b1-screens`) and built 4B-2 (Decision 60: tag `step-4b2-screens`, 994 unit/component and 158 browser tests); build step 4 is complete — all eight states. The rules for build step 5 (Coach; app I-21) are closed (Decision 61: Build Spec §7C); session 8 built step 5 (Decision 62: tag `step-5-coach`, 1070 unit/component and 187 browser tests). The rules for build steps 6 and 7 are closed (Decision 63: Build Spec §7D); session 9 ran both (Decision 64: tag `step-6-check`; step 7 complete on `feature/step7-pass`, 1070 unit/component and 268 browser tests); session 9B closed app I-23 and I-24 in the app and merged step 7 (Decision 65: `main` = tag `step-7-pass` = `3fdb342`). Every build step of `CLAUDE.md` §7 is done. The learner test is prepared (Decision 66). Karim ran it and closed Phase 5 (Decision 67): the slice works end to end; what the test found about teaching a beginner goes into the four-step detour Karim inserted before Phase 6 (Decision 68; Step 1 targets tag `phase-5-final` = `3fdb342`). Next: the Execution Plan update (detour package Prompt 3), then Step 1. Claude Code builds the slice from
+`NM`, `AP`) locked the same day (Decision 48); step 2 part B prepared (Decision 49: the D48 follow-ups I-4, I-5, I-6 closed, and the part B rules written into Build Spec §6A); Claude Code built part B in its third session (not merged: two layouts were missing); the project lead supplied them (Decision 50); session 3B finished, merged and tagged part B (Decision 51). Build step 3 (bridge, independence flag, skill states, Growth status, one-tab rule D47) prepared (Decision 52: Build Spec §7A), built in session 4 and locked (Decision 53, tag `step-3-bridge`, 723 tests). Build step 4 prepared (Decision 54: Build Spec §7B) and split into 4A (app shell and Terminal practice) and 4B (the other seven states). 4A built in session 5 and locked (Decision 55, tag `step-4a-terminal`, 818 unit/component and 69 browser tests); leaving a running assessment or scenario inside the app decided (Decision 56); the rules 4B would otherwise guess closed (Decision 57: Build Spec §7B items 11–15). 4B-1 (Flight Deck, Learning, Ghost Mode, Growth, Reset, Scope Disclosure) built in session 6 and checked (Decision 58: 943 unit/component and 104 browser tests; merged and tagged `step-4b1-screens` at the start of session 7); the rules for 4B-2 written (Decision 59: Build Spec §7B items 19–20, the meaning of "the scenario completed"). Session 7 merged 4B-1 (tag `step-4b1-screens`) and built 4B-2 (Decision 60: tag `step-4b2-screens`, 994 unit/component and 158 browser tests); build step 4 is complete — all eight states. The rules for build step 5 (Coach; app I-21) are closed (Decision 61: Build Spec §7C); session 8 built step 5 (Decision 62: tag `step-5-coach`, 1070 unit/component and 187 browser tests). The rules for build steps 6 and 7 are closed (Decision 63: Build Spec §7D); session 9 ran both (Decision 64: tag `step-6-check`; step 7 complete on `feature/step7-pass`, 1070 unit/component and 268 browser tests); session 9B closed app I-23 and I-24 in the app and merged step 7 (Decision 65: `main` = tag `step-7-pass` = `3fdb342`). Every build step of `CLAUDE.md` §7 is done. The learner test is prepared (Decision 66). Karim ran it and closed Phase 5 (Decision 67): the slice works end to end; what the test found about teaching a beginner goes into the detour he plans before Phase 6 (to be recorded by its own decision). Next: Prompt 0 of the detour package (a read-only check of the practice-run finding), then the Phase 5 tag. Claude Code builds the slice from
 `DEIXEN_Slice_Build_Spec.md`, `CLAUDE.md`, the content files, the approved
 design and `tokens.css`. Standing delegation to Claude: Decision 29.
 Phase 4 record: Claude Design proposed three directions (A "Margin",
@@ -1837,107 +1837,6 @@ an ordinary technical implementation choice, not decided here.
   Reference first (D12, D13). Files changed: 13. The Execution Plan's
   Phase 5 row is set to Done by the detour's own plan update (package
   Prompt 3), so the closure and the detour land in the plan together.
-
-### Decisions of 2026-10-02 — The detour before Phase 6 (Karim)
-
-- **Decision 68 — A four-step detour between Phase 5 and Phase 6. Closed
-  — Karim, 2026-10-02** (D29 item 4: it changes the work sequence of the
-  Execution Plan). This is the detour D67 names. After Phase 5 is closed
-  (D67) and before Phase 6 (Expansion) starts, a deliberate four-step
-  detour is inserted into `DEIXEN_Execution_Plan.md`. It is intentional,
-  approved by Karim, short, and exists so that Phase 6 starts on
-  better-informed ground. **The steps:** (1) External Engine / Open-Source
-  Investigation → Technical Recommendation; (2) Learning Design + Learning
-  Experience Review → Learning Decision; (3) Synthesize & Freeze Decisions
-  (Engine + Learning + Product constraints); (4) Design Improvement Round
-  (UX / UI / learning surfaces / Terminal experience) → Design
-  Verification. Then Phase 6 (Expansion). **How the steps run:** each step
-  is started separately by Karim and stops after its own deliverable. A
-  step may state requirements it needs from other steps and surface
-  labeled, non-binding candidates for them, but it never recommends,
-  decides, or plans the execution of another step's outcome. The four
-  steps run under a shared Detour Charter (v1.8), embedded as a block at
-  the top of each step's prompt; it is not a repository file.
-  **Authority:** steps 1 and 2 recommend within their own domain; step 3
-  proposes the Freeze Package; step 4 improves and verifies the design
-  inside the scope below. Nothing produced by a step binds until Karim
-  explicitly accepts it. Steps 1, 2 and 3 modify nothing (no code,
-  documents or decisions). **The Freeze Package** is step 3's handoff. It
-  carries the Freeze (locked decisions + explicitly listed open items +
-  the procedure for changing them) and everything step 4 and the closing
-  report need from steps 1–3: the design scope (stated in full: the
-  definition, the four limits, the exclusions and any file it names), when
-  each accepted change must land (before step 4 / before Phase 6 / with
-  Phase 6 / deferred), the consolidated ledger, the requirements and
-  candidates step 4 must evaluate, the preserve list, and the cumulative
-  coverage. Items are tracked as ledger rows with one ID each (`S1-01`,
-  `S2-01`, `S3-01`, …), never renumbered by a later step; locked decisions
-  are identified `F-01`, `F-02`, … and each cites the ledger row IDs it
-  came from. The accepted Freeze Package is the only input step 4 takes
-  from the earlier steps, and it binds step 4 and Phase 6. Its Freeze,
-  design scope and landing times are then recorded here as a decision by
-  Karim, and step 4 is prepared and run only after that record exists; the
-  package is the working copy and 07 is the canonical copy of those parts.
-  **Step 4** — only after the Freeze Package is accepted and recorded — may
-  implement design changes inside the design scope defined by that
-  package. Design scope = how existing engine and learning outputs are
-  presented: layout, hierarchy, typography, color and semantic-state
-  rendering (styling only), interaction patterns, Terminal presentation
-  (styling and container only), and interface copy = text of the interface
-  itself (navigation, controls, headings, empty and system states) that
-  neither teaches nor carries Amadeus behavior. Limits that always apply:
-  (1) engine output is rendered exactly as received: no reflow, trimming,
-  re-alignment, truncation or rewording; (2) what the engine receives, and
-  what counts as an attempt, hint, reveal or mastery, is unchanged; (3)
-  when, whether and how much learning support appears (hints, Coach, Ghost
-  Mode, Speed Drills, Scenarios, Assessment) is learning logic, not
-  interaction design; (4) any text that teaches, instructs, hints,
-  explains, assesses or gives feedback is learning content, not interface
-  copy; if unsure, it is learning content. Excluded: engine behavior,
-  learning logic and content, the wording of verified Amadeus output and
-  training messages (how they are styled is semantic-state rendering,
-  inside the scope), frozen files, governing documents and decisions. Step
-  4 may create a new file only if the recorded design scope explicitly
-  names that file; otherwise it edits existing files only. Step 4 works in
-  isolation and reversibly (for example a separate branch), then verifies
-  the resulting state; "no material design change" is a valid result. Its
-  changes are proposals in code form and join the project only when Karim
-  accepts the Detour Closing Report. Anything outside its authority goes
-  through the return path. All other accepted changes (engine, learning,
-  documents) are implemented as separate tasks started by Karim through
-  the project's normal pipeline, on the schedule the Freeze sets. **Return
-  path:** after the Freeze, if step 4 needs something outside its
-  authority or something the Freeze lacks, it writes a change request,
-  marks the affected item blocked, does not fake or work around it, and
-  continues only with items that do not depend on it (or stops if none can
-  continue). Karim decides. One round, affected item only. **The Detour
-  Closing Report:** step 4 ends the whole detour with a report built from
-  the Freeze Package and step 4's own results — a readiness statement for
-  Phase 6, the frozen decisions, the design changes made and verified, the
-  other accepted changes (grouped by when they must land) and what was
-  deliberately preserved, and a coverage ledger (what was examined, what
-  came out, what was deliberately left out and why). It is traceable from
-  evidence to decision to change to verification. Karim reviews it,
-  accepts or rejects the design changes, schedules the remaining
-  implementation tasks, and starts Phase 6 himself. **Step 1** is an
-  independent investigation run by Opus 5.5 in a clean session. It asks
-  whether any open-source implementation, architectural idea, dataset, or
-  evidence deserves to affect the engine or the way it is expanded in
-  Phase 6. It also includes a short "Design-facing requirements" section
-  describing what the engine, progress system, and messaging layer would
-  need to expose so that a later UI can present learner feedback honestly;
-  that section is a secondary lens only and is not a selection criterion.
-  Target code: tag `phase-5-final` at commit
-  `3fdb342429dc99ebf8268bad0da3075eacbd40a7` in the `deixen-app` repo. Its
-  output is delivered in the chat reply only, with no new files and no
-  modification to any repo or document. Its result is an advisory
-  recommendation, not a gate, and is not treated as a formal independent
-  review (D17). Any Amadeus behavior that surfaces from step 1 does not
-  enter `DEIXEN_Amadeus_Verified_Reference.md`; it goes through the verify
-  → spec → build → test path (D12, D13). The decision to adopt any
-  external code is reserved to Karim (money/legal, D29 item 3). Files
-  changed: 07. To follow (package Prompt 3): Execution Plan §3 (Phase 5
-  Done, the four detour rows), §7 and its metadata; 13; file 00 §A10.
 
 ## Definition of Done — for the current frozen vertical slice
 

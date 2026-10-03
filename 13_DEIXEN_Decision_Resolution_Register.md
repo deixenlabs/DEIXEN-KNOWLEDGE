@@ -186,24 +186,6 @@ wrong) go into the detour he plans before Phase 6, as input to its
 learning review. Before the snapshot tag, a read-only check of the
 practice-run finding (detour package v1.8, Prompt 0).
 
-Update 2026-10-02 (Phase 5 snapshot fixed; the detour decided): results,
-not new decisions. **Prompt 0** (the practice-run check of the
-learner-test finding, 07 D67): classification (b). No path loses the
-booking where the Build Spec (§7A item 1, §7B item 12) says the run
-continues. But in six paths a practice button correctly starts a new,
-empty booking without saying so on screen; the three most likely to match
-Karim's report are reached when the app itself (Flight Deck, Learning
-area, escalation offer) sends the learner back to a lesson whose step is
-already done in this run. Carried into Step 2 as learner-test input, not
-fixed now. **Phase 5 snapshot fixed:** annotated tag `phase-5-final` at
-`3fdb342429dc99ebf8268bad0da3075eacbd40a7` (local only, no remote), after
-typecheck, 1070/1070 unit tests, build and 268/268 browser tests passed.
-Observation for Step 1, not a decision: running the browser tests
-rewrites 209 tracked files in `docs/a11y` and `docs/screens` (the random
-booking reference); they were restored before tagging. 07 D68 — Karim
-inserted the four-step detour between Phase 5 and Phase 6 (Execution Plan
-§3, §5, §7 updated; 00 updated). Next: Step 1.
-
 ## 2. Phase 1 Findings — Disposition
 
 Review type: self-review by the project lead (Decision 17 — independent
@@ -342,13 +324,7 @@ presented a navy/blue color language as "durable" although colors are open
 | 9B's own final runs (1070 / 268, slow test 2.1 s) are in its report, not in T12 (T12 keeps session 9's runs) | NOTED — not blocking: 9B changed no code or check (07 D65) | Claude Code | Next session records its runs in T12 |
 | Karim's learner test — the Phase 5 gate (07 D29 item 5) | CLOSED — Phase 5 closed by Karim (07 D67); findings carried into the detour | Karim | — |
 | Learner-test findings: lessons and Ghost Mode too hard for a beginner; training lines look alike right or wrong (`RF`) | OPEN — input to the detour's learning review (Step 2) (07 D67) | Karim | Detour |
-| Practice booking reported lost while moving between commands (exact steps unknown) | CLOSED — Prompt 0, 2026-10-02: classification (b). No path loses the booking where the Build Spec (§7A item 1, §7B item 12) says the run continues; in six paths a practice button correctly starts a new, empty booking without saying so on screen — the three most likely to match Karim's report are reached when the app itself (Flight Deck, Learning area, escalation offer) sends the learner back to a lesson whose step is already done in this run. Not fixed now (07 D67) | — | Carried into detour Step 2 as learner-test input |
-| Detour between Phase 5 and Phase 6 (07 D68) | CLOSED — Karim, 2026-10-02; Execution Plan §3, §5, §7 and 00 updated | Karim | Step 1, started by Karim |
-| Phase 5 snapshot | DONE 2026-10-02 — annotated tag `phase-5-final` at `3fdb342429dc99ebf8268bad0da3075eacbd40a7` (local only, no remote), after typecheck, 1070/1070 unit tests, build and 268/268 browser tests passed | — | Step 1's target code (07 D68) |
-| Running the browser tests rewrites 209 tracked files in `deixen-app` `docs/a11y` and `docs/screens` (the random booking reference); restored before tagging | NOTED — observation for Step 1, not a decision | — | Step 1 |
-| Step 4 executor role: Plan §2 says Claude Code implements approved specifications; for Step 4, the Freeze recorded in 07 is the approved specification | OPEN — to be confirmed when Step 4 is prepared; no role change now (07 D68) | Karim | Step 4 preparation |
-| Prompt 7 (Design Exploration Skill build) has no recorded authorization | OPEN — needs a decision by Karim recorded in 07 before Prompt 7 runs (07 D68) | Karim | Before Prompt 7 |
-| Package v1.8 §14 items 8–10: `tokens.css` and the content files in Step 4's scope; the untested parts of the learner test; the package review was not run in a fresh session | OPEN (07 D68) | Karim | Steps 2–4 |
+| Practice booking reported lost while moving between commands (exact steps unknown) | OPEN — read-only check before the Phase 5 tag (detour package v1.8, Prompt 0) (07 D67) | Claude Code | Prompt 0 |
 | Reduced motion keeps Ghost Mode's 1.2 s hold between displays (app I-23) | CLOSED — `tokens.css` unchanged; Build Spec §7B item 17 and §7D item 5 (d) corrected (07 D64) | Claude (D29); a change to `tokens.css` would be Karim's | — |
 | English terms inside the approved Arabic content (app I-24) | CLOSED — allowed; Build Spec §7D item 6 (07 D64) | Claude (D29); Karim may change the content | Learner-test watch point |
 | Learner-test watch points from step 7: the scenario's folded title wrapping to four lines at 1024; taller lesson links on phones; the drawer opening at the newest note; notes added inside an open phone drawer not announced to a screen reader | NOTED (07 D64) | Karim | Phase 5 learner test |
