@@ -219,6 +219,16 @@ at 15:27; uploads now come only from the knowledge folder, and Karim
 deleted the loose copies. Next: the before-Step-4 tasks (07 D69 (c)),
 then Prompt 7, then step 4.
 
+Update 2026-10-04 (before-Step-4 task 1, F-19, landed): 07 D72 — checked
+against the repository, read-only. `main` = `c093d5e` (merge of
+`feature/f19-reproducible-tests`; not tagged). The tests now use a fixed
+locator source through the bridge's existing random dependency and a fixed
+time zone; screenshots are taken with the pointer on nothing interactive
+and transitions finished, and are rewritten only beyond a measured
+tolerance (app I-25: the largest "noise" was the foot buttons' hover fade).
+Three planted changes were each caught. Only test code and evidence files
+changed; the built app is unchanged. Next: before-Step-4 task 2, F-02.
+
 ## 2. Phase 1 Findings — Disposition
 
 Review type: self-review by the project lead (Decision 17 — independent
@@ -360,7 +370,7 @@ presented a navy/blue color language as "durable" although colors are open
 | Practice booking reported lost while moving between commands (exact steps unknown) | CLOSED — Prompt 0, 2026-10-02: classification (b). No path loses the booking where the Build Spec (§7A item 1, §7B item 12) says the run continues; in six paths a practice button correctly starts a new, empty booking without saying so on screen — the three most likely to match Karim's report are reached when the app itself (Flight Deck, Learning area, escalation offer) sends the learner back to a lesson whose step is already done in this run. Not fixed now (07 D67) | — | Carried into detour Step 2 as learner-test input |
 | Detour between Phase 5 and Phase 6 (07 D68) | CLOSED — Karim, 2026-10-02; Execution Plan §3, §5, §7 and 00 updated. Steps 1–3 done 2026-10-03 | Karim | Before-Step-4 tasks, Prompt 7, then step 4 |
 | Phase 5 snapshot | DONE 2026-10-02 — annotated tag `phase-5-final` at `3fdb342429dc99ebf8268bad0da3075eacbd40a7` (local only, no remote), after typecheck, 1070/1070 unit tests, build and 268/268 browser tests passed | — | Step 1's target code (07 D68) |
-| Running the browser tests rewrites 209 tracked files in `deixen-app` `docs/a11y` and `docs/screens` (the random booking reference); restored before tagging | CLOSED as a decision — F-19, reproducible test evidence, lands before step 4 (07 D69) | — | Before-Step-4 task |
+| Running the browser tests rewrites 209 tracked files in `deixen-app` `docs/a11y` and `docs/screens` (the random booking reference); restored before tagging | CLOSED 2026-10-04 — F-19 landed: merged into `main` = `c093d5edd9b87b4ac232638b0e0c9b3ecb764abb` (not tagged); the first run had rewritten 205 files, not 209; a fixed locator source and time zone, screenshots taken at rest and written only beyond a measured tolerance; app I-25 closed; repeated runs leave `docs/screens` and `docs/a11y` untouched (07 D72) | Claude (D29) | — |
 | Step 4 executor role: Plan §2 says Claude Code implements approved specifications; for Step 4, the Freeze recorded in 07 is the approved specification | CLOSED — Karim, 2026-10-03: step 4 runs in Claude Code, Opus 5.5, Max effort, on a separate branch in `deixen-app` (07 D69, open item S3-06); no role change | Karim | — |
 | Prompt 7 (Design Exploration Skill build) has no recorded authorization | CLOSED — authorized by Karim, 2026-10-03 (07 D70) | Karim | Runs after the before-Step-4 tasks |
 | Package v1.8 §14 items 8–10: `tokens.css` and the content files in Step 4's scope; the untested parts of the learner test; the package review was not run in a fresh session | CLOSED 2026-10-03 — item 8 settled by the Freeze (07 D69: `tokens.css` not edited by step 4; content changes kept identical in both copies, F-21); item 9 carried into the re-test (F-11); item 10 history (Karim accepted the review result and proceeded) | Karim | — |

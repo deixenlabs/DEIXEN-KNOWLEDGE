@@ -2,7 +2,7 @@
 name: DEIXEN Canonical Decisions & Current State
 owns: The single decisions ledger and current project status going forward
 supersedes reading in isolation: AeroBridge_Decisions_and_Current_State.md
-last synchronized: 2026-09-26 (Phase 4 closed — gate approved, Decision 42; delegated Decisions 43–44; approved boards exported, Decision 45; Phase 5 started — build step 1 locked, Decisions 46–47; step 2 part A locked, Decision 48; step 2 part B prepared, Decision 49; part B checked, Decision 50; step 2 locked, Decision 51; step 3 prepared, Decision 52; step 3 locked, Decision 53; step 4 prepared, Decision 54; step 4A checked and locked, Decision 55 (2026-09-29); leaving a running assessment or scenario inside the app, Decision 56; rules for build step 4B, Decision 57 (all 2026-09-29); step 4B-1 checked, Decision 58; rules for build step 4B-2, Decision 59; step 4B-2 checked and build step 4 complete, Decision 60; rules for build step 5 (Coach), Decision 61 (all 2026-09-30); step 5 checked and locked, Decision 62; rules for build steps 6 and 7, Decision 63 (both 2026-10-01); steps 6 and 7 checked, Decision 64; step 7 merged and the build complete, Decision 65; the learner test prepared, Decision 66; Phase 5 closed by Karim after his learner test, Decision 67; the four-step detour before Phase 6, Decision 68 (all 2026-10-02); the accepted Freeze of the detour, Decision 69; Prompt 7 authorized, Decision 70; the Constitution's repository address, Decision 71 (all 2026-10-03))
+last synchronized: 2026-09-26 (Phase 4 closed — gate approved, Decision 42; delegated Decisions 43–44; approved boards exported, Decision 45; Phase 5 started — build step 1 locked, Decisions 46–47; step 2 part A locked, Decision 48; step 2 part B prepared, Decision 49; part B checked, Decision 50; step 2 locked, Decision 51; step 3 prepared, Decision 52; step 3 locked, Decision 53; step 4 prepared, Decision 54; step 4A checked and locked, Decision 55 (2026-09-29); leaving a running assessment or scenario inside the app, Decision 56; rules for build step 4B, Decision 57 (all 2026-09-29); step 4B-1 checked, Decision 58; rules for build step 4B-2, Decision 59; step 4B-2 checked and build step 4 complete, Decision 60; rules for build step 5 (Coach), Decision 61 (all 2026-09-30); step 5 checked and locked, Decision 62; rules for build steps 6 and 7, Decision 63 (both 2026-10-01); steps 6 and 7 checked, Decision 64; step 7 merged and the build complete, Decision 65; the learner test prepared, Decision 66; Phase 5 closed by Karim after his learner test, Decision 67; the four-step detour before Phase 6, Decision 68 (all 2026-10-02); the accepted Freeze of the detour, Decision 69; Prompt 7 authorized, Decision 70; the Constitution's repository address, Decision 71 (all 2026-10-03); before-Step-4 task 1, F-19, landed, Decision 72 (2026-10-04))
 authority note: Where a decision below is owned in more detail elsewhere in this canonical set (product/architecture, design, engine, curriculum/Coach), this file states the decision and its status, and points there rather than duplicating — the same single-ownership discipline the original NEW document already established and this pass is preserving.
 ---
 
@@ -53,7 +53,7 @@ were ended by Karim's decision on 2026-09-24 and are historical.
 **Phase:** Phase 4 (Design) closed on 2026-09-26 — Karim approved the gate
 (Decision 42). **Phase 5 (Build), closed 2026-10-02 (Decision 67); current: the detour before Phase 6 (Decision 68)** — build step 1 (evidence store)
 locked 2026-09-26 (Decision 46); step 2 part A (engine core, `AN`, `SS`,
-`NM`, `AP`) locked the same day (Decision 48); step 2 part B prepared (Decision 49: the D48 follow-ups I-4, I-5, I-6 closed, and the part B rules written into Build Spec §6A); Claude Code built part B in its third session (not merged: two layouts were missing); the project lead supplied them (Decision 50); session 3B finished, merged and tagged part B (Decision 51). Build step 3 (bridge, independence flag, skill states, Growth status, one-tab rule D47) prepared (Decision 52: Build Spec §7A), built in session 4 and locked (Decision 53, tag `step-3-bridge`, 723 tests). Build step 4 prepared (Decision 54: Build Spec §7B) and split into 4A (app shell and Terminal practice) and 4B (the other seven states). 4A built in session 5 and locked (Decision 55, tag `step-4a-terminal`, 818 unit/component and 69 browser tests); leaving a running assessment or scenario inside the app decided (Decision 56); the rules 4B would otherwise guess closed (Decision 57: Build Spec §7B items 11–15). 4B-1 (Flight Deck, Learning, Ghost Mode, Growth, Reset, Scope Disclosure) built in session 6 and checked (Decision 58: 943 unit/component and 104 browser tests; merged and tagged `step-4b1-screens` at the start of session 7); the rules for 4B-2 written (Decision 59: Build Spec §7B items 19–20, the meaning of "the scenario completed"). Session 7 merged 4B-1 (tag `step-4b1-screens`) and built 4B-2 (Decision 60: tag `step-4b2-screens`, 994 unit/component and 158 browser tests); build step 4 is complete — all eight states. The rules for build step 5 (Coach; app I-21) are closed (Decision 61: Build Spec §7C); session 8 built step 5 (Decision 62: tag `step-5-coach`, 1070 unit/component and 187 browser tests). The rules for build steps 6 and 7 are closed (Decision 63: Build Spec §7D); session 9 ran both (Decision 64: tag `step-6-check`; step 7 complete on `feature/step7-pass`, 1070 unit/component and 268 browser tests); session 9B closed app I-23 and I-24 in the app and merged step 7 (Decision 65: `main` = tag `step-7-pass` = `3fdb342`). Every build step of `CLAUDE.md` §7 is done. The learner test is prepared (Decision 66). Karim ran it and closed Phase 5 (Decision 67): the slice works end to end; what the test found about teaching a beginner goes into the four-step detour Karim inserted before Phase 6 (Decision 68; Step 1 targets tag `phase-5-final` = `3fdb342`). Detour steps 1–3 ran on 2026-10-02 and 2026-10-03; Karim accepted the Freeze Package, and its Freeze, design scope and landing times are recorded as Decision 69. Next: the before-Step-4 tasks of Decision 69 (c), then Prompt 7 (the Design Exploration Skill; authorized, Decision 70), then Step 4. Claude Code builds the slice from
+`NM`, `AP`) locked the same day (Decision 48); step 2 part B prepared (Decision 49: the D48 follow-ups I-4, I-5, I-6 closed, and the part B rules written into Build Spec §6A); Claude Code built part B in its third session (not merged: two layouts were missing); the project lead supplied them (Decision 50); session 3B finished, merged and tagged part B (Decision 51). Build step 3 (bridge, independence flag, skill states, Growth status, one-tab rule D47) prepared (Decision 52: Build Spec §7A), built in session 4 and locked (Decision 53, tag `step-3-bridge`, 723 tests). Build step 4 prepared (Decision 54: Build Spec §7B) and split into 4A (app shell and Terminal practice) and 4B (the other seven states). 4A built in session 5 and locked (Decision 55, tag `step-4a-terminal`, 818 unit/component and 69 browser tests); leaving a running assessment or scenario inside the app decided (Decision 56); the rules 4B would otherwise guess closed (Decision 57: Build Spec §7B items 11–15). 4B-1 (Flight Deck, Learning, Ghost Mode, Growth, Reset, Scope Disclosure) built in session 6 and checked (Decision 58: 943 unit/component and 104 browser tests; merged and tagged `step-4b1-screens` at the start of session 7); the rules for 4B-2 written (Decision 59: Build Spec §7B items 19–20, the meaning of "the scenario completed"). Session 7 merged 4B-1 (tag `step-4b1-screens`) and built 4B-2 (Decision 60: tag `step-4b2-screens`, 994 unit/component and 158 browser tests); build step 4 is complete — all eight states. The rules for build step 5 (Coach; app I-21) are closed (Decision 61: Build Spec §7C); session 8 built step 5 (Decision 62: tag `step-5-coach`, 1070 unit/component and 187 browser tests). The rules for build steps 6 and 7 are closed (Decision 63: Build Spec §7D); session 9 ran both (Decision 64: tag `step-6-check`; step 7 complete on `feature/step7-pass`, 1070 unit/component and 268 browser tests); session 9B closed app I-23 and I-24 in the app and merged step 7 (Decision 65: `main` = tag `step-7-pass` = `3fdb342`). Every build step of `CLAUDE.md` §7 is done. The learner test is prepared (Decision 66). Karim ran it and closed Phase 5 (Decision 67): the slice works end to end; what the test found about teaching a beginner goes into the four-step detour Karim inserted before Phase 6 (Decision 68; Step 1 targets tag `phase-5-final` = `3fdb342`). Detour steps 1–3 ran on 2026-10-02 and 2026-10-03; Karim accepted the Freeze Package, and its Freeze, design scope and landing times are recorded as Decision 69. The first before-Step-4 task, F-19 (reproducible test evidence), landed on 2026-10-04 (Decision 72: `main` = `c093d5e`). Next: the remaining before-Step-4 tasks of Decision 69 (c) — F-02, F-03, F-05, F-04 — each from `main` after the previous one has landed, then Prompt 7 (the Design Exploration Skill; authorized, Decision 70), then Step 4. Claude Code builds the slice from
 `DEIXEN_Slice_Build_Spec.md`, `CLAUDE.md`, the content files, the approved
 design and `tokens.css`. Standing delegation to Claude: Decision 29.
 Phase 4 record: Claude Design proposed three directions (A "Margin",
@@ -92,7 +92,8 @@ the gate the same day (Decision 28).
 **Implementation state:** the first build (Decision 20), written from
 scratch against approved specifications (Decision 14), is the app in
 `deixen-app` on Karim's computer: every build step done, `main` = tag
-`step-7-pass` (Decision 65). It counts as the working slice only after
+`step-7-pass` (Decision 65); since 2026-10-04 `main` = `c093d5e`, which adds
+F-19's test-only change and changes nothing a learner sees (Decision 72). It counts as the working slice only after
 Karim's learner test (the Phase 5 gate). No implementation or design
 execution is authorized by this status alone; each follows its Execution
 Plan gate.
@@ -2498,6 +2499,92 @@ If a dependency has not landed:
   Until he does, the file in the repository is the version that counts
   (Constitution §5 item 4). Files changed: 07, the Constitution
   (Amendment Record), 13, 00.
+
+### Decisions of 2026-10-04 — Before-Step-4 task 1, F-19 (by delegation D29)
+
+- **Decision 72 — F-19 (reproducible test evidence) landed; checked
+  against the repository. Closed — by delegation (D29), 2026-10-04.**
+  Before-Step-4 task 1 of Decision 69 (c). F-19's Authority line is
+  "none", so its technical choices were the project lead's and Claude
+  Code's. Self-review (D17), read-only from the repository as in D58–D65
+  (git refs and `.git/logs/HEAD`; `tests/e2e/helpers.ts`, `shots.ts`,
+  `shotCompare.ts`; `tests/shots/shotCompare.test.ts`; `playwright.config.ts`;
+  `vite.config.ts`; `src/bridge/browser.ts`; the app's `docs/DECISIONS.md`
+  T13 with its parts "F-19b" and "F-19c"; `docs/ISSUES.md` I-25; the stylesheets'
+  `:hover` and transition rules; `tokens.css`); tests not run by the
+  project lead. It ran as three Claude Code sessions (prompts
+  `DEIXEN_Pre4_Task1_F19_PROMPT.md`, `…Task1b_F19b…`, `…Task1c_F19c…`);
+  the first two stopped where their own rules said to stop, and did not
+  merge. **Verified:** `main` = `c093d5edd9b87b4ac232638b0e0c9b3ecb764abb`,
+  a merge (no fast-forward) of `feature/f19-reproducible-tests` (head
+  `d6fdafb`) into `phase-5-final` = `3fdb342`; not tagged; the branch
+  holds ten commits (`2413750` the seam and the zone, `f0d58c5` the
+  evidence refresh, `28af857` and `e052c91` T13 and I-25, `4d7c0bc` F-19b
+  stopped, `16e770d` pointer at rest, `3b3a5af` screenshots at rest,
+  `975eb04` and `d560295` the final rule and T13, `d6fdafb` I-25 closed);
+  `tokens.css` sha256 as approved (D42); by file dates, the only file in
+  `src/` written since `phase-5-final` besides `bridge/browser.ts` is
+  `src/ui/screens.css`, touched by a planted change and byte-identical with
+  the copy read before that session (`content/en/text.json`, touched by
+  the other planted change, was not compared byte for byte; Claude Code's
+  `git diff` check covers it). **What F-19 now is:** (a) **the locator:** the browser tests set
+  a test-only property, `window.__DEIXEN_TEST_RANDOM_INT__`, before the
+  page loads (`page.addInitScript`); `src/bridge/browser.ts` passes it to
+  the bridge as `randomInt` only when it is present, otherwise the
+  `crypto` default — a fresh random locator per `ER` for a learner (Build
+  Spec §7A item 16); the tested build is the shipped build; nothing in
+  `src/engine/` changed. (b) **The time zone:** `Asia/Riyadh` for the
+  browser and for Node in both test runners, with a guard test in each.
+  (c) **Screenshots** are saved through one helper: the pointer is first
+  moved to a point over nothing interactive, and the helper fails the test
+  if any link, button, field or element with a `:hover` rule (read from
+  the two stylesheets) is under it; the picture is taken with transitions
+  finished; it is written only when it is new, its size differs, or more
+  than 64 pixels differ by more than 8 levels on a colour channel, or any
+  pixel by more than 32 — otherwise the committed file is left alone. The
+  accessibility trees keep exact comparison. PNG reading uses `pngjs`
+  7.0.0 (MIT), an exact-version development dependency; the built app is
+  byte-identical (33 files). **Found on the way:** the first run rewrote
+  **205** tracked files (201 screenshots, 4 trees), not the 209 that 13
+  recorded; the 4 trees differed only in the locator; many committed
+  screenshots were older than the app (for example 4B-1 pictures still
+  drawing Scenario Bank as planned) and were refreshed. With the locator
+  and zone fixed, 36 screenshots still changed between identical runs
+  (app I-25). The project lead chose, by delegation, option (a): write a
+  screenshot only beyond a small tolerance. Measuring it showed that the
+  largest kind was not rendering noise: the full-width phone foot buttons
+  fade over 120 ms on hover (`--motion-state`), the pointer stays where
+  the test last clicked, and each run caught the fade at another point —
+  up to 28 levels over up to 19 628 pixels, a real colour difference no
+  tolerance could ignore while still catching a 16-level change. So the
+  pictures are now taken at rest (the boards draw every control at rest)
+  with transitions finished; one deliberate refresh rewrote 195
+  screenshots — hover underlines and button colours back to rest, and 11
+  with faint noise only; no accessibility tree changed. After it, the
+  measured noise is at most 14 levels over 51 pixels (one pixel above 8)
+  and 2 levels over 8 pixels; the rule's numbers are set with stated
+  margins (app T13 "F-19c"). **Planted and reverted:** a word changed in
+  one English string (same length), the reset button's red 16 levels
+  brighter, one list moved 1 px — each rewrote exactly the screenshots that
+  show it (16, 32, 32) and no other. **Only asserted:** the totals —
+  1086 unit/component (1075 after task 1; 12 comparison tests added in
+  task 1b, 11 after task 1c) and 271 browser (268 + 3), 0 failed;
+  typecheck and build; the measurements; `git status --porcelain
+  docs/screens docs/a11y` empty after the first normal run and two
+  confirming runs, the second with the shell on New York time; the refresh
+  groups and the planted results; the screenshots were not viewed by the
+  project lead. **Correction:** the task-1c prompt expected only
+  `src/bridge/browser.ts` to differ from `phase-5-final` among `src`,
+  `content` and the two configuration files; the two configuration files
+  also differ, because they hold F-19's time zone from task 1 — the
+  prompt's error, not a deviation. **Closed:** app I-25; 13's row on the
+  209 rewritten files; F-19's last line is met (the files are no longer
+  rewritten). **Still open:** app I-7, as before. **For Step 4:** its
+  verification loop may rewrite existing evidence files (Decision 69 (b));
+  with F-19 those rewrites now mean that what a picture shows changed. A
+  new hover style is picked up by the check without a test change.
+  **Next:** before-Step-4 task 2, F-02, from `main` = `c093d5e`. Files
+  changed: 07, 13, Execution Plan §7.
 
 ## Definition of Done — for the current frozen vertical slice
 
