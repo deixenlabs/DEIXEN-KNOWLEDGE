@@ -2,7 +2,7 @@
 name: DEIXEN Canonical Decisions & Current State
 owns: The single decisions ledger and current project status going forward
 supersedes reading in isolation: AeroBridge_Decisions_and_Current_State.md
-last synchronized: 2026-09-26 (Phase 4 closed — gate approved, Decision 42; delegated Decisions 43–44; approved boards exported, Decision 45; Phase 5 started — build step 1 locked, Decisions 46–47; step 2 part A locked, Decision 48; step 2 part B prepared, Decision 49; part B checked, Decision 50; step 2 locked, Decision 51; step 3 prepared, Decision 52; step 3 locked, Decision 53; step 4 prepared, Decision 54; step 4A checked and locked, Decision 55 (2026-09-29); leaving a running assessment or scenario inside the app, Decision 56; rules for build step 4B, Decision 57 (all 2026-09-29); step 4B-1 checked, Decision 58; rules for build step 4B-2, Decision 59; step 4B-2 checked and build step 4 complete, Decision 60; rules for build step 5 (Coach), Decision 61 (all 2026-09-30); step 5 checked and locked, Decision 62; rules for build steps 6 and 7, Decision 63 (both 2026-10-01); steps 6 and 7 checked, Decision 64; step 7 merged and the build complete, Decision 65; the learner test prepared, Decision 66; Phase 5 closed by Karim after his learner test, Decision 67; the four-step detour before Phase 6, Decision 68 (all 2026-10-02); the accepted Freeze of the detour, Decision 69; Prompt 7 authorized, Decision 70; the Constitution's repository address, Decision 71 (all 2026-10-03); before-Step-4 task 1, F-19, landed, Decision 72; before-Step-4 task 2, F-02, landed, Decision 73 (both 2026-10-04))
+last synchronized: 2026-09-26 (Phase 4 closed — gate approved, Decision 42; delegated Decisions 43–44; approved boards exported, Decision 45; Phase 5 started — build step 1 locked, Decisions 46–47; step 2 part A locked, Decision 48; step 2 part B prepared, Decision 49; part B checked, Decision 50; step 2 locked, Decision 51; step 3 prepared, Decision 52; step 3 locked, Decision 53; step 4 prepared, Decision 54; step 4A checked and locked, Decision 55 (2026-09-29); leaving a running assessment or scenario inside the app, Decision 56; rules for build step 4B, Decision 57 (all 2026-09-29); step 4B-1 checked, Decision 58; rules for build step 4B-2, Decision 59; step 4B-2 checked and build step 4 complete, Decision 60; rules for build step 5 (Coach), Decision 61 (all 2026-09-30); step 5 checked and locked, Decision 62; rules for build steps 6 and 7, Decision 63 (both 2026-10-01); steps 6 and 7 checked, Decision 64; step 7 merged and the build complete, Decision 65; the learner test prepared, Decision 66; Phase 5 closed by Karim after his learner test, Decision 67; the four-step detour before Phase 6, Decision 68 (all 2026-10-02); the accepted Freeze of the detour, Decision 69; Prompt 7 authorized, Decision 70; the Constitution's repository address, Decision 71 (all 2026-10-03); before-Step-4 task 1, F-19, landed, Decision 72; before-Step-4 task 2, F-02, landed, Decision 73; before-Step-4 task 3, F-03, landed, Decision 74 (all 2026-10-04))
 authority note: Where a decision below is owned in more detail elsewhere in this canonical set (product/architecture, design, engine, curriculum/Coach), this file states the decision and its status, and points there rather than duplicating — the same single-ownership discipline the original NEW document already established and this pass is preserving.
 ---
 
@@ -53,7 +53,7 @@ were ended by Karim's decision on 2026-09-24 and are historical.
 **Phase:** Phase 4 (Design) closed on 2026-09-26 — Karim approved the gate
 (Decision 42). **Phase 5 (Build), closed 2026-10-02 (Decision 67); current: the detour before Phase 6 (Decision 68)** — build step 1 (evidence store)
 locked 2026-09-26 (Decision 46); step 2 part A (engine core, `AN`, `SS`,
-`NM`, `AP`) locked the same day (Decision 48); step 2 part B prepared (Decision 49: the D48 follow-ups I-4, I-5, I-6 closed, and the part B rules written into Build Spec §6A); Claude Code built part B in its third session (not merged: two layouts were missing); the project lead supplied them (Decision 50); session 3B finished, merged and tagged part B (Decision 51). Build step 3 (bridge, independence flag, skill states, Growth status, one-tab rule D47) prepared (Decision 52: Build Spec §7A), built in session 4 and locked (Decision 53, tag `step-3-bridge`, 723 tests). Build step 4 prepared (Decision 54: Build Spec §7B) and split into 4A (app shell and Terminal practice) and 4B (the other seven states). 4A built in session 5 and locked (Decision 55, tag `step-4a-terminal`, 818 unit/component and 69 browser tests); leaving a running assessment or scenario inside the app decided (Decision 56); the rules 4B would otherwise guess closed (Decision 57: Build Spec §7B items 11–15). 4B-1 (Flight Deck, Learning, Ghost Mode, Growth, Reset, Scope Disclosure) built in session 6 and checked (Decision 58: 943 unit/component and 104 browser tests; merged and tagged `step-4b1-screens` at the start of session 7); the rules for 4B-2 written (Decision 59: Build Spec §7B items 19–20, the meaning of "the scenario completed"). Session 7 merged 4B-1 (tag `step-4b1-screens`) and built 4B-2 (Decision 60: tag `step-4b2-screens`, 994 unit/component and 158 browser tests); build step 4 is complete — all eight states. The rules for build step 5 (Coach; app I-21) are closed (Decision 61: Build Spec §7C); session 8 built step 5 (Decision 62: tag `step-5-coach`, 1070 unit/component and 187 browser tests). The rules for build steps 6 and 7 are closed (Decision 63: Build Spec §7D); session 9 ran both (Decision 64: tag `step-6-check`; step 7 complete on `feature/step7-pass`, 1070 unit/component and 268 browser tests); session 9B closed app I-23 and I-24 in the app and merged step 7 (Decision 65: `main` = tag `step-7-pass` = `3fdb342`). Every build step of `CLAUDE.md` §7 is done. The learner test is prepared (Decision 66). Karim ran it and closed Phase 5 (Decision 67): the slice works end to end; what the test found about teaching a beginner goes into the four-step detour Karim inserted before Phase 6 (Decision 68; Step 1 targets tag `phase-5-final` = `3fdb342`). Detour steps 1–3 ran on 2026-10-02 and 2026-10-03; Karim accepted the Freeze Package, and its Freeze, design scope and landing times are recorded as Decision 69. The first before-Step-4 task, F-19 (reproducible test evidence), landed on 2026-10-04 (Decision 72: `main` = `c093d5e`); the second, F-02 (a role for every training line), landed the same day (Decision 73: `main` = `b5c66e5`). Next: the remaining before-Step-4 tasks of Decision 69 (c) — F-03, F-05, F-04 — each from `main` after the previous one has landed, then Prompt 7 (the Design Exploration Skill; authorized, Decision 70), then Step 4. Claude Code builds the slice from
+`NM`, `AP`) locked the same day (Decision 48); step 2 part B prepared (Decision 49: the D48 follow-ups I-4, I-5, I-6 closed, and the part B rules written into Build Spec §6A); Claude Code built part B in its third session (not merged: two layouts were missing); the project lead supplied them (Decision 50); session 3B finished, merged and tagged part B (Decision 51). Build step 3 (bridge, independence flag, skill states, Growth status, one-tab rule D47) prepared (Decision 52: Build Spec §7A), built in session 4 and locked (Decision 53, tag `step-3-bridge`, 723 tests). Build step 4 prepared (Decision 54: Build Spec §7B) and split into 4A (app shell and Terminal practice) and 4B (the other seven states). 4A built in session 5 and locked (Decision 55, tag `step-4a-terminal`, 818 unit/component and 69 browser tests); leaving a running assessment or scenario inside the app decided (Decision 56); the rules 4B would otherwise guess closed (Decision 57: Build Spec §7B items 11–15). 4B-1 (Flight Deck, Learning, Ghost Mode, Growth, Reset, Scope Disclosure) built in session 6 and checked (Decision 58: 943 unit/component and 104 browser tests; merged and tagged `step-4b1-screens` at the start of session 7); the rules for 4B-2 written (Decision 59: Build Spec §7B items 19–20, the meaning of "the scenario completed"). Session 7 merged 4B-1 (tag `step-4b1-screens`) and built 4B-2 (Decision 60: tag `step-4b2-screens`, 994 unit/component and 158 browser tests); build step 4 is complete — all eight states. The rules for build step 5 (Coach; app I-21) are closed (Decision 61: Build Spec §7C); session 8 built step 5 (Decision 62: tag `step-5-coach`, 1070 unit/component and 187 browser tests). The rules for build steps 6 and 7 are closed (Decision 63: Build Spec §7D); session 9 ran both (Decision 64: tag `step-6-check`; step 7 complete on `feature/step7-pass`, 1070 unit/component and 268 browser tests); session 9B closed app I-23 and I-24 in the app and merged step 7 (Decision 65: `main` = tag `step-7-pass` = `3fdb342`). Every build step of `CLAUDE.md` §7 is done. The learner test is prepared (Decision 66). Karim ran it and closed Phase 5 (Decision 67): the slice works end to end; what the test found about teaching a beginner goes into the four-step detour Karim inserted before Phase 6 (Decision 68; Step 1 targets tag `phase-5-final` = `3fdb342`). Detour steps 1–3 ran on 2026-10-02 and 2026-10-03; Karim accepted the Freeze Package, and its Freeze, design scope and landing times are recorded as Decision 69. The first before-Step-4 task, F-19 (reproducible test evidence), landed on 2026-10-04 (Decision 72: `main` = `c093d5e`); the second, F-02 (a role for every training line), landed the same day (Decision 73: `main` = `b5c66e5`); the third, F-03 (the V-entry and marker reasons of every Amadeus block), landed the same day (Decision 74: `main` = `d7d9f55`). Next: the remaining before-Step-4 tasks of Decision 69 (c) — F-05, F-04 — each from `main` after the previous one has landed, then Prompt 7 (the Design Exploration Skill; authorized, Decision 70), then Step 4. Claude Code builds the slice from
 `DEIXEN_Slice_Build_Spec.md`, `CLAUDE.md`, the content files, the approved
 design and `tokens.css`. Standing delegation to Claude: Decision 29.
 Phase 4 record: Claude Design proposed three directions (A "Margin",
@@ -95,7 +95,9 @@ scratch against approved specifications (Decision 14), is the app in
 `step-7-pass` (Decision 65); since 2026-10-04 `main` = `c093d5e`, which adds
 F-19's test-only change and changes nothing a learner sees (Decision 72);
 then `main` = `b5c66e5`, which adds F-02's training-line roles to the
-bridge's output and changes nothing a learner sees (Decision 73). It counts as the working slice only after
+bridge's output and changes nothing a learner sees (Decision 73); then
+`main` = `d7d9f55`, which adds F-03's V-entry and marker reasons to the
+bridge's output and changes nothing a learner sees (Decision 74). It counts as the working slice only after
 Karim's learner test (the Phase 5 gate). No implementation or design
 execution is authorized by this status alone; each follows its Execution
 Plan gate.
@@ -2657,6 +2659,76 @@ If a dependency has not landed:
   (Decision 69 (b)), which may read `role` and must not compute one.
   **Still open:** app I-7, as before. **Next:** before-Step-4 task 3,
   F-03, from `main` = `b5c66e5`. Files changed: 07, 13, Execution Plan §7.
+
+### Decisions of 2026-10-04 — Before-Step-4 task 3, F-03 (by delegation D29)
+
+- **Decision 74 — F-03 (V-entry and U-reasons per Amadeus block) landed;
+  checked against the repository. Closed — by delegation (D29),
+  2026-10-04.** Before-Step-4 task 3 of Decision 69 (c), F-03's second
+  bullet only (the exposure). F-03's Authority line names no reserved
+  matter for the exposure; its technical choices were the project lead's
+  and Claude Code's. Self-review (D17), read-only from the repository as in
+  D58–D73: git refs and `.git/logs/HEAD`; the merge commit, the branch head
+  and their trees, compared directory by directory against `b5c66e5`; the
+  blob hashes of the changed files against the files on disk; `view.ts` and
+  `index.ts` diffed line by line against their blobs at `b5c66e5`; the new
+  test file's test names; the app's `docs/DECISIONS.md` T15; `tokens.css`.
+  Tests not run by the project lead. The prompt was
+  `DEIXEN_Pre4_Task3_F03_PROMPT.md`. **Verified:** `main` =
+  `d7d9f55a00e5a1c45b3881f83024b47cc50e9f07`, a merge (no fast-forward) of
+  `feature/f03-amadeus-sources` (head `b163989`; four commits: `afefd19` the
+  code, `c029355` the tests, `2ac0946` and `b163989` T15) into `b5c66e5`; not
+  tagged; the merge's tree is the branch head's tree. Against `b5c66e5` the
+  tree changes only in `src/bridge/` (`view.ts`, `index.ts`), in
+  `tests/bridge/` (`amadeusSource.test.ts` new, `currentStep.test.ts`) and in
+  `docs/DECISIONS.md`; every other folder — `content/`, the rest of `src/`,
+  the configuration files, `docs/screens/`, `docs/a11y/` — is the same tree;
+  the files on disk match the merge's blobs; `tokens.css` sha256 as approved
+  (D42). The code diff is three changes: two type imports; two fields on
+  `ViewBlock` of kind `amadeus`; and the one line in `viewBlocks` that now
+  copies `source: b.source, unverified: b.unverified` from the engine block.
+  `index.ts` adds one type-only export (`UnverifiedRef`, `VerifiedRef`). The
+  `currentStep.test.ts` change is the one expectation the prompt named (line
+  44, `source: 'V-09', unverified: []`; 32 bytes). **What F-03 now is:**
+  every Amadeus `ViewBlock` — every entry view and every Ghost Mode reveal —
+  carries `source` (its Verified Reference entry: V-09, V-13, V-14–V-18) and
+  `unverified` (its marker reasons: U-07, U-09, U-10, U-11), passed through
+  from the engine and never recomputed in the bridge; `marked` is unchanged
+  and always equals "reasons not empty". U-06 (column spacing) is not a
+  marker reason and is not listed. The screens read both through the bridge
+  as types only. **The table as the tests pin it** matches Build Spec §5:
+  `AN` V-14 with U-09, and U-10 when a time is entered; `SS` V-15 and `NM`
+  V-18 with no reason; the redisplays after `AP`, the contact SSR, `TK`, `RF`
+  V-18 with U-11; any display that holds a stored `SSR CTCM` line also U-07 —
+  including the `SS` and `NM` redisplays when the learner enters the contact
+  SSR before them; the filed display V-18 with no reason (U-07 with a stored
+  `SSR CTCM`); `NEED TICKETING ARRANGEMENT` V-09, the V-13 warning V-13, `FQD`
+  V-16, `FXP` V-17, all with no reason. **Found:** (a) the project lead's five
+  observations in the prompt held. (b) In today's slice every response holds
+  at most one Amadeus block, so one marker per display is one marker per
+  block: a display can split only around a training line, and a second
+  Amadeus part would need a stored `SSR CTCM` after a stored `SRCTCR`, which
+  no task stores; a test walks every path and every Ghost Mode script, and a
+  synthetic test shows that a split display's parts would carry the same
+  source and reasons. (c) The reasons are in the engine's order, not sorted
+  (`U-11, U-07`): Step 4 must not rely on another order. **Planted and
+  reverted** (T15): P1 every `source` set to V-18 (21 tests failed), P2
+  reasons emptied (25), P3 reasons recomputed in the bridge (19), P4 values
+  from the previous block (29), P5 U-07 dropped from the filed display (7);
+  two earlier P5 attempts were not valid faults and are not counted.
+  **Only asserted:** the totals — 1190 unit/component (1146 + 44) and 271
+  browser, 0 failed; typecheck and build; `git status --porcelain
+  docs/screens docs/a11y` empty after the browser run (consistent with the
+  tree comparison above); the planted results. **Closed:** before-Step-4
+  item 2 of Decision 69 (c), the exposure. F-03's presentation is Step 4's
+  (Decision 69 (b)), which may read `source` and `unverified` and must not
+  compute them; the one-time explanation lands before Phase 6 (F-03, with
+  F-09). **Impact check:** the Build Spec is not changed — the exposure
+  contract lives in 07 D69 F-03 and here (single ownership); the Verified
+  Reference, the content files and `tokens.css` are untouched. **Still
+  open:** app I-7, as before. **Next:** before-Step-4 task 4, F-05, from
+  `main` = `d7d9f55`; then F-04 (A)(B), whose wording needs Karim's approval
+  first (D28). Files changed: 07, 13, Execution Plan §7.
 
 ## Definition of Done — for the current frozen vertical slice
 
