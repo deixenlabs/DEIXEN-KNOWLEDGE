@@ -2,7 +2,7 @@
 name: DEIXEN Canonical Decisions & Current State
 owns: The single decisions ledger and current project status going forward
 supersedes reading in isolation: AeroBridge_Decisions_and_Current_State.md
-last synchronized: 2026-09-26 (Phase 4 closed — gate approved, Decision 42; delegated Decisions 43–44; approved boards exported, Decision 45; Phase 5 started — build step 1 locked, Decisions 46–47; step 2 part A locked, Decision 48; step 2 part B prepared, Decision 49; part B checked, Decision 50; step 2 locked, Decision 51; step 3 prepared, Decision 52; step 3 locked, Decision 53; step 4 prepared, Decision 54; step 4A checked and locked, Decision 55 (2026-09-29); leaving a running assessment or scenario inside the app, Decision 56; rules for build step 4B, Decision 57 (all 2026-09-29); step 4B-1 checked, Decision 58; rules for build step 4B-2, Decision 59; step 4B-2 checked and build step 4 complete, Decision 60; rules for build step 5 (Coach), Decision 61 (all 2026-09-30); step 5 checked and locked, Decision 62; rules for build steps 6 and 7, Decision 63 (both 2026-10-01); steps 6 and 7 checked, Decision 64; step 7 merged and the build complete, Decision 65; the learner test prepared, Decision 66; Phase 5 closed by Karim after his learner test, Decision 67; the four-step detour before Phase 6, Decision 68 (all 2026-10-02))
+last synchronized: 2026-09-26 (Phase 4 closed — gate approved, Decision 42; delegated Decisions 43–44; approved boards exported, Decision 45; Phase 5 started — build step 1 locked, Decisions 46–47; step 2 part A locked, Decision 48; step 2 part B prepared, Decision 49; part B checked, Decision 50; step 2 locked, Decision 51; step 3 prepared, Decision 52; step 3 locked, Decision 53; step 4 prepared, Decision 54; step 4A checked and locked, Decision 55 (2026-09-29); leaving a running assessment or scenario inside the app, Decision 56; rules for build step 4B, Decision 57 (all 2026-09-29); step 4B-1 checked, Decision 58; rules for build step 4B-2, Decision 59; step 4B-2 checked and build step 4 complete, Decision 60; rules for build step 5 (Coach), Decision 61 (all 2026-09-30); step 5 checked and locked, Decision 62; rules for build steps 6 and 7, Decision 63 (both 2026-10-01); steps 6 and 7 checked, Decision 64; step 7 merged and the build complete, Decision 65; the learner test prepared, Decision 66; Phase 5 closed by Karim after his learner test, Decision 67; the four-step detour before Phase 6, Decision 68 (all 2026-10-02); the accepted Freeze of the detour, Decision 69 (2026-10-03))
 authority note: Where a decision below is owned in more detail elsewhere in this canonical set (product/architecture, design, engine, curriculum/Coach), this file states the decision and its status, and points there rather than duplicating — the same single-ownership discipline the original NEW document already established and this pass is preserving.
 ---
 
@@ -53,7 +53,7 @@ were ended by Karim's decision on 2026-09-24 and are historical.
 **Phase:** Phase 4 (Design) closed on 2026-09-26 — Karim approved the gate
 (Decision 42). **Phase 5 (Build), closed 2026-10-02 (Decision 67); current: the detour before Phase 6 (Decision 68)** — build step 1 (evidence store)
 locked 2026-09-26 (Decision 46); step 2 part A (engine core, `AN`, `SS`,
-`NM`, `AP`) locked the same day (Decision 48); step 2 part B prepared (Decision 49: the D48 follow-ups I-4, I-5, I-6 closed, and the part B rules written into Build Spec §6A); Claude Code built part B in its third session (not merged: two layouts were missing); the project lead supplied them (Decision 50); session 3B finished, merged and tagged part B (Decision 51). Build step 3 (bridge, independence flag, skill states, Growth status, one-tab rule D47) prepared (Decision 52: Build Spec §7A), built in session 4 and locked (Decision 53, tag `step-3-bridge`, 723 tests). Build step 4 prepared (Decision 54: Build Spec §7B) and split into 4A (app shell and Terminal practice) and 4B (the other seven states). 4A built in session 5 and locked (Decision 55, tag `step-4a-terminal`, 818 unit/component and 69 browser tests); leaving a running assessment or scenario inside the app decided (Decision 56); the rules 4B would otherwise guess closed (Decision 57: Build Spec §7B items 11–15). 4B-1 (Flight Deck, Learning, Ghost Mode, Growth, Reset, Scope Disclosure) built in session 6 and checked (Decision 58: 943 unit/component and 104 browser tests; merged and tagged `step-4b1-screens` at the start of session 7); the rules for 4B-2 written (Decision 59: Build Spec §7B items 19–20, the meaning of "the scenario completed"). Session 7 merged 4B-1 (tag `step-4b1-screens`) and built 4B-2 (Decision 60: tag `step-4b2-screens`, 994 unit/component and 158 browser tests); build step 4 is complete — all eight states. The rules for build step 5 (Coach; app I-21) are closed (Decision 61: Build Spec §7C); session 8 built step 5 (Decision 62: tag `step-5-coach`, 1070 unit/component and 187 browser tests). The rules for build steps 6 and 7 are closed (Decision 63: Build Spec §7D); session 9 ran both (Decision 64: tag `step-6-check`; step 7 complete on `feature/step7-pass`, 1070 unit/component and 268 browser tests); session 9B closed app I-23 and I-24 in the app and merged step 7 (Decision 65: `main` = tag `step-7-pass` = `3fdb342`). Every build step of `CLAUDE.md` §7 is done. The learner test is prepared (Decision 66). Karim ran it and closed Phase 5 (Decision 67): the slice works end to end; what the test found about teaching a beginner goes into the four-step detour Karim inserted before Phase 6 (Decision 68; Step 1 targets tag `phase-5-final` = `3fdb342`). Next: the Execution Plan update (detour package Prompt 3), then Step 1. Claude Code builds the slice from
+`NM`, `AP`) locked the same day (Decision 48); step 2 part B prepared (Decision 49: the D48 follow-ups I-4, I-5, I-6 closed, and the part B rules written into Build Spec §6A); Claude Code built part B in its third session (not merged: two layouts were missing); the project lead supplied them (Decision 50); session 3B finished, merged and tagged part B (Decision 51). Build step 3 (bridge, independence flag, skill states, Growth status, one-tab rule D47) prepared (Decision 52: Build Spec §7A), built in session 4 and locked (Decision 53, tag `step-3-bridge`, 723 tests). Build step 4 prepared (Decision 54: Build Spec §7B) and split into 4A (app shell and Terminal practice) and 4B (the other seven states). 4A built in session 5 and locked (Decision 55, tag `step-4a-terminal`, 818 unit/component and 69 browser tests); leaving a running assessment or scenario inside the app decided (Decision 56); the rules 4B would otherwise guess closed (Decision 57: Build Spec §7B items 11–15). 4B-1 (Flight Deck, Learning, Ghost Mode, Growth, Reset, Scope Disclosure) built in session 6 and checked (Decision 58: 943 unit/component and 104 browser tests; merged and tagged `step-4b1-screens` at the start of session 7); the rules for 4B-2 written (Decision 59: Build Spec §7B items 19–20, the meaning of "the scenario completed"). Session 7 merged 4B-1 (tag `step-4b1-screens`) and built 4B-2 (Decision 60: tag `step-4b2-screens`, 994 unit/component and 158 browser tests); build step 4 is complete — all eight states. The rules for build step 5 (Coach; app I-21) are closed (Decision 61: Build Spec §7C); session 8 built step 5 (Decision 62: tag `step-5-coach`, 1070 unit/component and 187 browser tests). The rules for build steps 6 and 7 are closed (Decision 63: Build Spec §7D); session 9 ran both (Decision 64: tag `step-6-check`; step 7 complete on `feature/step7-pass`, 1070 unit/component and 268 browser tests); session 9B closed app I-23 and I-24 in the app and merged step 7 (Decision 65: `main` = tag `step-7-pass` = `3fdb342`). Every build step of `CLAUDE.md` §7 is done. The learner test is prepared (Decision 66). Karim ran it and closed Phase 5 (Decision 67): the slice works end to end; what the test found about teaching a beginner goes into the four-step detour Karim inserted before Phase 6 (Decision 68; Step 1 targets tag `phase-5-final` = `3fdb342`). Detour steps 1–3 ran on 2026-10-03; Karim accepted the Freeze Package, and its Freeze, design scope and landing times are recorded as Decision 69. Next: the before-Step-4 tasks of Decision 69 (c), then Prompt 7 (the Design Exploration Skill), then Step 4. Claude Code builds the slice from
 `DEIXEN_Slice_Build_Spec.md`, `CLAUDE.md`, the content files, the approved
 design and `tokens.css`. Standing delegation to Claude: Decision 29.
 Phase 4 record: Claude Design proposed three directions (A "Margin",
@@ -1938,6 +1938,524 @@ an ordinary technical implementation choice, not decided here.
   external code is reserved to Karim (money/legal, D29 item 3). Files
   changed: 07. To follow (package Prompt 3): Execution Plan §3 (Phase 5
   Done, the four detour rows), §7 and its metadata; 13; file 00 §A10.
+
+### Decisions of 2026-10-03 — The accepted Freeze of the detour (Karim)
+
+- **Decision 69 — The accepted Freeze, design scope and landing times of
+  the detour. Closed — Karim, 2026-10-03** (governance, reserved under D29;
+  each F-item's Authority line names any other reserved matter). Karim
+  reviewed the Freeze Package produced by detour step 3 (Decision 68) and
+  explicitly accepted it on 2026-10-03; his changes of that day are
+  included in the text below. As Decision 68 requires, this records the
+  part of the package that belongs here, verbatim: the Freeze (locked
+  decisions `F-01` to `F-21`, the explicitly listed open items, and how a
+  frozen decision is changed), the design scope for step 4, and when each
+  accepted change must land. The package is the working copy and this
+  record is the canonical copy of those parts (Decision 68). The rest of
+  the package — the consolidated ledger, coverage, requirements and
+  candidates, preserve list — is not recorded here; the ledger row IDs
+  (`S1-`, `S2-`, `S3-`) cited below live in the package. Where an F-item
+  amends an earlier decision, its own Authority line says so (F-04: the
+  chain word of D40; F-05: D57 (b); F-06: the carry-over wording of D39
+  and D59 (c)); those decisions are otherwise unchanged. Step 4 is
+  prepared and run only after this record exists. Files changed: 07. The
+  record follows, verbatim.
+
+#### FREEZE RECORD — accepted by Karim, 2026-10-03
+
+##### (a) The Freeze
+
+**F-01 — What stays as it is.**
+
+Decision: Keep through Step 4 and Phase 6:
+- the pure engine (date, locator and filing time are inputs) (S1-01)
+- the source on every output block, with the trace test (S1-02)
+- one numbering function for every number shown (S1-03)
+- line-for-line and pass/fail checklist tests as every command's template (S1-04)
+- append-only events with skill states, independence and Growth derived on read (S1-05, S2-56)
+- unbuilt cases stop; "not recognized" and "not covered" stay apart (S1-06)
+- the Flight Deck's one action, honest empty state and planned labels (S2-50, S2-02)
+- lessons tracing every Amadeus statement to a VERIFIED entry (S2-51)
+- Ghost Mode on a separate demo booking: live-engine reveals, never above INTRODUCED, labelled, L08's verified refusal and recovery (S2-52, S2-08)
+- the Terminal showing only Amadeus output plus one labelled training line, with DEIXEN's words in the panel (S2-53)
+- blame-free feedback, one hint counter, three ordered help levels, the honest session label (S2-54)
+- the escalation trigger (S2-55)
+- the assessment contract as built (S2-57)
+- the scenario (S2-58)
+
+Sources: S1-01–S1-06, S2-02, S2-08, S2-50–S2-58.
+What changes: nothing. Every later F-item keeps these.
+Landing: none — keep as is; binding from acceptance.
+Kind: none.
+Authority: confirms 07 D23, D27, D30, D33, D37, D38, D47, D52, D56, D60 and the Assessment and Scenario contracts. No reserved matter. No change to approved content or design.
+Reopen if: the re-test (F-11) or a verified behaviour shows one of these harms learning or blocks Phase 6.
+
+**F-02 — Training lines: three roles, taken from the entry's result.**
+
+Decision: Each training line — in the Terminal, and as a row in "Booking as it stands" — has one role, taken from the result of the entry whose response contains it, except a line that stands for a stored element (below):
+- (i) Refused — not used; booking unchanged; result invalid. Keys: tm.notAccepted, tm.notForTask, tm.classNotOffered, tm.fxpBeforeName, tm.rfMissing, tm.otherMissing, and tm.noPracticeData when a checklist item failed.
+- (ii) Accepted — the entry met the checklist, and DEIXEN shows its own line instead of an Amadeus display, because that layout is unverified or there is no practice data; result valid. Keys: tm.rfLine and tm.ctcrLine (including where they recur in later redisplays), and tm.noPracticeData after a valid AN for an airline without practice data.
+- (iii) Outside what DEIXEN simulates — not an error; booking unchanged; result out_of_scope. Keys: tm.notRecognized, tm.notCovered, tm.sliceEnd, tm.secondName.
+
+A training line that stands for a stored element (tm.rfLine, tm.ctcrLine, and any later key of this kind) takes the role of the entry that created the element, not of the entry whose redisplay contains it; the same holds for its row in "Booking as it stands".
+
+The bridge exposes each training block's role. It derives the role in one place from the entry's result, additively and outside src/engine/. A test covers every key against every result it can appear with. Every key Phase 6 adds falls under the same rule and test.
+
+These stay: the label "Training message" (D30), D33, D34, and every message's wording. In Step 4, the three roles must be told apart without colour alone, and a training line must never look like Amadeus text. Red stays reserved unless Karim changes tokens.css (S2-13). No role names are added. If Step 4 needs words, they are learning content and come through the content pipeline via the return path.
+
+Sources: S2-14, S2-15, S2-40, S2-62, S3-01. Cites S1-27, S2-13, S2-71, S2-72, S2-77.
+Learner benefit:
+- Moment: every training line, above all RF and SRCTCR (main task and scenario), and every refusal.
+- Change: the learner can tell an accepted line from a refused line from an outside-the-simulation line.
+- How we'd know: in the re-test, RF and SRCTCR are read as accepted.
+- Cost: one bridge field and its test, plus Step 4 design.
+
+Landing: the exposure before Step 4; the presentation in Step 4.
+Kind: engine (bridge) and design.
+Authority: no reserved matter. No 07 change. No content change.
+Reopen if: the re-test shows accepted lines still read as errors (then role names go through the content pipeline), or a new key fits no role.
+
+**F-03 — The partly verified marker reads as a statement about the display.**
+
+Decision:
+- The marker stays where D27 and Build Spec §5 put it, and its details are never taught.
+- The bridge exposes each Amadeus block's V-entry and its U-reasons, additively and outside src/engine/ (S1-26).
+- Step 4 shows the marker as belonging to the display's layout — never to the entry or to a training line — and may link it to disc.6.
+- A one-time explanation at the marker's first appearance (S2-78) is learning content. It names only a detail disc.6 already lists, never that detail's meaning, and it is written with F-09's annotations (one owner).
+
+Sources: S2-45, S2-78. Cites S1-26, S2-71(f).
+Learner benefit:
+- Moment: the first AN display and the redisplays after AP, the contact SSR, TK and RF.
+- Change: the learner no longer reads "not fully verified" as a verdict on their own entry.
+- How we'd know: a re-test question.
+- Cost: small.
+
+Landing: the exposure before Step 4; the presentation in Step 4; the explanation before Phase 6.
+Kind: engine (bridge), design, and learning content.
+Authority: no reserved matter. No 07 change. The new explanation's wording is Karim's to approve (D28).
+Reopen if: the re-test shows the marker is still read as being about the entry.
+
+**F-04 — One term per meaning; reasons the learner can read.**
+
+Decision:
+- (A) Two terms, one meaning each. T1 means "this entry met DEIXEN's checklist": the panel, any valid entry. T2 means "this step counts as done on your own": the chain rows on the Flight Deck and Growth, at DEMONSTRATED_INDEPENDENT or higher. "Correct in DEIXEN" stays on exactly one of them; the other gets a new term, and disc.9 defines both.
+  Karim's choice (2026-10-03): "Correct in DEIXEN" stays for T1 — the panel, as disc.9 already defines it; the panel label is unchanged. T2 gets a new term that says "on your own", written through the content pipeline in both copies (F-21). This amends D40's chain word.
+  No token's job in tokens.css changes: green stays with "Correct in DEIXEN" (T1), so the T2 term is not green unless Karim later changes tokens.css.
+- (B) Say why an entry doesn't count. When a valid entry will not count as done on your own, the panel says so after that entry and names the reason: a hint on this step, a demonstration of this command just before, or corrective feedback just before. The wording treats asking for help as normal practice, and never says how to make an entry count. Nothing is said before an entry.
+- (C) Explain dashes and statuses. The Flight Deck and Growth say why a step shows a dash (no correct entry yet, or correct entries but none on your own). Growth explains "In progress" with one sentence per Completed condition still unmet, computed from the same values as the status. The three statuses get learner-facing definitions.
+
+No evidence rule changes, and no new event or stored value is added.
+
+Sources: S2-29, S2-30, S2-41, S2-63, S2-66, S2-81. Cites S1-30, S1-31, S2-19, S2-71(c), S2-72.
+Changes:
+- an evidence/bridge query: per entry, whether it counts as independent and why not
+- a per-skill dash reason
+- content in English and Arabic: the terms, the reasons, the dash and In-progress sentences, the status definitions, and disc.9
+
+Learner benefit:
+- Moment: after each valid entry, on the Flight Deck after a guided pass, and on Growth.
+- Change: the learner knows whether a step counts, why not, and what is missing.
+- How we'd know: in the re-test, the learner explains a dash and "In progress".
+- Cost: two additive queries, short strings in two languages, and Karim's approval.
+
+Landing: (A) and (B) — the T2 term, the reason sentences and the per-entry query — before Step 4. (C) before Phase 6.
+Kind: engine (evidence/bridge), learning content, and design.
+Authority: the term choice is Karim's, made 2026-10-03. It changes approved content: the D40 chain word, and disc.9 gains the T2 definition (D28).
+Reopen if: learners avoid hints to keep credit (S2-81), or T2 is misread.
+
+**F-05 — Practice-run continuity: no silent new booking; a returning learner is told.**
+
+Decision: The run rules stay as they are: Build Spec §7A item 1 and §7B item 12, and the booking is not stored. What changes is what the learner is told:
+- When a lesson's or Ghost Mode's practice button would start a new run while the current practice booking holds entries and its task is not complete, the app asks first, in the D56 pattern (stay, which changes nothing, or start new).
+- When a new booking starts and nothing is lost — the task was complete, or the learner is returning after an assessment or the scenario — the learner is told once.
+- On the first screen of a load, when the previous session recorded practice entries, the learner is told once that a practice booking is not kept between visits and that the record is. This is derived from stored events; no new storage.
+
+These stay: the Flight Deck recommendation (D57 a), the Learning link (§7B item 13), and the escalation link to the skill's lesson (§7C item 7). The escalation link keeps its lesson target; a per-category target stays deferred (06). The booking stays unstored across reloads (F-15 b, c).
+
+Sources: S1-15, S2-12, S2-21, S2-33, S2-36, S2-42, S2-61, S2-68. Cites S2-71(d), S2-77.
+Changes:
+- two bridge facts: "would this button discard a booking with entries?" and "did the previous session record practice entries?"
+- system-state copy, as new ui.* keys written by Step 4
+- Step 4's presentation
+
+Learner benefit:
+- Moment: moving from the Flight Deck, a lesson, Ghost Mode or the escalation link into the Terminal mid-path; returning after a break.
+- Change: no work is lost unless the learner chooses it.
+- How we'd know: the re-test reports no unexplained resets.
+- Cost: two facts, one question, two notices.
+
+Landing: the facts before Step 4; the presentation and copy in Step 4.
+Kind: engine (bridge) and design.
+Authority: adds a confirmation to the behaviour of D57(b) without changing when a run starts — Karim's, by accepting this Freeze. No other reserved matter.
+Reopen if: the re-test still shows unexplained loss, or the question proves intrusive (then announce only).
+
+**F-06 — Assessment: meaning kept as built, made legible.**
+
+Decision: Keep what "completed with every checklist item met" means: a valid ER then a valid FXP, among the attempt's own events. The result means "works on this occasion" — not general competence, and not "done without help". Full Reveal is not excluded from "met": that would change what the assessment means (Constitution §8). Make it legible:
+- (a) The end note states the hints used inside the attempt (already computed; exposed by the bridge).
+- (b) The announcement says plainly what is assessed and how the result is decided, and does not imply "without help" while help stays available and counted.
+- (c) The carry-over text says only what is true: earlier entries and hints in this session stay visible and are counted in the session hint label, and the result comes only from the assessment's own entries.
+- (d) The end note is announced once, then stays findable on the assessment screen until the learner leaves. This refines §7B item 20 and D59(c).
+
+Sources: S2-16, S2-37, S2-38, S2-65. Cites S2-57, S2-71(g).
+Learner benefit:
+- Moment: the start and the end of the assessment.
+- Change: the learner knows what is checked and what the result means.
+- How we'd know: in the re-test, the learner restates the result correctly.
+- Cost: content in two languages, one bridge field, and the presentation of (d).
+
+Landing: (d) in Step 4; (a)–(c) before Phase 6.
+Kind: learning content, engine (bridge), and design.
+Authority:
+- Changes approved content: ui.assessment.intro, carryover (D39's wording) and result (D28).
+- (d) refines D59(c) — Karim, by accepting this Freeze.
+- The assessment's meaning does not change.
+
+Reopen if: Karim rules that the assessment must show independence. That would be an owner decision changing what the assessment means.
+
+**F-07 — Independence rules kept.**
+
+Decision: Build Spec §7A item 6 and §8 stay unchanged:
+- Any hint level on the step attempt — Nudge and Partial Reveal included — removes independence.
+- A Ghost script reveals every skill whose entry it types on screen (D52 e). The alternative "reveal only the lesson's own skill" is rejected: it would credit an entry made right after watching it typed. Non-cumulative scripts stay open (S2-28, S2-74).
+- A demonstration or corrective feedback affects only the next entry on that skill (D52 f). S2-32's consequence is accepted as a small risk, and F-04's wording must not reveal it.
+- The lenient LDS passages (§8 line 638, §12 lines 775–777, §15 lines 914–922) get a note that Build Spec §8 governs.
+
+Sources: S2-31, S2-32, S2-64. Cites S2-28, S2-56, S2-74, S2-81.
+Landing: keep from acceptance; the LDS note before Phase 6.
+Kind: documents.
+Authority: confirms D52(e)(f) and the approved Build Spec. The LDS is draft authority.
+Reopen if: learners who used a Nudge later fail without help, or learners exploit S2-32.
+
+**F-08 — Starting point, orientation, lesson standard (owner decision).**
+
+Decision:
+- Owner decision: lessons assume a true beginner with no reservations, GDS or Amadeus knowledge. This replaces 03's "from theoretical knowledge"; D18 itself is unchanged.
+- An orientation comes before the first command: what Amadeus is, what a booking (PNR) is, what an agent does, and why these nine steps. It sits at the start of lesson 1 (Karim, 2026-10-03); there is no separate unit, so 03's Lesson schema, which requires a practiceBridge, is unchanged.
+- A lesson standard, owned by 06 and applied in the Build Spec and in every Phase 6 lesson:
+  - the task's core first
+  - every term defined in plain words at first use
+  - the step's display shown and read, using V-14–V-18 field identities only
+  - one line on why the step exists
+  - facts the step doesn't need moved out of the core
+  - nothing partly verified taught
+- The ten lessons are rewritten in English and Arabic through Karim's pipeline.
+- Terms the Verified Reference lacks — class-letter meaning, segment, waitlist, city vs airport codes, the expansion of "PNR" — go verify → spec → build → test first, or stay untaught.
+- A glossary is deferred until after the re-test.
+
+Sources: S2-04, S2-05, S2-06, S2-07, S2-25, S2-26, S2-59, S2-75. Cites S2-01, S2-51, S2-80, S2-83.
+Learner benefit:
+- Moment: before and during each lesson.
+- Change: a beginner can follow without outside help.
+- How we'd know: in the re-test, the learner explains the step before practising.
+- Cost: a two-language rewrite and approval.
+
+Landing: before Phase 6.
+Kind: documents (03, 06, Build Spec), learning content, and verification.
+Authority: reserved to Karim (D29 item 1). Changes 03 and approved content (D28).
+Reopen if: the re-test shows the lessons are still not followed.
+
+**F-09 — Reading the screen: field annotations (owner decision).**
+
+Decision: Adopt LXA §22, which Build Spec §12 deferred "until real learner testing".
+- Field annotations name the parts of each verified display — AN (V-14), sell response (V-15), FQD (V-16), pricing (V-17), PNR (V-18):
+  - only from the field identities those entries record
+  - never a U-item (the AN header number, class figures, E0, NVB/NVA/BG, the fare calculation and tax codes, the FQD penalty, date, stay and fare-type columns)
+  - never the task's own line or value
+  - "airport" only if verified; otherwise origin and destination
+- In Ghost Mode, through an annotation step added to 06's schema (type / pause / reveal / annotate), with text written for the demonstration.
+- In practice, on request, beside the learner's own displays. Diagnostic only: not events, no effect on independence.
+- One owner for first-display explanations: these annotations, not Coach. The Learning touchpoint stays as D61 serves it, and is revisited after the re-test.
+- Shown with the existing margin-note and leader pattern (S3-04).
+
+Sources: S2-09, S2-10, S2-27, S2-35, S2-60, S2-67. Cites S2-11, S2-73, S2-78, S2-80, S3-04, S3-08.
+Learner benefit:
+- Moment: Ghost Mode and the first AN display.
+- Change: the learner can name the departure time, origin, destination, flight and line-number columns.
+- How we'd know: the re-test.
+- Cost: the schema change, content, and a V-check. No engine change.
+
+Landing: before Phase 6.
+Kind: documents (06, Build Spec), learning content, build (bridge/UI), and verification.
+Authority: reserved to Karim (D29 item 1; this is a feature the Build Spec placed outside D8A). Changes 06 and approved content.
+Reopen if: annotations go unused or confuse.
+
+**F-10 — Arabic.**
+
+Decision:
+- disc.6 in Arabic is corrected so it says DEIXEN marks these details and does not teach them («يعلّم» currently reads as the opposite).
+- Before Phase 6 writes Arabic content, the re-test includes an Arabic check (lessons 2, 3, 7, 9, the Terminal, Growth), with reasons recorded. D64 (I-24) stays until then.
+- Remembering the interface language across loads is deferred (it is a storage rule, §11).
+
+Sources: S2-44, S2-69. Cites S2-20.
+Landing: (1) before Phase 6; (2) within F-11; (3) deferred.
+Kind: learning content.
+Authority: an approved content change (D28).
+Reopen if: the Arabic check finds a new cause.
+
+**F-11 — Learner re-test, after Step 4 or at the start of Phase 6.**
+
+Decision: The learner re-test runs after Step 4 or at the start of Phase 6 expansion, whichever Karim judges the better point to test the system as an expanding product. No second learner test runs now or before Step 4, and the re-test is not a condition for starting Phase 6. It covers:
+- lesson 1 → Ghost Mode → first path → assessment → scenario → Growth
+- the steps not tried in Phase 5 (the hard assessment, phone and tablet widths, reduced motion, the optional checks)
+- the F-10 Arabic check
+- a reason recorded for every result other than "worked"
+
+Karim chooses the point and the learner (D29 items 3 and 5); 03 names Karim and his brother as the first validation users. A learner other than the owner is preferred. The result closes or reopens S2-17–S2-20 and tests those of F-02–F-10 that have landed by then. No new Execution Plan gate is added.
+
+Sources: S2-01, S2-70, S2-79, S2-82. Cites S2-17–S2-20.
+Landing: after Step 4 or at the start of Phase 6 — Karim's choice.
+Kind: a learner test (Karim) and its preparation.
+Authority: Karim's (D29 items 3 and 5).
+Reopen if: not applicable — this is the check itself.
+
+**F-12 — Off-task entries and the handler template.**
+
+Decision:
+- D33 stays.
+- Before the first new command handler is written, the template separates simulating verified behaviour from judging the entry against the task. Refusing off-task entries then becomes one policy applied in one place.
+- Each precondition rule carries its V-entry or training key; the builder chooses how.
+- Condition: if Karim later lets a command apply a well-formed off-task entry — only once a verified way to undo exists (S2-24) — the assessment and scenario move to end-state objectives at the same time (S1-36).
+
+Sources: S1-07, S1-20, S1-21, S1-34, S1-36, S2-23. Cites S2-24.
+Learner benefit: none visible now; the behaviour is unchanged.
+Landing: with Phase 6 — the first engine task.
+Kind: engine.
+Authority: none. D33 is unchanged.
+Reopen if: XE, RT and IG stay out of Phase 6 for a long time.
+
+**F-13 — Transaction model; no inventory yet.**
+
+Decision:
+- Before the first chunk that retrieves, changes or ends a filed booking (RT, IG/IR, XE after filing, ET, history displays), the engine keeps the working booking apart from the recorded one.
+- Whether recorded versions are kept, and what each entry does, come only from verified behaviour.
+- Conflict detection is not adopted: one recording tab (D47) and one learner.
+- Inventory is not modelled until a chunk needs VERIFIED seat-dependent behaviour.
+- Build Spec §6A item 9 stays for the slice.
+
+Sources: S1-08, S1-09, S1-35. Cites S1-21.
+Landing: with Phase 6, before that chunk.
+Kind: engine, plus verification.
+Authority: none.
+Reopen if: a verified behaviour can't be expressed with the working/recorded split.
+
+**F-14 — Command recognition.**
+
+Decision:
+- (a) Entries beginning APM or APE get tm.notCovered, as Build Spec §6 and D49(c) already require. Today they are shown in a form no source shows. Tests are added.
+- (b) Before the first new command code, recognition moves to one registry: each code with its status, V-entry, handler and ordered pattern. A collision test and an existence test for every cited V-entry are added. Source links live in tested data, not comments; the stale dates.ts comment is fixed there. The idea comes from GDS-Trainer (MIT); no code is copied.
+
+Sources: S1-10, S1-11, S1-12, S1-22, S1-33.
+Learner benefit: (a) removes an invented display.
+Landing: (a) before Phase 6; (b) with Phase 6.
+Kind: engine.
+Authority: (a) applies D49(c); no change.
+Reopen if: an APM display becomes verified, or Phase 6 adds only a few codes.
+
+**F-15 — Evidence schema and storage.**
+
+Decision:
+- (a) Phase 6 schema changes are additive only — older stored data still validates — under schemaVersion 1.
+- (b) Decided by Karim, 2026-10-03 (S1-37): keep the reset. When the stored format changes, the old record is wiped, not migrated (03 Persistence unchanged). Reopened only if a learner would lose meaningful progress (03's own trigger).
+- (c) The booking stays unstored, and the returning learner is told (F-05).
+- (d) Before the chunk that adds Speed Drills, or any chunk that multiplies events: measure event size against the storage limit, and tell a full store apart from refused storage, with its own approved notice (S1-32).
+
+Sources: S1-13, S1-14, S1-23. Cites S1-15, S1-32, S1-37, S2-61.
+Landing: (a), (b) and (c) from acceptance; (d) with Phase 6.
+Kind: engine (evidence) and content (the notice).
+Authority: (b) is Karim's decision (03; D8A "persistence redesign"; D29 item 3).
+Reopen if: the measured size stays far below the limit, or a learner loses meaningful progress.
+
+**F-16 — Varied task instances.**
+
+Decision: From Phase 6 on, each chunk carries at least CONSOLIDATED_COUNT (2, provisional) fictional task instances of the same verified pattern, and practice repetition draws on different instances. Which instance the assessment uses is Karim's, per chunk. The slice keeps its one task until the first chunk.
+
+Sources: S2-39, S2-48, S2-76.
+Landing: with Phase 6, in the first chunk.
+Kind: engine (bridge) and content.
+Authority: the assessment-instance rule is Karim's (Constitution §8).
+Reopen if: never measurable otherwise — Karim's judgment.
+
+**F-17 — Before Speed Drills and new scenarios.**
+
+Decision:
+- Speed Drills keep 06 and LDS §17's rules: no invented threshold, wrong reps excluded and their rate shown, never feeding Growth, gated at CONSOLIDATED.
+- Before their chunk, decide: the drill context (an additive value), how each rep gets a fresh booking state, the timing unit (changing 06's characters-per-minute measure is Karim's), and a keystroke-safe entry field (S2-22).
+- Before a second scenario: scenarios become a list. Which scenarios Completed requires is Karim's (it changes K4, §10).
+
+Sources: S2-22, S2-46, S2-47.
+Landing: with Phase 6, before those chunks.
+Kind: engine (evidence), UI, and documents.
+Authority: a 06 change or a K4 change is Karim's.
+Reopen if: Speed Drills are dropped from Phase 6.
+
+**F-18 — Teaching boundary and external leads.**
+
+Decision:
+- Every Amadeus statement any F-item needs comes only from VERIFIED entries. Anything missing goes verify → spec → build → test (D12, D13).
+- Step 1's leads — Service Hub error-message pages (S1-17) and practitioner or fixture leads (S1-18) — enter only that way, with their chunk. A verified message replaces the training line in place.
+- No external simulator, code or data is adopted (S1-19).
+- Adopting or licensing external code or data, real code lists included, is Karim's (D68; D29 item 3).
+
+Sources: S1-17, S1-18, S1-19, S1-25, S2-80. Cites S1-39.
+Landing: a standing rule; the leads with their chunks.
+Authority: restates D12, D13 (never delegable) and D68.
+Reopen if: never lowered.
+
+**F-19 — Reproducible test evidence.**
+
+Decision:
+- Tracked docs/screens/ and docs/a11y/ change only when what they show changes.
+- Tests pass a fixed locator source through the bridge's existing random dependency; locators stay six A–Z/0–9 characters, and the app keeps a fresh random locator per ER (§7A item 16).
+- Tests run with a fixed time zone.
+- The first run after the change confirms that the 209 files are no longer rewritten.
+
+Sources: S1-16, S1-24, S1-38, S3-07.
+Landing: before Step 4, so that Step 4's scope audit isn't buried in rewritten files.
+Kind: engine (bridge test seam, e2e helpers, playwright.config.ts).
+Authority: none.
+Reopen if: the files prove already stable.
+
+**F-20 — Session instructions before Step 4.**
+
+Decision: Before Step 4, Karim removes or replaces the older CLAUDE.md in C:\Users\DELL\Downloads\ (pre-D45). Every Claude Code session under that folder loads it, and it contradicts the design/phase4/ rule.
+Status: done by Karim, 2026-10-03 — the older CLAUDE.md, 07 and 13 copies in C:\Users\DELL\Downloads\ were deleted.
+
+Sources: S3-02. Cites S3-03.
+Landing: before Step 4.
+Kind: housekeeping (Karim).
+Authority: Karim's files.
+
+**F-21 — Approved content: both copies, one approval.**
+
+Decision:
+- Any change to the three content files (D28) leaves the app copy and the knowledge copy byte-identical when it joins the project.
+- DEIXEN-KNOWLEDGE is not under version control. So a change made on an isolated branch is made in the app copy only, and listed key by key — verbatim, in both languages, with the three files' sha256. Karim's acceptance task then copies it into the knowledge folder.
+- Learning content changes only through Karim's content pipeline.
+
+Sources: S2-83, S3-05.
+Landing: standing.
+Authority: restates D28; settles package v1.8 §14 item 8 (the two copies are identical when the change joins the project).
+
+**Open items** (13, by ID; status as of 2026-10-03):
+- S1-37 — migrate or wipe the stored record when its format changes. Closed by Karim, 2026-10-03: keep the reset (wipe), F-15(b); reopened only if a learner would lose meaningful progress.
+- S2-03 — Karim's Flight Deck design notes. Closed by Karim, 2026-10-03: there are no notes before Step 4; Step 4 uses only what is recorded.
+- S2-13 — red for wrong entries, while tokens.css reserves red for Reset everything and colour alone fails WCAG 1.4.1. Decided for now by Karim, 2026-10-03: tokens.css is not changed; the roles are told apart by shape and label (F-02). Open again after the re-test (F-11).
+- S2-17, S2-18, S2-19, S2-20 — learner-test results with no reason recorded: the full path alone "slow"; the scenario, Growth and Arabic "confused". Open — they resolve at the re-test (F-11), after Step 4 or at the start of Phase 6.
+- S2-24 — reverse D33 (apply a well-formed off-task entry and teach recovery) once a verified undo exists. Open — Karim; it opens when an undo (for example XE) is VERIFIED and Karim wants recovery practice (F-12).
+- S2-28, S2-74 — cumulative or non-cumulative Ghost Mode scripts. Open — Karim decides before the first Phase 6 Ghost script; if the re-test (F-11) has not run by then, it is decided without re-test evidence.
+- S3-03 — the master DEIXEN-KNOWLEDGE/CLAUDE.md differs from the app copy in the §4 design-path line; the app path is the one that resolves. Decided by Karim, 2026-10-03: the master copy is made identical to the app copy. Closes when that is done.
+- S3-06 — who runs Step 4. Closed by Karim, 2026-10-03: Step 4 runs in Claude Code, Opus 5.5, Max effort, on a separate branch in deixen-app.
+- S3-08 — because of this Freeze's timing, lessons, the orientation, annotations, and the assessment and Growth wording land after Step 4, so their presentation is built by later tasks with existing patterns, not by the design round. Open — checked by the re-test (F-11).
+
+**How a frozen decision is changed**
+
+- Who: only Karim changes an F-item, the design scope, a landing time, or an open item's status. D29 delegation does not reach them. Details an F-item expressly leaves to a later spec, a chunk or the builder are not frozen; they follow the normal pipeline.
+- On what evidence: new evidence that materially contradicts the item (Constitution §11). That means the F-item's own reopen evidence, a verified Amadeus fact, the re-test, or a Step 4 change request that passes the gap test. D12 and D13 are never lowered.
+- Through which record: a new 07 decision by Karim naming the F-ID changed, the evidence, the new text and what it supersedes, followed by the Constitution §15 impact check. The recorded Freeze is not edited in place.
+- During Step 4: the return path — a change request, the affected item blocked, one round, Karim decides. A Freeze change is recorded before Step 4 continues on that item.
+- Open items close only by Karim's decision, or by the evidence they name, recorded in 07.
+
+##### (b) Design scope for Step 4
+
+Definition (charter, verbatim): Design scope = how existing engine and learning outputs are presented: layout, hierarchy, typography, color and semantic-state rendering (styling only), interaction patterns, Terminal presentation (styling and container only), and interface copy = text of the interface itself (navigation, controls, headings, empty and system states) that neither teaches nor carries Amadeus behavior.
+
+Limits that always apply:
+- (1) engine output is rendered exactly as received: no reflow, trimming, re-alignment, truncation or rewording;
+- (2) what the engine receives, and what counts as an attempt, hint, reveal or mastery, is unchanged;
+- (3) when, whether and how much learning support appears (hints, Coach, Ghost Mode, Speed Drills, Scenarios, Assessment) is learning logic, not interaction design;
+- (4) any text that teaches, instructs, hints, explains, assesses or gives feedback is learning content, not interface copy; if unsure, it is learning content.
+
+Excluded: engine behavior, learning logic and content, the wording of verified Amadeus output and training messages (how they are styled is semantic-state rendering, inside the scope), frozen files, governing documents and decisions.
+
+Step 4 may create a new file only if the recorded design scope explicitly names that file; otherwise it edits existing files only. Only an explicit owner decision can widen this scope.
+
+Narrowed by this Freeze:
+
+Design files
+- src/styles/tokens.css is not edited. It is the approved design (D42; D29 item 2; CLAUDE.md §4).
+- Role tokens are used only for the jobs their comments state. Green means "Correct in DEIXEN"; red means the one irreversible action, Reset everything (S3-10).
+- Any other need goes to Karim as a change request.
+- Boards and typefaces stay as approved. The design/phase4/ boards, the canvas, the typefaces and lockup B are not edited. Step 4 lists each board difference it creates, with the F-ID or row it serves.
+
+Source paths (deixen-app)
+- May edit: src/ui/** only.
+- src/ui/terminalModel.ts and other src/ui files only map bridge outputs to presentation. They compute no result, role, independence, skill state or evidence.
+- Must not edit: src/App.tsx, src/main.tsx, src/engine/**, src/evidence/**, src/bridge/**, src/config.ts, src/i18n/**, src/styles/**, index.html, package.json / package-lock.json (no new dependency), vite.config.ts, playwright.config.ts, tsconfig.json, CLAUDE.md, .claude/**, .gitignore, docs/licenses/**.
+
+String files — app copies only
+- Files: content/en/text.json and content/ar/text.json, English and Arabic changed together.
+- Existing keys whose wording may change (37): ui.nav.areas, ui.nav.homeLink, ui.nav.language, ui.nav.menu, ui.nav.close, ui.chain.label, ui.task, ui.status, ui.objective, ui.lesson.back, ui.lesson.inYourTask, ui.fd.openGrowth, ui.fd.openScenario, ui.ghost.pause, ui.ghost.replay, ui.ghost.practise, ui.term.history, ui.term.entryLabel, ui.term.send, ui.term.enterHint, ui.term.sending, ui.term.startAssessment, ui.keys.label, ui.keys.type, ui.brief.show, ui.brief.hide, ui.brief.pinned, ui.brief.unpin, ui.brief.constraints, ui.hints.title, ui.hints.levels, ui.assessment.continue, ui.growth.recorded, ui.growth.recordedHere, ui.growth.statuses, ui.growth.assessmentRow, ui.reset.cancel.
+- New ui.* keys may be added only for F-05's system states, and for headings or control labels Step 4's layout needs. Each is registered in content/data/slice.json ui — the only change allowed in slice.json. None may teach, instruct, hint, explain, assess, give feedback, or carry Amadeus behaviour.
+- Every other key is excluded (62 interface keys): ui.trainingLabel, ui.unverifiedMarker, ui.correctInDeixen, ui.hintLabel, ui.assessment.intro, ui.assessment.carryover, ui.assessment.result, ui.assessment.resultUnmet, ui.assessment.starts, ui.abandoned, ui.what.assessment, ui.what.scenario, ui.growth.completed, ui.growth.inProgress, ui.growth.needsPractice, ui.growth.empty, ui.growth.basis, ui.reset.confirm, ui.reset.everything, ui.oneTab.title, ui.oneTab.body, ui.dataReset, ui.noStorage.title, ui.noStorage.body, ui.leave.assessment, ui.leave.scenario, ui.leave.stay, ui.leave.confirm, ui.coach.openLesson, ui.lesson.start, ui.lesson.practise, ui.ghost.title, ui.ghost.progress, ui.pnr.asItStands, ui.term.resetTask, ui.chain.next, ui.chain.optional, ui.planned, ui.ghost.demoBooking, ui.ghost.watching, ui.ghost.explain, ui.mode.practice, ui.mode.demonstration, ui.mode.assessment, ui.mode.scenario, ui.panel.feedback, ui.panel.coach, ui.hints.nudge, ui.hints.partial, ui.hints.full, ui.pnr.new, ui.pnr.was, ui.area.flightDeck, ui.area.learning, ui.area.terminal, ui.area.scenarioBank, ui.area.growth, ui.brand.name, ui.lang.en, ui.lang.ar, ui.fd.moreScenarios, ui.fd.csTrack.
+- Also excluded: every non-ui key — lessons, task, scn.*, feedback, reveal.*, nudge.*, tm.*, coach.*, disc.*.
+- Knowledge copies are not edited by Step 4 (F-21).
+
+Tests and evidence files
+- Tests Step 4 may edit: existing files in tests/ui/ and tests/e2e/, and the key-count pin in tests/content/content.test.ts.
+- New test files: only tests/ui/step4.test.tsx and tests/e2e/step4.spec.ts.
+- Tests Step 4 must not edit: tests/engine/, tests/evidence/, tests/bridge/, tests/i18n/.
+- Evidence files: the verification loop may rewrite existing files in docs/screens/ and docs/a11y/. Any new evidence file goes only inside docs/screens/step4/ or docs/a11y/step4/.
+- Step 4 may edit docs/DECISIONS.md and docs/ISSUES.md.
+- Any other new file → change request.
+
+Placement and isolation
+- D30 placement: nothing but Amadeus output and the training line goes among the Terminal's record lines. Notices and system states go in the sheet head or the panel.
+- Isolation: a feature branch in deixen-app, from the base snapshot below. Step 4 merges nothing into main and does not modify DEIXEN-KNOWLEDGE.
+
+##### (c) Landing times
+
+**Before Step 4.** These run as Karim-started tasks, after Prompt 6 records the Freeze; Prompt 7 then runs after them. Step 4 depends on all six:
+1. F-02 — role per training block (bridge).
+2. F-03 — V-entry and U-reasons per Amadeus block (bridge).
+3. F-04 (A) and (B) — the T2 term and the reason sentences (content pipeline, both copies), and the per-entry independence-and-reason query.
+4. F-05 — the two bridge facts.
+5. F-19 — reproducible tests.
+6. F-20 — the stray CLAUDE.md removed or replaced (done by Karim, 2026-10-03).
+
+Base-snapshot rule. The first before-Step-4 task starts from phase-5-final; each later one starts from main after the previous one has landed. Step 4 branches from the main commit where items 1–5 have landed and been checked and item 6 is done (F-20 is outside the repository). Karim tags it (he names it when he creates it), and the Step 4 prompt carries the tag and its full SHA. Step 4 checks that HEAD equals that SHA and that the tree is clean, else it stops. If Karim accepts no before-Step-4 change, the base is phase-5-final = 3fdb342429dc99ebf8268bad0da3075eacbd40a7.
+
+If a dependency has not landed:
+- F-19 or F-20 missing → Step 4 does not start (its precondition).
+- Items 1–4 missing → the dependent Step 4 item is blocked through the return path (change request, one round, Karim decides), never faked:
+  - item 1 → the F-02 presentation
+  - item 2 → the F-03 presentation
+  - item 3 → S2-71(c), attempt vs progress
+  - item 4 → the F-05 question and notices
+- Step 4 continues with the items that don't depend on it.
+
+**Before Phase 6.**
+- F-14(a)
+- F-03 explanation
+- F-04(C)
+- F-06(a)–(c)
+- F-07 LDS note
+- F-08, F-09, F-10(1)
+- Owner decision due: S2-28/S2-74, before the first Phase 6 Ghost script.
+
+**After Step 4 or at the start of Phase 6 — Karim's choice.**
+- F-11, the learner re-test, with F-10(2), the Arabic check.
+
+**With Phase 6.**
+- F-12, the first engine task
+- F-14(b), before the first new code
+- F-13, before the first filed-booking chunk
+- F-15(d), before an event-multiplying chunk
+- F-16, the first chunk
+- F-17, before its chunks
+- F-18 leads, with their chunks
+
+**Deferred.**
+- inventory (S1-09)
+- real code lists (S1-39)
+- a middle help level (S2-34)
+- retention and the Customer Service track (S2-43, S2-49)
+- a glossary (part of S2-75)
+- changing the demo window (S2-32)
+- remembering the interface language (F-10(3))
+- the escalation offer's per-category matrix (06)
+
+**Standing from acceptance:** F-01, F-07, F-15(a)–(c), F-18, F-21.
 
 ## Definition of Done — for the current frozen vertical slice
 
