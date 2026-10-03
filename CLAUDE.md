@@ -92,7 +92,7 @@ stop and report (§6).
   token file (07 Decision 42), used unchanged; check its sha256 against 07
   D42 when you add it. Components use its role tokens, never raw colours or
   sizes. A value the design needs that the file lacks: stop and ask (§6).
-- Read the design from `design/phase4/` (spec §2;
+- Read the design from `../DEIXEN-KNOWLEDGE/design/phase4/` (spec §2;
   07 D45), not from the canvas. Check a board's sha256 against
   `MANIFEST.md` before relying on it. If a board you need is missing or
   fails the check, stop and ask Karim — never rebuild a screen from memory
