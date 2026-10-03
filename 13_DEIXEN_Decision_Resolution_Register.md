@@ -229,6 +229,16 @@ tolerance (app I-25: the largest "noise" was the foot buttons' hover fade).
 Three planted changes were each caught. Only test code and evidence files
 changed; the built app is unchanged. Next: before-Step-4 task 2, F-02.
 
+Update 2026-10-04 (before-Step-4 task 2, F-02, landed): 07 D73 — checked
+against the repository, read-only. `main` = `b5c66e5` (merge of
+`feature/f02-training-roles`; not tagged). The bridge now gives every
+training line — in the Terminal and in "Booking as it stands" — a role
+(refused / accepted / outside), from the entry's recorded result computed in
+one place; a line standing for a stored element (`tm.rfLine`, `tm.ctcrLine`)
+takes the role of the entry that created the element. Only `src/bridge/`, one
+new test file and the app's docs changed; nothing a learner sees changed.
+Five planted faults caught. Next: before-Step-4 task 3, F-03.
+
 ## 2. Phase 1 Findings — Disposition
 
 Review type: self-review by the project lead (Decision 17 — independent
@@ -371,6 +381,7 @@ presented a navy/blue color language as "durable" although colors are open
 | Detour between Phase 5 and Phase 6 (07 D68) | CLOSED — Karim, 2026-10-02; Execution Plan §3, §5, §7 and 00 updated. Steps 1–3 done 2026-10-03 | Karim | Before-Step-4 tasks, Prompt 7, then step 4 |
 | Phase 5 snapshot | DONE 2026-10-02 — annotated tag `phase-5-final` at `3fdb342429dc99ebf8268bad0da3075eacbd40a7` (local only, no remote), after typecheck, 1070/1070 unit tests, build and 268/268 browser tests passed | — | Step 1's target code (07 D68) |
 | Running the browser tests rewrites 209 tracked files in `deixen-app` `docs/a11y` and `docs/screens` (the random booking reference); restored before tagging | CLOSED 2026-10-04 — F-19 landed: merged into `main` = `c093d5edd9b87b4ac232638b0e0c9b3ecb764abb` (not tagged); the first run had rewritten 205 files, not 209; a fixed locator source and time zone, screenshots taken at rest and written only beyond a measured tolerance; app I-25 closed; repeated runs leave `docs/screens` and `docs/a11y` untouched (07 D72) | Claude (D29) | — |
+| Before-Step-4 task 2: F-02, a role for every training line (07 D69 (c) item 1) | CLOSED 2026-10-04 — F-02 landed: merged into `main` = `b5c66e527b159ae60b4539cf384293215cec9094` (not tagged); role from the recorded result, never from the key; stored-element lines take their creator's role; 1146 unit/component, 271 browser (07 D73) | Claude (D29) | Step 4 presents the roles (07 D69 (b)) |
 | Step 4 executor role: Plan §2 says Claude Code implements approved specifications; for Step 4, the Freeze recorded in 07 is the approved specification | CLOSED — Karim, 2026-10-03: step 4 runs in Claude Code, Opus 5.5, Max effort, on a separate branch in `deixen-app` (07 D69, open item S3-06); no role change | Karim | — |
 | Prompt 7 (Design Exploration Skill build) has no recorded authorization | CLOSED — authorized by Karim, 2026-10-03 (07 D70) | Karim | Runs after the before-Step-4 tasks |
 | Package v1.8 §14 items 8–10: `tokens.css` and the content files in Step 4's scope; the untested parts of the learner test; the package review was not run in a fresh session | CLOSED 2026-10-03 — item 8 settled by the Freeze (07 D69: `tokens.css` not edited by step 4; content changes kept identical in both copies, F-21); item 9 carried into the re-test (F-11); item 10 history (Karim accepted the review result and proceeded) | Karim | — |
