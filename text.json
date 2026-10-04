@@ -113,6 +113,7 @@
  "ui.trainingLabel": "Training message",
  "ui.unverifiedMarker": "Layout detail not fully verified",
  "ui.correctInDeixen": "Correct in DEIXEN",
+ "ui.doneOnYourOwn": "Done on your own",
  "ui.hintLabel": "Hints used in this session: {N}",
  "ui.assessment.intro": "You are starting the assessment: the full booking and pricing path, on your own. Entries and hints from this session stay visible and are counted; earlier sessions are not included.",
  "ui.assessment.carryover": "Before the assessment started, this session already had — entries: {N}, hints: {H}. They stay visible and are included in this result.",
@@ -218,5 +219,10 @@
  "disc.6": "Screens follow the layout of official Amadeus examples. Column spacing may differ. Some details appear in official examples only in part: the codes in the availability display (the number before the weekday, the figure after each class letter, the E0 code), the header time when you enter a time, the airline code in a stored mobile-contact line, and the booking display after AP, SRCTCM, SRCTCR, TK and RF entries. DEIXEN marks these 'Layout detail not fully verified' and does not teach them. Where no official example exists at all (a stored SRCTCR line; RF before the transaction ends), DEIXEN shows a training message instead. DEIXEN does not show the tags above the header line (such as RLR or TST) or airline messages under a sold flight. The fare display (FQD) shows no notice lines, and its date line leaves out the global indicator and the mileage figures.",
  "disc.7": "Practice flights exist only for the task routes. The meaning of some codes on the screens (for example the figures after class letters) is not taught, because DEIXEN could not verify it from official sources. Official examples of SRCTCM and SRCTCR end with an extra part (for example /US or /P3); what that part must contain is not covered in this slice, and DEIXEN accepts the entry with or without it.",
  "disc.8": "The slice ends at the pricing display. It does not simulate what happens to the stored pricing record afterwards, or ticket issuance.",
- "disc.9": "'Correct in DEIXEN' means your entry met this simulator's checklist. It is not a certificate of workplace readiness."
+ "disc.9": "'Correct in DEIXEN' means your entry met this simulator's checklist. 'Done on your own' on the booking chain means you have made at least one correct entry for that step with no help for that entry: no hint, no demonstration and no feedback that gave away the answer. Neither is a certificate of workplace readiness.",
+ "ind.notCounted": "This entry doesn't count toward 'Done on your own'.",
+ "ind.hint": "You used a hint on this step.",
+ "ind.demo": "You watched this command demonstrated before this entry.",
+ "ind.feedback": "Feedback before this entry helped with the answer.",
+ "ind.normal": "Using help is a normal part of practice."
 }

@@ -260,6 +260,20 @@ assessment and the scenario's first entry also set aside such a booking):
 Karim keeps it as it is; Step 4's return notice must not say nothing was
 lost. Next: before-Step-4 task 5, F-04 (A)(B), wording approved by Karim first.
 
+Update 2026-10-04 (before-Step-4 task 5, F-04 (A)(B), landed; every before-Step-4
+task done): 07 D76 — Karim approved the words first (`ui.doneOnYourOwn` "Done on
+your own", the new `disc.9`, five `ind.*` sentences; 226 keys in each string file),
+then the task was checked against the repository, read-only. `main` = `8f9c355`
+(merge of `feature/f04-terms-reasons`; not tagged). One function gives the reasons
+an entry is not independent (hint, demonstration, corrective feedback) and the flag
+is exactly "no reasons"; the bridge gives each learner entry `ownWork`; the chain
+rows say "Done on your own" in interface text; the panel says why a valid entry
+does not count. No evidence rule changed. 103 evidence files changed, all from the
+chain word or the new `disc.9`. App I-27 decided by delegation: "Completed" on the
+scenario and assessment rows loses the green, applied in Step 4. Build Spec §7,
+§7B item 11, §7C item 8 and §8 updated. Next: Karim tags the base for Step 4, then
+Prompt 7.
+
 ## 2. Phase 1 Findings — Disposition
 
 Review type: self-review by the project lead (Decision 17 — independent
@@ -326,7 +340,7 @@ presented a navy/blue color language as "durable" although colors are open
 | Retry / Reset scope in the Terminal | CLOSED — by delegation 2026-09-25 (07 D37): one "Reset task" in practice only; no "Retry step"; full reset in Growth | Claude | Done — `ui.term.resetTask`, `ui.reset.everything` (07 D43) |
 | Hint order | CLOSED — by delegation 2026-09-25 (07 D38): in order; inapplicable levels not shown | Claude | — |
 | `ui.assessment.carryover` read "1 hints" (Claude Design Part 1, issue 01) | CLOSED — reworded count-neutral (07 D39) | Claude | — |
-| Chain status words ("Practised" in the Part 1 design) | CLOSED — "Correct in DEIXEN" / dash / Next / Optional (07 D40) | Claude | — |
+| Chain status words ("Practised" in the Part 1 design) | CLOSED — "Correct in DEIXEN" / dash / Next / Optional (07 D40); the chain word amended to "Done on your own" (07 D69 F-04, Karim; applied 07 D76) | Claude | — |
 | `AN` header number before the weekday: Build Spec §5 says "values in `slice.json`", but `slice.json` held no such value (found in the Part 1 review) | CLOSED 2026-09-26 (07 D44) — fixed value `30` in every `AN` display, never computed from the date; marker; not taught | Claude | — |
 | How Claude Code reads the approved boards: they live on the Claude Design canvas, a claude.ai page behind sign-in that a Claude Code session on Karim's computer cannot open | CLOSED — Approved 2026-09-26 (07 D45): 68 boards + `tokens.css` copied unchanged into `design/phase4/` with a sha256 manifest; Build Spec §2, `CLAUDE.md` §2/§4, 00, Execution Plan §5 updated | Karim | Karim uploads the folder; Claude Code checks the manifest before reading |
 | Corpus Map vs repository (found 2026-09-26): 00 A9 listed as absent some files that are in the repository's `Historical/` folders (`PROJECT-20.md`, `SDD.md`, `AMADEUS_CURRICULUM.md`, `COMMAND_REFERENCE.md`, `DESIGN_SYSTEM_UI_BLUEPRINT.md`, `DEVELOPMENT_RULES.md`, `PRODUCT_STRATEGY_UX_ARCHITECTURE-1.md`, the Approved Corpus Review & Opus Readiness Brief, and others); 00 A8 said two historical plans are in the repository, which they are not | CORRECTED in 00 (by delegation, D29) | Claude | Historical only — no current file depends on them (07 D16, D19); not blocking. The repository has two folders, `Historical` and `Historical ` (trailing space) — Karim may merge them when convenient |
@@ -406,6 +420,9 @@ presented a navy/blue color language as "durable" although colors are open
 | Before-Step-4 task 3: F-03, the V-entry and marker reasons of every Amadeus block (07 D69 (c) item 2) | CLOSED 2026-10-04 — F-03 landed: merged into `main` = `d7d9f55a00e5a1c45b3881f83024b47cc50e9f07` (not tagged); `source` and `unverified` passed through from the engine, never recomputed; one Amadeus block per display in today's slice; reasons in the engine's order; 1190 unit/component, 271 browser (07 D74) | Claude (D29) | Step 4 presents the marker as the display's (07 D69 (b)); the explanation before Phase 6 |
 | Before-Step-4 task 4: F-05, the two practice-run continuity facts (07 D69 (c) item 4) | CLOSED 2026-10-04 — F-05 landed: merged into `main` = `89281974a7937e85dd82c98deeb57961ac309709` (not tagged); `practiseFromLessonPreview` shares one decision with the button; `load.previousSessionPractised` from stored events only; 1283 unit/component, 271 browser (07 D75) | Claude (D29) | Step 4 asks and notifies (07 D69 (b)) |
 | App I-26 — Start assessment and the scenario's first entry set aside an incomplete practice booking with entries, outside F-05's question | CLOSED 2026-10-04 — Karim: keep as it is; no Freeze change; Step 4's return notice says a new practice booking started, never that nothing was lost (07 D75) | Karim | Step 4 copy |
+| Before-Step-4 task 5: F-04 (A)(B), the T2 term, `disc.9`, the reason sentences and the per-entry query (07 D69 (c) item 3) | CLOSED 2026-10-04 — wording approved by Karim (D28); landed: merged into `main` = `8f9c355f3407fdbc33c9eebc5f7ff65e3989a434` (not tagged); `independenceReasons` behind both flag and reasons; `ownWork` per learner entry; "Done on your own" on the chain rows, not green; the panel note after a valid entry that does not count; 1354 unit/component, 279 browser (07 D76) | Karim (words); Claude (D29) | Step 4 restyles within its scope (07 D69 (b)); F-04 (C) before Phase 6 |
+| Every before-Step-4 task of 07 D69 (c) (F-02, F-03, F-04 (A)(B), F-05, F-19, F-20) | DONE 2026-10-04 (07 D72–D76; F-20 by Karim 2026-10-03) | — | Karim tags the base for Step 4 at `main` = `8f9c355` |
+| App I-27 — "Completed" on the scenario and assessment rows is drawn in the green that D69 (b) reserves for "Correct in DEIXEN" | CLOSED 2026-10-04 — by delegation (D29): drawn in interface text like the chain word; no token or wording change; the boards draw those rows with a dash only; applied in Step 4. The outdated comment in `src/evidence/recommend.ts` is fixed the next time that folder is opened (07 D76) | Claude (D29); Karim may reverse | Step 4 |
 | Step 4 executor role: Plan §2 says Claude Code implements approved specifications; for Step 4, the Freeze recorded in 07 is the approved specification | CLOSED — Karim, 2026-10-03: step 4 runs in Claude Code, Opus 5.5, Max effort, on a separate branch in `deixen-app` (07 D69, open item S3-06); no role change | Karim | — |
 | Prompt 7 (Design Exploration Skill build) has no recorded authorization | CLOSED — authorized by Karim, 2026-10-03 (07 D70) | Karim | Runs after the before-Step-4 tasks |
 | Package v1.8 §14 items 8–10: `tokens.css` and the content files in Step 4's scope; the untested parts of the learner test; the package review was not run in a fresh session | CLOSED 2026-10-03 — item 8 settled by the Freeze (07 D69: `tokens.css` not edited by step 4; content changes kept identical in both copies, F-21); item 9 carried into the re-test (F-11); item 10 history (Karim accepted the review result and proceeded) | Karim | — |

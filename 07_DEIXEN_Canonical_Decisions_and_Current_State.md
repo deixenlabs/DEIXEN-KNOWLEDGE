@@ -2,7 +2,7 @@
 name: DEIXEN Canonical Decisions & Current State
 owns: The single decisions ledger and current project status going forward
 supersedes reading in isolation: AeroBridge_Decisions_and_Current_State.md
-last synchronized: 2026-09-26 (Phase 4 closed — gate approved, Decision 42; delegated Decisions 43–44; approved boards exported, Decision 45; Phase 5 started — build step 1 locked, Decisions 46–47; step 2 part A locked, Decision 48; step 2 part B prepared, Decision 49; part B checked, Decision 50; step 2 locked, Decision 51; step 3 prepared, Decision 52; step 3 locked, Decision 53; step 4 prepared, Decision 54; step 4A checked and locked, Decision 55 (2026-09-29); leaving a running assessment or scenario inside the app, Decision 56; rules for build step 4B, Decision 57 (all 2026-09-29); step 4B-1 checked, Decision 58; rules for build step 4B-2, Decision 59; step 4B-2 checked and build step 4 complete, Decision 60; rules for build step 5 (Coach), Decision 61 (all 2026-09-30); step 5 checked and locked, Decision 62; rules for build steps 6 and 7, Decision 63 (both 2026-10-01); steps 6 and 7 checked, Decision 64; step 7 merged and the build complete, Decision 65; the learner test prepared, Decision 66; Phase 5 closed by Karim after his learner test, Decision 67; the four-step detour before Phase 6, Decision 68 (all 2026-10-02); the accepted Freeze of the detour, Decision 69; Prompt 7 authorized, Decision 70; the Constitution's repository address, Decision 71 (all 2026-10-03); before-Step-4 task 1, F-19, landed, Decision 72; before-Step-4 task 2, F-02, landed, Decision 73; before-Step-4 task 3, F-03, landed, Decision 74; before-Step-4 task 4, F-05, landed, and app I-26 answered by Karim, Decision 75 (all 2026-10-04))
+last synchronized: 2026-09-26 (Phase 4 closed — gate approved, Decision 42; delegated Decisions 43–44; approved boards exported, Decision 45; Phase 5 started — build step 1 locked, Decisions 46–47; step 2 part A locked, Decision 48; step 2 part B prepared, Decision 49; part B checked, Decision 50; step 2 locked, Decision 51; step 3 prepared, Decision 52; step 3 locked, Decision 53; step 4 prepared, Decision 54; step 4A checked and locked, Decision 55 (2026-09-29); leaving a running assessment or scenario inside the app, Decision 56; rules for build step 4B, Decision 57 (all 2026-09-29); step 4B-1 checked, Decision 58; rules for build step 4B-2, Decision 59; step 4B-2 checked and build step 4 complete, Decision 60; rules for build step 5 (Coach), Decision 61 (all 2026-09-30); step 5 checked and locked, Decision 62; rules for build steps 6 and 7, Decision 63 (both 2026-10-01); steps 6 and 7 checked, Decision 64; step 7 merged and the build complete, Decision 65; the learner test prepared, Decision 66; Phase 5 closed by Karim after his learner test, Decision 67; the four-step detour before Phase 6, Decision 68 (all 2026-10-02); the accepted Freeze of the detour, Decision 69; Prompt 7 authorized, Decision 70; the Constitution's repository address, Decision 71 (all 2026-10-03); before-Step-4 task 1, F-19, landed, Decision 72; before-Step-4 task 2, F-02, landed, Decision 73; before-Step-4 task 3, F-03, landed, Decision 74; before-Step-4 task 4, F-05, landed, and app I-26 answered by Karim, Decision 75; before-Step-4 task 5, F-04 (A)(B), landed with the wording Karim approved, Decision 76 (all 2026-10-04))
 authority note: Where a decision below is owned in more detail elsewhere in this canonical set (product/architecture, design, engine, curriculum/Coach), this file states the decision and its status, and points there rather than duplicating — the same single-ownership discipline the original NEW document already established and this pass is preserving.
 ---
 
@@ -53,7 +53,7 @@ were ended by Karim's decision on 2026-09-24 and are historical.
 **Phase:** Phase 4 (Design) closed on 2026-09-26 — Karim approved the gate
 (Decision 42). **Phase 5 (Build), closed 2026-10-02 (Decision 67); current: the detour before Phase 6 (Decision 68)** — build step 1 (evidence store)
 locked 2026-09-26 (Decision 46); step 2 part A (engine core, `AN`, `SS`,
-`NM`, `AP`) locked the same day (Decision 48); step 2 part B prepared (Decision 49: the D48 follow-ups I-4, I-5, I-6 closed, and the part B rules written into Build Spec §6A); Claude Code built part B in its third session (not merged: two layouts were missing); the project lead supplied them (Decision 50); session 3B finished, merged and tagged part B (Decision 51). Build step 3 (bridge, independence flag, skill states, Growth status, one-tab rule D47) prepared (Decision 52: Build Spec §7A), built in session 4 and locked (Decision 53, tag `step-3-bridge`, 723 tests). Build step 4 prepared (Decision 54: Build Spec §7B) and split into 4A (app shell and Terminal practice) and 4B (the other seven states). 4A built in session 5 and locked (Decision 55, tag `step-4a-terminal`, 818 unit/component and 69 browser tests); leaving a running assessment or scenario inside the app decided (Decision 56); the rules 4B would otherwise guess closed (Decision 57: Build Spec §7B items 11–15). 4B-1 (Flight Deck, Learning, Ghost Mode, Growth, Reset, Scope Disclosure) built in session 6 and checked (Decision 58: 943 unit/component and 104 browser tests; merged and tagged `step-4b1-screens` at the start of session 7); the rules for 4B-2 written (Decision 59: Build Spec §7B items 19–20, the meaning of "the scenario completed"). Session 7 merged 4B-1 (tag `step-4b1-screens`) and built 4B-2 (Decision 60: tag `step-4b2-screens`, 994 unit/component and 158 browser tests); build step 4 is complete — all eight states. The rules for build step 5 (Coach; app I-21) are closed (Decision 61: Build Spec §7C); session 8 built step 5 (Decision 62: tag `step-5-coach`, 1070 unit/component and 187 browser tests). The rules for build steps 6 and 7 are closed (Decision 63: Build Spec §7D); session 9 ran both (Decision 64: tag `step-6-check`; step 7 complete on `feature/step7-pass`, 1070 unit/component and 268 browser tests); session 9B closed app I-23 and I-24 in the app and merged step 7 (Decision 65: `main` = tag `step-7-pass` = `3fdb342`). Every build step of `CLAUDE.md` §7 is done. The learner test is prepared (Decision 66). Karim ran it and closed Phase 5 (Decision 67): the slice works end to end; what the test found about teaching a beginner goes into the four-step detour Karim inserted before Phase 6 (Decision 68; Step 1 targets tag `phase-5-final` = `3fdb342`). Detour steps 1–3 ran on 2026-10-02 and 2026-10-03; Karim accepted the Freeze Package, and its Freeze, design scope and landing times are recorded as Decision 69. The first before-Step-4 task, F-19 (reproducible test evidence), landed on 2026-10-04 (Decision 72: `main` = `c093d5e`); the second, F-02 (a role for every training line), landed the same day (Decision 73: `main` = `b5c66e5`); the third, F-03 (the V-entry and marker reasons of every Amadeus block), landed the same day (Decision 74: `main` = `d7d9f55`); the fourth, F-05 (the two practice-run continuity facts), landed the same day (Decision 75: `main` = `8928197`). Next: the remaining before-Step-4 task of Decision 69 (c) — F-04 (A)(B), whose wording Karim approves first — each from `main` after the previous one has landed, then Prompt 7 (the Design Exploration Skill; authorized, Decision 70), then Step 4. Claude Code builds the slice from
+`NM`, `AP`) locked the same day (Decision 48); step 2 part B prepared (Decision 49: the D48 follow-ups I-4, I-5, I-6 closed, and the part B rules written into Build Spec §6A); Claude Code built part B in its third session (not merged: two layouts were missing); the project lead supplied them (Decision 50); session 3B finished, merged and tagged part B (Decision 51). Build step 3 (bridge, independence flag, skill states, Growth status, one-tab rule D47) prepared (Decision 52: Build Spec §7A), built in session 4 and locked (Decision 53, tag `step-3-bridge`, 723 tests). Build step 4 prepared (Decision 54: Build Spec §7B) and split into 4A (app shell and Terminal practice) and 4B (the other seven states). 4A built in session 5 and locked (Decision 55, tag `step-4a-terminal`, 818 unit/component and 69 browser tests); leaving a running assessment or scenario inside the app decided (Decision 56); the rules 4B would otherwise guess closed (Decision 57: Build Spec §7B items 11–15). 4B-1 (Flight Deck, Learning, Ghost Mode, Growth, Reset, Scope Disclosure) built in session 6 and checked (Decision 58: 943 unit/component and 104 browser tests; merged and tagged `step-4b1-screens` at the start of session 7); the rules for 4B-2 written (Decision 59: Build Spec §7B items 19–20, the meaning of "the scenario completed"). Session 7 merged 4B-1 (tag `step-4b1-screens`) and built 4B-2 (Decision 60: tag `step-4b2-screens`, 994 unit/component and 158 browser tests); build step 4 is complete — all eight states. The rules for build step 5 (Coach; app I-21) are closed (Decision 61: Build Spec §7C); session 8 built step 5 (Decision 62: tag `step-5-coach`, 1070 unit/component and 187 browser tests). The rules for build steps 6 and 7 are closed (Decision 63: Build Spec §7D); session 9 ran both (Decision 64: tag `step-6-check`; step 7 complete on `feature/step7-pass`, 1070 unit/component and 268 browser tests); session 9B closed app I-23 and I-24 in the app and merged step 7 (Decision 65: `main` = tag `step-7-pass` = `3fdb342`). Every build step of `CLAUDE.md` §7 is done. The learner test is prepared (Decision 66). Karim ran it and closed Phase 5 (Decision 67): the slice works end to end; what the test found about teaching a beginner goes into the four-step detour Karim inserted before Phase 6 (Decision 68; Step 1 targets tag `phase-5-final` = `3fdb342`). Detour steps 1–3 ran on 2026-10-02 and 2026-10-03; Karim accepted the Freeze Package, and its Freeze, design scope and landing times are recorded as Decision 69. The first before-Step-4 task, F-19 (reproducible test evidence), landed on 2026-10-04 (Decision 72: `main` = `c093d5e`); the second, F-02 (a role for every training line), landed the same day (Decision 73: `main` = `b5c66e5`); the third, F-03 (the V-entry and marker reasons of every Amadeus block), landed the same day (Decision 74: `main` = `d7d9f55`); the fourth, F-05 (the two practice-run continuity facts), landed the same day (Decision 75: `main` = `8928197`); the fifth, F-04 (A)(B) (one term per meaning, and why a valid entry does not count), landed the same day with the words Karim approved (Decision 76: `main` = `8f9c355`). Every before-Step-4 task of Decision 69 (c) is done. Next: Karim tags the base for Step 4 (he names it), then Prompt 7 (the Design Exploration Skill; authorized, Decision 70), then Step 4. Claude Code builds the slice from
 `DEIXEN_Slice_Build_Spec.md`, `CLAUDE.md`, the content files, the approved
 design and `tokens.css`. Standing delegation to Claude: Decision 29.
 Phase 4 record: Claude Design proposed three directions (A "Margin",
@@ -99,7 +99,9 @@ bridge's output and changes nothing a learner sees (Decision 73); then
 `main` = `d7d9f55`, which adds F-03's V-entry and marker reasons to the
 bridge's output and changes nothing a learner sees (Decision 74); then
 `main` = `8928197`, which adds F-05's two continuity facts to the bridge's
-output and changes nothing a learner sees (Decision 75). It counts as the working slice only after
+output and changes nothing a learner sees (Decision 75); then `main` = `8f9c355`, which shows
+"Done on your own" on the chain rows instead of "Correct in DEIXEN", says in the panel why a valid
+entry does not count as done on your own, and changes no evidence rule (Decision 76). It counts as the working slice only after
 Karim's learner test (the Phase 5 gate). No implementation or design
 execution is authorized by this status alone; each follows its Execution
 Plan gate.
@@ -554,7 +556,10 @@ an ordinary technical implementation choice, not decided here.
   recommended step is marked "Next"; `FQD` is "Optional". The scenario and
   assessment rows show "Completed" or a dash. The design's word
   "Practised" is not used: the skill model does not define it, and it could
-  read as competence after any attempt (07 Evidence contract).
+  read as competence after any attempt (07 Evidence contract). *Amended
+  by Decision 69 (F-04 (A), Karim) and applied by Decision 76: the chain
+  word is now "Done on your own" (`ui.doneOnYourOwn`); "Correct in DEIXEN"
+  stays only on the panel head of a valid entry.*
 
 ### Decisions of 2026-09-26 — Phase 4 (by delegation D29)
 
@@ -2815,6 +2820,131 @@ If a dependency has not landed:
   pipeline in both copies (F-21), which Karim approves first (D28), and the
   per-entry independence-and-reason query; from `main` = `8928197`. Files
   changed: 07, 13, Execution Plan §7.
+
+### Decisions of 2026-10-04 — Before-Step-4 task 5, F-04 (A)(B) (Karim's wording; checked by delegation D29)
+
+- **Decision 76 — F-04 (A) and (B) (one term per meaning; why a valid entry
+  does not count) landed; checked against the repository. Closed — wording
+  approved by Karim, 2026-10-04 (D28); the rest by delegation (D29),
+  2026-10-04.** The last before-Step-4 task of Decision 69 (c). Self-review
+  (D17), read-only from the repository as in D58–D75. **What Karim approved
+  (2026-10-04, in the project chat, before the session)** — the content
+  change, copied into both copies (F-21): new `ui.doneOnYourOwn` EN "Done on
+  your own" / AR «نفّذتها بمفردك» (T2, the chain word; listed in `slice.json`
+  `ui` after `ui.correctInDeixen`); `disc.9` EN "'Correct in DEIXEN' means
+  your entry met this simulator's checklist. 'Done on your own' on the
+  booking chain means you have made at least one correct entry for that step
+  with no help for that entry: no hint, no demonstration and no feedback that
+  gave away the answer. Neither is a certificate of workplace readiness." /
+  AR «صحيح في DEIXEN» تعني أن إدخالك استوفى قائمة التحقق في هذا المحاكي.
+  و«نفّذتها بمفردك» في سلسلة الحجز تعني أنك كتبت لهذه الخطوة إدخالًا صحيحًا
+  واحدًا على الأقل دون مساعدة له: لا تلميح، ولا عرض توضيحي، ولا ملاحظة كشفت
+  الإجابة. وليس أيٌّ منهما شهادةَ جاهزية للعمل.»; five new keys in a new
+  `slice.json` list `independenceNotes`: `ind.notCounted` EN "This entry
+  doesn't count toward 'Done on your own'." / AR «هذا الإدخال لا يُحتسب ضمن
+  «نفّذتها بمفردك».»; `ind.hint` EN "You used a hint on this step." / AR
+  «استخدمتَ تلميحًا في هذه الخطوة.»; `ind.demo` EN "You watched this command
+  demonstrated before this entry." / AR «شاهدتَ عرضًا توضيحيًا لهذا الأمر قبل
+  هذا الإدخال.»; `ind.feedback` EN "Feedback before this entry helped with
+  the answer." / AR «ملاحظةٌ قبل هذا الإدخال ساعدتك في الإجابة.»;
+  `ind.normal` EN "Using help is a normal part of practice." / AR «استخدام
+  المساعدة جزء طبيعي من التدريب.». The note is composed as `ind.notCounted`,
+  one sentence per reason in the order hint → demonstration → corrective
+  feedback, then `ind.normal`. 226 keys in each string file. sha256:
+  `slice.json` `53fc8454a59eccf266131c40eb8edfa7cd9a2948d018e927d1e260f70c2ec15e`,
+  `en/text.json` (`text.json`)
+  `d3cd30a8509b01461012c7000e5945fd558e2d54dbbd466c90a256aec8c72b48`,
+  `ar/text.json` (`text-1.json`)
+  `ea74b6e9d65f01f6032d880b9c92324a72b16288b506aaea9f49e1e63aa045b5`. The
+  wording follows F-04 (B) and F-07: it treats help as normal practice,
+  names only the reason, says nothing before an entry, and says nothing about
+  which later entry would count. **How it was checked:** git refs and
+  `.git/logs/HEAD`; the merge commit, the branch head and the trees, compared
+  directory by directory against `8928197` where the old trees were readable
+  (the older objects sit in a 35 MB pack the device bridge could not copy, so
+  below the first level the comparison used the index: every tracked file's
+  blob hash, and which blobs were written as new objects during the session);
+  the changed files on disk hashed against the merge's blobs;
+  `src/evidence/independence.ts`, `src/ui/chain.tsx`,
+  `src/ui/terminalModel.ts`, the changed parts of `src/bridge/bridge.ts`,
+  `src/ui/Panel.tsx` and `src/ui/screens.css` read; the app's
+  `docs/ISSUES.md` I-27; the content files and `tokens.css` hashed. Tests
+  not run by the project lead. The prompt was
+  `DEIXEN_Pre4_Task5_F04_PROMPT.md`. **Verified:** `main` =
+  `8f9c355f3407fdbc33c9eebc5f7ff65e3989a434`, a merge (no fast-forward) of
+  `feature/f04-terms-reasons` (head `f16cc7f`; five commits: `3d6e853` the
+  content alone, `03a995b` the code, `0cad678` the evidence files, `1da3a0a`
+  and `f16cc7f` T17 and I-27) into `8928197`; not tagged; the merge's tree is
+  the branch head's tree. At the top level only `content/`, `docs/`, `src/`
+  and `tests/` changed; in `src/` only `bridge/`, `evidence/` and `ui/` — the
+  engine, `i18n/`, `styles/` and `config.ts` are the same trees. Seventeen
+  files outside the evidence folders are new versions, exactly the files the
+  report lists: the three content files; `src/bridge/bridge.ts`,
+  `src/evidence/independence.ts`, `src/ui/Panel.tsx`, `src/ui/chain.tsx`,
+  `src/ui/screens.css`, `src/ui/terminalModel.ts`; four new test files
+  (`tests/evidence/independenceReasons.test.ts`,
+  `tests/bridge/ownWork.test.ts`, `tests/ui/ownWork.test.tsx`,
+  `tests/e2e/ownWork.spec.ts`) and two edited (`tests/content/content.test.ts`,
+  `tests/ui/screens.test.tsx`); `docs/DECISIONS.md`, `docs/ISSUES.md`. The
+  three app content files are byte-identical with the knowledge copies (the
+  sha256 values above); `tokens.css` sha256 as approved (D42). **What F-04
+  (A)(B) now is:** (a) one function, `independenceReasons`, returns for every
+  entry with a skill the reasons it is not independent, in the order of
+  Build Spec §7A item 6 — `hint` (a hint on its step attempt),
+  `demonstration` (a Ghost Mode script revealing the skill since the
+  previous entry on it in the session), `correctiveFeedback` (corrective
+  feedback on the skill in that window); the windows close at each entry on
+  the skill, as before. The existing flag is now exactly "no reasons", and
+  skill states read that flag, so the two cannot disagree; no rule changed
+  (the existing evidence tests pass unchanged, as reported). (b) The bridge
+  gives every learner entry `ownWork`: `{ counts, reasons }` for a `valid`
+  entry, `null` for `invalid` or `out_of_scope`; computed at submission from
+  the stored events by that function; Ghost Mode reveals carry none. No
+  event, field, type or stored value was added. (c) The chain rows on the
+  Flight Deck and Growth show `ui.doneOnYourOwn` where D40 put "Correct in
+  DEIXEN", drawn in `--text-primary`, not the green. (d) After a valid entry
+  that does not count, the panel shows the composed note directly under the
+  entry's green "Correct in DEIXEN" head, as part of that entry's notes, in
+  the DEIXEN note style — the same code draws the desktop panel, the 768 dock
+  and the phone drawer; never in the Terminal, never recorded, it does not
+  open the drawer. **Evidence files (F-19):** 103 files changed, exactly the
+  number reported, in two groups: the chain word — 97 (Flight Deck, Growth,
+  the Growth Coach note and Reset screenshots, 89; the Growth and reset
+  accessibility trees, 8) — and the new `disc.9` — 6 (two Arabic 768
+  screenshots of the Scope Disclosure page, four accessibility trees). The
+  report's "99 + 6" is a counting slip; the total and the groups match. No
+  other screen changed: no saved picture shows a valid entry that does not
+  count. **Planted and reverted** (T17): P1 the hint from the session count,
+  P2 a flag that ignores corrective feedback (the new evidence test was
+  strengthened after it first missed it alone), P3 a demonstration outside
+  the window, P4 the old chain word, P5 the T2 term in green, P6 the note
+  after a wrong entry, P7 the reasons out of order — each caught by named
+  tests. **Only asserted:** the totals — 1354 unit/component (1283 + 71) and
+  279 browser (271 + 8), 0 failed; typecheck and build; the second browser
+  run leaving the evidence folders unchanged; the planted results.
+  **App I-27 — "Completed" on the scenario and assessment rows is green.**
+  Decided by delegation (D29): it is drawn in interface text like the chain
+  word, not green. Reasons: Decision 69 (b) says green means "Correct in
+  DEIXEN" and nothing else, and `tokens.css` gives `--text-valid` that one
+  job; the approved boards draw those rows only with a dash, never a green
+  "Completed" (`P1-07a`), so the green was a builder's choice in 4B-2, not
+  the approved design; keeping it would make the one remaining green word on
+  the chain rows a progress word, the confusion F-04 removes. This changes no
+  token and no wording. It is applied in Step 4 (styling in `src/ui/`,
+  inside its design scope), not by a separate task. The outdated comment on
+  `Progress.correct` in `src/evidence/recommend.ts` is corrected the next
+  time that folder is opened. Karim may reverse either. **Closed:**
+  before-Step-4 item 3 of Decision 69 (c); every before-Step-4 task is done
+  (items 1–5 landed and checked; item 6, F-20, done by Karim). **Impact
+  check:** the Build Spec is changed — status, §7 (two terms), §7B item 11
+  and §7C item 8 (the chain word), §8 (the note) — so it no longer names the
+  old chain word; F-04 (C) stays before Phase 6. Not changed: the LDS (its
+  "never mastered" rule still holds), 03, 06, the Verified Reference,
+  `tokens.css`, the Design Brief. **Still open:** app I-7, as before.
+  **Next:** Karim tags the base for Step 4 at `main` = `8f9c355` (he names
+  it); the full SHA goes into the Step 4 prompt. Then Prompt 7. Files
+  changed: 07, 13, Execution Plan §3 and §7, Build Spec; the three content
+  files (Karim's approval).
 
 ## Definition of Done — for the current frozen vertical slice
 

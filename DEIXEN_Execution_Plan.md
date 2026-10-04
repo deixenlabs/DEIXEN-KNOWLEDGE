@@ -1,6 +1,6 @@
 ---
 name: DEIXEN Execution Plan
-status: GOVERNING — approved by Karim on 2026-09-24 (07 Decision 16); the four-step detour between Phase 5 and Phase 6 inserted by Karim on 2026-10-02 (07 Decision 68); the detour's Freeze accepted and recorded, and Prompt 7 authorized, 2026-10-03 (07 Decisions 69–70); before-Step-4 tasks 1 (F-19), 2 (F-02), 3 (F-03) and 4 (F-05) landed, 2026-10-04 (07 Decisions 72–75)
+status: GOVERNING — approved by Karim on 2026-09-24 (07 Decision 16); the four-step detour between Phase 5 and Phase 6 inserted by Karim on 2026-10-02 (07 Decision 68); the detour's Freeze accepted and recorded, and Prompt 7 authorized, 2026-10-03 (07 Decisions 69–70); before-Step-4 tasks 1 (F-19), 2 (F-02), 3 (F-03), 4 (F-05) and 5 (F-04 (A)(B)) landed, 2026-10-04 (07 Decisions 72–76)
 owns: Work sequence, phases, gates, current phase, and role assignments
 does not own: how work is performed (Operating Constitution); decisions (07); Amadeus truth (Amadeus Verified Reference)
 replaces: DEIXEN_MASTER_PRE_OPUS_FOUNDATION_PREPARATION_PLAN-1.md and DEIXEN_MASTER_EXECUTION_ROADMAP.md (both historical from 2026-09-24)
@@ -41,7 +41,7 @@ independent review (waived by Karim).
 | Detour step 1. External Engine / Open-Source Investigation | Opus 5.5, in a clean session, investigates whether any open-source implementation, architectural idea, dataset, or evidence deserves to affect the engine or the way it is expanded in Phase 6; target code: tag `phase-5-final` at `3fdb342429dc99ebf8268bad0da3075eacbd40a7` in `deixen-app`; modifies nothing | Technical Recommendation — advisory, not a gate, not a formal independent review; delivered in the chat reply only, with a short "Design-facing requirements" section (a secondary lens, not a selection criterion) | none stated (advisory; binds only if Karim explicitly accepts it) | **Done** 2026-10-03 (handoff block used by Steps 2–3) |
 | Detour step 2. Learning Design + Learning Experience Review | Reviews learning design and learning experience, with Karim's learner-test record (07 D67) as input; modifies nothing | Learning Decision — a recommendation within its own domain | none stated (binds only if Karim explicitly accepts it) | **Done** 2026-10-03 (handoff block used by Step 3) |
 | Detour step 3. Synthesize & Freeze Decisions | Synthesizes engine, learning and product constraints; modifies nothing | Freeze Package proposal — the Freeze (locked decisions, listed open items, the procedure for changing them), the design scope, when each accepted change must land, the ledger, the requirements and candidates for step 4, the preserve list, the coverage | Karim explicitly accepts the Freeze Package; its Freeze, design scope and landing times are then recorded in 07, and step 4 starts only after that record exists | **Done** 2026-10-03 — Karim accepted the Freeze Package; recorded in 07 D69 |
-| Detour step 4. Design Improvement Round (UX / UI / learning surfaces / Terminal experience) → Design Verification | Improves and verifies the design inside the design scope recorded in 07, in isolation and reversibly; anything outside its authority goes through the return path (one round, Karim decides) | Its verified design changes (isolated until accepted; "no material design change" is a valid result) plus the Detour Closing Report | Karim accepts the Detour Closing Report (accepts or rejects the design changes, schedules the remaining implementation tasks, starts Phase 6) | Waiting — first the before-Step-4 tasks (07 D69 (c)), then Prompt 7 (07 D70) |
+| Detour step 4. Design Improvement Round (UX / UI / learning surfaces / Terminal experience) → Design Verification | Improves and verifies the design inside the design scope recorded in 07, in isolation and reversibly; anything outside its authority goes through the return path (one round, Karim decides) | Its verified design changes (isolated until accepted; "no material design change" is a valid result) plus the Detour Closing Report | Karim accepts the Detour Closing Report (accepts or rejects the design changes, schedules the remaining implementation tasks, starts Phase 6) | Waiting — the before-Step-4 tasks are done (07 D69 (c); D72–D76); next Karim tags the base, then Prompt 7 (07 D70) |
 | 6. Expansion | Next lessons, Basic then Advanced — each chunk goes verify → spec → build → test | Growing curriculum | Karim, per chunk | Waiting |
 
 Detour steps 1–4 run under the shared Detour Charter (v1.8), embedded in each step's prompt (not a file); each is started separately by Karim and stops after its own deliverable (07 D68). Between step 3 and step 4, Prompt 7 builds the DEIXEN Design Exploration Skill — an auxiliary tooling action, not a fifth step and not a gate; Karim accepts the Skill before step 4 is prepared (07 D70).
@@ -119,12 +119,11 @@ the annotated tag `phase-5-final` at `3fdb342` in `deixen-app` (local; 13).
 Four steps (§3), each started separately by Karim. Steps 1–3 are done
 (2026-10-02/03); Karim accepted the Freeze Package, recorded as 07 D69 —
 the Freeze, step 4's design scope and when each accepted change lands.
-Next, in order: the before-Step-4 tasks of 07 D69 (c) (F-02, F-03, F-04
-(A)(B), F-05; F-19 done 2026-10-04, 07 D72; F-02 done 2026-10-04, 07 D73;
-F-03 done 2026-10-04, 07 D74;
-F-05 done 2026-10-04, 07 D75, `main` = `8928197`; F-20 done), each a Claude Code task started by Karim —
-the first from `phase-5-final`, each later one from `main` after the
-previous has landed; Karim tags the resulting base; then Prompt 7 (07 D70)
+The before-Step-4 tasks of 07 D69 (c) are all done, each a Claude Code task
+started by Karim, the first from `phase-5-final` and each later one from
+`main` after the previous had landed: F-19 (07 D72), F-02 (07 D73), F-03
+(07 D74), F-05 (07 D75), and F-04 (A)(B) done 2026-10-04, 07 D76, `main` =
+`8f9c355`; F-20 done by Karim. Next, in order: Karim tags the resulting base; then Prompt 7 (07 D70)
 and Karim's review of the Skill; then step 4 is prepared and run (Claude
 Code, Opus 5.5, Max, on a separate branch — 07 D69, S3-06). The learner
 re-test runs after step 4 or at the start of Phase 6, as Karim chooses; it

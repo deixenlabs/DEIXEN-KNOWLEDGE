@@ -1,6 +1,6 @@
 ---
 name: DEIXEN Slice Build Spec
-status: CURRENT — APPROVED by Karim 2026-09-25 (07 Decision 26). Updated 2026-09-25: gaps G1–G3 (§5, §12); Decision 27 (K5, K6) applied to §4, §5, §12, §13; K7 (§6 row 5, §12) approved in the Phase 3 gate (07 D28). Phase 4, 2026-09-25: 07 Decisions 30, 32–34, 36 applied to §5 and §13; Decisions 37–38 to §4 and §8. Phase 4 gate, 2026-09-26: 07 Decision 42 (approved design, `tokens.css`) applied to §2; Decision 44 (`AN` header number) to §5 and §12; Decision 45 (boards exported to `design/phase4/`) to §2. Phase 5, 2026-09-26: 07 Decisions 46 (`result` on ending events) and 47 (one tab at a time) applied to §11. 2026-09-26: 07 Decision 49 applied to §6 ("not recognized" vs "not covered") and new §6A (rules for build step 2 part B). 2026-09-28: 07 Decision 50 — §6A items 8–10. 2026-09-28: 07 Decision 52 — new §7A (rules for build step 3), pointers in §8, §10, §11. 2026-09-28: 07 Decision 53 — §7A items 1 (return to practice, app I-12) and 14 (data-reset notice). 2026-09-28: 07 Decision 54 — new §7B (rules for build step 4: the current step for hints, hint levels on the screen, the entry field, parts 4A/4B, load notices), pointer in §8. 2026-09-29: 07 Decisions 55–56 — §7A item 1 (a run also starts at an accepted hint request, app I-12), items 1 and 11 and §9 (pointers to the in-app exit), §7B heading and new items 6–10 ("Booking as it stands", leaving a running assessment or scenario, storage refused, the name as a string key, behaviours over time); 07 Decision 57 — §7B items 11–15 (the Flight Deck's recommended action, the practice run when moving between screens, Learning, Ghost Mode replays, when the scenario and the assessment start). 2026-09-30: 07 Decision 58 — §7B items 16–18 (the way into Ghost Mode, Ghost typing speed, "In your task"); 07 Decision 59 — §7A item 13, §7B item 11 (d) and §10 ("the scenario completed" means completed with every checklist item met), §7B items 19–20 (the scenario and assessment rows; the assessment and scenario screens). 2026-09-30: 07 Decision 61 — new §7C (rules for build step 5, Coach: when each Coach text shows, Coach and independence, the assessment and the scenario, the bypass, the escalation count, the Growth note, the five touchpoints), pointers in §6A item 2 and §8. 2026-10-01: 07 Decision 62 — §7C item 6 (the escalation offer may follow the bypass notes in practice, app I-22). 2026-10-01: 07 Decision 63 — new §7D (rules for build steps 6 and 7: step 6 as a check with a Definition of Done trace, the end note in view, the scrolling notes block, the phone drawer, what the accessibility baseline means here, the localization and breakpoint passes, lockup B, what automated checks cannot prove), pointers in §2 and §13. 2026-10-02: 07 Decision 64 — §7B item 17 and §7D item 5 (d) corrected (`--motion-demo-hold` stays under reduced motion: a still reading pause, app I-23); §7D item 6 (English terms written in the approved Arabic content are allowed, app I-24). First edition (Execution Plan 3.3); proposals K1–K4 approved (07 Decision 25). With this approval, the LDS/LXA content extracted here is binding for the slice (LDS and LXA reading rules, point 1).
+status: CURRENT — APPROVED by Karim 2026-09-25 (07 Decision 26). Updated 2026-09-25: gaps G1–G3 (§5, §12); Decision 27 (K5, K6) applied to §4, §5, §12, §13; K7 (§6 row 5, §12) approved in the Phase 3 gate (07 D28). Phase 4, 2026-09-25: 07 Decisions 30, 32–34, 36 applied to §5 and §13; Decisions 37–38 to §4 and §8. Phase 4 gate, 2026-09-26: 07 Decision 42 (approved design, `tokens.css`) applied to §2; Decision 44 (`AN` header number) to §5 and §12; Decision 45 (boards exported to `design/phase4/`) to §2. Phase 5, 2026-09-26: 07 Decisions 46 (`result` on ending events) and 47 (one tab at a time) applied to §11. 2026-09-26: 07 Decision 49 applied to §6 ("not recognized" vs "not covered") and new §6A (rules for build step 2 part B). 2026-09-28: 07 Decision 50 — §6A items 8–10. 2026-09-28: 07 Decision 52 — new §7A (rules for build step 3), pointers in §8, §10, §11. 2026-09-28: 07 Decision 53 — §7A items 1 (return to practice, app I-12) and 14 (data-reset notice). 2026-09-28: 07 Decision 54 — new §7B (rules for build step 4: the current step for hints, hint levels on the screen, the entry field, parts 4A/4B, load notices), pointer in §8. 2026-09-29: 07 Decisions 55–56 — §7A item 1 (a run also starts at an accepted hint request, app I-12), items 1 and 11 and §9 (pointers to the in-app exit), §7B heading and new items 6–10 ("Booking as it stands", leaving a running assessment or scenario, storage refused, the name as a string key, behaviours over time); 07 Decision 57 — §7B items 11–15 (the Flight Deck's recommended action, the practice run when moving between screens, Learning, Ghost Mode replays, when the scenario and the assessment start). 2026-09-30: 07 Decision 58 — §7B items 16–18 (the way into Ghost Mode, Ghost typing speed, "In your task"); 07 Decision 59 — §7A item 13, §7B item 11 (d) and §10 ("the scenario completed" means completed with every checklist item met), §7B items 19–20 (the scenario and assessment rows; the assessment and scenario screens). 2026-09-30: 07 Decision 61 — new §7C (rules for build step 5, Coach: when each Coach text shows, Coach and independence, the assessment and the scenario, the bypass, the escalation count, the Growth note, the five touchpoints), pointers in §6A item 2 and §8. 2026-10-01: 07 Decision 62 — §7C item 6 (the escalation offer may follow the bypass notes in practice, app I-22). 2026-10-01: 07 Decision 63 — new §7D (rules for build steps 6 and 7: step 6 as a check with a Definition of Done trace, the end note in view, the scrolling notes block, the phone drawer, what the accessibility baseline means here, the localization and breakpoint passes, lockup B, what automated checks cannot prove), pointers in §2 and §13. 2026-10-02: 07 Decision 64 — §7B item 17 and §7D item 5 (d) corrected (`--motion-demo-hold` stays under reduced motion: a still reading pause, app I-23); §7D item 6 (English terms written in the approved Arabic content are allowed, app I-24). 2026-10-04: 07 Decision 76 (F-04 (A)(B) landed; 07 D69 F-04 amends D40) — §7 (learner-facing wording: two terms), §7B item 11 (the chain word), §7C item 8 (the chain word), §8 (the note after a valid entry that does not count as done on your own). First edition (Execution Plan 3.3); proposals K1–K4 approved (07 Decision 25). With this approval, the LDS/LXA content extracted here is binding for the slice (LDS and LXA reading rules, point 1).
 owns: The single build specification Claude Code implements for the first-build slice. It gathers requirements from their owners and designs the evidence/state schema (delegated to Claude — file 13).
 does not own: any decision (07); Amadeus behavior (Verified Reference); product structure (03); design (Design Brief / Phase 4). Where this file and an owner disagree, the owner wins and the conflict is reported.
 ---
@@ -338,7 +338,12 @@ Amadeus behavior beyond the Verified Reference.
   DEMONSTRATED_INDEPENDENT, the learner completes the full path once,
   unaided; a self-corrected error does not void it.
 - **Learner-facing wording:** "correct in DEIXEN", never "mastered" (LDS §10,
-  §29 item 4).
+  §29 item 4). **[D] (07 D69 F-04 (A); 07 D76)** Two terms, one meaning
+  each: "Correct in DEIXEN" (`ui.correctInDeixen`, green) = this entry met
+  the checklist — the panel head of a valid entry; "Done on your own"
+  (`ui.doneOnYourOwn`, interface text, never green) = the step's skill is
+  DEMONSTRATED_INDEPENDENT or higher — the chain rows on the Flight Deck and
+  Growth. `disc.9` defines both. Neither is "mastered".
 
 **PROVISIONAL numbers** (LDS §36) — keep in one config file, easy to change:
 `CONSOLIDATED_COUNT = 2`, `REINFORCEMENT_FAIL_COUNT = 2`,
@@ -666,7 +671,7 @@ event type (§11), and none claims Amadeus behavior.
     Exactly one action on the screen has the primary-button style (`P1-F`).
     In (a) and (b) it sits in the Next row as drawn; in (c)–(e) no row
     carries Next, and the action takes that place under the chain, with
-    existing patterns only. The chain's status words stay as 07 D40 says (the scenario and assessment rows: item 19).
+    existing patterns only. The chain's status words stay as 07 D40 says, except that the word for a step at DEMONSTRATED_INDEPENDENT or higher is `ui.doneOnYourOwn` "Done on your own", in interface text, not green (07 D69 F-04 (A), which amends D40; 07 D76) (the scenario and assessment rows: item 19).
 12. **The practice run when the learner moves between screens** (07 D57;
     §7A item 1). A practice run lives for the load: leaving the Terminal
     and coming back in the same load shows the same run, booking, record
@@ -870,7 +875,7 @@ and rules (§5, §7B items 2, 6, 10); Coach adds to them, it replaces none.
 8. **The Growth note** (06: Growth "explain meaningful outcomes and connect
    them to evidence"). Found while preparing step 5: when the status is
    Needs More Practice because a skill has `NEEDS_REINFORCEMENT` active,
-   every chain row can still read "Correct in DEIXEN" (07 D40: the row
+   every chain row can still read "Done on your own" (07 D40, D76: the row
    follows the skill's state, which the modifier does not lower), so
    nothing on Growth said why. Rule: when Growth shows Needs More Practice
    (§7A item 13 (2)), a Coach note under the status and `ui.growth.basis`
@@ -898,7 +903,7 @@ and rules (§5, §7B items 2, 6, 10); Coach adds to them, it replaces none.
     `coach.growth.reinforce`, `coach.growth.assessmentUnmet`;
     `coach.escalate` reworded without count-noun agreement (as 07 D39),
     because `{N}` can now pass ten, where the Arabic «{N} مرات» is wrong;
-    meaning unchanged. 220 keys in each string file.
+    meaning unchanged. 220 keys in each string file (226 since 07 D76).
 
 ## 7D. Rules for build steps 6 and 7 — the check and the pass (07 D63)
 
@@ -1027,6 +1032,17 @@ would need a new string, token, event field or a changed rule is a stop
   was used on this attempt; no same-command Ghost Mode reveal immediately
   preceded it; and the immediately preceding feedback on this skill was not
   corrective. It is **not** the hint counter and never changes it.
+- **[D] Saying why a valid entry does not count (07 D69 F-04 (B); 07
+  D76).** The flag and its reasons come from one function (§7A item 6:
+  `hint`, `demonstration`, `correctiveFeedback`, in that order); the bridge
+  gives them with each learner entry (`ownWork`: for a `valid` entry
+  `{ counts, reasons }`, otherwise none). After a `valid` entry that does not
+  count, the panel shows one note under that entry's "Correct in DEIXEN"
+  head: `ind.notCounted`, one sentence per reason (`ind.hint`, `ind.demo`,
+  `ind.feedback`), then `ind.normal` (`slice.json` `independenceNotes`). It
+  is part of that entry's notes (§7B item 10), never in the Terminal, never
+  recorded, and never opens the phone drawer. Nothing is said before an
+  entry, and nothing says how to make an entry count (07 D69 F-07).
 - **Escalation:** after `ESCALATION_ERROR_COUNT` same-category errors on a
   skill in one session, Coach *offers* the lesson link; suppressed once the
   skill is CONSOLIDATED unless NEEDS_REINFORCEMENT is active. Exact rule: §7C
