@@ -1,6 +1,6 @@
 ---
 name: DEIXEN Execution Plan
-status: GOVERNING — approved by Karim on 2026-09-24 (07 Decision 16); the four-step detour between Phase 5 and Phase 6 inserted by Karim on 2026-10-02 (07 Decision 68); the detour's Freeze accepted and recorded, and Prompt 7 authorized, 2026-10-03 (07 Decisions 69–70); before-Step-4 tasks 1 (F-19), 2 (F-02) and 3 (F-03) landed, 2026-10-04 (07 Decisions 72–74)
+status: GOVERNING — approved by Karim on 2026-09-24 (07 Decision 16); the four-step detour between Phase 5 and Phase 6 inserted by Karim on 2026-10-02 (07 Decision 68); the detour's Freeze accepted and recorded, and Prompt 7 authorized, 2026-10-03 (07 Decisions 69–70); before-Step-4 tasks 1 (F-19), 2 (F-02), 3 (F-03) and 4 (F-05) landed, 2026-10-04 (07 Decisions 72–75)
 owns: Work sequence, phases, gates, current phase, and role assignments
 does not own: how work is performed (Operating Constitution); decisions (07); Amadeus truth (Amadeus Verified Reference)
 replaces: DEIXEN_MASTER_PRE_OPUS_FOUNDATION_PREPARATION_PLAN-1.md and DEIXEN_MASTER_EXECUTION_ROADMAP.md (both historical from 2026-09-24)
@@ -121,7 +121,8 @@ Four steps (§3), each started separately by Karim. Steps 1–3 are done
 the Freeze, step 4's design scope and when each accepted change lands.
 Next, in order: the before-Step-4 tasks of 07 D69 (c) (F-02, F-03, F-04
 (A)(B), F-05; F-19 done 2026-10-04, 07 D72; F-02 done 2026-10-04, 07 D73;
-F-03 done 2026-10-04, 07 D74, `main` = `d7d9f55`; F-20 done), each a Claude Code task started by Karim —
+F-03 done 2026-10-04, 07 D74;
+F-05 done 2026-10-04, 07 D75, `main` = `8928197`; F-20 done), each a Claude Code task started by Karim —
 the first from `phase-5-final`, each later one from `main` after the
 previous has landed; Karim tags the resulting base; then Prompt 7 (07 D70)
 and Karim's review of the Skill; then step 4 is prepared and run (Claude

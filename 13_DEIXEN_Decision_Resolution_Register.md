@@ -248,6 +248,18 @@ recomputed; the pinned table matches Build Spec §5. Only `src/bridge/view.ts`,
 app's docs changed; nothing a learner sees changed. Five planted faults caught.
 Next: before-Step-4 task 4, F-05.
 
+Update 2026-10-04 (before-Step-4 task 4, F-05, landed; I-26 answered): 07 D75
+— checked against the repository, read-only. `main` = `8928197` (merge of
+`feature/f05-run-continuity`; not tagged). The bridge now answers, before a
+lesson's or Ghost Mode's practice button is pressed, whether it would throw
+away a practice booking with entries (one decision shared with the button),
+and tells the first screen of a load whether the previous session made
+practice entries. Only `src/bridge/bridge.ts`, one new test file and the
+app's docs changed; nothing a learner sees changed. App I-26 (Start
+assessment and the scenario's first entry also set aside such a booking):
+Karim keeps it as it is; Step 4's return notice must not say nothing was
+lost. Next: before-Step-4 task 5, F-04 (A)(B), wording approved by Karim first.
+
 ## 2. Phase 1 Findings — Disposition
 
 Review type: self-review by the project lead (Decision 17 — independent
@@ -392,6 +404,8 @@ presented a navy/blue color language as "durable" although colors are open
 | Running the browser tests rewrites 209 tracked files in `deixen-app` `docs/a11y` and `docs/screens` (the random booking reference); restored before tagging | CLOSED 2026-10-04 — F-19 landed: merged into `main` = `c093d5edd9b87b4ac232638b0e0c9b3ecb764abb` (not tagged); the first run had rewritten 205 files, not 209; a fixed locator source and time zone, screenshots taken at rest and written only beyond a measured tolerance; app I-25 closed; repeated runs leave `docs/screens` and `docs/a11y` untouched (07 D72) | Claude (D29) | — |
 | Before-Step-4 task 2: F-02, a role for every training line (07 D69 (c) item 1) | CLOSED 2026-10-04 — F-02 landed: merged into `main` = `b5c66e527b159ae60b4539cf384293215cec9094` (not tagged); role from the recorded result, never from the key; stored-element lines take their creator's role; 1146 unit/component, 271 browser (07 D73) | Claude (D29) | Step 4 presents the roles (07 D69 (b)) |
 | Before-Step-4 task 3: F-03, the V-entry and marker reasons of every Amadeus block (07 D69 (c) item 2) | CLOSED 2026-10-04 — F-03 landed: merged into `main` = `d7d9f55a00e5a1c45b3881f83024b47cc50e9f07` (not tagged); `source` and `unverified` passed through from the engine, never recomputed; one Amadeus block per display in today's slice; reasons in the engine's order; 1190 unit/component, 271 browser (07 D74) | Claude (D29) | Step 4 presents the marker as the display's (07 D69 (b)); the explanation before Phase 6 |
+| Before-Step-4 task 4: F-05, the two practice-run continuity facts (07 D69 (c) item 4) | CLOSED 2026-10-04 — F-05 landed: merged into `main` = `89281974a7937e85dd82c98deeb57961ac309709` (not tagged); `practiseFromLessonPreview` shares one decision with the button; `load.previousSessionPractised` from stored events only; 1283 unit/component, 271 browser (07 D75) | Claude (D29) | Step 4 asks and notifies (07 D69 (b)) |
+| App I-26 — Start assessment and the scenario's first entry set aside an incomplete practice booking with entries, outside F-05's question | CLOSED 2026-10-04 — Karim: keep as it is; no Freeze change; Step 4's return notice says a new practice booking started, never that nothing was lost (07 D75) | Karim | Step 4 copy |
 | Step 4 executor role: Plan §2 says Claude Code implements approved specifications; for Step 4, the Freeze recorded in 07 is the approved specification | CLOSED — Karim, 2026-10-03: step 4 runs in Claude Code, Opus 5.5, Max effort, on a separate branch in `deixen-app` (07 D69, open item S3-06); no role change | Karim | — |
 | Prompt 7 (Design Exploration Skill build) has no recorded authorization | CLOSED — authorized by Karim, 2026-10-03 (07 D70) | Karim | Runs after the before-Step-4 tasks |
 | Package v1.8 §14 items 8–10: `tokens.css` and the content files in Step 4's scope; the untested parts of the learner test; the package review was not run in a fresh session | CLOSED 2026-10-03 — item 8 settled by the Freeze (07 D69: `tokens.css` not edited by step 4; content changes kept identical in both copies, F-21); item 9 carried into the re-test (F-11); item 10 history (Karim accepted the review result and proceeded) | Karim | — |
