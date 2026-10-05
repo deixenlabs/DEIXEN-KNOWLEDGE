@@ -2,7 +2,7 @@
 name: DEIXEN Canonical Decisions & Current State
 owns: The single decisions ledger and current project status going forward
 supersedes reading in isolation: AeroBridge_Decisions_and_Current_State.md
-last synchronized: 2026-09-26 (Phase 4 closed — gate approved, Decision 42; delegated Decisions 43–44; approved boards exported, Decision 45; Phase 5 started — build step 1 locked, Decisions 46–47; step 2 part A locked, Decision 48; step 2 part B prepared, Decision 49; part B checked, Decision 50; step 2 locked, Decision 51; step 3 prepared, Decision 52; step 3 locked, Decision 53; step 4 prepared, Decision 54; step 4A checked and locked, Decision 55 (2026-09-29); leaving a running assessment or scenario inside the app, Decision 56; rules for build step 4B, Decision 57 (all 2026-09-29); step 4B-1 checked, Decision 58; rules for build step 4B-2, Decision 59; step 4B-2 checked and build step 4 complete, Decision 60; rules for build step 5 (Coach), Decision 61 (all 2026-09-30); step 5 checked and locked, Decision 62; rules for build steps 6 and 7, Decision 63 (both 2026-10-01); steps 6 and 7 checked, Decision 64; step 7 merged and the build complete, Decision 65; the learner test prepared, Decision 66; Phase 5 closed by Karim after his learner test, Decision 67; the four-step detour before Phase 6, Decision 68 (all 2026-10-02); the accepted Freeze of the detour, Decision 69; Prompt 7 authorized, Decision 70; the Constitution's repository address, Decision 71 (all 2026-10-03); before-Step-4 task 1, F-19, landed, Decision 72; before-Step-4 task 2, F-02, landed, Decision 73; before-Step-4 task 3, F-03, landed, Decision 74; before-Step-4 task 4, F-05, landed, and app I-26 answered by Karim, Decision 75; before-Step-4 task 5, F-04 (A)(B), landed with the wording Karim approved, Decision 76 (all 2026-10-04))
+last synchronized: 2026-09-26 (Phase 4 closed — gate approved, Decision 42; delegated Decisions 43–44; approved boards exported, Decision 45; Phase 5 started — build step 1 locked, Decisions 46–47; step 2 part A locked, Decision 48; step 2 part B prepared, Decision 49; part B checked, Decision 50; step 2 locked, Decision 51; step 3 prepared, Decision 52; step 3 locked, Decision 53; step 4 prepared, Decision 54; step 4A checked and locked, Decision 55 (2026-09-29); leaving a running assessment or scenario inside the app, Decision 56; rules for build step 4B, Decision 57 (all 2026-09-29); step 4B-1 checked, Decision 58; rules for build step 4B-2, Decision 59; step 4B-2 checked and build step 4 complete, Decision 60; rules for build step 5 (Coach), Decision 61 (all 2026-09-30); step 5 checked and locked, Decision 62; rules for build steps 6 and 7, Decision 63 (both 2026-10-01); steps 6 and 7 checked, Decision 64; step 7 merged and the build complete, Decision 65; the learner test prepared, Decision 66; Phase 5 closed by Karim after his learner test, Decision 67; the four-step detour before Phase 6, Decision 68 (all 2026-10-02); the accepted Freeze of the detour, Decision 69; Prompt 7 authorized, Decision 70; the Constitution's repository address, Decision 71 (all 2026-10-03); before-Step-4 task 1, F-19, landed, Decision 72; before-Step-4 task 2, F-02, landed, Decision 73; before-Step-4 task 3, F-03, landed, Decision 74; before-Step-4 task 4, F-05, landed, and app I-26 answered by Karim, Decision 75; before-Step-4 task 5, F-04 (A)(B), landed with the wording Karim approved, Decision 76 (all 2026-10-04); Karim's seven owner decisions (dark, red for errors, the learner re-test, replays, recovery, content details, two languages), Decision 77; the identity exploration before Step 4 and the Skill accepted, Decision 78 (both 2026-10-05))
 authority note: Where a decision below is owned in more detail elsewhere in this canonical set (product/architecture, design, engine, curriculum/Coach), this file states the decision and its status, and points there rather than duplicating — the same single-ownership discipline the original NEW document already established and this pass is preserving.
 ---
 
@@ -53,7 +53,7 @@ were ended by Karim's decision on 2026-09-24 and are historical.
 **Phase:** Phase 4 (Design) closed on 2026-09-26 — Karim approved the gate
 (Decision 42). **Phase 5 (Build), closed 2026-10-02 (Decision 67); current: the detour before Phase 6 (Decision 68)** — build step 1 (evidence store)
 locked 2026-09-26 (Decision 46); step 2 part A (engine core, `AN`, `SS`,
-`NM`, `AP`) locked the same day (Decision 48); step 2 part B prepared (Decision 49: the D48 follow-ups I-4, I-5, I-6 closed, and the part B rules written into Build Spec §6A); Claude Code built part B in its third session (not merged: two layouts were missing); the project lead supplied them (Decision 50); session 3B finished, merged and tagged part B (Decision 51). Build step 3 (bridge, independence flag, skill states, Growth status, one-tab rule D47) prepared (Decision 52: Build Spec §7A), built in session 4 and locked (Decision 53, tag `step-3-bridge`, 723 tests). Build step 4 prepared (Decision 54: Build Spec §7B) and split into 4A (app shell and Terminal practice) and 4B (the other seven states). 4A built in session 5 and locked (Decision 55, tag `step-4a-terminal`, 818 unit/component and 69 browser tests); leaving a running assessment or scenario inside the app decided (Decision 56); the rules 4B would otherwise guess closed (Decision 57: Build Spec §7B items 11–15). 4B-1 (Flight Deck, Learning, Ghost Mode, Growth, Reset, Scope Disclosure) built in session 6 and checked (Decision 58: 943 unit/component and 104 browser tests; merged and tagged `step-4b1-screens` at the start of session 7); the rules for 4B-2 written (Decision 59: Build Spec §7B items 19–20, the meaning of "the scenario completed"). Session 7 merged 4B-1 (tag `step-4b1-screens`) and built 4B-2 (Decision 60: tag `step-4b2-screens`, 994 unit/component and 158 browser tests); build step 4 is complete — all eight states. The rules for build step 5 (Coach; app I-21) are closed (Decision 61: Build Spec §7C); session 8 built step 5 (Decision 62: tag `step-5-coach`, 1070 unit/component and 187 browser tests). The rules for build steps 6 and 7 are closed (Decision 63: Build Spec §7D); session 9 ran both (Decision 64: tag `step-6-check`; step 7 complete on `feature/step7-pass`, 1070 unit/component and 268 browser tests); session 9B closed app I-23 and I-24 in the app and merged step 7 (Decision 65: `main` = tag `step-7-pass` = `3fdb342`). Every build step of `CLAUDE.md` §7 is done. The learner test is prepared (Decision 66). Karim ran it and closed Phase 5 (Decision 67): the slice works end to end; what the test found about teaching a beginner goes into the four-step detour Karim inserted before Phase 6 (Decision 68; Step 1 targets tag `phase-5-final` = `3fdb342`). Detour steps 1–3 ran on 2026-10-02 and 2026-10-03; Karim accepted the Freeze Package, and its Freeze, design scope and landing times are recorded as Decision 69. The first before-Step-4 task, F-19 (reproducible test evidence), landed on 2026-10-04 (Decision 72: `main` = `c093d5e`); the second, F-02 (a role for every training line), landed the same day (Decision 73: `main` = `b5c66e5`); the third, F-03 (the V-entry and marker reasons of every Amadeus block), landed the same day (Decision 74: `main` = `d7d9f55`); the fourth, F-05 (the two practice-run continuity facts), landed the same day (Decision 75: `main` = `8928197`); the fifth, F-04 (A)(B) (one term per meaning, and why a valid entry does not count), landed the same day with the words Karim approved (Decision 76: `main` = `8f9c355`). Every before-Step-4 task of Decision 69 (c) is done. Next: Karim tags the base for Step 4 (he names it), then Prompt 7 (the Design Exploration Skill; authorized, Decision 70), then Step 4. Claude Code builds the slice from
+`NM`, `AP`) locked the same day (Decision 48); step 2 part B prepared (Decision 49: the D48 follow-ups I-4, I-5, I-6 closed, and the part B rules written into Build Spec §6A); Claude Code built part B in its third session (not merged: two layouts were missing); the project lead supplied them (Decision 50); session 3B finished, merged and tagged part B (Decision 51). Build step 3 (bridge, independence flag, skill states, Growth status, one-tab rule D47) prepared (Decision 52: Build Spec §7A), built in session 4 and locked (Decision 53, tag `step-3-bridge`, 723 tests). Build step 4 prepared (Decision 54: Build Spec §7B) and split into 4A (app shell and Terminal practice) and 4B (the other seven states). 4A built in session 5 and locked (Decision 55, tag `step-4a-terminal`, 818 unit/component and 69 browser tests); leaving a running assessment or scenario inside the app decided (Decision 56); the rules 4B would otherwise guess closed (Decision 57: Build Spec §7B items 11–15). 4B-1 (Flight Deck, Learning, Ghost Mode, Growth, Reset, Scope Disclosure) built in session 6 and checked (Decision 58: 943 unit/component and 104 browser tests; merged and tagged `step-4b1-screens` at the start of session 7); the rules for 4B-2 written (Decision 59: Build Spec §7B items 19–20, the meaning of "the scenario completed"). Session 7 merged 4B-1 (tag `step-4b1-screens`) and built 4B-2 (Decision 60: tag `step-4b2-screens`, 994 unit/component and 158 browser tests); build step 4 is complete — all eight states. The rules for build step 5 (Coach; app I-21) are closed (Decision 61: Build Spec §7C); session 8 built step 5 (Decision 62: tag `step-5-coach`, 1070 unit/component and 187 browser tests). The rules for build steps 6 and 7 are closed (Decision 63: Build Spec §7D); session 9 ran both (Decision 64: tag `step-6-check`; step 7 complete on `feature/step7-pass`, 1070 unit/component and 268 browser tests); session 9B closed app I-23 and I-24 in the app and merged step 7 (Decision 65: `main` = tag `step-7-pass` = `3fdb342`). Every build step of `CLAUDE.md` §7 is done. The learner test is prepared (Decision 66). Karim ran it and closed Phase 5 (Decision 67): the slice works end to end; what the test found about teaching a beginner goes into the four-step detour Karim inserted before Phase 6 (Decision 68; Step 1 targets tag `phase-5-final` = `3fdb342`). Detour steps 1–3 ran on 2026-10-02 and 2026-10-03; Karim accepted the Freeze Package, and its Freeze, design scope and landing times are recorded as Decision 69. The first before-Step-4 task, F-19 (reproducible test evidence), landed on 2026-10-04 (Decision 72: `main` = `c093d5e`); the second, F-02 (a role for every training line), landed the same day (Decision 73: `main` = `b5c66e5`); the third, F-03 (the V-entry and marker reasons of every Amadeus block), landed the same day (Decision 74: `main` = `d7d9f55`); the fourth, F-05 (the two practice-run continuity facts), landed the same day (Decision 75: `main` = `8928197`); the fifth, F-04 (A)(B) (one term per meaning, and why a valid entry does not count), landed the same day with the words Karim approved (Decision 76: `main` = `8f9c355`). Every before-Step-4 task of Decision 69 (c) is done. Karim tagged the base for Step 4 (`step4-base`, 2026-10-05); Prompt 7 built the Design Exploration Skill, which Karim installed and accepted (Decisions 70, 78). Karim's seven owner decisions of 2026-10-05 are Decision 77 (among them: the primary visual direction is dark; red also marks errors). Next: the identity exploration over the whole visual identity (Decision 78); then Karim records his chosen direction and Step 4's restated scope; then Step 4. Claude Code builds the slice from
 `DEIXEN_Slice_Build_Spec.md`, `CLAUDE.md`, the content files, the approved
 design and `tokens.css`. Standing delegation to Claude: Decision 29.
 Phase 4 record: Claude Design proposed three directions (A "Margin",
@@ -2945,6 +2945,144 @@ If a dependency has not landed:
   it); the full SHA goes into the Step 4 prompt. Then Prompt 7. Files
   changed: 07, 13, Execution Plan §3 and §7, Build Spec; the three content
   files (Karim's approval).
+
+### Decisions of 2026-10-05 — Karim's seven owner decisions, and the identity exploration before Step 4 (Karim)
+
+- **Decision 77 — Seven owner decisions. Closed — Karim, 2026-10-05**
+  (owner decisions: D29 reserved items 2 (visual) and 4 (governance), and
+  scope; Constitution §8). Karim stated them in the project chat on
+  2026-10-05 as final ("قرارات محسومة مني أنا كصاحب المشروع"), not open
+  questions, together with this rule: any direction or visual proposal from
+  the exploration tool stays a proposal for exploration and comparison; no
+  design proposal becomes a project decision until Karim has reviewed and
+  approved it. His words are recorded verbatim (Arabic), each followed by
+  what it means for the record.
+  1. «الاتجاه البصري الأساسي للمنتج يكون DARK. أنا أفضل الاتجاه الغامق، فمفيش
+     داعي نرجع نناقش Light vs Dark.» — The product's primary visual direction
+     is dark. **Supersedes** the light-vs-dark item of Decision 31
+     ("light-led, with tokens structured so a dark theme can be added later");
+     the rest of D31 and D42 stand until Karim records a chosen identity
+     (Decision 78). The kind of dark, the palette and the visual language are
+     not decided: they are explored (D78). Until the chosen direction is
+     implemented, the slice keeps the approved light `tokens.css`.
+  2. «الأحمر مش بس لإعادة التصفير أو الحذف. استخدمه كـsemantic color لحالات
+     الخطأ، والإدخال الغلط، والحالة المرفوضة عند الحاجة. وطبعًا الحالة لازم
+     تكون مفهومة من النص والبنية، مش اللون لوحده.» — Red is a semantic
+     colour for errors, wrong entries and refused states where needed, as well
+     as for the irreversible action; a state is always understood from text
+     and structure, never from colour alone (WCAG 2.1 SC 1.4.1). **Amends**
+     Decision 69 (b) "Design files" (S3-10: "red means the one irreversible
+     action, Reset everything") and the F-02 line "Red stays reserved unless
+     Karim changes tokens.css (S2-13)"; **closes** Freeze open item S2-13.
+     Green keeps its one job ("Correct in DEIXEN"). Nothing here says anything
+     about real Amadeus colours: no such claim is made without verified
+     evidence (D12). It needs a `tokens.css` change (the role comments and,
+     where needed, a role for the error state); that change lands with the
+     chosen identity (D78), not before.
+  3. «هنختبر المنتج على متعلم حقيقي مش عارف تفاصيل المشروع. أخويا هيكون من أوائل
+     المتدربين في الاختبار. نتيجة الاختبار ده تعتبر evidence حقيقية،
+     وهنستخدمها لاكتشاف مشاكل الوضوح، المسار، التعليمات، السيناريو، كمية
+     المحتوى، اللغة، وطريقة عرض النتائج.» — The learner re-test (F-11) runs
+     with a real learner who does not know the project; Karim's brother is
+     among the first. Its results are real evidence for clarity, the path,
+     the instructions, the scenario, the amount of content, the language and
+     how results are shown. When it runs stays Karim's choice (D69 (c)).
+  4. «إعادة مشاهدة الشرح متاح للمتعلم بقدر ما يحتاج، لكن إعادة المشاهدة لا تضيف
+     progress جديد، ولا evidence جديد، ولا achievement، ولا أي قيمة تقييمية
+     إضافية. الهدف من الشرح هو الفهم، مش زيادة التقدم بسبب التكرار.» — Replaying
+     an explanation is allowed as often as the learner needs; a replay adds no
+     progress, no evidence of skill, no achievement and no assessment value.
+     **Consistent with the current rules** (Build Spec: Ghost Mode never above
+     INTRODUCED; each replay records one `ghost_played`, which only marks help
+     — the next entry on that skill does not count as done on your own, F-07 —
+     and never raises a skill state). Reading recorded here: that event is a
+     record of help, not new evidence of competence. No change needed.
+  5. «عايزين نعلّم المتعلم recovery: يعني لو نفذ حاجة صحيحة لكنها كانت خارج سياق
+     المهمة أو خارج المسار المطلوب، لازم يتعلم إيه اللي حصل، وليه خرج عن
+     المسار، وإزاي يرجع للمسار الصح ويكمل المهمة. لكن ممنوع اختراع أي طريقة
+     recovery أو أي أمر في Amadeus من عندنا؛ الطريقة نفسها لازم تكون مبنية على
+     سلوك موثق وحقيقي في Amadeus.» — A learning requirement: when a learner
+     makes an entry that is correct but outside the task or the required path,
+     DEIXEN teaches what happened, why it left the path and how to return and
+     finish. The recovery method itself comes only from verified Amadeus
+     behaviour (D12, D13; verify → spec → build → test). It joins the
+     curriculum work of Phase 6 (with the LDS's error-recovery practice); it is
+     learning logic and content, outside any design round.
+  6. «تفاصيل المحتوى الدقيقة لسه مش مجمدة. اللي اتحسم هو أهداف التعلم، والبنية
+     التعليمية الأساسية، والعلاقة بين الدرس والممارسة، والحدود اللي بيفرضها
+     المحتوى الحقيقي. أما طول الشرح، الصياغة، ترتيب بعض الجمل، عدد الملاحظات،
+     كمية التوجيه، الأمثلة، وكمية النص الظاهر، فدي كلها حاجات ممكن نعدلها بعد
+     ما نشوف التصميم ونتيجة اختبار المتعلم.» — Fixed: the learning objectives,
+     the basic learning structure, the relation between lesson and practice,
+     and the limits real content sets. Adjustable after the design and the
+     learner test: length, wording, sentence order, the number of notes, the
+     amount of guidance, examples and the amount of visible text. Such changes
+     go through the content pipeline as before (Karim approves the words, D28;
+     both copies identical, F-21; anything Amadeus under D12/D13). A design
+     round or the exploration tool may note where content does not fit; it
+     never rewrites learning content itself (D69 (b) limit 4 stands).
+  7. «المنتج لازم يدعم العربية والإنجليزية من البداية، مش كإضافة مستقبلية.
+     العربية RTL والإنجليزية LTR، وده لازم ينعكس من البداية على تخطيط الصفحات،
+     والمحاذاة، والقوائم، والجداول، والتنقل، والمكونات، والمحتوى التعليمي.» —
+     Arabic (RTL) and English (LTR) from the start in layout, alignment, lists,
+     tables, navigation, components and learning content. **Confirms**
+     Decision 11 and the slice as built; every design direction is tested in
+     both from its first round.
+  Files changed: 07, 13, Execution Plan, 04, 00 (A10). Reached later, by the
+  tasks that implement them: `tokens.css` and the boards (items 1–2, with
+  D78), the Build Spec (item 2 when implemented; item 5 with its Phase 6
+  chunk), the curriculum files 06/LDS (item 5), the content files (item 6,
+  each change approved by Karim).
+
+- **Decision 78 — An identity exploration before Step 4, over the whole
+  visual identity; the Design Exploration Skill accepted. Closed — Karim,
+  2026-10-05** (D29 items 2 and 4: visual direction, and a change to the
+  work sequence). Karim chose, in the project chat, to explore the identity
+  first and implement it once, rather than run Step 4 on the light design and
+  redo it later. **Sequence:** before detour step 4, an identity exploration
+  runs; Step 4 waits. It is not a fifth detour step and not a gate; Step 4 is
+  prepared only after Karim has recorded his choice from it. **Scope — what
+  it opens:** the whole visual identity: colour (dark as the primary
+  direction, D77 item 1; red for errors and refused states, D77 item 2),
+  typography (the approved typefaces of D42 (b) may be challenged), surfaces
+  and materials, composition, layout, hierarchy and density, iconography and
+  imagery, motion, Terminal presentation (styling and container), and the way
+  information and states are shown. The wordmark, logo and lockup only when
+  the exploration question names them. **What stays closed:** the product
+  and its structure (the five areas; the Terminal at the centre, Constitution
+  §12); the name (provisional, Constitution §1 — not explored); engine output
+  rendered exactly as received (D69 (b) limit 1); what counts as an attempt,
+  hint, reveal or mastery, and when learning support appears (limits 2–3);
+  learning content and the wording of verified Amadeus output and training
+  messages (limit 4; content changes follow D77 item 6); 07 D30 placement;
+  the jobs of colour as amended by D77 item 2 (one job per colour except red,
+  which carries errors and the irreversible action, never by colour alone);
+  WCAG 2.1 AA; Arabic and English, RTL and LTR (D77 item 7). **How:** with the
+  DEIXEN Design Exploration Skill (v1.1) in open identity mode, in a fresh
+  session (Opus 5.5, Max): Claude Code on Karim's computer, in a working
+  folder outside both repositories (there the named typefaces render, and
+  Node, Playwright and Chromium are present), or a chat in the DEIXEN
+  claude.ai Project. Its log is a working file outside both repositories,
+  kept in the Project (`claude/design-exploration/`). **What it may change:** nothing in `deixen-app`,
+  `DEIXEN-KNOWLEDGE`, `tokens.css`, the boards, the content files or 07.
+  Everything it produces is a proposal (D77). **After it:** Karim chooses a
+  direction, or none; his choice is recorded in 07 as a new decision, which
+  also restates Step 4's design scope so that Step 4 can implement the chosen
+  direction (the `tokens.css` dark theme under the existing role names, the
+  red role of D77 item 2, the typefaces and boards as chosen). Until that
+  decision exists, D69 (b) stands unchanged. Step 4's base stays the tag
+  `step4-base` Karim created on 2026-10-05 at `main` =
+  `8f9c355f3407fdbc33c9eebc5f7ff65e3989a434` (its SHA to be confirmed
+  read-only before the Step 4 prompt is final). **The Skill (D70):** Karim
+  installed it in claude.ai and Claude Code on 2026-10-05 and uses it for this
+  exploration; this is his acceptance of it as a tool. The project lead
+  updated it to v1.1 for D77 and D78 (tooling only; Karim re-installs it).
+  The Prompt 7 report's open points are answered: the colour conflict and the
+  dark-versus-D31 difference by D77 items 1–2; Step 4 and dark by this
+  decision; the Project instructions' copy of the Constitution now matches
+  the repository (Karim, 2026-10-05; closes the D71 follow-up); install and
+  Claude Design as the report recommends. Files changed: 07, 13, Execution
+  Plan §3 and §7 and status line, 00 (A10).
 
 ## Definition of Done — for the current frozen vertical slice
 

@@ -42,6 +42,15 @@ as Non-Negotiable Product Rule #2 in
 > which the approved design must still meet. The name and identity stay
 > provisional (Constitution §1); a dark theme is not designed. The rest of
 > this section is the pre-choice framing, kept for context.
+>
+> **Update 2026-10-05 (07 Decisions 77–78).** Karim decided that the
+> product's primary visual direction is dark (it supersedes D31's
+> "light-led" item) and that red also marks errors, wrong entries and refused
+> states — never by colour alone. The kind of dark and the visual language
+> are not designed yet: an identity exploration runs before detour step 4
+> (07 D78). Until Karim records the chosen direction, the approved light
+> `tokens.css` stays in the code. Principles, accessibility, breakpoints and
+> anti-patterns below apply to any direction.
 
 **Design Execution — OPEN (pre-choice framing; closed for the slice by 07 D42).** Exact colors and token values, typography/font
 choices, logo/wordmark, visual identity, composition and layout language,
