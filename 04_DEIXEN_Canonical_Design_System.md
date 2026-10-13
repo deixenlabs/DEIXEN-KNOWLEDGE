@@ -51,6 +51,15 @@ as Non-Negotiable Product Rule #2 in
 > (07 D78). Until Karim records the chosen direction, the approved light
 > `tokens.css` stays in the code. Principles, accessibility, breakpoints and
 > anti-patterns below apply to any direction.
+>
+> **Update 2026-10-13 (07 Decisions 80–81).** Karim chose the identity: the
+> DEIXEN Kit (dark; JetBrains Mono for the record, Inter and Noto Sans Arabic
+> for DEIXEN's words), read from `design/identity/`, and Option C (one
+> composition in both languages; Arabic text right-to-left inside each part).
+> It replaces direction A "Margin" in the app at Step 4. Exact values stay in
+> the kit and, after Step 4, in `tokens.css`; this document keeps principles,
+> accessibility, breakpoints and anti-patterns, which the identity must still
+> meet (WCAG 2.1 AA wins where a value fails, 07 D81 (e) item 2).
 
 **Design Execution — OPEN (pre-choice framing; closed for the slice by 07 D42).** Exact colors and token values, typography/font
 choices, logo/wordmark, visual identity, composition and layout language,

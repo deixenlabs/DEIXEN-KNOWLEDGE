@@ -461,7 +461,7 @@ entry says so; such meanings are never taught.
 
 Handling of U-06–U-11 in the slice: 07 Decision 27 (K6) — partly shown
 details (U-07 first part, U-09, U-10, U-11) are drawn in the verified
-pattern with a "Layout detail not fully verified" marker, never taught, and
+pattern with the marker (`ui.unverifiedMarker`, wording 07 D81 (d)), never taught, and
 disclosed; details with no official pattern (U-07 second part, U-08) are
 training messages under 07 Decision 23. Details: Build Spec §5. U-12–U-14:
 Build Spec §6 and §12.

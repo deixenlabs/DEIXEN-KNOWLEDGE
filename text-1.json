@@ -111,7 +111,7 @@
  "coach.growth.reinforce": "يحتاج إلى تدريب من جديد: {COMMANDS}. ظهر خطأ جديد بعد إدخالات صحيحة سابقة.",
  "coach.growth.assessmentUnmet": "آخر تقييم لم تُحتسب فيه كل الخطوات صحيحة. يمكن لتقييم جديد أن يُظهر المسار الكامل يعمل.",
  "ui.trainingLabel": "رسالة تدريبية",
- "ui.unverifiedMarker": "تفصيل في الشكل غير موثَّق بالكامل",
+ "ui.unverifiedMarker": "النمط الرسمي في Amadeus، لكن تفاصيله الصغيرة قد تختلف في النظام الحقيقي، فلا تحفظها.",
  "ui.correctInDeixen": "صحيح في DEIXEN",
  "ui.doneOnYourOwn": "نفّذتها بمفردك",
  "ui.hintLabel": "التلميحات المستخدمة في هذه الجلسة: {N}",

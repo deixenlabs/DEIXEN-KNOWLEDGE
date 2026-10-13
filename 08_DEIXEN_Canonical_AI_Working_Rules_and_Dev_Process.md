@@ -868,7 +868,9 @@ Where applicable, verify that:
 - state persists correctly across navigation;
 - storage saves and retrieves correctly across multiple sessions;
 - current-session boundaries are respected;
-- RTL/LTR switching does not break layout, including header mirroring;
+- RTL/LTR switching does not break layout (since 07 D80 the composition and
+  header order stay the same in both languages; Arabic text is right-to-left
+  inside each part);
 - shared components do not regress when downstream screens change them;
 - Terminal behavior remains consistent across the affected flows.
 

@@ -90,6 +90,15 @@ entry outside these limits gets the "not covered in this slice" message
     from the string files (interface words: `ui.*` keys, 07 D43). Where a
     frame and this spec disagree, this spec wins and the difference is
     reported (CLAUDE.md §6).
+- **[D] The chosen identity (07 D80–D81, 2026-10-13)** replaces the look
+  of direction A "Margin" at Step 4: the DEIXEN Kit and its reference
+  renders, read-only in `DEIXEN-KNOWLEDGE/design/identity/` (sha256 in its
+  `MANIFEST.md`); typefaces JetBrains Mono, Inter and Noto Sans Arabic;
+  Option C (one composition in both languages). For Step 4, 07 D81 (e) is
+  the design scope and wins over the visual-design bullet above where they
+  differ (the token file is edited for this identity; the boards stay the
+  record of structure, behaviour, words, ARIA and the phone and tablet
+  layouts). Until Step 4 lands, the app keeps the bullet above.
 - **[D] Accessibility and breakpoints:** file 04 (WCAG 2.1 AA; keyboard;
   320–1440 px). Terminal workspace is never sacrificed on mobile. How the
   build proves it: §7D items 5–7 (07 D63).
@@ -194,7 +203,9 @@ columns in a fixed-width font. No screen remains `UNVERIFIED-LAYOUT`.
 
 **[D] Partly verified details (07 D27, K6).** Details that official
 examples show only in part are drawn in the verified pattern with a visible
-marker (`ui.unverifiedMarker`: "Layout detail not fully verified"), never
+marker (`ui.unverifiedMarker`; wording since 07 D81 (d): "Official Amadeus
+pattern; small details may differ in the real system, so don't memorise
+them."), never
 taught, and listed in the Scope Disclosure (`disc.6`, `disc.7`). The marker
 is a fourth visual element beside the three kinds of output: it labels a
 display, it is not a message. Details with no official pattern at all stay
@@ -989,7 +1000,8 @@ would need a new string, token, event field or a changed rule is a stop
    approved Arabic content itself writes (glosses such as «البيع المختصر
    (short sell)», the PRINT element names, "Received From", "fare basis",
    and key names such as "Enter" — 07 D64, app I-24); interface right-to-left,
-   Terminal and commands left-to-right (07 D32); arrows and other
+   Terminal and commands left-to-right (07 D32; since 07 D80 the desktop
+   composition does not swap: Arabic text is right-to-left inside each part); arrows and other
    directional signs mirror, non-directional ones do not; digits written as
    the approved Arabic boards write them, the same way everywhere (if the
    boards themselves disagree, stop and ask); no clipped or broken word with

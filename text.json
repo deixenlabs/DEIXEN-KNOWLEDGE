@@ -111,7 +111,7 @@
  "coach.growth.reinforce": "Needs practice again: {COMMANDS}. A new error came after earlier correct entries.",
  "coach.growth.assessmentUnmet": "The last assessment did not count every step as correct. A new assessment can show the full path working.",
  "ui.trainingLabel": "Training message",
- "ui.unverifiedMarker": "Layout detail not fully verified",
+ "ui.unverifiedMarker": "Official Amadeus pattern; small details may differ in the real system, so don't memorise them.",
  "ui.correctInDeixen": "Correct in DEIXEN",
  "ui.doneOnYourOwn": "Done on your own",
  "ui.hintLabel": "Hints used in this session: {N}",

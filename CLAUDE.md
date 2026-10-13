@@ -32,6 +32,7 @@ one owner per truth):
 | `DEIXEN_Slice_Build_Spec.md` | What to build — always |
 | `DEIXEN_Amadeus_Verified_Reference.md` | Any Amadeus syntax, message, or display — the only source |
 | `design/phase4/` — the approved Phase 4 boards listed in spec §2, `tokens.css`, and `MANIFEST.md` (read-only copy of the Claude Design canvas, 07 D45) | Anything visual: layout, identity, states, controls (spec §2 says which boards and how to read them) |
+| `design/identity/` — the chosen identity (the DEIXEN Kit, its reference renders, the final boards) and `MANIFEST.md` (07 D81) | The look from Step 4 on: 07 D81 (e) says how it and the Phase 4 boards are read together |
 | `07_DEIXEN_Canonical_Decisions_and_Current_State.md` | Only when the spec cites a decision you need to read |
 
 Do not read the Learning Design Specification or the Learning Experience
@@ -52,8 +53,8 @@ stop and report (§6).
    Decision 30). A wrong entry of a known command shows its feedback item's
    `terminalLine` and leaves the PNR unchanged (Decision 33); a long
    training message shows its first sentence only (Decision 34). A detail the spec lists as partly verified (spec §5, Decision
-   27) is drawn in the verified pattern with the "Layout detail not fully
-   verified" marker and never taught; anything with no verified pattern is a
+   27) is drawn in the verified pattern with the marker (`ui.unverifiedMarker`)
+   and never taught; anything with no verified pattern is a
    training message — never a guessed Amadeus look.
 3. **No Amadeus content authoring.** Lessons, feedback texts, Ghost Mode
    scripts, task and scenario data come as content files written by the
@@ -90,7 +91,9 @@ stop and report (§6).
   `ESCALATION_ERROR_COUNT`) live in one config file.
 - Visual values come only from `src/styles/tokens.css` — the approved
   token file (07 Decision 42), used unchanged; check its sha256 against 07
-  D42 when you add it. Components use its role tokens, never raw colours or
+  D42 when you add it. Exception, Step 4 only: 07 D81 (e) item 1 lets Step 4
+  edit it to implement the chosen identity; its new sha256 is recorded when
+  Karim accepts the Detour Closing Report. Components use its role tokens, never raw colours or
   sizes. A value the design needs that the file lacks: stop and ask (§6).
 - Read the design from `../DEIXEN-KNOWLEDGE/design/phase4/` (spec §2;
   07 D45), not from the canvas. Check a board's sha256 against
@@ -172,7 +175,9 @@ step.
 - [ ] Events persist across reload; schema mismatch triggers reset; reset
       clears everything.
 - [ ] No cross-session merging in assessment; carry-over disclosed.
-- [ ] Arabic/RTL and English/LTR both render; layout mirrors correctly.
+- [ ] Arabic/RTL and English/LTR both render; Arabic text inside each part
+      is RTL and right-aligned; the composition is the same in both
+      languages (07 D80).
 - [ ] Breakpoints 320 / 360 / 390 / 430 / 768 / 1024 / 1280–1440 px.
 - [ ] Keyboard-only use works, including the Terminal input.
 - [ ] No raw colour or size outside `tokens.css`; screens match the
