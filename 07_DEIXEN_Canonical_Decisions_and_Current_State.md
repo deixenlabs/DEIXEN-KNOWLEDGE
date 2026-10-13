@@ -3166,7 +3166,9 @@ If a dependency has not landed:
   of handoff 2026-10-13 (j) §9: choose this identity, with the two lines in
   (b) below); Part 2, 22:21 — «موافق إن الجزء التاني ما يغيّرش حاجة، يعني لا B
   ولا C، وتتسجّل الهوية زي ما اخترتها في الجزء الأول». He approved the restated
-  scope (d)–(f) and the folder (g) on [DATE/TIME, his words].
+  scope (d)–(f), the folder (g) and not using Claude Design's refinement on
+  2026-10-13, 22:58 — «موافق علي توصياتك..» (the project lead's three
+  recommendations in the chat).
 
   **(a) What is chosen.** The DEIXEN Kit (desktop), Kit v0.2.1 of 2026-10-13
   as Karim chose it, with its reference renders — the Terminal states sheet r1
