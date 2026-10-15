@@ -1,6 +1,6 @@
 ---
 name: DEIXEN Execution Plan
-status: GOVERNING — approved by Karim on 2026-09-24 (07 Decision 16); the four-step detour between Phase 5 and Phase 6 inserted by Karim on 2026-10-02 (07 Decision 68); the detour's Freeze accepted and recorded, and Prompt 7 authorized, 2026-10-03 (07 Decisions 69–70); before-Step-4 tasks 1 (F-19), 2 (F-02), 3 (F-03), 4 (F-05) and 5 (F-04 (A)(B)) landed, 2026-10-04 (07 Decisions 72–76); Karim's owner decisions and an identity exploration inserted before step 4, 2026-10-05 (07 Decisions 77–78); Claude Design may refine the direction Karim chooses after the identity exploration, 2026-10-06 (07 Decision 79); Option C, 2026-10-12, and the chosen identity with Step 4's restated design scope and the `design/identity/` folder, 2026-10-13 (07 Decisions 80–81); Step 4 under way, its plan and checkpoint answered and a lighting comparison requested, 2026-10-15 (07 Decision 82); the light, no boxes and the typeset wordmark, and Step 4's Detour Closing Report accepted, 2026-10-15 (07 Decisions 83–84); the Step 4 branch merged into `main`, 2026-10-15 (07 Decision 85)
+status: GOVERNING — approved by Karim on 2026-09-24 (07 Decision 16); the four-step detour between Phase 5 and Phase 6 inserted by Karim on 2026-10-02 (07 Decision 68); the detour's Freeze accepted and recorded, and Prompt 7 authorized, 2026-10-03 (07 Decisions 69–70); before-Step-4 tasks 1 (F-19), 2 (F-02), 3 (F-03), 4 (F-05) and 5 (F-04 (A)(B)) landed, 2026-10-04 (07 Decisions 72–76); Karim's owner decisions and an identity exploration inserted before step 4, 2026-10-05 (07 Decisions 77–78); Claude Design may refine the direction Karim chooses after the identity exploration, 2026-10-06 (07 Decision 79); Option C, 2026-10-12, and the chosen identity with Step 4's restated design scope and the `design/identity/` folder, 2026-10-13 (07 Decisions 80–81); Step 4 under way, its plan and checkpoint answered and a lighting comparison requested, 2026-10-15 (07 Decision 82); the light, no boxes and the typeset wordmark, and Step 4's Detour Closing Report accepted, 2026-10-15 (07 Decisions 83–84); the Step 4 branch merged into `main`, 2026-10-15 (07 Decision 85); F-09's presentation pattern chosen, 2026-10-15 (07 Decision 86)
 owns: Work sequence, phases, gates, current phase, and role assignments
 does not own: how work is performed (Operating Constitution); decisions (07); Amadeus truth (Amadeus Verified Reference)
 replaces: DEIXEN_MASTER_PRE_OPUS_FOUNDATION_PREPARATION_PLAN-1.md and DEIXEN_MASTER_EXECUTION_ROADMAP.md (both historical from 2026-09-24)
@@ -131,9 +131,9 @@ started by Karim, the first from `phase-5-final` and each later one from
 `8f9c355`; F-20 done by Karim. Karim tagged the base `step4-base` (2026-10-05); Prompt 7 built the Design Exploration Skill and Karim accepted it (07 D70, D78). On 2026-10-05 Karim recorded seven owner decisions (07 D77; among them: the primary visual direction is dark, and red also marks errors) and chose to explore the identity before step 4 (07 D78). The identity exploration ran 2026-10-05 to 2026-10-13: Karim decided Option C (07 D80) and chose the identity — the DEIXEN Kit, read from `design/identity/`, without a Claude Design refinement — and Step 4's design scope is restated (07 D81). Step 4 ran on a separate branch (Claude Code, Opus 5.5,
 Max — 07 D69, S3-06; 07 D82–D83), and Karim accepted its Detour Closing
 Report on 2026-10-15 (07 D84); the branch is merged into `main` (07 D85:
-`main` = tag `detour-step4` = `73e4b3a`). Next: the
-before-Phase-6 tasks (07 D69 (c)); F-09 waits for Karim's choice of a
-presentation pattern (07 D84 (f)). The learner
+`main` = tag `detour-step4` = `73e4b3a`). Karim chose F-09's presentation
+pattern, the opened display (07 D86). Next: the before-Phase-6 tasks
+(07 D69 (c)), F-09 among them with that pattern. The learner
 re-test runs after step 4 or at the start of Phase 6, as Karim chooses; it
 is not a gate (07 D69, F-11). Phase 6 starts when Karim starts it, after
 the before-Phase-6 tasks have landed (07 D69 (c), D84).
