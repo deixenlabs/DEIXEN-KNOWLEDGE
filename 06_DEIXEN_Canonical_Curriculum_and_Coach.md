@@ -126,6 +126,25 @@ keeps Ghost Mode automatically in sync with the actual engine reference
 above rather than drifting into its own invented version of what a command
 does.
 
+**`annotate` — a fourth step type (added 2026-10-15, 07 D69 F-09, D86–D87).**
+
+```json
+{ "type": "annotate",
+  "groups": [ { "header": ["ann.displayName"], "line": ["ann.lineNumber"], "text": "ghost.ann.L01.1" } ] }
+```
+
+It follows the `reveal` whose display it names and names that display's
+parts the way the learner's own displays are named on request (the opened
+display, 07 D86): `header` and `line` list name keys for the header line and
+the display's named lower line; `text` is the sentence the demonstration
+shows with that group. Groups arrive one after another and stay; no motion.
+Like `reveal`, it never invents output: it names only parts of the live
+engine's display, with names that restate a verified field identity or a
+not-taught detail of the Scope Disclosure — never that detail's meaning.
+Diagnostic only: nothing is recorded. In the first-build slice it is used
+after the `AN` reveal of L01, the `SS` reveal of L02 and the last `ER`
+reveal of L08 (`slice.json` `ghostScripts`; Slice Build Spec §7E item 6).
+
 ### Speed Drills
 
 A sub-mode inside Practice that repeats an already-implemented command and

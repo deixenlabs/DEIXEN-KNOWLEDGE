@@ -1583,6 +1583,17 @@ restated here.
 
 **Status:** "PENDING DECISION" — NEW CANDIDATE — REQUIRES INDEPENDENT REVIEW
 
+> **Answered for the first-build slice — 2026-10-15 (07 D69 F-09, D86,
+> D87).** Karim adopted this candidate as F-09's field annotations: on
+> request in practice and the scenario, and in Ghost Mode's `annotate`
+> step (06), a display opens and names its header's and lower line's
+> parts — solid for verified field identities, dashed and "not taught"
+> for the details the Scope Disclosure lists. Not in the assessment; not
+> for `FXP`/`FQD` until after the re-test. Rules: Slice Build Spec §7E. A
+> wider familiarization layer (modes, a reading-first stage) is not
+> decided and stays outside the frozen slice. The text below is kept as
+> the record of the candidate.
+
 **Observation:** A first-time or low-familiarity learner may be able to learn a command conceptually yet still lack the ability to read and interpret the Terminal interface/output itself — for example, identifying where relevant airport, airline, flight, time, or other operational information appears and how to use that information when acting in the Terminal.
 
 **Potential gap:** The current Learning / Ghost Mode / "TERMINAL_PRACTICE" / Coach architecture provides command learning, demonstration, guided practice, and assistance, but does not appear to explicitly establish a learner-facing Terminal Screen Familiarization / Screen Literacy layer.

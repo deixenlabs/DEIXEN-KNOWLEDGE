@@ -1,6 +1,6 @@
 ---
 name: DEIXEN Amadeus Verified Reference
-status: CURRENT — third edition, 2026-09-25 (Execution Plan Phase 3.1–3.2; screen layouts added for Build Spec gap G1); amended 2026-09-25 at the readiness check (3.6): U-12–U-14, handling note updated to 07 Decision 27; amended 2026-09-26 (07 Decision 49): V-14 weekday codes, V-18 segment line after end of transaction; amended 2026-09-28 (07 Decision 50): DEIXEN renderings of the `FQD` display (V-16) and of the header after end of transaction (V-18). Scope so far: the first-build slice (07 Decisions 22, 24) and its prerequisites.
+status: CURRENT — third edition, 2026-09-25 (Execution Plan Phase 3.1–3.2; screen layouts added for Build Spec gap G1); amended 2026-09-25 at the readiness check (3.6): U-12–U-14, handling note updated to 07 Decision 27; amended 2026-09-26 (07 Decision 49): V-14 weekday codes, V-18 segment line after end of transaction; amended 2026-09-28 (07 Decision 50): DEIXEN renderings of the `FQD` display (V-16) and of the header after end of transaction (V-18); amended 2026-10-15 (07 Decision 87): U-15–U-16, the handling note. Scope so far: the first-build slice (07 Decisions 22, 24) and its prerequisites.
 owns: The single authority for real Amadeus behavior (07 Decision 15). Only entries marked VERIFIED here may be taught or simulated (07 Decision 13).
 does not own: product, curriculum, or learning decisions; what any DEIXEN code does (implementation truth)
 ---
@@ -458,13 +458,18 @@ entry says so; such meanings are never taught.
 | U-12 | What must follow the number or text in a contact SSR: whether an ending is required, and what it contains | Conflicting / non-official sources. Every official example has an ending: `SRCTCM-3054996244/US`, `SRCTCMAFHK1-0034563214/P1`, `SRCTCR-REFUSED/P3`, `SRCTCRSNHK1-REFUSED/P4` (Service Hub page of V-13). Two re-hosted training references describe the ending as a slash and the country of the phone number (`SRCTCM-4164915050/CA`; `SRCTCM-9837486432/XX`) — provenance not established. An airline notice gives the bare format `SRCTCM-Phone number`. Sources: https://www.scribd.com/document/873058229/Amadeus-Quick-Reference-PNR-Formats-Part-Two ; https://www.scribd.com/document/791436192/Amadeus-Quick-Reference ; Turkish Airlines notice, https://airc.ir/Circular/2020/TK/Passenger-Information.pdf (all accessed 2026-09-25). Handled by Build Spec §12 K7 |
 | U-13 | Which name titles are accepted besides `MR` (e.g. `MS`, `MRS`) | Official examples found show `MR` or no title (V-07, V-10, V-18); one non-official source lists `MR`/`MS` only. The slice uses `MR` |
 | U-14 | That the PRINT "Phone" element (V-08) is the `AP` element | No source states it directly. An official course outline lists "How to add the AP, RF and TK elements" under PNR mandatory elements (https://www.learn.amadeus.com/OnlineCourse-1513851695-module-24.en.htm) — suggestive, not a statement. The slice requires `AP` as a DEIXEN task rule; its message does not claim Amadeus behavior |
+| U-15 | Meaning of the one-letter codes after the equipment in the segment line of a sell response or of a PNR before end of transaction (DEIXEN rendering `E 0`) | V-15 records them only as "further one-letter codes", meanings not stated; no source found states them. Not marked: the `SS` and `NM` displays have no marker reason (07 D74); named with a dashed line and never taught in F-09 annotations (07 D87) |
+| U-16 | Meaning of `HK1` in a stored `SSR CTCM` line | V-18 records the displayed form (`SSR CTCM` + airline + `HK1` + number) but no source found states what `HK1` means there. The displays that hold this line are already marked (U-07); named with a dashed line and never taught in F-09 annotations (07 D87) |
 
 Handling of U-06–U-11 in the slice: 07 Decision 27 (K6) — partly shown
 details (U-07 first part, U-09, U-10, U-11) are drawn in the verified
 pattern with the marker (`ui.unverifiedMarker`, wording 07 D81 (d)), never taught, and
 disclosed; details with no official pattern (U-07 second part, U-08) are
 training messages under 07 Decision 23. Details: Build Spec §5. U-12–U-14:
-Build Spec §6 and §12.
+Build Spec §6 and §12. U-15–U-16 (07 D87): shown as official examples show
+them, never taught, listed in the Scope Disclosure (`disc.6`), and named with
+a dashed line in F-09's field annotations (Build Spec §7E); U-15 adds no
+marker (Build Spec §5).
 
 ## 4. Research backlog — outside the slice (not yet researched under D12)
 
@@ -482,3 +487,4 @@ UNVERIFIED until researched.
 | 2026-09-25 | Amendment (readiness check 3.6): new U-12 (contact-SSR endings), U-13 (name titles), U-14 (`AP` as PRINT Phone); §3 handling note now cites 07 Decision 27; V-17 rendering uses the task passenger `ALHARBI/SAAD MR` (fictional data only). No V- entry changed |
 | 2026-09-26 | Amendment (07 Decision 49): V-14 — the seven weekday codes of the `AN` header verified from official examples (Karim's in-session answer to app issue I-5 confirmed); V-18 — segment line after end of transaction recorded. U-09 unchanged (the header number's meaning stays unverified) |
 | 2026-09-28 | Amendment (07 Decision 50): V-16 — DEIXEN rendering of the `FQD` display, with what is left out and why; V-18 — DEIXEN rendering of the header after end of transaction (day without leading zero, `HHMMZ`). No claim changed |
+| 2026-10-15 | Amendment (07 Decision 87, F-09's content): new U-15 (the one-letter codes after the equipment, V-15) and U-16 (`HK1` in a stored `SSR CTCM` line, V-18), so the Scope Disclosure, the field annotations and this file list the same not-taught details; §3 handling note extended. U-09 unchanged. No V- entry changed |

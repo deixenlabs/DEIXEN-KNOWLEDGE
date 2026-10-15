@@ -1,6 +1,6 @@
 ---
 name: DEIXEN Slice Build Spec
-status: CURRENT — APPROVED by Karim 2026-09-25 (07 Decision 26). Updated 2026-09-25: gaps G1–G3 (§5, §12); Decision 27 (K5, K6) applied to §4, §5, §12, §13; K7 (§6 row 5, §12) approved in the Phase 3 gate (07 D28). Phase 4, 2026-09-25: 07 Decisions 30, 32–34, 36 applied to §5 and §13; Decisions 37–38 to §4 and §8. Phase 4 gate, 2026-09-26: 07 Decision 42 (approved design, `tokens.css`) applied to §2; Decision 44 (`AN` header number) to §5 and §12; Decision 45 (boards exported to `design/phase4/`) to §2. Phase 5, 2026-09-26: 07 Decisions 46 (`result` on ending events) and 47 (one tab at a time) applied to §11. 2026-09-26: 07 Decision 49 applied to §6 ("not recognized" vs "not covered") and new §6A (rules for build step 2 part B). 2026-09-28: 07 Decision 50 — §6A items 8–10. 2026-09-28: 07 Decision 52 — new §7A (rules for build step 3), pointers in §8, §10, §11. 2026-09-28: 07 Decision 53 — §7A items 1 (return to practice, app I-12) and 14 (data-reset notice). 2026-09-28: 07 Decision 54 — new §7B (rules for build step 4: the current step for hints, hint levels on the screen, the entry field, parts 4A/4B, load notices), pointer in §8. 2026-09-29: 07 Decisions 55–56 — §7A item 1 (a run also starts at an accepted hint request, app I-12), items 1 and 11 and §9 (pointers to the in-app exit), §7B heading and new items 6–10 ("Booking as it stands", leaving a running assessment or scenario, storage refused, the name as a string key, behaviours over time); 07 Decision 57 — §7B items 11–15 (the Flight Deck's recommended action, the practice run when moving between screens, Learning, Ghost Mode replays, when the scenario and the assessment start). 2026-09-30: 07 Decision 58 — §7B items 16–18 (the way into Ghost Mode, Ghost typing speed, "In your task"); 07 Decision 59 — §7A item 13, §7B item 11 (d) and §10 ("the scenario completed" means completed with every checklist item met), §7B items 19–20 (the scenario and assessment rows; the assessment and scenario screens). 2026-09-30: 07 Decision 61 — new §7C (rules for build step 5, Coach: when each Coach text shows, Coach and independence, the assessment and the scenario, the bypass, the escalation count, the Growth note, the five touchpoints), pointers in §6A item 2 and §8. 2026-10-01: 07 Decision 62 — §7C item 6 (the escalation offer may follow the bypass notes in practice, app I-22). 2026-10-01: 07 Decision 63 — new §7D (rules for build steps 6 and 7: step 6 as a check with a Definition of Done trace, the end note in view, the scrolling notes block, the phone drawer, what the accessibility baseline means here, the localization and breakpoint passes, lockup B, what automated checks cannot prove), pointers in §2 and §13. 2026-10-02: 07 Decision 64 — §7B item 17 and §7D item 5 (d) corrected (`--motion-demo-hold` stays under reduced motion: a still reading pause, app I-23); §7D item 6 (English terms written in the approved Arabic content are allowed, app I-24). 2026-10-04: 07 Decision 76 (F-04 (A)(B) landed; 07 D69 F-04 amends D40) — §7 (learner-facing wording: two terms), §7B item 11 (the chain word), §7C item 8 (the chain word), §8 (the note after a valid entry that does not count as done on your own). 2026-10-15: 07 Decisions 83–84 (Step 4 accepted) — §2 (the token file, typefaces and header wordmark of the chosen identity), §7B items 4 and 9, §7D item 8 (the header wordmark set as text). First edition (Execution Plan 3.3); proposals K1–K4 approved (07 Decision 25). With this approval, the LDS/LXA content extracted here is binding for the slice (LDS and LXA reading rules, point 1).
+status: CURRENT — APPROVED by Karim 2026-09-25 (07 Decision 26). Updated 2026-09-25: gaps G1–G3 (§5, §12); Decision 27 (K5, K6) applied to §4, §5, §12, §13; K7 (§6 row 5, §12) approved in the Phase 3 gate (07 D28). Phase 4, 2026-09-25: 07 Decisions 30, 32–34, 36 applied to §5 and §13; Decisions 37–38 to §4 and §8. Phase 4 gate, 2026-09-26: 07 Decision 42 (approved design, `tokens.css`) applied to §2; Decision 44 (`AN` header number) to §5 and §12; Decision 45 (boards exported to `design/phase4/`) to §2. Phase 5, 2026-09-26: 07 Decisions 46 (`result` on ending events) and 47 (one tab at a time) applied to §11. 2026-09-26: 07 Decision 49 applied to §6 ("not recognized" vs "not covered") and new §6A (rules for build step 2 part B). 2026-09-28: 07 Decision 50 — §6A items 8–10. 2026-09-28: 07 Decision 52 — new §7A (rules for build step 3), pointers in §8, §10, §11. 2026-09-28: 07 Decision 53 — §7A items 1 (return to practice, app I-12) and 14 (data-reset notice). 2026-09-28: 07 Decision 54 — new §7B (rules for build step 4: the current step for hints, hint levels on the screen, the entry field, parts 4A/4B, load notices), pointer in §8. 2026-09-29: 07 Decisions 55–56 — §7A item 1 (a run also starts at an accepted hint request, app I-12), items 1 and 11 and §9 (pointers to the in-app exit), §7B heading and new items 6–10 ("Booking as it stands", leaving a running assessment or scenario, storage refused, the name as a string key, behaviours over time); 07 Decision 57 — §7B items 11–15 (the Flight Deck's recommended action, the practice run when moving between screens, Learning, Ghost Mode replays, when the scenario and the assessment start). 2026-09-30: 07 Decision 58 — §7B items 16–18 (the way into Ghost Mode, Ghost typing speed, "In your task"); 07 Decision 59 — §7A item 13, §7B item 11 (d) and §10 ("the scenario completed" means completed with every checklist item met), §7B items 19–20 (the scenario and assessment rows; the assessment and scenario screens). 2026-09-30: 07 Decision 61 — new §7C (rules for build step 5, Coach: when each Coach text shows, Coach and independence, the assessment and the scenario, the bypass, the escalation count, the Growth note, the five touchpoints), pointers in §6A item 2 and §8. 2026-10-01: 07 Decision 62 — §7C item 6 (the escalation offer may follow the bypass notes in practice, app I-22). 2026-10-01: 07 Decision 63 — new §7D (rules for build steps 6 and 7: step 6 as a check with a Definition of Done trace, the end note in view, the scrolling notes block, the phone drawer, what the accessibility baseline means here, the localization and breakpoint passes, lockup B, what automated checks cannot prove), pointers in §2 and §13. 2026-10-02: 07 Decision 64 — §7B item 17 and §7D item 5 (d) corrected (`--motion-demo-hold` stays under reduced motion: a still reading pause, app I-23); §7D item 6 (English terms written in the approved Arabic content are allowed, app I-24). 2026-10-04: 07 Decision 76 (F-04 (A)(B) landed; 07 D69 F-04 amends D40) — §7 (learner-facing wording: two terms), §7B item 11 (the chain word), §7C item 8 (the chain word), §8 (the note after a valid entry that does not count as done on your own). 2026-10-15: 07 Decisions 83–84 (Step 4 accepted) — §2 (the token file, typefaces and header wordmark of the chosen identity), §7B items 4 and 9, §7D item 8 (the header wordmark set as text). 2026-10-15: 07 Decision 87 (F-09's content; the pattern of 07 D86) — §2 (`tokens.css` gets one primitive and one role, §7E item 8), §5 (U-15, U-16), new §7E (rules for F-09, the opened display), §12 (the Screen Literacy candidate answered by F-09). First edition (Execution Plan 3.3); proposals K1–K4 approved (07 Decision 25). With this approval, the LDS/LXA content extracted here is binding for the slice (LDS and LXA reading rules, point 1).
 owns: The single build specification Claude Code implements for the first-build slice. It gathers requirements from their owners and designs the evidence/state schema (delegated to Claude — file 13).
 does not own: any decision (07); Amadeus behavior (Verified Reference); product structure (03); design (Design Brief / Phase 4). Where this file and an owner disagree, the owner wins and the conflict is reported.
 ---
@@ -59,7 +59,8 @@ entry outside these limits gets the "not covered in this slice" message
     tokens (sections 2–9 of the file), never a raw value — the frames follow
     the same rule. `tokens.css` is used unchanged: since Step 4 the file
     whose sha256 is in 07 D84 (the D42 file stays the record in
-    `design/phase4/`).
+    `design/phase4/`), with one exception: the F-09 task adds one primitive
+    and one role (§7E item 8; 07 D86 (d), D87).
   - **Typefaces** (07 D81, D82 (b); they replace those of 07 D42): JetBrains
     Mono for the record (Terminal); Inter for the English interface and Noto
     Sans Arabic for Arabic; weights 400 / 500 / 600; fallbacks as in
@@ -220,10 +221,16 @@ plain training messages (07 D23).
 |---|---|---|
 | `AN` header number before the weekday; figure after each class letter; the `E0` code group | U-09 | V-14 pattern with the values in `slice.json` — the header number is the fixed `displays.AN.headerNumber` (`30`) in every `AN` display, never computed from the date (07 D44); one marker on the display; meanings never taught |
 | `AN` header time when the entry includes a time | U-10 | The time the learner entered, in the V-14 time field, with the marker. Entry without a time → `0000`, as in both official examples (no marker needed) |
-| Stored `SSR CTCM` line with the airline code filled in | U-07 (first part) | V-18 pattern `SSR CTCM` + airline + `HK1` + number, with the marker |
+| Stored `SSR CTCM` line with the airline code filled in; the meaning of its `HK1` | U-07 (first part), U-16 | V-18 pattern `SSR CTCM` + airline + `HK1` + number, with the marker |
 | PNR redisplay after `AP`, `SRCTCM`/`SRCTCR`, `TK`, `RF` | U-11 | V-18 redisplay under the `RP/` header, with the marker |
 | Stored `SRCTCR` line | U-07 (second part) | No official pattern → training message `tm.ctcrLine` in place of the line. SSRs come after `TK` (V-18) and nothing follows them in the slice, so this changes no other element's number |
 | `RF` before end of transaction | U-08 | No official pattern → training message `tm.rfLine`; RF gets no line number |
+
+The one-letter codes after the equipment in a segment line before end of
+transaction (V-15; U-15, 07 D87) are shown as official examples show them
+and never taught, **without a marker**: the sell response and the `NM`
+redisplay have no marker reason (07 D74), and U-15 adds none. `disc.6`
+lists them; F-09 names them with a dashed line (§7E).
 
 **Content (G2, G3):** all lesson, Ghost Mode, task, scenario, feedback,
 hint, training-message, Coach, contract-text and Scope Disclosure wording
@@ -1035,6 +1042,175 @@ would need a new string, token, event field or a changed rule is a stop
     sighted learner meets (07 D29 item 5); screen-reader use stays an open,
     disclosed item.
 
+## 7E. Rules for F-09 — the opened display (07 D86–D87)
+
+**[D] Karim** (the pattern, 07 D86; the names, Ghost Mode texts, `disc.6`
+and `ui.ann.markerFirst`, 07 D87 (a)–(e)) **and by delegation (07 D29)**
+(the token value, the control, Ghost Mode's grouping, the screen-reader
+list; 07 D87 (f)). A before-Phase-6 task (07 D69 (c)), not a build step of
+`CLAUDE.md` §7. F-09 is **diagnostic only**: no event, no event field, no
+stored value, no effect on hints, independence, Coach, skill states or
+Growth. `src/engine/` is not changed; the bridge changes only additively
+(as F-03, 07 D74). Every word comes from the content files (keys below);
+nothing about Amadeus is added — every name restates a field identity of
+V-14, V-15 or V-18, or a not-taught detail `disc.6` lists. A case these
+rules do not cover is a stop (`CLAUDE.md` §6).
+
+1. **What opens, and which lines** (07 D86 (a), D87 (b)–(c)).
+   - **Nameable displays:** `AN` (V-14) — in practice, in the scenario and
+     in Ghost Mode; the sell response (V-15); every booking display before
+     and after `ER` (V-18). **Not** `FXP` (V-17) or `FQD` (V-16) (07 D87
+     (c)), not training lines, not the entry line, not the verified
+     messages (V-09, V-13).
+   - **Two named lines per display:** the header line (names rise above
+     the display) and one lower line (names drop below it).
+   - **`AN`:** the lower line is the last flight line — **unless it is the
+     task's own flight line; then only the header is named** (07 D87 (b)).
+     In the slice: main task line 3 (`6X 405`; the task's flight `6X 403`
+     is line 2); scenario — header only (its last line, line 3, is the
+     task's `6X 515`); Ghost Mode demo (`RUHJED`) line 2. An `AN` entry
+     with a time, or with an airline code, follows the same rule on the
+     display it produces.
+   - **Booking displays:** the lower line is the last line of the Amadeus
+     block. A training line (`tm.rfLine`, `tm.ctcrLine`) is its own block
+     and is never named; the Amadeus block before it is. In the main task:
+     after `SS` and `NM` the segment line; after `AP` the `AP` line; after
+     `SRCTCM`, `TK`, `RF` and `ER` the `SSR CTCM` line (V-18: `TK` before
+     SSRs). In the scenario: the `AP` line, then the `TK` line.
+   - Not reached in the slice, so not built: an `AN` flight whose classes
+     continue on a second line (V-14). If the build meets it, or any other
+     lower line not listed in item 2: stop and ask.
+
+2. **Element map — which part gets which name** (07 D87 (a)). For each
+   nameable block the bridge exposes, additively and outside
+   `src/engine/`, the elements of the header and of the named lower line:
+   the name key, the start and end column in that record line, and the
+   kind (`solid` = a verified field identity; `dashed` = a `disc.6`
+   detail, key `ann.nt.*`). It derives them from the block the engine
+   produced and the V-entry's field order — never by rendering the
+   display a second time, never by guessing. Punctuation between parts
+   (`/`, `.`, `*`, spaces) is not a part and gets no name. **Every other
+   part of a named line has exactly one name; an unnamed part is a stop.**
+
+   | Display, line | Parts in order → key (dashed in *italics*) |
+   |---|---|
+   | `AN` header (V-14) | `** AMADEUS AVAILABILITY - AN **` or `** PRACTICE AIRLINE - AN **` → `ann.displayName`; `DXB` → `ann.destination`; `DUBAI.AE` → `ann.destName`; `30` → *`ann.nt.headerNumber`*; `SU` → `ann.weekday`; `25OCT` → `ann.date`; `0000` (entry without a time) → `ann.time`, or the entered time → *`ann.nt.headerTime`* |
+   | `AN` flight line (V-14) | ` 3` → `ann.lineNumber`; `6X` → `ann.airline`; `405` → `ann.flightNumber`; the class letters → `ann.classes` (one line, to the first letter); the figures → *`ann.nt.classFigure`* (one line, to the first figure); `RUH` → `ann.origin`; `DXB` → `ann.destination`; `1900` → `ann.departure`; `2200` → `ann.arrival`; `E0` → *`ann.nt.e0`*; `321` → `ann.equipment`; `2:00` → `ann.flyingTime` |
+   | Booking header before `ER` (V-15, V-18) | `RP/` → `ann.headerStart`; `XXXXXXXXX` → `ann.officeId` |
+   | Booking header after `ER` (V-18) | `RP/` → `ann.headerStart`; each `XXXXXXXXX` → `ann.officeId`; `XX/XX` → `ann.agentSign`; `5OCT26` → `ann.date`; `0712Z` → `ann.timeZ`; `K7Q2ZP` → `ann.recordLocator` |
+   | Segment line before `ER` (V-15) | `1` → `ann.elementNumber`; `6X` → `ann.airline`; `403` → `ann.flightNumber`; `Y` → `ann.bookingClass`; `25OCT` → `ann.date`; `7` → `ann.dayNumber`; `RUHDXB` → `ann.cityPair`; `HK1` → `ann.status`; `1245` → `ann.departure`; `1545` → `ann.arrival`; `320` → `ann.equipment`; `E 0` → *`ann.nt.letterCodes`* (one line, to the first code) |
+   | Name line (V-18) | element number → `ann.elementNumber`; `ALHARBI` → `ann.surname`; `SAAD` → `ann.firstName`; `MR` → `ann.title` |
+   | `AP` line (V-18) | element number → `ann.elementNumber`; `AP` → `ann.apElement`; `966110000000` → `ann.contactText` |
+   | `TK` line (V-18) | element number → `ann.elementNumber`; `TK OK` → `ann.tkElement`; `05OCT` → `ann.date`; `XXXXXXXXX` → `ann.officeId` |
+   | `SSR CTCM` line (V-18) | element number → `ann.elementNumber`; `SSR CTCM` → `ann.ssrCtcm`; `6X` → *`ann.nt.ctcmAirline`*; `HK1` → *`ann.nt.ctcmHk1`*; `966500000001` → `ann.mobile` |
+
+   Values are the main task's; other runs show their own values in the
+   same parts. A learner-typed ending after the mobile number (§6 row 5,
+   K7) is a part with no name: if the engine shows one, stop and ask.
+
+3. **The geometry** (07 D86 (a)–(b), (d)). The record's text stays whole
+   and unchanged in the middle, `white-space: pre`, never wrapped (D69 (b)
+   limit 1). Each part has its own line: it leaves the part vertically
+   from the part's first character (never across a record character),
+   turns once with the rail's turn (K4, 4 px) and ends beside its name.
+   The part nearest the far edge takes the row nearest the display, and
+   each name sits right of its own line, so **no line crosses another
+   line, a name or a record character**. In Arabic the names are Arabic
+   and a line meets the end of its name (the accepted cost, D86). Solid
+   lines: `--rule-annotate-color`; dashed lines: `--rule-mark-color` with
+   the marker's dash (K6). Names: the DEIXEN voice (K1), `--text-deixen`,
+   in the interface language; a dashed part's name is shown with
+   `ui.ann.nameNotTaught`. Never red (K7, 07 D77 item 2). The display grows
+   while names show; on a phone the record pans as today and the names pan
+   with it (names beyond the visible edge appear when panned).
+
+4. **The control** (07 D87 (f)). One toggle button, the outline control
+   (K10): `ui.ann.show`, while names show `ui.ann.hide`; accessible name
+   `ui.ann.label`; `aria-expanded`; reachable and usable by keyboard. It
+   sits at the end of the **newest** nameable exchange, after its marker
+   note when it has one, on desktop and phone alike; older displays have
+   no control. Opening names on a newer display closes them on the older
+   one. Shown on the practice screen and the scenario screen; **not on
+   the assessment screen** (07 D87 (f): a new aid inside the assessment
+   would change what it measures). Its state is not stored: a reload
+   shows names closed.
+
+5. **Screen readers** (07 D87 (f)). The lines are decoration
+   (`aria-hidden`). While names show, a list (heading `ui.ann.list`)
+   follows the display in display order: a group for the header
+   (`ui.ann.header`), then a group for the lower line (`ui.ann.line` with
+   the line number for an `AN` flight line; `ui.ann.element` with the
+   element number for a booking line). Each item is `ui.ann.item`, or
+   `ui.ann.itemNotTaught` for a dashed part; `{VALUE}` is the part's
+   characters as the record shows them, marked left-to-right
+   (`dir="ltr"`) inside Arabic text.
+
+6. **Ghost Mode's `annotate` step** (06; `slice.json` `ghostScripts`; 07
+   D87 (f)). An object item `{"type": "annotate", "groups": [...]}`
+   follows the entry whose display it names (L01-AN, L02-SS, L08-ER — the
+   last `ER`). Each group has `header` and/or `line` keys and a `text`
+   key; a key names every part with that key on that line. Groups appear
+   one after another and stay; each adds its names and lines to the
+   opened display and shows its sentence in Ghost Mode's panel, then
+   holds for `--motion-demo-hold`. No motion (G6): names and lines appear,
+   they do not move or draw in. Under reduced motion the same — the hold
+   is a still reading pause (§7B item 17). The last group ends on the
+   complete opened display. Pause stops it like any step; Replay starts
+   the script again; nothing is recorded (`ghost_played` as §7B item 14).
+   The annotate step is not an entry: `ui.ghost.progress` counts entries
+   only. The Ghost display's names follow items 1–3 (demo: names drop from
+   line 2 of `AN`). In Ghost Mode names appear only through these steps:
+   there is no control, and the other scripts' displays are not named.
+
+7. **The first-display explanation** (F-03; 07 D87 (e)). `ui.ann.markerFirst`
+   shows once, in the DEIXEN panel (the phone drawer on phones), with the
+   learner's first `AN` display in practice. "First" is derived from the
+   stored events (no earlier practice entry that produced an `AN`
+   display); after Reset everything it shows again. It is not an event and
+   adds no stored value. If it cannot be derived from the events as they
+   are: stop and ask.
+
+8. **The token** (07 D86 (d), D87 (f)). `tokens.css` gets one primitive
+   `--p-annotate: #767676` (with the other primitives) and one role
+   `--rule-annotate-color: var(--p-annotate)` (with the rule roles) —
+   nothing else changes. This is the decided design change `CLAUDE.md` §4
+   allows; report the file's new sha256 (07 D84's value stays the record
+   until Karim accepts the task). A test computes from the file's values
+   that `--rule-annotate-color` and `--rule-mark-color` each reach 3:1
+   (WCAG 2.1 1.4.11) against every background a line sits on (the lit
+   band and the ground).
+
+9. **Content** (F-21). The keys are already in the knowledge copies
+   (`text.json` → `content/en/text.json`, `text-1.json` →
+   `content/ar/text.json`, `slice.json` → `content/data/slice.json`):
+   copy the three files into the app; they stay byte-identical (sha256 in
+   the report). New keys: `ui.ann.*` (listed in `slice.json` `ui`),
+   `ann.*` and `ghost.ann.*` (listed in `slice.json` `annotations`); changed:
+   `disc.6`, `ghostScripts`, the token rule, `status`. Tokens `{NAME}`,
+   `{VALUE}`: `slice.json` `rules`.
+
+10. **Tests.** At least: (a) no line crosses a line, a name or a record
+    character — every nameable display the slice produces (main task step
+    by step, with and without a time in `AN`, the carrier-preferred
+    banner; the scenario; each Ghost script's annotated reveal), both
+    languages, at 320, 390, 768, 1024 and 1440; (b) never the task's line:
+    the scenario's `AN` names the header only; the main task's `AN` never
+    names line 2; (c) every part of a named line has exactly one name, and
+    the map of item 2 holds, dashed exactly where item 2 says; (d) `FXP`,
+    `FQD`, training lines, verified messages and the entry line get no
+    names and no control; (e) no event is recorded and independence is
+    unchanged when names are opened, closed or shown in Ghost Mode; (f)
+    the control: one on screen, at the newest nameable exchange, none in
+    the assessment, keyboard use, `aria-expanded`; (g) the screen-reader
+    list in display order, with `dir="ltr"` values; (h) Ghost Mode's
+    groups in order, the hold, Pause and Replay, reduced motion; (i)
+    `ui.ann.markerFirst` once, at the first practice `AN`, again after
+    Reset everything; (j) the token contrast (item 8); (k) the content
+    files byte-identical with the knowledge copies. Screens for the
+    report: the main `AN`, the sell response and the filed booking with
+    names open, and Ghost Mode L01 at its last group — English and
+    Arabic, 1440 and 390.
+
 ## 8. Independence, hints and feedback
 
 **[D on approval — LDS §7 Fix 2, §13, §15; LXA §11]**
@@ -1207,8 +1383,9 @@ by 07 Decision 44 (fixed value `30`, never computed, never taught). The
 visual design is approved (07 D42; §2).
 
 **Deferred — not in this slice:** Terminal Screen Literacy candidate (LXA
-§22, new candidate) — outside the frozen boundary (07 D8A); revisit after
-real learner testing. Speed Drills, spaced retrieval, Customer Service
+§22, new candidate) — answered for the slice by F-09's field annotations
+(07 D69 F-09, D86, D87; §7E); a wider familiarization layer stays outside
+the frozen boundary (07 D8A) and is revisited after real learner testing. Speed Drills, spaced retrieval, Customer Service
 track, `XE`/Known Issue #7 mitigation (no `XE` in the slice).
 
 ## 13. Definition of Done
