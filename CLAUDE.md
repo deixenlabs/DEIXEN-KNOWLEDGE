@@ -1,7 +1,7 @@
 # CLAUDE.md — DEIXEN app (first-build slice)
 
 > Status: APPROVED by Karim 2026-09-25 (07 Decision 26). First edition
-> (Execution Plan 3.5); Decision 27 applied 2026-09-25 (§3 rule 2, §8); Decisions 30, 33, 34 applied 2026-09-25 (§3 rule 2); Phase 4 gate (07 Decision 42) applied 2026-09-26 (§2, §4, §5, §8); Decision 45 (boards in `design/phase4/`) applied 2026-09-26 (§2, §4). This file is the master copy of the
+> (Execution Plan 3.5); Decision 27 applied 2026-09-25 (§3 rule 2, §8); Decisions 30, 33, 34 applied 2026-09-25 (§3 rule 2); Phase 4 gate (07 Decision 42) applied 2026-09-26 (§2, §4, §5, §8); Decision 45 (boards in `design/phase4/`) applied 2026-09-26 (§2, §4); Decisions 80–81 applied 2026-10-13 (§2, §3, §4, §8); Decisions 83–84 (Step 4 accepted) applied 2026-10-15 (§4, §5, §8). This file is the master copy of the
 > Claude Code instructions; at build start it becomes the first file of the
 > code repository.
 
@@ -90,10 +90,9 @@ stop and report (§6).
 - Provisional numbers (`CONSOLIDATED_COUNT`, `REINFORCEMENT_FAIL_COUNT`,
   `ESCALATION_ERROR_COUNT`) live in one config file.
 - Visual values come only from `src/styles/tokens.css` — the approved
-  token file (07 Decision 42), used unchanged; check its sha256 against 07
-  D42 when you add it. Exception, Step 4 only: 07 D81 (e) item 1 lets Step 4
-  edit it to implement the chosen identity; its new sha256 is recorded when
-  Karim accepts the Detour Closing Report. Components use its role tokens, never raw colours or
+  token file, used unchanged; check its sha256 against 07 D84 (it replaced
+  the 07 D42 file when Karim accepted the Detour Closing Report). A change
+  to it is made only by a decided design change. Components use its role tokens, never raw colours or
   sizes. A value the design needs that the file lacks: stop and ask (§6).
 - Read the design from `../DEIXEN-KNOWLEDGE/design/phase4/` (spec §2;
   07 D45), not from the canvas. Check a board's sha256 against
@@ -117,7 +116,7 @@ deixen-app/
 │   ├── coach/
 │   ├── i18n/
 │   ├── styles/
-│   │   └── tokens.css    ← approved token file (07 D42), unchanged
+│   │   └── tokens.css    ← approved token file (07 D84), unchanged
 │   └── config.ts         ← provisional numbers
 ├── tests/
 │   ├── engine/           ← every checklist item, valid and invalid
@@ -181,7 +180,8 @@ step.
 - [ ] Breakpoints 320 / 360 / 390 / 430 / 768 / 1024 / 1280–1440 px.
 - [ ] Keyboard-only use works, including the Terminal input.
 - [ ] No raw colour or size outside `tokens.css`; screens match the
-      approved boards (spec §2); header wordmark is lockup B.
+      approved boards (spec §2); the header wordmark is the name set as
+      text from `ui.brand.name` (07 D83 (c)).
 - [ ] Spec §13 Definition of Done items affected by the step still hold.
 
 Report to Karim in short, plain language: what was built, what was tested

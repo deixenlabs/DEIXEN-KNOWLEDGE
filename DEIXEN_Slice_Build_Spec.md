@@ -1,6 +1,6 @@
 ---
 name: DEIXEN Slice Build Spec
-status: CURRENT — APPROVED by Karim 2026-09-25 (07 Decision 26). Updated 2026-09-25: gaps G1–G3 (§5, §12); Decision 27 (K5, K6) applied to §4, §5, §12, §13; K7 (§6 row 5, §12) approved in the Phase 3 gate (07 D28). Phase 4, 2026-09-25: 07 Decisions 30, 32–34, 36 applied to §5 and §13; Decisions 37–38 to §4 and §8. Phase 4 gate, 2026-09-26: 07 Decision 42 (approved design, `tokens.css`) applied to §2; Decision 44 (`AN` header number) to §5 and §12; Decision 45 (boards exported to `design/phase4/`) to §2. Phase 5, 2026-09-26: 07 Decisions 46 (`result` on ending events) and 47 (one tab at a time) applied to §11. 2026-09-26: 07 Decision 49 applied to §6 ("not recognized" vs "not covered") and new §6A (rules for build step 2 part B). 2026-09-28: 07 Decision 50 — §6A items 8–10. 2026-09-28: 07 Decision 52 — new §7A (rules for build step 3), pointers in §8, §10, §11. 2026-09-28: 07 Decision 53 — §7A items 1 (return to practice, app I-12) and 14 (data-reset notice). 2026-09-28: 07 Decision 54 — new §7B (rules for build step 4: the current step for hints, hint levels on the screen, the entry field, parts 4A/4B, load notices), pointer in §8. 2026-09-29: 07 Decisions 55–56 — §7A item 1 (a run also starts at an accepted hint request, app I-12), items 1 and 11 and §9 (pointers to the in-app exit), §7B heading and new items 6–10 ("Booking as it stands", leaving a running assessment or scenario, storage refused, the name as a string key, behaviours over time); 07 Decision 57 — §7B items 11–15 (the Flight Deck's recommended action, the practice run when moving between screens, Learning, Ghost Mode replays, when the scenario and the assessment start). 2026-09-30: 07 Decision 58 — §7B items 16–18 (the way into Ghost Mode, Ghost typing speed, "In your task"); 07 Decision 59 — §7A item 13, §7B item 11 (d) and §10 ("the scenario completed" means completed with every checklist item met), §7B items 19–20 (the scenario and assessment rows; the assessment and scenario screens). 2026-09-30: 07 Decision 61 — new §7C (rules for build step 5, Coach: when each Coach text shows, Coach and independence, the assessment and the scenario, the bypass, the escalation count, the Growth note, the five touchpoints), pointers in §6A item 2 and §8. 2026-10-01: 07 Decision 62 — §7C item 6 (the escalation offer may follow the bypass notes in practice, app I-22). 2026-10-01: 07 Decision 63 — new §7D (rules for build steps 6 and 7: step 6 as a check with a Definition of Done trace, the end note in view, the scrolling notes block, the phone drawer, what the accessibility baseline means here, the localization and breakpoint passes, lockup B, what automated checks cannot prove), pointers in §2 and §13. 2026-10-02: 07 Decision 64 — §7B item 17 and §7D item 5 (d) corrected (`--motion-demo-hold` stays under reduced motion: a still reading pause, app I-23); §7D item 6 (English terms written in the approved Arabic content are allowed, app I-24). 2026-10-04: 07 Decision 76 (F-04 (A)(B) landed; 07 D69 F-04 amends D40) — §7 (learner-facing wording: two terms), §7B item 11 (the chain word), §7C item 8 (the chain word), §8 (the note after a valid entry that does not count as done on your own). First edition (Execution Plan 3.3); proposals K1–K4 approved (07 Decision 25). With this approval, the LDS/LXA content extracted here is binding for the slice (LDS and LXA reading rules, point 1).
+status: CURRENT — APPROVED by Karim 2026-09-25 (07 Decision 26). Updated 2026-09-25: gaps G1–G3 (§5, §12); Decision 27 (K5, K6) applied to §4, §5, §12, §13; K7 (§6 row 5, §12) approved in the Phase 3 gate (07 D28). Phase 4, 2026-09-25: 07 Decisions 30, 32–34, 36 applied to §5 and §13; Decisions 37–38 to §4 and §8. Phase 4 gate, 2026-09-26: 07 Decision 42 (approved design, `tokens.css`) applied to §2; Decision 44 (`AN` header number) to §5 and §12; Decision 45 (boards exported to `design/phase4/`) to §2. Phase 5, 2026-09-26: 07 Decisions 46 (`result` on ending events) and 47 (one tab at a time) applied to §11. 2026-09-26: 07 Decision 49 applied to §6 ("not recognized" vs "not covered") and new §6A (rules for build step 2 part B). 2026-09-28: 07 Decision 50 — §6A items 8–10. 2026-09-28: 07 Decision 52 — new §7A (rules for build step 3), pointers in §8, §10, §11. 2026-09-28: 07 Decision 53 — §7A items 1 (return to practice, app I-12) and 14 (data-reset notice). 2026-09-28: 07 Decision 54 — new §7B (rules for build step 4: the current step for hints, hint levels on the screen, the entry field, parts 4A/4B, load notices), pointer in §8. 2026-09-29: 07 Decisions 55–56 — §7A item 1 (a run also starts at an accepted hint request, app I-12), items 1 and 11 and §9 (pointers to the in-app exit), §7B heading and new items 6–10 ("Booking as it stands", leaving a running assessment or scenario, storage refused, the name as a string key, behaviours over time); 07 Decision 57 — §7B items 11–15 (the Flight Deck's recommended action, the practice run when moving between screens, Learning, Ghost Mode replays, when the scenario and the assessment start). 2026-09-30: 07 Decision 58 — §7B items 16–18 (the way into Ghost Mode, Ghost typing speed, "In your task"); 07 Decision 59 — §7A item 13, §7B item 11 (d) and §10 ("the scenario completed" means completed with every checklist item met), §7B items 19–20 (the scenario and assessment rows; the assessment and scenario screens). 2026-09-30: 07 Decision 61 — new §7C (rules for build step 5, Coach: when each Coach text shows, Coach and independence, the assessment and the scenario, the bypass, the escalation count, the Growth note, the five touchpoints), pointers in §6A item 2 and §8. 2026-10-01: 07 Decision 62 — §7C item 6 (the escalation offer may follow the bypass notes in practice, app I-22). 2026-10-01: 07 Decision 63 — new §7D (rules for build steps 6 and 7: step 6 as a check with a Definition of Done trace, the end note in view, the scrolling notes block, the phone drawer, what the accessibility baseline means here, the localization and breakpoint passes, lockup B, what automated checks cannot prove), pointers in §2 and §13. 2026-10-02: 07 Decision 64 — §7B item 17 and §7D item 5 (d) corrected (`--motion-demo-hold` stays under reduced motion: a still reading pause, app I-23); §7D item 6 (English terms written in the approved Arabic content are allowed, app I-24). 2026-10-04: 07 Decision 76 (F-04 (A)(B) landed; 07 D69 F-04 amends D40) — §7 (learner-facing wording: two terms), §7B item 11 (the chain word), §7C item 8 (the chain word), §8 (the note after a valid entry that does not count as done on your own). 2026-10-15: 07 Decisions 83–84 (Step 4 accepted) — §2 (the token file, typefaces and header wordmark of the chosen identity), §7B items 4 and 9, §7D item 8 (the header wordmark set as text). First edition (Execution Plan 3.3); proposals K1–K4 approved (07 Decision 25). With this approval, the LDS/LXA content extracted here is binding for the slice (LDS and LXA reading rules, point 1).
 owns: The single build specification Claude Code implements for the first-build slice. It gathers requirements from their owners and designs the evidence/state schema (delegated to Claude — file 13).
 does not own: any decision (07); Amadeus behavior (Verified Reference); product structure (03); design (Design Brief / Phase 4). Where this file and an owner disagree, the owner wins and the conflict is reported.
 ---
@@ -57,14 +57,19 @@ entry outside these limits gets the "not covered in this slice" message
   - **Values:** every colour, type step (both scripts), space, radius, rule,
     layout width, motion and layer comes from `tokens.css`, through its role
     tokens (sections 2–9 of the file), never a raw value — the frames follow
-    the same rule. `tokens.css` is used unchanged (sha256 in 07 D42).
-  - **Typefaces** (07 D42): IBM Plex Mono for the record (Terminal); Public
-    Sans with IBM Plex Sans Arabic for the interface; Literata with Noto
-    Naskh Arabic for DEIXEN's voice; fallbacks as in `tokens.css`. All are
-    open-licence; how they are delivered is a technical choice (CLAUDE.md §4).
-  - **Header wordmark: lockup B** (07 D42). Below 24 px cap height (desktop
-    header 18 px, phone header 15 px) the wordmark keeps its field line and
-    drops the ticks. The frames draw lockup A; B governs.
+    the same rule. `tokens.css` is used unchanged: since Step 4 the file
+    whose sha256 is in 07 D84 (the D42 file stays the record in
+    `design/phase4/`).
+  - **Typefaces** (07 D81, D82 (b); they replace those of 07 D42): JetBrains
+    Mono for the record (Terminal); Inter for the English interface and Noto
+    Sans Arabic for Arabic; weights 400 / 500 / 600; fallbacks as in
+    `tokens.css`. All are open-licence; how they are delivered is a
+    technical choice (CLAUDE.md §4).
+  - **Header wordmark: the name set as text** (07 D83 (c); it replaces lockup
+    B of 07 D42): "DEIXEN" from `ui.brand.name` in Inter 600, uppercase,
+    with wide letter-spacing by CSS (never real spaces), in the record's ink,
+    no drawn mark; the same in both languages. The frames draw lockups A and
+    B; the text governs.
   - **Where the boards are (07 D45):** a read-only copy of every board
     below, and `tokens.css`, is in `DEIXEN-KNOWLEDGE/design/phase4/`
     (files `<name>.dc.html`), with `MANIFEST.md` giving each file's sha256.
@@ -98,7 +103,7 @@ entry outside these limits gets the "not covered in this slice" message
   the design scope and wins over the visual-design bullet above where they
   differ (the token file is edited for this identity; the boards stay the
   record of structure, behaviour, words, ARIA and the phone and tablet
-  layouts). Until Step 4 lands, the app keeps the bullet above.
+  layouts). Step 4 landed (07 D84): the app follows this bullet.
 - **[D] Accessibility and breakpoints:** file 04 (WCAG 2.1 AA; keyboard;
   320–1440 px). Terminal workspace is never sacrificed on mobile. How the
   build proves it: §7D items 5–7 (07 D63).
@@ -590,7 +595,7 @@ event type (§11), and none claims Amadeus behavior.
    as `command` — never a lowercase entry shown as capitals. Nothing else
    is changed (no spaces removed or added).
 4. **Build step 4 is built in two parts.** **4A:** the app shell (header
-   with lockup B, the five-area navigation, the phone header and menu
+   with the wordmark, the five-area navigation, the phone header and menu
    sheet, the language switch; English/LTR and Arabic/RTL), the load
    notices (`ui.oneTab.*`, `ui.abandoned`, `ui.dataReset`, §7A items
    14–15), and the `TERMINAL_PRACTICE` screen with the DEIXEN panel, wired
@@ -649,7 +654,9 @@ event type (§11), and none claims Amadeus behavior.
 9. **The name as a word** (07 D55, app I-14). Every place the name DEIXEN
    stands alone as a word, and the wordmark's accessible name, use
    `ui.brand.name`. Strings that contain the name inside a sentence keep
-   it there. The drawn wordmark (lockup B) is a drawing, not text. The name
+   it there. The wordmark is the name set as text from `ui.brand.name` (07
+   D83 (c)); its spacing is letter-spacing only, so a screen reader reads it
+   whole. The name
    is provisional (Constitution §1), so it lives in one place.
 10. **Behaviours over time** that no single frame shows (07 D55; app
     `docs/DECISIONS.md` T7) — where a new entry lands, when the brief
@@ -1011,10 +1018,11 @@ would need a new string, token, event field or a changed rule is a stop
    568): no page-level horizontal scroll; the entry line in view; the
    Terminal workspace never given up (spec §2); screenshots kept and
    compared by eye with the board for that state and width where one exists.
-8. **Identity and values.** A test shows the header wordmark is lockup B at
-   every width (the field line, no ticks; size from the `--wordmark-cap*`
-   tokens; name `ui.brand.name`); the no-raw-value and string-file tests
-   run again over all of `src/ui/`.
+8. **Identity and values.** A test shows the header wordmark is the name set
+   as text at every width (07 D83 (c): `ui.brand.name`, Inter 600, uppercase
+   and letter-spaced by CSS, the record's ink, no drawing; size from the
+   `--wordmark-size*` tokens); the no-raw-value and string-file tests run
+   again over all of `src/ui/`.
 9. **The Amadeus-string trace** (`CLAUDE.md` §8) runs again over the engine,
    the screens and the Coach texts, and its result is reported.
 10. **What automated checks cannot prove** is written down, not implied.
