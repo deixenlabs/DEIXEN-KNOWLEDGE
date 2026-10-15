@@ -3393,15 +3393,23 @@ If a dependency has not landed:
 
   **(h) Lighting — Karim's request, a comparison, not a decision.** At the
   checkpoint Karim found the screen uniformly dark and asked for a lighting
-  distribution that gives it presence. This would change the chosen identity's
-  values (D81 (a)), so only Karim decides it, from screenshots. Step 4 renders
-  L0 (as built), L1 (flat neutral surface steps: ground darkest, the Terminal
-  sheet and the DEIXEN panel one step lighter, the bar its own step) and L2 (L1
-  with one soft, static, neutral light falloff behind the Terminal), within K3
-  (one "now" per region, square and flat, history never dimmed) and D81 (c)
-  (no glass, blur, glow, rounding or motion), each with a WCAG 2.1 AA contrast
-  table. `tokens.css` keeps L0 until Karim chooses; his choice is recorded as a
-  new decision. Project lead's recommendation: L1.
+  distribution that gives it presence. A first comparison of flat surface
+  steps (L1, L2) was not what he meant (Karim, 2026-10-15: he meant the
+  cinematic light of the earlier exploration — Stage 5 E1 and Stage 6 / C6,
+  which C8R kept). This would change the chosen identity's values (D81 (a)),
+  so only Karim decides it, from screenshots. Step 4 renders L0 (as built)
+  against: CA — one neutral light model (a soft source off-canvas top-left;
+  the ground falls off toward the bottom-right; the Terminal display opaque,
+  lighter at its left and deeper at its right; edges facing the light a little
+  brighter; soft shadows falling away from it); CB — CA plus Stage 6's rule
+  "light follows attention" (a soft pool around the current work zone — the
+  newest exchange, the entry line and the feedback tied to them — and the
+  chrome receding). Within K3 (one "now" per region, square and flat, history
+  never dimmed), with no hue, no glass or blur, no glows, streaks or motion,
+  and at Stage 6 strength (Karim, 2026-10-08: once the light reads as a
+  separate effect, the line is crossed); each with a WCAG 2.1 AA contrast
+  table. `tokens.css` keeps L0 until Karim chooses; his choice is recorded as
+  a new decision. Project lead's recommendation: CB.
 
   Files changed: 07, 13, Execution Plan (status line), 00 (A10), the knowledge copies
   `text.json` and `text-1.json` (`ui.ghost.explain`). Not affected: the
