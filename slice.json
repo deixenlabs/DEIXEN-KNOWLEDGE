@@ -1151,6 +1151,10 @@
   "ui.leave.scenario",
   "ui.leave.stay",
   "ui.leave.confirm",
+  "ui.newRun.question",
+  "ui.newRun.start",
+  "ui.newRun.started",
+  "ui.newRun.notKept",
   "ui.coach.openLesson"
  ],
  "disclosure": [
