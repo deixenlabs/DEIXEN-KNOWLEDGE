@@ -157,7 +157,7 @@
  "ui.lesson.inYourTask": "In your task",
  "ui.ghost.title": "Watch {COMMANDS}",
  "ui.ghost.demoBooking": "Demonstration booking, not your task",
- "ui.ghost.explain": "DEIXEN types each entry in blue, on a demonstration booking. Amadeus answers in black, as it will when you practise.",
+ "ui.ghost.explain": "DEIXEN types each entry on a demonstration booking. Amadeus answers as it will when you practise.",
  "ui.ghost.watching": "Watching, not practising",
  "ui.ghost.progress": "Entry {N} of {T}",
  "ui.ghost.pause": "Pause",

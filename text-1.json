@@ -157,7 +157,7 @@
  "ui.lesson.inYourTask": "في مهمتك",
  "ui.ghost.title": "شاهد: {COMMANDS}",
  "ui.ghost.demoBooking": "حجز توضيحي، وليس مهمتك",
- "ui.ghost.explain": "يكتب DEIXEN كل إدخال باللون الأزرق على حجز توضيحي. ويردّ Amadeus باللون الأسود، كما سيفعل حين تتدرّب.",
+ "ui.ghost.explain": "يكتب DEIXEN كل إدخال على حجز توضيحي. ويردّ Amadeus كما سيفعل حين تتدرّب.",
  "ui.ghost.watching": "مشاهدة، لا تدريب",
  "ui.ghost.progress": "الإدخال {N} من {T}",
  "ui.ghost.pause": "إيقاف مؤقت",
