@@ -1,6 +1,6 @@
 ---
 name: DEIXEN Execution Plan
-status: GOVERNING — approved by Karim on 2026-09-24 (07 Decision 16); the four-step detour between Phase 5 and Phase 6 inserted by Karim on 2026-10-02 (07 Decision 68); the detour's Freeze accepted and recorded, and Prompt 7 authorized, 2026-10-03 (07 Decisions 69–70); before-Step-4 tasks 1 (F-19), 2 (F-02), 3 (F-03), 4 (F-05) and 5 (F-04 (A)(B)) landed, 2026-10-04 (07 Decisions 72–76); Karim's owner decisions and an identity exploration inserted before step 4, 2026-10-05 (07 Decisions 77–78); Claude Design may refine the direction Karim chooses after the identity exploration, 2026-10-06 (07 Decision 79); Option C, 2026-10-12, and the chosen identity with Step 4's restated design scope and the `design/identity/` folder, 2026-10-13 (07 Decisions 80–81); Step 4 under way, its plan and checkpoint answered and a lighting comparison requested, 2026-10-15 (07 Decision 82); the light, no boxes and the typeset wordmark, and Step 4's Detour Closing Report accepted, 2026-10-15 (07 Decisions 83–84); the Step 4 branch merged into `main`, 2026-10-15 (07 Decision 85); F-09's presentation pattern chosen, 2026-10-15 (07 Decision 86); F-09's content approved, 2026-10-15 (07 Decision 87); F-09 built, merged into `main` and accepted, 2026-10-16 (07 Decision 88); F-07's LDS note, 2026-10-16 (07 Decision 89)
+status: GOVERNING — approved by Karim on 2026-09-24 (07 Decision 16); the four-step detour between Phase 5 and Phase 6 inserted by Karim on 2026-10-02 (07 Decision 68); the detour's Freeze accepted and recorded, and Prompt 7 authorized, 2026-10-03 (07 Decisions 69–70); before-Step-4 tasks 1 (F-19), 2 (F-02), 3 (F-03), 4 (F-05) and 5 (F-04 (A)(B)) landed, 2026-10-04 (07 Decisions 72–76); Karim's owner decisions and an identity exploration inserted before step 4, 2026-10-05 (07 Decisions 77–78); Claude Design may refine the direction Karim chooses after the identity exploration, 2026-10-06 (07 Decision 79); Option C, 2026-10-12, and the chosen identity with Step 4's restated design scope and the `design/identity/` folder, 2026-10-13 (07 Decisions 80–81); Step 4 under way, its plan and checkpoint answered and a lighting comparison requested, 2026-10-15 (07 Decision 82); the light, no boxes and the typeset wordmark, and Step 4's Detour Closing Report accepted, 2026-10-15 (07 Decisions 83–84); the Step 4 branch merged into `main`, 2026-10-15 (07 Decision 85); F-09's presentation pattern chosen, 2026-10-15 (07 Decision 86); F-09's content approved, 2026-10-15 (07 Decision 87); F-09 built, merged into `main` and accepted, 2026-10-16 (07 Decision 88); F-07's LDS note, 2026-10-16 (07 Decision 89); the before-Phase-6 batch approved, 2026-10-16 (07 Decision 90)
 owns: Work sequence, phases, gates, current phase, and role assignments
 does not own: how work is performed (Operating Constitution); decisions (07); Amadeus truth (Amadeus Verified Reference)
 replaces: DEIXEN_MASTER_PRE_OPUS_FOUNDATION_PREPARATION_PLAN-1.md and DEIXEN_MASTER_EXECUTION_ROADMAP.md (both historical from 2026-09-24)
@@ -137,8 +137,10 @@ Build Spec §7E). F-09 was built (Claude Code, Opus 5.5, High), with F-03's
 explanation and F-10 (1), and merged into `main`; Karim accepted it (07 D88,
 2026-10-16: `main` = `c8b13f9`). From now on the evidence pictures are
 taken on Karim's computer (07 D88 (f)). F-07's LDS note is written (07
-D89). Next: the remaining before-Phase-6 tasks (07 D69 (c)) — F-14 (a),
-F-04 (C), F-06 (a)–(c), F-08 — each started by Karim, and his owner decision S2-28 / S2-74 before
+D89). Karim approved the wording of F-04 (C) and F-06 (a)–(c) (07 D90).
+Next: the before-Phase-6 batch (F-04 (C), F-06 (a)–(c), F-14 (a); Build
+Spec §7F; Claude Code, Opus 5.5, High, on Karim's computer), then F-08 —
+each started by Karim — and his owner decision S2-28 / S2-74 before
 the first Phase 6 Ghost script. The learner
 re-test runs after step 4 or at the start of Phase 6, as Karim chooses; it
 is not a gate (07 D69, F-11). Phase 6 starts when Karim starts it, after

@@ -1,6 +1,6 @@
 ---
 name: DEIXEN Slice Build Spec
-status: CURRENT — APPROVED by Karim 2026-09-25 (07 Decision 26). Updated 2026-09-25: gaps G1–G3 (§5, §12); Decision 27 (K5, K6) applied to §4, §5, §12, §13; K7 (§6 row 5, §12) approved in the Phase 3 gate (07 D28). Phase 4, 2026-09-25: 07 Decisions 30, 32–34, 36 applied to §5 and §13; Decisions 37–38 to §4 and §8. Phase 4 gate, 2026-09-26: 07 Decision 42 (approved design, `tokens.css`) applied to §2; Decision 44 (`AN` header number) to §5 and §12; Decision 45 (boards exported to `design/phase4/`) to §2. Phase 5, 2026-09-26: 07 Decisions 46 (`result` on ending events) and 47 (one tab at a time) applied to §11. 2026-09-26: 07 Decision 49 applied to §6 ("not recognized" vs "not covered") and new §6A (rules for build step 2 part B). 2026-09-28: 07 Decision 50 — §6A items 8–10. 2026-09-28: 07 Decision 52 — new §7A (rules for build step 3), pointers in §8, §10, §11. 2026-09-28: 07 Decision 53 — §7A items 1 (return to practice, app I-12) and 14 (data-reset notice). 2026-09-28: 07 Decision 54 — new §7B (rules for build step 4: the current step for hints, hint levels on the screen, the entry field, parts 4A/4B, load notices), pointer in §8. 2026-09-29: 07 Decisions 55–56 — §7A item 1 (a run also starts at an accepted hint request, app I-12), items 1 and 11 and §9 (pointers to the in-app exit), §7B heading and new items 6–10 ("Booking as it stands", leaving a running assessment or scenario, storage refused, the name as a string key, behaviours over time); 07 Decision 57 — §7B items 11–15 (the Flight Deck's recommended action, the practice run when moving between screens, Learning, Ghost Mode replays, when the scenario and the assessment start). 2026-09-30: 07 Decision 58 — §7B items 16–18 (the way into Ghost Mode, Ghost typing speed, "In your task"); 07 Decision 59 — §7A item 13, §7B item 11 (d) and §10 ("the scenario completed" means completed with every checklist item met), §7B items 19–20 (the scenario and assessment rows; the assessment and scenario screens). 2026-09-30: 07 Decision 61 — new §7C (rules for build step 5, Coach: when each Coach text shows, Coach and independence, the assessment and the scenario, the bypass, the escalation count, the Growth note, the five touchpoints), pointers in §6A item 2 and §8. 2026-10-01: 07 Decision 62 — §7C item 6 (the escalation offer may follow the bypass notes in practice, app I-22). 2026-10-01: 07 Decision 63 — new §7D (rules for build steps 6 and 7: step 6 as a check with a Definition of Done trace, the end note in view, the scrolling notes block, the phone drawer, what the accessibility baseline means here, the localization and breakpoint passes, lockup B, what automated checks cannot prove), pointers in §2 and §13. 2026-10-02: 07 Decision 64 — §7B item 17 and §7D item 5 (d) corrected (`--motion-demo-hold` stays under reduced motion: a still reading pause, app I-23); §7D item 6 (English terms written in the approved Arabic content are allowed, app I-24). 2026-10-04: 07 Decision 76 (F-04 (A)(B) landed; 07 D69 F-04 amends D40) — §7 (learner-facing wording: two terms), §7B item 11 (the chain word), §7C item 8 (the chain word), §8 (the note after a valid entry that does not count as done on your own). 2026-10-15: 07 Decisions 83–84 (Step 4 accepted) — §2 (the token file, typefaces and header wordmark of the chosen identity), §7B items 4 and 9, §7D item 8 (the header wordmark set as text). 2026-10-15: 07 Decision 87 (F-09's content; the pattern of 07 D86) — §2 (`tokens.css` gets one primitive and one role, §7E item 8), §5 (U-15, U-16), new §7E (rules for F-09, the opened display), §12 (the Screen Literacy candidate answered by F-09). 2026-10-16: 07 Decision 88 (F-09 landed, `main` = `c8b13f9`) — §2 and §7E item 8 (the `tokens.css` sha256 record is now 07 D88), §7E item 2 (a `SSR CTCM` line with a learner-typed ending: header only, Karim), §7E item 4 (the accessible-name gap, deferred by Karim). First edition (Execution Plan 3.3); proposals K1–K4 approved (07 Decision 25). With this approval, the LDS/LXA content extracted here is binding for the slice (LDS and LXA reading rules, point 1).
+status: CURRENT — APPROVED by Karim 2026-09-25 (07 Decision 26). Updated 2026-09-25: gaps G1–G3 (§5, §12); Decision 27 (K5, K6) applied to §4, §5, §12, §13; K7 (§6 row 5, §12) approved in the Phase 3 gate (07 D28). Phase 4, 2026-09-25: 07 Decisions 30, 32–34, 36 applied to §5 and §13; Decisions 37–38 to §4 and §8. Phase 4 gate, 2026-09-26: 07 Decision 42 (approved design, `tokens.css`) applied to §2; Decision 44 (`AN` header number) to §5 and §12; Decision 45 (boards exported to `design/phase4/`) to §2. Phase 5, 2026-09-26: 07 Decisions 46 (`result` on ending events) and 47 (one tab at a time) applied to §11. 2026-09-26: 07 Decision 49 applied to §6 ("not recognized" vs "not covered") and new §6A (rules for build step 2 part B). 2026-09-28: 07 Decision 50 — §6A items 8–10. 2026-09-28: 07 Decision 52 — new §7A (rules for build step 3), pointers in §8, §10, §11. 2026-09-28: 07 Decision 53 — §7A items 1 (return to practice, app I-12) and 14 (data-reset notice). 2026-09-28: 07 Decision 54 — new §7B (rules for build step 4: the current step for hints, hint levels on the screen, the entry field, parts 4A/4B, load notices), pointer in §8. 2026-09-29: 07 Decisions 55–56 — §7A item 1 (a run also starts at an accepted hint request, app I-12), items 1 and 11 and §9 (pointers to the in-app exit), §7B heading and new items 6–10 ("Booking as it stands", leaving a running assessment or scenario, storage refused, the name as a string key, behaviours over time); 07 Decision 57 — §7B items 11–15 (the Flight Deck's recommended action, the practice run when moving between screens, Learning, Ghost Mode replays, when the scenario and the assessment start). 2026-09-30: 07 Decision 58 — §7B items 16–18 (the way into Ghost Mode, Ghost typing speed, "In your task"); 07 Decision 59 — §7A item 13, §7B item 11 (d) and §10 ("the scenario completed" means completed with every checklist item met), §7B items 19–20 (the scenario and assessment rows; the assessment and scenario screens). 2026-09-30: 07 Decision 61 — new §7C (rules for build step 5, Coach: when each Coach text shows, Coach and independence, the assessment and the scenario, the bypass, the escalation count, the Growth note, the five touchpoints), pointers in §6A item 2 and §8. 2026-10-01: 07 Decision 62 — §7C item 6 (the escalation offer may follow the bypass notes in practice, app I-22). 2026-10-01: 07 Decision 63 — new §7D (rules for build steps 6 and 7: step 6 as a check with a Definition of Done trace, the end note in view, the scrolling notes block, the phone drawer, what the accessibility baseline means here, the localization and breakpoint passes, lockup B, what automated checks cannot prove), pointers in §2 and §13. 2026-10-02: 07 Decision 64 — §7B item 17 and §7D item 5 (d) corrected (`--motion-demo-hold` stays under reduced motion: a still reading pause, app I-23); §7D item 6 (English terms written in the approved Arabic content are allowed, app I-24). 2026-10-04: 07 Decision 76 (F-04 (A)(B) landed; 07 D69 F-04 amends D40) — §7 (learner-facing wording: two terms), §7B item 11 (the chain word), §7C item 8 (the chain word), §8 (the note after a valid entry that does not count as done on your own). 2026-10-15: 07 Decisions 83–84 (Step 4 accepted) — §2 (the token file, typefaces and header wordmark of the chosen identity), §7B items 4 and 9, §7D item 8 (the header wordmark set as text). 2026-10-15: 07 Decision 87 (F-09's content; the pattern of 07 D86) — §2 (`tokens.css` gets one primitive and one role, §7E item 8), §5 (U-15, U-16), new §7E (rules for F-09, the opened display), §12 (the Screen Literacy candidate answered by F-09). 2026-10-16: 07 Decision 88 (F-09 landed, `main` = `c8b13f9`) — §2 and §7E item 8 (the `tokens.css` sha256 record is now 07 D88), §7E item 2 (a `SSR CTCM` line with a learner-typed ending: header only, Karim), §7E item 4 (the accessible-name gap, deferred by Karim). 2026-10-16: 07 Decision 90 (F-04 (C), F-06 (a)–(c), F-14 (a), app I-36) — new §7F, §7C item 5 (the announcement no longer says "on your own"). First edition (Execution Plan 3.3); proposals K1–K4 approved (07 Decision 25). With this approval, the LDS/LXA content extracted here is binding for the slice (LDS and LXA reading rules, point 1).
 owns: The single build specification Claude Code implements for the first-build slice. It gathers requirements from their owners and designs the evidence/state schema (delegated to Claude — file 13).
 does not own: any decision (07); Amadeus behavior (Verified Reference); product structure (03); design (Design Brief / Phase 4). Where this file and an owner disagree, the owner wins and the conflict is reported.
 ---
@@ -851,10 +851,10 @@ and rules (§5, §7B items 2, 6, 10); Coach adds to them, it replaces none.
    explanations of item 2 show exactly as in practice. File 06 names the
    Assessment and the Scenario as Coach touchpoints; each explanation is
    diagnostic (item 3) and says what the real message means, as the
-   diagnostic feedback texts already shown there do. The announcement's
-   "on your own" (`ui.assessment.intro`) does not mean without help: the
-   same text says hints stay available and are counted (07 Assessment
-   contract; `P2-Issues` answer 06). Nothing in this item changes how the
+   diagnostic feedback texts already shown there do. The announcement
+   (`ui.assessment.intro`) says hints stay available and are counted (07
+   Assessment contract; `P2-Issues` answer 06); since 07 D90 it no longer
+   says "on your own" and it says how the result is decided (F-06 (b)). Nothing in this item changes how the
    assessment result, the hint label, independence or the evidence are
    computed. **Not shown while an assessment or the scenario runs:** the
    escalation offer (item 7) — its link would leave the attempt (§7B item
@@ -1220,6 +1220,79 @@ rules do not cover is a stop (`CLAUDE.md` §6).
     report: the main `AN`, the sell response and the filed booking with
     names open, and Ghost Mode L01 at its last group — English and
     Arabic, 1440 and 390.
+
+## 7F. Rules for the before-Phase-6 batch — F-04 (C), F-06 (a)–(c), F-14 (a) (07 D90)
+
+**[D] Karim** (the wording of every new and changed key, 07 D90 (a)–(b);
+approved content, 07 D28) **and by delegation (07 D29)** (where each text
+shows, the bridge facts, the test-only fix; 07 D90 (c)). Before-Phase-6
+tasks (07 D69 (c)), not a build step of `CLAUDE.md` §7. **No evidence rule,
+status rule, event, event field or stored value changes; what the
+assessment means does not change** (07 D69 F-04, F-06). The bridge changes
+only additively. Every word comes from the content files.
+
+1. **Why a chain row shows a dash** (F-04 (C)). On the Flight Deck and on
+   Growth, a required step's row that shows "—" (§7B item 11; not "Done on
+   your own") keeps the dash and adds, after it in the same cell and the
+   same quiet style, `ui.dash.noCorrect` when the skill has no `valid`
+   entry in any context, or `ui.dash.notOwn` when it has at least one
+   `valid` entry but has not reached `DEMONSTRATED_INDEPENDENT`. The
+   scenario and assessment rows (`Completed` or a dash, 07 D40) add
+   `ui.dash.notCompleted` after their dash. The optional `FQD` row keeps
+   `ui.chain.optional`. The Flight Deck's "Next" marker is unchanged. On a
+   phone the reason may wrap inside its row, never past the screen edge at
+   320 px. No new colour, token, control or pattern.
+2. **What "In progress" is waiting for** (F-04 (C)). When Growth shows In
+   Progress (§7A item 13 (4)), the Growth note (§7C item 8: under the
+   status and `ui.growth.basis`, label `ui.panel.coach`, same pattern) holds
+   one sentence for each Completed condition (§10) not yet met, in this
+   order: `ui.growth.missing.steps` (`{COMMANDS}` = the required skills
+   below `DEMONSTRATED_INDEPENDENT`, in path order, joined as in
+   `slice.json` `rules`); `ui.growth.missing.scenario`;
+   `ui.growth.missing.assessment` (each "completed with every checklist
+   item met", §7A item 11). Computed from the same values as the status, at
+   display time; not an event. Not shown for the other statuses (Needs More
+   Practice keeps §7C item 8's sentences).
+3. **The three statuses defined** (F-04 (C)). In "The three statuses"
+   (`ui.growth.statuses`), each status name is followed by its definition —
+   `ui.growth.def.completed`, `ui.growth.def.inProgress`,
+   `ui.growth.def.needsPractice` — in the quiet note style; the current
+   status keeps its band (K3). The list shows wherever it shows today.
+4. **The assessment made legible** (F-06 (a)–(c)). (a) Both end notes
+   (`ui.assessment.result`, `ui.assessment.resultUnmet`) are followed by
+   `ui.assessment.hintsUsed`, `{H}` = the `hint_requested` events of this
+   assessment attempt only (from its `assessment_started` to its
+   `assessment_ended`; already counted per run), shown also when 0. (b) and
+   (c): `ui.assessment.intro` and `ui.assessment.carryover` are reworded in
+   the content files only; where and when they show is unchanged (§7A item
+   11, §7B item 15; F-06 (d), Step 4).
+5. **`APM` and `APE`** (F-14 (a); 07 D49 (c)). An entry beginning `APM` or
+   `APE` gets `tm.notCovered`: both codes are named by the Verified
+   Reference (V-11, typed variants) and not simulated by the slice. Checked
+   before the slice codes, as the other named codes are. Tests: `APM…` and
+   `APE…` → `tm.notCovered`, the booking unchanged; `AP966110000000` still
+   the `AP` command.
+6. **App I-36 (test only).** `tests/e2e/step4.spec.ts` line 388 presses
+   the practice button before the lesson's end has been observed. The test
+   waits until the end is observed (as the app's completion rule needs)
+   before pressing. No app change.
+7. **Content** (F-21). The three knowledge copies (`text.json`,
+   `text-1.json`, `slice.json`) already hold the keys; copy them into the
+   app byte for byte. New: `ui.dash.*` (3), `ui.growth.def.*` (3),
+   `ui.growth.missing.*` (3), `ui.assessment.hintsUsed`; changed:
+   `ui.assessment.intro`, `ui.assessment.carryover`, the `{COMMANDS}` rule,
+   `status`.
+8. **Evidence pictures** (07 D88 (f)). The browser suite runs on Karim's
+   computer. Pictures rewritten by this task's screen changes are
+   committed; any other rewritten picture is restored before committing
+   and listed in the report.
+9. **Tests.** At least: each dash reason on each chain row it applies to,
+   both languages, Flight Deck and Growth; the In-progress sentences for
+   each unmet condition and none for the other statuses; the three
+   definitions; `ui.assessment.hintsUsed` with 0 and with hints, hints from
+   before the assessment not counted in it; `APM`/`APE`; no event recorded
+   by any of these; widths 320–1440 for the changed rows; the content files
+   byte-identical with the knowledge copies.
 
 ## 8. Independence, hints and feedback
 
