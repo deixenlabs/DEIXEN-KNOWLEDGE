@@ -2,7 +2,7 @@
 name: DEIXEN Canonical Decisions & Current State
 owns: The single decisions ledger and current project status going forward
 supersedes reading in isolation: AeroBridge_Decisions_and_Current_State.md
-last synchronized: 2026-09-26 (Phase 4 closed — gate approved, Decision 42; delegated Decisions 43–44; approved boards exported, Decision 45; Phase 5 started — build step 1 locked, Decisions 46–47; step 2 part A locked, Decision 48; step 2 part B prepared, Decision 49; part B checked, Decision 50; step 2 locked, Decision 51; step 3 prepared, Decision 52; step 3 locked, Decision 53; step 4 prepared, Decision 54; step 4A checked and locked, Decision 55 (2026-09-29); leaving a running assessment or scenario inside the app, Decision 56; rules for build step 4B, Decision 57 (all 2026-09-29); step 4B-1 checked, Decision 58; rules for build step 4B-2, Decision 59; step 4B-2 checked and build step 4 complete, Decision 60; rules for build step 5 (Coach), Decision 61 (all 2026-09-30); step 5 checked and locked, Decision 62; rules for build steps 6 and 7, Decision 63 (both 2026-10-01); steps 6 and 7 checked, Decision 64; step 7 merged and the build complete, Decision 65; the learner test prepared, Decision 66; Phase 5 closed by Karim after his learner test, Decision 67; the four-step detour before Phase 6, Decision 68 (all 2026-10-02); the accepted Freeze of the detour, Decision 69; Prompt 7 authorized, Decision 70; the Constitution's repository address, Decision 71 (all 2026-10-03); before-Step-4 task 1, F-19, landed, Decision 72; before-Step-4 task 2, F-02, landed, Decision 73; before-Step-4 task 3, F-03, landed, Decision 74; before-Step-4 task 4, F-05, landed, and app I-26 answered by Karim, Decision 75; before-Step-4 task 5, F-04 (A)(B), landed with the wording Karim approved, Decision 76 (all 2026-10-04); Karim's seven owner decisions (dark, red for errors, the learner re-test, replays, recovery, content details, two languages), Decision 77; the identity exploration before Step 4 and the Skill accepted, Decision 78 (both 2026-10-05); Claude Design may refine the direction Karim chooses after the identity exploration, Decision 79 (2026-10-06); Option C and the chosen identity, Decisions 80–81 (2026-10-12/13); Step 4 run, Decisions 82–83, its Detour Closing Report accepted, Decision 84; the Step 4 branch merged into `main`, Decision 85; F-09's presentation pattern, the opened display, Decision 86; F-09's content and the questions D86 left open, Decision 87 (all 2026-10-15))
+last synchronized: 2026-09-26 (Phase 4 closed — gate approved, Decision 42; delegated Decisions 43–44; approved boards exported, Decision 45; Phase 5 started — build step 1 locked, Decisions 46–47; step 2 part A locked, Decision 48; step 2 part B prepared, Decision 49; part B checked, Decision 50; step 2 locked, Decision 51; step 3 prepared, Decision 52; step 3 locked, Decision 53; step 4 prepared, Decision 54; step 4A checked and locked, Decision 55 (2026-09-29); leaving a running assessment or scenario inside the app, Decision 56; rules for build step 4B, Decision 57 (all 2026-09-29); step 4B-1 checked, Decision 58; rules for build step 4B-2, Decision 59; step 4B-2 checked and build step 4 complete, Decision 60; rules for build step 5 (Coach), Decision 61 (all 2026-09-30); step 5 checked and locked, Decision 62; rules for build steps 6 and 7, Decision 63 (both 2026-10-01); steps 6 and 7 checked, Decision 64; step 7 merged and the build complete, Decision 65; the learner test prepared, Decision 66; Phase 5 closed by Karim after his learner test, Decision 67; the four-step detour before Phase 6, Decision 68 (all 2026-10-02); the accepted Freeze of the detour, Decision 69; Prompt 7 authorized, Decision 70; the Constitution's repository address, Decision 71 (all 2026-10-03); before-Step-4 task 1, F-19, landed, Decision 72; before-Step-4 task 2, F-02, landed, Decision 73; before-Step-4 task 3, F-03, landed, Decision 74; before-Step-4 task 4, F-05, landed, and app I-26 answered by Karim, Decision 75; before-Step-4 task 5, F-04 (A)(B), landed with the wording Karim approved, Decision 76 (all 2026-10-04); Karim's seven owner decisions (dark, red for errors, the learner re-test, replays, recovery, content details, two languages), Decision 77; the identity exploration before Step 4 and the Skill accepted, Decision 78 (both 2026-10-05); Claude Design may refine the direction Karim chooses after the identity exploration, Decision 79 (2026-10-06); Option C and the chosen identity, Decisions 80–81 (2026-10-12/13); Step 4 run, Decisions 82–83, its Detour Closing Report accepted, Decision 84; the Step 4 branch merged into `main`, Decision 85; F-09's presentation pattern, the opened display, Decision 86; F-09's content and the questions D86 left open, Decision 87 (all 2026-10-15); F-09 built and merged into `main`, with F-03's explanation and F-10 (1), Decision 88; F-07's LDS note, Decision 89 (both 2026-10-16))
 authority note: Where a decision below is owned in more detail elsewhere in this canonical set (product/architecture, design, engine, curriculum/Coach), this file states the decision and its status, and points there rather than duplicating — the same single-ownership discipline the original NEW document already established and this pass is preserving.
 ---
 
@@ -53,7 +53,7 @@ were ended by Karim's decision on 2026-09-24 and are historical.
 **Phase:** Phase 4 (Design) closed on 2026-09-26 — Karim approved the gate
 (Decision 42). **Phase 5 (Build), closed 2026-10-02 (Decision 67); current: the detour before Phase 6 (Decision 68)** — build step 1 (evidence store)
 locked 2026-09-26 (Decision 46); step 2 part A (engine core, `AN`, `SS`,
-`NM`, `AP`) locked the same day (Decision 48); step 2 part B prepared (Decision 49: the D48 follow-ups I-4, I-5, I-6 closed, and the part B rules written into Build Spec §6A); Claude Code built part B in its third session (not merged: two layouts were missing); the project lead supplied them (Decision 50); session 3B finished, merged and tagged part B (Decision 51). Build step 3 (bridge, independence flag, skill states, Growth status, one-tab rule D47) prepared (Decision 52: Build Spec §7A), built in session 4 and locked (Decision 53, tag `step-3-bridge`, 723 tests). Build step 4 prepared (Decision 54: Build Spec §7B) and split into 4A (app shell and Terminal practice) and 4B (the other seven states). 4A built in session 5 and locked (Decision 55, tag `step-4a-terminal`, 818 unit/component and 69 browser tests); leaving a running assessment or scenario inside the app decided (Decision 56); the rules 4B would otherwise guess closed (Decision 57: Build Spec §7B items 11–15). 4B-1 (Flight Deck, Learning, Ghost Mode, Growth, Reset, Scope Disclosure) built in session 6 and checked (Decision 58: 943 unit/component and 104 browser tests; merged and tagged `step-4b1-screens` at the start of session 7); the rules for 4B-2 written (Decision 59: Build Spec §7B items 19–20, the meaning of "the scenario completed"). Session 7 merged 4B-1 (tag `step-4b1-screens`) and built 4B-2 (Decision 60: tag `step-4b2-screens`, 994 unit/component and 158 browser tests); build step 4 is complete — all eight states. The rules for build step 5 (Coach; app I-21) are closed (Decision 61: Build Spec §7C); session 8 built step 5 (Decision 62: tag `step-5-coach`, 1070 unit/component and 187 browser tests). The rules for build steps 6 and 7 are closed (Decision 63: Build Spec §7D); session 9 ran both (Decision 64: tag `step-6-check`; step 7 complete on `feature/step7-pass`, 1070 unit/component and 268 browser tests); session 9B closed app I-23 and I-24 in the app and merged step 7 (Decision 65: `main` = tag `step-7-pass` = `3fdb342`). Every build step of `CLAUDE.md` §7 is done. The learner test is prepared (Decision 66). Karim ran it and closed Phase 5 (Decision 67): the slice works end to end; what the test found about teaching a beginner goes into the four-step detour Karim inserted before Phase 6 (Decision 68; Step 1 targets tag `phase-5-final` = `3fdb342`). Detour steps 1–3 ran on 2026-10-02 and 2026-10-03; Karim accepted the Freeze Package, and its Freeze, design scope and landing times are recorded as Decision 69. The first before-Step-4 task, F-19 (reproducible test evidence), landed on 2026-10-04 (Decision 72: `main` = `c093d5e`); the second, F-02 (a role for every training line), landed the same day (Decision 73: `main` = `b5c66e5`); the third, F-03 (the V-entry and marker reasons of every Amadeus block), landed the same day (Decision 74: `main` = `d7d9f55`); the fourth, F-05 (the two practice-run continuity facts), landed the same day (Decision 75: `main` = `8928197`); the fifth, F-04 (A)(B) (one term per meaning, and why a valid entry does not count), landed the same day with the words Karim approved (Decision 76: `main` = `8f9c355`). Every before-Step-4 task of Decision 69 (c) is done. Karim tagged the base for Step 4 (`step4-base`, 2026-10-05); Prompt 7 built the Design Exploration Skill, which Karim installed and accepted (Decisions 70, 78). Karim's seven owner decisions of 2026-10-05 are Decision 77 (among them: the primary visual direction is dark; red also marks errors). The identity exploration ran from 2026-10-05 to 2026-10-13 (Decision 78); Karim decided Option C (Decision 80) and chose the identity — the DEIXEN Kit with its reference renders, without a Claude Design refinement — and Step 4's design scope is restated (Decision 81). Step 4 was prepared and is running (Decision 82, 2026-10-15: its base, the typefaces, the Ghost Mode explanation, the kit gaps, and a lighting comparison Karim asked for). Karim chose the lighting, no boxes and a typeset wordmark (Decision 83). Step 4 ran on a separate branch and Karim accepted its Detour Closing Report (Decision 84, 2026-10-15): the four detour steps are complete. The Step 4 branch is merged into `main` (Decision 85: `main` = tag `detour-step4` = `73e4b3a`). Karim chose F-09's presentation pattern, the opened display (Decision 86), and approved its content — the names, the Ghost Mode texts, `disc.6` and F-03's one-time explanation (Decision 87; Build Spec §7E). Next: the before-Phase-6 tasks of Decision 69 (c), each started by Karim, first the F-09 build with the content of Decision 87 (F-03's explanation and F-10 (1) land with it); Karim starts Phase 6 himself. Separately, Karim may start the `INVALID FORMAT/NOT ENTERED/` task (Decision 81 (e) item 8) and chooses when the learner re-test runs (F-11). Claude Code builds the slice from
+`NM`, `AP`) locked the same day (Decision 48); step 2 part B prepared (Decision 49: the D48 follow-ups I-4, I-5, I-6 closed, and the part B rules written into Build Spec §6A); Claude Code built part B in its third session (not merged: two layouts were missing); the project lead supplied them (Decision 50); session 3B finished, merged and tagged part B (Decision 51). Build step 3 (bridge, independence flag, skill states, Growth status, one-tab rule D47) prepared (Decision 52: Build Spec §7A), built in session 4 and locked (Decision 53, tag `step-3-bridge`, 723 tests). Build step 4 prepared (Decision 54: Build Spec §7B) and split into 4A (app shell and Terminal practice) and 4B (the other seven states). 4A built in session 5 and locked (Decision 55, tag `step-4a-terminal`, 818 unit/component and 69 browser tests); leaving a running assessment or scenario inside the app decided (Decision 56); the rules 4B would otherwise guess closed (Decision 57: Build Spec §7B items 11–15). 4B-1 (Flight Deck, Learning, Ghost Mode, Growth, Reset, Scope Disclosure) built in session 6 and checked (Decision 58: 943 unit/component and 104 browser tests; merged and tagged `step-4b1-screens` at the start of session 7); the rules for 4B-2 written (Decision 59: Build Spec §7B items 19–20, the meaning of "the scenario completed"). Session 7 merged 4B-1 (tag `step-4b1-screens`) and built 4B-2 (Decision 60: tag `step-4b2-screens`, 994 unit/component and 158 browser tests); build step 4 is complete — all eight states. The rules for build step 5 (Coach; app I-21) are closed (Decision 61: Build Spec §7C); session 8 built step 5 (Decision 62: tag `step-5-coach`, 1070 unit/component and 187 browser tests). The rules for build steps 6 and 7 are closed (Decision 63: Build Spec §7D); session 9 ran both (Decision 64: tag `step-6-check`; step 7 complete on `feature/step7-pass`, 1070 unit/component and 268 browser tests); session 9B closed app I-23 and I-24 in the app and merged step 7 (Decision 65: `main` = tag `step-7-pass` = `3fdb342`). Every build step of `CLAUDE.md` §7 is done. The learner test is prepared (Decision 66). Karim ran it and closed Phase 5 (Decision 67): the slice works end to end; what the test found about teaching a beginner goes into the four-step detour Karim inserted before Phase 6 (Decision 68; Step 1 targets tag `phase-5-final` = `3fdb342`). Detour steps 1–3 ran on 2026-10-02 and 2026-10-03; Karim accepted the Freeze Package, and its Freeze, design scope and landing times are recorded as Decision 69. The first before-Step-4 task, F-19 (reproducible test evidence), landed on 2026-10-04 (Decision 72: `main` = `c093d5e`); the second, F-02 (a role for every training line), landed the same day (Decision 73: `main` = `b5c66e5`); the third, F-03 (the V-entry and marker reasons of every Amadeus block), landed the same day (Decision 74: `main` = `d7d9f55`); the fourth, F-05 (the two practice-run continuity facts), landed the same day (Decision 75: `main` = `8928197`); the fifth, F-04 (A)(B) (one term per meaning, and why a valid entry does not count), landed the same day with the words Karim approved (Decision 76: `main` = `8f9c355`). Every before-Step-4 task of Decision 69 (c) is done. Karim tagged the base for Step 4 (`step4-base`, 2026-10-05); Prompt 7 built the Design Exploration Skill, which Karim installed and accepted (Decisions 70, 78). Karim's seven owner decisions of 2026-10-05 are Decision 77 (among them: the primary visual direction is dark; red also marks errors). The identity exploration ran from 2026-10-05 to 2026-10-13 (Decision 78); Karim decided Option C (Decision 80) and chose the identity — the DEIXEN Kit with its reference renders, without a Claude Design refinement — and Step 4's design scope is restated (Decision 81). Step 4 was prepared and is running (Decision 82, 2026-10-15: its base, the typefaces, the Ghost Mode explanation, the kit gaps, and a lighting comparison Karim asked for). Karim chose the lighting, no boxes and a typeset wordmark (Decision 83). Step 4 ran on a separate branch and Karim accepted its Detour Closing Report (Decision 84, 2026-10-15): the four detour steps are complete. The Step 4 branch is merged into `main` (Decision 85: `main` = tag `detour-step4` = `73e4b3a`). Karim chose F-09's presentation pattern, the opened display (Decision 86), and approved its content — the names, the Ghost Mode texts, `disc.6` and F-03's one-time explanation (Decision 87; Build Spec §7E). F-09 was built from it, with F-03's explanation and F-10 (1), and merged into `main`; Karim accepted it (Decision 88, 2026-10-16: `main` = `c8b13f9`). F-07's LDS note is written (Decision 89). Next: the remaining before-Phase-6 tasks of Decision 69 (c) — F-14 (a), F-04 (C), F-06 (a)–(c) and F-08 — each started by Karim, and his owner decision S2-28 / S2-74 before the first Phase 6 Ghost script; Karim starts Phase 6 himself. Separately, Karim may start the `INVALID FORMAT/NOT ENTERED/` task (Decision 81 (e) item 8) and chooses when the learner re-test runs (F-11). Claude Code builds the slice from
 `DEIXEN_Slice_Build_Spec.md`, `CLAUDE.md`, the content files, the approved
 design and `tokens.css`. Standing delegation to Claude: Decision 29.
 Phase 4 record: Claude Design proposed three directions (A "Margin",
@@ -101,7 +101,7 @@ bridge's output and changes nothing a learner sees (Decision 74); then
 `main` = `8928197`, which adds F-05's two continuity facts to the bridge's
 output and changes nothing a learner sees (Decision 75); then `main` = `8f9c355`, which shows
 "Done on your own" on the chain rows instead of "Correct in DEIXEN", says in the panel why a valid
-entry does not count as done on your own, and changes no evidence rule (Decision 76). It counts as the working slice only after
+entry does not count as done on your own, and changes no evidence rule (Decision 76); then Step 4's identity (Decision 85: `main` = tag `detour-step4` = `73e4b3a`); then F-09, the opened display — names for each part of a display, on request in practice and in the scenario and in Ghost Mode's `annotate` steps, with no new event (Decision 88: `main` = `c8b13f9`). It counts as the working slice only after
 Karim's learner test (the Phase 5 gate). No implementation or design
 execution is authorized by this status alone; each follows its Execution
 Plan gate.
@@ -2038,7 +2038,7 @@ Decision:
 - The marker stays where D27 and Build Spec §5 put it, and its details are never taught.
 - The bridge exposes each Amadeus block's V-entry and its U-reasons, additively and outside src/engine/ (S1-26).
 - Step 4 shows the marker as belonging to the display's layout — never to the entry or to a training line — and may link it to disc.6.
-- A one-time explanation at the marker's first appearance (S2-78) is learning content. It names only a detail disc.6 already lists, never that detail's meaning, and it is written with F-09's annotations (one owner). *Wording approved by Karim 2026-10-15 (`ui.ann.markerFirst`, Decision 87 (e)); it lands with the F-09 build.*
+- A one-time explanation at the marker's first appearance (S2-78) is learning content. It names only a detail disc.6 already lists, never that detail's meaning, and it is written with F-09's annotations (one owner). *Wording approved by Karim 2026-10-15 (`ui.ann.markerFirst`, Decision 87 (e)); landed with the F-09 build, 2026-10-16 (Decision 88).*
 
 Sources: S2-45, S2-78. Cites S1-26, S2-71(f).
 Learner benefit:
@@ -2184,7 +2184,7 @@ Decision: Adopt LXA §22, which Build Spec §12 deferred "until real learner tes
 - In practice, on request, beside the learner's own displays. Diagnostic only: not events, no effect on independence.
 - One owner for first-display explanations: these annotations, not Coach. The Learning touchpoint stays as D61 serves it, and is revisited after the re-test.
 - Shown with the existing margin-note and leader pattern (S3-04). *Replaced 2026-10-15 by Decision 86 (the opened display): the chosen identity removed this pattern (Decision 81 (e) item 4; Decision 84 (f)).*
-- *Content and scope settled 2026-10-15 by Decision 87: U-items are named with a dashed line and "not taught", never their meaning (Decision 86 (b)); `FQD` and `FXP` are left out until after the re-test (F-11); the task's own line is read as a line whose names would answer a step not yet done; not on the assessment screen.*
+- *Content and scope settled 2026-10-15 by Decision 87: U-items are named with a dashed line and "not taught", never their meaning (Decision 86 (b)); `FQD` and `FXP` are left out until after the re-test (F-11); the task's own line is read as a line whose names would answer a step not yet done; not on the assessment screen. Built and merged into `main` 2026-10-16 (Decision 88).*
 
 Sources: S2-09, S2-10, S2-27, S2-35, S2-60, S2-67. Cites S2-11, S2-73, S2-78, S2-80, S3-04, S3-08.
 Learner benefit:
@@ -2201,7 +2201,7 @@ Reopen if: annotations go unused or confuse.
 **F-10 — Arabic.**
 
 Decision:
-- disc.6 in Arabic is corrected so it says DEIXEN marks these details and does not teach them («يعلّم» currently reads as the opposite). *Done 2026-10-15 in the knowledge copies («يميّز», Decision 87 (d)); reaches the app with the F-09 build.*
+- disc.6 in Arabic is corrected so it says DEIXEN marks these details and does not teach them («يعلّم» currently reads as the opposite). *Done 2026-10-15 in the knowledge copies («يميّز», Decision 87 (d)); reached the app with the F-09 build, 2026-10-16 (Decision 88).*
 - Before Phase 6 writes Arabic content, the re-test includes an Arabic check (lessons 2, 3, 7, 9, the Terminal, Growth), with reasons recorded. D64 (I-24) stays until then.
 - Remembering the interface language across loads is deferred (it is a storage rule, §11).
 
@@ -3725,6 +3725,138 @@ If a dependency has not landed:
   Constitution, 03, 04, 08, LDS, `CLAUDE.md` (until the acceptance),
   `design/phase4/`, `design/identity/` (D86 amends it), `deixen-app`
   (until the build).
+
+### Decisions of 2026-10-16 — F-09 landed (Karim, and by delegation D29)
+
+- **Decision 88 — F-09 built and merged into `main`; F-03's explanation
+  and F-10 (1) landed with it. Accepted — Karim, 2026-10-16** (he pushed
+  the merge to GitHub himself and, after the project lead's report, asked
+  in the project chat at 23:33 to go on towards Phase 6; items (d) and (g)
+  2 are his choices) **and by delegation D29** (the review, the technical
+  readings of (e), the evidence pictures of (f); reversible by Karim). This
+  is a self-review by the project lead, not an independent review
+  (Constitution §9).
+  **(a) The build and the push.** Claude Code (Opus 5.5, High) ran
+  `DEIXEN_F09_Build_PROMPT.md` on Karim's computer. Its first check found
+  `origin/main` one commit past `73e4b3a`: `4f16e30`, the 11 knowledge
+  files of D87 uploaded into the app repository by mistake; on Karim's
+  instruction it was reverted without force (`0a60a08`; `git diff 73e4b3a
+  0a60a08` empty) and pushed. The work is on `feature/f09-annotations`
+  (`a88cf5a` … `1d40f03`), merged with `--no-ff`: merge commit
+  **`c8b13f9`** (parents `0a60a08` and `1d40f03`). Claude Code's push of
+  `main` failed with HTTP 408 and dropped connections — not the 403 of
+  D85 (d) 1; the merge carries about 126 MB of pictures. Karim pushed
+  `main` from his computer on 2026-10-16; the project lead checked on the
+  remote: `main` = `c8b13f9`. Not tagged (none asked).
+  **(b) Reported by Claude Code** at the branch head, Chromium only:
+  typecheck and build clean; 1512/1512 unit and component tests; 387/387
+  browser tests (348 before F-09 + 39 new). Not observed: Safari, Firefox,
+  real phones, a screen reader. The project lead did not re-run the tests
+  (the package registry was not reachable from its session).
+  **(c) Checked by the project lead**, read-only, at `c8b13f9` against
+  `0a60a08`: the merge parents; `src/engine/` and `src/evidence/`
+  unchanged; `CLAUDE.md`, `package.json`, `package-lock.json`,
+  `playwright.config.ts` and `vite.config.ts` unchanged; `tokens.css`
+  differs by the two lines of Build Spec §7E item 8 only, new sha256
+  **`33d863caa1285da3c57af192871ae87c83783842a6ed1de96abae14b947cae11`**;
+  `content/en/text.json`, `content/ar/text.json` and
+  `content/data/slice.json` byte-identical with knowledge `0bc11ef`
+  (`8bd6456d…5aca`, `016d6616…4510`, `1aeedee1…93b9`; F-21);
+  `src/bridge/names.ts` against §7E item 2 — every line's fields in the
+  table's order, the dashed keys exactly where the table puts them, a
+  character no field claims is a thrown stop, never a silent gap; the
+  accessibility trees (compared exactly by F-19) change only by the names
+  control, the names list, the new `disc.6` and Ghost Mode's sentences;
+  the 16 report screens in `docs/screens/f09/` looked at (the main `AN`,
+  the filed booking, Ghost Mode L01; English and Arabic; 1440 and 390): no
+  line crosses another, the task's line 2 is never named, dashed parts
+  carry "not taught". On the phone the far names lie beyond the edge until
+  panned, as §7E item 3 says.
+  **(d) A `SSR CTCM` line with a learner-typed ending (app I-37). Closed —
+  Karim, 2026-10-16** (in the Claude Code session, answering the stop of
+  §7E item 2): the engine shows the ending as typed (K7), and no name
+  covers it, so **such a display names its header only** (as `AN` does
+  when its last line is the task's own); without an ending the line is
+  named in full. No new words. Build Spec §7E item 2 now says so.
+  **(e) Claude Code's readings (app `docs/DECISIONS.md` T19). Accepted by
+  delegation:** (1) `ann.contactText` names the whole free text after `AP`
+  — V-11 records the contact as one free text, so extra words are part of
+  it, not a part with no name; (2) a part with several pieces (the class
+  letters, the class figures, the one-letter codes) has one line, to its
+  first piece, and its `{VALUE}` is the pieces joined by a space; (3) names
+  opened on an older display stay open, without a control, until names
+  are opened on a newer one (§7E item 4 read literally); (4) "first `AN`"
+  for `ui.ann.markerFirst` is decided by the order of the stored log, and
+  the airline code is read from the stored command (V-02; app I-4); (5)
+  six existing test expectations edited: the content key count (230 →
+  293), the new `names` field on views (two tests), the `tokens.css` pin,
+  a hand-built note's `markerFirst`, and the engine purity test, which now
+  ignores the message of a thrown developer error (`er.ts`'s check begins
+  with the words "Record locator", a new name). That last one narrows what
+  the purity test checks, by the text of thrown errors only; accepted,
+  since such a message is never shown to a learner.
+  **(f) The evidence pictures. Decided by delegation.** The branch (the
+  last commit, `1d40f03`, for most of them) rewrote 633 existing pictures
+  in `docs/screens/` and 38 accessibility trees, and added 16 pictures. The project lead compared every rewritten
+  picture with its committed copy, pixel by pixel: each differs, but most
+  only at the edges of their text; about a hundred show the names control
+  or the new `disc.6`. Cause: this run was on Karim's computer, while the
+  committed pictures had been taken in cloud sessions, and each machine
+  draws text slightly differently; F-19's rule (app T13 "F-19c": changed
+  when more than 64 pixels differ by more than 8 levels, or any pixel by
+  more than 32) was measured on one machine. Not a defect of F-19, but a
+  limit of it, and the commit's message did not say it. **Decision:** the
+  rewritten pictures stay. From now on the evidence pictures are taken on
+  Karim's computer (the cloud credit ends on 2026-11-05). A task whose
+  browser run happens elsewhere restores every picture its task did not
+  change on purpose (`git restore docs/screens`) before committing, and
+  lists them in its report.
+  **(g) Open items.** (1) App **I-36**: two browser tests (`step4.spec.ts`
+  line 388, F-05's practice button) are flaky by test timing — the test
+  presses before the end of the lesson has been observed; the app follows
+  its rule. Open; a test-only fix may ride with the next batched task. (2)
+  App **I-38**: the names control's accessible name ("Show the names of
+  this display's parts") does not contain its visible words ("Show names",
+  "Hide names") — WCAG 2.1 2.5.3, Level A, which matters for speech-input
+  users. **Deferred — Karim, 2026-10-16, 23:33:** «مش مهتم بالاوامر
+  الصوتية حاليا». The words stay; a known accessibility gap, to be looked
+  at again before real learners other than Karim use the slice. (3) App
+  **I-39**: "ID" in "Office ID (hidden)" is set in the code face — small,
+  presentation; open. (4) D85 (d) 1 stays open: the cause of the 403 is
+  still not known.
+  **(h) Records updated.** `tokens.css`: the record of its sha256 is now
+  this decision (it was D84); Build Spec §2 and §7E item 8, and the master
+  `CLAUDE.md` §4–§5, point here. The app's `CLAUDE.md` copy is updated
+  when Karim copies the master into `deixen-app`, or as the first commit of
+  the next Claude Code task (S3-03). **Before Phase 6, still to land (D69
+  (c)):** F-14 (a), F-04 (C), F-06 (a)–(c), F-07's LDS note, F-08; Karim's
+  owner decision S2-28 / S2-74 before the first Phase 6 Ghost script.
+  Still open elsewhere: U-09 (the class figure and the header number, its
+  own verification item); the `INVALID FORMAT/NOT ENTERED/` task; the
+  re-test F-11; app I-32, I-35; D85 (d) 2; the D81 (f) rows; F-09 for
+  `FXP` and `FQD` (D87 (c)). Files changed: 07 (this decision; the notes
+  on F-03, F-09, F-10; the status line; current state), 13, 00 (A10),
+  Execution Plan (status line, §7), Build Spec (status line, §2, §7E items
+  2, 4, 8), `CLAUDE.md` (status line, §4, §5). Not affected: Constitution,
+  03, 04, 06, 08, LDS/LXA, Verified Reference, content files (identical,
+  F-21), `design/phase4/`, `design/identity/`.
+
+- **Decision 89 — F-07's LDS note written. Done — project lead by
+  delegation D29, 2026-10-16** (a before-Phase-6 item of D69 (c); F-07
+  itself was decided in the Freeze Karim accepted). The three lenient LDS
+  passages F-07 names — §8 (Partial Reveal "does not trigger exclusion"),
+  §12 (a success after a Partial Reveal is "not retrieval-adjacent") and
+  §15 (Nudge and Partial Reveal do not disqualify the next success) — each
+  get a note after them: Build Spec §8 and §7A item 6 govern; an attempt on
+  which any hint level was used, Nudge and Partial Reveal included, is not
+  independent; the passage's lenient rule is not used. The LDS text itself
+  is not changed (draft authority). The LXA repeats the same lenient rule
+  in two tables (§10's ladder, §11's Coach table); F-07 did not name them,
+  but they are the same conflict, so each gets the same note (Constitution
+  §18). Files changed: LDS (three notes), LXA (two notes), 07 (this
+  decision; the status line; current state), 13, 00 (A10), Execution Plan
+  (status line, §7). Not affected: everything else; no code or content
+  change.
 
 ## Definition of Done — for the current frozen vertical slice
 

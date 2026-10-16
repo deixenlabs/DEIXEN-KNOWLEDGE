@@ -638,6 +638,11 @@ not reopen the canonical single-hint-counter rule (file 03), and Partial
 Reveal is diagnostic under §7's Fix 2 (does not trigger exclusion on its
 own), while Full Reveal remains corrective (does).
 
+> **Note (07 D69 F-07; added 2026-10-16, 07 D89).** Build Spec §8 and §7A
+> item 6 govern: an attempt on which any hint level was used — Nudge and
+> Partial Reveal included — is not independent. The more lenient rule in
+> this passage is not used.
+
 **LEARNING DESIGN DECISION, PROPOSED, unchanged:** full tiering of all 37
 commands remains deferred to per-lesson curriculum authoring; this document
 supplies the rubric, not the assignment.
@@ -777,6 +782,11 @@ retrieval-adjacent in the same disqualifying sense as one following a Full
 Reveal (§7 Fix 2) — the learner still had to retrieve the actual fix
 themselves, only the location of the problem was named. This is why Partial
 Reveal is diagnostic, not corrective, under §13's rule below.
+
+> **Note (07 D69 F-07; added 2026-10-16, 07 D89).** Build Spec §8 and §7A
+> item 6 govern: an attempt on which any hint level was used — Nudge and
+> Partial Reveal included — is not independent. The more lenient rule in
+> this passage is not used.
 
 The same unified rule now applies across all three channels — Ghost Mode,
 the assistance ladder, and ordinary feedback: any content that states or
@@ -925,6 +935,11 @@ this pass (closes the review's P2-7 and formalizes §8's Partial Reveal):**
    correction. Corrective (§13). Increments the counter. A success
    immediately following it **is** excluded from independent evidence
    (§7 Fix 2), as in Revision 1.
+
+> **Note (07 D69 F-07; added 2026-10-16, 07 D89).** Build Spec §8 and §7A
+> item 6 govern: an attempt on which any hint level was used — Nudge and
+> Partial Reveal included — is not independent. The more lenient rule in
+> this passage is not used.
 
 **Note on the relationship between this counter and independence, stated
 precisely this pass to avoid the two being conflated:** the counter above

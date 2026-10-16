@@ -1,7 +1,7 @@
 # CLAUDE.md — DEIXEN app (first-build slice)
 
 > Status: APPROVED by Karim 2026-09-25 (07 Decision 26). First edition
-> (Execution Plan 3.5); Decision 27 applied 2026-09-25 (§3 rule 2, §8); Decisions 30, 33, 34 applied 2026-09-25 (§3 rule 2); Phase 4 gate (07 Decision 42) applied 2026-09-26 (§2, §4, §5, §8); Decision 45 (boards in `design/phase4/`) applied 2026-09-26 (§2, §4); Decisions 80–81 applied 2026-10-13 (§2, §3, §4, §8); Decisions 83–84 (Step 4 accepted) applied 2026-10-15 (§4, §5, §8). This file is the master copy of the
+> (Execution Plan 3.5); Decision 27 applied 2026-09-25 (§3 rule 2, §8); Decisions 30, 33, 34 applied 2026-09-25 (§3 rule 2); Phase 4 gate (07 Decision 42) applied 2026-09-26 (§2, §4, §5, §8); Decision 45 (boards in `design/phase4/`) applied 2026-09-26 (§2, §4); Decisions 80–81 applied 2026-10-13 (§2, §3, §4, §8); Decisions 83–84 (Step 4 accepted) applied 2026-10-15 (§4, §5, §8); Decision 88 (F-09 landed: the `tokens.css` sha256 record) applied 2026-10-16 (§4, §5). This file is the master copy of the
 > Claude Code instructions; at build start it becomes the first file of the
 > code repository.
 
@@ -90,8 +90,10 @@ stop and report (§6).
 - Provisional numbers (`CONSOLIDATED_COUNT`, `REINFORCEMENT_FAIL_COUNT`,
   `ESCALATION_ERROR_COUNT`) live in one config file.
 - Visual values come only from `src/styles/tokens.css` — the approved
-  token file, used unchanged; check its sha256 against 07 D84 (it replaced
-  the 07 D42 file when Karim accepted the Detour Closing Report). A change
+  token file, used unchanged; check its sha256 against 07 D88
+  (`33d863caa1285da3c57af192871ae87c83783842a6ed1de96abae14b947cae11`: the
+  07 D84 file, which replaced the 07 D42 file when Karim accepted the
+  Detour Closing Report, plus F-09's two lines, Build Spec §7E item 8). A change
   to it is made only by a decided design change. Components use its role tokens, never raw colours or
   sizes. A value the design needs that the file lacks: stop and ask (§6).
 - Read the design from `../DEIXEN-KNOWLEDGE/design/phase4/` (spec §2;
@@ -116,7 +118,7 @@ deixen-app/
 │   ├── coach/
 │   ├── i18n/
 │   ├── styles/
-│   │   └── tokens.css    ← approved token file (07 D84), unchanged
+│   │   └── tokens.css    ← approved token file (07 D88), unchanged
 │   └── config.ts         ← provisional numbers
 ├── tests/
 │   ├── engine/           ← every checklist item, valid and invalid

@@ -1152,6 +1152,12 @@ They are different: Supported is Nudge only, Reduced Support is Partial
 Reveal only, and the progression from one to the other is exactly the
 fading step LDS §8/§15 describe.
 
+> **Note (07 D69 F-07; added 2026-10-16, 07 D89).** Build Spec §8 and §7A
+> item 6 govern: an attempt on which any hint level was used — Nudge and
+> Partial Reveal included — is not independent. Where the table above says
+> a Nudge or Partial Reveal does not disqualify the next success, that
+> rule is not used.
+
 **`[EXPERIENCE ARCHITECTURE DECISION]`:** the experience must never present
 these five steps as a single linear checklist a learner "completes in
 order" for a given skill — LDS's actual model allows re-entry (a CONSOLIDATED
@@ -1194,6 +1200,12 @@ global element versus a component embedded per page — is explicitly OPEN
 (file 06/07), and this document does not resolve it. What this document
 does add is the constraint that whichever layout is chosen must satisfy
 every row in the table above; layout is free, behavior is not.
+
+> **Note (07 D69 F-07; added 2026-10-16, 07 D89).** Build Spec §8 and §7A
+> item 6 govern: an attempt on which any hint level was used — Nudge and
+> Partial Reveal included — is not independent. Where the table above says
+> a Nudge or Partial Reveal does not disqualify the next success, that
+> rule is not used.
 
 **No new assistance metric is introduced** (per this document's governing
 brief §17's explicit caution) — the single canonical hint counter (file 03)
