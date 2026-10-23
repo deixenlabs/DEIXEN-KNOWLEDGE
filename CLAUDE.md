@@ -1,7 +1,7 @@
 # CLAUDE.md — DEIXEN app (first-build slice)
 
 > Status: APPROVED by Karim 2026-09-25 (07 Decision 26). First edition
-> (Execution Plan 3.5); Decision 27 applied 2026-09-25 (§3 rule 2, §8); Decisions 30, 33, 34 applied 2026-09-25 (§3 rule 2); Phase 4 gate (07 Decision 42) applied 2026-09-26 (§2, §4, §5, §8); Decision 45 (boards in `design/phase4/`) applied 2026-09-26 (§2, §4); Decisions 80–81 applied 2026-10-13 (§2, §3, §4, §8); Decisions 83–84 (Step 4 accepted) applied 2026-10-15 (§4, §5, §8); Decision 88 (F-09 landed: the `tokens.css` sha256 record) applied 2026-10-16 (§4, §5). This file is the master copy of the
+> (Execution Plan 3.5); Decision 27 applied 2026-09-25 (§3 rule 2, §8); Decisions 30, 33, 34 applied 2026-09-25 (§3 rule 2); Phase 4 gate (07 Decision 42) applied 2026-09-26 (§2, §4, §5, §8); Decision 45 (boards in `design/phase4/`) applied 2026-09-26 (§2, §4); Decisions 80–81 applied 2026-10-13 (§2, §3, §4, §8); Decisions 83–84 (Step 4 accepted) applied 2026-10-15 (§4, §5, §8); Decision 88 (F-09 landed: the `tokens.css` sha256 record) applied 2026-10-16 (§4, §5); Decisions 91–92 (the identity completed, Kit v0.3; Scenario Bank v1) applied 2026-10-23 on the build branch `feature/identity-d91` (§4, §5, §8). This file is the master copy of the
 > Claude Code instructions; at build start it becomes the first file of the
 > code repository.
 
@@ -90,10 +90,12 @@ stop and report (§6).
 - Provisional numbers (`CONSOLIDATED_COUNT`, `REINFORCEMENT_FAIL_COUNT`,
   `ESCALATION_ERROR_COUNT`) live in one config file.
 - Visual values come only from `src/styles/tokens.css` — the approved
-  token file, used unchanged; check its sha256 against 07 D88
-  (`33d863caa1285da3c57af192871ae87c83783842a6ed1de96abae14b947cae11`: the
-  07 D84 file, which replaced the 07 D42 file when Karim accepted the
-  Detour Closing Report, plus F-09's two lines, Build Spec §7E item 8). A change
+  token file, used unchanged; check its sha256: since the Kit v0.3 build
+  (07 D91, a decided design change)
+  `fb11aae2a6c69849a3560ab99437b071e908e7e7376c30281424b9582110161c` — the
+  07 D88 file (`33d863ca…cae11`: the 07 D84 file plus F-09's two lines) plus
+  the values Kit v0.3 adds and less the typeset wordmark's four sizes (Build
+  Spec §7G); recorded in 07 when Karim accepts the build. A change
   to it is made only by a decided design change. Components use its role tokens, never raw colours or
   sizes. A value the design needs that the file lacks: stop and ask (§6).
 - Read the design from `../DEIXEN-KNOWLEDGE/design/phase4/` (spec §2;
@@ -118,7 +120,7 @@ deixen-app/
 │   ├── coach/
 │   ├── i18n/
 │   ├── styles/
-│   │   └── tokens.css    ← approved token file (07 D88), unchanged
+│   │   └── tokens.css    ← approved token file (07 D88; Kit v0.3, 07 D91), unchanged
 │   └── config.ts         ← provisional numbers
 ├── tests/
 │   ├── engine/           ← every checklist item, valid and invalid
@@ -182,8 +184,9 @@ step.
 - [ ] Breakpoints 320 / 360 / 390 / 430 / 768 / 1024 / 1280–1440 px.
 - [ ] Keyboard-only use works, including the Terminal input.
 - [ ] No raw colour or size outside `tokens.css`; screens match the
-      approved boards (spec §2); the header wordmark is the name set as
-      text from `ui.brand.name` (07 D83 (c)).
+      approved boards and the identity (spec §2); the header carries the
+      brand mark, lockup A, unchanged from its reference, its accessible
+      name `ui.brand.name` (07 D91 (a), replacing D83 (c)).
 - [ ] Spec §13 Definition of Done items affected by the step still hold.
 
 Report to Karim in short, plain language: what was built, what was tested

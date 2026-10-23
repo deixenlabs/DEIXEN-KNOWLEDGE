@@ -1,6 +1,6 @@
 ---
 name: DEIXEN Slice Build Spec
-status: CURRENT — APPROVED by Karim 2026-09-25 (07 Decision 26). Updated 2026-09-25: gaps G1–G3 (§5, §12); Decision 27 (K5, K6) applied to §4, §5, §12, §13; K7 (§6 row 5, §12) approved in the Phase 3 gate (07 D28). Phase 4, 2026-09-25: 07 Decisions 30, 32–34, 36 applied to §5 and §13; Decisions 37–38 to §4 and §8. Phase 4 gate, 2026-09-26: 07 Decision 42 (approved design, `tokens.css`) applied to §2; Decision 44 (`AN` header number) to §5 and §12; Decision 45 (boards exported to `design/phase4/`) to §2. Phase 5, 2026-09-26: 07 Decisions 46 (`result` on ending events) and 47 (one tab at a time) applied to §11. 2026-09-26: 07 Decision 49 applied to §6 ("not recognized" vs "not covered") and new §6A (rules for build step 2 part B). 2026-09-28: 07 Decision 50 — §6A items 8–10. 2026-09-28: 07 Decision 52 — new §7A (rules for build step 3), pointers in §8, §10, §11. 2026-09-28: 07 Decision 53 — §7A items 1 (return to practice, app I-12) and 14 (data-reset notice). 2026-09-28: 07 Decision 54 — new §7B (rules for build step 4: the current step for hints, hint levels on the screen, the entry field, parts 4A/4B, load notices), pointer in §8. 2026-09-29: 07 Decisions 55–56 — §7A item 1 (a run also starts at an accepted hint request, app I-12), items 1 and 11 and §9 (pointers to the in-app exit), §7B heading and new items 6–10 ("Booking as it stands", leaving a running assessment or scenario, storage refused, the name as a string key, behaviours over time); 07 Decision 57 — §7B items 11–15 (the Flight Deck's recommended action, the practice run when moving between screens, Learning, Ghost Mode replays, when the scenario and the assessment start). 2026-09-30: 07 Decision 58 — §7B items 16–18 (the way into Ghost Mode, Ghost typing speed, "In your task"); 07 Decision 59 — §7A item 13, §7B item 11 (d) and §10 ("the scenario completed" means completed with every checklist item met), §7B items 19–20 (the scenario and assessment rows; the assessment and scenario screens). 2026-09-30: 07 Decision 61 — new §7C (rules for build step 5, Coach: when each Coach text shows, Coach and independence, the assessment and the scenario, the bypass, the escalation count, the Growth note, the five touchpoints), pointers in §6A item 2 and §8. 2026-10-01: 07 Decision 62 — §7C item 6 (the escalation offer may follow the bypass notes in practice, app I-22). 2026-10-01: 07 Decision 63 — new §7D (rules for build steps 6 and 7: step 6 as a check with a Definition of Done trace, the end note in view, the scrolling notes block, the phone drawer, what the accessibility baseline means here, the localization and breakpoint passes, lockup B, what automated checks cannot prove), pointers in §2 and §13. 2026-10-02: 07 Decision 64 — §7B item 17 and §7D item 5 (d) corrected (`--motion-demo-hold` stays under reduced motion: a still reading pause, app I-23); §7D item 6 (English terms written in the approved Arabic content are allowed, app I-24). 2026-10-04: 07 Decision 76 (F-04 (A)(B) landed; 07 D69 F-04 amends D40) — §7 (learner-facing wording: two terms), §7B item 11 (the chain word), §7C item 8 (the chain word), §8 (the note after a valid entry that does not count as done on your own). 2026-10-15: 07 Decisions 83–84 (Step 4 accepted) — §2 (the token file, typefaces and header wordmark of the chosen identity), §7B items 4 and 9, §7D item 8 (the header wordmark set as text). 2026-10-15: 07 Decision 87 (F-09's content; the pattern of 07 D86) — §2 (`tokens.css` gets one primitive and one role, §7E item 8), §5 (U-15, U-16), new §7E (rules for F-09, the opened display), §12 (the Screen Literacy candidate answered by F-09). 2026-10-16: 07 Decision 88 (F-09 landed, `main` = `c8b13f9`) — §2 and §7E item 8 (the `tokens.css` sha256 record is now 07 D88), §7E item 2 (a `SSR CTCM` line with a learner-typed ending: header only, Karim), §7E item 4 (the accessible-name gap, deferred by Karim). 2026-10-16: 07 Decision 90 (F-04 (C), F-06 (a)–(c), F-14 (a), app I-36) — new §7F, §7C item 5 (the announcement no longer says "on your own"). First edition (Execution Plan 3.3); proposals K1–K4 approved (07 Decision 25). With this approval, the LDS/LXA content extracted here is binding for the slice (LDS and LXA reading rules, point 1).
+status: CURRENT — APPROVED by Karim 2026-09-25 (07 Decision 26). Updated 2026-09-25: gaps G1–G3 (§5, §12); Decision 27 (K5, K6) applied to §4, §5, §12, §13; K7 (§6 row 5, §12) approved in the Phase 3 gate (07 D28). Phase 4, 2026-09-25: 07 Decisions 30, 32–34, 36 applied to §5 and §13; Decisions 37–38 to §4 and §8. Phase 4 gate, 2026-09-26: 07 Decision 42 (approved design, `tokens.css`) applied to §2; Decision 44 (`AN` header number) to §5 and §12; Decision 45 (boards exported to `design/phase4/`) to §2. Phase 5, 2026-09-26: 07 Decisions 46 (`result` on ending events) and 47 (one tab at a time) applied to §11. 2026-09-26: 07 Decision 49 applied to §6 ("not recognized" vs "not covered") and new §6A (rules for build step 2 part B). 2026-09-28: 07 Decision 50 — §6A items 8–10. 2026-09-28: 07 Decision 52 — new §7A (rules for build step 3), pointers in §8, §10, §11. 2026-09-28: 07 Decision 53 — §7A items 1 (return to practice, app I-12) and 14 (data-reset notice). 2026-09-28: 07 Decision 54 — new §7B (rules for build step 4: the current step for hints, hint levels on the screen, the entry field, parts 4A/4B, load notices), pointer in §8. 2026-09-29: 07 Decisions 55–56 — §7A item 1 (a run also starts at an accepted hint request, app I-12), items 1 and 11 and §9 (pointers to the in-app exit), §7B heading and new items 6–10 ("Booking as it stands", leaving a running assessment or scenario, storage refused, the name as a string key, behaviours over time); 07 Decision 57 — §7B items 11–15 (the Flight Deck's recommended action, the practice run when moving between screens, Learning, Ghost Mode replays, when the scenario and the assessment start). 2026-09-30: 07 Decision 58 — §7B items 16–18 (the way into Ghost Mode, Ghost typing speed, "In your task"); 07 Decision 59 — §7A item 13, §7B item 11 (d) and §10 ("the scenario completed" means completed with every checklist item met), §7B items 19–20 (the scenario and assessment rows; the assessment and scenario screens). 2026-09-30: 07 Decision 61 — new §7C (rules for build step 5, Coach: when each Coach text shows, Coach and independence, the assessment and the scenario, the bypass, the escalation count, the Growth note, the five touchpoints), pointers in §6A item 2 and §8. 2026-10-01: 07 Decision 62 — §7C item 6 (the escalation offer may follow the bypass notes in practice, app I-22). 2026-10-01: 07 Decision 63 — new §7D (rules for build steps 6 and 7: step 6 as a check with a Definition of Done trace, the end note in view, the scrolling notes block, the phone drawer, what the accessibility baseline means here, the localization and breakpoint passes, lockup B, what automated checks cannot prove), pointers in §2 and §13. 2026-10-02: 07 Decision 64 — §7B item 17 and §7D item 5 (d) corrected (`--motion-demo-hold` stays under reduced motion: a still reading pause, app I-23); §7D item 6 (English terms written in the approved Arabic content are allowed, app I-24). 2026-10-04: 07 Decision 76 (F-04 (A)(B) landed; 07 D69 F-04 amends D40) — §7 (learner-facing wording: two terms), §7B item 11 (the chain word), §7C item 8 (the chain word), §8 (the note after a valid entry that does not count as done on your own). 2026-10-15: 07 Decisions 83–84 (Step 4 accepted) — §2 (the token file, typefaces and header wordmark of the chosen identity), §7B items 4 and 9, §7D item 8 (the header wordmark set as text). 2026-10-15: 07 Decision 87 (F-09's content; the pattern of 07 D86) — §2 (`tokens.css` gets one primitive and one role, §7E item 8), §5 (U-15, U-16), new §7E (rules for F-09, the opened display), §12 (the Screen Literacy candidate answered by F-09). 2026-10-16: 07 Decision 88 (F-09 landed, `main` = `c8b13f9`) — §2 and §7E item 8 (the `tokens.css` sha256 record is now 07 D88), §7E item 2 (a `SSR CTCM` line with a learner-typed ending: header only, Karim), §7E item 4 (the accessible-name gap, deferred by Karim). 2026-10-16: 07 Decision 90 (F-04 (C), F-06 (a)–(c), F-14 (a), app I-36) — new §7F, §7C item 5 (the announcement no longer says "on your own"). 2026-10-23: 07 Decisions 91 (the identity completed, Kit v0.3) and 92 (Scenario Bank v1) — §2 (the header), §7B items 9, 15 and 20, §7D item 8, new §7G (the build's rules, by delegation). First edition (Execution Plan 3.3); proposals K1–K4 approved (07 Decision 25). With this approval, the LDS/LXA content extracted here is binding for the slice (LDS and LXA reading rules, point 1).
 owns: The single build specification Claude Code implements for the first-build slice. It gathers requirements from their owners and designs the evidence/state schema (delegated to Claude — file 13).
 does not own: any decision (07); Amadeus behavior (Verified Reference); product structure (03); design (Design Brief / Phase 4). Where this file and an owner disagree, the owner wins and the conflict is reported.
 ---
@@ -66,11 +66,15 @@ entry outside these limits gets the "not covered in this slice" message
     Sans Arabic for Arabic; weights 400 / 500 / 600; fallbacks as in
     `tokens.css`. All are open-licence; how they are delivered is a
     technical choice (CLAUDE.md §4).
-  - **Header wordmark: the name set as text** (07 D83 (c); it replaces lockup
-    B of 07 D42): "DEIXEN" from `ui.brand.name` in Inter 600, uppercase,
-    with wide letter-spacing by CSS (never real spaces), in the record's ink,
-    no drawn mark; the same in both languages. The frames draw lockups A and
-    B; the text governs.
+  - **Header: the brand mark, lockup A** (07 D91 (a), (b), (j); it replaces
+    the name set as text of 07 D83 (c)): the raven-in-D mark with the outlined
+    "DEIXEN" wordmark, drawn unchanged from the outlined lockup of the reference
+    render `design/identity/DEIXEN_FlightDeck_proto_r14.html` until Karim's
+    lockup source file arrives — never redrawn, stretched or recoloured; its two
+    colours the mark's own (ember only in the eye). The same on every screen,
+    at every width and in both languages; its accessible name is
+    `ui.brand.name`. The favicon is `design/identity/deixen_favicon_16.svg`,
+    unchanged. How it is built: §7G item 1.
   - **Where the boards are (07 D45):** a read-only copy of every board
     below, and `tokens.css`, is in `DEIXEN-KNOWLEDGE/design/phase4/`
     (files `<name>.dc.html`), with `MANIFEST.md` giving each file's sha256.
@@ -639,7 +643,7 @@ event type (§11), and none claims Amadeus behavior.
    - after filing, `RF` is not listed (V-10), as in the filed display.
 7. **Leaving a running assessment or scenario inside the app** (07 D56).
    Every way the app itself offers to leave the running screen — an area
-   link, the wordmark, the phone menu's Scope Disclosure link, and the
+   link, the brand mark (the home link; 07 D91 (a)), the phone menu's Scope Disclosure link, and the
    browser's Back button if the app keeps browser history — first shows a
    confirmation: `ui.leave.assessment` or `ui.leave.scenario`, with
    `ui.leave.stay` (focus starts here) and `ui.leave.confirm`. Leave
@@ -659,11 +663,11 @@ event type (§11), and none claims Amadeus behavior.
    the load, the same notice replaces the screen: nothing is ever shown as
    recorded that was not written.
 9. **The name as a word** (07 D55, app I-14). Every place the name DEIXEN
-   stands alone as a word, and the wordmark's accessible name, use
+   stands alone as a word, and the brand mark's accessible name, use
    `ui.brand.name`. Strings that contain the name inside a sentence keep
-   it there. The wordmark is the name set as text from `ui.brand.name` (07
-   D83 (c)); its spacing is letter-spacing only, so a screen reader reads it
-   whole. The name
+   it there. The header's brand mark (lockup A, 07 D91 (a)) is a drawing whose
+   accessible name is `ui.brand.name`, so a screen reader reads the name
+   whole (it replaces the typeset name of 07 D83 (c)). The name
    is provisional (Constitution §1), so it lives in one place.
 10. **Behaviours over time** that no single frame shows (07 D55; app
     `docs/DECISIONS.md` T7) — where a new entry lands, when the brief
@@ -718,10 +722,12 @@ event type (§11), and none claims Amadeus behavior.
     each Replay, records one `ghost_played`; Pause and resume record
     nothing. Scripts run on the demo booking in their own sandbox and never
     touch the practice run.
-15. **When the scenario and the assessment start** (07 D57). The Scenario
-    Bank area opens the scenario screen (`P1-06`: Scenario Bank is the
-    current area) not yet started: brief, objective, constraints, an empty
-    Terminal. `scenario_started` (§7A item 11) is recorded at the learner's
+15. **When the scenario and the assessment start** (07 D57; 07 D92, Scenario
+    Bank v1, which amends D57 (e)). The Scenario Bank area opens its case page
+    (no Terminal, nothing recorded; §7G item 11). Its Open scenario — and the
+    Flight Deck's — opens the scenario screen (`P1-06`'s content; now in the
+    Terminal area, a mode inside the Terminal) not yet started: brief,
+    objective, constraints, an empty Terminal. `scenario_started` (§7A item 11) is recorded at the learner's
     first entry or first accepted hint on that screen, which then belong to
     the scenario run; until then nothing is recorded, and leaving asks
     nothing (item 7 applies only to a running scenario). The assessment
@@ -729,8 +735,8 @@ event type (§11), and none claims Amadeus behavior.
     is recorded and the announcement shows (`ui.assessment.starts`,
     `ui.assessment.intro`, `ui.assessment.carryover` when it applies; on
     phones closed with `ui.assessment.continue`, `P1-05`). After either has
-    ended, returning to the Scenario Bank shows a new, not-yet-started
-    scenario screen, and Start assessment starts a new assessment.
+    ended, Open scenario shows a new, not-yet-started scenario screen, and
+    Start assessment starts a new assessment.
 16. **The way into Ghost Mode** (07 D58, app I-17; no board draws one).
     Each lesson page carries a link to that lesson's Ghost Mode script,
     worded `ui.ghost.title` with the script's commands, in the existing
@@ -758,9 +764,12 @@ event type (§11), and none claims Amadeus behavior.
       hint label and the hint levels (item 2); neither has Reset task
       (07 D37) or Start assessment.
     - **Areas.** `TERMINAL_ASSESSMENT` is in the Terminal area (`P1-05`);
-      `SCENARIO_SESSION` is in the Scenario Bank (`P1-06`). While one is
-      running, the link to its own area is "the area the learner is
-      already in" (item 7): nothing is asked and nothing changes.
+      `SCENARIO_SESSION` is in the Terminal area too (07 D92 (c), which
+      amends D59 (d); `P1-06` drew it in the Scenario Bank). While one is
+      running, the Terminal link is "the area the learner is already in"
+      (item 7): nothing is asked and nothing changes; the Scenario Bank link,
+      like every other way out, asks first. A scenario not yet started is not
+      running: the Terminal link opens practice.
     - **The end of an assessment.** At task completion the DEIXEN panel
       shows one note, once: `ui.assessment.result` when the run is
       completed with every checklist item met, otherwise
@@ -1025,10 +1034,10 @@ would need a new string, token, event field or a changed rule is a stop
    568): no page-level horizontal scroll; the entry line in view; the
    Terminal workspace never given up (spec §2); screenshots kept and
    compared by eye with the board for that state and width where one exists.
-8. **Identity and values.** A test shows the header wordmark is the name set
-   as text at every width (07 D83 (c): `ui.brand.name`, Inter 600, uppercase
-   and letter-spaced by CSS, the record's ink, no drawing; size from the
-   `--wordmark-size*` tokens); the no-raw-value and string-file tests run
+8. **Identity and values.** A test shows the header carries lockup A at every
+   width (07 D91 (a)): a drawing named `ui.brand.name`, its paths byte for byte
+   those of the reference render, its colours the mark's own tokens, ember
+   read only by the eye (D91 (b)); the no-raw-value and string-file tests run
    again over all of `src/ui/`.
 9. **The Amadeus-string trace** (`CLAUDE.md` §8) runs again over the engine,
    the screens and the Coach texts, and its result is reported.
@@ -1293,6 +1302,87 @@ only additively. Every word comes from the content files.
    before the assessment not counted in it; `APM`/`APE`; no event recorded
    by any of these; widths 320–1440 for the changed rows; the content files
    byte-identical with the knowledge copies.
+
+## 7G. Rules for the identity build — Kit v0.3 and Scenario Bank v1 (07 D91–D92)
+
+**[D] by delegation (07 D29)** — the details the two decisions leave to the build, written with the build on the
+branch `feature/identity-d91` (2026-10-23). Self-review by the project lead (Constitution §9); Karim may reverse any
+of them. Kit v0.3 (`design/identity/DEIXEN_Identity_Kit_v0.3.md`) is the specification and the reference render r14
+(`design/identity/DEIXEN_FlightDeck_proto_r14.html`) the look; r14 is a reference, not a specification. No event,
+event field, string, evidence rule, status rule or content changes; no Amadeus text is written by a screen.
+
+1. **The mark** (D91 (a), (b), (j)). The top bar carries lockup A drawn from r14's outlined lockup, unchanged: its
+   viewBox, both paths, the eye circle and the wordmark's offset are copied byte for byte into `src/ui/lockup.ts`, and a
+   test compares them with the knowledge copy of r14. Its colours are the mark's own tokens (`--mark-ink`,
+   `--mark-eye` = ember, read only by the eye). The drawing's accessible name is `ui.brand.name`; the home link keeps
+   `ui.nav.homeLink`. The favicon is `design/identity/deixen_favicon_16.svg`, unchanged, served as `public/favicon.svg`.
+   When Karim's lockup A source file arrives it replaces the r14 drawing in `lockup.ts` the same way.
+2. **The route's data** (D91 (c)). `bridge.task(which).route`: the task's origin, destination and flight, and its steps
+   — the skills of the task's expected entries, in lesson order, each with the command the task uses (CTC: `SRCTCM`,
+   or `SRCTCR` where the task has no mobile). Read only; nothing is recorded. The cities are the task's own brief's
+   words: the word before "(CODE)" in that language's brief; none when the brief does not name it that way. Beside
+   the band's title: the date token and the flight. r14 also showed the passenger as a name element; it is left out,
+   because a screen would have to compose Amadeus-format text.
+3. **Which screens carry the band.** The Flight Deck (the main task; the current step = the row §7B item 11 gives
+   Next), Growth (the main task; no current step), Learning (the main task; the lesson's title is the screen's one
+   title, its command the band's label; no current step) and the Scenario Bank's case page (the scenario's own task).
+   Not Ghost Mode: it holds a Terminal record (the demonstration), and D91 (c) gives the band to screens with no
+   record. Not the Scope Disclosure: it has no task route. The ambient light (D83 (a)) stays on the Terminal, Ghost Mode
+   and the disclosure; the banded screens sit on the flat ground (D91 (l) 5).
+4. **Nodes and the rule** (D91 (f), (g)). A node is green (outline and 7 px core) when the step has a `valid` entry in
+   any context (`skillsWithValid`, the fact §7F item 1 uses); the rule on both sides of a node is solid when the step is
+   `DEMONSTRATED_INDEPENDENT` or higher (`progress().correct`), dashed otherwise; FQD is the optional step, its rule
+   dashed. Each step owns the half of the rule beside its node (r7). Each node's accessible text: the lesson's title,
+   "Next" on the Flight Deck's current step, and the step's words (`ui.doneOnYourOwn`, `ui.dash.notOwn`,
+   `ui.dash.noCorrect`, `ui.chain.optional`). A route wider than the band scrolls sideways inside the band (never the
+   page) and keeps the current step in view.
+5. **The Flight Deck.** §7B item 11's one action stands in the recommended place under the band: the kicker
+   `ui.chain.next`, the lesson's title and objective and the action; for (c)–(e) the assessment
+   (`ui.growth.assessmentRow`), the scenario (`scn.title`, `scn.objective`) or Growth (`ui.area.growth`). When the
+   next step is the scenario's own step (the one the scenario writes differently, read from the two routes), the
+   scenario and Open scenario stand beside the action, as in r14. r14's per-step "task line" is not built: it came
+   from a prototype content map with no content key behind it (CLAUDE.md §3 rule 3). **The recorded practice** lists
+   each step of the route with a `valid` entry: its place in the list, its command, its lesson's title and its result
+   (`ui.doneOnYourOwn` or `ui.dash.notOwn`) at the row's end after the green node mark (D91 (i2)). Where r14 put a
+   sample entry the list shows the step's command: the stored entry text is not a bridge fact, and the expected entry
+   would claim the learner typed it. DEIXEN's part: the Status (the Growth status as a word, `ui.growth.basis`, the
+   assessment row with §7B item 19's word or §7F item 1's dash and reason, Open Growth); the Scenario Bank (its heading
+   opens the case page; the scenario row with Open scenario, or Completed — left out when the scenario already stands
+   in the recommended place, as in r14; More scenarios and Customer Service track, planned, not links); the Scope
+   Disclosure link. **§7F item 1 under this composition:** a step's reason is said by its node's words, the record list
+   and Growth's group headings; the scenario and assessment rows keep "— reason" in the same cell.
+6. **Growth** (D91 (i)). The band's title is the status (with nothing recorded: `ui.area.growth`, with
+   `ui.growth.empty` under it); `ui.growth.basis` under the title. The left part: the Coach note (§7C item 8, §7F item
+   2) as the lead; with nothing recorded, Start lesson 1 (P1-07b); then the recorded practice grouped by state, each
+   group headed by its words and the route's node mark, each step once with its command and lesson title; then the
+   scenario and assessment rows. The right part: the three statuses with their definitions — the current one keeps
+   `aria-current` and its name in full ink, no light — and Reset everything.
+7. **One composition** (D91 (h)). On the banded screens the work part is on the left and DEIXEN's part (400 px) on the
+   right at 1280–1440; at 1024 and below they stack, work first (r14 stacks under 1100 px). Arabic text runs
+   right-to-left inside each part; the parts and the route keep their places. The top bar keeps its order in both
+   languages: the areas left to right, the languages in one fixed order (English, العربية) with the checked one on its
+   plate.
+8. **The Terminal never mirrors** (D91 (h)). The record's sheet, the key row, Ghost Mode's controls and the 768 dock
+   keep their left-to-right composition at every width; at 1024 the panel stays on the right in Arabic as at
+   1280–1440. The brief control stays at the right end of the Task row in Arabic and the hint ladder keeps its order
+   (D91 (l) 4); only the words inside run right-to-left.
+9. **Corners** (D91 (e)). 561 px and wider: every corner 2 px (`--radius-control`), bands square. 560 px and narrower
+   (`layout.ts` `SOFT_MAX_WIDTH`; the screen carries `data-soft`): the bar and the band are 16 px blocks, inset 6 px,
+   8 px apart; the language control, the menu button, buttons (Send, Reset task, Start assessment, the DEIXEN button,
+   the `/` and `-` keys, the filled control) and Reset everything 12 px; plates, options and hint levels 8 px; the
+   character cell stays 2 px (K2). Between 561 and 767 px the app keeps the phone layout with the desktop corners.
+10. **The bar** (D91 (l) 1; Kit row 6). 64 px wherever the screen is wider than 560 px (768 included); the phone bar
+    keeps its 52 px. The bar's tone is r5's; the current area sits on the 32 px plate; the language control is a
+    capsule. The filled control on the banded screens takes r5's gradient, 40 px high (D91 (l) 7); Send keeps K10's
+    flat fill. On the phone and tablet layouts the touch rule (§7D item 5 c) raises the filled control, the menu
+    button, links in words and the brief control to a 44 px hit area (app `docs/ISSUES.md` I-45).
+11. **Scenario Bank v1** (D92). The case page (`src/ui/ScenarioBank.tsx`) uses existing strings only. The shell has a
+    `scenarioBank` screen (area Scenario Bank) and the `scenario` screen in the Terminal area. Open scenario — on the
+    case page and on the Flight Deck — calls `openScenario()` and shows the scenario not yet started. The Terminal link
+    changes nothing while an assessment or a scenario runs; otherwise it opens practice (`openPractice()`), a scenario
+    not yet started included. The bridge is unchanged apart from item 2's read-only route.
+12. **Evidence pictures** (07 D88 (f)). The browser suite's pictures are retaken on Karim's computer; a run in the
+    cloud restores them and commits none.
 
 ## 8. Independence, hints and feedback
 
