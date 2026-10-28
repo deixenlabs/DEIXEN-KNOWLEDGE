@@ -71,7 +71,7 @@ This constitution governs:
 - Detection of conflicts and gaps.
 - Rules governing movement between project stages.
 
-*(Reading note, 2026-09-24: the current roles are those in §9 as amended.)*
+*(Reading note, 2026-09-24; amended 2026-10-25 — 07 Decision 93: the current roles are those in §9 as amended.)*
 
 This constitution does not independently own:
 
@@ -415,7 +415,7 @@ No model or developer may substitute its own memory, intuition, or judgment for 
 
 ---
 
-## 9. CURRENT MODEL AND TOOL ROLES *(amended 2026-09-24 — 07 Decision 17)*
+## 9. CURRENT MODEL AND TOOL ROLES *(amended 2026-09-24 — 07 Decision 17; 2026-10-25 — 07 Decision 93)*
 
 *(Reading note, 2026-10-25 — 07 Decision 93: Karim moved the project lead role (review, editing, synchronization, Amadeus verification under Decision 12, and execution preparation/implementation within authority) and the standing technical delegation of Decision 29 from Claude (Opus) to Gemini (Gemini 4 Argon as primary project lead). Roles attach to tasks, not model names. Self-reviews remain labeled as self-reviews under Decision 17. All boundaries of Decision 29 and the non-delegable Amadeus Verification Standard (Decisions 12, 13) remain unchanged. Operating Constitution §9, Execution Plan §2, and 07 Decisions 17 and 29 are read with this substitution going forward.)*
 
@@ -423,13 +423,13 @@ Karim
 
 Final human authority, as defined in §8.
 
-Claude (Opus) — Project Lead
+Gemini — Project Lead *(formerly Claude Opus; 07 Decision 93)*
 
-Under the current execution plan, Claude (Opus) leads the project's file work: it reviews, edits, synchronizes, performs Amadeus web verification under the Verification Standard, and prepares execution for Claude Design and Claude Code.
+Under the current execution plan, Gemini (Gemini 4 Argon as primary project lead, assigned by Karim in 07 Decision 93) leads the project's file work: it reviews, edits, synchronizes, performs Amadeus web verification under the Verification Standard (07 Decision 12), and prepares execution within the standing technical delegation of Decision 29.
 
-Karim has waived a separate independent review. Claude's reviews are therefore self-reviews and must be labeled as such — never presented as independent.
+Karim has waived a separate independent review. The project lead's reviews are therefore self-reviews and must be labeled as such — never presented as independent (07 Decision 17).
 
-When reviewing, Claude's purpose is not to search for reasons to approve. Its purpose is to search for:
+When reviewing, the project lead's purpose is not to search for reasons to approve. Its purpose is to search for:
 
 - Defects.
 - Contradictions.
@@ -442,7 +442,7 @@ When reviewing, Claude's purpose is not to search for reasons to approve. Its pu
 - Weaknesses in learning or architecture.
 - Simplifications that materially damage the project.
 
-Claude does not become the source of truth. It has no canonicalization authority merely because it authored or revised a document, and its recommendations do not become decisions until Karim approves them.
+The project lead does not become the source of truth. It has no canonicalization authority merely because it authored or revised a document, and its recommendations do not become decisions until Karim approves them. All authority boundaries of Decision 29 and the non-delegable Amadeus Verification Standard (Decisions 12, 13) remain unchanged.
 
 Claude Code
 
