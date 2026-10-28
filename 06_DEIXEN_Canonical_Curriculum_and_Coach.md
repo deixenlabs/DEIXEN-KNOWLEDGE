@@ -11,6 +11,15 @@ supersedes reading in isolation: AMADEUS_CURRICULUM.md, relevant sections of PRO
 > references now read "Karim". Current project state and every decision:
 > `07_DEIXEN_Canonical_Decisions_and_Current_State.md`. Amadeus facts: only
 > claims marked VERIFIED under 07 Decision 12 may be taught as fact.
+>
+> **Update 2026-10-25 (07 Decision 95).** Lesson rewrite criteria standard
+> (v1.5, 13-criterion framework: N1–N4, P1–P6, T1–T3) adopted with 5 canonical alignments.
+> **Update 2026-10-27 (07 Decision 96).** Beginner lessons L01-AN through
+> L10-FQD formally accepted in English and Arabic; 5 unverified concepts untaught.
+> **Update 2026-10-28 (07 Decision 97).** Native cumulative Ghost Mode standard
+> architecture adopted for shared operational workflows without state injection;
+> full-workflow independent assessment isolated in fresh session with clean booking
+> and distinct task instance, preserving F-07.
 
 
 # DEIXEN — Canonical Curriculum & Coach
@@ -145,6 +154,12 @@ Diagnostic only: nothing is recorded. In the first-build slice it is used
 after the `AN` reveal of L01, the `SS` reveal of L02 and the last `ER`
 reveal of L08 (`slice.json` `ghostScripts`; Slice Build Spec §7E item 6).
 
+**Native cumulative Ghost Mode (07 Decision 97, 2026-10-28; closes S2-28 and S2-74).**
+
+Ghost Mode uses native cumulative scripts as its standard architecture for skills that belong to a shared operational workflow, including Phase 6 and later curriculum (07 D97 (a)). Each script executes preceding commands required to establish its operational context through the normal simulator on its dedicated demo booking, building the PNR through normal execution without state injection, pre-seeded shortcuts, or parallel state-construction engines. Cumulative applies within a defined operational workflow; independent skills (such as `FQD`) remain separate scripts.
+
+Ghost's demo execution remains isolated from learner practice and assessment bookings. F-07 remains unchanged and governs every Ghost script: every skill whose command Ghost types is exposed by that demonstration in the current application session (07 D97 (b)). Ghost Mode is for demonstration and interactive learning; it does not generate independent-performance evidence and never raises a skill above `INTRODUCED`.
+
 ### Speed Drills
 
 A sub-mode inside Practice that repeats an already-implemented command and
@@ -176,7 +191,7 @@ across the entire journey — not just inside Terminal.
   meaningful mistake.
 - **Assessment** — feedback consistent with assessment state and hint
   semantics (see the Assessment State Contract in
-  `07_DEIXEN_Canonical_Decisions_and_Current_State.md`).
+  `07_DEIXEN_Canonical_Decisions_and_Current_State.md` and 07 Decision 97 (c) for isolated independent workflow assessment).
 - **Growth/Readiness** — explain meaningful outcomes and connect them to
   evidence, without inventing performance data.
 

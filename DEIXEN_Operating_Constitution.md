@@ -14,6 +14,7 @@ owns: How work is performed in DEIXEN — method, authority boundaries, evidence
 | 2026-09-24 | §8 | "Domain Authority" clarified: the approved domain validation path is now the Amadeus Verification Standard (07 Decision 12), since no SME is available | Karim (07 Decision 12); confirmed by Karim 2026-09-25 |
 | 2026-09-24 | §10, §17 | Reading note only (text unchanged): references to a separate "Opus review stage" describe the earlier plan; under the current Execution Plan, §10's reassessment principle applies to the project lead's reviews | Karim (07 Decisions 16–17) |
 | 2026-09-25 | §5 | Repository address updated to `https://github.com/deixenlabs/DEIXEN-KNOWLEDGE` (the old address only redirects there) | Factual correction; Karim informed. Decided by Karim 2026-10-03 (07 Decision 71) |
+| 2026-10-25 | §9 | Project lead role (review, editing, synchronization, Amadeus verification, execution preparation/implementation within authority) and standing technical delegation of Decision 29 moved from Claude (Opus) to Gemini (Gemini 4 Argon as primary project lead); roles attach to tasks, not model names; self-reviews remain labeled as self-reviews | Karim (07 Decision 93) |
 
 This document governs how work is performed inside the DEIXEN project.
 
@@ -415,6 +416,8 @@ No model or developer may substitute its own memory, intuition, or judgment for 
 ---
 
 ## 9. CURRENT MODEL AND TOOL ROLES *(amended 2026-09-24 — 07 Decision 17)*
+
+*(Reading note, 2026-10-25 — 07 Decision 93: Karim moved the project lead role (review, editing, synchronization, Amadeus verification under Decision 12, and execution preparation/implementation within authority) and the standing technical delegation of Decision 29 from Claude (Opus) to Gemini (Gemini 4 Argon as primary project lead). Roles attach to tasks, not model names. Self-reviews remain labeled as self-reviews under Decision 17. All boundaries of Decision 29 and the non-delegable Amadeus Verification Standard (Decisions 12, 13) remain unchanged. Operating Constitution §9, Execution Plan §2, and 07 Decisions 17 and 29 are read with this substitution going forward.)*
 
 Karim
 
