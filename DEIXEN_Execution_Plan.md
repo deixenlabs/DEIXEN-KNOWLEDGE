@@ -1,6 +1,6 @@
 ---
 name: DEIXEN Execution Plan
-status: GOVERNING — approved by Karim on 2026-09-24 (07 Decision 16); the four-step detour between Phase 5 and Phase 6 inserted by Karim on 2026-10-02 (07 Decision 68); the detour's Freeze accepted and recorded, and Prompt 7 authorized, 2026-10-03 (07 Decisions 69–70); before-Step-4 tasks 1 (F-19), 2 (F-02), 3 (F-03), 4 (F-05) and 5 (F-04 (A)(B)) landed, 2026-10-04 (07 Decisions 72–76); Karim's owner decisions and an identity exploration inserted before step 4, 2026-10-05 (07 Decisions 77–78); Claude Design may refine the direction Karim chooses after the identity exploration, 2026-10-06 (07 Decision 79); Option C, 2026-10-12, and the chosen identity with Step 4's restated design scope and the `design/identity/` folder, 2026-10-13 (07 Decisions 80–81); Step 4 under way, its plan and checkpoint answered and a lighting comparison requested, 2026-10-15 (07 Decision 82); the light, no boxes and the typeset wordmark, and Step 4's Detour Closing Report accepted, 2026-10-15 (07 Decisions 83–84); the Step 4 branch merged into `main`, 2026-10-15 (07 Decision 85); F-09's presentation pattern chosen, 2026-10-15 (07 Decision 86); F-09's content approved, 2026-10-15 (07 Decision 87); F-09 built, merged into `main` and accepted, 2026-10-16 (07 Decision 88); F-07's LDS note, 2026-10-16 (07 Decision 89); the before-Phase-6 batch approved, 2026-10-16 (07 Decision 90); the identity completed with Kit v0.3, 2026-10-22/23 (07 Decision 91); Scenario Bank v1, the scenario as a mode inside the Terminal, 2026-10-23 (07 Decision 92); S2-28 / S2-74 (native cumulative Ghost Mode and isolated independent workflow assessment) closed by Decision 97, 2026-10-28
+status: GOVERNING — approved by Karim on 2026-09-24 (07 Decision 16); the four-step detour between Phase 5 and Phase 6 inserted by Karim on 2026-10-02 (07 Decision 68); the detour's Freeze accepted and recorded, and Prompt 7 authorized, 2026-10-03 (07 Decisions 69–70); before-Step-4 tasks 1 (F-19), 2 (F-02), 3 (F-03), 4 (F-05) and 5 (F-04 (A)(B)) landed, 2026-10-04 (07 Decisions 72–76); Karim's owner decisions and an identity exploration inserted before step 4, 2026-10-05 (07 Decisions 77–78); Claude Design may refine the direction Karim chooses after the identity exploration, 2026-10-06 (07 Decision 79); Option C, 2026-10-12, and the chosen identity with Step 4's restated design scope and the `design/identity/` folder, 2026-10-13 (07 Decisions 80–81); Step 4 under way, its plan and checkpoint answered and a lighting comparison requested, 2026-10-15 (07 Decision 82); the light, no boxes and the typeset wordmark, and Step 4's Detour Closing Report accepted, 2026-10-15 (07 Decisions 83–84); the Step 4 branch merged into `main`, 2026-10-15 (07 Decision 85); F-09's presentation pattern chosen, 2026-10-15 (07 Decision 86); F-09's content approved, 2026-10-15 (07 Decision 87); F-09 built, merged into `main` and accepted, 2026-10-16 (07 Decision 88); F-07's LDS note, 2026-10-16 (07 Decision 89); the before-Phase-6 batch approved, 2026-10-16 (07 Decision 90); the identity completed with Kit v0.3, 2026-10-22/23 (07 Decision 91); Scenario Bank v1, the scenario as a mode inside the Terminal, 2026-10-23 (07 Decision 92); project lead delegation to Gemini, 2026-10-25 (07 Decision 93); D90 accepted, D91–D92 merged, route-node fix and I-46 rule, 2026-10-25 (07 Decision 94); lesson rewrite criteria standard, 2026-10-25 (07 Decision 95); F-08 beginner lessons formal acceptance and merge, 2026-10-27 (07 Decision 96); S2-28 / S2-74 (native cumulative Ghost Mode and isolated independent workflow assessment) closed by Decision 97, 2026-10-28
 owns: Work sequence, phases, gates, current phase, and role assignments
 does not own: how work is performed (Operating Constitution); decisions (07); Amadeus truth (Amadeus Verified Reference)
 replaces: DEIXEN_MASTER_PRE_OPUS_FOUNDATION_PREPARATION_PLAN-1.md and DEIXEN_MASTER_EXECUTION_ROADMAP.md (both historical from 2026-09-24)
@@ -18,10 +18,12 @@ learner.
 
 ## 2. Roles (07 Decision 17)
 
+*(Reading note, 2026-10-25 — 07 Decision 93: Karim moved the project lead role (review, editing, synchronization, Amadeus verification under Decision 12, and execution preparation/implementation within authority) and the standing technical delegation of Decision 29 from Claude (Opus) to Gemini (Gemini 4 Argon as primary project lead). Roles attach to tasks, not model names. Self-reviews remain labeled as self-reviews under Decision 17. All boundaries of Decision 29 and the non-delegable Amadeus Verification Standard (Decisions 12, 13) remain unchanged. Operating Constitution §9, Execution Plan §2, and 07 Decisions 17 and 29 are read with this substitution going forward.)*
+
 | Who | Does | Does not |
 |---|---|---|
 | Karim | Decides what is reserved to him (07 D29): identity, scope, name/brand/visual direction, money/legal/publishing, governance changes, and confirming the slice works as a learner | — |
-| Claude (Opus), project lead | Reviews, edits, synchronizes, verifies Amadeus behavior on the web, prepares briefs for Design and Code; decides everything not reserved to Karim, records it in 07 "by delegation (D29)" and reports briefly | Decide a reserved matter; present self-review as independent review; lower the Verification Standard |
+| Gemini (project lead; formerly Claude Opus under 07 D17, amended 07 D93) | Reviews, edits, synchronizes, verifies Amadeus behavior on the web, prepares briefs for Design and Code; decides everything not reserved to Karim, records it in 07 "by delegation (D29)" and reports briefly | Decide a reserved matter; present self-review as independent review; lower the Verification Standard |
 | Claude Design | Explores and executes design within the Design Brief; after the identity exploration, refines the direction Karim chose, from the brief 07 D79 lists — a proposal until Karim approves it | Decide final visual direction; go outside what 07 D77–D78 open (anything outside becomes a change-request candidate) |
 | Claude Code | Implements the approved specifications | Add scope, invent Amadeus behavior, reinterpret decisions |
 
@@ -117,7 +119,7 @@ responsibility).
 
 ## 7. Current Phase
 
-**The detour before Phase 6 — under way (07 Decision 68).** Phase 5 closed
+**The detour before Phase 6 and all before-Phase-6 tasks complete (07 Decisions 68, 69, 84, 90, 94, 96, 97); next: Karim starts Phase 6 himself.** Phase 5 closed
 on 2026-10-02: Karim ran his learner test and closed the gate (07 D67); his
 findings go into the detour as input to Step 2. The Phase 5 snapshot is
 the annotated tag `phase-5-final` at `3fdb342` in `deixen-app` (local; 13).
@@ -138,8 +140,8 @@ explanation and F-10 (1), and merged into `main`; Karim accepted it (07 D88,
 2026-10-16: `main` = `c8b13f9`). From now on the evidence pictures are
 taken on Karim's computer (07 D88 (f)). F-07's LDS note is written (07
 D89). Karim approved the wording of F-04 (C) and F-06 (a)–(c) (07 D90);
-the batch is merged into `main` (`9efcbe0`, 2026-10-17; its acceptance is
-not yet recorded in 07). Karim completed the identity (07 D91: the
+the batch is merged into `main` (`9efcbe0`, 2026-10-17; accepted by Karim in 07 Decision 94 (a)).
+Karim completed the identity (07 D91: the
 raven-in-D mark, the route band, one corner rule, green and the route, the
 Flight Deck and Growth; Kit v0.3) and decided Scenario Bank v1 (07 D92: a
 case page; the scenario as a mode inside the Terminal). Their build runs on

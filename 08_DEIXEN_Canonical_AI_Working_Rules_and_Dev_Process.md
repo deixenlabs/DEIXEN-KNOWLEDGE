@@ -305,7 +305,7 @@ The project may currently assign roles such as:
 - **Design Executor** — executes approved visual/design direction within scope.
 - **Implementation Executor** — implements approved technical direction within scope.
 
-`DEIXEN_Execution_Plan.md` assigns current occupants (as of 2026-09-24: Claude (Opus) as Primary Orchestrator and reviewer, Claude Design as Design Executor, Claude Code as Implementation Executor; the Independent Final Reviewer and Lightweight Second Opinion roles are unassigned — 07 Decision 17). This document defines what each role permits.
+`DEIXEN_Execution_Plan.md` assigns current occupants (Gemini as Project Lead / Primary Orchestrator and reviewer, formerly Claude Opus under 07 Decision 17, assigned by Karim on 2026-10-25 per 07 Decision 93; Claude Design as Design Executor; Claude Code as Implementation Executor; the Independent Final Reviewer and Lightweight Second Opinion roles remain unassigned — 07 Decisions 17, 93). This document defines what each role permits.
 
 ### 9.5 No Silent Role Substitution
 
