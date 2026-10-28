@@ -508,15 +508,19 @@ field or event type (§11), and none claims Amadeus behavior.
     §7B item 7 (07 D56): after a confirmation it records
     `assessment_ended` / `scenario_ended` with `result` `abandoned`.
     **Independent full-workflow assessment boundary (07 D97 (c)):** Formal
-    assessment completion under this contract is distinct from qualifying
-    evidence of independent full-workflow performance. A completed
-    assessment qualifies as independent full-workflow performance only when
-    conducted in an isolated session (fresh `sessionId`, clean assessment booking,
-    no prior Ghost demonstration in that session, Ghost Mode unavailable
-    throughout) on a distinct task instance (a Phase 6 specification
-    requirement), and every required skill has qualifying independent
-    evidence within the same assessment chain under F-07 rules. Evidence
-    from separate sessions must not be merged.
+    assessment completion in the current slice continues to follow the existing
+    assessment contract: task completion records `assessment_ended` with
+    `result: 'completed'`. Separately, the existing `runMet` calculation
+    determines whether the run met every checklist item, requiring a valid
+    `ER` followed by a valid `FXP`. Qualifying an assessment as evidence of
+    independent full-workflow performance additionally requires an isolated
+    session (fresh `sessionId`, clean assessment booking, no prior Ghost
+    demonstration in that session, Ghost Mode unavailable throughout) and a
+    distinct task instance, with every required skill having qualifying
+    independent evidence within the same assessment chain under F-07 rules,
+    without cross-session merging. This qualification check is a separate Phase 6
+    acceptance requirement and is not enforced by current-slice evidence
+    derivations.
 12. **Chain practice** (§7). A practice run gets a `chainId` when it starts
     if all nine required skills are `DEMONSTRATED_INDEPENDENT` or higher at
     that moment. A chain run is **completed unaided** when it holds a
