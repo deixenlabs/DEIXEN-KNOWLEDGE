@@ -1,6 +1,6 @@
 ---
 name: DEIXEN Slice Build Spec
-status: CURRENT — APPROVED by Karim 2026-09-25 (07 Decision 26). Updated 2026-09-25: gaps G1–G3 (§5, §12); Decision 27 (K5, K6) applied to §4, §5, §12, §13; K7 (§6 row 5, §12) approved in the Phase 3 gate (07 D28). Phase 4, 2026-09-25: 07 Decisions 30, 32–34, 36 applied to §5 and §13; Decisions 37–38 to §4 and §8. Phase 4 gate, 2026-09-26: 07 Decision 42 (approved design, `tokens.css`) applied to §2; Decision 44 (`AN` header number) to §5 and §12; Decision 45 (boards exported to `design/phase4/`) to §2. Phase 5, 2026-09-26: 07 Decisions 46 (`result` on ending events) and 47 (one tab at a time) applied to §11. 2026-09-26: 07 Decision 49 applied to §6 ("not recognized" vs "not covered") and new §6A (rules for build step 2 part B). 2026-09-28: 07 Decision 50 — §6A items 8–10. 2026-09-28: 07 Decision 52 — new §7A (rules for build step 3), pointers in §8, §10, §11. 2026-09-28: 07 Decision 53 — §7A items 1 (return to practice, app I-12) and 14 (data-reset notice). 2026-09-28: 07 Decision 54 — new §7B (rules for build step 4: the current step for hints, hint levels on the screen, the entry field, parts 4A/4B, load notices), pointer in §8. 2026-09-29: 07 Decisions 55–56 — §7A item 1 (a run also starts at an accepted hint request, app I-12), items 1 and 11 and §9 (pointers to the in-app exit), §7B heading and new items 6–10 ("Booking as it stands", leaving a running assessment or scenario, storage refused, the name as a string key, behaviours over time); 07 Decision 57 — §7B items 11–15 (the Flight Deck's recommended action, the practice run when moving between screens, Learning, Ghost Mode replays, when the scenario and the assessment start). 2026-09-30: 07 Decision 58 — §7B items 16–18 (the way into Ghost Mode, Ghost typing speed, "In your task"); 07 Decision 59 — §7A item 13, §7B item 11 (d) and §10 ("the scenario completed" means completed with every checklist item met), §7B items 19–20 (the scenario and assessment rows; the assessment and scenario screens). 2026-09-30: 07 Decision 61 — new §7C (rules for build step 5, Coach: when each Coach text shows, Coach and independence, the assessment and the scenario, the bypass, the escalation count, the Growth note, the five touchpoints), pointers in §6A item 2 and §8. 2026-10-01: 07 Decision 62 — §7C item 6 (the escalation offer may follow the bypass notes in practice, app I-22). 2026-10-01: 07 Decision 63 — new §7D (rules for build steps 6 and 7: step 6 as a check with a Definition of Done trace, the end note in view, the scrolling notes block, the phone drawer, what the accessibility baseline means here, the localization and breakpoint passes, lockup B, what automated checks cannot prove), pointers in §2 and §13. 2026-10-02: 07 Decision 64 — §7B item 17 and §7D item 5 (d) corrected (`--motion-demo-hold` stays under reduced motion: a still reading pause, app I-23); §7D item 6 (English terms written in the approved Arabic content are allowed, app I-24). 2026-10-04: 07 Decision 76 (F-04 (A)(B) landed; 07 D69 F-04 amends D40) — §7 (learner-facing wording: two terms), §7B item 11 (the chain word), §7C item 8 (the chain word), §8 (the note after a valid entry that does not count as done on your own). 2026-10-15: 07 Decisions 83–84 (Step 4 accepted) — §2 (the token file, typefaces and header wordmark of the chosen identity), §7B items 4 and 9, §7D item 8 (the header wordmark set as text). 2026-10-15: 07 Decision 87 (F-09's content; the pattern of 07 D86) — §2 (`tokens.css` gets one primitive and one role, §7E item 8), §5 (U-15, U-16), new §7E (rules for F-09, the opened display), §12 (the Screen Literacy candidate answered by F-09). 2026-10-16: 07 Decision 88 (F-09 landed, `main` = `c8b13f9`) — §2 and §7E item 8 (the `tokens.css` sha256 record is now 07 D88), §7E item 2 (a `SSR CTCM` line with a learner-typed ending: header only, Karim), §7E item 4 (the accessible-name gap, deferred by Karim). 2026-10-16: 07 Decision 90 (F-04 (C), F-06 (a)–(c), F-14 (a), app I-36) — new §7F, §7C item 5 (the announcement no longer says "on your own"). 2026-10-23: 07 Decisions 91 (the identity completed, Kit v0.3) and 92 (Scenario Bank v1) — §2 (the header), §7B items 9, 15 and 20, §7D item 8, new §7G (the build's rules, by delegation). First edition (Execution Plan 3.3); proposals K1–K4 approved (07 Decision 25). With this approval, the LDS/LXA content extracted here is binding for the slice (LDS and LXA reading rules, point 1).
+status: CURRENT — APPROVED by Karim 2026-09-25 (07 Decision 26). Updated 2026-09-25: gaps G1–G3 (§5, §12); Decision 27 (K5, K6) applied to §4, §5, §12, §13; K7 (§6 row 5, §12) approved in the Phase 3 gate (07 D28). Phase 4, 2026-09-25: 07 Decisions 30, 32–34, 36 applied to §5 and §13; Decisions 37–38 to §4 and §8. Phase 4 gate, 2026-09-26: 07 Decision 42 (approved design, `tokens.css`) applied to §2; Decision 44 (`AN` header number) to §5 and §12; Decision 45 (boards exported to `design/phase4/`) to §2. Phase 5, 2026-09-26: 07 Decisions 46 (`result` on ending events) and 47 (one tab at a time) applied to §11. 2026-09-26: 07 Decision 49 applied to §6 ("not recognized" vs "not covered") and new §6A (rules for build step 2 part B). 2026-09-28: 07 Decision 50 — §6A items 8–10. 2026-09-28: 07 Decision 52 — new §7A (rules for build step 3), pointers in §8, §10, §11. 2026-09-28: 07 Decision 53 — §7A items 1 (return to practice, app I-12) and 14 (data-reset notice). 2026-09-28: 07 Decision 54 — new §7B (rules for build step 4: the current step for hints, hint levels on the screen, the entry field, parts 4A/4B, load notices), pointer in §8. 2026-09-29: 07 Decisions 55–56 — §7A item 1 (a run also starts at an accepted hint request, app I-12), items 1 and 11 and §9 (pointers to the in-app exit), §7B heading and new items 6–10 ("Booking as it stands", leaving a running assessment or scenario, storage refused, the name as a string key, behaviours over time); 07 Decision 57 — §7B items 11–15 (the Flight Deck's recommended action, the practice run when moving between screens, Learning, Ghost Mode replays, when the scenario and the assessment start). 2026-09-30: 07 Decision 58 — §7B items 16–18 (the way into Ghost Mode, Ghost typing speed, "In your task"); 07 Decision 59 — §7A item 13, §7B item 11 (d) and §10 ("the scenario completed" means completed with every checklist item met), §7B items 19–20 (the scenario and assessment rows; the assessment and scenario screens). 2026-09-30: 07 Decision 61 — new §7C (rules for build step 5, Coach: when each Coach text shows, Coach and independence, the assessment and the scenario, the bypass, the escalation count, the Growth note, the five touchpoints), pointers in §6A item 2 and §8. 2026-10-01: 07 Decision 62 — §7C item 6 (the escalation offer may follow the bypass notes in practice, app I-22). 2026-10-01: 07 Decision 63 — new §7D (rules for build steps 6 and 7: step 6 as a check with a Definition of Done trace, the end note in view, the scrolling notes block, the phone drawer, what the accessibility baseline means here, the localization and breakpoint passes, lockup B, what automated checks cannot prove), pointers in §2 and §13. 2026-10-02: 07 Decision 64 — §7B item 17 and §7D item 5 (d) corrected (`--motion-demo-hold` stays under reduced motion: a still reading pause, app I-23); §7D item 6 (English terms written in the approved Arabic content are allowed, app I-24). 2026-10-04: 07 Decision 76 (F-04 (A)(B) landed; 07 D69 F-04 amends D40) — §7 (learner-facing wording: two terms), §7B item 11 (the chain word), §7C item 8 (the chain word), §8 (the note after a valid entry that does not count as done on your own). 2026-10-15: 07 Decisions 83–84 (Step 4 accepted) — §2 (the token file, typefaces and header wordmark of the chosen identity), §7B items 4 and 9, §7D item 8 (the header wordmark set as text). 2026-10-15: 07 Decision 87 (F-09's content; the pattern of 07 D86) — §2 (`tokens.css` gets one primitive and one role, §7E item 8), §5 (U-15, U-16), new §7E (rules for F-09, the opened display), §12 (the Screen Literacy candidate answered by F-09). 2026-10-16: 07 Decision 88 (F-09 landed, `main` = `c8b13f9`) — §2 and §7E item 8 (the `tokens.css` sha256 record is now 07 D88), §7E item 2 (a `SSR CTCM` line with a learner-typed ending: header only, Karim), §7E item 4 (the accessible-name gap, deferred by Karim). 2026-10-16: 07 Decision 90 (F-04 (C), F-06 (a)–(c), F-14 (a), app I-36) — new §7F, §7C item 5 (the announcement no longer says "on your own"). 2026-10-23: 07 Decisions 91 (the identity completed, Kit v0.3) and 92 (Scenario Bank v1) — §2 (the header), §7B items 9, 15 and 20, §7D item 8, new §7G (the build's rules, by delegation). 2026-10-28: 07 Decision 97 (native cumulative Ghost Mode and isolated independent workflow assessment: S2-28 and S2-74 closed; F-07 preserved; assessment isolation and task distinction in §7A item 11, §8, §9). First edition (Execution Plan 3.3); proposals K1–K4 approved (07 Decision 25). With this approval, the LDS/LXA content extracted here is binding for the slice (LDS and LXA reading rules, point 1).
 owns: The single build specification Claude Code implements for the first-build slice. It gathers requirements from their owners and designs the evidence/state schema (delegated to Claude — file 13).
 does not own: any decision (07); Amadeus behavior (Verified Reference); product structure (03); design (Design Brief / Phase 4). Where this file and an owner disagree, the owner wins and the conflict is reported.
 ---
@@ -424,9 +424,12 @@ field or event type (§11), and none claims Amadeus behavior.
 5. **`ghost_played`.** Recorded when a Ghost Mode script starts, with the
    lesson's `skillId`. A script reveals every skill that has an entry in it
    (`slice.json` `ghostScripts`; e.g. `L05-CTC` reveals `AN`, `SS`, `NM`,
-   `AP` and `CTC`). Ghost Mode is not evidence (§3) and never raises a
-   skill above `INTRODUCED`. `lesson_completed` likewise carries its
-   lesson's `skillId`.
+   `AP` and `CTC`). Standard architecture for skills in a shared operational
+   workflow is native cumulative scripts executing preceding commands on the
+   isolated demo booking through the normal simulator without state injection
+   (07 D97 (a); FQD remains standalone). Ghost Mode is not evidence (§3) and
+   never raises a skill above `INTRODUCED`. `lesson_completed` likewise
+   carries its lesson's `skillId`.
 6. **Independence flag (§8)** of a `command_submitted` on skill X — true
    only if all three hold: (a) no `hint_requested` carries its
    `attemptId`; (b) no `ghost_played` that reveals X lies between the
@@ -504,6 +507,20 @@ field or event type (§11), and none claims Amadeus behavior.
     assessment or scenario inside the app (without closing the browser) is
     §7B item 7 (07 D56): after a confirmation it records
     `assessment_ended` / `scenario_ended` with `result` `abandoned`.
+    **Independent full-workflow assessment boundary (07 D97 (c)):** Formal
+    assessment completion in the current slice continues to follow the existing
+    assessment contract: task completion records `assessment_ended` with
+    `result: 'completed'`. Separately, the existing `runMet` calculation
+    determines whether the run met every checklist item, requiring a valid
+    `ER` followed by a valid `FXP`. Qualifying an assessment as evidence of
+    independent full-workflow performance additionally requires an isolated
+    session (fresh `sessionId`, clean assessment booking, no prior Ghost
+    demonstration in that session, Ghost Mode unavailable throughout) and a
+    distinct task instance, with every required skill having qualifying
+    independent evidence within the same assessment chain under F-07 rules,
+    without cross-session merging. This qualification check is a separate Phase 6
+    acceptance requirement and is not enforced by current-slice evidence
+    derivations.
 12. **Chain practice** (§7). A practice run gets a `chainId` when it starts
     if all nine required skills are `DEMONSTRATED_INDEPENDENT` or higher at
     that moment. A chain run is **completed unaided** when it holds a
@@ -1400,7 +1417,10 @@ event field, string, evidence rule, status rule or content changes; no Amadeus t
 - **Independence flag** (Calculated, per attempt; exact rule §7A item 6) is true only if: no hint
   was used on this attempt; no same-command Ghost Mode reveal immediately
   preceded it; and the immediately preceding feedback on this skill was not
-  corrective. It is **not** the hint counter and never changes it.
+  corrective. It is **not** the hint counter and never changes it. Cumulative
+  Ghost scripts reveal every skill whose command is typed (07 D52 (e), D69 F-07,
+  D97 (b)); hints, demonstrations, and corrective feedback continue to affect
+  independence under the existing rule.
 - **[D] Saying why a valid entry does not count (07 D69 F-04 (B); 07
   D76).** The flag and its reasons come from one function (§7A item 6:
   `hint`, `demonstration`, `correctiveFeedback`, in that order); the bridge
@@ -1441,12 +1461,18 @@ verified end to end, it changes what the learner types, and a professional
 agent meets it in real work (IATA 830d). Alternative: a customer who wants a
 specific airline (carrier-preferred `AN`, V-02).
 
-**[D] Assessment (07 Assessment contract; LDS §20):** one formal assessment
+**[D] Assessment (07 Assessment contract; LDS §20; 07 D97 (c)):** one formal assessment
 = the full path in `TERMINAL_ASSESSMENT`. Entry announced; no history/hint
 wipe on entry; no merging with earlier sessions; carry-over disclosed when
 present; hint label shows the real count. Reported only as "the pipeline
 works end to end for this learner on this occasion" — never a general
-competence claim.
+competence claim. Under Decision 97 (c), the full-workflow independent
+assessment is isolated from Ghost Mode demonstrations (fresh session, clean
+booking, Ghost disabled throughout) and from the differentiated scenario
+(which tests operational adaptation on load-bearing skills `CTC` and `ER`).
+Distinct, previously unpractised assessment task instances are a Phase 6
+chunk specification requirement and do not authorize schema or application
+changes in the current slice.
 
 **[D] Interrupted assessment or scenario (07 D25, K3).** If the
 browser closes mid-attempt, the attempt is recorded as abandoned (not
