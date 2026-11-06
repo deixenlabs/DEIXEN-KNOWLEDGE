@@ -1,219 +1,212 @@
+---
+document: DEIXEN UX Strategy & Experience Architecture
+version: 0.2
+prepared: 2026-11-06
+status: Working strategy aligned to Unified Experience & Runtime Architecture v0.1
+authority: Companion UX strategy; detailed flows and layouts remain open
+---
+
 # DEIXEN — UX Strategy & Experience Architecture
 
-**Status:** Owner-approved direction for the Home and Learning experiences (Decision 98, 2026-11-06). The high-level direction is approved. Detailed flows, screen compositions, interaction patterns, visual treatments, exact curriculum taxonomy, and implementation specifications remain subject to their own research, design, validation, and approval.
+## Status and purpose
 
-## 1. Purpose
+This document defines the experience principles and relationships between DEIXEN's five product areas and its shared capabilities. It is aligned with `06 — DEIXEN Unified Experience & Runtime Architecture.md`.
 
-Define how a learner understands, navigates, and completes meaningful learning and professional work in DEIXEN. UX should help the learner focus on sound professional decisions rather than spend effort deciphering the interface.
+The architecture proposal describes who owns each kind of information and activity. This UX document describes how the learner should understand and move through those activities. Neither document approves a final screen layout or authorizes implementation.
 
-The goal is not to remove professional thinking. It is to remove avoidable interface confusion while gradually helping the learner handle real ambiguity, judgment, and responsibility.
+The goal is to help learners focus on meaningful professional decisions rather than interface confusion, without removing the ambiguity, judgment, responsibility, and recovery that belong to real work.
 
-DEIXEN must connect learning to demonstrated performance without treating lesson completion, simulator exposure, assisted success, or a correct final state as proof of independent competence.
+## 1. Core UX principles
 
-## 2. Core UX principles
+1. **Task-first clarity:** the learner should understand what they are trying to accomplish, why it matters, and what the current task requires.
+2. **One coherent journey, distinct responsibilities:** connect the learner's context across areas without forcing every activity onto one screen.
+3. **Progressive complexity:** introduce knowledge, decisions, and task complexity in a sequence a beginner can build upon.
+4. **Support that changes by mode:** explain first, guide during practice, reduce help as appropriate, and protect independent assessment from instructional assistance.
+5. **Context before command:** whenever relevant, show why an operational action matters to the customer's request and professional task.
+6. **Truthful feedback:** distinguish system acceptance, task completion, professional correctness, and qualifying evidence.
+7. **Visible state, not hidden magic:** make the current task phase, relevant constraints, and available next actions understandable without exposing answers.
+8. **Recovery matters:** teach learners to detect, diagnose, communicate, correct, pause, or escalate—not merely avoid mistakes.
+9. **Separate sources of information:** customer dialogue, Coach, operational output, task context, and evidence must be visually and semantically distinguishable.
+10. **Accessible and responsive:** support Arabic/English and relevant input methods; preserve Terminal's LTR operational behavior.
 
-1. **Task-first clarity:** At every point, the learner should understand what they are trying to accomplish and why it matters.
-2. **Learner-first orientation:** Start from the learner's current situation and the most useful next action; show the wider journey as context rather than overwhelming the learner with it.
-3. **Progressive complexity:** Introduce concepts and responsibilities in a sequence the learner can build on. Do not expose a beginner to every complexity at once.
-4. **Support that fades:** Assistance is available during learning and practice, then deliberately reduced. Independent assessment must remain independent.
-5. **Contextual help:** Place guidance near the activity it supports when this improves understanding and does not obstruct the task.
-6. **One coherent journey:** Learning, demonstration, guided practice, independent practice, scenarios, assessment, evidence, and continued growth should connect meaningfully.
-7. **Distinct responsibilities:** The five product areas remain distinct where their jobs differ. Shared context does not require identical screens.
-8. **Professional truth:** Distinguish a system-accepted action from an action that fulfils the customer's request and professional task.
-9. **Recovery matters:** Help learners understand how to detect, diagnose, communicate, and correct errors, not merely avoid them.
-10. **Honest evidence:** Never imply that lesson completion, assisted success, or one correct result proves independent competence.
-11. **Accessible and responsive:** Design for readable content and usable controls across relevant screen sizes and input methods.
-12. **Distinctive through usefulness:** Do not introduce unusual navigation or visual treatment merely to look different. Distinction must make the experience clearer, more useful, or more memorable without harming task performance.
+## 2. The five product areas
 
-## 3. The five areas and their UX responsibilities
+The current structure remains five areas. The first area is **Home / الرئيسية**; older references to Flight Deck are historical naming unless a specific implementation identifier is being discussed.
 
-The five-area architecture remains unchanged. The approved current user-facing name of the first area is **Home** in English and **الرئيسية** in Arabic; it replaces **Flight Deck / قمرة القيادة** as the current area name.
+| Area | Learner question | UX responsibility | Boundary |
+|---|---|---|---|
+| **Home** | “Where am I, and what is the most useful next step?” | Orient the learner, explain a relevant recommendation, and show a concise view of the wider development journey. | Not a full catalogue, workbench, or detailed evidence report. |
+| **Learning** | “What do I need to understand, and how does it apply to work?” | Support curriculum discovery and focused lessons, including demonstrations and links to practice. | Lesson completion is not competence evidence. |
+| **Terminal** | “Can I perform this operational work correctly?” | Provide the operational work environment and the practice, scenario, and assessment modes that use it. | Not a customer chatbot or a place to mix Coach/customer content into the operational record. |
+| **Scenario Bank** | “What professional situation should I practice or be assessed on?” | Organize and explain cases, purpose, prerequisites, variants, and relevant status/eligibility. | Not a second execution environment. Scenario execution remains in Terminal under D92. |
+| **Growth** | “What does my evidence show, and what remains to develop?” | Present a clear evidence-based development view, including limits and untested capabilities. | Not a score, completion dashboard, or unsupported readiness claim. |
 
-- **Home:** Personalized orientation. Helps the learner understand their current learning situation, the most useful next action, why that action is recommended, and where it fits in the wider professional-development journey.
-- **Learning:** Curriculum discovery and learning. Gives the learner an understandable way to explore learning paths and courses, then enter a focused lesson experience for explanation, demonstration, and preparation for practice.
-- **Terminal:** Operational execution and the primary place where practice and scenario work are performed, subject to existing governance. It remains the operational heart of DEIXEN.
-- **Scenario Bank:** Discovery and selection of professional cases. It is not a second execution surface; a scenario runs as a mode inside Terminal under the existing decision.
-- **Growth:** The evidence-led view of demonstrated capabilities, areas needing more practice, and development over time. It must not duplicate Home's brief orientation summary.
+### Shared capabilities are not additional navigation areas
 
-Assessment remains a mode within the existing learning and operational journey, not a sixth top-level area.
+Coach, Ghost, Customer Interaction, Task Runtime, Assessment & Evidence, and verified-content controls support the five areas. They may appear in several experiences, but each must retain a distinct responsibility. Do not add a sixth top-level area merely to give one of these capabilities a home.
 
-## 4. Home — personalized orientation
+## 3. Three connected lifecycles
 
-### 4.1 Primary job
+The experience connects three different lifecycles:
 
-Home should answer, in this order:
+- **Customer Journey:** inquiry, discovery, clarification, advice, choice/consent, fulfillment, changes/problems, confirmation, closure, and after-sales.
+- **Professional/Learner Journey:** onboarding, foundations, supported practice, growing responsibility, independent performance, and continued development.
+- **Work Task Lifecycle:** the steps and outcome of one piece of work, from receiving the request through decisions, execution, validation, communication, and closure.
 
-1. **Where am I now?** Show the learner's relevant current context: what they are learning or practising, and the stage that matters now.
-2. **What is the best next step for me?** Present one clear, useful next action based on the learner's actual state and the approved learning/work sequence.
-3. **Why this step?** Explain briefly why it is recommended and what it will help the learner develop or resolve.
-4. **What is my current focus?** Make the immediate learning or practice focus understandable without reproducing the full lesson or the full record of evidence.
-5. **Where does this fit in my wider journey?** Offer a concise sense of the broader professional-development direction and the next meaningful milestone, without turning Home into a large curriculum map or a readiness dashboard.
+These lifecycles inform one another but must not be collapsed into one progress sequence. A learner can revisit Learning; a work task can branch or pause; and a customer journey can include multiple tasks.
 
-The recommendation must reflect genuine learner state, available curriculum content, and the relevant professional task. Home must not invent progress, infer competence from exposure, or present an unsupported readiness conclusion.
+## 4. The connected learner experience
 
-### 4.2 A compact view of the wider journey
+A useful default path to design and validate is:
 
-Home should give the learner enough context to understand that today's action contributes to a longer professional journey. This may include the current learning path or course and a restrained indication of what comes next.
+**Home → Learning → Ghost demonstration → Terminal practice → Scenario Bank case selection → Terminal scenario execution → Debrief → Independent assessment → Evidence → Growth → Home.**
 
-The wider journey is supporting context, not the main content of the page. It must not compete with the immediate next action or reproduce Learning's catalogue and Growth's evidence review.
+This is a connected model, not a mandatory linear funnel. Learners may return to a lesson, repeat a demonstration, choose another practice case, or receive a different recommendation based on observed evidence.
 
-Do not turn this into a decorative progress meter, percentage, streak, leaderboard, or generic dashboard grid.
+### Home
 
-### 4.3 Adapt to the learner's situation
+Home should make the learner's current situation understandable. A recommendation should answer:
 
-The orientation should be useful across materially different learner states, including:
+- What is the suggested next action?
+- Why is it relevant now?
+- Which learning objective, task, or evidence gap does it address?
+- What is the next step after it?
 
-- **First visit / beginner:** make the starting point and first useful action clear; do not expose the entire product or curriculum at once.
-- **Returning learner:** restore continuity and make the next action understandable without forcing the learner to rediscover where they were.
-- **Learner needing reinforcement:** surface an appropriate opportunity to revisit or practise a weak area rather than automatically pushing new content.
-- **After a practice, scenario, or assessment event:** reflect only what the event and the existing evidence rules actually establish, then guide the next step.
-- **No suitable next action available:** say so honestly and provide a meaningful route to explore Learning or review Growth; do not manufacture an action or display a false affordance.
+Keep the wider professional journey visible as concise context, not a second dashboard competing with the next action.
 
-These are experience requirements, not approval of a particular recommendation algorithm or visual layout.
+### Learning
 
-### 4.4 Boundaries
+Learning has two connected experiences:
 
-Home is not:
+1. **Discovery:** paths/tracks, courses, modules, and lessons, with taxonomy and prerequisites validated by curriculum evidence.
+2. **Focused lesson:** a clear objective, explanation, relevant example, demonstration, and a meaningful bridge into practice.
 
-- a marketing homepage;
-- a conventional dashboard that places many unrelated cards and metrics on one screen;
-- a full curriculum catalogue;
-- the detailed Growth/evidence report;
-- a replacement for Terminal or a place to perform operational work;
-- a claim that the learner is job-ready merely because a path, lesson, or task is complete.
+Customer Service remains a distinct but connected learning track. It teaches transferable communication and service behaviors that can later be observed in integrated scenarios; not every lesson must become a full customer simulation.
 
-## 5. Learning — discovery first, focused learning second
+## 5. Ghost UX: a progressive narrated demonstration
 
-Learning should support two connected experiences: **Learning Overview / Discovery** and the **focused Lesson Experience**. The overview helps the learner understand and choose what to learn; the lesson helps the learner concentrate on one learning objective at a time.
+Ghost should feel like a knowledgeable instructor guiding the learner through a live demonstration—not like a static command list or an ordinary prerecorded video.
 
-### 5.1 Learning Overview / Discovery
+The learner sees the command/entry and system response unfold progressively. At meaningful points, a separate Coach narration explains:
 
-The first Learning experience should make the learning offer understandable before asking the learner to open an individual lesson. It should help answer:
+- what just happened;
+- what changed in the operational state;
+- why this step matters now;
+- what field, response, or detail deserves attention;
+- what the learner should carry into practice.
 
-- What learning paths and courses are available?
-- What will I learn, and why does it matter in professional work?
-- What knowledge or skill does this learning develop?
-- What should I understand before starting it?
-- How does it connect to relevant Terminal practice, scenarios, and later evidence?
-- What is available now, what is planned, and what is not yet part of the current learning offer?
+For beginners, explanation should generally come before a prediction request. Use occasional self-explanation or “what do you expect next?” prompts at consequential decision points, not as a continuous quiz.
 
-Use clear groupings and progressive disclosure. Do not present every lesson, command, and detail at once, and do not replace the overview with an enormous map that is difficult to scan.
+Ghost uses the actual simulation engine for operational responses. Authored explanation must be grounded in verified references. Coach text and annotations remain outside the Terminal record. Ghost exposure is learning exposure, not independent evidence; preserve D97's cumulative behavior and no-state-injection rule.
 
-### 5.2 Curriculum organization
+Text narration is sufficient for the initial experience. Audio/voice is a separate future hypothesis.
 
-At the experience level, the intended discovery hierarchy is:
+## 6. Scenario Bank and Terminal UX relationship
 
-**Learning paths / tracks → courses → modules → lessons.**
+Scenario Bank and Terminal must be designed together at the learner-experience level while remaining different places with different jobs.
 
-This is the approved direction for making the curriculum discoverable. The precise curriculum model, naming, grouping, prerequisite relationships, order, and content remain owned by evidence-based curriculum design and the relevant canonical curriculum sources. This UX decision does not create new curriculum content, settle competency-versus-command ordering, or authorize future content to appear as currently available.
+### Scenario Bank: understand and select the case
 
-The interface should communicate relationships and dependencies clearly, but must not invent prerequisite locks or access restrictions. Existing curriculum and lesson rules remain controlling until formally changed.
+The learner should be able to understand the work purpose, expected outcome, major constraints, prerequisites, intended practice/assessment role, and relevant case status before launch. The Bank should not expose hidden customer facts or assessment answers.
 
-### 5.3 Focused Lesson Experience
+Work-domain sections may eventually organize cases by recognizable professional activity. Cross-cutting tags may identify recurring challenge patterns. For example, a “system accepted it, but it was wrong for the task” collection could be generated from tagged cases rather than maintained as duplicate copies. Final taxonomy and terminology require user/practitioner testing.
 
-After choosing a lesson, the learner should enter a focused experience built around that lesson's objective. It should support, as appropriate to the lesson:
+### Terminal: perform the case
 
-- a clear statement of what the learner is expected to understand;
-- plain-language explanation and necessary context;
-- a worked example or demonstration;
-- attention to important distinctions, likely misunderstandings, and professional consequences;
-- a clear relationship to the relevant work task;
-- a meaningful transition into the appropriate Terminal practice when the lesson's contract provides one;
-- an understandable way to continue, revisit, or return to the Learning Overview.
+Selecting a case hands its versioned context to Terminal's Scenario Mode. Terminal runs the case through the shared task runtime and operational engine; it does not reproduce Scenario Bank's library or case-authoring logic.
 
-Keep the learner focused on the current lesson. Do not make a long horizontal strip of every lesson or command the primary way to understand the curriculum. Navigation between lessons may remain available, but it should not overwhelm the teaching content or imply that moving through a list proves competence.
+The task may move between customer interaction and operational activity. The learner should understand why they are switching and what information carries forward. The two channels must remain separate:
 
-### 5.4 Learning does not equal competence
+- customer dialogue is not Amadeus output;
+- Coach is not the customer;
+- scenario instructions are not operational responses;
+- the operational record remains restricted to learner entries, Amadeus output, and the one allowed labelled DEIXEN training line.
 
-Completing or reading a lesson means the learner has completed that learning activity according to its rule. It does not, by itself, prove independent task execution, professional judgment, transfer to unfamiliar cases, or workplace readiness.
+Some scenarios may be dialogue-heavy or may not require a GDS command. Preserve D92 while testing how such cases can run in Terminal Scenario Mode without forcing irrelevant command-entry UI or inventing operational actions.
 
-The experience must preserve the progression from learning and demonstration through guided practice, independent practice, scenarios, independent assessment, evidence, and continued development. The detailed learning mechanics and evidence rules remain owned by their existing canonical sources.
+## 7. Customer Interaction and Coach
 
-## 6. Three connected journeys
+The virtual customer and Coach are separate roles.
 
-Design should understand and connect, without collapsing, these lifecycles:
+**Customer Interaction** supplies case facts, reveals information when appropriately asked, expresses needs/preferences/concerns, responds to choices, and reacts plausibly to the learner's behavior. The customer is not an instructor and should not know every hidden system rule.
 
-- **Customer Journey:** inquiry, discovery, clarification, advice, choice, fulfilment, changes/problems, closure, and after-sales.
-- **Professional / Learner Journey:** onboarding, foundations, supported practice, increasing responsibility, independent performance, and continued development.
-- **Work Task Lifecycle:** the steps, decisions, branches, and outcome of one concrete professional task.
+**Coach** provides explanations, hints, prompts, error diagnosis support, and learning feedback according to the current mode. A deterministic, bounded customer-dialogue model is the first prototype hypothesis; its natural-language coverage, authoring cost, and learner experience must be tested before commitment.
 
-Home primarily orients the learner within the Professional / Learner Journey and the immediate next action. Learning organizes and teaches the knowledge and skills needed along that journey. Terminal handles operational execution. Scenario Bank exposes the learner to cases and variation. Growth communicates what the evidence supports.
+### Support policy by state
 
-The interface should show the right context at the right time. Avoid showing every lifecycle detail simultaneously.
+| Experience state | Coach/help behavior |
+|---|---|
+| Lesson | Teach and explain. |
+| Ghost | Narrate and focus attention on meaningful changes. |
+| Supported practice | Offer contextual help and corrective feedback as allowed. |
+| Reduced-support practice | Encourage reasoning and self-checking; reveal less. |
+| Scenario practice | Follow the case's declared support policy; never impersonate the customer. |
+| Independent assessment | No instructional Coach, answer hints, or corrective rescue during the attempt. |
+| Post-attempt review | Explain performance only after the attempt/evidence state is secured. |
 
-## 7. Support, practice, assessment, and evidence
+Ordinary customer facts disclosed in response to the learner's questions are part of the task, not instructional help.
 
-Potential experience progression, subject to the existing Learning Design and canonical contracts:
+## 8. Assessment and evidence UX
 
-- Supported learning and demonstration.
-- Guided practice with clear help.
-- Practice with reduced or more selective help.
-- Integrated scenarios with realistic choices and complications.
-- Independent assessment without instructional hints or corrective coaching.
-- Feedback after the assessment result is secured.
-- Evidence-led review and an appropriate next development action.
+Assessment should feel like a substantial professional task, not a small quiz detached from real work. Scenario Bank may organize eligible case families/variants; execution remains in Terminal in an isolated assessment mode.
 
-The simulated customer's ordinary answers and facts are part of the scenario, not instructional hints. The Coach is separate from the simulated customer and must not leak answers into independent assessment.
+The learner should understand that this is an independent attempt and what rules apply, without being shown answers. A qualifying attempt must be distinguishable from a completed-but-assisted attempt. The design must support D97's fresh session identity, clean operational state, distinct unpractised task/variant, absence of Ghost exposure in the assessment session, absence of instructional hints, and evidence captured within the same assessment chain.
 
-Customer reaction or satisfaction must remain distinct from operational accuracy and professional judgment. An unhappy customer is not automatically evidence of learner failure, and simulated satisfaction cannot compensate for operational failure.
+If an attempt is completed but fails a qualification condition, record it honestly without calling it independent evidence. A correct final state alone is not proof.
 
-## 8. Booking Chain and task route
+Customer satisfaction, operational accuracy, professional judgment, communication, recovery, independence, and transfer remain distinct evidence dimensions. Satisfaction must neither excuse incorrect work nor automatically penalize the learner for a legitimate constraint.
 
-The Booking Chain / route representation describes the steps of a **specific operational work task**. It is not the curriculum map, the complete skill model, or the learner's entire professional journey.
+## 9. Debrief and Growth
 
-Keep task workflow, curriculum structure, competency relationships, and learner evidence conceptually distinct:
+Debrief comes after the relevant attempt and explains the task outcome, important decisions, mismatches, errors, recovery, and evidence limitations. For independent assessment, debrief content appears only after the attempt is closed and the evidence snapshot is secured.
 
-- **Curriculum structure:** what the learner is meant to learn and in what learning grouping.
-- **Competency / skill model:** what the learner can demonstrate, including where a skill is reused across lessons or work tasks.
-- **Work-task workflow:** the operational sequence and branches for one task.
-- **Learner evidence and development:** what has actually been demonstrated, under what conditions and with what degree of independence.
+Growth should present:
 
-The Booking Chain's task logic and evidence meaning are not changed by this UX direction. Whether, where, and how its visual representation appears on Home or Learning is a detailed design question to be settled through realistic prototypes and testing. It must not be expanded into a crowded map of all curriculum content.
+- what has been demonstrated;
+- on which task/case variants;
+- under what support and independence conditions;
+- whether errors were detected/recovered;
+- what remains untested or needs practice;
+- what the evidence does not yet justify claiming.
 
-## 9. Scenario discovery and organization
+Do not turn the dimensions into a wall of badges or numeric sub-scores. Preserve the currently governed qualitative status vocabulary unless formally changed.
 
-Scenario Bank may contain work-related categories, each with multiple cases. Categories should reflect recognizable professional task families, not arbitrary content buckets. A case may include customer context, requirements, missing or conflicting information, operational work, events, outcomes, and assessment criteria.
+## 10. UX architecture: shared context, distinct surfaces
 
-Scenario execution remains inside Terminal under the current approved architecture. Scenario Bank remains a case-discovery and selection experience, not a parallel execution environment.
+An integrated work task may coordinate objective, task phase, case facts, customer dialogue, Terminal activity, support, and checkpoints. It does **not** follow that all elements should be visible at once or placed in one fixed layout.
 
-Potential categories and case structures remain subject to job-task research and verified Amadeus references. Avoid implying that every proposed category is already implemented.
+Test whether the learner benefits from simultaneous adjacent workspaces, progressive transitions, focused phases, or a hybrid. The best composition may differ between mobile and desktop. Avoid forcing one identical screen template across Learning, Ghost, Scenario Bank, Terminal, and Growth.
 
-## 10. Responsive, accessible, and coherent experience
+Terminal's operational record remains LTR and monospace. Customer dialogue, Coach, case context, and feedback stay outside it. Arabic/English and RTL/LTR support should not reverse the operational Terminal record.
 
-Home and Learning must work across mobile, tablet, and desktop without assuming that the same composition is optimal at every size. Prioritize clear information hierarchy, realistic content density, readable Arabic and English, RTL/LTR correctness, keyboard and touch usability, and assistive-technology clarity.
+## 11. Validation requirements
 
-Shared design foundations may be consistent across areas, but Home, Learning, Terminal, Scenario Bank, and Growth do not need identical page compositions. Visual identity, typography, color, motion, components, and final screen layouts remain governed by their relevant design sources and future design approval.
+Test representative complete tasks with beginners and, where possible, practitioners. Observe:
 
-## 11. UX validation
+- whether learners understand the purpose and next step;
+- whether customer facts and operational requirements are easy to distinguish;
+- whether they can move between customer dialogue and Terminal without losing context;
+- whether Coach helps without overloading or revealing answers;
+- whether Ghost explanations clarify consequential outputs;
+- whether the case's support level is understood;
+- whether errors, pauses, recovery, and escalation are understandable;
+- whether independent assessment remains visibly and functionally distinct;
+- whether evidence wording is honest and understandable;
+- whether the experience works with realistic content density on mobile and desktop.
 
-Validate the experience with representative beginners and, where possible, working practitioners. Test at least these tasks:
+Do not approve a flow only because a diagram or attractive static mockup looks coherent.
 
-- a first-time learner finding the correct starting point;
-- a returning learner resuming after an interruption;
-- a learner deciding what to study and understanding why it matters;
-- a learner finding a lesson from a path or course;
-- a learner completing a lesson and moving into the intended practice;
-- a learner who needs reinforcement finding a meaningful next action;
-- a learner reviewing evidence without mistaking lesson completion for competence.
+## 12. Open questions
 
-Observe whether learners can explain where they are, what they should do next, why it matters, how the lesson connects to work, and where they can see what has actually been demonstrated. Also observe hesitation, misinterpretation, cognitive load, false affordances, responsive behavior, and accessibility.
+- Which end-to-end work task is the best first integrated prototype across Saudi Arabia, Oman, and the UAE?
+- Which case fields are required for a useful first version, and which should remain internal authoring metadata?
+- How should dialogue-heavy/customer-service-only cases appear in Terminal Scenario Mode?
+- Which work domains deserve Scenario Bank sections, and which should remain filters/tags?
+- How much Ghost narration is helpful before becoming overly verbose?
+- How should learners see task phase and context without revealing hidden information?
+- Which support actions disqualify an attempt from independent evidence?
+- What is the smallest integrated experience that can validate learning, usability, and evidence integrity?
 
-Do not approve a flow only because it looks elegant in a diagram or static mockup. Use realistic content and end-to-end tasks.
+## 13. Governance boundaries
 
-## 12. Authority, status, and boundaries
-
-This document records the approved high-level Home and Learning direction under Decision 98. It does **not**:
-
-- add or remove a top-level product area;
-- change Terminal's central operational role;
-- move scenario execution out of Terminal or change Scenario Bank's role;
-- change Growth's evidence responsibility;
-- change the Learning Design's skill states, assistance rules, curriculum content, or evidence contracts;
-- change the Amadeus Verification Standard or authorize unverified system behavior;
-- change the Booking Chain's workflow or evidence semantics;
-- approve a final visual identity, screen composition, component, or interaction design;
-- authorize application-code changes or claim that the new experience has been implemented.
-
-The current application still contains the earlier Flight Deck implementation and the existing single-lesson Learning experience. The code, translations, tests, and internal identifiers require a separate implementation task after the relevant detailed UX specifications are prepared and approved.
-
-The exact curriculum hierarchy and detailed Home/Learning flows should be developed from real learner needs, job-task evidence, and usability testing. Where this document does not settle a detail, record it as open rather than filling the gap by assumption.
+This document does not authorize code changes, a sixth area, a final case taxonomy/schema, changes to D92/D97, new Amadeus behavior, a final screen layout, or a new evidence model. Detailed UX flows and UI specifications belong in `05 — UX Flows, UI Specifications & Design System — Planning.md` only after the task and its variants are researched and validated. The companion architecture proposal is a working model; any change to canonical governance must go through the formal decision process.

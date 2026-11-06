@@ -158,7 +158,7 @@ DEIXEN should describe evidence honestly: what the learner demonstrated, under w
 
 The current top-level product structure has exactly five areas:
 
-1. **Flight Deck** — learner orientation and next-step direction based on the learner's state/evidence.
+1. **Home** — learner orientation and next-step direction based on the learner's state/evidence. (Flight Deck is the historical name.)
 2. **Learning** — conceptual knowledge, command knowledge, worked examples, demonstrations, and structured instruction.
 3. **Terminal** — the operational heart of the product, where the learner enters commands and sees Amadeus-like operational behavior as implemented and verified by DEIXEN.
 4. **Scenario Bank** — a case library/status area, not a separate execution terminal.
@@ -873,7 +873,7 @@ The environment must not become a gamified life simulator. Avoid fictional badge
 
 Do not add a sixth top-level area by default. Explore how the five current areas can support this model:
 
-- **Flight Deck:** explains the next learning/practice/work task based on demonstrated evidence and current development needs.
+- **Home:** explains the next learning/practice/work task based on demonstrated evidence and current development needs. (Flight Deck is the historical name.)
 - **Learning:** teaches the knowledge and subskills needed for the learner's current and upcoming responsibilities.
 - **Terminal:** remains the operational place where relevant GDS work is executed.
 - **Scenario Bank:** becomes a structured library of customer cases and professional work tasks, with purpose, prerequisites, complexity, variants, verification status, and evidence criteria.
@@ -1331,11 +1331,11 @@ The guiding principle is:
 
 ---
 
-# PART XIII — INTEGRATED PRODUCT, UX/UI & BRAND DEVELOPMENT PHILOSOPHY
+# PART XV — INTEGRATED PRODUCT, UX/UI & BRAND DEVELOPMENT PHILOSOPHY
 
 **Status:** Approved strategic working principle as of 6 November 2026. This section records the user's approval to organize the work through one connected vision and specialized companion documents. It does not approve a specific visual identity, color, logo, screen design, or unvalidated product feature.
 
-## 43. One connected product, developed through connected disciplines
+## 69. One connected product, developed through connected disciplines
 
 DEIXEN's product logic, user experience (UX), interface design (UI), product design language, and brand identity must not be treated as isolated projects or as a sequence in which visual design is added only after implementation is complete.
 
@@ -1348,7 +1348,7 @@ They are distinct disciplines with explicit responsibilities, but they must info
 
 The disciplines are separate in scope and documentation, but connected in discovery, design, validation, and iteration.
 
-## 44. Design from real product needs, not generic prompts or visual trends
+## 70. Design from real product needs, not generic prompts or visual trends
 
 Do not begin by asking an AI system or designer to invent a generic "modern professional dashboard" or an abstract identity without sufficient product context. Such prompts tend to reproduce familiar templates and generic logo conventions.
 
@@ -1362,7 +1362,7 @@ Start from:
 
 References are benchmarks for design quality and specific qualities—not templates to copy. Each reference must be decomposed into transferable principles (for example, content organization, typography, visual hierarchy, motion, depth, color use, or component behavior). The resulting DEIXEN solution must remain original and fit its own workflows.
 
-## 45. UX decisions can shape visual quality
+## 71. UX decisions can shape visual quality
 
 A better interaction model can produce a better visual composition, not merely a more usable one.
 
@@ -1370,7 +1370,7 @@ For example, placing Terminal hints in a contextually connected position near th
 
 Therefore, UI should not be treated as decoration applied to a finished UX. Interaction, information hierarchy, layout, and visual expression should be explored together. A UX improvement may change the layout; a UI prototype may reveal a usability problem; a usability test may reveal a gap in product logic.
 
-## 46. Product maturity and design timing
+## 72. Product maturity and design timing
 
 Avoid locking the full UI or visual identity while major product logic, task flows, or planned capabilities remain unclear. Premature design can create rework when the product's actual information needs and interactions become visible.
 
@@ -1384,7 +1384,7 @@ Preferred approach:
 - Finalize identity and system-wide visual decisions only after testing them against the real product's needs, including both Dark and Light themes.
 - Continue iterating as new product capabilities are validated.
 
-## 47. Reference direction for product design exploration
+## 73. Reference direction for product design exploration
 
 The user has identified three important product-design references, each for different qualities. These are reference directions, not decisions to copy their interfaces.
 
@@ -1396,7 +1396,7 @@ The intended approach is to learn from the different strengths and combine them 
 
 The accent color remains **open**. Higgsfield's fluorescent accent is an example of a distinctive color strategy, not a DEIXEN color selection. Do not record fluorescent green or any other accent as approved without a separate exploration and approval. Dark and Light themes must both be considered as first-class experiences.
 
-## 48. Coherence without uniformity
+## 74. Coherence without uniformity
 
 DEIXEN should feel like one coherent product, but not every area should use the same screen composition or interaction pattern.
 
@@ -1404,7 +1404,7 @@ The five product areas have different responsibilities. Their interfaces should 
 
 Connect the underlying context, task progression, and evidence where useful; do not force every responsibility onto one screen. A shared design language is not the same as identical layouts.
 
-## 49. Validation and quality controls
+## 75. Validation and quality controls
 
 Do not accept a design because it looks attractive in a static mockup or because its concept sounds intelligent.
 
@@ -1422,7 +1422,7 @@ Evaluate it against:
 
 AI-generated proposals must be critically reviewed for generic patterns, superficial decoration, inconsistent details, and unsupported assumptions. References should guide quality, not excuse imitation.
 
-## 50. Documentation and decision boundaries
+## 76. Documentation and decision boundaries
 
 This integrated philosophy is a strategic working principle. It does not itself approve:
 - a final logo, icon, wordmark, typeface, or brand color;
@@ -1441,3 +1441,70 @@ Detailed work belongs in the companion documents:
 The master product strategy remains the source for product purpose and learning architecture. Companion documents must link back to it and clearly identify dependencies, approved decisions, open questions, and hypotheses. They must not silently override it.
 
 ---
+
+
+---
+
+# PART XVI — UNIFIED EXPERIENCE & RUNTIME ARCHITECTURE
+
+**Status:** Working architecture proposal prepared 6 November 2026. See the companion file `06 — DEIXEN Unified Experience & Runtime Architecture.md`. This section aligns the strategic brief with that proposal; it does not convert the proposal into a canonical decision or implementation authorization.
+
+## 77. One connected task context, distinct ownership
+
+The proposed architecture connects the learner's customer-facing work, operational activity, instructional support, assessment, and evidence through one shared task context. It does not merge their sources of truth or create one monolithic engine.
+
+The responsibility boundaries are:
+
+- **Learning** owns curriculum, lessons, prerequisites, and teaching objectives.
+- **Ghost** demonstrates progressive, verified operational sequences with separate Coach narration; it is not an evidence source for independent competence.
+- **Scenario Bank** owns the case catalogue, versioned case definitions, variants, prerequisites, and eligibility metadata.
+- **Terminal** owns operational execution and remains the place where scenario execution occurs under D92.
+- **Customer Interaction** owns scenario-grounded customer dialogue and disclosure of case facts; it is not the Coach.
+- **Task Runtime / Orchestration** connects one active task run with the selected case, customer dialogue, operational session, phases, and events; it does not reproduce Amadeus behavior.
+- **Coach** owns instructional explanation and support under mode-specific rules; it is not available as answer-giving support during protected independent assessment.
+- **Assessment & Evidence** interpret observable events under explicit criteria and preserve support, session, variant, and provenance conditions.
+- **Growth** presents the evidence and its limits; **Home** orients the learner toward an explainable next action.
+
+## 78. Three lifecycles remain distinct
+
+The architecture connects, but does not collapse:
+
+1. the **Customer Journey** (customer needs, dialogue, decisions, fulfillment, changes, and follow-up);
+2. the **Professional/Learner Journey** (learning, supported practice, growing responsibility, independent performance, and development);
+3. the **Work Task Lifecycle** (the steps and outcome of one concrete professional task).
+
+A work task may branch, pause, require clarification, or end in escalation. The experience must not force an artificial linear flow.
+
+## 79. Ghost, Scenario Bank, Terminal, and Coach
+
+Ghost is proposed as a Coach-led progressive worked demonstration: reveal the command and real engine response in sequence; explain what changed and why; use optional reflection prompts only at consequential decision points. Preserve D97's cumulative exposure and no-state-injection requirements. Coach text remains outside the Terminal record.
+
+Scenario Bank defines and organizes the case. Terminal executes the active scenario run. A shared case-to-run hand-off should carry the case/package version, selected variant, task objective, support policy, relevant reference versions, and assessment eligibility. The active task runtime coordinates customer and operational context without copying the case library or duplicating the GDS engine.
+
+Customer, Coach, system output, assessment, and evidence must remain distinct. The Terminal record remains LTR/monospace and contains only learner entries, Amadeus output, and the one permitted DEIXEN training line.
+
+## 80. Assessment and Growth
+
+Assessment may use an eligible case/variant from Scenario Bank, but it must execute in a fresh isolated Terminal assessment run. A qualifying attempt must satisfy D97 and the applicable evidence rules: clean operational state, distinct unpractised task/variant, no Ghost contamination in the assessment session, no instructional hints/Coach rescue during the attempt, and evidence captured within the same assessment chain. Customer facts disclosed through normal dialogue remain part of the task.
+
+A completed attempt that does not meet independence conditions may still be recorded, but it must not be described as qualifying independent evidence. Growth must keep operational accuracy, professional judgment, customer communication, recovery, independence, retention/transfer, and customer experience distinguishable. It must not create a numeric readiness score or infer workplace readiness from simulation activity alone.
+
+## 81. Current implementation and architecture boundary
+
+The latest repository inspection available to this brief found a useful foundation: Ghost uses progressive scripted reveals and the actual simulation engine; Scenario Bank launches into a shared Terminal runtime; Terminal supports practice/scenario/assessment modes through a common execution surface. The inspected implementation was not yet the complete architecture described above: Ghost narration was selective, the integrated customer-dialogue/task lifecycle was not present, the current library contained only a narrow task/scenario slice, and the assessment implementation did not fully satisfy D97's fresh-session/distinct-task/no-hint conditions. Re-verify the live repository before implementation planning.
+
+The recommended direction is staged evolution, not a wholesale rebuild. The most important design gaps to resolve first are the case-to-run contract, Task Runtime ownership, customer-dialogue integration, mode-specific Coach boundaries, and assessment evidence qualification.
+
+## 82. Required next work before implementation
+
+1. Select a research-backed representative work task across the target markets.
+2. Map its customer journey, professional decisions, operational steps, branches, errors/recovery, and closure conditions.
+3. Define one case package and meaningfully distinct practice/assessment variants with verified sources.
+4. Map state ownership and event hand-offs between Scenario Bank, Task Runtime, Customer Interaction, Terminal, Coach, and Evidence.
+5. Prototype the learner experience with realistic content, including a case that does not require a GDS command.
+6. Validate Ghost narration and the independent-assessment safeguards.
+7. Approve a small vertical slice and its detailed UX/UI specifications before any implementation task is authorized.
+
+For the complete responsibility map, conceptual contracts, flow diagram, current gaps, invariants, open questions, and validation sequence, use the companion architecture proposal. Any canonical decision change remains subject to the formal governance process.
+
+**End of brief.**

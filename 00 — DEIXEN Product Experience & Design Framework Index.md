@@ -1,77 +1,85 @@
 # DEIXEN — Product Experience & Design Framework
 ## Document Index and Working Rules
 
-**Purpose:** Explain how product strategy, UX, UI/product design language, and brand identity work together while remaining separately documented. This index also identifies where design collaboration methods and tool responsibilities are governed.
+**Package version:** 0.1 — 6 November 2026  
+**Purpose:** Keep product strategy, unified experience/runtime architecture, UX, product design language, brand identity, and eventual UI specifications connected while preserving their separate responsibilities.
 
 ## The document set
 
-1. **01 — Product Strategy, Learning Architecture & Partnership Goals**  
-   The master source for DEIXEN's purpose, target users, learning model, professional work tasks, assessment philosophy, Growth evidence, strategic hypotheses, partnership ambitions, and integrated development philosophy.
+1. **Master Strategic Product Direction, Learning Architecture & Partnership Goals**  
+   The master strategic context: DEIXEN's ambition, users, learning model, professional work-task direction, customer journey, evidence principles, market questions, and institutional goals. The filename is retained as supplied; it is the strategic master brief, not implementation authorization.
 
 2. **02 — UX Strategy & Experience Architecture**  
-   Defines how learners move through DEIXEN, understand tasks, use support, practice, complete scenarios, and demonstrate independent performance.
+   Defines how learners move through the five areas and how task context, customer dialogue, support, practice, assessment, and evidence should be experienced.
 
 3. **03 — Product Design Language**  
-   Defines the visual and interactive language of the product: hierarchy, composition, typography, spacing, components, states, motion, depth, and Dark/Light themes.
+   Defines the visual and interactive language: hierarchy, composition, typography, spacing, components, states, motion, depth, and Dark/Light themes. It does not lock the visual identity.
 
 4. **04 — Brand Strategy & Visual Identity**  
-   Defines the brand's purpose, positioning, personality, logo system, wordmark, typography, color identity, visual exploration requirements, and brand applications.
+   Defines the brand strategy and visual exploration criteria. All final logo, wordmark, symbol, color, and identity decisions remain open unless separately confirmed.
 
-5. **05 — UX Flows, UI Specifications & Design System**  
-   The planning and execution-oriented layer for validated flows, screens, components, interactions, multi-tool visual exploration, design evaluation, and handoff to implementation. It should not be prematurely treated as a completed implementation specification.
+5. **05 — UX Flows, UI Specifications & Design System — Planning**  
+   The execution-oriented specification framework. Detailed screens and flows should be developed only after representative tasks and UX patterns are validated.
+
+6. **06 — Unified Experience & Runtime Architecture**  
+   The working architecture proposal connecting Home, Learning, Ghost, Terminal, Scenario Bank, Customer Interaction, Coach, the professional task lifecycle, Assessment, Evidence, and Growth. It is not canonical and does not authorize implementation.
+
+7. **07 — Architecture Alignment & Change Log**  
+   Explains the cross-document changes, documents intentionally left unchanged, remaining governance checks, and the limits of this package.
+
+8. **README**  
+   Package contents, scope, and handling instructions.
 
 ## How the documents relate
 
 The documents are separate by responsibility, not separate by vision.
 
-- Product Strategy answers: **What are we building, for whom, and why?**
-- UX answers: **How should people use it to achieve the intended outcomes?**
-- Product Design Language answers: **How should those experiences look, feel, and behave?**
-- Brand Identity answers: **What distinctive character does DEIXEN express?**
-- UX/UI Specifications answer: **What exactly should be built and how should it behave?**
+- **Master strategy:** What are we building, for whom, and why?
+- **Unified architecture:** Which capabilities own each responsibility, and how do they exchange context without conflicting?
+- **UX strategy:** How should people understand and use the product to achieve the intended outcomes?
+- **Product Design Language:** How should those experiences look, feel, and behave?
+- **Brand Identity:** What distinctive character does DEIXEN express?
+- **UX/UI Specifications:** What exactly should be designed, tested, and eventually built?
 
-Tool and contributor authority is governed by `DEIXEN_Operating_Constitution.md` and the current `DEIXEN_Execution_Plan.md`. The detailed collaborative design workflow belongs in **05**; brand-specific exploration criteria belong in **04**. Do not duplicate the full role matrix or workflow across every design document.
-
-A decision in one document may affect another. Record the dependency and update the relevant companion document rather than duplicating large sections or silently changing another document's scope.
+A decision in one document may affect another. Update the affected companion documents and record the dependency. Do not duplicate large sections or silently change the scope of a canonical source.
 
 ## Status vocabulary
 
 - **Approved principle:** explicitly accepted by the user.
-- **Current reference direction:** a source of inspiration, not a design to copy.
+- **Canonical decision:** recorded through the project's formal governance process; verify the current decision log.
+- **Working architecture proposal:** a reasoned model for review; not a decision.
+- **Current reference direction:** inspiration for qualities, not a design to copy.
+- **Hypothesis:** plausible direction requiring research, prototyping, or testing.
 - **Open:** no final decision has been made.
-- **Hypothesis:** plausible direction that requires research, prototyping, or testing.
-- **Deferred:** intentionally not being decided or built yet.
+- **Deferred:** intentionally not decided or built yet.
 - **Implementation status unknown:** do not claim it exists in the app without current repository evidence.
 
-## Current approved integrated principle
+## Current integrated principle
 
-Develop product logic, UX, UI/product design language, and brand identity as connected disciplines. Do not treat visual design as decoration added after implementation. Let real tasks and learner needs shape UX; let UX and UI inform each other; test design against representative workflows; and maintain a coherent product without forcing identical layouts everywhere.
+Develop product logic, UX, UI/product design language, and brand identity as connected disciplines. Let real work tasks and learner needs shape the experience. Use the unified architecture to preserve responsibility boundaries; use UX/UI prototypes to test how the learner experiences those boundaries. Do not treat visual design as decoration added after implementation.
 
-This principle does not approve a final logo, color, screen, layout, or feature.
+This principle does not approve a final logo, palette, screen, feature, data schema, or implementation.
 
-## Reference direction currently recorded
+## Current area naming and governance note
+
+The current canonical Product & Architecture source records the first area as **Home / الرئيسية** (D98) and retains five areas: Home, Learning, Terminal, Scenario Bank, and Growth. Older references to Flight Deck are historical unless they describe a legacy implementation identifier or historical decision. Before synchronizing governance files outside this package, confirm that D98 has been applied to the canonical decision log and decision-resolution register; this package does not edit those records.
+
+D92 and D97 remain governing constraints in this proposal. No change to either decision is made here.
+
+## Reference directions currently recorded
 
 - **Microsoft:** composition, information organization, clarity, and hierarchy.
-- **Samsung:** modernity, detail, depth, layers, motion, and interactions.
+- **Samsung:** modernity, detail, layers, motion, and interactions.
 - **Higgsfield:** visual presence, content/tool presentation, and distinctive accent-color strategy.
 
 These references are not templates. The DEIXEN accent color remains open. Fluorescent green is not approved.
 
-## Collaborative design approach
-
-DEIXEN may use more than one AI design environment to explore brand identity and product visuals. The current working pairing is Google AI Studio with Gemini/Argon 4 and Claude Design with Claude Opus 5.5. Neither is presumed superior or given final design authority.
-
-The detailed method—shared brief, independent first-pass exploration, cross-critique, iterative synthesis, evaluation, owner approval, and implementation handoff—is defined in **05**. This is a current working arrangement, not a permanent dependency on particular vendors or model versions.
-
-## Governance
-
-The master strategy and the project's canonical decision log remain authoritative for their respective scopes. The Operating Constitution governs working methods and tool authority; the Execution Plan governs current work sequence and task assignments. Companion design files must not silently amend decisions in `07` or imply implementation authorization. Record disagreements and propose formal review instead of overwriting accepted governance.
-
 ## Suggested work sequence
 
-1. Confirm product purpose and representative end-to-end tasks.
-2. Map UX for those tasks and test the flow.
-3. Explore UI and product design language using realistic content.
-4. Develop brand identity in parallel where useful, using the collaborative exploration method in **05**, and validate it against the actual product context.
-5. Convert validated patterns into detailed specifications and implementation tasks.
-6. Iterate based on usability, learning, operational, and visual-quality evidence.
+1. Select and research a representative end-to-end professional task.
+2. Define one case package, its support conditions, and distinct variants.
+3. Map how Scenario Bank, Terminal, Customer Interaction, Coach, and Evidence coordinate.
+4. Prototype the learner experience with realistic content and test it.
+5. Validate Ghost narration and independent-assessment safeguards.
+6. Mature recurring UX/UI patterns and the shared design language.
+7. Only then prepare implementation specifications and separately authorize code work.

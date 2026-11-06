@@ -1,12 +1,26 @@
-# DEIXEN Product Experience & Design Framework
+# DEIXEN Product Experience & Design Framework — Architecture Alignment Package v0.1
 
-This package contains the retrieved master product brief, updated with the approved integrated development philosophy, plus four companion planning documents and an index.
+Prepared 6 November 2026.
 
-- Master strategy: original retrieved brief preserved and appended with Part XIII.
-- UX strategy: companion file.
-- Product design language: companion file.
-- Brand strategy and visual identity: companion file.
-- UX/UI specifications and design system: planning file only.
-- Index: explains scope, dependencies, and status vocabulary.
+This package aligns the existing product/experience planning documents and adds a working unified experience/runtime architecture proposal connecting Home, Learning, Ghost, Terminal, Scenario Bank, Customer Interaction, Coach, the professional work-task lifecycle, Assessment, Evidence, and Growth.
 
-No code, repositories, or canonical decision log were changed. No final logo, accent color, UI layout, or unvalidated feature was approved by this package.
+## Contents
+
+- `00 — DEIXEN Product Experience & Design Framework Index.md` — package index and status rules.
+- `02 — DEIXEN UX Strategy & Experience Architecture.md` — updated five-area and cross-capability UX model.
+- `03 — DEIXEN Product Design Language.md` — existing design exploration framework plus architecture-informed presentation guidance.
+- `04 — DEIXEN Brand Strategy & Visual Identity.md` — retained without content changes; no brand decision was affected by this architecture work.
+- `05 — UX Flows, UI Specifications & Design System — Planning.md` — updated planning and traceability requirements.
+- `06 — DEIXEN Unified Experience & Runtime Architecture.md` — new working architecture proposal.
+- `07 — Architecture Alignment & Change Log.md` — what changed, what stayed untouched, and unresolved governance checks.
+- `DEIXEN — Strategic Product Direction, Learning Architecture & Partnership Goals.md` — master strategic brief with precise Home naming synchronization and a new architecture-alignment section.
+
+## Important status
+
+The new architecture is a **proposal for owner review**, not a canonical decision or an implementation authorization. D92 and D97 are preserved. No code, repositories, canonical decision log, curriculum source, or Amadeus operational reference has been changed by this package.
+
+The companion canonical Product & Architecture source records Home / الرئيسية as the current first-area name. The Library copy of the canonical decision log was not available in the inspected document set; confirm D98 synchronization in the authoritative `07` decision log and resolution register before treating that record as fully reconciled.
+
+## Use
+
+Read the master strategic brief for intent, the unified architecture for responsibilities and system boundaries, and the UX strategy for learner experience. Use the planning document only after the representative professional task and its variants have been researched and validated. Do not ask an implementation agent to build the architecture proposal as-is; first resolve its open questions and approve a bounded vertical slice.

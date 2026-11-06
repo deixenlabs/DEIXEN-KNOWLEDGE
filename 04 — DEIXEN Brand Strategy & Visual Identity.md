@@ -1,6 +1,6 @@
 # DEIXEN — Brand Strategy & Visual Identity
 
-**Status:** Strategy and exploration framework. The brand name DEIXEN is retained for now; visual identity decisions remain open unless explicitly reconfirmed by the owner.
+**Status:** Strategy and exploration framework. The brand name DEIXEN is retained for now; visual identity decisions remain open unless explicitly confirmed elsewhere.
 
 ## 1. Purpose
 
@@ -37,9 +37,7 @@ The user's stated preferences include:
 - crafted curves, transitions, proportions, and letter details where appropriate;
 - visual intelligence and refinement comparable in craft to selected references, without copying them.
 
-These are exploration preferences, not permission to force a predetermined logo construction. Test alternatives when evidence or creative exploration suggests a stronger solution.
-
-The five strongest logo references previously identified by the user are:
+The five strongest logo references identified by the user are:
 1. Mugen
 2. Waypoint
 3. SmartPlus
@@ -57,9 +55,7 @@ Analyze the specific qualities the user responds to: typographic craft, integrat
 - generic travel imagery (planes, globes, route pins, tickets);
 - generic education imagery (graduation caps, books, lightbulbs);
 - fake sophistication through metallic effects, excessive gradients, artificial lighting, or presentation mockups;
-- a typography-only primary logo as the sole explored route, since the user has expressed a preference for a distinct icon beside the name.
-
-These exclusions target clichés and weak solutions; they must not prevent a genuinely strong alternative from being evaluated on its merits.
+- a typography-only primary logo, since the user wants a distinct icon beside the name.
 
 ## 6. Color
 
@@ -76,37 +72,10 @@ Evaluate each direction on:
 - monochrome performance;
 - practical use across digital and institutional applications;
 - relevance to the brand without requiring a long explanation;
-- craft quality, optical balance, spacing, and consistency;
-- ability to coexist with the product's actual interface language without dictating its layouts.
+- craft quality, optical balance, spacing, and consistency.
 
-Do not select a logo solely because its concept sounds clever or because a polished presentation makes it appear more complete than it is.
+Do not select a logo solely because its concept sounds clever.
 
 ## 8. Open decisions
 
-Final logo concept, symbol construction, wordmark design, type family, brand palette, accent color, tagline, and brand applications remain open unless the owner explicitly reconfirms them. All material identity directions require visual exploration and owner approval.
-
-## 9. Multi-tool brand exploration
-
-DEIXEN's brand exploration should benefit from the complementary creative capabilities of more than one AI design environment.
-
-The current working pairing is:
-- **Google AI Studio — Gemini/Argon 4**
-- **Claude Design — Claude Opus 5.5**
-
-Both may actively generate and develop brand directions. Neither is the exclusive design tool, the default winner, or the final authority. These are current tool/model pairings, not permanent dependencies; their suitability may be reassessed as capabilities and project needs evolve.
-
-Use the same strategic context, brand objectives, known user preferences, open decisions, and evaluation criteria for both environments. Allow each to make an independent first exploration before exposing it to the other's concepts. This reduces premature convergence and copying.
-
-After independent directions exist:
-1. Compare the actual visual outcomes, not the reputation or perceived sophistication of the tools.
-2. Identify each direction's strongest and weakest elements.
-3. Invite each environment to critique the other direction after its own initial work is preserved.
-4. Develop promising alternatives through further iteration.
-5. Combine complementary strengths only when the result becomes more coherent and distinctive; do not mechanically average two designs.
-6. Preserve competing directions when neither has earned selection.
-
-Evaluate the results using Section 7 and test them in relevant applications, including small-scale marks, monochrome use, wordmark lockups, and representative product contexts.
-
-All outputs remain proposals. The owner retains final approval of the brand direction. Tool participation does not authorize repository changes, implementation, or silent modification of canonical decisions.
-
-The detailed multi-tool workflow and handoff requirements are defined in `05 — UX Flows, UI Specifications & Design System — Planning.md`.
+Final logo concept, symbol construction, wordmark design, type family, brand palette, accent color, tagline, and brand applications remain open. All identity decisions require visual exploration and user approval.

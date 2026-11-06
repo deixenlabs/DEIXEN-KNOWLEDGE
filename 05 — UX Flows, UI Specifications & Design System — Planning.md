@@ -1,180 +1,150 @@
+---
+document: DEIXEN UX Flows, UI Specifications & Design System — Planning
+version: 0.2
+prepared: 2026-11-06
+status: Planning only; aligned to Unified Experience & Runtime Architecture v0.1
+authority: No implementation specification or authorization
+---
+
 # DEIXEN — UX Flows, UI Specifications & Design System
 ## Planning Document
 
-**Status:** Planning only. This is not a completed implementation specification or authorization to change the app.
-
 ## 1. Why this document exists
 
-This is the future execution layer between the UX strategy/product design language and implementation. It should contain concrete, validated descriptions of flows, screens, components, and interaction behavior.
+This is the future execution layer between product strategy, the unified experience/runtime architecture, UX strategy, product design language, and implementation.
 
-Do not fill it with speculative screens before the relevant workflows have been researched and tested.
+It should contain concrete, validated descriptions of flows, screens, components, interaction behavior, content states, and acceptance criteria. It must not become a speculative screen catalogue before the relevant professional tasks have been researched.
 
-This document also defines the working method for turning UX, UI, and brand exploration into comparable design proposals, validated specifications, and implementation-ready handoffs. It does not own the authority or final decisions of the Operating Constitution or Decision Register.
+## 2. Required inputs before a flow can be specified
 
-## 2. When to develop it
+A specification may begin when the team can identify:
 
-Create detailed specifications when:
-- the relevant product task and intended outcome are sufficiently understood;
-- the UX flow has been mapped;
-- realistic content and edge cases are known;
-- key usability questions have been tested or explicitly recorded;
-- the design pattern is stable enough to specify.
+- the professional task and intended outcome;
+- the learner profile and relevant prerequisites;
+- the case/package and any meaningful variants;
+- the source of truth for customer facts and operational behavior;
+- the relevant skills and observable behaviors;
+- the task phases, branches, stop/pause/escalation conditions;
+- the support policy for the intended mode;
+- what evidence is captured and what it may legitimately support;
+- realistic content and edge cases;
+- relevant canonical decisions and their current status.
 
-Exploratory prototypes may be created earlier when they help resolve uncertainty. Clearly label them as experiments, not approved product specifications.
+Unknowns should be labelled. Do not silently fill them with model-generated Amadeus behavior or assumptions about professional practice.
 
-## 3. Planned contents
+## 3. Planned specification layers
 
-### UX flow specifications
-- user goal and starting context;
-- step-by-step flow;
-- decisions and branching;
-- information required at each step;
-- support available and when it fades;
-- error and recovery paths;
-- completion conditions;
-- assessment boundaries;
-- evidence captured.
+### A. End-to-end learner flow
 
-### Screen and interaction specifications
-- screen purpose;
-- information hierarchy;
-- primary and secondary actions;
-- component behavior and states;
-- keyboard, pointer, and touch behavior;
-- responsive behavior;
-- accessibility requirements;
-- empty, loading, error, and success states.
+For each flow, record:
 
-### Design system
-- typography and hierarchy;
-- spacing and layout rules;
-- color roles and theme tokens;
-- components and variants;
-- interaction feedback;
-- motion rules;
-- iconography;
-- Dark and Light theme behavior.
+- entry point and learner context;
+- learner goal and task outcome;
+- sequence and branching;
+- how Home, Learning, Terminal, Scenario Bank, and Growth are involved;
+- relevant shared capabilities (Ghost, Coach, Customer Interaction, Task Runtime, Assessment/Evidence);
+- what context carries between stages;
+- where the learner can pause, retry, return, or leave;
+- how the flow concludes and what the next useful action is.
 
-## 4. Example validation case: Terminal hint placement
+### B. Case-to-run contract
 
-A possible pattern is to connect hints contextually to the command-entry area. Before specifying it as a standard:
-- test the learner's understanding;
-- verify that it does not obstruct input;
+Record the case family, package/variant version, task objective, visible and hidden facts, disclosure rules, operational scope, verified references, support policy, task-run identity, session requirements, event triggers, completion/stop criteria, and assessment eligibility.
+
+The case package is a definition; a scenario instance is one instantiated case; a task run is one learner attempt. Do not treat these as interchangeable.
+
+### C. Screen and interaction specifications
+
+For each screen/workspace, record:
+
+- purpose and responsible capability;
+- information hierarchy and authoritative source for every displayed value;
+- primary/secondary actions and state transitions;
+- interaction behavior for keyboard, pointer, and touch;
+- loading, empty, invalid, error, interruption, recovery, and completion states;
+- responsive behavior across mobile, tablet, and desktop;
+- accessibility, bilingual, RTL/LTR, and reduced-motion requirements;
+- how user input and system output remain distinguishable.
+
+### D. Mode and support policy
+
+Specify differences among lesson, Ghost, supported practice, reduced-support practice, scenario practice, and independent assessment. State exactly what Coach/hints/customer dialogue may do in each mode and what affects evidence qualification.
+
+### E. Assessment and evidence specification
+
+Specify:
+
+- fresh session/run and clean operational-state requirements;
+- how distinct/unpractised case variants are selected;
+- what exposure or assistance invalidates qualification;
+- which observed events map to criteria;
+- which evidence is recorded versus calculated;
+- how completed-but-nonqualifying attempts are represented;
+- when feedback can be shown;
+- how Growth summarizes evidence without scores or unsupported claims.
+
+### F. Design system
+
+Define typography, spacing, layout rules, semantic color roles, components and variants, state feedback, iconography, motion, and Dark/Light theme behavior only after recurring interaction patterns have been tested.
+
+## 4. Cross-workspace integrity rules
+
+- Scenario Bank selects/defines the case; Terminal executes the active run.
+- Task Runtime coordinates context; it must not duplicate operational truth.
+- Customer Interaction, Coach, Terminal/System, Assessment, and Growth retain distinct semantic roles.
+- The Terminal operational record remains LTR/monospace and contains only learner entries, Amadeus output, and the one permitted labelled DEIXEN training line.
+- Customer dialogue, case narrative, Coach explanations, hints, and debriefs remain outside the operational record.
+- Assessment debrief is withheld until the attempt is closed and the evidence snapshot secured.
+- No UI pattern may imply that a completed or assisted activity proves independent competence.
+
+## 5. Example validation case: Terminal hint placement
+
+A possible pattern is to connect hints contextually to the command-entry area. Before standardizing it:
+
+- test whether the relationship is immediately understood;
+- verify that it does not obstruct input or keyboard use;
 - test narrow and wide layouts;
-- confirm the hint is not confused with Amadeus output or the DEIXEN training line;
-- confirm hints are unavailable in independent assessment where required.
+- confirm that the hint is not confused with Amadeus output or the DEIXEN training line;
+- verify that independent assessment removes instructional help as required.
 
-## 5. Traceability
+This is an example, not a predetermined layout rule.
+
+## 6. Architecture validation cases to prototype
+
+At minimum, before implementing a broad new experience, validate:
+
+1. a Ghost demonstration in which narration explains meaningful output without contaminating the Terminal record;
+2. a Scenario Bank case launch into Terminal scenario mode with context preserved and no duplicated case truth;
+3. a case that moves between customer dialogue and operational execution;
+4. a scenario that does not require a GDS command, to test D92 presentation without artificial operations;
+5. an independent-assessment run that proves the isolation and qualification rules;
+6. a Growth view that clearly distinguishes demonstrated evidence from untested areas.
+
+These are validation cases, not a mandate to build all six immediately. Prioritize the smallest set that resolves the highest-risk architectural questions.
+
+## 7. Traceability and acceptance
 
 Every specification should link to:
-- the relevant product requirement or strategic principle;
-- the UX flow;
-- the relevant design-language rule;
-- any applicable canonical decision;
-- test evidence and approval status.
 
-## 6. Governance
+- master strategic requirement;
+- unified architecture capability and boundary;
+- UX flow and learner goal;
+- case package/variant and source-of-truth owner;
+- related skill/competency and observable behavior;
+- relevant canonical decision (including D92/D97 where applicable);
+- support and evidence rules;
+- design-language rule;
+- usability/learning test evidence;
+- owner approval and specification version.
 
-Do not treat this planning file as authority to modify code, canonical decisions, or Amadeus behavior. Record unresolved questions and obtain explicit approval through the project process.
+Acceptance criteria should test behavior, not only appearance. Include negative tests for truth leakage, duplicated state, unsupported responses, help during assessment, and false evidence qualification.
 
-## 7. Multi-tool visual design collaboration
+## 8. When detailed specifications are ready
 
-### 7.1 Current working environments
+Create detailed specs when the task model, case data, relevant operational scope, UX flow, and major edge cases are understood. A prototype can be used to discover those things; it need not wait for every future product area to be complete.
 
-The current design workflow uses two complementary environments:
+Do not design the entire future product at once. Use one validated vertical slice to reveal recurring patterns, then expand based on evidence.
 
-| Environment | Current model pairing | Working contribution |
-|---|---|---|
-| Google AI Studio | Gemini / Argon 4 | Independent visual exploration, design concepts, application prototypes, and iterative visual experimentation |
-| Claude Design | Claude Opus 5.5 | Independent visual exploration, design concepts, interface directions, and iterative refinement |
+## 9. Governance
 
-Neither environment is designated as the sole design authority or presumed superior. Both should be given meaningful opportunities to solve the same design problem. The exact capabilities available in each environment should be checked at the time of the task; do not assume a feature exists merely because it existed in an earlier session.
-
-The model/version pairings describe the current working setup and may change. The durable principle is complementary, independent exploration under shared project context.
-
-### 7.2 Shared brief, independent first pass
-
-Both environments should receive the same essential brief:
-- the actual product/brand objective;
-- relevant current project sources;
-- target user and representative tasks;
-- known constraints and open decisions;
-- quality and evaluation criteria;
-- required output and level of fidelity;
-- what is read-only, what may be prototyped, and what is explicitly not authorized.
-
-Allow each environment to explore independently before sharing the other environment's output. Do not force the same visual concept, prompt wording, layout, or number of alternatives. The shared brief aligns the objective, not the creative solution.
-
-### 7.3 Cross-review and iterative synthesis
-
-After the first independent proposals are available:
-1. Preserve and document the original directions.
-2. Compare visual outcomes against the same evaluation criteria.
-3. Identify strengths, weaknesses, risks, and missing aspects in each.
-4. Ask each environment to critique the other where that adds value.
-5. Explore improvements and genuinely new alternatives.
-6. Combine elements only when they strengthen the coherence and purpose of the result.
-7. Keep distinct options alive when evidence does not justify premature convergence.
-
-Do not average two designs, copy one tool's output into the other, or choose a winner based on model reputation. Cross-review should improve the work, not erase the value of independent exploration.
-
-### 7.4 Owner decision and design status
-
-All design outputs are proposals until the owner approves a direction. The owner retains final authority over brand identity and material visual direction.
-
-Distinguish:
-- exploration;
-- candidate direction;
-- refined proposal;
-- owner-approved direction;
-- validated specification;
-- implemented design;
-- implementation verified against the specification.
-
-A design can be owner-approved and still require usability, accessibility, responsive, or implementation validation. Approval of a visual direction does not automatically authorize code or repository changes.
-
-### 7.5 Evaluation
-
-Evaluate proposals against the task and relevant design discipline, including:
-- distinctiveness and originality;
-- clarity of hierarchy and content relationships;
-- usability for the intended user;
-- realistic content density and edge cases;
-- Arabic/English and RTL/LTR behavior where applicable;
-- responsive behavior and relevant input methods;
-- accessibility, contrast, focus, and reduced motion;
-- consistency without forced uniformity;
-- interaction quality and meaningful motion;
-- feasibility, maintainability, and implementation fidelity.
-
-Static visual appeal is not sufficient. Use realistic content, representative tasks, and interactive prototypes when they can answer meaningful questions.
-
-## 8. Implementation handoff
-
-After a direction and its required specifications are approved:
-- Claude Code remains the primary implementation agent for approved software changes.
-- Antigravity is a complementary development environment in the owner's workflow; its exact role in a task must be stated rather than assumed.
-- The design handoff should include approved assets, typography and color decisions, tokens where applicable, layout rules, component behavior, interaction states, responsive behavior, accessibility requirements, source references, and unresolved items.
-- The implementation team must not infer missing behavior from a screenshot.
-- Any implementation deviation that changes the design intent, UX behavior, accessibility, or product contract must be surfaced.
-- Verify the implemented result against the approved specification in the actual application.
-
-Exploratory design environments must not modify the application repository or production code unless the owner separately authorizes that work.
-
-## 9. Example handoff checklist
-
-For each approved design package, record:
-- the design objective and scope;
-- the selected direction and why it was selected;
-- the rejected or deferred alternatives and the material reasons;
-- source files and approved references;
-- assets and their formats;
-- typography, color, spacing, and token decisions;
-- component and interaction specifications;
-- responsive and localization behavior;
-- accessibility requirements;
-- open questions and known limitations;
-- owner approval status;
-- implementation and validation status.
-
-A package is not implementation-ready merely because it contains polished screenshots. It must communicate enough behavior and constraints for faithful implementation and verification.
+This planning file and the companion architecture proposal do not authorize code changes, canonical decision changes, new Amadeus behavior, a sixth product area, backend work, or a full work-shift simulator. Record unresolved questions and obtain explicit approval through the project process. Implementation work requires a separate authorized task and acceptance criteria.

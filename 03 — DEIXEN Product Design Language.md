@@ -112,3 +112,39 @@ Reject work that:
 ## 11. Open decisions
 
 Accent color, typefaces, exact spacing scale, component shapes, surface treatments, navigation composition, motion system, and final Dark/Light palettes remain open pending exploration and testing.
+
+
+## 11. Architecture-informed presentation
+
+The unified architecture proposes one connected task context with distinct responsibilities. The visual language should make those responsibilities legible without forcing them into one dashboard or identical panel layout.
+
+Where relevant, the product may need to distinguish:
+
+- case context and task objective;
+- customer dialogue and disclosed facts;
+- Terminal operational input and system output;
+- Coach explanation and instructional hints;
+- task phase/checkpoints;
+- debrief and evidence interpretation.
+
+These are semantic roles, not a fixed screen composition. Explore how hierarchy, spatial grouping, typography, density, and progressive reveal make their relationships clear. The correct solution may change between mobile and desktop and between learning, practice, scenario, and assessment states.
+
+**Functional integration is not screen merger.** A cohesive experience can use separate workspaces or focused transitions while sharing context and a consistent design language.
+
+## 12. Distinct information, distinct visual signals
+
+The design language should provide unambiguous, consistent treatment for:
+
+- customer statements versus system facts;
+- operational output versus learner-entered commands;
+- Coach narration versus case instructions;
+- practice feedback versus independent-assessment state;
+- recorded evidence versus derived learner-facing interpretation.
+
+Do not rely on color alone to encode these distinctions. Use labels, placement, typography, interaction behavior, and accessible state cues. Do not introduce a new accent color or visual identity decision through this architecture work.
+
+The Terminal operational record's LTR/monospace and content-purity constraints remain functional invariants, not optional styling preferences.
+
+## 13. Architecture and visual-design boundary
+
+This document translates the architecture into design questions only. It does not approve a persistent split-pane layout, a customer chat widget, a new navigation pattern, a component library, a color system, or any specific motion behavior. Those choices belong in task-specific prototypes and validated specifications.
