@@ -1,52 +1,59 @@
 # DEIXEN — Product Experience & Design Framework
 ## Document Index and Working Rules
 
-**Package version:** 0.3 — 7 November 2026  
-**Purpose:** Keep product strategy, unified experience/runtime architecture, UX, product design language, brand identity, eventual UI specifications, and cross-project quality standards connected while preserving their separate responsibilities.
+**Package version:** 0.4 — 7 November 2026  
+**Purpose:** Keep product strategy, unified experience/runtime architecture, UX, product design language, brand identity, eventual UI specifications, commercial direction, and cross-project quality standards connected while preserving their separate responsibilities.
 
 ## The document set
 
 1. **Master Strategic Product Direction, Learning Architecture & Partnership Goals**  
    The master strategic context: DEIXEN's ambition, users, learning model, professional work-task direction, customer journey, evidence principles, market questions, and institutional goals. The filename is retained as supplied; it is the strategic master brief, not implementation authorization.
 
-2. **02 — DEIXEN UX Strategy & Experience Architecture**  
+2. **DEIXEN Professional Lifecycle & Continuing Development — Part XIX Addendum**  
+   An append-ready strategic addition to the master brief. It records the proposed customer/value lifecycle from free exploration, through a paid learning path, to continuing professional development after employment. It is a strategic proposal, not a claim that post-employment features or recurring value already exist in the app. Append it after Part XVIII only after owner review.
+
+3. **DEIXEN Commercial Model & Pricing Strategy v0.1**  
+   Defines the proposed free Explore entry, paid full-access model, duration logic based on learner-hours, Egypt test-price hypotheses, the USD 25/month continuing-membership reference, continuing professional value, billing principles, validation gates, and key commercial metrics. All prices are hypotheses for testing, not approved final prices or a launch commitment.
+
+4. **02 — DEIXEN UX Strategy & Experience Architecture**  
    Defines how learners move through the five areas and how task context, customer dialogue, support, practice, assessment, and evidence should be experienced.
 
-3. **03 — DEIXEN Product Design Language**  
+5. **03 — DEIXEN Product Design Language**  
    Defines the visual and interactive language: hierarchy, composition, typography, spacing, components, states, motion, depth, and Dark/Light themes. It does not lock the visual identity.
 
-4. **04 — DEIXEN Brand Strategy & Visual Identity**  
+6. **04 — DEIXEN Brand Strategy & Visual Identity**  
    Defines the brand strategy and visual exploration criteria. All final logo, wordmark, symbol, color, and identity decisions remain open unless separately confirmed.
 
-5. **05 — UX Flows, UI Specifications & Design System — Planning**  
+7. **05 — UX Flows, UI Specifications & Design System — Planning**  
    The execution-oriented specification framework. Detailed screens and flows should be developed only after representative tasks and UX patterns are validated.
 
-6. **06 — Unified Experience & Runtime Architecture**  
+8. **06 — Unified Experience & Runtime Architecture**  
    The working architecture proposal connecting Home, Learning, Ghost, Terminal, Scenario Bank, Customer Interaction, Coach, the professional task lifecycle, Assessment, Evidence, and Growth. It is not canonical and does not authorize implementation.
 
-7. **07 — Architecture Alignment & Change Log**  
-   Explains the cross-document changes, documents intentionally left unchanged, remaining governance checks, and the limits of this package.
+9. **07 — Architecture Alignment & Change Log**  
+   Explains the cross-document changes, documents intentionally left unchanged, remaining governance checks, and the limits of the package.
 
-8. **08 — DEIXEN First Integrated Professional Task Map**  
-   Applies the proposed architecture to one bounded new-booking task, stage by stage, including ownership, support, state transitions, evidence events, branches, assessment isolation, and validation criteria.
+10. **08 — DEIXEN First Integrated Professional Task Map**  
+    Applies the proposed architecture to one bounded new-booking task, stage by stage, including ownership, support, state transitions, evidence events, branches, assessment isolation, and validation criteria.
 
-9. **09 — DEIXEN Case Package Definition — New Reservation**  
-   The detailed CP-001 case definition and its current validation limits.
+11. **09 — DEIXEN Case Package Definition — New Reservation**  
+    The detailed CP-001 case definition and its current validation limits.
 
-10. **10 — DEIXEN Practitioner Review Brief & Response Form**  
+12. **10 — DEIXEN Practitioner Review Brief & Response Form**  
     A review brief and response form for an experienced reservations/ticketing practitioner. The external review remains pending until a practitioner responds.
 
-11. **standards/ — DEIXEN Standards Library (proposed)**  
-    A cross-project home for quality standards, status, evidence, and reusable review methods. The standards library does not replace canonical product decisions, the Amadeus Verified Reference, or file 08. See [`standards/README.md`](standards/README.md) and [`standards/DEIXEN_Product_Quality_Standards_Framework_v0.1.md`](standards/DEIXEN_Product_Quality_Standards_Framework_v0.1.md). This library is proposed and is not yet canonical.
+13. **standards/ — DEIXEN Standards Library (proposed)**  
+    A cross-project home for quality standards, status, evidence, and reusable review methods. The standards library does not replace canonical product decisions, the Amadeus Verified Reference, or file 08. See `standards/README.md` and `standards/DEIXEN_Product_Quality_Standards_Framework_v0.1.md`. This library remains proposed and is not yet canonical.
 
-12. **README**  
+14. **README**  
     Package contents, scope, and handling instructions.
 
 ## How the documents relate
 
 The documents are separate by responsibility, not separate by vision.
 
-- **Master strategy:** What are we building, for whom, and why?
+- **Master strategy and Part XIX addendum:** What are we building, for whom, why, and how can the learner continue to receive professional value after the first employment transition?
+- **Commercial Model & Pricing Strategy:** What is the proposed access and billing model, how are duration and prices justified, and what evidence is required before launch?
 - **Unified architecture:** Which capabilities own each responsibility, and how do they exchange context without conflicting?
 - **UX strategy:** How should people understand and use the product to achieve the intended outcomes?
 - **Product Design Language:** How should those experiences look, feel, and behave?
@@ -96,16 +103,18 @@ These references are not templates. Do not treat a reference's colors or layouts
 3. Reconcile findings with the current canonical decisions and Verified Reference.
 4. Decide which proposed specialist standards need research, revision, practitioner input, learner validation, or formal adoption.
 5. Validate representative end-to-end tasks and their customer/Terminal/Coach/evidence hand-offs.
-6. Mature recurring UX/UI patterns and the shared design language.
-7. Only then prepare implementation specifications and separately authorize code work.
+6. Estimate total learner-hours from the actual curriculum and pilot data before freezing the 3-month or 6-month learning-access periods.
+7. Test Explore-to-paid conversion, price acceptance, learner outcomes, renewal value, costs, and cancellation behavior before adopting the commercial model.
+8. Mature recurring UX/UI patterns and the shared design language.
+9. Only then prepare implementation specifications and separately authorize code work.
 
-## v0.3 case-validation and standards additions
+## v0.4 commercial-model additions
 
-- `09 — DEIXEN Case Package Definition — New Reservation.md` is the detailed CP-001 definition; its earlier verdict was `تنجح مع تعديل`, not production approval.
-- `10 — DEIXEN Practitioner Review Brief & Response Form.md` is a review request template; practitioner feedback remains pending.
-- The current live Verified Reference fetched from Knowledge `main` is third edition, V-01–V-18, with U-12/U-14 and other limitations still requiring care. Use the live file, not stale copies.
-- CP-001 is architecture-valid with modifications, but not cleared for Amadeus content release or implementation.
-- The proposed Standards Library creates a home and status register for quality standards. It does not approve new domain requirements, amend D95–D97, or authorize implementation.
+- `DEIXEN Professional Lifecycle & Continuing Development — Part XIX Addendum.md` is append-ready content for the strategic master brief. It does not replace the 129 KB master file or silently insert itself into the repository's current master document.
+- `DEIXEN Commercial Model & Pricing Strategy v0.1.md` records the proposed Explore / Full Access / Continuing Professional Development model and candidate duration/price points.
+- The free Explore concept must be a genuine, limited learner-operated booking practice in the DEIXEN simulation. It must not relabel Ghost's separate scripted demo booking as learner practice, and must not create qualifying independent evidence or imply access to a live Amadeus production system.
+- The current `deixen-app` main tree inspected for this update contains Terminal practice/scenario/assessment and Ghost demonstration paths, but no account, subscription, payment, checkout, billing, or entitlement implementation. The documents define a proposal; they do not claim billing or paywall functionality exists.
+- Price figures are hypotheses for testing and require curriculum-hour estimation, unit-economics analysis, payment/tax/legal review, and customer willingness-to-pay validation.
 
 ## Governance boundary
 

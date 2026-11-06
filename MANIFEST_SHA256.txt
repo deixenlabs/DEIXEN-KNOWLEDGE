@@ -1,12 +1,3 @@
-b7dce69eac64d6466e7c4ce8e8e26a0fe2194af46600c487c09e1bb09113edf4  00 — DEIXEN Product Experience & Design Framework Index.md
-ec205fa39a3bd334d648733a5d1c5bfa0ef8a605e0f1d4b2cd6747968730bd76  02 — DEIXEN UX Strategy & Experience Architecture.md
-40fe975cff82da729d9b47ba65c3c68febae00d08123188d294e78e9c9c52bd5  03 — DEIXEN Product Design Language.md
-73952f168880c6b8422d80e5e1afce45a8a490e2f771ea06fe93c53774499c52  04 — DEIXEN Brand Strategy & Visual Identity.md
-646b3b73b9895101b7eedd31089aae556ac3a719f8afc61b749245134ba13fb2  05 — UX Flows, UI Specifications & Design System — Planning.md
-d7cbb718ff450dce1e6590a14cc2cc0dbb7b185ccf716c14df323d8320ef3b20  06 — DEIXEN Unified Experience & Runtime Architecture.md
-7fb3fb14826c7fcd8ef326201cf620e6091cb99232be506421f236a0225e3c42  07 — Architecture Alignment & Change Log.md
-92834e7182dcc2dc848b99a00bf4c89282c9601844397dffb715a509bca3afad  08 — DEIXEN First Integrated Professional Task Map.md
-8acaca5d6d50ef56b10c2828d246946f3c4ce25e1033805ea99fa812ab5dd8e9  09 — DEIXEN Case Package Definition — New Reservation.md
-2e8ddd7881c6838a8b3a05db80a07e20f21a40cd1d592c34f51d407f2e7a7bab  10 — DEIXEN Practitioner Review Brief & Response Form.md
-9b699e18f302435fc9743b43ec3fc2f81df901b24c40bb6fcbe8de6e254bf7d6  DEIXEN — Strategic Product Direction, Learning Architecture & Partnership Goals.md
-97bb3a2631a4d4a723241de2445b984209c2997d4473375b2febafd8935debef  README.md
+1cef1cb9418170f7e39f9145e35166aba6b953941b03c3c81a3acdc58c8c9c99  00 — DEIXEN Product Experience & Design Framework Index.md
+70d3dbc81ba0699733ae06cc72a93c76f0e6bc0007876c525f146f0c157381e5  DEIXEN Professional Lifecycle & Continuing Development — Part XIX Addendum.md
+0a0812c654b46738ac4875068e021ebcb4e64efb9dff1fc24a3c60e6857be686  DEIXEN Commercial Model & Pricing Strategy v0.1.md
