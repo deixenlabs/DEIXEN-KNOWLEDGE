@@ -1,7 +1,7 @@
 # DEIXEN — Product Experience & Design Framework
 ## Document Index and Working Rules
 
-**Package version:** 0.1 — 6 November 2026  
+**Package version:** 0.2 — 6 November 2026  
 **Purpose:** Keep product strategy, unified experience/runtime architecture, UX, product design language, brand identity, and eventual UI specifications connected while preserving their separate responsibilities.
 
 ## The document set
@@ -27,7 +27,10 @@
 7. **07 — Architecture Alignment & Change Log**  
    Explains the cross-document changes, documents intentionally left unchanged, remaining governance checks, and the limits of this package.
 
-8. **README**  
+8. **08 — DEIXEN First Integrated Professional Task Map**  
+   Applies the proposed architecture to one bounded new-booking task, stage by stage, including ownership, support, state transitions, evidence events, branches, assessment isolation, and validation criteria.  
+
+9. **README**  
    Package contents, scope, and handling instructions.
 
 ## How the documents relate
@@ -56,7 +59,7 @@ A decision in one document may affect another. Update the affected companion doc
 
 ## Current integrated principle
 
-Develop product logic, UX, UI/product design language, and brand identity as connected disciplines. Let real work tasks and learner needs shape the experience. Use the unified architecture to preserve responsibility boundaries; use UX/UI prototypes to test how the learner experiences those boundaries. Do not treat visual design as decoration added after implementation.
+Develop product logic, UX, UI/product design language, and brand identity as connected disciplines. Let real work tasks and learner needs shape the experience. Use the unified architecture and first-task map to preserve responsibility boundaries; use UX/UI prototypes to test how the learner experiences those boundaries. Do not treat visual design as decoration added after implementation.
 
 This principle does not approve a final logo, palette, screen, feature, data schema, or implementation.
 
@@ -76,10 +79,10 @@ These references are not templates. The DEIXEN accent color remains open. Fluore
 
 ## Suggested work sequence
 
-1. Select and research a representative end-to-end professional task.
-2. Define one case package, its support conditions, and distinct variants.
-3. Map how Scenario Bank, Terminal, Customer Interaction, Coach, and Evidence coordinate.
-4. Prototype the learner experience with realistic content and test it.
+1. Confirm the market and practitioner relevance of the bounded new-booking task candidate; do not assume it is the highest-priority job task.
+2. Validate its case facts, selected-itinerary provenance, and exact operational scope.
+3. Use the task map to complete one Case Package and its practice/assessment variants.
+4. Prototype the customer/Terminal/Coach experience and test the state/event hand-offs.
 5. Validate Ghost narration and independent-assessment safeguards.
 6. Mature recurring UX/UI patterns and the shared design language.
 7. Only then prepare implementation specifications and separately authorize code work.

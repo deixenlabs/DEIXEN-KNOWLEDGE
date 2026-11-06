@@ -1,6 +1,6 @@
 ---
 document: DEIXEN Unified Experience & Runtime Architecture
-version: 0.1
+version: 0.2
 prepared: 2026-11-06
 status: WORKING ARCHITECTURE PROPOSAL — FOR OWNER REVIEW
 authority: Companion proposal; not a canonical decision and not implementation authorization
@@ -15,6 +15,8 @@ This document proposes one coherent architecture connecting the learner experien
 It is deliberately a **working architecture proposal**, not a new canonical decision, a replacement for D92/D97, a final UX specification, or permission to change code. Its purpose is to expose ownership boundaries, missing capabilities, dependencies, and decisions that need evidence before implementation.
 
 ### Sources and boundaries
+
+This proposal is applied in the companion `08 — DEIXEN First Integrated Professional Task Map.md`, which pressure-tests the boundaries against a bounded new-booking task. The companion map is not a final case specification.
 
 This proposal is aligned with:
 
@@ -470,7 +472,7 @@ The current architecture should therefore be **extended and validated in stages*
 ## 17. Questions that still require evidence or owner decisions
 
 1. Is the Professional Work Task the best organizing unit for the future product, or should DEIXEN use a task-plus-competency model with another primary unit?
-2. Which end-to-end job task is the strongest first integrated prototype across Saudi Arabia, Oman, and the UAE?
+2. Is the bounded new-booking case in `08` sufficiently representative and valuable as the first integrated prototype across Saudi Arabia, Oman, and the UAE, or should research identify a better first task?
 3. What is the smallest case-package contract that supports real dialogue, operations, and evidence without over-authoring?
 4. Which professional work domains deserve Scenario Bank sections, and which are better represented as filters/tags?
 5. Should system-accepted-but-professionally-wrong be both a discoverable collection and a cross-cutting tag? Which wording is clearest to beginners?
@@ -509,7 +511,17 @@ Define how a fresh independent run is created, what must be absent, which task v
 
 Only after the preceding evidence is reviewed should the project define detailed UX/UI specifications and decide what, if anything, should be built next. The slice should be large enough to prove the connected task experience but small enough to validate without building a fictional workplace platform.
 
-## 19. Formal decision boundary
+## 19. First integrated task: bounded new reservation
+
+The current architecture-test candidate is a new reservation for one adult traveller, one passenger, one segment, and one fare context within the verified slice. The itinerary is already selected and confirmed by the customer before the learner begins operational booking. This keeps the first test focused on customer clarification, confirmation, operational execution, task validation, customer communication, support boundaries, and evidence integrity.
+
+The detailed stage-by-stage map is in `08 — DEIXEN First Integrated Professional Task Map.md`. It defines the customer information, learner action, Terminal role, Coach role, Task Runtime responsibility, and evidence events for each phase, plus the major branches, support policy, assessment isolation, and acceptance criteria.
+
+The pre-selected itinerary is a deliberate scope boundary. It does not imply that availability search, fare comparison, ticketing, payment, or other adjacent workflows are already verified or supported. Those capabilities require their own reference checks and practitioner evidence before being added.
+
+This task is an architecture-test candidate, not a final decision that it is the highest-priority market task. Practitioner and job-task research across Saudi Arabia, Oman, and the UAE must confirm its representativeness before any market-priority claim.
+
+## 20. Formal decision boundary
 
 This proposal does not approve or enact:
 

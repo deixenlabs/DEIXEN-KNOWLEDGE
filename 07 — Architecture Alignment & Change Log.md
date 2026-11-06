@@ -1,6 +1,6 @@
 # DEIXEN — Architecture Alignment & Change Log
 
-**Package:** Product Experience & Design Framework v0.1  
+**Package:** Product Experience & Design Framework v0.2  
 **Date:** 6 November 2026  
 **Status:** Documentation update for owner review; new architecture remains a proposal.
 
@@ -13,8 +13,9 @@
 | `03 — Product Design Language.md` | Added guidance for showing integrated context while preserving distinct information roles. | The architecture has direct implications for visual hierarchy and information separation, not for final visual identity. |
 | `04 — Brand Strategy & Visual Identity.md` | No content change. | The architecture does not decide brand positioning, logo, symbol, typography, or palette. The file is included unchanged for a coherent package. |
 | `05 — UX Flows, UI Specifications & Design System — Planning.md` | Expanded specification inputs, case-to-run contract, mode policies, evidence requirements, validation cases, and traceability. | The old planning document did not explicitly cover the new cross-capability architecture. |
-| `06 — Unified Experience & Runtime Architecture.md` | New working proposal. | Establishes responsibility boundaries, shared concepts, lifecycle links, current gaps, and validation sequence. |
-| Master strategic brief | Replaced current top-level `Flight Deck` references with `Home` where they describe the area; preserved historical naming context; corrected the duplicate Part XIII label to Part XV; appended Part XVI linking the architecture proposal. | Align companion language to the current Home naming reflected in the canonical Product & Architecture file and add an explicit bridge without rewriting strategic hypotheses. |
+| `06 — Unified Experience & Runtime Architecture.md` | Updated to v0.2; identifies the bounded booking task as the first architecture-test candidate and links to the stage map. | Connects the abstract responsibility model to an actual task without turning the proposal into implementation authorization. |
+| `08 — DEIXEN First Integrated Professional Task Map.md` | New stage-by-stage task map with ownership, event/evidence capture, branches, support policy, D97 assessment relationship, and acceptance criteria. | Pressure-tests whether the proposed Task Runtime and capability boundaries can support one coherent professional task. |
+| Master strategic brief | Preserved the Home / الرئيسية synchronization and previous unified-architecture section; appended Part XVII summarizing the bounded new-booking task map, its limits, evidence boundary, and validation gates. | Link the task-level test to the strategic direction without converting it into a final market-priority decision or an implementation commitment. |
 | `README.md` | Updated package inventory and handling instructions. | Reflects actual package contents and decision boundaries. |
 
 ## 2. Consistency decisions applied
@@ -60,6 +61,12 @@ The inspected canonical `03_DEIXEN_Canonical_Product_and_Architecture.md` states
 
 The architecture document includes a dated summary of the latest read-only app inspection available in the conversation. It is a snapshot, not a fresh repository inspection performed during this documentation update. Re-fetch the current `main` state and re-verify implementation before preparing tickets or implementation instructions.
 
-## 6. Recommended next step
+## 6. What this update establishes
 
-Choose one research-backed professional work task and create its case package, support policy, practice variant, assessment candidate, and event/state map. Use that single task to pressure-test the proposed architecture before approving a broader UX specification or implementation plan.
+The new-booking task in `08` is a bounded architecture-test candidate: one adult traveller, one passenger, one segment, one fare context within the verified scope, and an itinerary already selected and confirmed by the customer. This avoids assuming that live availability search, fare comparison, ticketing, or payment are already verified. The choice is not a final market-priority decision; practitioner and job-task research must confirm its representativeness.
+
+The map details each phase, the customer information, learner action, Scenario Bank, Terminal, Coach, Task Runtime, and evidence responsibilities. It also tests clarification loops, customer changes, engine rejection, system-accepted/task-wrong outcomes, unsupported scope, interruption, recovery, and independent-assessment isolation.
+
+## 7. Recommended next step
+
+Create and validate the Case Package Definition for this bounded task: synthetic customer facts, disclosure rules, selected-itinerary provenance, verified operational scope, allowed branches, task criteria, support policy, and evidence events. Do not write detailed screen specifications or code tickets until the case and its criteria pass reference and practitioner review.

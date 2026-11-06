@@ -1,8 +1,8 @@
 ---
 document: DEIXEN UX Strategy & Experience Architecture
-version: 0.2
+version: 0.3
 prepared: 2026-11-06
-status: Working strategy aligned to Unified Experience & Runtime Architecture v0.1
+status: Working strategy aligned to Unified Experience & Runtime Architecture v0.2 and First Integrated Professional Task Map v0.1
 authority: Companion UX strategy; detailed flows and layouts remain open
 ---
 
@@ -181,6 +181,8 @@ Terminal's operational record remains LTR and monospace. Customer dialogue, Coac
 
 ## 11. Validation requirements
 
+Use `08 — DEIXEN First Integrated Professional Task Map.md` as the current bounded architecture-test candidate. It begins with a pre-selected, customer-confirmed itinerary and deliberately excludes unverified availability search, fare comparison, ticketing, and payment. This makes it possible to test the dialogue-to-operation hand-off without overstating the current operational scope. The task is a prototype candidate, not a final market-priority decision.
+
 Test representative complete tasks with beginners and, where possible, practitioners. Observe:
 
 - whether learners understand the purpose and next step;
@@ -198,7 +200,7 @@ Do not approve a flow only because a diagram or attractive static mockup looks c
 
 ## 12. Open questions
 
-- Which end-to-end work task is the best first integrated prototype across Saudi Arabia, Oman, and the UAE?
+- Is the bounded new-booking task in `08` sufficiently representative and valuable as the first integrated prototype across Saudi Arabia, Oman, and the UAE, or should practitioner/job-task research select a different first task?
 - Which case fields are required for a useful first version, and which should remain internal authoring metadata?
 - How should dialogue-heavy/customer-service-only cases appear in Terminal Scenario Mode?
 - Which work domains deserve Scenario Bank sections, and which should remain filters/tags?
@@ -208,5 +210,7 @@ Do not approve a flow only because a diagram or attractive static mockup looks c
 - What is the smallest integrated experience that can validate learning, usability, and evidence integrity?
 
 ## 13. Governance boundaries
+
+The bounded new-booking task in `08 — DEIXEN First Integrated Professional Task Map.md` is the current architecture-test candidate. It starts from a pre-selected, customer-confirmed itinerary so the first prototype does not assume unverified availability search, fare comparison, ticketing, or payment capability. Its detailed stage map is a working design artifact, not a confirmed market-priority decision.
 
 This document does not authorize code changes, a sixth area, a final case taxonomy/schema, changes to D92/D97, new Amadeus behavior, a final screen layout, or a new evidence model. Detailed UX flows and UI specifications belong in `05 — UX Flows, UI Specifications & Design System — Planning.md` only after the task and its variants are researched and validated. The companion architecture proposal is a working model; any change to canonical governance must go through the formal decision process.

@@ -1,9 +1,10 @@
-00 — DEIXEN Product Experience & Design Framework Index.md	5858 bytes	SHA256 3eb30643882f1239d229a739898a2a4079df419791d63f32b4c8fab72f2cbac2
-02 — DEIXEN UX Strategy & Experience Architecture.md	16011 bytes	SHA256 060b839f51682cff57496c7db97c280deff07d51a5bc1717471fa45763c24971
-03 — DEIXEN Product Design Language.md	7067 bytes	SHA256 40fe975cff82da729d9b47ba65c3c68febae00d08123188d294e78e9c9c52bd5
-04 — DEIXEN Brand Strategy & Visual Identity.md	4091 bytes	SHA256 73952f168880c6b8422d80e5e1afce45a8a490e2f771ea06fe93c53774499c52
-05 — UX Flows, UI Specifications & Design System — Planning.md	7776 bytes	SHA256 c2c3a753362f5ba86b01784b2550f6a9f388ad899721a1e2a45b1d44797c6816
-06 — DEIXEN Unified Experience & Runtime Architecture.md	43132 bytes	SHA256 218fad2503ef002eb6053b84a69a049bf4b54afac8091f56c09d810191a70ef1
-07 — Architecture Alignment & Change Log.md	5957 bytes	SHA256 4873c27f2c1cdd34c6fece977e29d897aad45d68e74e570be2c8c1b0e7846205
-DEIXEN — Strategic Product Direction, Learning Architecture & Partnership Goals.md	120381 bytes	SHA256 66004ff4d8838a4b0db21b348e05866a4ee0ebd6d2949dbdcf81cf45e37fee85
-README.md	2573 bytes	SHA256 aaab2b6d8eb580b91765976fe305ef343b4b3dfd5d445825c24e2dfc6d925912
+e33a5bf6a3ca664386aa3901b9337ecb09868243211106284c6213e2471fc93a  00 — DEIXEN Product Experience & Design Framework Index.md
+e92a8801f21c27448435e564995d4d61b3c4cad357d667e845eb7ac407363424  02 — DEIXEN UX Strategy & Experience Architecture.md
+40fe975cff82da729d9b47ba65c3c68febae00d08123188d294e78e9c9c52bd5  03 — DEIXEN Product Design Language.md
+73952f168880c6b8422d80e5e1afce45a8a490e2f771ea06fe93c53774499c52  04 — DEIXEN Brand Strategy & Visual Identity.md
+fda942bc7dc8a56c0b2b9ea080d07e8f86bda10d9b64166a76f2ccefe1377eca  05 — UX Flows, UI Specifications & Design System — Planning.md
+64cbfed7697dee0c2304c87dbd85e6b853515477bddba838db29c76323cc68b5  06 — DEIXEN Unified Experience & Runtime Architecture.md
+7ed696d7165c20b3c6a27e122a14db8395ccafa22ee35d46e78cc7a7f4585068  07 — Architecture Alignment & Change Log.md
+df130ccb9ad0739027740012dfdbbd8ec41329608ced0a1429a70bf5d369b769  08 — DEIXEN First Integrated Professional Task Map.md
+9ba41d0ddd4a6f7ff662937276623c03b843d6b16973ea089416b1aa49bb2e8c  DEIXEN — Strategic Product Direction, Learning Architecture & Partnership Goals.md
+5cc9125963102b1dba4c85f0b1f53d1575c2fbb067c8670925a45c9441dbbfb6  README.md

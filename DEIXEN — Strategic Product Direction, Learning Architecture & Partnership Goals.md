@@ -1508,3 +1508,71 @@ The recommended direction is staged evolution, not a wholesale rebuild. The most
 For the complete responsibility map, conceptual contracts, flow diagram, current gaps, invariants, open questions, and validation sequence, use the companion architecture proposal. Any canonical decision change remains subject to the formal governance process.
 
 **End of brief.**
+
+---
+
+# PART XVII — FIRST INTEGRATED PROFESSIONAL TASK MAP
+
+**Status:** Working architecture-test candidate prepared 6 November 2026. See `08 — DEIXEN First Integrated Professional Task Map.md`. This part applies the unified architecture to one bounded task; it does not establish a market-priority decision, final case package, or implementation authorization.
+
+## 83. Selected task candidate
+
+The first architecture-test candidate is a new reservation for one adult traveller, one passenger, one segment, and one fare context within the currently verified task scope. The itinerary is selected and confirmed by the customer before operational booking begins. The learner must clarify the information needed for the task, confirm the agreed request, execute the supported workflow in Terminal, inspect the operational result against the confirmed request, communicate the outcome accurately, and close or appropriately pause/escalate the task.
+
+The pre-selected itinerary is intentional: the first test must not assume that live availability search, fare comparison, ticket issuance, payment, or adjacent workflows are already implemented and verified. These can be evaluated separately and added only when supported by current Verified Reference material and practitioner evidence.
+
+This is a useful architecture-test candidate, not yet a claim that new booking is the highest-frequency or highest-value task across Saudi Arabia, Oman, and the UAE. Market and practitioner research must test that assumption.
+
+## 84. The three objects must remain separate
+
+- **Case Package:** the immutable, versioned professional situation authored and organized through Scenario Bank.
+- **Task Run:** one learner's attempt under a defined mode and support policy, coordinated by Task Runtime.
+- **Operational Session:** the isolated booking/PNR state managed by the operational simulation engine.
+
+Conversation State and Task State are also separate: the first records customer dialogue and disclosures; the second records the current phase and allowed transitions. A customer disclosure changes the active run's conversation state, not the master case package. Operational booking state changes only through the verified operational engine.
+
+## 85. Stage map and responsibilities
+
+The companion task map assigns, at every stage, the information available to the customer, the learner's action, the Scenario Bank contribution, Terminal's role, Coach's mode-appropriate behavior, Task Runtime coordination, and recorded evidence. Its stages are:
+
+1. Discover/select the case.
+2. Initialize the Task Run and brief the learner.
+3. Receive the customer's opening request.
+4. Discover and clarify missing/ambiguous information.
+5. Restate the request and obtain confirmation.
+6. Execute the supported reservation workflow in Terminal.
+7. Interpret the response and validate task correctness.
+8. Recover, pause, decline, or escalate where necessary.
+9. Communicate the outcome and close the customer interaction.
+10. Debrief, interpret evidence, and update the Growth view from supported evidence.
+
+The task is allowed to branch or stop. Successful reservation is not the only professionally legitimate outcome. The Task Runtime coordinates the sequence; it does not duplicate the operational engine, generate customer facts, provide coaching, or judge competence by intuition.
+
+## 86. Evidence boundary
+
+The system should preserve observable events and conditions: case/version/variant, run and session identity, customer questions/disclosures, request confirmation/revisions, learner entries, genuine engine responses/state transitions, validation checks, errors/recovery, Coach/hint exposure, customer communication, and the final task outcome.
+
+Assessment & Evidence then interprets those events against explicit case criteria and mode rules. A system-accepted action is not automatically task-correct; a completed task is not automatically independent evidence; customer satisfaction does not compensate for incorrect or misleading work. Calculated competency/Growth interpretations must remain traceable to recorded evidence and must not become unsupported scores or workplace-readiness claims.
+
+## 87. Independent assessment relationship
+
+The supported-practice flow does not itself qualify the learner independently. An assessment candidate should come from the same case family but use a sufficiently distinct, unpractised variant and a new isolated Task Run/Operational Session. The same assessment chain must preserve the D97 isolation conditions, including clean state and absence of prohibited instructional support during the attempt. Normal customer answers to legitimate questions are part of the task, not Coach assistance. An attempt that is completed but does not satisfy qualification conditions remains recorded but cannot be described as qualifying independent evidence.
+
+The authoritative wording and current status of D97 must be checked in the formal decision log before converting this map into specifications. This document does not amend D97.
+
+## 88. Validation gates before UX/UI specifications
+
+The task map must be tested against:
+
+- current Verified Reference material for every operational requirement and response;
+- reservation/ticketing practitioner review of task realism, criteria, and recovery branches;
+- beginner usability of the customer/Terminal/Coach separation;
+- dialogue coverage and case-authoring burden;
+- separation of engine acceptance from task correctness;
+- evidence sufficiency and traceability;
+- clean, distinct independent-assessment execution;
+- the limits of the first slice, including unsupported search, pricing, ticketing, and payment workflows.
+
+The next deliverable is a validated Case Package Definition for this task, not a code ticket. Only after its facts, scope, variants, criteria, and evidence rules have been reviewed should detailed UX/UI specifications be prepared.
+
+**End of Part XVII.**

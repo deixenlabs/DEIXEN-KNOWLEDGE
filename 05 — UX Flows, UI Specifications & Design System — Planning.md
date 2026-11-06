@@ -1,8 +1,8 @@
 ---
 document: DEIXEN UX Flows, UI Specifications & Design System — Planning
-version: 0.2
+version: 0.3
 prepared: 2026-11-06
-status: Planning only; aligned to Unified Experience & Runtime Architecture v0.1
+status: Planning only; aligned to Unified Experience & Runtime Architecture v0.2 and First Integrated Professional Task Map v0.1
 authority: No implementation specification or authorization
 ---
 
@@ -145,6 +145,23 @@ Create detailed specs when the task model, case data, relevant operational scope
 
 Do not design the entire future product at once. Use one validated vertical slice to reveal recurring patterns, then expand based on evidence.
 
-## 9. Governance
+## 9. First integrated task map as the pre-specification test
+
+Use `08 — DEIXEN First Integrated Professional Task Map.md` as the first end-to-end architecture test. It is deliberately a bounded reservation task for one adult traveller, one passenger, one segment, and one fare context within the currently verified scope. The itinerary is supplied and customer-confirmed before operational booking; the exact missing customer fact and required operational fields must be selected only after Verified Reference and practitioner review.
+
+Before turning this map into screen specifications:
+
+- validate the actual operational steps and every command/response/state transition against the current approved Verified Reference;
+- have a reservation/ticketing practitioner review the case and its stop/recovery branches;
+- prototype customer disclosure and clarification with representative beginner language;
+- demonstrate the case-to-run hand-off and separation of Case Package, Task Run, Conversation State, and Operational Session;
+- test system acceptance versus task correctness;
+- record Coach availability/exposure and prove that it cannot contaminate independent assessment;
+- inspect the event sequence to determine exactly which observations support which evidence claims;
+- test the learner flow on mobile and desktop without deciding that all workspaces must be visible simultaneously.
+
+The task map is not a final content specification, a fixed data schema, or implementation authorization. Search/advice, live availability, ticket issuance, payment, exchange, cancellation, and broader service workflows remain outside its first bounded test unless separately verified and approved.
+
+## 10. Governance
 
 This planning file and the companion architecture proposal do not authorize code changes, canonical decision changes, new Amadeus behavior, a sixth product area, backend work, or a full work-shift simulator. Record unresolved questions and obtain explicit approval through the project process. Implementation work requires a separate authorized task and acceptance criteria.
