@@ -1,7 +1,7 @@
 # DEIXEN — Architecture Alignment & Change Log
 
-**Package:** Product Experience & Design Framework v0.2  
-**Date:** 6 November 2026  
+**Package:** Product Experience & Design Framework v0.3  
+**Date:** 7 November 2026  
 **Status:** Documentation update for owner review; new architecture remains a proposal.
 
 ## 1. What changed
@@ -70,3 +70,39 @@ The map details each phase, the customer information, learner action, Scenario B
 ## 7. Recommended next step
 
 Create and validate the Case Package Definition for this bounded task: synthetic customer facts, disclosure rules, selected-itinerary provenance, verified operational scope, allowed branches, task criteria, support policy, and evidence events. Do not write detailed screen specifications or code tickets until the case and its criteria pass reference and practitioner review.
+
+## 8. v0.3 — Case Package Definition and reference/practitioner gates
+
+| File | Change | Why |
+|---|---|---|
+| `00 — ... Index.md` | Added CP-001 and practitioner-review deliverables; clarified current release gates. | The architecture now has a concrete, inspectable case candidate. |
+| `02 — UX Strategy & Experience Architecture.md` | Added CP-001 experience implications and the need to keep dialogue, task context, Terminal, and Coach distinct. | The case tests information disclosure and channel separation. |
+| `05 — UX Flows, UI Specifications & Design System — Planning.md` | Added Case Package, Verified Reference, practitioner, and RF task-validation gates before detailed specs. | Avoid specifying unverified operational content or unvalidated professional flow. |
+| `06 — Unified Experience & Runtime Architecture.md` | Added CP-001 stress-test results, current RF acceptance gap, U-12/U-14 gates, and required runtime-state separation. | The current implementation reveals a semantic validation need beyond command validity. |
+| `08 — First Integrated Professional Task Map.md` | Added the provisional mobile disclosure choice and the RF semantic-mismatch finding. | The abstract task map is now tied to a named case and observed engine behavior. |
+| `09 — Case Package Definition — New Reservation.md` | New complete CP-001 case package, reference matrix, staged responsibility map, branch catalogue, criteria, and explicit verdict. | Detailed architecture stress test. |
+| `10 — Practitioner Review Brief & Response Form.md` | New ready-to-send review request and response form. | Professional-practice validation remains external and pending. |
+| Master strategic brief | Added Part XVIII connecting CP-001 to strategic direction and documenting verification/practitioner limits. | Preserve strategic continuity without converting the candidate into a canonical decision. |
+| `README.md` | Updated package inventory and current limits. | Accurate hand-off. |
+| `03` and `04` | No content changes. | The case does not determine design language or visual identity. |
+
+### Findings and required modifications
+
+1. The live Verified Reference fetched from Knowledge `main` is third edition, V-01–V-18, through 2026-10-15. A working spec that mentions a future fourth edition is not a replacement for the live reference.
+2. U-12 blocks release of the case's current bare-number passenger CTCM entry as verified operational content.
+3. U-14 blocks teaching a universal equivalence between PRINT “Phone” and AP.
+4. The current `rf.ts` accepts any non-empty RF text without checking the requester; the current `fxp.ts` completion flag follows filed state plus accepted FXP. Runtime/Assessment must independently validate semantic task correctness.
+5. No external practitioner review has been performed; the brief is prepared, not sent/endorsed.
+
+## 9. What has not changed
+
+- D92, D97, D98, the five product areas, and the frozen first-slice boundary are not amended.
+- No canonical decisions or resolution registers were edited.
+- No Amadeus Verified Reference entry was added or promoted.
+- No app code, content JSON, or test suite was changed.
+- No screen design, design token, brand identity, or visual decision was approved.
+- No ticketing/payment/refund/changes workflow was added.
+
+## 10. Current package verdict
+
+**تنجح مع تعديل** — the conceptual responsibility model survives CP-001, but content release is on hold pending U-12/U-14 and practitioner review, and the runtime design must add explicit task-level semantic validation and separate operational completion from task acceptance/evidence qualification.

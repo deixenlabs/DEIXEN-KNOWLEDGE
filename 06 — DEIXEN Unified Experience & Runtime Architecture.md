@@ -1,7 +1,7 @@
 ---
 document: DEIXEN Unified Experience & Runtime Architecture
-version: 0.2
-prepared: 2026-11-06
+version: 0.3
+prepared: 2026-11-07
 status: WORKING ARCHITECTURE PROPOSAL — FOR OWNER REVIEW
 authority: Companion proposal; not a canonical decision and not implementation authorization
 ---
@@ -539,3 +539,41 @@ Any change to a canonical decision must be separately proposed with evidence, al
 ---
 
 **End of working architecture proposal.**
+
+## 21. Applied architecture pressure test: CP-001 (7 November 2026)
+
+The detailed case is in `09 — DEIXEN Case Package Definition — New Reservation.md`; the practitioner request is in `10 — DEIXEN Practitioner Review Brief & Response Form.md`. CP-001 also records the individual app-file blob SHAs fetched read-only for the RF/FXP/CTCM stress test; no repository commit SHA was established in that check.
+
+### Result
+
+**Architecture verdict: `تنجح مع تعديل`.** The responsibility boundaries can represent one customer-to-reservation task. However, the operational content is not release-ready and the runtime requirements need one explicit addition: deterministic task-level semantic validation after engine execution.
+
+### Confirmed gap exposed by the current app inspection
+
+The `deixen-app/main` files fetched read-only for this review show:
+
+- `src/engine/commands/rf.ts` accepts any non-empty RF text and adds it as a Received From element; it does not compare the text with the case's actual requester.
+- A second RF entry is out of scope in the current handler.
+- `src/engine/commands/fxp.ts` marks its current operational completion flag when a booking has been filed and FXP is accepted.
+- Therefore, Runtime/Assessment must not infer professional task correctness from `filed + FXP` alone. It needs an explicit check against the case's requester fact and other task criteria. A wrong RF can remain accepted by the command engine while the DEIXEN task result is classified as inconsistent.
+
+This is a task-integrity layer, not a fabricated Amadeus error. The real engine result remains unchanged. Safe recovery in the current scope may require reset/restart/abandon; do not invent a correction command.
+
+### Additional content gates
+
+- **U-12:** the current Verified Reference does not settle what follows the passenger contact number in CTCM/CTCR SSR entries. The current fixture's bare-number CTCM entry must not be promoted as verified syntax until the Reference gate is resolved.
+- **U-14:** the current Verified Reference does not directly establish that AP is the PRINT “Phone” element. The case may hold AP as a task-specific contact entry, but must not teach that universal equivalence.
+- **U-07/U-08/U-11:** limits on some SSR/RF displays and responses remain. Derived displays must keep applicable unverified markers/disclosures; no invented Amadeus output.
+
+### Runtime contract additions required by the case
+
+1. Maintain separate flags/decisions for `operational_state` (e.g. segment present, PNR filed, TST created), `task_consistency` (whether case facts and professional criteria match), and `evidence_qualification` (whether the attempt meets the applicable support/independence rules).
+2. Record exact `RF` text and compare it deterministically with the Case Package's requester identity; the comparison rule must be explicit and versioned.
+3. Prevent an operational completion event from automatically setting `task_accepted` or qualifying independent evidence.
+4. Keep customer contact disclosure/consent in Conversation State; only the approved, separately gated operational command can alter the PNR.
+5. Represent unresolved reference claims as authoring/release gates, not hidden runtime assumptions.
+6. Keep the final customer statement consistent with the exact state: `filed/priced` is not `ticket issued`.
+
+### Review status
+
+The current Case Package is a working candidate. Practitioner review has not yet been performed. This architecture package records the required review questions but does not claim external approval.

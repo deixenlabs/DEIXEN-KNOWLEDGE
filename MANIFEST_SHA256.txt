@@ -1,10 +1,12 @@
-e33a5bf6a3ca664386aa3901b9337ecb09868243211106284c6213e2471fc93a  00 — DEIXEN Product Experience & Design Framework Index.md
-e92a8801f21c27448435e564995d4d61b3c4cad357d667e845eb7ac407363424  02 — DEIXEN UX Strategy & Experience Architecture.md
+b7dce69eac64d6466e7c4ce8e8e26a0fe2194af46600c487c09e1bb09113edf4  00 — DEIXEN Product Experience & Design Framework Index.md
+ec205fa39a3bd334d648733a5d1c5bfa0ef8a605e0f1d4b2cd6747968730bd76  02 — DEIXEN UX Strategy & Experience Architecture.md
 40fe975cff82da729d9b47ba65c3c68febae00d08123188d294e78e9c9c52bd5  03 — DEIXEN Product Design Language.md
 73952f168880c6b8422d80e5e1afce45a8a490e2f771ea06fe93c53774499c52  04 — DEIXEN Brand Strategy & Visual Identity.md
-fda942bc7dc8a56c0b2b9ea080d07e8f86bda10d9b64166a76f2ccefe1377eca  05 — UX Flows, UI Specifications & Design System — Planning.md
-64cbfed7697dee0c2304c87dbd85e6b853515477bddba838db29c76323cc68b5  06 — DEIXEN Unified Experience & Runtime Architecture.md
-7ed696d7165c20b3c6a27e122a14db8395ccafa22ee35d46e78cc7a7f4585068  07 — Architecture Alignment & Change Log.md
-df130ccb9ad0739027740012dfdbbd8ec41329608ced0a1429a70bf5d369b769  08 — DEIXEN First Integrated Professional Task Map.md
-9ba41d0ddd4a6f7ff662937276623c03b843d6b16973ea089416b1aa49bb2e8c  DEIXEN — Strategic Product Direction, Learning Architecture & Partnership Goals.md
-5cc9125963102b1dba4c85f0b1f53d1575c2fbb067c8670925a45c9441dbbfb6  README.md
+646b3b73b9895101b7eedd31089aae556ac3a719f8afc61b749245134ba13fb2  05 — UX Flows, UI Specifications & Design System — Planning.md
+d7cbb718ff450dce1e6590a14cc2cc0dbb7b185ccf716c14df323d8320ef3b20  06 — DEIXEN Unified Experience & Runtime Architecture.md
+7fb3fb14826c7fcd8ef326201cf620e6091cb99232be506421f236a0225e3c42  07 — Architecture Alignment & Change Log.md
+92834e7182dcc2dc848b99a00bf4c89282c9601844397dffb715a509bca3afad  08 — DEIXEN First Integrated Professional Task Map.md
+8acaca5d6d50ef56b10c2828d246946f3c4ce25e1033805ea99fa812ab5dd8e9  09 — DEIXEN Case Package Definition — New Reservation.md
+2e8ddd7881c6838a8b3a05db80a07e20f21a40cd1d592c34f51d407f2e7a7bab  10 — DEIXEN Practitioner Review Brief & Response Form.md
+9b699e18f302435fc9743b43ec3fc2f81df901b24c40bb6fcbe8de6e254bf7d6  DEIXEN — Strategic Product Direction, Learning Architecture & Partnership Goals.md
+97bb3a2631a4d4a723241de2445b984209c2997d4473375b2febafd8935debef  README.md

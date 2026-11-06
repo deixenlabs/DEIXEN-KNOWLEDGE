@@ -1576,3 +1576,38 @@ The task map must be tested against:
 The next deliverable is a validated Case Package Definition for this task, not a code ticket. Only after its facts, scope, variants, criteria, and evidence rules have been reviewed should detailed UX/UI specifications be prepared.
 
 **End of Part XVII.**
+
+# PART XVIII — CP-001 CASE PACKAGE PRESSURE TEST AND PRACTITIONER GATE
+
+**Prepared:** 7 November 2026. **Status:** working case candidate; no canonical decision or implementation authorization.
+
+## 89. CP-001 definition
+
+`09 — DEIXEN Case Package Definition — New Reservation.md` defines one bounded professional task: a customer who is also the passenger/requester wants a one-way synthetic RUH–DXB reservation for one adult on a preselected DEIXEN fixture flight. The learner clarifies passenger contact, confirms the request, runs the supported first-slice workflow, checks the record against the confirmed request, and communicates that the simulation ends after filed/priced state, not ticket issuance.
+
+The mobile number is withheld until an appropriate question and customer permission. The agency contact and passenger contact remain separate. All names, numbers, carrier identifiers, itinerary, and fare values are fictional training data.
+
+## 90. Source and operational boundaries
+
+The case was compared with the current `DEIXEN_Amadeus_Verified_Reference.md` fetched from Knowledge `main` (third edition, V-01–V-18, amendments through 2026-10-15; blob SHA `4e52e99bd897e0088f7f1c8b4c4202a13165fd78`). Two open Reference claims constrain release:
+
+- U-12: the required/valid ending of passenger contact SSR entries is unresolved. The current app fixture's bare-number CTCM expectation must not be promoted as verified content.
+- U-14: the relationship between PRINT “Phone” and AP is not directly established. Do not teach their universal equivalence.
+
+Other U-07/U-08/U-11 display limitations remain. `FXP` is stored pricing/TST; it is not ticket issuance. No new Amadeus syntax or output is authored in the case.
+
+## 91. Current-app pressure-test finding
+
+Read-only inspection of current app files found that the RF handler accepts any non-empty text and does not compare it to the case's actual requester. The FXP handler's operational completion flag follows a filed booking and accepted FXP. Thus the product needs a separate deterministic task-consistency check: a system-accepted RF value may still be professionally/task-wrong. Runtime/Assessment must separate operational state, case correctness, and evidence qualification without fabricating a system error.
+
+The detailed file maps the recovery boundary: the current handler treats a second RF as out of scope, so no unverified correction command should be invented; reset/restart/abandon may be needed within this slice.
+
+## 92. Practitioner review
+
+`10 — DEIXEN Practitioner Review Brief & Response Form.md` is ready to send to a reservation/ticketing practitioner. No practitioner has yet reviewed or endorsed the case. Professional realism, the dialogue, contact-consent wording, requester/RF practice, TK policy dependency, and closure language remain pending review. Practitioner opinion does not replace D12 Amadeus verification.
+
+## 93. Verdict and decision boundary
+
+The case is an architecture-valid stress test with modifications, but not content-release-ready. The recommended report verdict is **تنجح مع تعديل**. This is a review finding for the working proposal, not a canonical governance decision.
+
+No D92, D97, D98, slice, curriculum, reference, repository, or application change is made by this package. Resolve U-12/U-14, obtain practitioner review, design the task-level semantic validator and recovery policy, then seek owner approval before detailed specifications or implementation.

@@ -1,8 +1,8 @@
 ---
 document: DEIXEN UX Flows, UI Specifications & Design System — Planning
-version: 0.3
-prepared: 2026-11-06
-status: Planning only; aligned to Unified Experience & Runtime Architecture v0.2 and First Integrated Professional Task Map v0.1
+version: 0.4
+prepared: 2026-11-07
+status: Planning only; aligned to Unified Experience & Runtime Architecture v0.3, First Integrated Professional Task Map v0.1, and CP-001 v0.1
 authority: No implementation specification or authorization
 ---
 
@@ -165,3 +165,19 @@ The task map is not a final content specification, a fixed data schema, or imple
 ## 10. Governance
 
 This planning file and the companion architecture proposal do not authorize code changes, canonical decision changes, new Amadeus behavior, a sixth product area, backend work, or a full work-shift simulator. Record unresolved questions and obtain explicit approval through the project process. Implementation work requires a separate authorized task and acceptance criteria.
+
+## 11. Case Package and practitioner gate before detailed specifications
+
+Use `09 — DEIXEN Case Package Definition — New Reservation.md` as the current detailed test case and `10 — DEIXEN Practitioner Review Brief & Response Form.md` to collect professional-practice review.
+
+Detailed screens/flows for CP-001 must not be treated as implementation-ready until:
+
+- the case facts and synthetic itinerary provenance are accepted;
+- operational steps are reconciled with the current live Verified Reference;
+- U-12 (passenger contact SSR ending/suffix) is resolved under D12;
+- U-14 (PRINT Phone and AP relationship) is resolved or explicitly excluded from teaching;
+- a practitioner reviews the conversation, consent/disclosure, requester identity, TK policy dependency, closure wording, and recovery path;
+- the current-app RF mismatch is addressed in a task-level acceptance design without fabricating an Amadeus rejection;
+- Task Runtime success state is separated from operational `filed/priced` state and from qualifying independent evidence.
+
+Until then, prototypes may explore information separation and navigation using labelled, non-operational placeholders; they must not present held command details as verified Amadeus behavior.

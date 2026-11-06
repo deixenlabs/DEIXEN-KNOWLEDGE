@@ -545,3 +545,21 @@ Only after that Case Package is validated should DEIXEN decide whether the UX mo
 ---
 
 **End of working task map.**
+
+## Appendix A — CP-001 case choices and pressure-test findings (7 November 2026)
+
+The detailed Case Package Definition is `09 — DEIXEN Case Package Definition — New Reservation.md`.
+
+The previously open “missing customer fact” candidate is now provisionally instantiated as the passenger mobile number. The value is held until the learner asks an appropriate question and the customer permits disclosure. The agency contact value remains a separate case/work-context fact. This is a case design choice, not a claim that every agency must collect or store information in precisely this way; practitioner review is pending.
+
+### Operational-reference qualification
+
+- The case reuses the synthetic main-task fixture: one adult, RUH–DXB, 6X 403, class Y, one segment, dynamic task date, AP agency contact, TKOK, RF requester, ER, and FXP.
+- The current live Verified Reference snapshot is third edition V-01–V-18. The passenger contact SSR suffix issue remains U-12, and the AP/PRINT Phone mapping remains U-14. CP-001 must not release the bare-number CTCM expectation or teach AP=PRINT Phone as a verified universal rule.
+- FXP is stored pricing/TST, not ticket issuance.
+
+### Material architecture finding
+
+The current app's RF handler accepts any non-empty text without checking it against the case's actual requester; the current FXP handler's operational completion flag follows a filed booking plus accepted FXP. Runtime/Assessment therefore requires a case-level semantic validator and separate outcomes for operational completion, task consistency, and qualifying evidence. The engine's accepted RF response must not be rewritten as an Amadeus rejection.
+
+This finding adds a concrete validation requirement to the map; it does not change D92/D97 or authorize implementation. See CP-001 Sections 6–10 for the detailed stage responsibilities, source gates, and branch catalogue.

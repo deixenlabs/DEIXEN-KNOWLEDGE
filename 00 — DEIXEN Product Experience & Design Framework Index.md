@@ -81,8 +81,15 @@ These references are not templates. The DEIXEN accent color remains open. Fluore
 
 1. Confirm the market and practitioner relevance of the bounded new-booking task candidate; do not assume it is the highest-priority job task.
 2. Validate its case facts, selected-itinerary provenance, and exact operational scope.
-3. Use the task map to complete one Case Package and its practice/assessment variants.
+3. Review CP-001 as the current Case Package candidate; keep operational content on hold until U-12/U-14 and practitioner review are resolved.
 4. Prototype the customer/Terminal/Coach experience and test the state/event hand-offs.
 5. Validate Ghost narration and independent-assessment safeguards.
 6. Mature recurring UX/UI patterns and the shared design language.
 7. Only then prepare implementation specifications and separately authorize code work.
+
+## v0.3 case-validation additions
+
+- `09 — DEIXEN Case Package Definition — New Reservation.md` is the detailed CP-001 definition and its explicit verdict.
+- `10 — DEIXEN Practitioner Review Brief & Response Form.md` is a review request template; the external review remains pending.
+- The current live Verified Reference fetched from Knowledge `main` remains third edition, V-01–V-18, with open U-12/U-14 and other limitations. Working files that mention a future fourth edition are not authority unless the current repository reference changes.
+- CP-001 is architecture-valid with modifications, but not cleared for Amadeus content release or implementation.

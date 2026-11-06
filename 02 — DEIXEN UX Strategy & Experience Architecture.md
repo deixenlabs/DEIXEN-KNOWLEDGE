@@ -1,8 +1,8 @@
 ---
 document: DEIXEN UX Strategy & Experience Architecture
-version: 0.3
-prepared: 2026-11-06
-status: Working strategy aligned to Unified Experience & Runtime Architecture v0.2 and First Integrated Professional Task Map v0.1
+version: 0.4
+prepared: 2026-11-07
+status: Working strategy aligned to Unified Experience & Runtime Architecture v0.3, First Integrated Professional Task Map v0.1, and Case Package CP-001 v0.1
 authority: Companion UX strategy; detailed flows and layouts remain open
 ---
 
@@ -214,3 +214,19 @@ Do not approve a flow only because a diagram or attractive static mockup looks c
 The bounded new-booking task in `08 — DEIXEN First Integrated Professional Task Map.md` is the current architecture-test candidate. It starts from a pre-selected, customer-confirmed itinerary so the first prototype does not assume unverified availability search, fare comparison, ticketing, or payment capability. Its detailed stage map is a working design artifact, not a confirmed market-priority decision.
 
 This document does not authorize code changes, a sixth area, a final case taxonomy/schema, changes to D92/D97, new Amadeus behavior, a final screen layout, or a new evidence model. Detailed UX flows and UI specifications belong in `05 — UX Flows, UI Specifications & Design System — Planning.md` only after the task and its variants are researched and validated. The companion architecture proposal is a working model; any change to canonical governance must go through the formal decision process.
+
+## 14. Applied case stress test: CP-001
+
+`09 — DEIXEN Case Package Definition — New Reservation.md` applies the UX model to one bounded customer-to-reservation task. The case candidate requires the learner to receive a preselected synthetic itinerary, clarify passenger contact, confirm the request, execute a limited booking workflow in Terminal, verify the record, and explain that pricing is not ticket issuance.
+
+UX implications:
+
+- The customer request, customer replies, and customer disclosures must be visibly distinct from the Terminal operational record.
+- The agency contact value and passenger contact value must be represented as different data objects; the learner must not mistake one for the other.
+- The selected itinerary and confirmed request should remain available as task context without being inserted into the Amadeus transcript.
+- The passenger mobile remains hidden until an appropriate question is asked and the case's disclosure rule is satisfied. Scenario Bank owns the disclosure rule; Customer Interaction applies it; Task Runtime records it.
+- Coach may explain the reason for a question in supported practice but must not reveal the customer's hidden value. Independent assessment must not receive this instructional prompt.
+- The final communication must distinguish a filed/priced reservation from a ticket that has actually been issued.
+- The case's `RF` requester mismatch demonstrates why an operational result may need a separate task-correctness check. The UX must communicate the professional/task mismatch without falsifying or relabelling the engine's accepted response.
+
+The case is a working architecture-test candidate, not a validated UX flow. The exact mobile-collection wording, customer-consent framing, and work-practice expectations require a practitioner review. Operational content release also remains blocked by Verified Reference U-12 and U-14; see CP-001.
