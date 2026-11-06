@@ -1,0 +1,4 @@
+2475d8bf676363698d9fc05c5cd9aeed2216bf55ece17f5700f0723ae48230bb  02 — DEIXEN UX Strategy & Experience Architecture.md
+894c2f61a421e8e5e12546b664cf963aafe884afe2e1a0a77dc23e14623b5931  03_DEIXEN_Canonical_Product_and_Architecture.md
+16ea07104085024a6e33b12a02f1997eefd83ea0c31c0d46f62ac8db6a0e9a7f  D98 — Governance Insertions.md
+6773a748cf718d6085c56a395bf0d097ac582f9b30ebbad2073dd8032f1a0590  README — Upload Guide.md

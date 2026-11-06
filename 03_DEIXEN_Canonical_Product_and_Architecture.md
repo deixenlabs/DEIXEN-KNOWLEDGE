@@ -85,20 +85,34 @@ not a locked-in decision.
 
 ## Information Architecture — Five Areas (current, approved)
 
-1. **Home / Flight Deck** — operational command center; orientation, current
-   status, next recommended action. Answers: *"What should I do next to
-   become more capable?"* Not a marketing homepage or a progress-only screen.
-2. **Learning / Curriculum** — the knowledge foundation. Answers: *"What do I
-   need to understand?"* Supports practice; completing it is not readiness.
+1. **Home** — personalized learner orientation. It starts with the learner's
+   current situation, presents the most useful next action and why it is
+   recommended, and gives a concise view of the wider professional-development
+   journey. It is not a marketing homepage, a generic dashboard, a full
+   curriculum catalogue, or a detailed Growth/evidence report.
+2. **Learning** — curriculum discovery and learning. It provides an overview
+   through learning paths/tracks and courses, then lets the learner navigate
+   modules and focused lessons. The intended experience explains what the
+   learner will understand, why it matters in professional work, relevant
+   prerequisites, and how learning connects to practice. The exact curriculum
+   taxonomy, sequence, and content remain subject to evidence-based curriculum
+   design; lesson or course completion is not proof of competence.
 3. **Terminal / Practice** — the core simulation environment; the value
    engine of the whole product. Answers: *"Can I perform the work correctly?"*
 4. **Scenario Bank** — realistic operational cases that train judgment and
    expose workflow variation. Answers: *"Can I handle different real-world
    situations?"* Scenarios must connect to operational practice, not stand
-   alone.
+   alone. Scenario execution remains a mode inside Terminal under Decision 92.
 5. **Growth / Readiness** — communicates capability development through
-   evidence, not points or completion percentages. Answers: *"How ready am
-   I?"*
+   evidence, not points or completion percentages. Answers: *"What does my
+   evidence currently support, and what needs development?"*
+
+**Current area naming:** the first area is named **Home** in English and
+**الرئيسية** in Arabic. This supersedes **Flight Deck / قمرة القيادة** as the
+current user-facing area name (Decision 98). "Flight Deck" remains a historical
+name in prior decisions, design records, filenames, and existing application
+identifiers until those records or implementation surfaces are changed through
+the appropriate process. Home is the same first area, not a sixth area.
 
 No sixth top-level area may be added without explicit strategic review — this
 includes the "Work Shift Simulator" concept (a possible future evolution
@@ -110,12 +124,14 @@ implementation work on it is authorized until that question is answered.
 
 **Historical mapping, for continuity:** the product's earlier 3-domain model
 (Progression / Practice / Growth Record) maps onto the current 5 areas as
-follows — Progression's content splits across Learning/Curriculum and part of
-Home/Flight Deck; Practice maps directly onto Terminal/Practice; Growth
-Record maps directly onto Growth/Readiness; Scenario Bank is new — the
-earlier model folded scenario content into Practice rather than separating
-it. The earlier model's actually-built Progression screen (real visual work
-with documented historical Karim approval — see
+follows — Progression's content splits across Learning and part of Home;
+Practice maps directly onto Terminal/Practice; Growth Record maps directly
+onto Growth/Readiness; Scenario Bank is new — the earlier model folded
+scenario content into Practice rather than separating it. The earlier
+Progression screen was known as Flight Deck in the historical implementation
+and design records. That legacy label does not change the current Home name.
+The earlier model's actually-built Progression screen (real visual work with
+documented historical Karim approval — see
 `04_DEIXEN_Canonical_Design_System.md`) is legitimate prior work toward
 this structure, not orphaned effort.
 
@@ -125,11 +141,19 @@ practice environment, different modes (Learn/Practice/Assessment)" design.
 
 ## Relationship between areas
 
-Flight Deck connects to all areas and guides the next action. Learning
-provides the knowledge foundation; Terminal converts it into operational
-performance; Scenario Bank introduces variation and judgment; Assessment and
-performance generate evidence; Growth/Readiness communicates what that
-evidence supports.
+Home orients the learner around the current need and next useful action while
+keeping the wider development journey in view. Learning organizes the
+curriculum and provides the focused teaching experience. Terminal converts
+learning into operational performance; Scenario Bank introduces case
+variation and professional judgment; Assessment and performance generate
+evidence; Growth communicates what that evidence supports and what needs
+further development.
+
+The Booking Chain / route representation remains the route of a specific
+operational task. It is not the curriculum map, the full skill model, or the
+learner's complete professional journey. Its workflow and evidence meaning
+are unchanged by Decision 98; its precise presentation on Home or Learning
+remains a detailed UX question.
 
 ## Platform Direction
 
@@ -240,12 +264,12 @@ current instance can't drift apart.
 ## Non-Negotiable Product Rules
 
 1. **Terminal Centrality** — never reposition DEIXEN as content-first, a
-   generic LMS, or quiz-based.
+generic LMS, or quiz-based.
 2. **Professional Positioning** — avoid classroom-style experience,
-   child-oriented gamification, generic education patterns.
+child-oriented gamification, generic education patterns.
 3. **Realistic Workflow** — operational realism over visual trends.
 4. **Evidence-Based Progress** — progress represents capability and
-   performance, not time spent or lessons completed.
+performance, not time spent or lessons completed.
 
 ## Change Control
 
